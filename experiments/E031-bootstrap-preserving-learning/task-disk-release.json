@@ -1,0 +1,48 @@
+{
+  "status": "RELEASED_AFTER_VERIFIED_BACKUP",
+  "reason": "All unique E031 bridge/learner work and closed journals are verified in private generation-bound archives; independent diagnostic return and shutdown pass. The remaining temporary runtime/caches are regenerable. Free the exact 40 GiB task disk for the approved 104 GiB GPU route without a quota increase.",
+  "original_30_300_GiB_preserved": true,
+  "no_unique_science_deleted": true,
+  "no_new_quota": true,
+  "disk_name": "e031-bridge-scratch-20261102131010",
+  "disk_id": "5531031824224302423",
+  "source_admission": "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/admission.json",
+  "diagnostic_admission": "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review-admission.json",
+  "closed_journals": {
+    "archive": {
+      "bytes": 1710019,
+      "sha256": "f547f37b85527181d92ed01e084139885e54063da5e97f1deab80d9519112c7f"
+    },
+    "generation": "1793704245241649",
+    "members": 132,
+    "logical_bytes": 10449031,
+    "every_member_verified": true,
+    "uri": "gs://dl-binner-archive-167650584170/e031/e031-review-20261103t110412z/closed-task-journals.tar.gz"
+  },
+  "archive_verification": [
+    {
+      "phase": "bridge",
+      "archive": {
+        "bytes": 1387643691,
+        "sha256": "64a18d1281b7e3a5043df59f104ab64b818c15f5a11a28f8e73a5f36748e0976"
+      },
+      "work_members": 133,
+      "work_sha256_verified": true,
+      "omitted": 0
+    },
+    {
+      "phase": "learning",
+      "archive": {
+        "bytes": 2101954568,
+        "sha256": "d4ce1d15ad8f7c2443863a6c42805ddd419a6034c861b22a586b7659b9db47ec"
+      },
+      "work_members": 437,
+      "work_sha256_verified": true,
+      "omitted": 0
+    }
+  ],
+  "epoch": 1793704795.292563,
+  "release_epoch": 1793704817.416519,
+  "task_disk_lifetime_seconds": 79801.05551886559,
+  "all_original_instance_fields_preserved": true
+}

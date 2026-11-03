@@ -1,48 +1,41 @@
 # E031: bootstrap-preserving learning and a source-bound construction bridge
 
-Status, November 2: **bridge completed/reviewed (MODIFY); paired learner running
-under verified supervision; no new learner quality result yet**.
+Status, November 3: **bridge and three-mode paired learner completed, independently
+admitted and reviewed; both learning decisions MODIFY; original CPU TERMINATED**.
 
-[Current learner receipt](learning-native-observed.json) records phase
-`learning-20261102T200852Z-ba65911-r2`, exact source `ba65911`, nine native gates,
-full original input/runtime admission. At 21:54 Copenhagen, E009 no-GLM has
-finished 20 epochs/native reload and both construction/export paths; E030 audit
-runs. At 21:59 its paired target passes and E009 GLM training runs. The same three
-new model outputs feed both E023 and E030 in all modes. The owner authorizes this
-regardless of bridge quality. Independent
-watcher/provider STOP and the original first-start clock remain. Use the
-[exact inspection prompt](OPERATIONS.md#exact-following-prompt) when it finishes.
+[Closed inspection](learning-inspection-observed.json), [all fifteen partitions](learning-review.json),
+[full target table](learning-targets.tsv), [integer audit](learning-review-audit.json),
+[geometry/grouping](learning-grouping-diagnostics.json) and [populations](learning-populations.json)
+retain the complete result. E031 + E023 reaches 10.6110% / 10.5684% / 9.9607% R95;
+E031 + E030 reaches 8.6572% / 8.4318% / 11.3272% across E009 no-GLM / GLM / Oral
+no-GLM, all with genuine ten-depth axes. Old comparators are reused, not rescored.
 
-[Bridge inspection](inspection-observed.json), [full comparison](bridge-review.json),
-[target table](bridge-targets.tsv), [integer audit](bridge-review-audit.json) and
-[interpretation](../../docs/evidence/2026-11-02-e031-bridge-and-paired-learning.md)
-preserve the completed source-bound result. E009 no-GLM returns to 10.4623% R95;
-accepted E009 GLM 10.4163% is reused, while Oral falls to 9.5438%. Keep the failed
-joint criterion, all target losses and the immutable MetaBAT2/E023/E026 references.
-No per-dataset constructor routing or old baseline rescoring.
+[Interpretation and targeted source audit](../../docs/evidence/2026-11-03-e031-learning-and-recovery-priority.md)
+recommend keeping E031 as the fixed development learning for one common biological
+candidate-selection/joint-recruitment block. [Next-block proposal](next-block.md)
+and [exact following prompt](OPERATIONS.md#exact-following-prompt) own the new
+scope and gates; no dataset-specific winner router is promoted.
 
-[Compact backup and closed supplements](inspection-backup.json) pass full private
-readback and member checks. They include review, failure and running-handoff
-evidence; omitted bulk DNA remains in its original verified private archives.
+The original [design](design.md), [protocol](protocol.json), [source lock](source-lock.json),
+[candidate](candidate-lock.json), [science identity](science-lock.json), [reuse](reuse-lock.json)
+and [paired source](paired-source-lock.json) remain immutable. Main science is
+`ba65911`; read-only diagnostic recovery is `24a51de`. [Earlier native handoff](learning-native-observed.json)
+remains dated execution evidence. All failed setup, Mac storage and numerical
+portability journals/tolerances remain. No accepted science is repeated.
 
-The [original design](design.md), [protocol](protocol.json), [source lock](source-lock.json),
-[candidate](candidate-lock.json), [science identity](science-lock.json), [reuse](reuse-lock.json),
-[review inputs](review-lock.json) and [local preparation](local-observed.json) remain.
-The [paired prospectus](learner-paired-prospectus.json), [execution policy](paired-execution-policy.json),
-[plan](paired-plan.json), [serial DAG](paired.smk), [source supplement](paired-source-lock.json)
-and [engineering checks](paired-local-observed.json) state the prospective extension.
-Original product bytes and scientific stage remain unchanged. The source-bound
-learning/constructor interaction adds no extra fit for each constructor.
+[GPU outcome](gpu-qualification-observed.json): the single fresh L4 request is
+capacity-blocked, with no model execution or measured speedup. Both empty worker
+disks are removed. [Oral GLM plan](oral-GLM-next-admission.json) prices a separate
+unchanged 128-view T4 qualification; no full bank or additional attempt now.
 
-[Failed setup/repair](setup-recovery.json), the failed Mac Oral storage review,
-original allclose failure and all journals stay preserved. Remaining bridge
-readers complete native read-only within their original diagnostic limits.
-No passed Mac portability claim or relaxed tolerance follows.
+[Task-disk release](task-disk-release.json) follows complete science/member/closed-
+journal/diagnostic backup admission. Only original 30/300 GiB disks remain; old
+40 GiB paths/environment are historical locators. [Costs](learning-cost-observed.json)
+separate allocation/storage/export. The owner separately approves [storage only](storage-20261104-admission.json)
+through November 11 at 00:00 Copenhagen, $9 plus at most $0.50 automatic tail
+through November 18. This does not renew compute or change original E031 clocks.
+Skin stays unscored; source/truth/overlap/depth/protocol/cost admission is required.
 
-Existing E2 / original disks / same 40 GiB task disk only. $8 / 16 hours with a
-16.25-hour original provider horizon, 25 GiB source/task reserves, 9 GiB extra,
-3 GiB compressed / 6 GiB logical return; no provision/format/resize. See
-[operations](OPERATIONS.md) and [priced observations](cost-observed.json).
-**November 4 at 00:00 Copenhagen remains hard.** The narrow automatic new-archive
-tail is separate. Both communities remain development data; full Oral GLM and
-unscored skin retain their source/truth/runtime/cost/retention admission needs.
+[Closed inspection backup](learning-inspection-backup.json) verifies all 308 compact
+members and private whole-object readback. Bulk science remains in its original
+bound archives; final source history uses the recorded private Git-delta namespace.

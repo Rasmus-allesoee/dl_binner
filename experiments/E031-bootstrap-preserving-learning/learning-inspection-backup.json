@@ -1,0 +1,35 @@
+{
+  "status": "PASS_PRIVATE_WHOLE_SHA_MD5_AND_EVERY_MEMBER",
+  "archive": {
+    "bytes": 1869893,
+    "sha256": "d275e8ed921fc9c30f4f980c7df409d0bba1add19f040eb1e40b13d5a54caed0"
+  },
+  "members": 308,
+  "logical_bytes": 6244428,
+  "record_maintenance_only_no_VM_or_numerical_review": true,
+  "original_science_and_review_clocks_closed": true,
+  "not_duplicate_bulk_science": true,
+  "prior_verified_archives_retained": true,
+  "metadata_export_USD_upper": 0.00020897682756185532,
+  "delivery_in_existing_learner_record_preservation_allowance": true,
+  "created_UTC": "2026-11-03T12:22:45.403688+00:00",
+  "object": "gs://dl-binner-archive-167650584170/e031/e031-review-20261103t110412z/e031-learning-inspection.tar.gz#1793708686807697",
+  "generation": "1793708686807697",
+  "every_member_verified": true,
+  "private_readback_verified": true,
+  "credentials_and_bulk_science_excluded": true,
+  "original_scientific_review_clocks_not_reopened": true,
+  "compact_record_maintenance_only": true,
+  "post_pack_source_changes": "Final Git commit/bundle owns any subsequent documentation/test-only changes.",
+  "credit_covered_operation_allowance_USD_upper": 0.01,
+  "final_source_delta_namespace": {
+    "prefix": "gs://dl-binner-archive-167650584170/e031/e031-review-20261103t110412z/source-closeout-",
+    "suffix": "<final-40-character-Git-commit>.bundle and .json",
+    "advertised_branch": "bootstrap-preserving-learning",
+    "prerequisite": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+    "status": "Final commit transport is separately verified after commit; this is its noncircular locator convention",
+    "not_full_repository_history_backup": true
+  },
+  "members_excludes_inventory": true,
+  "inventory_member_verified": true
+}

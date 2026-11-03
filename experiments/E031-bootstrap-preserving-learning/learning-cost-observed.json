@@ -1,0 +1,135 @@
+{
+  "kind": "Measured allocation and bounded storage/export prices; not invoice",
+  "checked_UTC": "2026-11-03T11:54:27.904682+00:00",
+  "main_learner": {
+    "status": "MEASURED_MAIN_PHASE; READONLY_REVIEW_PENDING",
+    "phase": "learning-20261102T200852Z-ba65911-r2",
+    "source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+    "original_start": "2026-11-02T20:02:32.426+00:00",
+    "successful_allocation_start": "2026-11-02T12:09:12.240-08:00",
+    "successful_allocation_stop": "2026-11-02T17:20:59.746-08:00",
+    "successful_allocation_seconds": 18707.506,
+    "failed_setup_seconds": 116.495,
+    "total_main_allocated_seconds": 18824.001,
+    "CPU_RAM_IP_USD": 1.427725586018729,
+    "original_PD_overlapping_allocations_USD": 0.22627093203883497,
+    "task_PD_USD_per_hour": 0.005547850208044383,
+    "task_disk_lifetime_still_open": true,
+    "export_bytes": 2101954568,
+    "export_USD_upper": 0.2349117287993431,
+    "science_process": {
+      "command": [
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e031_paired.py",
+        "--plan",
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/science-plan.json",
+        "--workflow"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 17334.301495011998,
+      "peak_sampled_rss_bytes": 17933422592,
+      "seconds_ceiling": 55421.64237380028,
+      "rss_bytes_ceiling": 26000000000,
+      "launched_pid": 3537,
+      "sampled_cpu_seconds": 49854.45,
+      "sampled_average_cpus": 2.8760576256473778,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "minimum_task_free_bytes": 31364370432,
+    "peak_sampled_task_growth_bytes": 6393020416,
+    "source_terminal_free": 29474623488,
+    "credit_delta_is_not_invoice": true,
+    "retention_end": "2026-11-04T00:00:00+01:00"
+  },
+  "read_only_allocations": [
+    {
+      "phase": "unreleased-readonly-setup",
+      "start": "2026-11-03T03:01:27.681-08:00",
+      "stop": "2026-11-03T03:03:07.383-08:00",
+      "allocation_seconds": 99.702,
+      "CPU_RAM_IP_USD": 0.0075620000433085045,
+      "overlapping_original_PD_USD": 0.0011984521497919556
+    },
+    {
+      "phase": "frozen-readonly-review",
+      "start": "2026-11-03T03:04:31.738-08:00",
+      "stop": "2026-11-03T03:17:16.880-08:00",
+      "allocation_seconds": 765.142,
+      "CPU_RAM_IP_USD": 0.05803297664176401,
+      "overlapping_original_PD_USD": 0.009197268608414239
+    }
+  ],
+  "original_bridge_summary": {
+    "CPU_RAM_IP_USD": 0.2847757958376821,
+    "overlapping_original_PD_USD": 0.04513226167360148,
+    "export_USD_upper": 0.3101625347882509,
+    "whole_scope_upper_USD": 1.4
+  },
+  "main_plus_review_CPU_RAM_IP_USD": 1.4933205627038015,
+  "original_PD_overlap_USD": 0.23666665279704116,
+  "original_PD_overlap_already_in_separate_storage_authorization": true,
+  "task_40_GiB_lifetime_seconds_upper": 79801.05551886559,
+  "task_40_GiB_all_E031_storage_USD_upper": 0.12297897290624993,
+  "task_disk_deleted": true,
+  "new_main_review_export_USD_upper": 0.2352989014238119,
+  "new_archive_storage_and_operations_USD_upper": 0.05,
+  "approved_automatic_archive_tail_USD_upper": 0.05,
+  "full_learner_with_readonly_allocation_storage_export_operations_tail_USD_upper": 2.2,
+  "original_new_learner_ceiling_USD": 8,
+  "original_bridge_ceiling_USD": 4,
+  "GPU": {
+    "status": "NOT_RUN_CAPACITY_BLOCKED",
+    "attempts": 1,
+    "compute_USD": 0,
+    "temporary_disks": [
+      {
+        "name": "e029-batching-20261103-e031-a-boot",
+        "size_GiB": 40,
+        "lifetime_seconds_upper": 50.18033003807068,
+        "cost_USD_upper": 7.733137623373507e-05,
+        "deleted": true
+      },
+      {
+        "name": "e029-batching-20261103-e031-a-work",
+        "size_GiB": 64,
+        "lifetime_seconds_upper": 44.012330055236816,
+        "cost_USD_upper": 0.0001085216953126505,
+        "deleted": true
+      }
+    ],
+    "storage_USD_upper": 0.00018585307154638555,
+    "metadata_operations_USD_upper": 0.02,
+    "ceiling_USD": 3,
+    "all_temporary_resources_deleted": true,
+    "no_throughput_measurement": true
+  },
+  "billing_display": {
+    "remaining_DKK": 1688.52,
+    "net_November_1_3_DKK": 0,
+    "delayed_usage_reserve_USD": 35,
+    "expiry": "2027-01-12",
+    "credit_delta_not_invoice": true
+  },
+  "prices": {
+    "E2_8vCPU_32GiB_IP_USD_hour": 0.27304567767858834,
+    "original_30_300_GiB_PD_USD_pricing_month": 31.2,
+    "balanced_task_40_GiB_USD_pricing_month": 4,
+    "Catalog_PD_pricing_month_hours": 721,
+    "GCS_Standard_USD_GiB_hour": 2.7397e-05,
+    "WAN_USD_GiB_upper": 0.12
+  },
+  "new_owner_storage_authorization": {
+    "start": "2026-11-04T00:00:00+01:00",
+    "end": "2026-11-11T00:00:00+01:00",
+    "active_ceiling_USD": 9,
+    "automatic_soft_delete_tail_USD_ceiling": 0.5,
+    "tail_end": "2026-11-18T00:00:00+01:00",
+    "compute_authorized": false,
+    "new_resources_authorized": false
+  },
+  "old_frozen_clocks_and_retention_not_rewritten": true
+}

@@ -1,5 +1,21 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E031 completed learning and common-construction priority, November 3
+
+[The reviewed paired result](../evidence/2026-11-03-e031-learning-and-recovery-priority.md)
+retains both MODIFY criteria. E031 improves prior-student R95 under both source-
+bound constructors, while E023 remains stronger on E009 and E030 on Oral. Keep
+E031 provisionally as fixed development learning; implement one common biological
+candidate-selection and joint-update rule from retained hierarchies/markers/
+composition/measured depth, without a dataset winner router. The known emitted-
+partition envelope is diagnostic, not an attainable bin selection or evidence
+that learning/GLM is optimal. Preserve stronger E023/E026/MetaBAT2 references.
+The sole new L4 attempt is capacity-blocked; a different prepared T4 qualification
+is proposed separately, with no measured speedup or full-bank admission. The
+owner's new storage-only November 4–11 authorization does not renew scientific
+execution or alter the closed run's original limits. [Next block](../../experiments/E031-bootstrap-preserving-learning/next-block.md)
+owns the concrete proposal and alternatives.
+
 ## E031 bridge reviewed; paired learning released, November 2
 
 The [complete bridge review](../evidence/2026-11-02-e031-bridge-and-paired-learning.md)

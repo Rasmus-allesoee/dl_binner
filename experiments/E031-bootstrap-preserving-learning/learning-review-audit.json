@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "complete_rows": 1111,
+  "table": {
+    "bytes": 74572,
+    "sha256": "4bfe46da9928240f7117cb615a4ca1882aa7d7c9acd829c653ff920b163b0234"
+  },
+  "independent_integer_reconstruction": {
+    "E009-noGLM/E023/density": {
+      "recovered_bp": 58855185,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 10,
+      "R95": 0.10611002136815277
+    },
+    "E009-noGLM/E023/selected": {
+      "recovered_bp": 58855185,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 10,
+      "R95": 0.10611002136815277
+    },
+    "E009-noGLM/E030/root-only": {
+      "recovered_bp": 44033130,
+      "reference_bp": 554661890,
+      "T50": 18,
+      "T90": 4,
+      "R95": 0.07938733631041427
+    },
+    "E009-noGLM/E030/pre": {
+      "recovered_bp": 44033130,
+      "reference_bp": 554661890,
+      "T50": 18,
+      "T90": 4,
+      "R95": 0.07938733631041427
+    },
+    "E009-noGLM/E030/post": {
+      "recovered_bp": 48018220,
+      "reference_bp": 554661890,
+      "T50": 18,
+      "T90": 6,
+      "R95": 0.08657205563555123
+    },
+    "E009-GLM/E023/density": {
+      "recovered_bp": 58618699,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.10568366072527535
+    },
+    "E009-GLM/E023/selected": {
+      "recovered_bp": 58618699,
+      "reference_bp": 554661890,
+      "T50": 19,
+      "T90": 9,
+      "R95": 0.10568366072527535
+    },
+    "E009-GLM/E030/root-only": {
+      "recovered_bp": 38411349,
+      "reference_bp": 554661890,
+      "T50": 14,
+      "T90": 4,
+      "R95": 0.06925182654968418
+    },
+    "E009-GLM/E030/pre": {
+      "recovered_bp": 41516250,
+      "reference_bp": 554661890,
+      "T50": 14,
+      "T90": 4,
+      "R95": 0.0748496530021199
+    },
+    "E009-GLM/E030/post": {
+      "recovered_bp": 46767755,
+      "reference_bp": 554661890,
+      "T50": 17,
+      "T90": 5,
+      "R95": 0.08431759211003302
+    },
+    "oral-noGLM/E023/density": {
+      "recovered_bp": 185807015,
+      "reference_bp": 2083072211,
+      "T50": 66,
+      "T90": 35,
+      "R95": 0.08919854723173588
+    },
+    "oral-noGLM/E023/selected": {
+      "recovered_bp": 207489191,
+      "reference_bp": 2083072211,
+      "T50": 73,
+      "T90": 35,
+      "R95": 0.09960729633102479
+    },
+    "oral-noGLM/E030/root-only": {
+      "recovered_bp": 231783900,
+      "reference_bp": 2083072211,
+      "T50": 90,
+      "T90": 49,
+      "R95": 0.11127021846675675
+    },
+    "oral-noGLM/E030/pre": {
+      "recovered_bp": 231051942,
+      "reference_bp": 2083072211,
+      "T50": 90,
+      "T90": 49,
+      "R95": 0.11091883458475074
+    },
+    "oral-noGLM/E030/post": {
+      "recovered_bp": 235954170,
+      "reference_bp": 2083072211,
+      "T50": 93,
+      "T90": 56,
+      "R95": 0.11327219899243329
+    }
+  },
+  "threshold_or_truth_changed": false,
+  "old_outputs_scored": false
+}

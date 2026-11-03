@@ -1,5 +1,51 @@
 # Google Cloud workspace operations
 
+## November 3 E031 closed; original CPU stopped, temporary resources released
+
+[Closed inspection](../experiments/E031-bootstrap-preserving-learning/learning-inspection-observed.json)
+verifies main shutdown at 01:20:59 UTC / 02:20:59 Copenhagen, exact completion,
+nine gates, 34 seals, all fits/delivery and every return member/alias. The main
+science archive is 2,101,954,568 bytes, generation `1793668697775852`. Read-only
+recovery reuses unchanged science/source/inputs within the original clock and
+finishes all frozen diagnostics, followed by independent shutdown at 11:17:16 UTC.
+Its private 85-member compact return and the 132-member closed-journal supplement
+pass complete verification. Mac reserve/portability failures and the unreleased
+provenance-field setup failure stay preserved; no scientific replay occurs.
+
+After both science archives, all work bytes and all compact delivery proofs pass,
+only the temporary 40 GiB E031 task disk is detached/deleted. Original 30/300 GiB
+disks and all required source inputs remain. Its historical environment/path is
+no longer a native reuse target; use the checksum/generation-bound private return.
+The single new L4 / g2-standard-8 / Iowa-a request is stockout-blocked. No GPU VM
+starts. Both exact empty 40/64 GiB worker disks are removed. Final resource
+inventory is one TERMINATED E2 with the original two disks, no GPU worker.
+
+[Price ledger](../experiments/E031-bootstrap-preserving-learning/learning-cost-observed.json)
+quotes main+review compute/IP $1.4933, original-PD overlap $0.2367 (already in the
+storage authorization), the complete 40 GiB task lifetime upper $0.1230, and new
+main/review export upper $0.2353. Complete learner attribution is below $2.20 of
+its original $8. GPU compute is zero; empty-disk storage is below $0.001. These
+are measured allocations with modeled gross prices, not invoices or credit deltas.
+
+Fresh paid-account/credit/ordinary SKU/current Catalog/all-version checks pass:
+DKK 1,688.52 Available / 86%, expiry January 12, 2027, November gross/savings/net
+DKK 13.02 / 13.02 / 0.00. Keep $35 for delayed usage. Current PD conversion remains
+721 pricing-month hours. Archive inventory before final compact backup is 272
+objects / 77,457,848,194 bytes, zero soft-deleted. Bucket protections are unchanged.
+
+The owner separately approves [storage only](../experiments/E031-bootstrap-preserving-learning/storage-20261104-admission.json)
+for existing stopped disks/private archives, November 4 → **November 11 at 00:00
+Copenhagen**, $9 (current forecast $7.60) and at most $0.50 automatic tail through
+November 18. No compute/new resources, deletion of unique evidence or further
+renewal is implied. E031's executed November 4 and clock contracts remain intact.
+
+The [next proposal](../experiments/E031-bootstrap-preserving-learning/next-block.md)
+needs a new owner invocation: $6 cached common-construction comparison, and a
+separate $3 single T4 qualification. The latter uses the already prepared 128
+views/source/assets and existing T4 quota, a different hardware pool; no second
+GPU attempt is made now. Full Oral GLM extraction is not authorized or admitted.
+Private source transfer remains necessary for outgoing private financial history.
+
 ## November 2 E031: verified bridge closeout, paired learner active
 
 [Current native receipt](../experiments/E031-bootstrap-preserving-learning/learning-native-observed.json)

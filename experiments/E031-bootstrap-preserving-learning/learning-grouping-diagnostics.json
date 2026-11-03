@@ -1,0 +1,3609 @@
+{
+  "status": "COMPLETED_REVIEWED",
+  "phase": "learning-20261102T200852Z-ba65911-r2",
+  "learned_query_geometry": {
+    "status": "PASS",
+    "actors": {
+      "E009-noGLM": {
+        "all_queries": 45,
+        "all_query_bp": 355310,
+        "known_query_bp": 259336,
+        "same_origin_bp_weighted": {
+          "E023": 0.9817264089829411,
+          "native": 0.9742858685257735
+        },
+        "cells": {
+          "2500|target|bacterial|depth_positive": {
+            "queries": 3,
+            "bp": 13149,
+            "known_queries": 3,
+            "known_bp": 13149,
+            "E023_same_weighted_sum": 13149.0,
+            "native_same_weighted_sum": 13149.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "500|target|bacterial|depth_positive": {
+            "queries": 4,
+            "bp": 2505,
+            "known_queries": 4,
+            "known_bp": 2505,
+            "E023_same_weighted_sum": 2300.6,
+            "native_same_weighted_sum": 2096.2,
+            "E023_unknown": 2,
+            "native_unknown": 3,
+            "E023_same_origin_bp_weighted": 0.9184031936127744,
+            "native_same_origin_bp_weighted": 0.8368063872255488
+          },
+          "768|target|bacterial|depth_positive": {
+            "queries": 3,
+            "bp": 2587,
+            "known_queries": 3,
+            "known_bp": 2587,
+            "E023_same_weighted_sum": 2587.0,
+            "native_same_weighted_sum": 2587.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "1000|target|bacterial|depth_positive": {
+            "queries": 6,
+            "bp": 10589,
+            "known_queries": 6,
+            "known_bp": 10589,
+            "E023_same_weighted_sum": 6328.599999999999,
+            "native_same_weighted_sum": 5930.599999999999,
+            "E023_unknown": 11,
+            "native_unknown": 11,
+            "E023_same_origin_bp_weighted": 0.5976579469260553,
+            "native_same_origin_bp_weighted": 0.5600717725942015
+          },
+          "500|non_target|eukaryotic|depth_positive": {
+            "queries": 5,
+            "bp": 3023,
+            "known_queries": 5,
+            "known_bp": 3023,
+            "E023_same_weighted_sum": 3023.0,
+            "native_same_weighted_sum": 3023.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "768|non_target|eukaryotic|depth_positive": {
+            "queries": 4,
+            "bp": 3443,
+            "known_queries": 4,
+            "known_bp": 3443,
+            "E023_same_weighted_sum": 3443.0,
+            "native_same_weighted_sum": 2973.8,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 0.863723496950334
+          },
+          "2500|unknown|unresolved|depth_positive": {
+            "queries": 4,
+            "bp": 26408,
+            "known_queries": 0,
+            "known_bp": 0,
+            "E023_same_weighted_sum": 0.0,
+            "native_same_weighted_sum": 0.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": null,
+            "native_same_origin_bp_weighted": null
+          },
+          "1000|non_target|eukaryotic|depth_positive": {
+            "queries": 6,
+            "bp": 7827,
+            "known_queries": 6,
+            "known_bp": 7827,
+            "E023_same_weighted_sum": 7552.8,
+            "native_same_weighted_sum": 6694.8,
+            "E023_unknown": 1,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.9649674204676121,
+            "native_same_origin_bp_weighted": 0.8553468761977769
+          },
+          "10000|unknown|unresolved|depth_positive": {
+            "queries": 3,
+            "bp": 68748,
+            "known_queries": 0,
+            "known_bp": 0,
+            "E023_same_weighted_sum": 0.0,
+            "native_same_weighted_sum": 0.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": null,
+            "native_same_origin_bp_weighted": null
+          },
+          "10000|target|bacterial|depth_positive": {
+            "queries": 2,
+            "bp": 197607,
+            "known_queries": 2,
+            "known_bp": 197607,
+            "E023_same_weighted_sum": 197607.0,
+            "native_same_weighted_sum": 197607.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "2500|non_target|eukaryotic|depth_positive": {
+            "queries": 4,
+            "bp": 18606,
+            "known_queries": 4,
+            "known_bp": 18606,
+            "E023_same_weighted_sum": 18606.0,
+            "native_same_weighted_sum": 18606.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "768|unknown|unresolved|depth_positive": {
+            "queries": 1,
+            "bp": 818,
+            "known_queries": 0,
+            "known_bp": 0,
+            "E023_same_weighted_sum": 0.0,
+            "native_same_weighted_sum": 0.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": null,
+            "native_same_origin_bp_weighted": null
+          }
+        },
+        "queries": [
+          {
+            "id": "k141_101140",
+            "length": 2555,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_102538",
+            "length": 587,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_104789",
+            "length": 888,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_110065",
+            "length": 1144,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_11079",
+            "length": 525,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_114432",
+            "length": 782,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_121845",
+            "length": 9158,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_122362",
+            "length": 707,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_124749",
+            "length": 747,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_127986",
+            "length": 1099,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_128551",
+            "length": 13024,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 4,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_133887",
+            "length": 11569,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_135618",
+            "length": 4366,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_143778",
+            "length": 36051,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_1452",
+            "length": 8725,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 2,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_14568",
+            "length": 530,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_15078",
+            "length": 3221,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_27229",
+            "length": 2049,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_2973",
+            "length": 674,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_30914",
+            "length": 798,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_3214",
+            "length": 2260,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 1,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 4,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_35400",
+            "length": 5805,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 2,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_39414",
+            "length": 6844,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_42350",
+            "length": 2720,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 3,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_45451",
+            "length": 161556,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_47987",
+            "length": 818,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 1,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_51167",
+            "length": 1371,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 4,
+              "unknown": 1,
+              "k": 5
+            },
+            "native": {
+              "same": 4,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_52675",
+            "length": 511,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 3,
+              "unknown": 2,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 3,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_58642",
+            "length": 587,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_62514",
+            "length": 1573,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 4,
+              "unknown": 1,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_68688",
+            "length": 1159,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_70950",
+            "length": 6228,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_72387",
+            "length": 782,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_7364",
+            "length": 660,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_74522",
+            "length": 2432,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 2,
+              "unknown": 3,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 3,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_77346",
+            "length": 902,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_77666",
+            "length": 44155,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_79264",
+            "length": 2053,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_81267",
+            "length": 1131,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_84530",
+            "length": 961,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_8536",
+            "length": 1131,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 2,
+              "unknown": 3,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 4,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_89140",
+            "length": 1014,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_96075",
+            "length": 5626,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_96378",
+            "length": 2915,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_96621",
+            "length": 917,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          }
+        ],
+        "scope": "Same frozen query IDs; k=5 including unknown neighbors; known-query label semantics only"
+      },
+      "E009-GLM": {
+        "all_queries": 45,
+        "all_query_bp": 355310,
+        "known_query_bp": 259336,
+        "same_origin_bp_weighted": {
+          "E023": 0.9825207452879662,
+          "native": 0.9748272511336644
+        },
+        "cells": {
+          "2500|target|bacterial|depth_positive": {
+            "queries": 3,
+            "bp": 13149,
+            "known_queries": 3,
+            "known_bp": 13149,
+            "E023_same_weighted_sum": 13149.0,
+            "native_same_weighted_sum": 13149.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "500|target|bacterial|depth_positive": {
+            "queries": 4,
+            "bp": 2505,
+            "known_queries": 4,
+            "known_bp": 2505,
+            "E023_same_weighted_sum": 2198.4,
+            "native_same_weighted_sum": 2096.2,
+            "E023_unknown": 3,
+            "native_unknown": 1,
+            "E023_same_origin_bp_weighted": 0.8776047904191617,
+            "native_same_origin_bp_weighted": 0.8368063872255488
+          },
+          "768|target|bacterial|depth_positive": {
+            "queries": 3,
+            "bp": 2587,
+            "known_queries": 3,
+            "known_bp": 2587,
+            "E023_same_weighted_sum": 2587.0,
+            "native_same_weighted_sum": 2587.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "1000|target|bacterial|depth_positive": {
+            "queries": 6,
+            "bp": 10589,
+            "known_queries": 6,
+            "known_bp": 10589,
+            "E023_same_weighted_sum": 6588.799999999999,
+            "native_same_weighted_sum": 5930.599999999999,
+            "E023_unknown": 11,
+            "native_unknown": 10,
+            "E023_same_origin_bp_weighted": 0.6222306166776843,
+            "native_same_origin_bp_weighted": 0.5600717725942015
+          },
+          "500|non_target|eukaryotic|depth_positive": {
+            "queries": 5,
+            "bp": 3023,
+            "known_queries": 5,
+            "known_bp": 3023,
+            "E023_same_weighted_sum": 3023.0,
+            "native_same_weighted_sum": 2570.2,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 0.8502150181938471
+          },
+          "768|non_target|eukaryotic|depth_positive": {
+            "queries": 4,
+            "bp": 3443,
+            "known_queries": 4,
+            "known_bp": 3443,
+            "E023_same_weighted_sum": 3443.0,
+            "native_same_weighted_sum": 2661.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 0.7728724949172233
+          },
+          "2500|unknown|unresolved|depth_positive": {
+            "queries": 4,
+            "bp": 26408,
+            "known_queries": 0,
+            "known_bp": 0,
+            "E023_same_weighted_sum": 0.0,
+            "native_same_weighted_sum": 0.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": null,
+            "native_same_origin_bp_weighted": null
+          },
+          "1000|non_target|eukaryotic|depth_positive": {
+            "queries": 6,
+            "bp": 7827,
+            "known_queries": 6,
+            "known_bp": 7827,
+            "E023_same_weighted_sum": 7600.8,
+            "native_same_weighted_sum": 7600.8,
+            "E023_unknown": 1,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.9711000383288616,
+            "native_same_origin_bp_weighted": 0.9711000383288616
+          },
+          "10000|unknown|unresolved|depth_positive": {
+            "queries": 3,
+            "bp": 68748,
+            "known_queries": 0,
+            "known_bp": 0,
+            "E023_same_weighted_sum": 0.0,
+            "native_same_weighted_sum": 0.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": null,
+            "native_same_origin_bp_weighted": null
+          },
+          "10000|target|bacterial|depth_positive": {
+            "queries": 2,
+            "bp": 197607,
+            "known_queries": 2,
+            "known_bp": 197607,
+            "E023_same_weighted_sum": 197607.0,
+            "native_same_weighted_sum": 197607.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "2500|non_target|eukaryotic|depth_positive": {
+            "queries": 4,
+            "bp": 18606,
+            "known_queries": 4,
+            "known_bp": 18606,
+            "E023_same_weighted_sum": 18606.0,
+            "native_same_weighted_sum": 18606.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 1.0,
+            "native_same_origin_bp_weighted": 1.0
+          },
+          "768|unknown|unresolved|depth_positive": {
+            "queries": 1,
+            "bp": 818,
+            "known_queries": 0,
+            "known_bp": 0,
+            "E023_same_weighted_sum": 0.0,
+            "native_same_weighted_sum": 0.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": null,
+            "native_same_origin_bp_weighted": null
+          }
+        },
+        "queries": [
+          {
+            "id": "k141_101140",
+            "length": 2555,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_102538",
+            "length": 587,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_104789",
+            "length": 888,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_110065",
+            "length": 1144,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_11079",
+            "length": 525,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_114432",
+            "length": 782,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_121845",
+            "length": 9158,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_122362",
+            "length": 707,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_124749",
+            "length": 747,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_127986",
+            "length": 1099,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_128551",
+            "length": 13024,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_133887",
+            "length": 11569,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_135618",
+            "length": 4366,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_143778",
+            "length": 36051,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_1452",
+            "length": 8725,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 2,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 2,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_14568",
+            "length": 530,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_15078",
+            "length": 3221,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_27229",
+            "length": 2049,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_2973",
+            "length": 674,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 4,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_30914",
+            "length": 798,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_3214",
+            "length": 2260,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 1,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 4,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_35400",
+            "length": 5805,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 4,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_39414",
+            "length": 6844,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_42350",
+            "length": 2720,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 3,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_45451",
+            "length": 161556,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_47987",
+            "length": 818,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 1,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_51167",
+            "length": 1371,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_52675",
+            "length": 511,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 2,
+              "unknown": 3,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 1,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_58642",
+            "length": 587,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_62514",
+            "length": 1573,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 4,
+              "unknown": 1,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_68688",
+            "length": 1159,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_70950",
+            "length": 6228,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_72387",
+            "length": 782,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_7364",
+            "length": 660,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_74522",
+            "length": 2432,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 3,
+              "unknown": 2,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 2,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_77346",
+            "length": 902,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_77666",
+            "length": 44155,
+            "origin": "unknown",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": false,
+            "E023": {
+              "same": null,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": null,
+              "unknown": 5,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_79264",
+            "length": 2053,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_81267",
+            "length": 1131,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 4,
+              "unknown": 1,
+              "k": 5
+            },
+            "native": {
+              "same": 4,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_84530",
+            "length": 961,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_8536",
+            "length": 1131,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 1,
+              "unknown": 4,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 4,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_89140",
+            "length": 1014,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_96075",
+            "length": 5626,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_96378",
+            "length": 2915,
+            "origin": "non_target",
+            "lineage": "eukaryotic",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "k141_96621",
+            "length": 917,
+            "origin": "target",
+            "lineage": "bacterial",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          }
+        ],
+        "scope": "Same frozen query IDs; k=5 including unknown neighbors; known-query label semantics only"
+      },
+      "oral-noGLM": {
+        "all_queries": 56,
+        "all_query_bp": 134969,
+        "known_query_bp": 134969,
+        "same_origin_bp_weighted": {
+          "E023": 0.33949869970141294,
+          "native": 0.3243663359734458
+        },
+        "cells": {
+          "768|target|unresolved|depth_positive": {
+            "queries": 5,
+            "bp": 4231,
+            "known_queries": 5,
+            "known_bp": 4231,
+            "E023_same_weighted_sum": 2011.8,
+            "native_same_weighted_sum": 1166.8000000000002,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.47549042779484757,
+            "native_same_origin_bp_weighted": 0.2757740486882534
+          },
+          "2500|target|unresolved|depth_positive": {
+            "queries": 11,
+            "bp": 56267,
+            "known_queries": 11,
+            "known_bp": 56267,
+            "E023_same_weighted_sum": 21858.0,
+            "native_same_weighted_sum": 22505.6,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.38846926262285175,
+            "native_same_origin_bp_weighted": 0.3999786731121261
+          },
+          "500|target|unresolved|measured_all_zero": {
+            "queries": 9,
+            "bp": 5429,
+            "known_queries": 9,
+            "known_bp": 5429,
+            "E023_same_weighted_sum": 212.60000000000002,
+            "native_same_weighted_sum": 105.4,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.03916006631055444,
+            "native_same_origin_bp_weighted": 0.019414256769202432
+          },
+          "500|target|unresolved|depth_positive": {
+            "queries": 9,
+            "bp": 5785,
+            "known_queries": 9,
+            "known_bp": 5785,
+            "E023_same_weighted_sum": 2415.4,
+            "native_same_weighted_sum": 2069.6,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.41752808988764045,
+            "native_same_origin_bp_weighted": 0.35775280898876405
+          },
+          "2500|target|unresolved|measured_all_zero": {
+            "queries": 3,
+            "bp": 18930,
+            "known_queries": 3,
+            "known_bp": 18930,
+            "E023_same_weighted_sum": 1645.4,
+            "native_same_weighted_sum": 1645.4,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.0869202324352879,
+            "native_same_origin_bp_weighted": 0.0869202324352879
+          },
+          "1000|target|unresolved|depth_positive": {
+            "queries": 10,
+            "bp": 13896,
+            "known_queries": 10,
+            "known_bp": 13896,
+            "E023_same_weighted_sum": 5694.2,
+            "native_same_weighted_sum": 4302.2,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.4097725964306275,
+            "native_same_origin_bp_weighted": 0.3095998848589522
+          },
+          "1000|target|unresolved|measured_all_zero": {
+            "queries": 4,
+            "bp": 5194,
+            "known_queries": 4,
+            "known_bp": 5194,
+            "E023_same_weighted_sum": 1016.4,
+            "native_same_weighted_sum": 1016.4,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.19568733153638815,
+            "native_same_origin_bp_weighted": 0.19568733153638815
+          },
+          "768|target|unresolved|measured_all_zero": {
+            "queries": 3,
+            "bp": 2464,
+            "known_queries": 3,
+            "known_bp": 2464,
+            "E023_same_weighted_sum": 0.0,
+            "native_same_weighted_sum": 0.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.0,
+            "native_same_origin_bp_weighted": 0.0
+          },
+          "10000|target|unresolved|depth_positive": {
+            "queries": 2,
+            "bp": 22773,
+            "known_queries": 2,
+            "known_bp": 22773,
+            "E023_same_weighted_sum": 10968.0,
+            "native_same_weighted_sum": 10968.0,
+            "E023_unknown": 0,
+            "native_unknown": 0,
+            "E023_same_origin_bp_weighted": 0.4816229745751548,
+            "native_same_origin_bp_weighted": 0.4816229745751548
+          }
+        },
+        "queries": [
+          {
+            "id": "C0733bb152ba6e1306c83c8d7d1520a33260fe1a64c8959dfbd96286e27e57f20",
+            "length": 831,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 4,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C09fe6b39fa035a4c5b61d6d43e8e66df450742496b68f0fcedb15ba6ac3e00f0",
+            "length": 3388,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C142a15568461682cbdad241904cc23917fe1861eb8ec1bf8c73c2814a2433004",
+            "length": 715,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C2149d23e2b3fb53c592231768516256ee245a77d22199f6b9751efa785992189",
+            "length": 736,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C214c4e7c97c6d042ad0e82ac78ec502486eda86d46bcb508ea50efbbb2c40773",
+            "length": 8227,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C234919185afb42eb1d76fed6bb69576e6a879a69952b39ad7e2452b9f8910b36",
+            "length": 1763,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C2428a54908212c8a7ada01d11cd8e62b6c29f96542043e172ed471efd83c8b8d",
+            "length": 6972,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C27f09c4e1df3a8bf9d1b4b5104149c6fd3c957a5b83ffc53916053da0baa8918",
+            "length": 527,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C2b110d1df42b145367176102d2ec554aa7fcc97ca15d35cef8f2684edc416bf1",
+            "length": 8708,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C2d49814dbd60f53e8e314a04ec297eb763c22c64ed435c7ddb06a36798d56bf5",
+            "length": 1156,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C333da8105cb6be6482ceda646f147b231a0d9a3217e5e2c716b2276355c88f17",
+            "length": 774,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C3404ffe22ca5193063f1a39f6f6acf9131ae99e2780ea92ea9236076041e095d",
+            "length": 10968,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C34878a404b7a1be3582d08d7c6f678b6361b55b997f3128daca0a17189de52ec",
+            "length": 3250,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C34a7dbf6d67c4a9b8fab7901f1b787c1471b6b8d618e90a9e4f3e994d670c117",
+            "length": 529,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C37ae4d61719882b9bfd00cda79416988b437242e68a12223812fc128b9fc2510",
+            "length": 738,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C51dfca939cbdcec60c10602ed193164e9060f94b1da050ca4faa00d4c219f767",
+            "length": 1432,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C5615f1f5d9ab5b777b83f8cc1a7d0f9660d97bdbc22846eec45cc788ae7332bd",
+            "length": 2525,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C574bce1533dd387a50ef8384c562be575f7cb9f8f88d69ed5056e4761745dcde",
+            "length": 744,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 4,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 4,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C57cf0f51b56cae80b2cff5ea4cfb76c68d2745e6998d8a129067d066d88e920d",
+            "length": 837,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C5993d056217c241990fc71b9678b306a5fefc0e91debc7497e9f7b42271f9252",
+            "length": 1483,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C5e44853d4ff9a89e3ef456b4479a844dd1fcbc4f844a38c93522e3aab6ff17b9",
+            "length": 1078,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C64917293076c8619dc7956df6ac63b1f30cdcc1413ff4af6bb604cee7ea11f61",
+            "length": 1025,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C683af0868dc897c64b7a856fbfa598a192ea423536bd3dedb664b006e9293b7a",
+            "length": 7453,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C72aafe4ffb405e233dc153bdcc5f913f0b2310b8473bc4117b2b280351accab6",
+            "length": 11805,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C74ab3535be94a138e77260d056e7518b0a14947dede477247ca92d097904fd4a",
+            "length": 5017,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C74aee08f5ab5e74803e7be0fccd8eb5031b7da918fcc775cd68bbd1e1a7b4af1",
+            "length": 608,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C75db57f1819faf3fd4f29991e0e6ff60f8d46ece2f52d1c4c23e7a0832d5c4a7",
+            "length": 822,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C77402538d874d568063538c1928f5ee61528524c3d1833ec7d508d4af1afbce4",
+            "length": 3238,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C7a93013582936984f038d38ce710e791c5005299052dbd79708fbf568a3ae488",
+            "length": 875,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C845a3481534ffde97139c25a4aca89dcb8ade22a4c6b8804f84348e71592d08a",
+            "length": 1278,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 4,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C8ddc3d99a0a80cd23365ff79c0d5eefb98bfc9307ba1bc03421fb1ba352a8535",
+            "length": 747,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "C9871019a0f18d744eaffa7adeff20b765961a2b75b2e35ddecb80bbc0acccfa9",
+            "length": 548,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ca075db4c80a69e824c6bcac570e4c1ea9914f72bc1c1ac74cc082e955b925fa7",
+            "length": 713,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ca1106efb597501cbe80f3507e5450774bf9da226a0e1bf86a9ff50bf4d926727",
+            "length": 3345,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ca5745a28bccf26681e5736ef1b202d17c1673dfbd1dda517a97a4012081de8f4",
+            "length": 636,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ca688d770b8caebafd52045019730bbf8e9d0a08ebcc8afb1ca011d510ae83bdf",
+            "length": 544,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ca73279d62a50d0eec4fb9321954022de6bce5ddc39b5d0b5424934cdc809351e",
+            "length": 651,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ca85dd654f76a2226657666631f2a050fe10f0149aa51615ba3048d6fa66e99d1",
+            "length": 5399,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ca9c9edcf01ac1ce42550fc1d24433cc58cecaf82be80af9b957ca8d7d3eb6b9b",
+            "length": 1879,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Caaebdc5c8386b1e81a67d8bea5179b28d7d4cd302f716ff8acbad876432bf104",
+            "length": 1594,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cafa9ae559af29aab2bfdae9df019b58214b1022e3640ed1c4eef9c5a05afc578",
+            "length": 512,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cb44cab1a31cc64e43eb3c036930987b54d3bc2ba9f4144e6ee3572bc36f5fc4a",
+            "length": 536,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cb4d98034a3880924172797d65f2b1c5dc7fe78fc5db3a1f20d16359635b16ac1",
+            "length": 1223,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cb683b2e95e8df0bf33fc1263a3add3563f6a9d4a0e46d5997e6eab3aff3651d8",
+            "length": 555,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cb8caab8f55b9bb142e3fc95bc6c71e297c5d01c426b8023f4a6abf81c3a9293b",
+            "length": 853,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cbf0302b049f446dc37a3908058dc170f4cf82781ee1873e2aea31e8308aaa74e",
+            "length": 671,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [],
+            "known_query": true,
+            "E023": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cc3e96e6567508606e5810535a21e3b9e57f90736038a3c9377de23af75bba061",
+            "length": 1216,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cc78e82a92336bd2bba20a91aff2071c802de8ea3b4960349cf05aa15d904a98e",
+            "length": 3145,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ccd807399c89e7e14ce08a4bb85902733f6e32cf9e8b0aa9be1c284cbd5404d24",
+            "length": 1266,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ccee2286c4e7c487b93be8d92461dc40f81871142d67f4b2ece31eed5bef6ec59",
+            "length": 504,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ce599b4cc125d3ac0c6d491cbf52c959470e8afebf0edd442a49fd6cc12fc71d0",
+            "length": 1694,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "measured_zero_depth"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 3,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cea5ff3ee6b188564aa334a0668e3c10517ad355110c6fedf7f9da0c00920f5eb",
+            "length": 9924,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Ceaedd535af0c96fc26d6954116dca2ce97e56733a8b196d31a919ca546edcd00",
+            "length": 822,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 2,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 1,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cec8c888203f59eabf76dcd736e3737f1017393c0e1aba043eecfa29796d7715f",
+            "length": 881,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 0,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cf3d7059fd52d935caded2c7e9900b62ee6a13e8a8d010204867c87b3db1a2d66",
+            "length": 4606,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "long"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          },
+          {
+            "id": "Cf62231ca3a4e4242cf425ddff9439ba9f42c5cf30d1c114ebf8929cfa1b7c69a",
+            "length": 1003,
+            "origin": "target",
+            "lineage": "unresolved",
+            "frozen_query_strata": [
+              "positive_depth",
+              "short"
+            ],
+            "known_query": true,
+            "E023": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            },
+            "native": {
+              "same": 5,
+              "unknown": 0,
+              "k": 5
+            }
+          }
+        ],
+        "scope": "Same frozen query IDs; k=5 including unknown neighbors; known-query label semantics only"
+      }
+    },
+    "old_scores_recomputed": false,
+    "search_or_inference_performed": false,
+    "technical_query_population_only": true
+  },
+  "initial_and_final_geometry": {
+    "E009-noGLM": {
+      "initial": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.70630507754647,
+            "mean_dimension_std": 0.10873004673600498,
+            "mean_other_cosine": 0.22928504196891603,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.03911752075894,
+            "mean_dimension_std": 0.1065247803405448,
+            "mean_other_cosine": 0.2596225322462348,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.95732702235972,
+            "mean_dimension_std": 0.10546119759131681,
+            "mean_other_cosine": 0.27488585776660385,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.34500472984896,
+            "mean_dimension_std": 0.10403401812438162,
+            "mean_other_cosine": 0.29381495174739913,
+            "rows": 8192
+          }
+        }
+      },
+      "final": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.87066590482506,
+            "mean_dimension_std": 0.10867232619799622,
+            "mean_other_cosine": 0.23021824111470807,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.2083320859381,
+            "mean_dimension_std": 0.10633929687356868,
+            "mean_other_cosine": 0.2621135210877273,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.947789611908696,
+            "mean_dimension_std": 0.10860104957527511,
+            "mean_other_cosine": 0.23127712218746307,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.1343424731131,
+            "mean_dimension_std": 0.10625545016564142,
+            "mean_other_cosine": 0.2632790956928805,
+            "rows": 8192
+          }
+        }
+      }
+    },
+    "E009-GLM": {
+      "initial": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 36.946701904772894,
+            "mean_dimension_std": 0.1099273156481721,
+            "mean_other_cosine": 0.21269556211732926,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 36.50517029222869,
+            "mean_dimension_std": 0.10775947634286082,
+            "mean_other_cosine": 0.24082989085802595,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 34.84844536898599,
+            "mean_dimension_std": 0.10673036885970011,
+            "mean_other_cosine": 0.25769002857480083,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 34.50891520221673,
+            "mean_dimension_std": 0.10407288699931443,
+            "mean_other_cosine": 0.29215382590509553,
+            "rows": 8192
+          }
+        }
+      },
+      "final": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 37.011612014201084,
+            "mean_dimension_std": 0.11012269637332936,
+            "mean_other_cosine": 0.21001951707571648,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 36.43831669128587,
+            "mean_dimension_std": 0.10791831013854741,
+            "mean_other_cosine": 0.23855697617982727,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 36.98970331771856,
+            "mean_dimension_std": 0.10984756900823356,
+            "mean_other_cosine": 0.21370756217905962,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 36.39028360638953,
+            "mean_dimension_std": 0.10750956100350388,
+            "mean_other_cosine": 0.24407699410920794,
+            "rows": 8192
+          }
+        }
+      }
+    },
+    "oral-noGLM": {
+      "initial": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.45408625197763,
+            "mean_dimension_std": 0.11190542999879952,
+            "mean_other_cosine": 0.16319313599365917,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 30.78207324311416,
+            "mean_dimension_std": 0.10885235580937308,
+            "mean_other_cosine": 0.20546430097014967,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.0601717052009,
+            "mean_dimension_std": 0.11162621855962473,
+            "mean_other_cosine": 0.16744529657419965,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 30.56073337422001,
+            "mean_dimension_std": 0.10828026342234409,
+            "mean_other_cosine": 0.21477897896005557,
+            "rows": 8192
+          }
+        }
+      },
+      "final": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.50283477769346,
+            "mean_dimension_std": 0.1120334793779677,
+            "mean_other_cosine": 0.16176396385244876,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 30.256232340848634,
+            "mean_dimension_std": 0.10895217888428291,
+            "mean_other_cosine": 0.20368154069322825,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.22475202518297,
+            "mean_dimension_std": 0.11192532373632452,
+            "mean_other_cosine": 0.16263491803846195,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 30.009782729063986,
+            "mean_dimension_std": 0.10875966663352458,
+            "mean_other_cosine": 0.20582896025640937,
+            "rows": 8192
+          }
+        }
+      }
+    }
+  },
+  "partition_complementarity": {
+    "kind": "Diagnostic truth-labelled target-wise envelope from already frozen reviewed tables; not a selectable partition",
+    "values": {
+      "E009-noGLM/two_emitted_final_partitions": {
+        "recovered_bp": 59200903,
+        "reference_bp": 554661890,
+        "R95": 10.673331639929327,
+        "target90": 11
+      },
+      "E009-noGLM/all_five_frozen_partitions": {
+        "recovered_bp": 59200903,
+        "reference_bp": 554661890,
+        "R95": 10.673331639929327,
+        "target90": 11
+      },
+      "E009-GLM/two_emitted_final_partitions": {
+        "recovered_bp": 58803424,
+        "reference_bp": 554661890,
+        "R95": 10.601670145392537,
+        "target90": 10
+      },
+      "E009-GLM/all_five_frozen_partitions": {
+        "recovered_bp": 58803424,
+        "reference_bp": 554661890,
+        "R95": 10.601670145392537,
+        "target90": 10
+      },
+      "oral-noGLM/two_emitted_final_partitions": {
+        "recovered_bp": 283956930,
+        "reference_bp": 2083072211,
+        "R95": 13.63164121246107,
+        "target90": 61
+      },
+      "oral-noGLM/all_five_frozen_partitions": {
+        "recovered_bp": 292128738,
+        "reference_bp": 2083072211,
+        "R95": 14.02393716633379,
+        "target90": 63
+      }
+    },
+    "not_disjoint": true,
+    "not_a_deployable_result": true,
+    "bins_or_thresholds_changed": false,
+    "not_representative_of_uninspected_candidates": true
+  },
+  "populations": "learning-populations.json",
+  "original_Mac_allclose_tolerance_unchanged": true,
+  "not_whole_community_neighbor_purity": true,
+  "truth_not_used_for_algorithm_selection": true,
+  "full_provided_denominators_unchanged": true
+}

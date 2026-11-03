@@ -945,3 +945,15 @@ under both common constructors; the same three new outputs will resolve the
 interaction without extra fits or a dataset-specific product. See the
 [reviewed evidence](../evidence/2026-11-02-e031-bridge-and-paired-learning.md).
 All original criteria, Q003/Q005 and the November 4 boundary remain.
+
+
+November 3 E031 completed review: Q001 remains open. Both unchanged learning
+criteria return MODIFY. Same-vector E023/E030 constructor effects remain larger
+than most teacher-to-continuation changes. New Oral post gains coexist with 13
+lost targets, and emitted-bin complementarity is insufficient to establish a
+shared high-performing selector. [Reviewed evidence](../evidence/2026-11-03-e031-learning-and-recovery-priority.md)
+justifies one common candidate-selection/joint-update upgrade with E031 fixed,
+not another small loss/grid or an automatic larger network. Q003/Q005 remain:
+no new independent confirmation, no native Oral GLM bank. One fresh L4 attempt
+is stockout-blocked and closed; a T4 qualification needs the next explicit scope.
+Storage only is separately approved through November 11, without a compute renewal.

@@ -1,8 +1,59 @@
 # Current Research State
 
-Updated: November 2, 2026 (Copenhagen). This is the single current handoff.
+Updated: November 3, 2026 (Copenhagen). This is the single current handoff.
 
-## E031 bridge reviewed; paired learner running under verified supervision
+## E031 learner completed/reviewed; one common constructor is next
+
+[Independent inspection](../experiments/E031-bootstrap-preserving-learning/learning-inspection-observed.json)
+accepts `learning-20261102T200852Z-ba65911-r2`: nine native gates, 34 stage seals,
+three complete 20-epoch fits, 13 actual delivery exits, unchanged 125 original
+files, exact source/runtime/axes/reload and every archive member/alias pass.
+The main VM stopped November 3 at 02:20:59 Copenhagen. Bounded read-only review
+also completed and independently stopped at 12:17:16; no science was replayed.
+The original cumulative clock and all failed journals remain.
+
+[All fifteen frozen partitions](../experiments/E031-bootstrap-preserving-learning/learning-review.json)
+are reviewed against full 156/799 denominators and unchanged truth. New E031 +
+E023 R95 is **10.6110% / 10.5684% / 9.9607%** (E009 no-GLM / GLM / Oral no-GLM);
+new E031 + E030 is **8.6572% / 8.4318% / 11.3272%**. Both frozen decisions are
+MODIFY. The E023 E009 10.4163%, E026 Oral 13.8569% and MetaBAT2 8.5493% / 17.3260%
+references remain. No per-dataset winner router is promoted. Keep E031 as the
+fixed development representation for a shared biological candidate-selection /
+joint-recruitment block. [Interpretation and source audit](evidence/2026-11-03-e031-learning-and-recovery-priority.md)
+explain why this is more decisive now than another small loss or larger network.
+
+The sole fresh L4 / Iowa-a request is **NOT_RUN_CAPACITY_BLOCKED**. No GPU VM or
+model started, no throughput was measured, and both empty temporary disks were
+removed. The prepared alternative is one separately authorized T4 qualification;
+full Oral GLM remains unadmitted. Do not keep repeating the same L4 placement.
+The earlier unbatched 61.05-hour / $65–85 complete bank case is planning, not a
+new measured runtime. Skin stays unscored with all biological/truth/overlap gates.
+
+The original CPU is TERMINATED with only original 30/300 GiB disks. The 40 GiB
+E031 task disk was released after both complete science archives, every work
+member, closed delivery journals and the independent compact review return pass
+verification. Required source inputs on the original disk remain. Current paths
+on the released task disk are historical locators; restore from the bound private
+archives, never infer that their old environment still exists.
+
+[Costs](../experiments/E031-bootstrap-preserving-learning/learning-cost-observed.json):
+main plus read-only CPU/IP $1.4933; complete learner attribution upper $2.20 under
+$8. GPU compute $0; temporary disk cost below $0.001. Allocation/storage/export
+and sampled CPU remain separate. DKK 1,688.52 Welcome credit is available at the
+fresh admission, with $35 reserved for delayed usage; displayed November net is
+zero, not proof of final invoicing.
+
+The owner separately approves [storage-only preservation](../experiments/E031-bootstrap-preserving-learning/storage-20261104-admission.json)
+from November 4 through **November 11 at 00:00 Copenhagen**, $9 active storage
+(estimated $7.60), plus at most $0.50 automatic soft-delete tail through November
+18. This authorizes no new compute/resources and does not rewrite E031's original
+November 4 limits. Review preservation again before November 11; do not silently
+renew or delete unique evidence. [The next proposed block](../experiments/E031-bootstrap-preserving-learning/next-block.md)
+and [exact following prompt](../experiments/E031-bootstrap-preserving-learning/OPERATIONS.md#exact-following-prompt)
+propose local implementation and a new $6 cached comparison / separate $3 T4
+qualification, contingent on the owner's next invocation and every fresh gate.
+
+## Earlier November 2 E031 paired-learner handoff
 
 [Bridge inspection](../experiments/E031-bootstrap-preserving-learning/inspection-observed.json)
 accepts the completed original phase `bridge-20261102T130813Z-31962f8` and its

@@ -1,0 +1,2916 @@
+{
+  "status": "PASS",
+  "E009_full_population_measured_depth": {
+    "E009-noGLM": {
+      "E023/density": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 17332,
+            "bp": 10602003
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2984,
+            "bp": 4274298
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 5067,
+            "bp": 3192929
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5984,
+            "bp": 7821346
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 9488,
+            "bp": 14620061
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2369,
+            "bp": 2064680
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1054,
+            "bp": 921989
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 6623,
+            "bp": 5747738
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2663,
+            "bp": 1632834
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1829,
+            "bp": 2725249
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3400,
+            "bp": 2993862
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2263,
+            "bp": 8297383
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5879,
+            "bp": 3594035
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 4358,
+            "bp": 6735102
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3683,
+            "bp": 2286286
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 62,
+            "bp": 106963
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1856,
+            "bp": 1623799
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2352,
+            "bp": 3829786
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 571,
+            "bp": 2370220
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 637,
+            "bp": 18921040
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2022,
+            "bp": 9050412
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 48369
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 627,
+            "bp": 2816898
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 38,
+            "bp": 57649
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1124,
+            "bp": 696531
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 546,
+            "bp": 29415051
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1713,
+            "bp": 7760255
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 623,
+            "bp": 547903
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 160,
+            "bp": 631496
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 140,
+            "bp": 3003861
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 27181
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 142,
+            "bp": 228794
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 458,
+            "bp": 31928805
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 60,
+            "bp": 37118
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 187,
+            "bp": 1008430
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 117829
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 32,
+            "bp": 54045
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 133,
+            "bp": 10164806
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 123,
+            "bp": 649077
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 71,
+            "bp": 2062681
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 1420580
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 27,
+            "bp": 117541
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 12,
+            "bp": 476480
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 25,
+            "bp": 21808
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 50,
+            "bp": 31469
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 24180
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 43,
+            "bp": 1871921
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 19576
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 7,
+            "bp": 522410
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 3611
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 6,
+            "bp": 3915
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 46569
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 4,
+            "bp": 3454
+          },
+          "768|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 10,
+            "bp": 9172
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 940
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E023/selected": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 17332,
+            "bp": 10602003
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2984,
+            "bp": 4274298
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 5067,
+            "bp": 3192929
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5984,
+            "bp": 7821346
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 9488,
+            "bp": 14620061
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2369,
+            "bp": 2064680
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1054,
+            "bp": 921989
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 6623,
+            "bp": 5747738
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2663,
+            "bp": 1632834
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1829,
+            "bp": 2725249
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3400,
+            "bp": 2993862
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2263,
+            "bp": 8297383
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5879,
+            "bp": 3594035
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 4358,
+            "bp": 6735102
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3683,
+            "bp": 2286286
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 62,
+            "bp": 106963
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1856,
+            "bp": 1623799
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2352,
+            "bp": 3829786
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 571,
+            "bp": 2370220
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 637,
+            "bp": 18921040
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2022,
+            "bp": 9050412
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 48369
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 627,
+            "bp": 2816898
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 38,
+            "bp": 57649
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1124,
+            "bp": 696531
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 546,
+            "bp": 29415051
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1713,
+            "bp": 7760255
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 623,
+            "bp": 547903
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 160,
+            "bp": 631496
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 140,
+            "bp": 3003861
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 27181
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 142,
+            "bp": 228794
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 458,
+            "bp": 31928805
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 60,
+            "bp": 37118
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 187,
+            "bp": 1008430
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 117829
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 32,
+            "bp": 54045
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 133,
+            "bp": 10164806
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 123,
+            "bp": 649077
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 71,
+            "bp": 2062681
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 1420580
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 27,
+            "bp": 117541
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 12,
+            "bp": 476480
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 25,
+            "bp": 21808
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 50,
+            "bp": 31469
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 24180
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 43,
+            "bp": 1871921
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 19576
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 7,
+            "bp": 522410
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 3611
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 6,
+            "bp": 3915
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 46569
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 4,
+            "bp": 3454
+          },
+          "768|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 10,
+            "bp": 9172
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 940
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E030/root-only": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 21835,
+            "bp": 13440020
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5360,
+            "bp": 7861958
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 12358,
+            "bp": 17300441
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3114,
+            "bp": 5140966
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3569,
+            "bp": 3112173
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1594,
+            "bp": 1397349
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 9394,
+            "bp": 8182270
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3374,
+            "bp": 2082455
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3560,
+            "bp": 5456839
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 925,
+            "bp": 3119275
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 8696,
+            "bp": 5330544
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 16,
+            "bp": 29947
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1982,
+            "bp": 3147442
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1305,
+            "bp": 5223951
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 454,
+            "bp": 13739065
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1498,
+            "bp": 5809604
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 629,
+            "bp": 559330
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1355,
+            "bp": 5868761
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 113,
+            "bp": 173647
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 866,
+            "bp": 549777
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 621,
+            "bp": 1098196
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 84,
+            "bp": 134665
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 564,
+            "bp": 354912
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 380,
+            "bp": 24509951
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 656,
+            "bp": 576306
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 237,
+            "bp": 6967781
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1294,
+            "bp": 5998549
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 979,
+            "bp": 4906524
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 323,
+            "bp": 8185836
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 14,
+            "bp": 12147
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 413,
+            "bp": 246910
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 64,
+            "bp": 103516
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 45,
+            "bp": 39214
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 67,
+            "bp": 3706845
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 398,
+            "bp": 28744370
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 84,
+            "bp": 51933
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 131,
+            "bp": 718467
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 80,
+            "bp": 356446
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 20,
+            "bp": 34950
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 51,
+            "bp": 1842532
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 83,
+            "bp": 72543
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 94,
+            "bp": 8798754
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 69,
+            "bp": 410460
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 15,
+            "bp": 22706
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 52,
+            "bp": 1759263
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 114083
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 65,
+            "bp": 336532
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 30980
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 56,
+            "bp": 35384
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 1533238
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 5,
+            "bp": 4394
+          },
+          "2500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 3458
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 7,
+            "bp": 4761
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E030/pre": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 21835,
+            "bp": 13440020
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5360,
+            "bp": 7861958
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 12358,
+            "bp": 17300441
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3114,
+            "bp": 5140966
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3569,
+            "bp": 3112173
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1594,
+            "bp": 1397349
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 9394,
+            "bp": 8182270
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3374,
+            "bp": 2082455
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3560,
+            "bp": 5456839
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 925,
+            "bp": 3119275
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 8696,
+            "bp": 5330544
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 16,
+            "bp": 29947
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1982,
+            "bp": 3147442
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1305,
+            "bp": 5223951
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 454,
+            "bp": 13739065
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1498,
+            "bp": 5809604
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 629,
+            "bp": 559330
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1355,
+            "bp": 5868761
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 113,
+            "bp": 173647
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 866,
+            "bp": 549777
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 621,
+            "bp": 1098196
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 84,
+            "bp": 134665
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 564,
+            "bp": 354912
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 380,
+            "bp": 24509951
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 656,
+            "bp": 576306
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 237,
+            "bp": 6967781
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1294,
+            "bp": 5998549
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 979,
+            "bp": 4906524
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 323,
+            "bp": 8185836
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 14,
+            "bp": 12147
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 413,
+            "bp": 246910
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 64,
+            "bp": 103516
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 45,
+            "bp": 39214
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 67,
+            "bp": 3706845
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 398,
+            "bp": 28744370
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 84,
+            "bp": 51933
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 131,
+            "bp": 718467
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 80,
+            "bp": 356446
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 20,
+            "bp": 34950
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 51,
+            "bp": 1842532
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 83,
+            "bp": 72543
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 94,
+            "bp": 8798754
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 69,
+            "bp": 410460
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 15,
+            "bp": 22706
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 52,
+            "bp": 1759263
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 114083
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 65,
+            "bp": 336532
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 30980
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 56,
+            "bp": 35384
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 1533238
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 5,
+            "bp": 4394
+          },
+          "2500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 3458
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 7,
+            "bp": 4761
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E030/post": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 20695,
+            "bp": 12733848
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 4256,
+            "bp": 6122499
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1704,
+            "bp": 1061084
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 12025,
+            "bp": 16863517
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3447,
+            "bp": 5577890
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3190,
+            "bp": 2781124
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1149,
+            "bp": 1004828
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 8944,
+            "bp": 7793960
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2856,
+            "bp": 1751838
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2141,
+            "bp": 3227972
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1079,
+            "bp": 947640
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 908,
+            "bp": 3049281
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 7806,
+            "bp": 4785081
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 56,
+            "bp": 96255
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3086,
+            "bp": 4886901
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2040,
+            "bp": 3327063
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 750,
+            "bp": 3149865
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 526,
+            "bp": 15619610
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1515,
+            "bp": 5879598
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 821,
+            "bp": 3658026
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 62,
+            "bp": 87004
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1756,
+            "bp": 1095240
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 44,
+            "bp": 68357
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 931,
+            "bp": 577527
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 424,
+            "bp": 25441613
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1035,
+            "bp": 907355
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 193,
+            "bp": 6036119
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1828,
+            "bp": 8209284
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1534,
+            "bp": 6980610
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 528,
+            "bp": 465064
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 251,
+            "bp": 6305291
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 19,
+            "bp": 16387
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 115,
+            "bp": 190159
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 40,
+            "bp": 34974
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 415,
+            "bp": 29445913
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 72,
+            "bp": 44561
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 163,
+            "bp": 875620
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 45,
+            "bp": 205999
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 21,
+            "bp": 36006
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 99,
+            "bp": 8936109
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 104,
+            "bp": 560907
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 50,
+            "bp": 3005302
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 14,
+            "bp": 21650
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 1685124
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 114083
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 46,
+            "bp": 1705177
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 33,
+            "bp": 179379
+          },
+          "768|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 8079
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 34709
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 47,
+            "bp": 1607377
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 22901
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 2,
+            "bp": 1602
+          },
+          "2500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 3458
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 2792
+          },
+          "500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 675
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 19,
+            "bp": 12133
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      }
+    },
+    "E009-GLM": {
+      "E023/density": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 15437,
+            "bp": 9399502
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3006,
+            "bp": 4306395
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 6962,
+            "bp": 4395430
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 12069,
+            "bp": 18109930
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2364,
+            "bp": 2061000
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 934,
+            "bp": 818668
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 5003,
+            "bp": 4402936
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2371,
+            "bp": 1450558
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3403,
+            "bp": 4331477
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1667,
+            "bp": 2497648
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5020,
+            "bp": 4338664
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2323,
+            "bp": 8509947
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5982,
+            "bp": 3657518
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 4336,
+            "bp": 6703005
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3580,
+            "bp": 2222803
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 64,
+            "bp": 109719
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1861,
+            "bp": 1627479
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2514,
+            "bp": 4057387
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 591,
+            "bp": 2495751
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 633,
+            "bp": 18921594
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2010,
+            "bp": 8986590
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 46494
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 639,
+            "bp": 2880720
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 743,
+            "bp": 651224
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1416,
+            "bp": 878807
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 534,
+            "bp": 29073723
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1693,
+            "bp": 7634724
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 144,
+            "bp": 3003307
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 29,
+            "bp": 25327
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 142,
+            "bp": 230669
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 456,
+            "bp": 31739279
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 36,
+            "bp": 54893
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 59,
+            "bp": 36478
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 187,
+            "bp": 1009721
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 123093
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 33,
+            "bp": 55585
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 132,
+            "bp": 10104389
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 100,
+            "bp": 418932
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 121,
+            "bp": 643813
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 83,
+            "bp": 2404009
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 38,
+            "bp": 1465209
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 27,
+            "bp": 117541
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 13,
+            "bp": 536897
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 23,
+            "bp": 20407
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 46,
+            "bp": 28946
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 30,
+            "bp": 26034
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 40,
+            "bp": 1827292
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 32,
+            "bp": 20216
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 711936
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 10,
+            "bp": 6438
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 45278
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 4,
+            "bp": 3454
+          },
+          "768|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 12,
+            "bp": 10573
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 940
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 2,
+            "bp": 2071
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E023/selected": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 15437,
+            "bp": 9399502
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3006,
+            "bp": 4306395
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 6962,
+            "bp": 4395430
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 12069,
+            "bp": 18109930
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2364,
+            "bp": 2061000
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 934,
+            "bp": 818668
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 5003,
+            "bp": 4402936
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2371,
+            "bp": 1450558
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3403,
+            "bp": 4331477
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1667,
+            "bp": 2497648
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5020,
+            "bp": 4338664
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2323,
+            "bp": 8509947
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5982,
+            "bp": 3657518
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 4336,
+            "bp": 6703005
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3580,
+            "bp": 2222803
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 64,
+            "bp": 109719
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1861,
+            "bp": 1627479
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2514,
+            "bp": 4057387
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 591,
+            "bp": 2495751
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 633,
+            "bp": 18921594
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2010,
+            "bp": 8986590
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 46494
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 639,
+            "bp": 2880720
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 743,
+            "bp": 651224
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1416,
+            "bp": 878807
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 534,
+            "bp": 29073723
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1693,
+            "bp": 7634724
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 144,
+            "bp": 3003307
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 29,
+            "bp": 25327
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 142,
+            "bp": 230669
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 456,
+            "bp": 31739279
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 36,
+            "bp": 54893
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 59,
+            "bp": 36478
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 187,
+            "bp": 1009721
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 123093
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 33,
+            "bp": 55585
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 132,
+            "bp": 10104389
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 100,
+            "bp": 418932
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 121,
+            "bp": 643813
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 83,
+            "bp": 2404009
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 38,
+            "bp": 1465209
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 27,
+            "bp": 117541
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 13,
+            "bp": 536897
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 23,
+            "bp": 20407
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 46,
+            "bp": 28946
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 30,
+            "bp": 26034
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 40,
+            "bp": 1827292
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 32,
+            "bp": 20216
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 711936
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 10,
+            "bp": 6438
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 45278
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 4,
+            "bp": 3454
+          },
+          "768|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 12,
+            "bp": 10573
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 940
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 2,
+            "bp": 2071
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E030/root-only": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 21421,
+            "bp": 13172995
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5442,
+            "bp": 8037423
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 11378,
+            "bp": 15827486
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 4094,
+            "bp": 6613921
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3573,
+            "bp": 3116169
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1576,
+            "bp": 1382120
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 9124,
+            "bp": 7947133
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3422,
+            "bp": 2109772
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3682,
+            "bp": 5643573
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 862,
+            "bp": 2844358
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 8641,
+            "bp": 5297778
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 899,
+            "bp": 794467
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 16956
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1900,
+            "bp": 2971977
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1256,
+            "bp": 4923255
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 448,
+            "bp": 13765452
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1561,
+            "bp": 6084521
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 978,
+            "bp": 621937
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1520,
+            "bp": 6611604
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 115,
+            "bp": 178017
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 921,
+            "bp": 582543
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 499,
+            "bp": 911462
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 91,
+            "bp": 147656
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 445,
+            "bp": 26339334
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 652,
+            "bp": 572310
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 172,
+            "bp": 5138398
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1129,
+            "bp": 5255706
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1028,
+            "bp": 5207220
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 329,
+            "bp": 8159449
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 46,
+            "bp": 39891
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 62,
+            "bp": 99146
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 365,
+            "bp": 219593
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 76,
+            "bp": 4141168
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 389,
+            "bp": 28310047
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 81,
+            "bp": 50229
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 120,
+            "bp": 665728
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 79,
+            "bp": 469843
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 20,
+            "bp": 34950
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 98,
+            "bp": 9008911
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 101,
+            "bp": 87772
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 15,
+            "bp": 22706
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 47,
+            "bp": 1640632
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 114083
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 47,
+            "bp": 1632375
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 76,
+            "bp": 389271
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 30980
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 56,
+            "bp": 35384
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 70,
+            "bp": 297063
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 1651869
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 13,
+            "bp": 11470
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 4,
+            "bp": 3589
+          },
+          "2500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 3458
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 10,
+            "bp": 6465
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 805
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E030/pre": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 21421,
+            "bp": 13172995
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 5442,
+            "bp": 8037423
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 11378,
+            "bp": 15827486
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 4094,
+            "bp": 6613921
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3573,
+            "bp": 3116169
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1576,
+            "bp": 1382120
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 9124,
+            "bp": 7947133
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3422,
+            "bp": 2109772
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3682,
+            "bp": 5643573
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 862,
+            "bp": 2844358
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 8641,
+            "bp": 5297778
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 899,
+            "bp": 794467
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 9,
+            "bp": 16956
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1900,
+            "bp": 2971977
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1256,
+            "bp": 4923255
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 436,
+            "bp": 12998270
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1561,
+            "bp": 6084521
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 978,
+            "bp": 621937
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1520,
+            "bp": 6611604
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 115,
+            "bp": 178017
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 921,
+            "bp": 582543
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 499,
+            "bp": 911462
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 91,
+            "bp": 147656
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 432,
+            "bp": 25509649
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 652,
+            "bp": 572310
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 185,
+            "bp": 5968083
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1129,
+            "bp": 5255706
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1028,
+            "bp": 5207220
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 341,
+            "bp": 8926631
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 46,
+            "bp": 39891
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 62,
+            "bp": 99146
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 365,
+            "bp": 219593
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 87,
+            "bp": 4733747
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 378,
+            "bp": 27717468
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 81,
+            "bp": 50229
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 120,
+            "bp": 665728
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 79,
+            "bp": 469843
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 20,
+            "bp": 34950
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 54,
+            "bp": 2071324
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 101,
+            "bp": 87772
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 91,
+            "bp": 8569962
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 15,
+            "bp": 22706
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 47,
+            "bp": 1640632
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 114083
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 76,
+            "bp": 389271
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 30980
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 56,
+            "bp": 35384
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 70,
+            "bp": 297063
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 1651869
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 13,
+            "bp": 11470
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 4,
+            "bp": 3589
+          },
+          "2500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 3458
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 10,
+            "bp": 6465
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 805
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      },
+      "E030/post": {
+        "cells": {
+          "0|target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 16308,
+            "bp": 6320801
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 6788,
+            "bp": 2585717
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_positive": {
+            "contigs": 33466,
+            "bp": 13091114
+          },
+          "500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 20115,
+            "bp": 12350991
+          },
+          "1000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 4174,
+            "bp": 5998726
+          },
+          "500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2284,
+            "bp": 1443941
+          },
+          "1000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 9950,
+            "bp": 14030210
+          },
+          "1000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 5522,
+            "bp": 8411197
+          },
+          "768|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 3182,
+            "bp": 2772810
+          },
+          "768|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 1172,
+            "bp": 1025109
+          },
+          "768|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 8134,
+            "bp": 7075356
+          },
+          "500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2900,
+            "bp": 1780002
+          },
+          "1000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 2139,
+            "bp": 3206767
+          },
+          "2500|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 845,
+            "bp": 2777203
+          },
+          "500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 7822,
+            "bp": 4795470
+          },
+          "768|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1889,
+            "bp": 1666244
+          },
+          "1000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 49,
+            "bp": 85510
+          },
+          "768|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1043,
+            "bp": 915669
+          },
+          "1000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 3168,
+            "bp": 5010674
+          },
+          "1000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 2042,
+            "bp": 3348268
+          },
+          "2500|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 679,
+            "bp": 2772832
+          },
+          "10000|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 505,
+            "bp": 14524340
+          },
+          "2500|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1578,
+            "bp": 6151676
+          },
+          "2500|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 800,
+            "bp": 3559195
+          },
+          "1000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 66,
+            "bp": 94680
+          },
+          "500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1740,
+            "bp": 1084851
+          },
+          "1000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 51,
+            "bp": 79102
+          },
+          "500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 887,
+            "bp": 549363
+          },
+          "10000|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 449,
+            "bp": 25830404
+          },
+          "10000|unknown|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 168,
+            "bp": 5647328
+          },
+          "2500|target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1849,
+            "bp": 8308115
+          },
+          "2500|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 1605,
+            "bp": 7357643
+          },
+          "768|unknown|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 505,
+            "bp": 444783
+          },
+          "10000|target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 272,
+            "bp": 7400561
+          },
+          "768|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 19,
+            "bp": 16387
+          },
+          "1000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 111,
+            "bp": 182483
+          },
+          "768|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 40,
+            "bp": 34974
+          },
+          "10000|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 394,
+            "bp": 28231428
+          },
+          "500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 70,
+            "bp": 43354
+          },
+          "2500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 171,
+            "bp": 922950
+          },
+          "2500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 119,
+            "bp": 646221
+          },
+          "1000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 21,
+            "bp": 36006
+          },
+          "10000|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 96,
+            "bp": 8707317
+          },
+          "0|target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 22395
+          },
+          "10000|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 71,
+            "bp": 4219787
+          },
+          "1000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 14,
+            "bp": 21650
+          },
+          "10000|non_target|eligible|assigned|no_clean_marker|measured_positive": {
+            "contigs": 35,
+            "bp": 1740098
+          },
+          "2500|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 26,
+            "bp": 114083
+          },
+          "10000|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 49,
+            "bp": 1933969
+          },
+          "768|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 31,
+            "bp": 27401
+          },
+          "500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 55,
+            "bp": 34709
+          },
+          "2500|unknown|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 30,
+            "bp": 120685
+          },
+          "10000|non_target|eligible|unassigned|no_clean_marker|measured_positive": {
+            "contigs": 43,
+            "bp": 1552403
+          },
+          "2500|target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 25,
+            "bp": 132049
+          },
+          "500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1804
+          },
+          "0|unknown|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 28,
+            "bp": 11167
+          },
+          "768|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 2,
+            "bp": 1602
+          },
+          "2500|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 3458
+          },
+          "0|target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 5,
+            "bp": 1248
+          },
+          "768|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 2792
+          },
+          "500|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 675
+          },
+          "0|unknown|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 7,
+            "bp": 1793
+          },
+          "500|target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 21,
+            "bp": 13340
+          },
+          "0|non_target|excluded|excluded|clean_marker|measured_positive": {
+            "contigs": 3,
+            "bp": 1002
+          },
+          "0|non_target|excluded|excluded|no_clean_marker|measured_all_zero": {
+            "contigs": 1,
+            "bp": 217
+          },
+          "10000|non_target|eligible|unassigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 301500
+          },
+          "768|unknown|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 4,
+            "bp": 3579
+          },
+          "10000|non_target|eligible|assigned|clean_marker|measured_positive": {
+            "contigs": 1,
+            "bp": 96979
+          }
+        },
+        "all_zero_contigs": 13,
+        "all_zero_bp": 3258,
+        "zero_cells_per_sample": [
+          75,
+          35949,
+          23480,
+          29806,
+          37237,
+          27837,
+          35140,
+          53148,
+          35514,
+          32427
+        ],
+        "missing_cells": 0,
+        "semantics": "Measured full-parent means; all-zero differs from missing; no per-base/window variance"
+      }
+    }
+  },
+  "all_three_source_blind_query_axes": {
+    "E009-noGLM": {
+      "binding": {
+        "bytes": 123543,
+        "sha256": "394aaf56bb548c363e6ac93639eeddadf794a3d0353be11a86f1deb0c1ed4b2f"
+      },
+      "queries": 45
+    },
+    "E009-GLM": {
+      "binding": {
+        "bytes": 123567,
+        "sha256": "4a2d18c052c8be53d819b2c903ac3d9c5f5c8d602d8b2ae5c0f2ec51941d8ca9"
+      },
+      "queries": 45
+    },
+    "oral-noGLM": {
+      "binding": {
+        "bytes": 334341,
+        "sha256": "b4e53c777e216de41651282009ea1571c1a7a7055048dc5713c09643b98fdb21"
+      },
+      "queries": 56
+    }
+  },
+  "represented_reference_unions": {
+    "E009-noGLM": {
+      "confirmed_reference_union_bp": 102790342,
+      "full_provided_reference_bp": 554661890,
+      "scope": "Diagnostic represented source-coordinate unions; unchanged primary full-reference denominator"
+    },
+    "E009-GLM": {
+      "confirmed_reference_union_bp": 102790342,
+      "full_provided_reference_bp": 554661890,
+      "scope": "Diagnostic represented source-coordinate unions; unchanged primary full-reference denominator"
+    },
+    "oral-noGLM": {
+      "confirmed_reference_union_bp": 1669979389,
+      "full_provided_reference_bp": 2083072211,
+      "scope": "Diagnostic represented source-coordinate unions; unchanged primary full-reference denominator"
+    }
+  },
+  "primary_or_secondary_scores_recomputed": false,
+  "model_or_search_run": false,
+  "original_Mac_portability_tolerance_unchanged": true
+}

@@ -1,0 +1,36 @@
+{
+  "status": "APPROVED_STORAGE_ONLY; FRESH_FINANCIAL_GATE_PASS",
+  "owner_action": "Approve storage-only preservation",
+  "recorded_UTC": "2026-11-03T11:56:54.259736+00:00",
+  "start": "2026-11-04T00:00:00+01:00",
+  "end": "2026-11-11T00:00:00+01:00",
+  "scope": "Existing stopped 30 GiB pd-standard and 300 GiB pd-balanced disks plus existing private archives and preserved journals only",
+  "active_ceiling_USD": 9,
+  "estimated_disk_USD": 7.269902912621358,
+  "inventory_objects": 272,
+  "inventory_bytes": 77457848194,
+  "estimated_GCS_USD": 0.3320304006814314,
+  "estimated_active_USD": 7.60193331330279,
+  "operations_and_growth_headroom_USD": 1.3980666866972105,
+  "credit_only": true,
+  "credit_DKK_at_gate": 1688.52,
+  "pending_usage_reserve_USD": 35,
+  "credit_expiry": "2027-01-12",
+  "price_receipt": "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/finance/current-prices.json",
+  "automatic_soft_delete_tail": {
+    "ceiling_USD": 0.5,
+    "end": "2026-11-18T00:00:00+01:00",
+    "existing_inventory_7_day_cost_upper_USD": 0.3320304006814314,
+    "not_authorization_to_delete_unique_evidence": true
+  },
+  "compute_authorized": false,
+  "new_resources_authorized": false,
+  "scientific_scopes_or_original_E031_clocks_changed": false,
+  "provider": "TERMINATED",
+  "disks_GiB": [
+    30,
+    300
+  ],
+  "temporary_task_and_GPU_disks_deleted": true,
+  "next_preservation_review": "Before November 11 at 00:00 Copenhagen"
+}

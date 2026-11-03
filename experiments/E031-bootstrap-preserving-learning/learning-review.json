@@ -1,0 +1,2842 @@
+{
+  "status": "COMPLETED_REVIEWED",
+  "phase": "learning-20261102T200852Z-ba65911-r2",
+  "source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+  "checked_UTC": "2026-11-03T11:19:30.107584+00:00",
+  "actors": {
+    "E009-noGLM": {
+      "arms": {
+        "E023/density": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10611002136815277,
+            "macro_R95": 0.11653750293132198,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 10
+          },
+          "integer": {
+            "recovered_bp": 58855185,
+            "reference_bp": 554661890,
+            "target_90": 10
+          },
+          "partition": {
+            "bytes": 19133758,
+            "sha256": "636dff299d9179ed8afa8b08dfba346a20f3e03eb1febf940ae19e1f3d6a92d6"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 40422,
+                "bp": 156261059
+              },
+              "unassigned": {
+                "contigs": 48619,
+                "bp": 53381644
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 15,
+                "high_impurity_or_unresolved": 35,
+                "threshold_based_LQ": 13,
+                "threshold_based_HQ": 11
+              },
+              "target_counts": {
+                "threshold_based_LQ": 10,
+                "threshold_based_MQ": 9,
+                "high_impurity_or_unresolved": 19,
+                "threshold_based_HQ": 10
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 11,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_LQ": 8,
+                "threshold_based_HQ": 11
+              },
+              "assigned_bp": 156261059,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E023/selected": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10611002136815277,
+            "macro_R95": 0.11653750293132198,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 10
+          },
+          "integer": {
+            "recovered_bp": 58855185,
+            "reference_bp": 554661890,
+            "target_90": 10
+          },
+          "partition": {
+            "bytes": 19133758,
+            "sha256": "636dff299d9179ed8afa8b08dfba346a20f3e03eb1febf940ae19e1f3d6a92d6"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 40422,
+                "bp": 156261059
+              },
+              "unassigned": {
+                "contigs": 48619,
+                "bp": 53381644
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 15,
+                "high_impurity_or_unresolved": 35,
+                "threshold_based_LQ": 13,
+                "threshold_based_HQ": 11
+              },
+              "target_counts": {
+                "threshold_based_LQ": 10,
+                "threshold_based_MQ": 9,
+                "high_impurity_or_unresolved": 19,
+                "threshold_based_HQ": 10
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 11,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_LQ": 8,
+                "threshold_based_HQ": 11
+              },
+              "assigned_bp": 156261059,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E030/root-only": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.07938733631041427,
+            "macro_R95": 0.08872650109020173,
+            "at_least_50_percent": 18,
+            "at_least_90_percent": 4
+          },
+          "integer": {
+            "recovered_bp": 44033130,
+            "reference_bp": 554661890,
+            "target_90": 4
+          },
+          "partition": {
+            "bytes": 10486780,
+            "sha256": "b0fabc8ef3ff20e3ee3c4bf93ddb84f5b43f1a8157e9058e1a9031a7df642236"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 14399,
+                "bp": 107311747
+              },
+              "unassigned": {
+                "contigs": 74642,
+                "bp": 102330956
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_LQ": 13,
+                "high_impurity_or_unresolved": 25,
+                "threshold_based_HQ": 5
+              },
+              "target_counts": {
+                "threshold_based_MQ": 15,
+                "high_impurity_or_unresolved": 14,
+                "threshold_based_LQ": 5,
+                "threshold_based_HQ": 4
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_LQ": 3,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_HQ": 5
+              },
+              "assigned_bp": 107311747,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E030/pre": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.07938733631041427,
+            "macro_R95": 0.08872650109020173,
+            "at_least_50_percent": 18,
+            "at_least_90_percent": 4
+          },
+          "integer": {
+            "recovered_bp": 44033130,
+            "reference_bp": 554661890,
+            "target_90": 4
+          },
+          "partition": {
+            "bytes": 10486780,
+            "sha256": "b0fabc8ef3ff20e3ee3c4bf93ddb84f5b43f1a8157e9058e1a9031a7df642236"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 14399,
+                "bp": 107311747
+              },
+              "unassigned": {
+                "contigs": 74642,
+                "bp": 102330956
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_LQ": 13,
+                "high_impurity_or_unresolved": 25,
+                "threshold_based_HQ": 5
+              },
+              "target_counts": {
+                "threshold_based_MQ": 15,
+                "high_impurity_or_unresolved": 14,
+                "threshold_based_LQ": 5,
+                "threshold_based_HQ": 4
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_LQ": 3,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_HQ": 5
+              },
+              "assigned_bp": 107311747,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E030/post": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.08657205563555123,
+            "macro_R95": 0.09804232816356194,
+            "at_least_50_percent": 18,
+            "at_least_90_percent": 6
+          },
+          "integer": {
+            "recovered_bp": 48018220,
+            "reference_bp": 554661890,
+            "target_90": 6
+          },
+          "partition": {
+            "bytes": 10216167,
+            "sha256": "5691cba7f26fdb7c6ddc0d02334e69fca72b4e8d7341b33249ab89ac00ef61ca"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 22514,
+                "bp": 123052510
+              },
+              "unassigned": {
+                "contigs": 66527,
+                "bp": 86590193
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "high_impurity_or_unresolved": 25,
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 13,
+                "threshold_based_HQ": 7
+              },
+              "target_counts": {
+                "threshold_based_MQ": 13,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_LQ": 5,
+                "threshold_based_HQ": 6
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 4,
+                "threshold_based_HQ": 7
+              },
+              "assigned_bp": 123052510,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        }
+      },
+      "paired_continuation": {
+        "E023": {
+          "vs_previous_student": {
+            "gains": 6,
+            "losses": 12,
+            "unchanged": 138,
+            "net_recovered_bp": 824704,
+            "largest_gains": [
+              [
+                "ASV729.15",
+                616731
+              ],
+              [
+                "ASV150.14",
+                479316
+              ],
+              [
+                "ASV406.4",
+                17263
+              ],
+              [
+                "ASV470.1",
+                11816
+              ],
+              [
+                "ASV444.5",
+                8308
+              ],
+              [
+                "ASV579.0",
+                1728
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV436.0",
+                -95411
+              ],
+              [
+                "ASV692.1",
+                -64295
+              ],
+              [
+                "ASV551.0",
+                -46988
+              ],
+              [
+                "ASV134.7",
+                -39841
+              ],
+              [
+                "ASV137.1",
+                -38918
+              ],
+              [
+                "ASV300.2",
+                -5066
+              ],
+              [
+                "ASV284.4",
+                -4559
+              ],
+              [
+                "ASV714.0",
+                -4034
+              ],
+              [
+                "ASV300.8",
+                -3931
+              ],
+              [
+                "ASV431.3",
+                -3610
+              ]
+            ]
+          },
+          "vs_initialized_teacher": {
+            "gains": 5,
+            "losses": 9,
+            "unchanged": 142,
+            "net_recovered_bp": -124284,
+            "largest_gains": [
+              [
+                "ASV150.14",
+                24688
+              ],
+              [
+                "ASV300.2",
+                10265
+              ],
+              [
+                "ASV137.1",
+                7153
+              ],
+              [
+                "ASV470.1",
+                6763
+              ],
+              [
+                "ASV551.0",
+                2828
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV692.1",
+                -63576
+              ],
+              [
+                "ASV134.7",
+                -46267
+              ],
+              [
+                "ASV729.15",
+                -44886
+              ],
+              [
+                "ASV714.0",
+                -4862
+              ],
+              [
+                "ASV337.1",
+                -4375
+              ],
+              [
+                "ASV329.2",
+                -4029
+              ],
+              [
+                "ASV284.4",
+                -3906
+              ],
+              [
+                "ASV431.3",
+                -2921
+              ],
+              [
+                "ASV579.0",
+                -1159
+              ]
+            ]
+          }
+        },
+        "E030": {
+          "vs_previous_student": {
+            "gains": 7,
+            "losses": 8,
+            "unchanged": 141,
+            "net_recovered_bp": 4216103,
+            "largest_gains": [
+              [
+                "ASV150.14",
+                5075468
+              ],
+              [
+                "ASV284.4",
+                2046249
+              ],
+              [
+                "ASV387.0",
+                641352
+              ],
+              [
+                "ASV426.8",
+                199036
+              ],
+              [
+                "ASV470.1",
+                105340
+              ],
+              [
+                "ASV579.0",
+                746
+              ],
+              [
+                "ASV692.1",
+                159
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV300.8",
+                -3305159
+              ],
+              [
+                "ASV399.6",
+                -237863
+              ],
+              [
+                "ASV137.1",
+                -102611
+              ],
+              [
+                "ASV436.0",
+                -95411
+              ],
+              [
+                "ASV337.1",
+                -80294
+              ],
+              [
+                "ASV484.0",
+                -21648
+              ],
+              [
+                "ASV714.0",
+                -6387
+              ],
+              [
+                "ASV329.2",
+                -2874
+              ]
+            ]
+          },
+          "vs_initialized_teacher": {
+            "gains": 6,
+            "losses": 6,
+            "unchanged": 144,
+            "net_recovered_bp": 3748698,
+            "largest_gains": [
+              [
+                "ASV551.0",
+                2197197
+              ],
+              [
+                "ASV150.14",
+                1479524
+              ],
+              [
+                "ASV456.0",
+                142410
+              ],
+              [
+                "ASV387.0",
+                130697
+              ],
+              [
+                "ASV470.1",
+                101880
+              ],
+              [
+                "ASV329.2",
+                6429
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV399.6",
+                -237863
+              ],
+              [
+                "ASV137.1",
+                -61651
+              ],
+              [
+                "ASV714.0",
+                -4497
+              ],
+              [
+                "ASV484.0",
+                -3503
+              ],
+              [
+                "ASV337.1",
+                -987
+              ],
+              [
+                "ASV692.1",
+                -938
+              ]
+            ]
+          }
+        }
+      },
+      "construction_effects": {
+        "E023_density_to_selection": {
+          "gains": 0,
+          "losses": 0,
+          "unchanged": 156,
+          "net_recovered_bp": 0,
+          "largest_gains": [],
+          "largest_losses": []
+        },
+        "E030_root_to_pre": {
+          "gains": 0,
+          "losses": 0,
+          "unchanged": 156,
+          "net_recovered_bp": 0,
+          "largest_gains": [],
+          "largest_losses": []
+        },
+        "E030_pre_to_post": {
+          "gains": 17,
+          "losses": 1,
+          "unchanged": 138,
+          "net_recovered_bp": 3985090,
+          "largest_gains": [
+            [
+              "ASV284.4",
+              2046249
+            ],
+            [
+              "ASV484.0",
+              1106311
+            ],
+            [
+              "ASV150.14",
+              1061478
+            ],
+            [
+              "ASV337.1",
+              651194
+            ],
+            [
+              "ASV137.1",
+              410700
+            ],
+            [
+              "ASV456.0",
+              286136
+            ],
+            [
+              "ASV300.2",
+              283088
+            ],
+            [
+              "ASV387.0",
+              273466
+            ],
+            [
+              "ASV399.6",
+              233178
+            ],
+            [
+              "ASV470.1",
+              207552
+            ]
+          ],
+          "largest_losses": [
+            [
+              "ASV300.8",
+              -3271350
+            ]
+          ]
+        },
+        "same_new_learning_E030_to_E023": {
+          "gains": 19,
+          "losses": 5,
+          "unchanged": 132,
+          "net_recovered_bp": 10836965,
+          "largest_gains": [
+            [
+              "ASV300.8",
+              3284549
+            ],
+            [
+              "ASV134.7",
+              1516348
+            ],
+            [
+              "ASV406.4",
+              1025356
+            ],
+            [
+              "ASV431.3",
+              984917
+            ],
+            [
+              "ASV426.8",
+              877734
+            ],
+            [
+              "ASV150.14",
+              765520
+            ],
+            [
+              "ASV729.15",
+              616731
+            ],
+            [
+              "ASV300.2",
+              536296
+            ],
+            [
+              "ASV137.1",
+              315298
+            ],
+            [
+              "ASV444.5",
+              283760
+            ]
+          ],
+          "largest_losses": [
+            [
+              "ASV692.1",
+              -146593
+            ],
+            [
+              "ASV551.0",
+              -66192
+            ],
+            [
+              "ASV284.4",
+              -58742
+            ],
+            [
+              "ASV470.1",
+              -57189
+            ],
+            [
+              "ASV714.0",
+              -17002
+            ]
+          ]
+        }
+      }
+    },
+    "E009-GLM": {
+      "arms": {
+        "E023/density": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10568366072527535,
+            "macro_R95": 0.11653573632537705,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 9
+          },
+          "integer": {
+            "recovered_bp": 58618699,
+            "reference_bp": 554661890,
+            "target_90": 9
+          },
+          "partition": {
+            "bytes": 19013777,
+            "sha256": "8c4b9fcaa4c8133e8382f1436592153c290708b8a5c41721e7b65dae1e11a22b"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 46967,
+                "bp": 162176574
+              },
+              "unassigned": {
+                "contigs": 42074,
+                "bp": 47466129
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 14,
+                "high_impurity_or_unresolved": 35,
+                "threshold_based_HQ": 10
+              },
+              "target_counts": {
+                "threshold_based_LQ": 9,
+                "threshold_based_MQ": 10,
+                "high_impurity_or_unresolved": 19,
+                "threshold_based_HQ": 9
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 12,
+                "threshold_based_LQ": 10,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_HQ": 10
+              },
+              "assigned_bp": 162176574,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E023/selected": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10568366072527535,
+            "macro_R95": 0.11653573632537705,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 9
+          },
+          "integer": {
+            "recovered_bp": 58618699,
+            "reference_bp": 554661890,
+            "target_90": 9
+          },
+          "partition": {
+            "bytes": 19013777,
+            "sha256": "8c4b9fcaa4c8133e8382f1436592153c290708b8a5c41721e7b65dae1e11a22b"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 46967,
+                "bp": 162176574
+              },
+              "unassigned": {
+                "contigs": 42074,
+                "bp": 47466129
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 14,
+                "high_impurity_or_unresolved": 35,
+                "threshold_based_HQ": 10
+              },
+              "target_counts": {
+                "threshold_based_LQ": 9,
+                "threshold_based_MQ": 10,
+                "high_impurity_or_unresolved": 19,
+                "threshold_based_HQ": 9
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 12,
+                "threshold_based_LQ": 10,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_HQ": 10
+              },
+              "assigned_bp": 162176574,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E030/root-only": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.06925182654968418,
+            "macro_R95": 0.08151080861899329,
+            "at_least_50_percent": 14,
+            "at_least_90_percent": 4
+          },
+          "integer": {
+            "recovered_bp": 38411349,
+            "reference_bp": 554661890,
+            "target_90": 4
+          },
+          "partition": {
+            "bytes": 10437426,
+            "sha256": "4f53c0615c2228ea20319be3fcf328b5ebcd3a05857b587f98c8c7294ba6921d"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 15879,
+                "bp": 110515467
+              },
+              "unassigned": {
+                "contigs": 73162,
+                "bp": 99127236
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 13,
+                "threshold_based_LQ": 19,
+                "high_impurity_or_unresolved": 24,
+                "threshold_based_HQ": 5
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 14,
+                "threshold_based_LQ": 10,
+                "threshold_based_MQ": 11,
+                "threshold_based_HQ": 4
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 13,
+                "threshold_based_LQ": 8,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_HQ": 5
+              },
+              "assigned_bp": 110515467,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E030/pre": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.0748496530021199,
+            "macro_R95": 0.08458511473934478,
+            "at_least_50_percent": 14,
+            "at_least_90_percent": 4
+          },
+          "integer": {
+            "recovered_bp": 41516250,
+            "reference_bp": 554661890,
+            "target_90": 4
+          },
+          "partition": {
+            "bytes": 10438845,
+            "sha256": "d385b77f1d9d1eb8dd6b6874ed3f351cd6fdbc6c49076f68c42e1aeead2cb7eb"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 15836,
+                "bp": 107887072
+              },
+              "unassigned": {
+                "contigs": 73205,
+                "bp": 101755631
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 13,
+                "threshold_based_LQ": 20,
+                "high_impurity_or_unresolved": 24,
+                "threshold_based_HQ": 5
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 14,
+                "threshold_based_LQ": 11,
+                "threshold_based_MQ": 11,
+                "threshold_based_HQ": 4
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 13,
+                "threshold_based_LQ": 9,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_HQ": 5
+              },
+              "assigned_bp": 107887072,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        },
+        "E030/post": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.08431759211003302,
+            "macro_R95": 0.09450178197291495,
+            "at_least_50_percent": 17,
+            "at_least_90_percent": 5
+          },
+          "integer": {
+            "recovered_bp": 46767755,
+            "reference_bp": 554661890,
+            "target_90": 5
+          },
+          "partition": {
+            "bytes": 10092840,
+            "sha256": "c9acce7e3f86b111056da5a3766d78482fa126553de068343822721089930f5f"
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 26136,
+                "bp": 125845826
+              },
+              "unassigned": {
+                "contigs": 62905,
+                "bp": 83796877
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 17,
+                "high_impurity_or_unresolved": 24,
+                "threshold_based_HQ": 6
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 14,
+                "threshold_based_LQ": 8,
+                "threshold_based_HQ": 5,
+                "threshold_based_MQ": 13
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 7,
+                "high_impurity_or_unresolved": 15,
+                "threshold_based_HQ": 6
+              },
+              "assigned_bp": 125845826,
+              "query_count": 145702,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": null
+        }
+      },
+      "paired_continuation": {
+        "E023": {
+          "vs_previous_student": {
+            "gains": 8,
+            "losses": 11,
+            "unchanged": 137,
+            "net_recovered_bp": 843218,
+            "largest_gains": [
+              [
+                "ASV729.15",
+                728454
+              ],
+              [
+                "ASV134.7",
+                166935
+              ],
+              [
+                "ASV150.14",
+                129237
+              ],
+              [
+                "ASV387.0",
+                78865
+              ],
+              [
+                "ASV692.1",
+                34052
+              ],
+              [
+                "ASV579.0",
+                8781
+              ],
+              [
+                "ASV329.2",
+                3321
+              ],
+              [
+                "ASV337.1",
+                2713
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV137.1",
+                -94949
+              ],
+              [
+                "ASV436.0",
+                -93234
+              ],
+              [
+                "ASV714.0",
+                -30840
+              ],
+              [
+                "ASV406.4",
+                -22435
+              ],
+              [
+                "ASV300.2",
+                -19960
+              ],
+              [
+                "ASV444.5",
+                -15084
+              ],
+              [
+                "ASV284.4",
+                -8835
+              ],
+              [
+                "ASV431.3",
+                -8769
+              ],
+              [
+                "ASV456.0",
+                -8667
+              ],
+              [
+                "ASV484.0",
+                -5429
+              ]
+            ]
+          },
+          "vs_initialized_teacher": {
+            "gains": 6,
+            "losses": 9,
+            "unchanged": 141,
+            "net_recovered_bp": 111173,
+            "largest_gains": [
+              [
+                "ASV729.15",
+                125194
+              ],
+              [
+                "ASV387.0",
+                45886
+              ],
+              [
+                "ASV484.0",
+                17487
+              ],
+              [
+                "ASV284.4",
+                3597
+              ],
+              [
+                "ASV406.4",
+                2669
+              ],
+              [
+                "ASV329.2",
+                2668
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV714.0",
+                -32782
+              ],
+              [
+                "ASV134.7",
+                -11228
+              ],
+              [
+                "ASV470.1",
+                -8656
+              ],
+              [
+                "ASV456.0",
+                -6585
+              ],
+              [
+                "ASV431.3",
+                -6317
+              ],
+              [
+                "ASV137.1",
+                -5755
+              ],
+              [
+                "ASV692.1",
+                -5656
+              ],
+              [
+                "ASV444.5",
+                -4877
+              ],
+              [
+                "ASV337.1",
+                -4472
+              ]
+            ]
+          }
+        },
+        "E030": {
+          "vs_previous_student": {
+            "gains": 7,
+            "losses": 8,
+            "unchanged": 141,
+            "net_recovered_bp": 4331077,
+            "largest_gains": [
+              [
+                "ASV150.14",
+                3871485
+              ],
+              [
+                "ASV300.8",
+                3305159
+              ],
+              [
+                "ASV399.6",
+                42238
+              ],
+              [
+                "ASV456.0",
+                10982
+              ],
+              [
+                "ASV692.1",
+                6750
+              ],
+              [
+                "ASV329.2",
+                645
+              ],
+              [
+                "ASV579.0",
+                115
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV551.0",
+                -2197798
+              ],
+              [
+                "ASV470.1",
+                -237575
+              ],
+              [
+                "ASV337.1",
+                -188118
+              ],
+              [
+                "ASV300.2",
+                -107051
+              ],
+              [
+                "ASV484.0",
+                -102348
+              ],
+              [
+                "ASV137.1",
+                -71091
+              ],
+              [
+                "ASV284.4",
+                -1385
+              ],
+              [
+                "ASV714.0",
+                -931
+              ]
+            ]
+          },
+          "vs_initialized_teacher": {
+            "gains": 8,
+            "losses": 3,
+            "unchanged": 145,
+            "net_recovered_bp": -1640009,
+            "largest_gains": [
+              [
+                "ASV150.14",
+                482121
+              ],
+              [
+                "ASV137.1",
+                20053
+              ],
+              [
+                "ASV456.0",
+                17054
+              ],
+              [
+                "ASV284.4",
+                15040
+              ],
+              [
+                "ASV337.1",
+                13487
+              ],
+              [
+                "ASV714.0",
+                11259
+              ],
+              [
+                "ASV329.2",
+                6621
+              ],
+              [
+                "ASV484.0",
+                3242
+              ]
+            ],
+            "largest_losses": [
+              [
+                "ASV551.0",
+                -2198931
+              ],
+              [
+                "ASV470.1",
+                -7233
+              ],
+              [
+                "ASV692.1",
+                -2722
+              ]
+            ]
+          }
+        }
+      },
+      "construction_effects": {
+        "E023_density_to_selection": {
+          "gains": 0,
+          "losses": 0,
+          "unchanged": 156,
+          "net_recovered_bp": 0,
+          "largest_gains": [],
+          "largest_losses": []
+        },
+        "E030_root_to_pre": {
+          "gains": 1,
+          "losses": 0,
+          "unchanged": 155,
+          "net_recovered_bp": 3104901,
+          "largest_gains": [
+            [
+              "ASV150.14",
+              3104901
+            ]
+          ],
+          "largest_losses": []
+        },
+        "E030_pre_to_post": {
+          "gains": 16,
+          "losses": 1,
+          "unchanged": 139,
+          "net_recovered_bp": 5251505,
+          "largest_gains": [
+            [
+              "ASV284.4",
+              2044864
+            ],
+            [
+              "ASV484.0",
+              1385506
+            ],
+            [
+              "ASV337.1",
+              1013802
+            ],
+            [
+              "ASV150.14",
+              766584
+            ],
+            [
+              "ASV470.1",
+              449787
+            ],
+            [
+              "ASV137.1",
+              375532
+            ],
+            [
+              "ASV300.2",
+              283088
+            ],
+            [
+              "ASV456.0",
+              281577
+            ],
+            [
+              "ASV329.2",
+              149169
+            ],
+            [
+              "ASV399.6",
+              129732
+            ]
+          ],
+          "largest_losses": [
+            [
+              "ASV551.0",
+              -2008738
+            ]
+          ]
+        },
+        "same_new_learning_E030_to_E023": {
+          "gains": 19,
+          "losses": 4,
+          "unchanged": 133,
+          "net_recovered_bp": 11850944,
+          "largest_gains": [
+            [
+              "ASV551.0",
+              2177993
+            ],
+            [
+              "ASV150.14",
+              1651475
+            ],
+            [
+              "ASV134.7",
+              1406689
+            ],
+            [
+              "ASV426.8",
+              1076770
+            ],
+            [
+              "ASV406.4",
+              1029397
+            ],
+            [
+              "ASV431.3",
+              980741
+            ],
+            [
+              "ASV387.0",
+              839941
+            ],
+            [
+              "ASV729.15",
+              728454
+            ],
+            [
+              "ASV300.2",
+              521402
+            ],
+            [
+              "ASV137.1",
+              286660
+            ]
+          ],
+          "largest_losses": [
+            [
+              "ASV692.1",
+              -68730
+            ],
+            [
+              "ASV284.4",
+              -58025
+            ],
+            [
+              "ASV714.0",
+              -37360
+            ],
+            [
+              "ASV300.8",
+              -20610
+            ]
+          ]
+        }
+      }
+    },
+    "oral-noGLM": {
+      "arms": {
+        "E023/density": {
+          "primary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.08919854723173588,
+            "macro_R95": 0.079544343620855,
+            "at_least_50_percent": 66,
+            "at_least_90_percent": 35
+          },
+          "integer": {
+            "recovered_bp": 185807015,
+            "reference_bp": 2083072211,
+            "target_90": 35
+          },
+          "partition": {
+            "bytes": 356377022,
+            "sha256": "36a7565b4261f0561f1d7e869c7b3ecc5f809240c5e39c5684c02bf289448b98"
+          },
+          "export": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "populations": {
+              "assigned": {
+                "contigs": 63654,
+                "bp": 519898564
+              },
+              "unassigned": {
+                "contigs": 445109,
+                "bp": 923929100
+              },
+              "excluded": {
+                "contigs": 777784,
+                "bp": 226153459
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "provided_origin": {
+              "counts": {
+                "high_impurity_or_unresolved": 76,
+                "threshold_based_MQ": 31,
+                "threshold_based_LQ": 63,
+                "threshold_based_HQ": 35
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 76,
+                "threshold_based_MQ": 31,
+                "threshold_based_LQ": 63,
+                "threshold_based_HQ": 35
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 35,
+                "threshold_based_MQ": 31,
+                "threshold_based_LQ": 27,
+                "threshold_based_HQ": 35
+              },
+              "assigned_bp": 519898564,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            },
+            "known_shared_sensitivity": {
+              "counts": {
+                "high_impurity_or_unresolved": 76,
+                "threshold_based_MQ": 31,
+                "threshold_based_LQ": 63,
+                "threshold_based_HQ": 35
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 76,
+                "threshold_based_MQ": 31,
+                "threshold_based_LQ": 63,
+                "threshold_based_HQ": 35
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 35,
+                "threshold_based_MQ": 31,
+                "threshold_based_LQ": 27,
+                "threshold_based_HQ": 35
+              },
+              "assigned_bp": 519898564,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.08919854723173588,
+            "macro_R95": 0.079544343620855,
+            "at_least_50_percent": 66,
+            "at_least_90_percent": 35
+          }
+        },
+        "E023/selected": {
+          "primary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.09960729633102479,
+            "macro_R95": 0.08859857855189693,
+            "at_least_50_percent": 73,
+            "at_least_90_percent": 35
+          },
+          "integer": {
+            "recovered_bp": 207489191,
+            "reference_bp": 2083072211,
+            "target_90": 35
+          },
+          "partition": {
+            "bytes": 356468588,
+            "sha256": "ec38483cad2b5e6d2d5e6e560eef80f2ae9a88d724bb79e71ec030a11f770ee2"
+          },
+          "export": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "populations": {
+              "assigned": {
+                "contigs": 58761,
+                "bp": 498451596
+              },
+              "unassigned": {
+                "contigs": 450002,
+                "bp": 945376068
+              },
+              "excluded": {
+                "contigs": 777784,
+                "bp": 226153459
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "provided_origin": {
+              "counts": {
+                "threshold_based_MQ": 38,
+                "threshold_based_LQ": 71,
+                "high_impurity_or_unresolved": 71,
+                "threshold_based_HQ": 35
+              },
+              "target_counts": {
+                "threshold_based_MQ": 38,
+                "threshold_based_LQ": 71,
+                "high_impurity_or_unresolved": 71,
+                "threshold_based_HQ": 35
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 38,
+                "threshold_based_LQ": 34,
+                "high_impurity_or_unresolved": 30,
+                "threshold_based_HQ": 35
+              },
+              "assigned_bp": 498451596,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            },
+            "known_shared_sensitivity": {
+              "counts": {
+                "threshold_based_MQ": 38,
+                "threshold_based_LQ": 71,
+                "high_impurity_or_unresolved": 71,
+                "threshold_based_HQ": 35
+              },
+              "target_counts": {
+                "threshold_based_MQ": 38,
+                "threshold_based_LQ": 71,
+                "high_impurity_or_unresolved": 71,
+                "threshold_based_HQ": 35
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 38,
+                "threshold_based_LQ": 34,
+                "high_impurity_or_unresolved": 30,
+                "threshold_based_HQ": 35
+              },
+              "assigned_bp": 498451596,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.09960729633102479,
+            "macro_R95": 0.08859857855189693,
+            "at_least_50_percent": 73,
+            "at_least_90_percent": 35
+          }
+        },
+        "E030/root-only": {
+          "primary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.11127021846675675,
+            "macro_R95": 0.10531597028703825,
+            "at_least_50_percent": 90,
+            "at_least_90_percent": 49
+          },
+          "integer": {
+            "recovered_bp": 231783900,
+            "reference_bp": 2083072211,
+            "target_90": 49
+          },
+          "partition": {
+            "bytes": 164600101,
+            "sha256": "faed1573bb9aec892863f53cce13565e69f193069ad938de6aa93f5a73aee955"
+          },
+          "export": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "populations": {
+              "assigned": {
+                "contigs": 40362,
+                "bp": 339922207
+              },
+              "unassigned": {
+                "contigs": 468401,
+                "bp": 1103905457
+              },
+              "excluded": {
+                "contigs": 777784,
+                "bp": 226153459
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "provided_origin": {
+              "counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 95,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 95,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 23,
+                "threshold_based_LQ": 29,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "assigned_bp": 339922207,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            },
+            "known_shared_sensitivity": {
+              "counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 95,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 95,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 23,
+                "threshold_based_LQ": 29,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "assigned_bp": 339922207,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.11127021846675675,
+            "macro_R95": 0.10531597028703825,
+            "at_least_50_percent": 90,
+            "at_least_90_percent": 49
+          }
+        },
+        "E030/pre": {
+          "primary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.11091883458475074,
+            "macro_R95": 0.10493573665148574,
+            "at_least_50_percent": 90,
+            "at_least_90_percent": 49
+          },
+          "integer": {
+            "recovered_bp": 231051942,
+            "reference_bp": 2083072211,
+            "target_90": 49
+          },
+          "partition": {
+            "bytes": 164605364,
+            "sha256": "b890d612e437d8cce45a68826dbda83d07b99d0d284645ba8333cb658cae8f62"
+          },
+          "export": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "populations": {
+              "assigned": {
+                "contigs": 40203,
+                "bp": 339212854
+              },
+              "unassigned": {
+                "contigs": 468560,
+                "bp": 1104614810
+              },
+              "excluded": {
+                "contigs": 777784,
+                "bp": 226153459
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "provided_origin": {
+              "counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 96,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 96,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 23,
+                "threshold_based_LQ": 29,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "assigned_bp": 339212854,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            },
+            "known_shared_sensitivity": {
+              "counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 96,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 32,
+                "threshold_based_LQ": 96,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 23,
+                "threshold_based_LQ": 29,
+                "threshold_based_HQ": 49,
+                "threshold_based_MQ": 42
+              },
+              "assigned_bp": 339212854,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.11091883458475074,
+            "macro_R95": 0.10493573665148574,
+            "at_least_50_percent": 90,
+            "at_least_90_percent": 49
+          }
+        },
+        "E030/post": {
+          "primary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.11327219899243329,
+            "macro_R95": 0.10601841948385307,
+            "at_least_50_percent": 93,
+            "at_least_90_percent": 56
+          },
+          "integer": {
+            "recovered_bp": 235954170,
+            "reference_bp": 2083072211,
+            "target_90": 56
+          },
+          "partition": {
+            "bytes": 162913990,
+            "sha256": "5b31c2879b2d827034efa1adf700da8058b151d00860f9f9e3393c03c881c3c8"
+          },
+          "export": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "populations": {
+              "assigned": {
+                "contigs": 91164,
+                "bp": 418885427
+              },
+              "unassigned": {
+                "contigs": 417599,
+                "bp": 1024942237
+              },
+              "excluded": {
+                "contigs": 777784,
+                "bp": 226153459
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "provided_origin": {
+              "counts": {
+                "high_impurity_or_unresolved": 38,
+                "threshold_based_HQ": 56,
+                "threshold_based_MQ": 43,
+                "threshold_based_LQ": 82
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 38,
+                "threshold_based_HQ": 56,
+                "threshold_based_MQ": 43,
+                "threshold_based_LQ": 82
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 30,
+                "threshold_based_HQ": 56,
+                "threshold_based_MQ": 43,
+                "threshold_based_LQ": 18
+              },
+              "assigned_bp": 418885427,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            },
+            "known_shared_sensitivity": {
+              "counts": {
+                "high_impurity_or_unresolved": 38,
+                "threshold_based_HQ": 56,
+                "threshold_based_MQ": 43,
+                "threshold_based_LQ": 82
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 38,
+                "threshold_based_HQ": 56,
+                "threshold_based_MQ": 43,
+                "threshold_based_LQ": 82
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 30,
+                "threshold_based_HQ": 56,
+                "threshold_based_MQ": 43,
+                "threshold_based_LQ": 18
+              },
+              "assigned_bp": 418885427,
+              "query_count": 1286547,
+              "primary_rule_changed": false,
+              "rRNA_tRNA_screened": false,
+              "numerical_units": "fractions in [0,1], not percentages",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+            }
+          },
+          "known_shared_sensitivity": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.11327219899243329,
+            "macro_R95": 0.10601841948385307,
+            "at_least_50_percent": 93,
+            "at_least_90_percent": 56
+          }
+        }
+      },
+      "paired_continuation": {
+        "E023": {
+          "vs_previous_student": {
+            "gains": 65,
+            "losses": 38,
+            "unchanged": 696,
+            "net_recovered_bp": 8685196,
+            "largest_gains": [
+              [
+                "OTU_97.8698.0",
+                2065390
+              ],
+              [
+                "OTU_97.22007.0",
+                2012727
+              ],
+              [
+                "OTU_97.21263.0",
+                1294280
+              ],
+              [
+                "OTU_97.38222.0",
+                882928
+              ],
+              [
+                "OTU_97.36526.1",
+                870716
+              ],
+              [
+                "OTU_97.13959.0",
+                859877
+              ],
+              [
+                "OTU_97.2839.0",
+                753360
+              ],
+              [
+                "OTU_97.18880.0",
+                736727
+              ],
+              [
+                "OTU_97.40084.0",
+                522435
+              ],
+              [
+                "OTU_97.45326.0",
+                356254
+              ]
+            ],
+            "largest_losses": [
+              [
+                "OTU_97.29976.0",
+                -2146033
+              ],
+              [
+                "OTU_97.25956.0",
+                -1047186
+              ],
+              [
+                "OTU_97.43518.0",
+                -599387
+              ],
+              [
+                "OTU_97.37772.0",
+                -428957
+              ],
+              [
+                "OTU_97.7430.0",
+                -369167
+              ],
+              [
+                "OTU_97.27675.0",
+                -267201
+              ],
+              [
+                "OTU_97.1292.0",
+                -263629
+              ],
+              [
+                "OTU_97.28688.0",
+                -263451
+              ],
+              [
+                "OTU_97.45289.0",
+                -256423
+              ],
+              [
+                "OTU_97.3393.1",
+                -244999
+              ]
+            ]
+          },
+          "vs_initialized_teacher": {
+            "gains": 41,
+            "losses": 49,
+            "unchanged": 709,
+            "net_recovered_bp": 2202704,
+            "largest_gains": [
+              [
+                "OTU_97.32420.0",
+                2241133
+              ],
+              [
+                "OTU_97.38222.0",
+                451146
+              ],
+              [
+                "OTU_97.20249.0",
+                335059
+              ],
+              [
+                "OTU_97.42515.0",
+                307661
+              ],
+              [
+                "OTU_97.42423.0",
+                301655
+              ],
+              [
+                "OTU_97.3210.0",
+                279856
+              ],
+              [
+                "OTU_97.29930.0",
+                260061
+              ],
+              [
+                "OTU_97.23850.0",
+                242898
+              ],
+              [
+                "OTU_97.3008.0",
+                207938
+              ],
+              [
+                "OTU_97.2839.0",
+                204424
+              ]
+            ],
+            "largest_losses": [
+              [
+                "OTU_97.27675.0",
+                -619547
+              ],
+              [
+                "OTU_97.43518.0",
+                -599387
+              ],
+              [
+                "OTU_97.3393.1",
+                -277290
+              ],
+              [
+                "OTU_97.28688.0",
+                -263451
+              ],
+              [
+                "OTU_97.33448.0",
+                -225363
+              ],
+              [
+                "OTU_97.45016.0",
+                -206619
+              ],
+              [
+                "OTU_97.45326.0",
+                -164169
+              ],
+              [
+                "OTU_97.479.0",
+                -113732
+              ],
+              [
+                "OTU_97.11468.0",
+                -112411
+              ],
+              [
+                "OTU_97.25225.0",
+                -100574
+              ]
+            ]
+          }
+        },
+        "E030": {
+          "vs_previous_student": {
+            "gains": 58,
+            "losses": 31,
+            "unchanged": 710,
+            "net_recovered_bp": 16302513,
+            "largest_gains": [
+              [
+                "OTU_97.2092.0",
+                6961448
+              ],
+              [
+                "OTU_97.479.0",
+                2879041
+              ],
+              [
+                "OTU_97.21263.0",
+                2827086
+              ],
+              [
+                "OTU_97.25225.0",
+                2401617
+              ],
+              [
+                "OTU_97.20226.0",
+                2367011
+              ],
+              [
+                "OTU_97.39153.1",
+                2175734
+              ],
+              [
+                "OTU_97.37245.0",
+                2173667
+              ],
+              [
+                "OTU_97.23667.0",
+                2146142
+              ],
+              [
+                "OTU_97.22835.0",
+                2047960
+              ],
+              [
+                "OTU_97.14639.0",
+                1924744
+              ]
+            ],
+            "largest_losses": [
+              [
+                "OTU_97.20031.0",
+                -6815179
+              ],
+              [
+                "OTU_97.33448.0",
+                -5289349
+              ],
+              [
+                "OTU_97.9670.0",
+                -2549338
+              ],
+              [
+                "OTU_97.42543.1",
+                -2362232
+              ],
+              [
+                "OTU_97.35846.0",
+                -2173187
+              ],
+              [
+                "OTU_97.34836.0",
+                -2146192
+              ],
+              [
+                "OTU_97.7430.0",
+                -2073025
+              ],
+              [
+                "OTU_97.23272.0",
+                -2029162
+              ],
+              [
+                "OTU_97.30063.0",
+                -1221658
+              ],
+              [
+                "OTU_97.45443.0",
+                -1203712
+              ]
+            ]
+          },
+          "vs_initialized_teacher": {
+            "gains": 40,
+            "losses": 27,
+            "unchanged": 732,
+            "net_recovered_bp": 8773834,
+            "largest_gains": [
+              [
+                "OTU_97.2092.0",
+                6961448
+              ],
+              [
+                "OTU_97.26707.0",
+                3054625
+              ],
+              [
+                "OTU_97.20226.0",
+                2367011
+              ],
+              [
+                "OTU_97.39153.1",
+                2175734
+              ],
+              [
+                "OTU_97.37245.0",
+                2173667
+              ],
+              [
+                "OTU_97.34522.0",
+                1618484
+              ],
+              [
+                "OTU_97.41293.0",
+                847363
+              ],
+              [
+                "OTU_97.30399.0",
+                340214
+              ],
+              [
+                "OTU_97.21263.0",
+                339571
+              ],
+              [
+                "OTU_97.38222.0",
+                206561
+              ]
+            ],
+            "largest_losses": [
+              [
+                "OTU_97.40838.0",
+                -3629166
+              ],
+              [
+                "OTU_97.9670.0",
+                -2549338
+              ],
+              [
+                "OTU_97.35846.0",
+                -2173187
+              ],
+              [
+                "OTU_97.21322.0",
+                -2046064
+              ],
+              [
+                "OTU_97.20249.0",
+                -574504
+              ],
+              [
+                "OTU_97.36526.1",
+                -507623
+              ],
+              [
+                "OTU_97.35168.0",
+                -304786
+              ],
+              [
+                "OTU_97.6797.0",
+                -229028
+              ],
+              [
+                "OTU_97.41794.0",
+                -82846
+              ],
+              [
+                "OTU_97.15792.1",
+                -33644
+              ]
+            ]
+          }
+        }
+      },
+      "construction_effects": {
+        "E023_density_to_selection": {
+          "gains": 14,
+          "losses": 0,
+          "unchanged": 785,
+          "net_recovered_bp": 21682176,
+          "largest_gains": [
+            [
+              "OTU_97.33448.0",
+              4339091
+            ],
+            [
+              "OTU_97.43518.0",
+              2709710
+            ],
+            [
+              "OTU_97.8698.0",
+              2065390
+            ],
+            [
+              "OTU_97.360.1",
+              1938278
+            ],
+            [
+              "OTU_97.42865.0",
+              1745846
+            ],
+            [
+              "OTU_97.16729.0",
+              1661125
+            ],
+            [
+              "OTU_97.3393.1",
+              1425005
+            ],
+            [
+              "OTU_97.7430.0",
+              1264546
+            ],
+            [
+              "OTU_97.11468.0",
+              1129554
+            ],
+            [
+              "OTU_97.14835.0",
+              932223
+            ]
+          ],
+          "largest_losses": []
+        },
+        "E030_root_to_pre": {
+          "gains": 0,
+          "losses": 2,
+          "unchanged": 797,
+          "net_recovered_bp": -731958,
+          "largest_gains": [],
+          "largest_losses": [
+            [
+              "OTU_97.20249.0",
+              -574504
+            ],
+            [
+              "OTU_97.27554.1",
+              -157454
+            ]
+          ]
+        },
+        "E030_pre_to_post": {
+          "gains": 74,
+          "losses": 13,
+          "unchanged": 712,
+          "net_recovered_bp": 4902228,
+          "largest_gains": [
+            [
+              "OTU_97.21263.0",
+              2100842
+            ],
+            [
+              "OTU_97.36605.0",
+              1925230
+            ],
+            [
+              "OTU_97.45.0",
+              1593555
+            ],
+            [
+              "OTU_97.22166.0",
+              1313536
+            ],
+            [
+              "OTU_97.38222.0",
+              1304738
+            ],
+            [
+              "OTU_97.11308.0",
+              1205330
+            ],
+            [
+              "OTU_97.32318.0",
+              1188559
+            ],
+            [
+              "OTU_97.27484.0",
+              920021
+            ],
+            [
+              "OTU_97.13932.0",
+              871041
+            ],
+            [
+              "OTU_97.479.0",
+              818159
+            ]
+          ],
+          "largest_losses": [
+            [
+              "OTU_97.196.0",
+              -3782987
+            ],
+            [
+              "OTU_97.28342.1",
+              -2926976
+            ],
+            [
+              "OTU_97.23341.0",
+              -2359447
+            ],
+            [
+              "OTU_97.18522.0",
+              -2266410
+            ],
+            [
+              "OTU_97.42261.0",
+              -1669590
+            ],
+            [
+              "OTU_97.5757.1",
+              -1511141
+            ],
+            [
+              "OTU_97.11468.0",
+              -1390261
+            ],
+            [
+              "OTU_97.5089.0",
+              -1370386
+            ],
+            [
+              "OTU_97.28231.0",
+              -1368720
+            ],
+            [
+              "OTU_97.23850.0",
+              -1287317
+            ]
+          ]
+        },
+        "same_new_learning_E030_to_E023": {
+          "gains": 37,
+          "losses": 101,
+          "unchanged": 661,
+          "net_recovered_bp": -28464979,
+          "largest_gains": [
+            [
+              "OTU_97.40084.0",
+              4853773
+            ],
+            [
+              "OTU_97.196.0",
+              4842052
+            ],
+            [
+              "OTU_97.33448.0",
+              4339091
+            ],
+            [
+              "OTU_97.35840.0",
+              3001202
+            ],
+            [
+              "OTU_97.23341.0",
+              2649060
+            ],
+            [
+              "OTU_97.37108.0",
+              2217001
+            ],
+            [
+              "OTU_97.44957.0",
+              2121141
+            ],
+            [
+              "OTU_97.8698.0",
+              2065390
+            ],
+            [
+              "OTU_97.360.1",
+              1938278
+            ],
+            [
+              "OTU_97.5757.1",
+              1850520
+            ]
+          ],
+          "largest_losses": [
+            [
+              "OTU_97.11180.0",
+              -7421091
+            ],
+            [
+              "OTU_97.5809.0",
+              -3833713
+            ],
+            [
+              "OTU_97.27675.0",
+              -2374008
+            ],
+            [
+              "OTU_97.971.0",
+              -2367878
+            ],
+            [
+              "OTU_97.20226.0",
+              -2367011
+            ],
+            [
+              "OTU_97.39153.1",
+              -2175734
+            ],
+            [
+              "OTU_97.37245.0",
+              -2173667
+            ],
+            [
+              "OTU_97.23667.0",
+              -2146142
+            ],
+            [
+              "OTU_97.44550.0",
+              -2064138
+            ],
+            [
+              "OTU_97.38845.0",
+              -2009713
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "frozen_decisions": {
+    "E023": {
+      "disposition": "MODIFY",
+      "all_mode_nonregression": false,
+      "practical_criterion": true,
+      "gains": {
+        "E009-noGLM": {
+          "recovered_bp": 15053068,
+          "R95_percentage_points": 2.7139178428141153,
+          "target_90": 3
+        },
+        "E009-GLM": {
+          "recovered_bp": 16182021,
+          "R95_percentage_points": 2.91745679516579,
+          "target_90": 2
+        },
+        "oral-noGLM": {
+          "recovered_bp": -12162466,
+          "R95_percentage_points": -0.5838715497126854,
+          "target_90": -15
+        }
+      },
+      "primary_rule_changed": false,
+      "truth_selected_routing": false
+    },
+    "E030": {
+      "disposition": "MODIFY",
+      "all_mode_nonregression": false,
+      "practical_criterion": false,
+      "gains": {
+        "E009-noGLM": {
+          "recovered_bp": 4216103,
+          "R95_percentage_points": 0.760121269553962,
+          "target_90": -1
+        },
+        "E009-GLM": {
+          "recovered_bp": 4331077,
+          "R95_percentage_points": 0.780849933641556,
+          "target_90": -2
+        },
+        "oral-noGLM": {
+          "recovered_bp": 16302513,
+          "R95_percentage_points": 0.7826187164281652,
+          "target_90": 6
+        }
+      },
+      "primary_rule_changed": false,
+      "truth_selected_routing": false
+    }
+  },
+  "primary_integer_metrics": {
+    "E023": {
+      "E009-noGLM": {
+        "recovered_bp": 58855185,
+        "reference_bp": 554661890,
+        "target_90": 10
+      },
+      "E009-GLM": {
+        "recovered_bp": 58618699,
+        "reference_bp": 554661890,
+        "target_90": 9
+      },
+      "oral-noGLM": {
+        "recovered_bp": 207489191,
+        "reference_bp": 2083072211,
+        "target_90": 35
+      }
+    },
+    "E030": {
+      "E009-noGLM": {
+        "recovered_bp": 48018220,
+        "reference_bp": 554661890,
+        "target_90": 6
+      },
+      "E009-GLM": {
+        "recovered_bp": 46767755,
+        "reference_bp": 554661890,
+        "target_90": 5
+      },
+      "oral-noGLM": {
+        "recovered_bp": 235954170,
+        "reference_bp": 2083072211,
+        "target_90": 56
+      }
+    }
+  },
+  "retained_E030_integer_metrics": {
+    "E009-noGLM": {
+      "recovered_bp": 43802117,
+      "reference_bp": 554661890,
+      "target_90": 7
+    },
+    "E009-GLM": {
+      "recovered_bp": 42436678,
+      "reference_bp": 554661890,
+      "target_90": 7
+    },
+    "oral-noGLM": {
+      "recovered_bp": 219651657,
+      "reference_bp": 2083072211,
+      "target_90": 50
+    }
+  },
+  "anchors": {
+    "E009-GLM": {
+      "recovered_bp": 57775481,
+      "reference_bp": 554661890,
+      "target_90": 9
+    },
+    "oral-noGLM": {
+      "recovered_bp": 288649775,
+      "reference_bp": 2083072211,
+      "target_90": 58
+    }
+  },
+  "target_table": {
+    "bytes": 74572,
+    "sha256": "4bfe46da9928240f7117cb615a4ca1882aa7d7c9acd829c653ff920b163b0234"
+  },
+  "target_rows": 1111,
+  "new_models": 3,
+  "new_partitions": 15,
+  "raw_review_bindings": {
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review/outputs/review-E009-noGLM-learning-E023/review.json": {
+      "bytes": 336820,
+      "sha256": "063b0e5124f32043d7519fb93762566565b806239d4aafebc246e56019bd13c6"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review/outputs/review-E009-noGLM-learning/review.json": {
+      "bytes": 448676,
+      "sha256": "868ecd8a7d36ea3df874d233d79399a943d312be58858d2ef363fefb9b634ddb"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review/outputs/review-E009-GLM-learning-E023/review.json": {
+      "bytes": 336228,
+      "sha256": "b298394ecb738aafbf737b295d0d8ae6f9b076a8e72124021c061d3d35e03be6"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review/outputs/review-E009-GLM-learning/review.json": {
+      "bytes": 452897,
+      "sha256": "6c821f27d8ec9faf90c69497a630ace012b7707355683efb014aac9fcdf32739"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review/outputs/review-oral-noGLM-learning-E023/review.json": {
+      "bytes": 1823393,
+      "sha256": "7d4e0763f353247b43bf169563b751bee34ad2ed03e401c777df46453ca57c73"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review/outputs/review-oral-noGLM-learning/review.json": {
+      "bytes": 2747417,
+      "sha256": "b3046ce571fb42df43a0b8bfdd95a61a6f6c87914e7800afa3cb698f395d04c2"
+    }
+  },
+  "baselines_rescored": false,
+  "new_fits_in_review": 0,
+  "unchanged_full_denominators": true,
+  "N_quarantine_percent": 3.3034,
+  "Oral_semantics": "Provided-origin oracle and unchanged known-shared sensitivity; not exhaustive unique truth",
+  "one_shared_binner_no_dataset_router": true,
+  "secondary_tiers_not_formal_MIMAG_HQ": true,
+  "whole_learning_bundle_not_component_causality": true,
+  "independent_confirmation": false
+}

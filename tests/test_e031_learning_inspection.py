@@ -35,13 +35,21 @@ class ReadonlyContracts(unittest.TestCase):
             with self.subTest(key=key), self.assertRaises(ValueError):
                 module.check_config(dict(cfg, **{key:value}), start+10)
 
-    def test_actual_held_armer_uses_separate_readonly_consumer(self):
-        text=(SCRIPT.parent/'e031_learning_review_arm.py').read_text()
-        compile(text, 'actual E031 read-only armer', 'exec')
-        self.assertIn("root/'operations/e031_learning_diagnostics.py'", text)
-        self.assertIn("unit.startswith('e031-')", text)
-        self.assertIn('try-restart', text)
-        self.assertNotIn('instances start', text)
+    def test_rendered_service_targets_separate_readonly_consumer(self):
+        import shlex
+        import sys
+        sys.path.insert(0, str(SCRIPT.parent))
+        from e031_phase import service_content
+        root=Path('/retained/review with spaces')
+        consumer=root/'operations/e031_learning_diagnostics.py'
+        cfg=root/'config.json'
+        unit=service_content(root,'/usr/bin/python3',consumer,cfg,'owner')
+        command=next(line.removeprefix('ExecStart=') for line in unit.splitlines()
+                     if line.startswith('ExecStart='))
+        self.assertEqual(shlex.split(command),
+            ['/usr/bin/python3','-I','-B',str(consumer),'--config',str(cfg)])
+        with self.assertRaises(ValueError):
+            service_content(root,'/usr/bin/python3',consumer,'/bad\nExecStart=other','owner')
 
     def test_missing_operations_provenance_refused_before_service_start(self):
         import sys
@@ -53,6 +61,18 @@ class ReadonlyContracts(unittest.TestCase):
         validate_config(cfg)
         del cfg['source_commit']
         with self.assertRaises(ValueError): validate_config(cfg)
+
+    def test_full_reference_integer_summary_and_missing_target_refusal(self):
+        import sys
+        sys.path.insert(0, str(SCRIPT.parent))
+        from e031_learning_summary import integer_metrics
+        rows=[dict(genome=str(i),reference_bp=1,recovered_bp=1) for i in range(156)]
+        rows[-1]['reference_bp']+=554661890-156
+        value=integer_metrics(rows,'E009-GLM')
+        self.assertEqual(value,dict(recovered_bp=156,reference_bp=554661890,target_90=155))
+        with self.assertRaises(ValueError): integer_metrics(rows[:-1],'E009-GLM')
+        rows[-1]['genome']='0'
+        with self.assertRaises(ValueError): integer_metrics(rows,'E009-GLM')
 
 
 if __name__ == '__main__':

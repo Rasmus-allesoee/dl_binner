@@ -1,33 +1,56 @@
 # E031 operations
 
-## Current phase: paired learner released, supervised running handoff
+## Current: completed learner review, stopped original CPU, separate storage preservation
 
-[Native learner receipt](learning-native-observed.json) supersedes earlier launch
-statuses. `learning-20261102T200852Z-ba65911-r2` runs exact source `ba65911` on the
-existing E2. All nine native gates and 125 original files / 11.87 GB pass. The
-first arm completes 20 epochs/native reload and both construction/export paths
-at the 21:54 Copenhagen observation; E030 audit runs, with full parent/view
-exposure, finite loss and no-collapse history. At 21:59 its paired final target
-passes and E009 GLM training is underway. This is progress, not complete science
-or quality. The same three new outputs feed both constructors across all three modes.
+[Closed independent inspection](learning-inspection-observed.json) accepts phase
+`learning-20261102T200852Z-ba65911-r2`, scientific source `ba65911`: all nine native
+gates, 34 seals, three fits, 13 actual workflow/delivery exits, exact full axes,
+unchanged inputs, native reload and every private member/alias pass. Main shutdown
+is November 3 at 02:20:59 Copenhagen. A bounded read-only recovery completes all
+six frozen new-output reviewers plus tensor/query audits, followed by independent
+shutdown at 12:17:16. The first learner clock and review deadline are preserved.
+No fit, construction, acquisition, mapping, depth, marker or old score is replayed.
 
-Fresh current-boot/PID/start/command supervision is active and native exit/crash/
-restart-refusal tests pass. First start 20:02:32 UTC is preserved through the
-unreleased-setup repair. Driver deadline is November 3 at 13:02:32 Copenhagen;
-actual provider STOP is 13:15:52, earlier than the original fallback horizon.
-The complete native remaining forecast is about 9.5 hours. All original resource,
-credit-only and November 4 gates remain, with the declared complete paired byte
-bounds. Follow the healthy-long-run handoff; do not poll to completion.
+[All results](learning-review.json), [targets](learning-targets.tsv),
+[integer audit](learning-review-audit.json), [grouping/geometry](learning-grouping-diagnostics.json)
+and [populations](learning-populations.json) preserve fifteen partitions. E031 +
+E023 R95 is 10.6110% / 10.5684% / 9.9607%; E031 + E030 is 8.6572% / 8.4318% /
+11.3272% for E009 no-GLM / GLM / Oral no-GLM, all ten-depth. Both unchanged joint
+criteria are MODIFY. Retain the E023/E026/MetaBAT2 references and every target loss.
+[Interpretation](../../docs/evidence/2026-11-03-e031-learning-and-recovery-priority.md)
+recommends a common biological candidate-selection/joint-update block with E031
+learning fixed, rather than a dataset-specific winner router.
 
-The completed [bridge comparison](bridge-review.json) is MODIFY. E009 returns to
-the strong E023 range; current measured-depth Oral loses R95/T90 against E030.
-[Interpretation and all limits](../../docs/evidence/2026-11-02-e031-bridge-and-paired-learning.md)
-explain why this does not stop the authorized same-output learner control.
-Original references and every failed criterion remain. The bridge's five new
-reviews and compact native evidence/member checks are complete.
-[The compact inspection backup](inspection-backup.json), closed failure supplement
-and latest handoff pass all member and private readback checks. Original bulk
-archives remain separately retained and verified.
+The Mac reserve/portability failures remain. One read-only provenance-field error
+fails before release; a fresh tested repair completes within both original clocks.
+Source `24a51de` owns read-only operations; scientific product/source remain
+unchanged. Native compact return and closed task journals pass every member check.
+The 40 GiB task disk is then released; original 30/300 GiB disks remain. Historical
+paths on the released disk and its package environment are no longer reuse targets.
+Restore scientific outputs from the generation/SHA-bound private archives.
+
+The sole new L4 request is [capacity-blocked](gpu-qualification-observed.json).
+No GPU VM or model starts; both empty disks are removed. There is no measured
+batching speedup. [Oral GLM's next admission](oral-GLM-next-admission.json) proposes
+one different existing T4 route with the exact original 128-view numerical
+contract. No further GPU request or full-bank extraction occurs in this task.
+
+[Costs](learning-cost-observed.json) separate allocation, storage/export and
+sampled CPU. Complete learner attribution is bounded by $2.20 within $8. The
+original scientific clocks and November 4 scope are preserved, and the owner
+separately approves [storage only](storage-20261104-admission.json) through
+**November 11 at 00:00 Copenhagen**, $9 active / at most $0.50 automatic tail
+through November 18. This permits no compute/new resources or automatic deletion
+of unique evidence. Final inventory is the original E2 TERMINATED, two original
+disks, no temporary worker/task disk. [Next block](next-block.md) and the new exact
+prompt below are proposals requiring the owner's next invocation.
+
+[Closed inspection backup](learning-inspection-backup.json) passes every compact
+member and private readback check. It preserves record maintenance after numerical
+review, without reopening either native clock. Final source-history delivery is
+an incremental private Git bundle with the existing `ba65911` prerequisite.
+
+The earlier sections preserve the executed scope, failures and original prompts.
 
 ## Native prerelease guard recovery, November 2
 
@@ -437,7 +460,7 @@ history is safe; retain private transfer for current financial/account history.
 Update records, run checks and commit with structured what changed/why. Report
 costs, conclusions/limits and the next exact prompt.
 
-## Exact following prompt
+## Invoked learner-inspection prompt (November 3)
 
 Our goal is substantially closing the recovery gap. Read AGENTS.md,
 PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E031's original scientific locks,
@@ -510,6 +533,111 @@ than defaulting to another small loss test. Keep the concrete full Oral GLM
 128-view native-equivalence/throughput/capacity/complete-cost milestone and the
 frozen unscored skin's source/genome/replicon/molecule/taxonomy/overlap/ambiguity/
 unique-versus-origin truth/depth/protocol/cost/retention dependencies visible.
-No new acquisition, GPU attempt, confirmation or automatic retention renewal.
+No new acquisition, confirmation or automatic retention renewal.
 Update records, check and commit with structured what changed/why. Report actual
 costs/resources, completion/quality/limits, one next decision and exact prompt.
+
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap with one shared binner. Read
+AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E031's completed learning
+review, full target/quality/population/grouping diagnostics, source/reuse locks,
+next-block proposal, GPU stockout/Oral GLM plan and storage admission. Preserve
+dev3/dev4/dev5 and every accepted E009–E031 input, truth, model, result, source
+freeze and failed journal. Use a new descriptive research branch without codex/.
+
+Implement one coherent common biological candidate-selection and joint-recruitment
+upgrade, keeping the E031 learner, native unit vectors, cached graph/weights,
+three mode contracts and seed fixed. Use retained E023/E030 candidate hierarchies,
+whole-parent/child and pre-update alternatives, cached physical calls/genes/domains,
+composition and measured parent depth. Resolve the exact label-free algorithm and
+defaults using judgment and targeted primary sources, including the audited DAS
+Tool candidate-integration pattern where useful. It is not permission to run DAS
+Tool or copy its marker-only threshold. Respect call specificity, repeated-locus
+and lineage/panel limits; keep a defensible marker-negative path.
+
+Use one common policy across E009 no-GLM, E009 GLM and Oral measured ten-depth/
+no-GLM. Resolve overlapping candidates and assess groups of proposed recruits at
+bin level, retaining an unchanged alternative. Treat depth-positive, measured-zero
+and unavailable evidence distinctly; assess length-dependent reliability while
+preserving all DNA and optional unassigned outcomes. Any spread/variance derives
+from observed contig profiles, not invented window/per-base measurements. Do not
+use truth to choose bins, thresholds, families, K, cores or routing. Do not tune
+a resolution/seed grid, retrain, redetect markers, rebuild accepted neighbors or
+change the encoder. Retain candidate/selected/pre/post artifacts and full axes.
+
+Record the prospective design and keep/modify/abandon criteria, implement and
+freeze the source/defaults/protocol before changed community outcomes. Run actual
+tiny hierarchy/overlap/selection/whole-child/group-update/opaque-ID/marker-negative/
+export/reload contracts and a bounded synthetic scale test. Use selective pre/post
+controls rather than a factorial campaign. Both E031 constructors and all stronger
+E023 10.4163%, E026 13.8569% and MetaBAT2 references stay frozen summaries; no old
+baseline refit/rescore. The truth-labelled five-partition envelope is diagnostic,
+not a performance promise or an algorithmic selector.
+
+I authorize the proposed **new $6 cached-only comparison**, subject to fresh live
+Welcome balance/scope/expiry/delayed usage, applicable current prices/product
+coverage, source/runtime, quota, complete schedule, headroom and retention gates.
+Existing e2-standard-8 / 32 GiB and original 30/300 GiB disks only; one temporary
+40 GiB balanced task disk is approved if verified safe cleanup cannot meet measured
+space needs. Start with eight cumulative hours including setup/verification/
+restore/collection, provider STOP 8.25 hours, four numerical threads, 26 GB sampled
+RSS, separate 25 GiB source/task reserves, 12 GiB extra task space and 3 GiB
+compressed / 6 GiB logical return. Record justified credit-covered envelope
+revisions before affected execution; quality and frozen scientific gates take
+priority over a rough forecast. No real money or silent resource/retention expansion.
+
+Use the verified generation-bound E031 private archive/cache. The old temporary
+environment/path was released: create a fresh package-owned environment against
+a complete verified retained dependency base. Test the actual restore-only
+consumer, exact byte aliases and producer-matched return limits. Do not invent
+reuse or reinstall/recopy as an unrecorded fallback. Push/pull the exact clean
+source when its outgoing history is safe; otherwise retain the established
+private exact-commit transfer and read-only GitHub key. Arm/test a fresh current-
+boot/process held-parent exit watcher and independent provider STOP before release.
+Debug operational errors with preserved journals and verified reuse inside the
+same recorded scope; do not replay accepted science. Follow short work through
+collection, independent shutdown and bounded frozen review. For healthy long work,
+verify supervision/progress, wait a few minutes and hand off without polling to
+completion. On failure, collect bounded evidence, stop and report what passed.
+
+In parallel I authorize a separate **new $3 single T4 qualification**, using the
+already prepared `ec7ff25` source/model/runtime/exact 128-view cohort, one
+n1-standard-8 / 30 GiB + T4 in us-central1-f and temporary 40/64 GiB standard disks.
+Fresh all-cost credit/product/quota/storage/source gates must pass. Retain 90
+cumulative minutes / 105-minute STOP, four threads, 26 GB host RSS, 14 GiB GPU
+ceiling, 10 GiB work reserve and 256 MiB compressed return. There is no capacity
+fallback loop: if unavailable, remove only verified empty temporary resources and
+continue the CPU work. Do not make another L4-a request or run a full Oral bank.
+
+For an available T4, verify original and batched DNA/view/token/chunk/strand/pooling
+exposure and float32 reference attention, without TF32/autocast. Keep rtol 1e-5,
+atol 1e-6, maximum absolute error 1e-5 and minimum cosine 0.999999. Test a fresh
+boot/process exit watcher and provider STOP before release. Record actual elapsed,
+VRAM, host RAM, batch/padding and stratum-aware throughput; use those measurements
+to price the complete Oral bank and same-version bootstrap/student comparison.
+Do not label old L4 projections, DCVBin source timings or a capacity failure as a
+measured T4 speedup. Stop/delete temporary resources only after verified evidence
+collection; preserve unique failure evidence. Full extraction needs separate scope.
+
+After independently verified CPU shutdown, check actual exits, archive/member/
+alias integrity and allocation/storage/export cost before frozen new-output
+E009 conservative-v2 and Oral provided-origin/known-shared diagnostics. Preserve
+full 156/799 denominators, 3.3034% N-quarantine and every length/origin/eligibility/
+marker/zero/unknown/non-target/excluded/unassigned population. Secondary quality
+tiers remain threshold-based, not formal MIMAG HQ. Report per-target gains/losses,
+paired group-update effects and common-policy trade-offs; do not choose a winner
+per dataset or infer feature-family conclusions.
+
+Both communities remain development data. Keep skin unscored and its source/
+genome/replicon/molecule/taxonomy/exact/near/pretraining-overlap/ambiguity/unique-
+versus-origin truth/depth/protocol/cost admission visible; no new DNA, mappings,
+external binner, full Oral extraction or confirmation run. The storage-only
+approval ends **November 11 at 00:00 Copenhagen**, with at most $0.50 automatic
+tail through November 18. Obtain a new preservation decision before expiry;
+neither a compute envelope nor low storage price silently renews it.
+
+Update records and durable guidance, run relevant checks and commit with
+structured what changed/why. Report the actual candidate, results/limits, costs/
+resources, T4 qualification or precise blocker, one next decision and exact prompt.

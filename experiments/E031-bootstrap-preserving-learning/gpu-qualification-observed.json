@@ -1,0 +1,71 @@
+{
+  "status": "NOT_RUN_CAPACITY_BLOCKED",
+  "attempts": 1,
+  "shape": "g2-standard-8 + one L4",
+  "zone": "us-central1-a",
+  "source": {
+    "commit": "ec7ff25b24f3db428429d5b861e7a06c4d223ca8",
+    "asset": {
+      "uri": "gs://dl-binner-archive-167650584170/e029/qualification-assets-20261101/source-ec7ff25.tar.gz",
+      "generation": "1793521766587483",
+      "binding": {
+        "bytes": 4786278,
+        "sha256": "ce8a9aca2659e7e5f002aaf0672725fed374b7af33a6bdc304f0629f055f01bb"
+      }
+    }
+  },
+  "protocol": "experiments/E029-certifiable-joint-retrieval/gpu-protocol.json",
+  "cohort_count": 128,
+  "original_allclose_rtol": 1e-05,
+  "original_allclose_atol": 1e-06,
+  "original_max_absolute_error": 1e-05,
+  "original_minimum_cosine": 0.999999,
+  "credit_gate": {
+    "bytes": 1957,
+    "sha256": "4c32c863a589e6d29d4c708be3f808770ada438c774f0609f9413c1216944de2"
+  },
+  "error": "ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS; gpu_availability; zonesAvailable empty",
+  "GPU_VM_started": false,
+  "native_probe_or_model_run": false,
+  "measured_throughput": null,
+  "measured_speedup": null,
+  "full_Oral_bank_admitted": false,
+  "compute_USD": 0,
+  "temporary_disks": [
+    {
+      "name": "e029-batching-20261103-e031-a-boot",
+      "size_GiB": 40,
+      "lifetime_seconds_upper": 50.18033003807068,
+      "cost_USD_upper": 7.733137623373507e-05,
+      "deleted": true
+    },
+    {
+      "name": "e029-batching-20261103-e031-a-work",
+      "size_GiB": 64,
+      "lifetime_seconds_upper": 44.012330055236816,
+      "cost_USD_upper": 0.0001085216953126505,
+      "deleted": true
+    }
+  ],
+  "metadata_operations_USD_upper": 0.02,
+  "all_temporary_resources_deleted": true,
+  "additional_attempts_this_task": 0,
+  "current_CPU": "TERMINATED",
+  "clock_started": false,
+  "retention_or_quota_extended": false,
+  "storage_headroom_from_verified_E031_task_disk_release": true,
+  "evidence": {
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/gpu-once/prospective.json": {
+      "bytes": 2236,
+      "sha256": "a5a97f8e2277d42a00db902ae522ddcf6c9fc23346dc63686e7bcd400bb388fd"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/gpu-once/control-plane/failure.json": {
+      "bytes": 1252,
+      "sha256": "e454efb6810462c97f30b84f463474550861406c92f8022dcd2b0be89ee3d7c2"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/gpu-once/closed.json": {
+      "bytes": 705,
+      "sha256": "ef233e56bb15405e6d87e6727df7ca496ab5c0863da1bd042e6ff550782952f4"
+    }
+  }
+}

@@ -1,0 +1,2361 @@
+{
+  "status": "COMPLETED_INDEPENDENTLY_ADMITTED_AND_REVIEWED",
+  "phase": "learning-20261102T200852Z-ba65911-r2",
+  "scientific_source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+  "prepared_source": "58d7d59e892304ad20efcf784e61288e8a7d4967",
+  "inspection_operations_source": "24a51defb81e84fb97a6030c3bd9f5a88dd1370c",
+  "checked_UTC": "2026-11-03T12:01:25.655259+00:00",
+  "main_provider_shutdown": {
+    "status": "TERMINATED",
+    "last_start": "2026-11-02T20:09:12.240+00:00",
+    "last_stop": "2026-11-03T01:20:59.746+00:00",
+    "original_first_start": "2026-11-02T20:02:32.426+00:00",
+    "watchdog_exit": "2026-11-03T01:19:56.422507+00:00",
+    "completion_and_exact_guest_root_verified": true
+  },
+  "actual_native_gate_exits": 9,
+  "complete_stage_seals": 34,
+  "actual_driver_delivery_exits": 13,
+  "all_exits_zero": true,
+  "scientific_fits_completed": 3,
+  "new_models": 3,
+  "new_partitions_reviewed": 15,
+  "source_runtime_axes_DNA_inputs_after_verified": true,
+  "verified_original_files": 125,
+  "verified_original_bytes": 11867699595,
+  "complete_native_distributions": 41,
+  "archive": {
+    "archive": {
+      "bytes": 2101954568,
+      "sha256": "d4ce1d15ad8f7c2443863a6c42805ddd419a6034c861b22a586b7659b9db47ec"
+    },
+    "generation": "1793668697775852",
+    "regular_members": 1913,
+    "aliases": 47,
+    "logical_bytes": 3885642021,
+    "every_member_verified": true,
+    "whole_object_MD5_SHA256_verified": true,
+    "unbacked_work_omissions": 0,
+    "no_complete_local_compressed_copy": true
+  },
+  "units": {
+    "E009-noGLM": {
+      "axis": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "train_seconds": 1137.1260010129997,
+      "checkpoint": {
+        "bytes": 52892,
+        "sha256": "02765e86535f853e9257d698bcc20298d8c783d5bdb94f05b481e497322751da"
+      },
+      "continuation": {
+        "anchor": "fixed_bootstrap_online_eval",
+        "anchor_weight": 0.1,
+        "ema": "bootstrap_stopped_target",
+        "epochs": 20,
+        "learning_rate": 0.0002,
+        "online": "bootstrap_online",
+        "optimizer": "restore_AdamW_moments_and_steps",
+        "predictor": "bootstrap_predictor",
+        "rng": "fresh_seed11_continuation_not_interrupted_resume",
+        "seed": 11,
+        "version": 1
+      },
+      "initial_state": {
+        "anchor": "64b0f7c6f9001162e3c43555ae15cc5b5dad95c94a7b22f9882a772c0de50bca",
+        "online": "64b0f7c6f9001162e3c43555ae15cc5b5dad95c94a7b22f9882a772c0de50bca",
+        "predictor": "b559163d2c4283716573afe38334bf8c4fcee223da5416b7345ff8665444828f",
+        "target": "7f35325a49abddf1c97bedbf802c807b8219201afbe269db2140fc35fc165443"
+      },
+      "initial_geometry": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.70630507754647,
+            "mean_dimension_std": 0.10873004673600498,
+            "mean_other_cosine": 0.22928504196891603,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 35.03911752075894,
+            "mean_dimension_std": 0.1065247803405448,
+            "mean_other_cosine": 0.2596225322462348,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.95732702235972,
+            "mean_dimension_std": 0.10546119759131681,
+            "mean_other_cosine": 0.27488585776660385,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.34500472984896,
+            "mean_dimension_std": 0.10403401812438162,
+            "mean_other_cosine": 0.29381495174739913,
+            "rows": 8192
+          }
+        }
+      },
+      "final_history": {
+        "anchor_preservation": 0.007816027655753312,
+        "available_views": 432664,
+        "composition_reconstruction": 0.5073669859485039,
+        "depth_dropped_views": 216427,
+        "depth_reconstruction": 0.022032508588403135,
+        "ema_updates": 6960,
+        "epoch": 20,
+        "fused_positive": 0.3797568763545889,
+        "geometry": {
+          "online": {
+            "fused": {
+              "catastrophic_collapse": false,
+              "effective_rank": 35.87066590482506,
+              "mean_dimension_std": 0.10867232619799622,
+              "mean_other_cosine": 0.23021824111470807,
+              "rows": 8192
+            },
+            "sequence": {
+              "catastrophic_collapse": false,
+              "effective_rank": 35.2083320859381,
+              "mean_dimension_std": 0.10633929687356868,
+              "mean_other_cosine": 0.2621135210877273,
+              "rows": 8192
+            }
+          },
+          "target": {
+            "fused": {
+              "catastrophic_collapse": false,
+              "effective_rank": 35.947789611908696,
+              "mean_dimension_std": 0.10860104957527511,
+              "mean_other_cosine": 0.23127712218746307,
+              "rows": 8192
+            },
+            "sequence": {
+              "catastrophic_collapse": false,
+              "effective_rank": 35.1343424731131,
+              "mean_dimension_std": 0.10625545016564142,
+              "mean_other_cosine": 0.2632790956928805,
+              "rows": 8192
+            }
+          }
+        },
+        "inherited_ema_updates": 6960,
+        "last_tau": 0.9999999997962576,
+        "loss": 1.0923709549542229,
+        "original_pair_slots": 2366,
+        "parents_seen": 89041,
+        "relation_negative": 3.355959024571878e-05,
+        "relation_normalizer": "original proposal slots, not accepted count or weight sum",
+        "relation_pairs_exposed": 623,
+        "relation_positive": 0.0018127364086757572,
+        "relation_weight": 0.1,
+        "sequence_positive": 0.40415521525928066,
+        "wall_seconds": 1133.568869732
+      },
+      "no_collapse": true,
+      "strict_native_reload": true,
+      "full_DNA_preserved": true,
+      "same_new_vectors_and_graph": {
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-noGLM/embed/embeddings.npz": {
+          "bytes": 21879293,
+          "sha256": "ab8b75bc2027d26c6eba683c22872d02816b43c7d7441e7ac4cd5b9ffd811445"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-noGLM/embed/embeddings.json": {
+          "bytes": 1042,
+          "sha256": "6fa3f9ff943b89b4dc0fccd16b666239cfed9a25d1b7523ff3d9f337228bc9a5"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-noGLM/graph/result/graph.npz": {
+          "bytes": 32274718,
+          "sha256": "1d32398e75eb2c889850e34e654edb10243013d8dc8a8e8de6f8df570df68369"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-noGLM/graph/result/graph.json": {
+          "bytes": 2076,
+          "sha256": "3d78a831845789c13f5bbcffa4adf7bbb3c1a58bbca7b7808cd119de8211aaa4"
+        }
+      }
+    },
+    "E009-GLM": {
+      "axis": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "train_seconds": 1400.8802510589999,
+      "checkpoint": {
+        "bytes": 98798,
+        "sha256": "b32b88c63c4a3025fa084b49587aa199641b67b13334cc56439419d7c612aae1"
+      },
+      "continuation": {
+        "anchor": "fixed_bootstrap_online_eval",
+        "anchor_weight": 0.1,
+        "ema": "bootstrap_stopped_target",
+        "epochs": 20,
+        "learning_rate": 0.0002,
+        "online": "bootstrap_online",
+        "optimizer": "restore_AdamW_moments_and_steps",
+        "predictor": "bootstrap_predictor",
+        "rng": "fresh_seed11_continuation_not_interrupted_resume",
+        "seed": 11,
+        "version": 1
+      },
+      "initial_state": {
+        "anchor": "1390485a84dcaec8950632f8a1169222a321fe5e62d93bebdb069d5fd147a3e0",
+        "online": "1390485a84dcaec8950632f8a1169222a321fe5e62d93bebdb069d5fd147a3e0",
+        "predictor": "aae3636b820b346e1cd52d1d8676e9235b838327c129d0f94504b0ddaee255f0",
+        "target": "a09e3c8f402cbc37b01ff132b11e274616a7363d0c44c5d3fe996060ff6efbb9"
+      },
+      "initial_geometry": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 36.946701904772894,
+            "mean_dimension_std": 0.1099273156481721,
+            "mean_other_cosine": 0.21269556211732926,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 36.50517029222869,
+            "mean_dimension_std": 0.10775947634286082,
+            "mean_other_cosine": 0.24082989085802595,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 34.84844536898599,
+            "mean_dimension_std": 0.10673036885970011,
+            "mean_other_cosine": 0.25769002857480083,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 34.50891520221673,
+            "mean_dimension_std": 0.10407288699931443,
+            "mean_other_cosine": 0.29215382590509553,
+            "rows": 8192
+          }
+        }
+      },
+      "final_history": {
+        "anchor_preservation": 0.007281213788302747,
+        "available_views": 432664,
+        "composition_reconstruction": 0.4976249434849404,
+        "depth_dropped_views": 216427,
+        "depth_reconstruction": 0.021379065018513436,
+        "ema_updates": 6960,
+        "epoch": 20,
+        "fused_positive": 0.3706240143344815,
+        "geometry": {
+          "online": {
+            "fused": {
+              "catastrophic_collapse": false,
+              "effective_rank": 37.011612014201084,
+              "mean_dimension_std": 0.11012269637332936,
+              "mean_other_cosine": 0.21001951707571648,
+              "rows": 8192
+            },
+            "sequence": {
+              "catastrophic_collapse": false,
+              "effective_rank": 36.43831669128587,
+              "mean_dimension_std": 0.10791831013854741,
+              "mean_other_cosine": 0.23855697617982727,
+              "rows": 8192
+            }
+          },
+          "target": {
+            "fused": {
+              "catastrophic_collapse": false,
+              "effective_rank": 36.98970331771856,
+              "mean_dimension_std": 0.10984756900823356,
+              "mean_other_cosine": 0.21370756217905962,
+              "rows": 8192
+            },
+            "sequence": {
+              "catastrophic_collapse": false,
+              "effective_rank": 36.39028360638953,
+              "mean_dimension_std": 0.10750956100350388,
+              "mean_other_cosine": 0.24407699410920794,
+              "rows": 8192
+            }
+          }
+        },
+        "inherited_ema_updates": 6960,
+        "last_tau": 0.9999999997962576,
+        "loss": 1.072413129224456,
+        "original_pair_slots": 2328,
+        "parents_seen": 89041,
+        "relation_negative": 1.0882155069958256e-05,
+        "relation_normalizer": "original proposal slots, not accepted count or weight sum",
+        "relation_pairs_exposed": 610,
+        "relation_positive": 0.0015962865162659678,
+        "relation_weight": 0.1,
+        "sequence_positive": 0.4022748444714977,
+        "wall_seconds": 1395.078105696
+      },
+      "no_collapse": true,
+      "strict_native_reload": true,
+      "full_DNA_preserved": true,
+      "same_new_vectors_and_graph": {
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-GLM/embed/embeddings.npz": {
+          "bytes": 21878882,
+          "sha256": "542b54a59b71a26cc3ef51c682d92c33bcad3ad49fd41fadb9a91f3cfb9e890b"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-GLM/embed/embeddings.json": {
+          "bytes": 1042,
+          "sha256": "3e5b04d7fed25a39c1fa9c03b9bd8c9094b91d9859067762557744c26b2a2562"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-GLM/graph/result/graph.npz": {
+          "bytes": 32199930,
+          "sha256": "255a5781609ef1f39b7e0b3f7a302ee8870e8c30b3a0dd7cd310841c3a6b4fbe"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/E009-GLM/graph/result/graph.json": {
+          "bytes": 2051,
+          "sha256": "44acc8053f402d502558e50e5c0e7a83dffb3df7764c8db33bc19d7c7397d1b5"
+        }
+      }
+    },
+    "oral-noGLM": {
+      "axis": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      },
+      "train_seconds": 6540.2833822170005,
+      "checkpoint": {
+        "bytes": 52811,
+        "sha256": "86c2ce2fbcb11e64253d5302a0b024a6b36052474196fdc6c925158cb96716c6"
+      },
+      "continuation": {
+        "anchor": "fixed_bootstrap_online_eval",
+        "anchor_weight": 0.1,
+        "ema": "bootstrap_stopped_target",
+        "epochs": 20,
+        "learning_rate": 0.0002,
+        "online": "bootstrap_online",
+        "optimizer": "restore_AdamW_moments_and_steps",
+        "predictor": "bootstrap_predictor",
+        "rng": "fresh_seed11_continuation_not_interrupted_resume",
+        "seed": 11,
+        "version": 1
+      },
+      "initial_state": {
+        "anchor": "e469c17e3142e40e45e07e73934d2dc1309fb4a223f3740edc52162342643d6c",
+        "online": "e469c17e3142e40e45e07e73934d2dc1309fb4a223f3740edc52162342643d6c",
+        "predictor": "a4c74eea63d3af7381380a5a44cb42c6f81dd6691c810d10446dd1150a555321",
+        "target": "71a88551300f4107e492ea00033be3a603dd973119db563bc5a0a2106f2cdf6a"
+      },
+      "initial_geometry": {
+        "online": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.45408625197763,
+            "mean_dimension_std": 0.11190542999879952,
+            "mean_other_cosine": 0.16319313599365917,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 30.78207324311416,
+            "mean_dimension_std": 0.10885235580937308,
+            "mean_other_cosine": 0.20546430097014967,
+            "rows": 8192
+          }
+        },
+        "target": {
+          "fused": {
+            "catastrophic_collapse": false,
+            "effective_rank": 33.0601717052009,
+            "mean_dimension_std": 0.11162621855962473,
+            "mean_other_cosine": 0.16744529657419965,
+            "rows": 8192
+          },
+          "sequence": {
+            "catastrophic_collapse": false,
+            "effective_rank": 30.56073337422001,
+            "mean_dimension_std": 0.10828026342234409,
+            "mean_other_cosine": 0.21477897896005557,
+            "rows": 8192
+          }
+        }
+      },
+      "final_history": {
+        "anchor_preservation": 0.005993038993895259,
+        "available_views": 2470549,
+        "composition_reconstruction": 0.36614300647859954,
+        "depth_dropped_views": 772342,
+        "depth_reconstruction": 0.03312825333653063,
+        "ema_updates": 39760,
+        "epoch": 20,
+        "fused_positive": 0.38861103968431837,
+        "geometry": {
+          "online": {
+            "fused": {
+              "catastrophic_collapse": false,
+              "effective_rank": 33.50283477769346,
+              "mean_dimension_std": 0.1120334793779677,
+              "mean_other_cosine": 0.16176396385244876,
+              "rows": 8192
+            },
+            "sequence": {
+              "catastrophic_collapse": false,
+              "effective_rank": 30.256232340848634,
+              "mean_dimension_std": 0.10895217888428291,
+              "mean_other_cosine": 0.20368154069322825,
+              "rows": 8192
+            }
+          },
+          "target": {
+            "fused": {
+              "catastrophic_collapse": false,
+              "effective_rank": 33.22475202518297,
+              "mean_dimension_std": 0.11192532373632452,
+              "mean_other_cosine": 0.16263491803846195,
+              "rows": 8192
+            },
+            "sequence": {
+              "catastrophic_collapse": false,
+              "effective_rank": 30.009782729063986,
+              "mean_dimension_std": 0.10875966663352458,
+              "mean_other_cosine": 0.20582896025640937,
+              "rows": 8192
+            }
+          }
+        },
+        "inherited_ema_updates": 39760,
+        "last_tau": 0.9999999999937568,
+        "loss": 0.9534951741082214,
+        "original_pair_slots": 14786,
+        "parents_seen": 508763,
+        "relation_negative": 6.728821935414804e-06,
+        "relation_normalizer": "original proposal slots, not accepted count or weight sum",
+        "relation_pairs_exposed": 2742,
+        "relation_positive": 0.0021596219690894264,
+        "relation_weight": 0.1,
+        "sequence_positive": 0.389224729715727,
+        "wall_seconds": 6515.758496021
+      },
+      "no_collapse": true,
+      "strict_native_reload": true,
+      "full_DNA_preserved": true,
+      "same_new_vectors_and_graph": {
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/oral-noGLM/embed/embeddings.npz": {
+          "bytes": 185984963,
+          "sha256": "08a4deb436a65711022202fd31568c7d29b95935b806f17bf63d57d921f69b9f"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/oral-noGLM/embed/embeddings.json": {
+          "bytes": 785,
+          "sha256": "3f9c5528cad1339fd03dbe776ad1f8549a64930aa457d3a528a1771687d8b050"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/oral-noGLM/graph/result/graph.npz": {
+          "bytes": 245299204,
+          "sha256": "c5410dba5de8477117238f42f1488972829746a99f4ee79d3f8244fd8d5e4e5b"
+        },
+        "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/work/oral-noGLM/graph/result/graph.json": {
+          "bytes": 5577,
+          "sha256": "96b569a4b866e31304b03d311ec2caf80801ac36b6eaafdcb74107247e80aeef"
+        }
+      }
+    }
+  },
+  "tensor_audit": {
+    "E009-noGLM": {
+      "inherited_updates": 6960,
+      "added_updates": 6960,
+      "optimizer": {
+        "parameters": [
+          {
+            "parameter_id": 0,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 1,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 2,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 3,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 4,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 5,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 6,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 7,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 8,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 9,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 10,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 11,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 12,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 13,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 14,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 15,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 16,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 17,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 18,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 19,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 20,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 21,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 22,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 23,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 24,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 25,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 26,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 27,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 28,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 29,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 30,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 31,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 32,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 33,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 34,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 35,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 36,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 37,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 38,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 39,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 40,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 41,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 42,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 43,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 44,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 45,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 46,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 47,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 48,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 49,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 50,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 51,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 52,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 53,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 54,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 55,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 56,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 57,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 58,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          }
+        ],
+        "delta_histogram": {
+          "6960": 59
+        },
+        "distinct_inherited_steps": [
+          6960
+        ],
+        "distinct_final_steps": [
+          13920
+        ]
+      },
+      "fixed_anchor_exact": true,
+      "complete_modules_and_buffers_restored": true
+    },
+    "E009-GLM": {
+      "inherited_updates": 6960,
+      "added_updates": 6960,
+      "optimizer": {
+        "parameters": [
+          {
+            "parameter_id": 0,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 1,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 2,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 3,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 4,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 5,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 6,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 7,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 8,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 9,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 10,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 11,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 12,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 13,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 14,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 15,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 16,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 17,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 18,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 19,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 20,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 21,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 22,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 23,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 24,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 25,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 26,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 27,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 28,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 29,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 30,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 31,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 32,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 33,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 34,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 35,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 36,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 37,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 38,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 39,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 40,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 41,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 42,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 43,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 44,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 45,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 46,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 47,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 48,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 49,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 50,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 51,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 52,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 53,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 54,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 55,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 56,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 57,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 58,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 59,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 60,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 61,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 62,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 63,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 64,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 65,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 66,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 67,
+            "inherited_step": 6960,
+            "final_step": 13920,
+            "updates": 6960,
+            "originally_lazy": false
+          }
+        ],
+        "delta_histogram": {
+          "6960": 68
+        },
+        "distinct_inherited_steps": [
+          6960
+        ],
+        "distinct_final_steps": [
+          13920
+        ]
+      },
+      "fixed_anchor_exact": true,
+      "complete_modules_and_buffers_restored": true
+    },
+    "oral-noGLM": {
+      "inherited_updates": 39760,
+      "added_updates": 39760,
+      "optimizer": {
+        "parameters": [
+          {
+            "parameter_id": 0,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 1,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 2,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 3,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 4,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 5,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 6,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 7,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 8,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 9,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 10,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 11,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 12,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 13,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 14,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 15,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 16,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 17,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 18,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 19,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 20,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 21,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 22,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 23,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 24,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 25,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 26,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 27,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 28,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 29,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 30,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 31,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 32,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 33,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 34,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 35,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 36,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 37,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 38,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 39,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 40,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 41,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 42,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 43,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 44,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 45,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 46,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 47,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 48,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 49,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 50,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 51,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 52,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 53,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 54,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 55,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 56,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 57,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          },
+          {
+            "parameter_id": 58,
+            "inherited_step": 39760,
+            "final_step": 79520,
+            "updates": 39760,
+            "originally_lazy": false
+          }
+        ],
+        "delta_histogram": {
+          "39760": 59
+        },
+        "distinct_inherited_steps": [
+          39760
+        ],
+        "distinct_final_steps": [
+          79520
+        ]
+      },
+      "fixed_anchor_exact": true,
+      "complete_modules_and_buffers_restored": true
+    }
+  },
+  "readonly_diagnostics": {
+    "admission": {
+      "status": "PASS",
+      "provider_status": "TERMINATED",
+      "last_start": "2026-11-03T03:04:31.738-08:00",
+      "last_stop": "2026-11-03T03:17:16.880-08:00",
+      "archive_and_every_member_verified": true,
+      "review": {
+        "archive": {
+          "bytes": 1754343,
+          "sha256": "d2ffc9ed80a6df9912b93ed0ecfaeef6f561d64a9fa33a7b74a7c9e754b70938"
+        },
+        "generation": "1793704430905884",
+        "members": 85,
+        "logical_bytes": 20539474,
+        "every_member_verified": true,
+        "uri": "gs://dl-binner-archive-167650584170/e031/e031-review-20261103t110412z/learning-review.tar.gz"
+      },
+      "closed_task_journals": {
+        "archive": {
+          "bytes": 1710019,
+          "sha256": "f547f37b85527181d92ed01e084139885e54063da5e97f1deab80d9519112c7f"
+        },
+        "generation": "1793704245241649",
+        "members": 132,
+        "logical_bytes": 10449031,
+        "every_member_verified": true,
+        "uri": "gs://dl-binner-archive-167650584170/e031/e031-review-20261103t110412z/closed-task-journals.tar.gz"
+      },
+      "completion_sha256": "524c10c6b5206ce7f86f641258a33e945dc41948e4c7b0542101a28b391e2576",
+      "actual_review_stages": 8,
+      "all_exits_zero": true,
+      "actual_exit_snapshot_verified": true,
+      "no_science_replayed": true,
+      "failed_Mac_and_setup_preserved": true
+    },
+    "scope": "Only the six new-output frozen readers plus tensor and cached-query inspection",
+    "phase": "e031-review-20261103t110412z",
+    "stages": [
+      {
+        "name": "retained-tensor-audit",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/operations/e031_learning_diagnostics.py",
+            "--config",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/config.json",
+            "--tensor"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 4.6815396650000025,
+          "peak_sampled_rss_bytes": 205090816,
+          "seconds_ceiling": 3165.5566461086273,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 1903,
+          "sampled_cpu_seconds": 2.9,
+          "sampled_average_cpus": 0.6194543264646244,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      {
+        "name": "review-E009-noGLM-learning",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/scripts/e031_review.py",
+            "--base",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/admission",
+            "--staged",
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2",
+            "--unit",
+            "E009-noGLM",
+            "--role",
+            "student",
+            "--comparison",
+            "learning",
+            "--features",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+            "--marker-clean",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+            "--truth-root",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+            "--output",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/outputs/review-E009-noGLM-learning"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 13.378834143999995,
+          "peak_sampled_rss_bytes": 578318336,
+          "seconds_ceiling": 3160.8663642406464,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2060,
+          "sampled_cpu_seconds": 12.65,
+          "sampled_average_cpus": 0.9455233441004383,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      {
+        "name": "review-E009-noGLM-learning-E023",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/scripts/e031_review.py",
+            "--base",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/admission",
+            "--staged",
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2",
+            "--unit",
+            "E009-noGLM",
+            "--role",
+            "student",
+            "--comparison",
+            "learning-E023",
+            "--features",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+            "--marker-clean",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+            "--truth-root",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+            "--output",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/outputs/review-E009-noGLM-learning-E023"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 10.049699084000004,
+          "peak_sampled_rss_bytes": 566296576,
+          "seconds_ceiling": 3147.4774780273438,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2071,
+          "sampled_cpu_seconds": 10.13,
+          "sampled_average_cpus": 1.0079903801426098,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      {
+        "name": "review-E009-GLM-learning",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/scripts/e031_review.py",
+            "--base",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/admission",
+            "--staged",
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2",
+            "--unit",
+            "E009-GLM",
+            "--role",
+            "student",
+            "--comparison",
+            "learning",
+            "--features",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+            "--marker-clean",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+            "--truth-root",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+            "--output",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/outputs/review-E009-GLM-learning"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 12.336034845,
+          "peak_sampled_rss_bytes": 581189632,
+          "seconds_ceiling": 3137.4221494197845,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2079,
+          "sampled_cpu_seconds": 12.54,
+          "sampled_average_cpus": 1.0165340936178264,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      {
+        "name": "review-E009-GLM-learning-E023",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/scripts/e031_review.py",
+            "--base",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/admission",
+            "--staged",
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2",
+            "--unit",
+            "E009-GLM",
+            "--role",
+            "student",
+            "--comparison",
+            "learning-E023",
+            "--features",
+            "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+            "--marker-clean",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e011-cached-grouping-reference/restore-local/candidate/markers/evidence.json",
+            "--truth-root",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+            "--output",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/outputs/review-E009-GLM-learning-E023"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 10.252173436999996,
+          "peak_sampled_rss_bytes": 569393152,
+          "seconds_ceiling": 3125.079814195633,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2085,
+          "sampled_cpu_seconds": 10.28,
+          "sampled_average_cpus": 1.0027142111056742,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      {
+        "name": "review-oral-noGLM-learning",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/scripts/e031_review.py",
+            "--base",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/admission",
+            "--staged",
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2",
+            "--unit",
+            "oral-noGLM",
+            "--role",
+            "student",
+            "--comparison",
+            "learning",
+            "--features",
+            "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+            "--marker-clean",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/inspection-20261019/oral-marker-review.json",
+            "--truth-root",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+            "--output",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/outputs/review-oral-noGLM-learning"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 255.35339095499998,
+          "peak_sampled_rss_bytes": 3583979520,
+          "seconds_ceiling": 3114.8206498622894,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2091,
+          "sampled_cpu_seconds": 252.37,
+          "sampled_average_cpus": 0.9883166190045789,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      {
+        "name": "review-oral-noGLM-learning-E023",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/scripts/e031_review.py",
+            "--base",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/admission",
+            "--staged",
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2",
+            "--unit",
+            "oral-noGLM",
+            "--role",
+            "student",
+            "--comparison",
+            "learning-E023",
+            "--features",
+            "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+            "--marker-clean",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/inspection-20261019/oral-marker-review.json",
+            "--truth-root",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/view/artifacts/e014-multiview-reconstruction/oral-truth-origin-v1",
+            "--output",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/outputs/review-oral-noGLM-learning-E023"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 178.929200595,
+          "peak_sampled_rss_bytes": 4410937344,
+          "seconds_ceiling": 2859.4608912467957,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2270,
+          "sampled_cpu_seconds": 179.17,
+          "sampled_average_cpus": 1.0013457803656376,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      },
+      {
+        "name": "matched-new-queries",
+        "resources": {
+          "command": [
+            "/srv/dl_binner/experiments/e031/bridge-20261102T130813Z-31962f8/learning-20261102T200852Z-ba65911-r2/env/bin/python",
+            "-I",
+            "-B",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/operations/e031_learning_diagnostics.py",
+            "--config",
+            "/srv/dl_binner/experiments/e031/e031-review-20261103t110412z/config.json",
+            "--neighbors"
+          ],
+          "exit_code": 0,
+          "stop_reason": null,
+          "wall_seconds": 19.798472961000016,
+          "peak_sampled_rss_bytes": 1826365440,
+          "seconds_ceiling": 2680.526141643524,
+          "rss_bytes_ceiling": 8000000000,
+          "launched_pid": 2411,
+          "sampled_cpu_seconds": 20.02,
+          "sampled_average_cpus": 1.0111890972317086,
+          "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+          "sample_includes_coordinator": false
+        }
+      }
+    ],
+    "total_serial_wall_seconds": 504.779345686,
+    "peak_sampled_RSS_bytes": 4410937344,
+    "original_review_deadline": "2026-11-03T12:01:09.506701+00:00",
+    "first_cumulative_learner_clock_preserved": true,
+    "initial_unreleased_source_commit_field_failure_preserved": true
+  },
+  "local_populations": {
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e031-bootstrap-preserving-learning/preparation/env-r5/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e031_learning_populations.py",
+        "--base",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/summary/coverage-populations.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 22.804845067992574,
+      "peak_sampled_rss_bytes": 605294592,
+      "seconds_ceiling": 1642.7440071105957,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 20915,
+      "sampled_cpu_seconds": 20.89,
+      "sampled_average_cpus": 0.9160334103440094,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "original_review_deadline_epoch": 1793707269.506701,
+    "local_filesystem_observations": [
+      {
+        "monotonic": 220248.563618108,
+        "used": 492309250048,
+        "free": 7653924864,
+        "growth": 8192
+      },
+      {
+        "monotonic": 220250.649211213,
+        "used": 492309274624,
+        "free": 7653900288,
+        "growth": 32768
+      },
+      {
+        "monotonic": 220252.738371632,
+        "used": 492309291008,
+        "free": 7653883904,
+        "growth": 49152
+      },
+      {
+        "monotonic": 220254.827282878,
+        "used": 492309336064,
+        "free": 7653838848,
+        "growth": 94208
+      },
+      {
+        "monotonic": 220256.917498825,
+        "used": 492309336064,
+        "free": 7653838848,
+        "growth": 94208
+      },
+      {
+        "monotonic": 220258.98846742,
+        "used": 493383925760,
+        "free": 6579249152,
+        "growth": 1074683904
+      },
+      {
+        "monotonic": 220261.094793622,
+        "used": 493384359936,
+        "free": 6578814976,
+        "growth": 1075118080
+      },
+      {
+        "monotonic": 220263.178874228,
+        "used": 493384343552,
+        "free": 6578831360,
+        "growth": 1075101696
+      },
+      {
+        "monotonic": 220265.262938783,
+        "used": 493384409088,
+        "free": 6578765824,
+        "growth": 1075167232
+      },
+      {
+        "monotonic": 220267.353714375,
+        "used": 493384458240,
+        "free": 6578716672,
+        "growth": 1075216384
+      },
+      {
+        "monotonic": 220269.432782417,
+        "used": 493384462336,
+        "free": 6578712576,
+        "growth": 1075220480
+      }
+    ]
+  },
+  "failed_original_Mac_allclose_and_storage_journals_preserved": true,
+  "original_Mac_tolerance_changed": false,
+  "baselines_refit_or_rescored": false,
+  "task_disk_released_after_full_science_member_journal_and_diagnostic_backup": true,
+  "current_original_CPU": "TERMINATED",
+  "current_disks_GiB": [
+    30,
+    300
+  ],
+  "temporary_task_and_GPU_disks_deleted": true,
+  "GPU_qualification": "NOT_RUN_CAPACITY_BLOCKED",
+  "new_storage_approval": "storage-20261104-admission.json",
+  "original_scientific_clocks_and_November4_scope_not_rewritten": true,
+  "evidence": {
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/admission.json": {
+      "bytes": 21701,
+      "sha256": "f69439386fda634514a1333622d38c5b2b3e6d5341aba0cedb49981bfe063291"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/inventory.json": {
+      "bytes": 432412,
+      "sha256": "4938fa080d1e5be90e59ce1068a5a5a3f580369fa672e4d186cc573a4ee80eef"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/completion.json": {
+      "bytes": 11564,
+      "sha256": "a9b0eb91564bfc6ffc8821f102821b14ed4ed2664a425043b7c7d1264b5bcef6"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/download-verification.json": {
+      "bytes": 753,
+      "sha256": "a3b18da869efaa0983c569cc9c7a1f6ccc05a64c9e76178e2639fe68660bedcf"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/native-review-admission.json": {
+      "bytes": 1238,
+      "sha256": "06d3d09d5225a4425da7ce8d9ad4dddeadf1e09eb322fd32edc0c8af1726d4dc"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/task-disk-release-audit.json": {
+      "bytes": 1430,
+      "sha256": "10110e32b3cf678b82f7da13faa263522a36fa67d566718e46515ca64ca68e3e"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/scratch-release.json": {
+      "bytes": 1927,
+      "sha256": "1ce0337e277fecab194d2f402ded2524442b54d5110bca473f596ec62465d992"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/gpu-once/closed.json": {
+      "bytes": 705,
+      "sha256": "ef233e56bb15405e6d87e6727df7ca496ab5c0863da1bd042e6ff550782952f4"
+    },
+    "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/final-control/provider.json": {
+      "bytes": 33096,
+      "sha256": "a406b2708ae85317d64d20b6254eb032d4e10e4ebb3f06ff92815b528782f48c"
+    }
+  },
+  "final_completion_upload_exit": {
+    "exit_code": 0,
+    "stop_reason": null,
+    "closed_tail_receipt": "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/closed-task-journals/learning/phase-logs/upload-completion.exit.json",
+    "separate_from_13_completion_listed_stages": true
+  },
+  "member_count_semantics": {
+    "main_regular_members_include_inventory": true,
+    "compact_review_payload_members": 85,
+    "compact_review_inventory_members": 1,
+    "closed_journal_payload_members": 132,
+    "closed_journal_inventory_members": 1,
+    "all_inventory_and_payload_bytes_verified": true
+  }
+}

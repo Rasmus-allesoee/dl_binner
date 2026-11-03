@@ -468,6 +468,10 @@ Distinguish immutable commands/receipts from evolving progress pointers. Use a
 unique immutable name for each stage, or an explicitly tested atomic replacement
 for a disposable pointer. Exercise at least two successive updates on the actual
 writer path; an exclusive publisher that succeeds once cannot update that name.
+Validate the complete producer/consumer configuration schema, including scientific
+and operational source identities and recovery clocks, before a cost-bearing start
+and again before starting the held service. Compiling a rendered program alone
+does not test that its producer supplies every required field.
 Keep raw object bytes separate from CLI result formatting. A formatted command
 can append report data to a downloaded JSON document. Check the exact object
 generation, byte count and digest before treating a local parsing failure as
@@ -522,6 +526,9 @@ generation, bindings and release receipt, all extracted required inputs, results
 and journals. Never substitute deletion of unique science for storage planning.
 Build compact backups from closed artifacts. Exclude the packer's live supervisor
 logs from its input inventory and publish its delivery receipts after verification.
+An earlier science archive cannot contain later delivery journals. Verify and
+preserve that closed tail, including the final completion-upload exit, before
+releasing a temporary disk.
 
 Remote scientific commands, including direct SSH runs, must automatically capture
 terminal output to a log file; this also applies to any remaining owner-run command. Request the resulting file instead of asking the owner to copy terminal text. For long native steps, also expose timestamped stage progress and periodic heartbeats to the terminal or a dedicated progress log. Preserve the detailed per-tool logs and command provenance; progress is not a replacement for them. Use Snakemake per-rule `benchmark:` and `--benchmark-extended` for new substantial rules when useful, without rerunning accepted work solely to obtain measurements. Keep sampled process CPU/RAM metrics distinct from charged allocated vCPU-hours.
