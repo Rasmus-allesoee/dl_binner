@@ -1,5 +1,21 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E032 cached common policy; measurement confounding remains, November 3
+
+The owner authorizes [E032](../../experiments/E032-biological-candidate-selection/OPERATIONS.md)
+to compare a common biological candidate policy on fixed E031 learning in three
+modes, plus one separate T4 qualification. No external campaign, training,
+confirmation, new reads/mapping or changed community depth is added. Retain all
+stronger references and all DNA/denominators/ambiguity populations.
+
+[The new audit](../evidence/2026-11-03-depth-and-standalone-candidate-audit.md)
+confirms that matching StrobeAlign versions did not mean matching coverage filters.
+Retained unfiltered Oral BAMs permit a future shared summary after sorting; the
+zero-depth change and its recovery effect remain unmeasured. Preserve original
+tables. This confounding limits dataset-only explanations, without invalidating
+within-dataset fixed-cache controls. New measurement/representation work needs
+prospective exposure, truth and resource admission; skin stays unscored.
+
 ## E031 completed learning and common-construction priority, November 3
 
 [The reviewed paired result](../evidence/2026-11-03-e031-learning-and-recovery-priority.md)

@@ -1,0 +1,22 @@
+{
+  "archive": {
+    "uri": "gs://dl-binner-archive-167650584170/e031/learning-20261102T200852Z-ba65911-r2/e031-evidence.tar.gz",
+    "binding": {
+      "bytes": 2101954568,
+      "sha256": "d4ce1d15ad8f7c2443863a6c42805ddd419a6034c861b22a586b7659b9db47ec"
+    }
+  },
+  "metadata": {
+    "size": 2101954568,
+    "generation": "1793668697775852",
+    "md5_hash": "ErbtjjJrgXm14WLnciCA8w=="
+  },
+  "inventory": {
+    "bytes": 432412,
+    "sha256": "4938fa080d1e5be90e59ce1068a5a5a3f580369fa672e4d186cc573a4ee80eef"
+  },
+  "reserve_bytes": 26843545600,
+  "original_physical_members": 1913,
+  "omitted_work_members": 0,
+  "all_original_members_must_pass": true
+}

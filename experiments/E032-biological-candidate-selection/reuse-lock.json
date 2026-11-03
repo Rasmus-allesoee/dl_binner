@@ -1,0 +1,93 @@
+{
+  "axes": {
+    "E009-noGLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "E009-GLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "oral-noGLM": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ]
+    }
+  },
+  "external_files": {
+    "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.json": {
+      "bytes": 1103,
+      "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+      "bytes": 42384557,
+      "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna": {
+      "bytes": 1757466319,
+      "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json": {
+      "bytes": 26815264,
+      "sha256": "e8d44c1dc18ea9f55e70548fb4de01581c4639834e87db720134e43c2127b8f1"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json": {
+      "bytes": 1301132,
+      "sha256": "035d88e159a8c6aa29580c4fec28a3f0c470e553f97a0f9a9d04cf6a76b44c05"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.json": {
+      "bytes": 852,
+      "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz": {
+      "bytes": 338210613,
+      "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+    }
+  },
+  "native_dependency_base": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+  "native_runtime_reference": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+  "immutable_scientific_source": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+  "deleted_task_environment_not_reused": true
+}

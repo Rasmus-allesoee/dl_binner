@@ -1,0 +1,65 @@
+"""Explicit barriers serialize the three fixed-learning E032 consumers."""
+import json
+from pathlib import Path
+plan_path=Path(config['plan'])
+p=json.loads(plan_path.read_text())
+engineering=' --engineering' if str(config.get('engineering','false')).lower()=='true' else ''
+worker=p['worker'];python=p['python']
+
+rule all:
+    input: 'oral-noGLM/audit/done.json'
+
+rule barrier:
+    output: 'barrier/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    benchmark: 'benchmarks/barrier.tsv'
+    shell: '{python:q} -I -B {worker:q} --plan {plan_path:q}{engineering} --stage barrier'
+
+rule E009_noGLM_select:
+    input: 'barrier/done.json'
+    output: 'E009-noGLM/select/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    benchmark: 'benchmarks/E009-noGLM-select.tsv'
+    shell: '{python:q} -I -B {worker:q} --plan {plan_path:q}{engineering} --stage select --unit E009-noGLM'
+
+rule E009_noGLM_audit:
+    input: 'E009-noGLM/select/done.json'
+    output: 'E009-noGLM/audit/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    benchmark: 'benchmarks/E009-noGLM-audit.tsv'
+    shell: '{python:q} -I -B {worker:q} --plan {plan_path:q}{engineering} --stage audit --unit E009-noGLM'
+
+rule E009_GLM_select:
+    input: 'E009-noGLM/audit/done.json'
+    output: 'E009-GLM/select/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    benchmark: 'benchmarks/E009-GLM-select.tsv'
+    shell: '{python:q} -I -B {worker:q} --plan {plan_path:q}{engineering} --stage select --unit E009-GLM'
+
+rule E009_GLM_audit:
+    input: 'E009-GLM/select/done.json'
+    output: 'E009-GLM/audit/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    benchmark: 'benchmarks/E009-GLM-audit.tsv'
+    shell: '{python:q} -I -B {worker:q} --plan {plan_path:q}{engineering} --stage audit --unit E009-GLM'
+
+rule oral_noGLM_select:
+    input: 'E009-GLM/audit/done.json'
+    output: 'oral-noGLM/select/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    benchmark: 'benchmarks/oral-noGLM-select.tsv'
+    shell: '{python:q} -I -B {worker:q} --plan {plan_path:q}{engineering} --stage select --unit oral-noGLM'
+
+rule oral_noGLM_audit:
+    input: 'oral-noGLM/select/done.json'
+    output: 'oral-noGLM/audit/done.json'
+    threads: 4
+    resources: mem_mb=26000
+    benchmark: 'benchmarks/oral-noGLM-audit.tsv'
+    shell: '{python:q} -I -B {worker:q} --plan {plan_path:q}{engineering} --stage audit --unit oral-noGLM'

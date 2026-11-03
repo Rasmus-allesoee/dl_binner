@@ -319,6 +319,11 @@ retaining the original competitive mapping/filter semantics. Remapping against a
 reduced reference can change placements and MAPQ; sliced full-reference summaries
 are not that treatment. A contig mean cannot reconstruct per-base/window coverage,
 breadth, variance or new alignment filters without suitable retained alignments.
+Matching mapper versions does not establish matching depth measurements. Bind
+read flags, MAPQ/base quality, identity, edge/overlap rules and mean/variance
+denominators separately. Audit the actual pinned summarizer: disabling a variance
+output can also change its mean calculation. A shared re-summary is a prospective
+information treatment, not permission to overwrite accepted feature caches.
 
 Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution. One assembly can still use many read/BAM samples: per-base coverage storage scales with covered assembly bases times BAM count, while multiple assemblies multiply whole run directories. Audit persistent candidates, checkpoints and temporary coexistence before claiming that a smaller epoch count bounds peak disk use.
 

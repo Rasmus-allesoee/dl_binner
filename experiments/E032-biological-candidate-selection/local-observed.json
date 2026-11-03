@@ -1,0 +1,140 @@
+{
+  "status": "PASS_LOCAL_ENGINEERING_NATIVE_PENDING",
+  "checked_UTC": "2026-11-03T19:39:22.440239+00:00",
+  "installed_wheel": {
+    "bytes": 222296,
+    "sha256": "55993df0b65fc2e9126737e6f77242d26758e6d1fb950e6d45f0dcbd2ce8f107"
+  },
+  "actual_selection_unit_tests": 7,
+  "actual_operational_tests": 5,
+  "actual_real_tiny_serial_DAG": {
+    "status": "PASS",
+    "actual_events": [
+      "barrier",
+      "E009_noGLM_select",
+      "E009_noGLM_audit",
+      "E009_GLM_select",
+      "E009_GLM_audit",
+      "oral_noGLM_select",
+      "oral_noGLM_audit"
+    ],
+    "no_overlap": true,
+    "resume_noop": true
+  },
+  "actual_real_new_review_reader_modes": [
+    "E009-noGLM",
+    "E009-GLM",
+    "oral-noGLM"
+  ],
+  "tiny_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/preparation/env-r3/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e032_tiny.py",
+      "--root",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/preparation/tiny-dag-r4",
+      "--workflow-python",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 32.66507822199492,
+    "peak_sampled_rss_bytes": 313819136,
+    "seconds_ceiling": 300,
+    "rss_bytes_ceiling": 2000000000,
+    "launched_pid": 41455,
+    "sampled_cpu_seconds": 28.419999999999998,
+    "sampled_average_cpus": 0.870042306553042,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": false
+  },
+  "scale_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/preparation/env-r3/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e032_scale.py",
+      "--output",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/preparation/scale-r4.json"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 8.330859236011747,
+    "peak_sampled_rss_bytes": 459071488,
+    "seconds_ceiling": 300,
+    "rss_bytes_ceiling": 2000000000,
+    "launched_pid": 41633,
+    "sampled_cpu_seconds": 7.01,
+    "sampled_average_cpus": 0.8414498194493458,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": false
+  },
+  "synthetic_scale": {
+    "status": "PASS",
+    "rows": 32768,
+    "candidates": 65532,
+    "wall_seconds": 6.430598842998734,
+    "shared_membership_entries": 65536,
+    "shared_membership_bytes": 1572880,
+    "no_ancestor_leaf_lists": true,
+    "synthetic_only": true,
+    "community_forecast_not_measured": true
+  },
+  "synthetic": [
+    "generated 64-contig DNA/model vectors and physical marker calls",
+    "32768-row synthetic forests/contexts",
+    "review external-admission fields are fixtures only"
+  ],
+  "actual": [
+    "installed wheel consumers",
+    "mixed int32/int64 cache widths",
+    "NPZ/forest and opaque-ID readers",
+    "whole/child/residual and marker-negative paths",
+    "positive/zero/missing context",
+    "joint group accept/refuse",
+    "complete pre/post export and reload",
+    "7 actual serial rule events and verified no-op",
+    "exact physical-member/alias pack/reader",
+    "complete rendered configuration/host/release checks"
+  ],
+  "preserved_failures": [
+    {
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/preparation/tiny-r1.log",
+      "cause": "Actual retained cache integer width unification; fixed in-memory index cast, no vector/tolerance change"
+    },
+    {
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/preparation/tiny-dag-r1/dag-first.log",
+      "cause": "Tiny producer omitted retained embed/graph layout; fixed producer, passed real DAG"
+    },
+    {
+      "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/preparation/tiny-dag-r3.exit.json",
+      "cause": "Sandbox refused read-only ps monitor before successful test; explicit permitted process sampling then passed"
+    }
+  ],
+  "no_community_outcomes": true,
+  "no_training_or_marker_detection": true,
+  "cloud_execution_not_inferred": true,
+  "original_Mac_portability_tolerance_unchanged": true,
+  "frozen_scientific_identity_separate_from_operational_recovery": true,
+  "final_full_DAG_and_review_contract": "artifacts/e032-biological-candidate-selection/preparation/tiny-final/completed.json",
+  "final_frozen_adapter_validation": {
+    "status": "PASS",
+    "serial_DAG": [
+      "barrier",
+      "E009_noGLM_select",
+      "E009_noGLM_audit",
+      "E009_GLM_select",
+      "E009_GLM_audit",
+      "oral_noGLM_select",
+      "oral_noGLM_audit"
+    ],
+    "new_review_contracts": [
+      "E009-noGLM",
+      "E009-GLM",
+      "oral-noGLM"
+    ],
+    "cloud_admission_fixture_only": true,
+    "truth_scored": false
+  }
+}

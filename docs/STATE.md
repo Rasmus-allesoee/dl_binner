@@ -2,6 +2,31 @@
 
 Updated: November 3, 2026 (Copenhagen). This is the single current handoff.
 
+## E032 common constructor authorized; E031 learning remains fixed
+
+The owner invokes E031 at `1ea748a` for [E032](../experiments/E032-biological-candidate-selection/README.md):
+one generic biological candidate-selection/joint-recruitment policy across all
+three fixed E031 modes, new $6 cached CPU comparison and separate $3 single T4
+qualification. No training, depth re-summary, new neighbors, marker detection,
+external tool or confirmation acquisition. [Design](../experiments/E032-biological-candidate-selection/design.md)
+and [operations](../experiments/E032-biological-candidate-selection/OPERATIONS.md)
+own the prospective score, full-DNA paths, actual gate tests and execution boundary.
+Use branch `biological-candidate-selection`; preserve owner E031 operations edits.
+Native execution requires fresh complete gates and a new clean source receipt;
+local passing contracts are not community results or a live VM observation.
+
+[The depth/standalone audit](evidence/2026-11-03-depth-and-standalone-candidate-audit.md)
+confirms differently filtered E009/Oral means and reusable unfiltered Oral BAMs.
+The zero-depth counterfactual remains unmeasured. Keep E032 caches fixed; a common
+JGI/variance/breadth/window/link treatment belongs to a subsequent coherent
+information/representation block, not silent remeasurement. Standalone candidate
+integration provides precedent, not transfer evidence or permission for endless
+selector tuning. Efficient Oral GLM and unscored skin admissions remain.
+
+The November 4–11 storage-only approval and November 18 automatic-tail ceiling
+remain. No further retention extension follows from the new compute budgets.
+The E031 closed outcome below is preserved accepted development evidence.
+
 ## E031 learner completed/reviewed; one common constructor is next
 
 [Independent inspection](../experiments/E031-bootstrap-preserving-learning/learning-inspection-observed.json)

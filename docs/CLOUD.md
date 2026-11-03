@@ -1,5 +1,25 @@
 # Google Cloud workspace operations
 
+## November 3 E032 authorized cached scope and one T4 qualification
+
+The owner invokes [E032 operations](../experiments/E032-biological-candidate-selection/OPERATIONS.md):
+new $6 / eight cumulative hours / 8.25-hour STOP on the existing E2, plus one
+separate $3 / 90-minute / 105-minute STOP n1-standard-8 + T4 in us-central1-f.
+No capacity loop, full Oral extraction or new training. The CPU rule keeps every
+accepted feature/vector/graph/marker byte fixed. A single 40 GiB balanced task
+disk is explicitly allowed if verified cleanup/headroom is insufficient. T4 uses
+40/64 GiB standard disks and existing quotas. Original disks are protected;
+preserve unique stopped evidence until collection verification.
+
+Signed-in Billing and API/Catalog/all-version checks are refreshed in private
+E032 admission records before starts. Source history still contains private
+financial/account information, so private exact-commit transport is the admitted
+fallback; no public push/write deploy key. Fresh current-boot/process watcher
+tests and independent provider STOP precede release. Existing storage approval
+ends November 11 at 00:00 Copenhagen, with at most $0.50 automatic tail through
+November 18. New temporary disk lifetimes belong in E032's cost envelopes; no
+retention renewal is implied. E032 native receipts own actual release/status.
+
 ## November 3 E031 closed; original CPU stopped, temporary resources released
 
 [Closed inspection](../experiments/E031-bootstrap-preserving-learning/learning-inspection-observed.json)

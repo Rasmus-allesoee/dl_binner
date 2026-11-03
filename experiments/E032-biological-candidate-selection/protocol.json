@@ -1,0 +1,36 @@
+{
+  "status": "PROSPECTIVE_NO_E032_OUTCOMES",
+  "same_policy_all_modes": true,
+  "learning": "E031 fixed; no model/RNG/view/graph/marker/depth change",
+  "partitions": [
+    "pre",
+    "post"
+  ],
+  "primary": "frozen full-reference weighted R95 and T90",
+  "denominators": {
+    "E009_targets": 156,
+    "oral_targets": 799,
+    "E009_N_quarantine_fraction": 0.033034
+  },
+  "anchors": {
+    "E009-noGLM": {
+      "R95": 0.10611002136815277,
+      "T90": 10
+    },
+    "E009-GLM": {
+      "R95": 0.10568366072527535,
+      "T90": 9
+    },
+    "oral-noGLM": {
+      "R95": 0.11327219899243329,
+      "T90": 56
+    }
+  },
+  "KEEP": "No R95/T90 loss in any mode against stronger retained E031 constructor; >=0.5 percentage point gain in at least one",
+  "MODIFY": "Useful gain with trade-off or smaller improvement",
+  "ABANDON": "No mode improves R95, or >=1 point loss without >=0.5 point gain elsewhere",
+  "failure": "NOT_ASSESSED when operational/integrity gates fail",
+  "truth_not_used_for_selection": true,
+  "skin_unscored": true,
+  "depth_harmonization_not_this_treatment": true
+}

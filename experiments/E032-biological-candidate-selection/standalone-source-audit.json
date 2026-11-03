@@ -1,0 +1,235 @@
+{
+  "status": "SOURCE_INSPECTED_NOT_EXECUTED",
+  "tools": {
+    "metabat": {
+      "commit": "8eb96023ef627d1955c05e3aca348c84b8757914",
+      "origin": "https://bitbucket.org/berkeleylab/metabat.git",
+      "source_files": {
+        "src/jgi_summarize_bam_contig_depths.cpp": {
+          "bytes": 54988,
+          "sha256": "5f5b1205062f9a63a0b4a3f43d526bbb09fbb75340e5e46680df9b3f23b05eae"
+        },
+        "src/jgi_summarize_bam_contig_depths.h": {
+          "bytes": 37872,
+          "sha256": "e2bd05a1d3d1b0f7fd52dfdffc1ed489358bb35a68ce9b005085539753d3c089"
+        },
+        "src/BamUtils.h": {
+          "bytes": 32090,
+          "sha256": "9e3d3fc1e3a71b408a86d2617162a448383948886f789ed15027de2a4ff69442"
+        }
+      },
+      "execution": false
+    },
+    "COMEBin": {
+      "commit": "1b476a41fac893294c70212a869573a732560ce5",
+      "origin": "https://github.com/ziyewang/COMEBin.git",
+      "source_files": {
+        "COMEBin/get_final_result.py": {
+          "bytes": 11884,
+          "sha256": "a6e899d23cbfc7836eaa27968511e8b9b788daa39245a162df42ea61258d01ea"
+        },
+        "COMEBin/data_aug/gen_cov.py": {
+          "bytes": 11769,
+          "sha256": "7d84b06ffd0e503c1e03f1a94811809643b8935c48970ef839bbac1896a540e4"
+        }
+      },
+      "execution": false
+    },
+    "SemiBin": {
+      "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+      "origin": "https://github.com/BigDataBiology/SemiBin.git",
+      "source_files": {
+        "SemiBin/cluster.py": {
+          "bytes": 13700,
+          "sha256": "473f4c488c3f2c79c54003336b96ffc2d013eee35de110947234d4d5cf639a00"
+        },
+        "SemiBin/long_read_cluster.py": {
+          "bytes": 6463,
+          "sha256": "9a9507764a5892ee5f465e789f20248174688a94ca68e71f370b00e14ccc567b"
+        },
+        "SemiBin/generate_coverage.py": {
+          "bytes": 9089,
+          "sha256": "0a040f8517aae06084ad6a73aeb7bd15332a55d0dadfe3681fc93a7c46d712be"
+        }
+      },
+      "execution": false
+    },
+    "CompleteBin": {
+      "commit": "07c5649270646a29dc027d6234d66b048fed6d45",
+      "origin": "https://github.com/zoubohao/CompleteBin.git",
+      "source_files": {
+        "CompleteBin/combine_cluster_derep.py": {
+          "bytes": 4445,
+          "sha256": "369f70ecd31a657acdbc15ec2b9e04e372cf80310e9307057c2d078b70a815f0"
+        },
+        "CompleteBin/Seqs/seq_utils.py": {
+          "bytes": 13156,
+          "sha256": "196858ca9e8dcd64bfa6422a736413231887cad36bc29a3f962a1ca85a4abd36"
+        },
+        "CompleteBin/Cluster/cluster.py": {
+          "bytes": 2395,
+          "sha256": "0654a0bf420b73185553cd199e774c4ad03360a25e575fde5dd5b3df77fc1c48"
+        },
+        "CompleteBin/Dereplication/galah_utils.py": {
+          "bytes": 21647,
+          "sha256": "556e5ad15ccc0ed8c0d1db1b657a1c53413519fe23bf82efa1ae4cbca56f5fee"
+        }
+      },
+      "execution": false
+    },
+    "SCGBinner": {
+      "commit": "d5ad239af9a1445f0e454c4d4aa9307b922961a9",
+      "origin": "https://github.com/htaohan/SCGBinner.git",
+      "source_files": {
+        "SCGBinner/get_final_result.py": {
+          "bytes": 23404,
+          "sha256": "ba816e224f60234c2bca1af9567b2771164e64ea308b19f30f14a3ff36807fd6"
+        },
+        "SCGBinner/cluster.py": {
+          "bytes": 16437,
+          "sha256": "2bf4e5f41bf52eae40370106abc1494dfb7b559d5faca5680805462fae7dc368"
+        },
+        "SCGBinner/get_augfeature.py": {
+          "bytes": 5912,
+          "sha256": "e7920486f14e364827a6ce59e61194cfacefdb2384b255a1b2e6cdb6e0639e2e"
+        }
+      },
+      "execution": false
+    },
+    "dcvbin": {
+      "commit": "732ee4257f7da200994f4c105e9dacbc74242883",
+      "origin": "https://github.com/dengdengf/dcvbin.git",
+      "source_files": {
+        "bin/my_method.sh": {
+          "bytes": 6875,
+          "sha256": "f442c72159de050c75815f15696a70730792620cf3328fabadfc1e0e3ce72360"
+        },
+        "scripts/myCluster_2.py": {
+          "bytes": 5084,
+          "sha256": "e006d36b1fa3bf13a15294703d40fef056f09daf8ef5e204554b017c1e06e0bb"
+        },
+        "myvae/mainfiles/parsebam.py": {
+          "bytes": 8131,
+          "sha256": "016ba23a76b26fcc6145c03373be5a1588d7b38d91541c091f96fa6a54698e11"
+        }
+      },
+      "execution": false
+    },
+    "vamb": {
+      "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+      "origin": "https://github.com/RasmussenLab/vamb.git",
+      "source_files": {
+        "vamb/parsebam.py": {
+          "bytes": 11396,
+          "sha256": "f58378d049cadc275185ff0da39afb62ba2322d2abfca9b5f0c2b50fcd8cf15a"
+        },
+        "vamb/reclustering.py": {
+          "bytes": 11767,
+          "sha256": "bb2eb656a4ab2de5982f84dd02bce90f9e7a85771514e2906bb23d9b4c10f42d"
+        },
+        "vamb/cluster.py": {
+          "bytes": 25211,
+          "sha256": "d603712e70303761d922e21cd0949e0b81d52dd5af25ea55542f3d799acaabb5"
+        }
+      },
+      "execution": false
+    },
+    "metabat-v2.18": {
+      "commit": "a51200652a8907629b83d63fa5fa6c2f6612d105",
+      "source_files": {
+        "src/jgi_summarize_bam_contig_depths.cpp": {
+          "bytes": 49120,
+          "sha256": "b2df41ad835be7b8d4eef7ef7a780853db66ecb5f8281defcd8fa00da21f3115"
+        },
+        "src/jgi_summarize_bam_contig_depths.h": {
+          "bytes": 33713,
+          "sha256": "eae6a6d62259ed56511c7c5a8faf72d92c82cf7767d625376a80b82d1a930460"
+        },
+        "src/BamUtils.h": {
+          "bytes": 30467,
+          "sha256": "bf6856912d303b2c0c0e1f4143e7619b979a4a98151f20d63f7dee45659d2d5a"
+        }
+      },
+      "execution": false
+    }
+  },
+  "dirty_model_and_OS_cache_changes_not_executed": true,
+  "owner_note": {
+    "bytes": 1919,
+    "sha256": "a94758a532a493927b348951d9ba4f2f61a4bb27ca3c14257610ee6d3249b65a"
+  },
+  "current_Oral_BAM_metadata": [
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/13.bam",
+      "generation": "1793156917863678",
+      "size": "5372781844",
+      "crc32c": "qnBmgQ==",
+      "md5Hash": "khIBqZ5vR7gDeiNqSACGvA=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/14.bam",
+      "generation": "1793161906439769",
+      "size": "5374000577",
+      "crc32c": "i5B5ng==",
+      "md5Hash": "eAYiA18nTDH+oiui54lRvw=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/15.bam",
+      "generation": "1793166488709776",
+      "size": "5375247977",
+      "crc32c": "NakfBA==",
+      "md5Hash": "UIUBrL2CU4Jy5UlAExNv0g=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/16.bam",
+      "generation": "1793170520065863",
+      "size": "5377775568",
+      "crc32c": "0HJmaA==",
+      "md5Hash": "4fVfJ+YbkObBxBAThdWzLA=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/17.bam",
+      "generation": "1793174658758641",
+      "size": "5382206481",
+      "crc32c": "2OODzw==",
+      "md5Hash": "RmWyRZbPgGaZ4xonJYyTLw=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/18.bam",
+      "generation": "1793178744515354",
+      "size": "5383660753",
+      "crc32c": "KGUdVQ==",
+      "md5Hash": "ltSS9+8wzFN8QJ1EUy2RTQ=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/19.bam",
+      "generation": "1793182501373127",
+      "size": "5372078215",
+      "crc32c": "spxgFA==",
+      "md5Hash": "wIFa7mhmXyn550XXulUsSw=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/6.bam",
+      "generation": "1793142207875345",
+      "size": "5373737424",
+      "crc32c": "2qT/XQ==",
+      "md5Hash": "A5oo3A9ELuc4Cj7D0MKFwg=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/7.bam",
+      "generation": "1793146706252698",
+      "size": "5362705531",
+      "crc32c": "eFDeGQ==",
+      "md5Hash": "hKIIV+ZgCc2bs90148Rh5A=="
+    },
+    {
+      "name": "e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/8.bam",
+      "generation": "1793151537637016",
+      "size": "5370590181",
+      "crc32c": "Mu2wdQ==",
+      "md5Hash": "NuzYmL5HvKZmdkZoVNRNlw=="
+    }
+  ],
+  "current_Oral_BAM_bytes": 53744784551,
+  "new_payload_decode_or_coverage": false
+}

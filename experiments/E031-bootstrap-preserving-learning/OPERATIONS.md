@@ -600,7 +600,7 @@ Debug operational errors with preserved journals and verified reuse inside the
 same recorded scope; do not replay accepted science. Follow short work through
 collection, independent shutdown and bounded frozen review. For healthy long work,
 verify supervision/progress, wait a few minutes and hand off without polling to
-completion. On failure, collect bounded evidence, stop and report what passed.
+completion. On failure, collect bounded evidence and report what passed.
 
 In parallel I authorize a separate **new $3 single T4 qualification**, using the
 already prepared `ec7ff25` source/model/runtime/exact 128-view cohort, one
@@ -640,4 +640,4 @@ neither a compute envelope nor low storage price silently renews it.
 
 Update records and durable guidance, run relevant checks and commit with
 structured what changed/why. Report the actual candidate, results/limits, costs/
-resources, T4 qualification or precise blocker, one next decision and exact prompt.
+resources, T4 qualification or precise blocker, one next stongest decision and exact prompt.

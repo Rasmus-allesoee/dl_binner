@@ -1,5 +1,25 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E032 common selection and broader information priority, November 3
+
+The owner authorizes [E032](../../experiments/E032-biological-candidate-selection/design.md)
+with E031 learning fixed: common source-blind whole/child/residual selection and
+joint bin-level recruitment acceptance across all three modes. Standalone source
+inspection supports candidate selection as a general binner component, without
+validating this proxy or transfer. No dataset routing, truth-selected bins, grid,
+new learning/markers/retrieval. Keep all stronger references and failed criteria.
+This is one bounded coherent block, not indefinite selector tuning.
+
+[The measurement audit](../evidence/2026-11-03-depth-and-standalone-candidate-audit.md)
+identifies differing E009/Oral MAPQ/flag rules and reusable unfiltered Oral BAMs.
+The causal contribution/zero counterfactual remain unmeasured. Do not silently
+harmonize E032 features. Provisionally prioritize a coherent common BAM-derived
+multiscale information/representation block next if the gap persists, including
+measurement consistency and genuine window/uncertainty contracts. Efficient
+frozen GLM is complementary; a larger Transformer alone does not add missing
+measurements. E032 outcomes may change priority. One separate unchanged T4
+qualification is authorized, not full Oral extraction. November 11 storage stays.
+
 ## E031 completed learning and common-construction priority, November 3
 
 [The reviewed paired result](../evidence/2026-11-03-e031-learning-and-recovery-priority.md)

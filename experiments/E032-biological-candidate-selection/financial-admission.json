@@ -1,0 +1,64 @@
+{
+  "status": "FRESH_CREDIT_ONLY_COMPLETE_COST_PASS",
+  "checked_epoch": 1793734508.965664,
+  "credit_checked_epoch": 1793734508.965664,
+  "credit_DKK": 1685.65,
+  "credit_USD_equivalent": 251.13039591765155,
+  "credit_status": "Available",
+  "scope": "FreeTrialUpgrade/Certain usage/Net pricing; ordinary first-party Compute, T4, PD, IP, GCS and network",
+  "expiry": "2027-01-12",
+  "paid_open_account_and_project_link_verified": true,
+  "displayed_Nov1_3_gross_savings_net_DKK": [
+    13.02,
+    13.02,
+    0
+  ],
+  "invoice_final": false,
+  "delayed_usage_reserve_USD": 35,
+  "real_money_authorized": false,
+  "existing_storage_scope_USD": 9,
+  "storage_valid_until_epoch": 1794351600,
+  "tail_end": "2026-11-18T00:00:00+01:00",
+  "E2_hour_USD": 0.2730456776785935,
+  "T4_N1_hour_USD": 0.7349979979879969,
+  "IP_hour_upper_USD": 0.005,
+  "CPU_costs": {
+    "compute_IP": 2.2526268408483965,
+    "new_task_disk_through_end": 0.9509801731244547,
+    "WAN_export_upper": 0.36,
+    "archive_storage_tail_upper": 0.03,
+    "operations": 0.05,
+    "contingency": 1.5
+  },
+  "CPU_complete_upper_USD": 5.143607013972852,
+  "CPU_ceiling_USD": 6,
+  "GPU_costs": {
+    "compute_IP": 1.2862464964789946,
+    "new_disks_through_end": 0.989019380049433,
+    "WAN_export_upper": 0.03,
+    "archive_storage_tail_upper": 0.003,
+    "operations": 0.05,
+    "contingency": 0.5
+  },
+  "GPU_complete_upper_USD": 2.8582658765284275,
+  "GPU_ceiling_USD": 3,
+  "original_PD_overlap_not_double_invoiced": true,
+  "public_price_references": [
+    "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "https://cloud.google.com/storage/pricing",
+    "https://cloud.google.com/vpc/network-pricing"
+  ],
+  "raw_API_Catalog_receipt": {
+    "bytes": 14997,
+    "sha256": "fc0283a8c646dabc52760e249c1f215b8a7038ee49cfb621d37d0b0ac95610d3"
+  },
+  "raw_private_inventory": {
+    "bytes": 324348,
+    "sha256": "e4c7d78b85fb839e6a2a5c23b99602fd9a5d6747496752a7f38f03fcad97c42d"
+  },
+  "metadata_objects": 279,
+  "metadata_bytes": 77463381848,
+  "soft_deleted_objects": 0,
+  "temporary_resources_created": false,
+  "source_publication": false
+}
