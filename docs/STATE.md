@@ -2,30 +2,59 @@
 
 Updated: November 3, 2026 (Copenhagen). This is the single current handoff.
 
-## E032 common constructor authorized; E031 learning remains fixed
+## E032 completed/reviewed; common measured information is next
 
-The owner invokes E031 at `1ea748a` for [E032](../experiments/E032-biological-candidate-selection/README.md):
-one generic biological candidate-selection/joint-recruitment policy across all
-three fixed E031 modes, new $6 cached CPU comparison and separate $3 single T4
-qualification. No training, depth re-summary, new neighbors, marker detection,
-external tool or confirmation acquisition. [Design](../experiments/E032-biological-candidate-selection/design.md)
-and [operations](../experiments/E032-biological-candidate-selection/OPERATIONS.md)
-own the prospective score, full-DNA paths, actual gate tests and execution boundary.
-Use branch `biological-candidate-selection`; preserve owner E031 operations edits.
-Native execution requires fresh complete gates and a new clean source receipt;
-local passing contracts are not community results or a live VM observation.
+[Independent native inspection](../experiments/E032-biological-candidate-selection/inspection-observed.json)
+accepts `selection-20261103T194814Z-bc93453` at scientific source `bc93453`:
+eight native gates, seven serial seals, all 17 actual stage exits and separate
+final completion-delivery exit pass. Every archive member/alias and full axes
+pass; restored learning/vectors/graphs stay unchanged. The watcher stops the VM;
+GCP independently confirms TERMINATED at November 3 21:12:23 Copenhagen.
 
-[The depth/standalone audit](evidence/2026-11-03-depth-and-standalone-candidate-audit.md)
-confirms differently filtered E009/Oral means and reusable unfiltered Oral BAMs.
-The zero-depth counterfactual remains unmeasured. Keep E032 caches fixed; a common
-JGI/variance/breadth/window/link treatment belongs to a subsequent coherent
-information/representation block, not silent remeasurement. Standalone candidate
-integration provides precedent, not transfer evidence or permission for endless
-selector tuning. Efficient Oral GLM and unscored skin admissions remain.
+[The frozen six-output review](../experiments/E032-biological-candidate-selection/comparison-review.json)
+returns **MODIFY**. Post R95/T90 is **10.2847% / 7**, **10.1760% / 6**, and
+**34.3786% / 219** (E009 no-GLM / GLM / Oral ten-depth no-GLM). Against stronger
+E031 construction, E009 loses 0.3263/0.3924 points and three T90 targets each;
+Oral gains 23.0514 points / 163 T90. KEEP fails unchanged; no dataset router.
+E023 10.4163%, E026 Oral 13.8569%, MetaBAT2 8.5493% / 17.3260% stay frozen.
 
-The November 4–11 storage-only approval and November 18 automatic-tail ceiling
-remain. No further retention extension follows from the new compute budgets.
-The E031 closed outcome below is preserved accepted development evidence.
+[Trace audit](../experiments/E032-biological-candidate-selection/trace-audit-reviewed.json)
+qualifies the Oral gain: 162/219 T90 targets use single-contig best bins, 156 newly
+T90 versus stronger E031. Whole long-contig eligibility is a real construction
+fix on this GSA, not evidence of better fragmented-genome learning. Joint update
+adds 0.0136/0.0064/0.2301 R95 points, no target R95 loss and no T90 change here.
+All 1,111 target rows, secondary tiers, pre/post alternatives and all DNA remain.
+Full 156/799 denominators, 3.3034% E009 N quarantine and Oral provided-origin/
+known-shared limitations stay. No baseline was rescored or model inferred locally.
+
+[Decision and source audit](evidence/2026-11-03-e032-construction-and-information-priority.md)
+chooses a coherent **common BAM-derived multiscale information/representation
+upgrade** next, with E032 as a provisional common development constructor and
+stronger E009 E023 references preserved. Do not continue selector tweaks by default.
+[Depth/source audit](evidence/2026-11-03-depth-and-standalone-candidate-audit.md)
+confirms all 20 retained BAMs can support a shared pinned procedure without
+remapping (sort Oral first). Zero-depth effects remain unmeasured; JGI's unexpected
+no-variance tiny mean of zero is unresolved/unadmitted. No community depth changed.
+
+The sole T4-f request is capacity-blocked before boot; both empty disks are removed,
+no GPU throughput is measured and no more attempt is authorized here. Efficient
+full Oral GLM remains a concrete separate admission milestone, complementary to
+the common coverage block. Skin stays unscored with all biological/truth/depth/
+overlap/protocol/cost dependencies. [Next block](../experiments/E032-biological-candidate-selection/next-block.md)
+and [exact following prompt](../experiments/E032-biological-candidate-selection/OPERATIONS.md#exact-following-prompt)
+own local implementation/preparation; no new community execution is authorized.
+
+[Costs](../experiments/E032-biological-candidate-selection/cost-observed.json):
+23.8 minutes allocation / $0.10834 CPU/RAM/IP; two archive streams $0.05686 export
+upper. Complete attribution upper about **$1.24**, including the open 40 GiB task
+disk through November 11 and backup/storage/operations reserves, within $6/$3.
+Science is 15.6 minutes / 8.763 GB sampled peak; local review/trace execution
+310.3 seconds / 2.459 GB. Original 30/300 GiB storage overlaps its separate approval.
+The stopped task disk remains protected until its closed delivery tail and
+post-collector logs are collected at the next authorized native session, before
+release. Active retention ends **November 11 at 00:00 Copenhagen**, approved
+automatic tail November 18; no renewal is implied. Use branch
+`biological-candidate-selection`; owner E031 operations edits and failures remain.
 
 ## E031 learner completed/reviewed; one common constructor is next
 

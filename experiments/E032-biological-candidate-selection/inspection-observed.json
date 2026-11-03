@@ -1,0 +1,82 @@
+{
+  "status": "PASS_COMPLETE_NATIVE_AND_FROZEN_NEW_OUTPUT_REVIEW",
+  "phase": "selection-20261103T194814Z-bc93453",
+  "source": "bc9345312bb227974f0a767844e57f42ab14dc03",
+  "completion": {
+    "bytes": 13926,
+    "sha256": "27a0542f3c0c925621c39d807c7eb3841cdb130cd09f86032f6ae58fbd61c79e"
+  },
+  "completion_delivery_exit": {
+    "bytes": 384,
+    "sha256": "1e77d65a884ef2528ce8fea07fb6bdb6abea6a09721bde7ca5751b46bae2b560"
+  },
+  "watchdog_exit": {
+    "bytes": 4352,
+    "sha256": "b3159f3b9cf62dbde045d976bd1458457e5d407b6c56f8495d68a13d56192699"
+  },
+  "provider_shutdown": {
+    "bytes": 33510,
+    "sha256": "f0ff0ae2a0a0bfebbe0f5fde944bd1dfca13eee7364723645b03d427f3f3965e"
+  },
+  "archive_metadata": {
+    "bytes": 659,
+    "sha256": "49b9ee526d5dd84c76dfff9918e9045825301867780f3729406b5f864c419507"
+  },
+  "every_member": {
+    "status": "PASS",
+    "archive": {
+      "bytes": 254380098,
+      "sha256": "a21c51911980e966f8f3289111955818e1bf5c8c74900e2bfd3b727d0912052a"
+    },
+    "generation": "1793736493549534",
+    "every_member_verified": true,
+    "regular_members": 477,
+    "aliases": 1,
+    "logical_member_bytes": 846741490,
+    "selectively_restored_physical_bytes": 846741490,
+    "local_free_after_bytes": 3640852480,
+    "no_complete_local_compressed_copy": true,
+    "new_science": false,
+    "omitted_private_members_not_local_backups": true
+  },
+  "independent_admission": {
+    "bytes": 3472,
+    "sha256": "b6e67b95a3f133006efd2ce599e8f0c9f7d8ba48c59d5b478f4c01e5ab051d23"
+  },
+  "raw_review_bindings": {
+    "E009-noGLM": {
+      "bytes": 420889,
+      "sha256": "40441e1be8d7361d3a596329853229553c288836fffa35a8e19f3e6c869845bc"
+    },
+    "E009-GLM": {
+      "bytes": 415975,
+      "sha256": "c4d9b0757d7df6645738f42172102ea6de1e1f821caf36f78d7dc71d9780407a"
+    },
+    "oral-noGLM": {
+      "bytes": 10817666,
+      "sha256": "c3a1500eefa0058efdd0790c3e827742a58b454e1d1f47c111c47787e9c02a86"
+    }
+  },
+  "trace_audit": {
+    "bytes": 7226,
+    "sha256": "890d83abf017adf6eefb21d7a53a9e08aabd66d923e8c4119eb8d2ac07709cd5"
+  },
+  "local_review_closed": {
+    "bytes": 588,
+    "sha256": "bdbfe05076228be4ac93c51ea61f92c316036623ac49b450526ac57024fe9ee1"
+  },
+  "cost": {
+    "bytes": 3268,
+    "sha256": "cc13f93c032bc693998e583b5a35721eb16b5556b0bf1d949d11d22f2215f7da"
+  },
+  "original_Mac_portability_tolerance_unchanged": true,
+  "source_and_science_not_modified_in_inspection": true,
+  "missing_scientific_contracts": [],
+  "operational_preservation_dependency": "WAIT: native closed-delivery-tail.json and post-collector terminal/upload logs remain on stopped task disk; retain and collect at next authorized native session before release. No wake needed for scientific admission.",
+  "private_inspection_backup": {
+    "bytes": 755,
+    "sha256": "63f83fcbf09d901230231101bcceef5892020ceac62fcf02ea4c1a4a42c86b33"
+  },
+  "private_inspection_backup_readback_verified": true,
+  "local_backup_first_attempt": "Strict verifier refused tarfile hard-link entries before upload; original archive/inventory/failure preserved inside the verified fresh regular-member backup. No scientific retry."
+}

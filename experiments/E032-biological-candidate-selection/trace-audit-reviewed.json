@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "source_blind_native_selection": true,
+  "truth_used_only_for_completed_output_diagnostics": true,
+  "new_scores_fits_grouping_or_selection": false,
+  "modes": {
+    "E009-noGLM": {
+      "choice_reasons": {
+        "selected_whole": 64,
+        "fully_claimed": 3595,
+        "proxy_abstention": 1076,
+        "selected_residual": 67
+      },
+      "selected_sources": {
+        "E030/hierarchy/selected_whole": {
+          "bins": 31,
+          "bp": 50162740,
+          "contigs": 1140
+        },
+        "E030-post/partition/selected_residual": {
+          "bins": 10,
+          "bp": 3092822,
+          "contigs": 1557
+        },
+        "E023-density/partition/selected_whole": {
+          "bins": 11,
+          "bp": 21469683,
+          "contigs": 9995
+        },
+        "E023/hierarchy/selected_whole": {
+          "bins": 11,
+          "bp": 24672808,
+          "contigs": 4201
+        },
+        "E030-pre/partition/selected_whole": {
+          "bins": 4,
+          "bp": 18086442,
+          "contigs": 6824
+        },
+        "E030-post/partition/selected_whole": {
+          "bins": 5,
+          "bp": 13065189,
+          "contigs": 4364
+        },
+        "E023/hierarchy/selected_residual": {
+          "bins": 25,
+          "bp": 30196429,
+          "contigs": 18661
+        },
+        "E030/hierarchy/selected_residual": {
+          "bins": 27,
+          "bp": 5021454,
+          "contigs": 272
+        },
+        "E023-density/partition/selected_residual": {
+          "bins": 5,
+          "bp": 1636600,
+          "contigs": 546
+        },
+        "E023/long_singleton/selected_whole": {
+          "bins": 2,
+          "bp": 501534,
+          "contigs": 2
+        }
+      },
+      "selected_marker_negative_bins": 28,
+      "joint_groups": 37,
+      "accepted_groups": 4,
+      "recruitment_reasons": {
+        "joint_update_abstention": 3397,
+        "vote_abstention": 37252,
+        "profile_abstention": 548,
+        "recruited_joint": 282
+      },
+      "assigned_bp_change": 370037,
+      "bins": 131,
+      "single_contig_bins": 21,
+      "T90_single_contig": 0,
+      "new_T90_single_contig_versus_stronger_E031": 0,
+      "single_contig_best_recovered_bp": 0,
+      "single_contig_best_weighted_R95": 0.0,
+      "full_reference_bp": 554661890,
+      "singleton_association_is_not_a_matched_component_ablation": true
+    },
+    "E009-GLM": {
+      "choice_reasons": {
+        "selected_whole": 70,
+        "proxy_abstention": 1241,
+        "fully_claimed": 3443,
+        "selected_residual": 59
+      },
+      "selected_sources": {
+        "E030/hierarchy/selected_whole": {
+          "bins": 33,
+          "bp": 63225482,
+          "contigs": 6450
+        },
+        "E030-post/partition/selected_residual": {
+          "bins": 10,
+          "bp": 5430170,
+          "contigs": 3913
+        },
+        "E030/hierarchy/selected_residual": {
+          "bins": 27,
+          "bp": 5113478,
+          "contigs": 264
+        },
+        "E023-density/partition/selected_whole": {
+          "bins": 12,
+          "bp": 23376055,
+          "contigs": 9713
+        },
+        "E023/hierarchy/selected_whole": {
+          "bins": 15,
+          "bp": 28587804,
+          "contigs": 6816
+        },
+        "E023/hierarchy/selected_residual": {
+          "bins": 16,
+          "bp": 23107052,
+          "contigs": 15493
+        },
+        "E030-post/partition/selected_whole": {
+          "bins": 6,
+          "bp": 16708346,
+          "contigs": 5640
+        },
+        "E023-density/partition/selected_residual": {
+          "bins": 6,
+          "bp": 3413639,
+          "contigs": 2428
+        },
+        "E023/long_singleton/selected_whole": {
+          "bins": 2,
+          "bp": 501534,
+          "contigs": 2
+        },
+        "E030-pre/partition/selected_whole": {
+          "bins": 2,
+          "bp": 2491566,
+          "contigs": 1472
+        }
+      },
+      "selected_marker_negative_bins": 29,
+      "joint_groups": 37,
+      "accepted_groups": 7,
+      "recruitment_reasons": {
+        "vote_abstention": 26640,
+        "joint_update_abstention": 8096,
+        "profile_abstention": 1360,
+        "recruited_joint": 754
+      },
+      "assigned_bp_change": 1009158,
+      "bins": 129,
+      "single_contig_bins": 24,
+      "T90_single_contig": 0,
+      "new_T90_single_contig_versus_stronger_E031": 0,
+      "single_contig_best_recovered_bp": 0,
+      "single_contig_best_weighted_R95": 0.0,
+      "full_reference_bp": 554661890,
+      "singleton_association_is_not_a_matched_component_ablation": true
+    },
+    "oral-noGLM": {
+      "choice_reasons": {
+        "selected_whole": 2343,
+        "fully_claimed": 11878,
+        "proxy_abstention": 8000,
+        "selected_residual": 951
+      },
+      "selected_sources": {
+        "E023/long_singleton/selected_whole": {
+          "bins": 293,
+          "bp": 485771369,
+          "contigs": 293
+        },
+        "E030/hierarchy/selected_whole": {
+          "bins": 1928,
+          "bp": 162657174,
+          "contigs": 7151
+        },
+        "E023/hierarchy/selected_whole": {
+          "bins": 30,
+          "bp": 29223048,
+          "contigs": 8001
+        },
+        "E023-density/partition/selected_whole": {
+          "bins": 30,
+          "bp": 43952716,
+          "contigs": 11904
+        },
+        "E030-post/partition/selected_whole": {
+          "bins": 42,
+          "bp": 64881750,
+          "contigs": 24424
+        },
+        "E030/hierarchy/selected_residual": {
+          "bins": 847,
+          "bp": 118504828,
+          "contigs": 13423
+        },
+        "E030-pre/partition/selected_whole": {
+          "bins": 17,
+          "bp": 44452098,
+          "contigs": 8828
+        },
+        "E030-post/partition/selected_residual": {
+          "bins": 39,
+          "bp": 12815244,
+          "contigs": 10232
+        },
+        "E030-pre/partition/selected_residual": {
+          "bins": 4,
+          "bp": 2551215,
+          "contigs": 1091
+        },
+        "E023/hierarchy/selected_residual": {
+          "bins": 46,
+          "bp": 28223059,
+          "contigs": 12326
+        },
+        "E023-selected/partition/selected_whole": {
+          "bins": 3,
+          "bp": 4346904,
+          "contigs": 1023
+        },
+        "E023-density/partition/selected_residual": {
+          "bins": 13,
+          "bp": 8284823,
+          "contigs": 2754
+        },
+        "E023-selected/partition/selected_residual": {
+          "bins": 2,
+          "bp": 196274,
+          "contigs": 21
+        }
+      },
+      "selected_marker_negative_bins": 135,
+      "joint_groups": 107,
+      "accepted_groups": 36,
+      "recruitment_reasons": {
+        "vote_abstention": 396480,
+        "recruited_joint": 7263,
+        "joint_update_abstention": 2904,
+        "profile_abstention": 645
+      },
+      "assigned_bp_change": 6927373,
+      "bins": 3294,
+      "single_contig_bins": 2184,
+      "T90_single_contig": 162,
+      "new_T90_single_contig_versus_stronger_E031": 156,
+      "single_contig_best_recovered_bp": 433414617,
+      "single_contig_best_weighted_R95": 0.20806509477265547,
+      "full_reference_bp": 2083072211,
+      "singleton_association_is_not_a_matched_component_ablation": true
+    }
+  }
+}

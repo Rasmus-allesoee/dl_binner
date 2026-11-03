@@ -1,5 +1,36 @@
 # E032 operations
 
+## Verified closeout, November 3
+
+[Inspection](inspection-observed.json) accepts `selection-20261103T194814Z-bc93453`
+at exact private source `bc93453`: eight gates, seven serial seals, all 17 actual
+stage exits plus final completion-delivery exit, every member/alias and unchanged
+inputs/full axes pass. The watcher records workflow exit; GCP independently
+confirms TERMINATED at 20:12:23.213 UTC / 21:12:23 Copenhagen. No new fit or retry.
+[Review](comparison-review.json) is MODIFY: post R95 10.2847% / 10.1760% / 34.3786%
+(E009 no-GLM / GLM / Oral ten-depth no-GLM). [Trace audit](trace-audit-reviewed.json)
+qualifies Oral's long-singleton contribution. Original criteria remain unchanged.
+
+[Costs](cost-observed.json): $0.10834 compute/RAM/IP, $0.05686 archive-export upper,
+about $1.24 complete attribution upper including the open 40 GiB task disk through
+November 11 and backup/storage/operation reserves. Source/task guards pass; the
+old clock is closed without extension. The single T4-f request fails capacity
+before boot and both empty disks are deleted; no GPU measurement or retry.
+
+The original closed-delivery tail and post-collector logs remain protected on
+stopped `e032-task-1793735314`. At the next authorized native session collect and
+verify those before task-disk release; no scientific result is missing and no wake
+is needed for this review. The private archive already backs every new work member.
+[Interpretation](../../docs/evidence/2026-11-03-e032-construction-and-information-priority.md)
+and [next block](next-block.md) select local common measured-information/representation
+implementation next. Current execution does not authorize that new community run.
+
+[Compact private inspection backup](inspection-backup.json) verifies 1,672 regular
+members, whole SHA/MD5/generation and readback (13.659 MB). The first local backup
+was refused because tarfile emitted hard-link entries; it was never uploaded.
+Its original archive/inventory/failure is preserved inside the fresh explicitly
+dereferenced regular-member backup. No science, cap or verifier was weakened.
+
 ## Current authorization and immutable boundaries
 
 The owner invokes E031's new prompt at `1ea748a` on November 3, authorizing one
@@ -124,7 +155,7 @@ Arm a fresh watcher and provider STOP clamped to the original horizon. No fit,
 new constructor or accepted-score replay is allowed. A new clock/expired allowance
 or unclear coverage requires a separately recorded authorization, not silent reuse.
 
-## Exact following prompt
+## Closed E032 inspection protocol
 
 Inspect E032's phase in `native-observed.json` and the separately recorded single
 T4 attempt. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015, E032 design/
@@ -164,3 +195,67 @@ GLM. Use the audited coverage mismatch without asserting an unmeasured causal
 explanation or changing current features. Skin stays unscored with every biological/
 overlap/truth/depth/protocol/cost dependency. Update records/check/commit with
 what changed/why and give the next exact prompt with any new execution scope.
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap with one shared binner. Read
+AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, the completed reviews, E031's
+training audit and E032's design, frozen review/target/trace/inspection/cost records,
+depth/standalone audit, next-block proposal and operations. Preserve dev3/dev4/dev5,
+E031/E032 and all accepted data, truth, models, results, source freezes and failed
+journals. Use a new descriptive research branch without a codex/ prefix.
+
+Implement and locally test one coherent common BAM-derived multiscale information/
+representation upgrade. Keep E032's common constructor as the provisional fixed
+downstream policy; preserve stronger E031/E023 and external reference summaries.
+Do not continue selector tuning or choose a constructor by dataset/truth. The Oral
+long-contig gain is construction/eligibility evidence, not proof of stronger
+fragmented-genome learning. Resolve exact algorithms/defaults from the existing
+reviews and targeted primary sources, recording a concise prospective design
+before changed community outcomes; proceed to implementation in this task.
+
+Prepare one shared pinned measurement procedure for all 20 retained full-reference
+BAMs. Specify identity/NM/CIGAR, MAPQ/BQ, primary/duplicate/QCFAIL/supplementary flags,
+MAPQ 255, sorting/dictionary/sample axes, contig ends, overlapping mates, denominator,
+zeros and variance conventions. Test real tiny BAMs against an independent counter,
+including the unresolved JGI no-variance zero. Do not silently change old tables.
+Implement streamed/indexed parent and exact DNA-window means/breadth/dispersion,
+exposure/reliability masks and compact provenance. Assess unique-template links and
+false-link safeguards; include them only with a justified information case and
+actual reader contracts. Do not invent variance, window coverage or certainty.
+
+Build one coherent reliability-aware parent/window depth branch and fusion/
+proposal/training path, preserving explicit composition/context and useful bootstrap
+state. A larger network is not a goal. Keep genuine measured zero, missing/failed
+measurement, low support and all short/marker-negative/unknown/non-target/unassigned
+DNA distinct and accounted for. Test actual tiny measurement/view/training/gradient/
+reload/geometry/grouping/marker/export/cache contracts, identifying unavailable or
+mocked native paths. Retain new features, models, embeddings and pre/post partitions.
+Use at most one decision-changing measurement/information control, not a grid.
+
+Freeze one common availability and complete teacher/pair/student information policy.
+Prepare E009 GLM off/on and Oral measured-depth/no-GLM comparisons beside the frozen
+references, including singleton/multicontig and all full-reference populations.
+Keep efficient full Oral GLM as a concrete complementary milestone: prepare the
+next unchanged exact-float32 128-view qualification and measured-full-bank admission
+case, acknowledging the closed T4 stockout and no new throughput. Skin remains
+unscored with source/genome/replicon/molecule/taxonomy/overlap/ambiguity/unique-versus-
+origin truth/depth/protocol/cost dependencies; do not acquire confirmation DNA.
+
+I authorize local implementation and engineering checks only. Do not start a VM,
+run community BAM summaries/fits/scores, download bulk alignments/reads, remap,
+run an aligner/external binner, provision/resize, repeat a GPU request or extend
+retention. Prepare the separately priced in-region serial BAM pilot and complete
+three-mode comparison, with actual shape/runtime/CPU/RAM/peak-disk/export/retention
+estimates and fresh Welcome-credit prerequisites. First assess safe cleanup/reuse
+and the largest Oral sort/spool coexistence; compare temporary storage options and
+existing quota without changing resources. Protect E032's stopped task disk until
+its original closed-delivery tail/post-collector logs are verified at the next
+explicitly authorized native session. Old $6/$3 budgets do not carry over.
+
+Keep November 11 at 00:00 Copenhagen active retention and the approved November 18
+automatic-tail ceiling visible. Update records, run relevant checks and commit
+with structured what changed/why. Report what works, actual versus unavailable
+contracts, design trade-offs, one coherent comparison/control scope, complete cost
+case and the exact separate execution request. Do not weaken useful science to
+fit an arbitrary small forecast; no real-money or unclear-credit spending.

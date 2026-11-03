@@ -1,24 +1,47 @@
 # Google Cloud workspace operations
 
-## November 3 E032 authorized cached scope and one T4 qualification
+## November 3 E032 completed, reviewed and independently stopped
 
-The owner invokes [E032 operations](../experiments/E032-biological-candidate-selection/OPERATIONS.md):
-new $6 / eight cumulative hours / 8.25-hour STOP on the existing E2, plus one
-separate $3 / 90-minute / 105-minute STOP n1-standard-8 + T4 in us-central1-f.
-No capacity loop, full Oral extraction or new training. The CPU rule keeps every
-accepted feature/vector/graph/marker byte fixed. A single 40 GiB balanced task
-disk is explicitly allowed if verified cleanup/headroom is insufficient. T4 uses
-40/64 GiB standard disks and existing quotas. Original disks are protected;
-preserve unique stopped evidence until collection verification.
+[Native inspection](../experiments/E032-biological-candidate-selection/inspection-observed.json)
+accepts phase `selection-20261103T194814Z-bc93453`, source `bc93453`: eight gates,
+seven serial seals, 17 actual stage exits and separate final completion delivery
+pass. Archive SHA/member/alias/full-axis/input-after contracts pass; no fit or
+old score is replayed. The watcher observes process exit, and independent GCP
+state is TERMINATED at **20:12:23.213 UTC / 21:12:23 Copenhagen**, November 3.
+The earlier IAP banner timeout occurred during shutdown; closed GCS evidence
+resolves status. Original eight-hour clock and 8.25-hour STOP were not reset.
 
-Signed-in Billing and API/Catalog/all-version checks are refreshed in private
-E032 admission records before starts. Source history still contains private
-financial/account information, so private exact-commit transport is the admitted
-fallback; no public push/write deploy key. Fresh current-boot/process watcher
-tests and independent provider STOP precede release. Existing storage approval
-ends November 11 at 00:00 Copenhagen, with at most $0.50 automatic tail through
-November 18. New temporary disk lifetimes belong in E032's cost envelopes; no
-retention renewal is implied. E032 native receipts own actual release/status.
+[Costs](../experiments/E032-biological-candidate-selection/cost-observed.json)
+price 1,428.379 seconds allocation at $0.27304568/hour including IP: **$0.10834**.
+Two generation-bound archive streams total 508,760,196 bytes, export upper
+**$0.05686**. Complete attribution upper is **$1.24**, including new task disk
+through November 11, backup/storage/tail/operation reserves; it is not an invoice
+or a credit-delta bill. Original 30/300 GiB disks remain about $31.20/pricing month,
+overlapping the separately admitted $9 storage interval, not counted twice.
+
+Safe cleanup removed only 1,053 old compiled-cache files / 25,984,188 bytes. New
+40 GiB balanced `e032-task-1793735314`, ID `6444653960304755760`, was required.
+Source free was 27.44 GiB; original disks/inputs/runtime were not formatted/deleted.
+Native science samples show task used peak 3.606 GB and minimum free 38.334 GB;
+collection peak was not continuously sampled, while all command-end reserve/growth
+guards pass. The task disk stays attached to the stopped VM, protecting native
+closed-delivery-tail and post-collector logs. Collect those before verified release
+at the next authorized native session; current science admission needs no wake.
+
+[The sole T4-f attempt](../experiments/E032-biological-candidate-selection/gpu-observed.json)
+failed `ZONE_RESOURCE_POOL_EXHAUSTED` before boot; both exact empty 40/64 GiB
+standard disks are deleted. GPU compute $0; no batching throughput or full-bank
+admission and no capacity retry/fallback. No quota or original resource change.
+
+Source was privately transferred and backed up with exact prerequisite/head/clean
+checkout because outgoing history still contains financial/account metadata.
+Read-only GitHub remains; normal public push/pull is preferred when history is safe.
+Fresh signed-in Welcome admission and current SKU/storage/quota checks passed
+before launch, with $35 delayed-usage reserve and no real-money authorization.
+[Operations](../experiments/E032-biological-candidate-selection/OPERATIONS.md)
+owns preservation and next preparation. Existing storage approval ends
+**November 11 at 00:00 Copenhagen**, automatic-tail ceiling November 18; new task
+disk lifetime belongs to E032's cost scope. No further retention or compute follows.
 
 ## November 3 E031 closed; original CPU stopped, temporary resources released
 

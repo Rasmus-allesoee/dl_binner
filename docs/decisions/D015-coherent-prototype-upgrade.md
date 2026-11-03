@@ -2,6 +2,26 @@
 
 ## E032 common selection and broader information priority, November 3
 
+The [completed review](../evidence/2026-11-03-e032-construction-and-information-priority.md)
+is MODIFY, with KEEP's failed no-regression criterion unchanged. Post R95 is
+10.2847% / 10.1760% / 34.3786% (E009 no-GLM / GLM / Oral ten-depth no-GLM).
+E009 loses three T90 targets in each mode; Oral gains 163. The trace audit finds
+162/219 Oral T90 best bins are single-contig: preserving intact long contigs is
+useful construction/eligibility evidence, not a representation breakthrough.
+Joint recruitment adds small positive paired recovery here without establishing
+safety in other data. Keep one provisional common constructor and stronger E031/
+E023 references; no dataset router or selector tuning loop.
+
+Choose the [common BAM-derived multiscale information/representation block](../../experiments/E032-biological-candidate-selection/next-block.md)
+next. Harmonize measurement within that coherent upgrade, obtain actual parent/
+window depth/breadth/dispersion and assess reliable template links, with explicit
+uncertainty/exposure/availability. This is more concrete than another larger
+context model without new information. Full Oral GLM remains a complementary
+admission milestone; the sole T4-f request is capacity-blocked, with no throughput.
+The next task is local implementation/preparation and a separate complete cost
+case, not another authorized fit or storage renewal. AGENTS now requires explicit
+single-contig recovery strata and actual coverage-option semantics.
+
 The owner authorizes [E032](../../experiments/E032-biological-candidate-selection/design.md)
 with E031 learning fixed: common source-blind whole/child/residual selection and
 joint bin-level recruitment acceptance across all three modes. Standalone source
@@ -17,8 +37,9 @@ harmonize E032 features. Provisionally prioritize a coherent common BAM-derived
 multiscale information/representation block next if the gap persists, including
 measurement consistency and genuine window/uncertainty contracts. Efficient
 frozen GLM is complementary; a larger Transformer alone does not add missing
-measurements. E032 outcomes may change priority. One separate unchanged T4
-qualification is authorized, not full Oral extraction. November 11 storage stays.
+measurements. The completed outcomes above confirm this next-block priority.
+One separate unchanged T4 qualification was authorized, not full Oral extraction.
+November 11 storage stays.
 
 ## E031 completed learning and common-construction priority, November 3
 

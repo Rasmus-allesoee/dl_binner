@@ -1,0 +1,393 @@
+{
+  "status": "COMPLETED_INDEPENDENTLY_VERIFIED_AND_REVIEWED",
+  "phase": "selection-20261103T194814Z-bc93453",
+  "identity": {
+    "source": "bc9345312bb227974f0a767844e57f42ab14dc03",
+    "repo": "/srv/dl_binner/repo",
+    "phase": "selection-20261103T194814Z-bc93453",
+    "root": "/srv/dl_binner/experiments/e032/selection-20261103T194814Z-bc93453",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e032-selection-20261103T194814Z-bc93453",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e032/selection-20261103T194814Z-bc93453/",
+    "vm_start_epoch": 1793735314.834
+  },
+  "scientific_source": "bc9345312bb227974f0a767844e57f42ab14dc03",
+  "source_transport": {
+    "kind": "private_exact_Git_bundle",
+    "source": "bc9345312bb227974f0a767844e57f42ab14dc03",
+    "path": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e032-biological-candidate-selection/admission/source.bundle",
+    "base": "ba659119c3ec86edc83e27bad95939326fbaa2b8",
+    "bundle": {
+      "bytes": 246732,
+      "sha256": "4ce0086894f3fcce5d8ee48bcab8643a79ce76c15db0373c699399c686e42c94"
+    }
+  },
+  "private_source_backup": {
+    "status": "PASS",
+    "uri": "gs://dl-binner-archive-167650584170/e032/preparation-bc93453/source.bundle",
+    "generation": "1793735280859035",
+    "binding": {
+      "bytes": 246732,
+      "sha256": "4ce0086894f3fcce5d8ee48bcab8643a79ce76c15db0373c699399c686e42c94"
+    },
+    "readback_verified": true,
+    "public_push": false
+  },
+  "source_publication": false,
+  "provider_status": "TERMINATED",
+  "provider_start": "2026-11-03T11:48:34.834-08:00",
+  "provider_stop": "2026-11-03T12:12:23.213-08:00",
+  "provider_scheduling": {
+    "automaticRestart": false,
+    "instanceTerminationAction": "STOP",
+    "maxRunDuration": {
+      "nanos": 0,
+      "seconds": "29700"
+    },
+    "onHostMaintenance": "MIGRATE",
+    "preemptible": false,
+    "provisioningModel": "STANDARD"
+  },
+  "task_disk": {
+    "creationTimestamp": "2026-11-03T11:49:51.962-08:00",
+    "enableConfidentialCompute": false,
+    "id": "6444653960304755760",
+    "kind": "compute#disk",
+    "labelFingerprint": "u1NrzBoxkdA=",
+    "labels": {
+      "experiment": "e032"
+    },
+    "name": "e032-task-1793735314",
+    "physicalBlockSizeBytes": "4096",
+    "satisfiesPzi": true,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/disks/e032-task-1793735314",
+    "sizeGb": "40",
+    "status": "READY",
+    "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-balanced",
+    "zone": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a"
+  },
+  "first_post_mount_baseline": 24576,
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e032-selection-20261103T194814Z-bc93453.service",
+    "watchdog_timer": "e032-selection-20261103T194814Z-bc93453-exit.timer",
+    "watchdog_service": "e032-selection-20261103T194814Z-bc93453-exit.service",
+    "process": {
+      "pid": 2138,
+      "start_ticks": 8496,
+      "command_sha256": "a204d06fe745657e915e4594302b1723b7f1d9819ac227eb62a3d9e7666f17ec"
+    },
+    "boot_id": "a4f151a9-a49b-438c-b826-a2962a980408",
+    "source_commit": "bc9345312bb227974f0a767844e57f42ab14dc03",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793735314.834,
+    "hard_deadline_epoch": 1793764114.834,
+    "provider_stop_epoch": 1793765014.834,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "watchdog_exit": {
+    "bytes": 4352,
+    "sha256": "b3159f3b9cf62dbde045d976bd1458457e5d407b6c56f8495d68a13d56192699"
+  },
+  "actual_stage_exits": [
+    {
+      "stage": "workflow-native-origin",
+      "exit_code": 0,
+      "wall_seconds": 0.6999784190000042,
+      "peak_sampled_RSS_bytes": 47611904
+    },
+    {
+      "stage": "package-install",
+      "exit_code": 0,
+      "wall_seconds": 2.03748636600001,
+      "peak_sampled_RSS_bytes": 94736384
+    },
+    {
+      "stage": "complete-native-runtime",
+      "exit_code": 0,
+      "wall_seconds": 22.334734604000005,
+      "peak_sampled_RSS_bytes": 310849536
+    },
+    {
+      "stage": "native-selection-unit-contracts",
+      "exit_code": 0,
+      "wall_seconds": 2.6668451570000116,
+      "peak_sampled_RSS_bytes": 193835008
+    },
+    {
+      "stage": "native-tiny-readers-export-reload",
+      "exit_code": 0,
+      "wall_seconds": 12.71026730700001,
+      "peak_sampled_RSS_bytes": 424427520
+    },
+    {
+      "stage": "native-synthetic-scale",
+      "exit_code": 0,
+      "wall_seconds": 3.9555946110000093,
+      "peak_sampled_RSS_bytes": 427593728
+    },
+    {
+      "stage": "read-only-depth-input-audit",
+      "exit_code": 0,
+      "wall_seconds": 1.151790735999981,
+      "peak_sampled_RSS_bytes": 66265088
+    },
+    {
+      "stage": "generation-bound-E031-restore",
+      "exit_code": 0,
+      "wall_seconds": 40.32788150899998,
+      "peak_sampled_RSS_bytes": 166481920
+    },
+    {
+      "stage": "serial-cached-comparison",
+      "exit_code": 0,
+      "wall_seconds": 937.331557382,
+      "peak_sampled_RSS_bytes": 8763572224
+    },
+    {
+      "stage": "restored-inputs-after",
+      "exit_code": 0,
+      "wall_seconds": 2.411592586999859,
+      "peak_sampled_RSS_bytes": 54992896
+    },
+    {
+      "stage": "collect",
+      "exit_code": 0,
+      "wall_seconds": 47.03509429900009,
+      "peak_sampled_RSS_bytes": 68796416
+    },
+    {
+      "stage": "upload-e032-evidence.tar.gz",
+      "exit_code": 0,
+      "wall_seconds": 4.162761450000062,
+      "peak_sampled_RSS_bytes": 290066432
+    },
+    {
+      "stage": "readback-e032-evidence.tar.gz",
+      "exit_code": 0,
+      "wall_seconds": 3.11175781299994,
+      "peak_sampled_RSS_bytes": 157708288
+    },
+    {
+      "stage": "upload-e032-evidence.tar.gz.sha256",
+      "exit_code": 0,
+      "wall_seconds": 1.993173157000001,
+      "peak_sampled_RSS_bytes": 289894400
+    },
+    {
+      "stage": "readback-e032-evidence.tar.gz.sha256",
+      "exit_code": 0,
+      "wall_seconds": 1.5538852789998145,
+      "peak_sampled_RSS_bytes": 155152384
+    },
+    {
+      "stage": "upload-collection.json",
+      "exit_code": 0,
+      "wall_seconds": 1.983952921000082,
+      "peak_sampled_RSS_bytes": 129441792
+    },
+    {
+      "stage": "readback-collection.json",
+      "exit_code": 0,
+      "wall_seconds": 1.9929824729999837,
+      "peak_sampled_RSS_bytes": 155410432
+    }
+  ],
+  "final_completion_upload_exit": {
+    "exit_code": 0,
+    "private_readback": {
+      "uri": "gs://dl-binner-archive-167650584170/e032/selection-20261103T194814Z-bc93453/completion.json",
+      "generation": "1793736505381290",
+      "binding": {
+        "bytes": 13926,
+        "sha256": "27a0542f3c0c925621c39d807c7eb3841cdb130cd09f86032f6ae58fbd61c79e"
+      },
+      "readback_verified": true
+    },
+    "epoch": 1793736505.4768388
+  },
+  "seven_serial_seals": {
+    "barrier": {
+      "bytes": 977,
+      "sha256": "806a4123baa9fdff507d99b522c78da73cb43ba5a12acfa8d6a81522499acb29"
+    },
+    "E009-noGLM/select": {
+      "bytes": 2630,
+      "sha256": "438af7580c4d565cfe237f5b94c869c7e53945323f2e25aaaa58162041fa4e2a"
+    },
+    "E009-noGLM/audit": {
+      "bytes": 976,
+      "sha256": "d2936161ebf5a821f37faa544f8224a333ab926f66fb22d89eea613f8d992cef"
+    },
+    "E009-GLM/select": {
+      "bytes": 2630,
+      "sha256": "0f0a22b4970cc29bb4f946c887402bd3305b813f39ee8f7d5f1497dcb0be3dd1"
+    },
+    "E009-GLM/audit": {
+      "bytes": 976,
+      "sha256": "6af0b9aac82007a71b42507d3c4d405d650f3e814455492737c750b9e6c3d6cc"
+    },
+    "oral-noGLM/select": {
+      "bytes": 2624,
+      "sha256": "014bdb5b8efca11f8be4988f022e01d97b2ebc26349bf5b5ab2579726e8c6773"
+    },
+    "oral-noGLM/audit": {
+      "bytes": 961,
+      "sha256": "3fa65b9b7b18a41387218b6668e609dff124e1608350d5994972ad1392bb02fb"
+    }
+  },
+  "full_axes": {
+    "E009-noGLM": {
+      "rows": 145702,
+      "eligible": 89041,
+      "bp": 231678157,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "E009-GLM": {
+      "rows": 145702,
+      "eligible": 89041,
+      "bp": 231678157,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "oral-noGLM": {
+      "rows": 1286547,
+      "eligible": 508763,
+      "bp": 1669981123,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ]
+    }
+  },
+  "restored_inputs_after": {
+    "status": "PASS",
+    "files": 91,
+    "original_archive": {
+      "bytes": 2101954568,
+      "sha256": "d4ce1d15ad8f7c2443863a6c42805ddd419a6034c861b22a586b7659b9db47ec"
+    },
+    "all_restored_members_unchanged": true
+  },
+  "runtime_status": "PASS_COMPLETE_READONLY_BASE_AND_NEW_OWNED_PACKAGE",
+  "scientific_fits": 0,
+  "source_learning_vectors_forests_unchanged": true,
+  "archive": {
+    "uri": "gs://dl-binner-archive-167650584170/e032/selection-20261103T194814Z-bc93453/e032-evidence.tar.gz",
+    "generation": "1793736493549534",
+    "binding": {
+      "bytes": 254380098,
+      "sha256": "a21c51911980e966f8f3289111955818e1bf5c8c74900e2bfd3b727d0912052a"
+    }
+  },
+  "every_member_and_alias_verification": {
+    "status": "PASS",
+    "archive": {
+      "bytes": 254380098,
+      "sha256": "a21c51911980e966f8f3289111955818e1bf5c8c74900e2bfd3b727d0912052a"
+    },
+    "generation": "1793736493549534",
+    "every_member_verified": true,
+    "regular_members": 477,
+    "aliases": 1,
+    "logical_member_bytes": 846741490,
+    "selectively_restored_physical_bytes": 846741490,
+    "local_free_after_bytes": 3640852480,
+    "no_complete_local_compressed_copy": true,
+    "new_science": false,
+    "omitted_private_members_not_local_backups": true
+  },
+  "independent_admission": {
+    "bytes": 3472,
+    "sha256": "b6e67b95a3f133006efd2ce599e8f0c9f7d8ba48c59d5b478f4c01e5ab051d23"
+  },
+  "local_review": {
+    "status": "PASS_REVIEW_CLOSED",
+    "closed_epoch": 1793740044.521749,
+    "closed_UTC": "2026-11-03T21:07:24.521749+00:00",
+    "initial_epoch": 1793737051.073527,
+    "elapsed_wall_seconds": 2993.448221921921,
+    "cumulative_measured_evaluation_and_trace_seconds": 310.26301801291993,
+    "peak_sampled_RSS_bytes": 2458988544,
+    "logical_bytes": 1533217414,
+    "unique_inode_logical_bytes": 879343694,
+    "local_free_after_bytes": 5780307968,
+    "compressed_archive_retained_locally": false,
+    "all_six_new_partitions_reviewed": true,
+    "old_scores_not_recomputed": true,
+    "community_fits": 0
+  },
+  "raw_completion": {
+    "bytes": 13926,
+    "sha256": "27a0542f3c0c925621c39d807c7eb3841cdb130cd09f86032f6ae58fbd61c79e"
+  },
+  "interim_observation_preserved": {
+    "bytes": 19012,
+    "sha256": "a385432b058305b30c2d4bc29b722f3dd49a647005d2d419f940d7b0e5718935"
+  },
+  "inspection_IAP_timeout": "Captured during native shutdown transition; private success/completion/watchdog and independent TERMINATED resolved the observation. No science retry.",
+  "task_disk_release_gate": "WAIT: native closed-delivery-tail.json and post-collector terminal/upload logs remain on stopped task disk; retain and collect at next authorized native session before release. No wake needed for scientific admission.",
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "updated_UTC": "2026-11-03T21:09:18.031849+00:00",
+  "private_inspection_backup": {
+    "status": "PASS_PRIVATE_COMPACT_BACKUP_READBACK",
+    "uri": "gs://dl-binner-archive-167650584170/e032/selection-20261103T194814Z-bc93453/inspection-20261103T211958Z.tar.gz",
+    "generation": "1793740807381031",
+    "archive": {
+      "bytes": 13659040,
+      "sha256": "02bbe63e273e14367fee543629acf29398afb373d368c23f9a143c0632388e6f"
+    },
+    "members": 1672,
+    "logical_bytes": 50833775,
+    "producer_compressed_ceiling_bytes": 134217728,
+    "producer_logical_ceiling_bytes": 268435456,
+    "every_member_verified": true,
+    "readback_verified": true,
+    "export_USD_upper": 0.0015265166759490967,
+    "public_publication": false,
+    "credentials_included": false,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+  },
+  "final_provider_recheck": "TERMINATED after verified compact backup readback"
+}

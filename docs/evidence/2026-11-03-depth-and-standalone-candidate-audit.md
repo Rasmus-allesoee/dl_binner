@@ -75,6 +75,27 @@ hash/help and real tiny outputs. No MetaBAT binner is executed in this audit.
 Primary source: [MetaBAT v2.18 summarizer](https://bitbucket.org/berkeleylab/metabat/src/a51200652a8907629b83d63fa5fa6c2f6612d105/src/jgi_summarize_bam_contig_depths.cpp)
 and adjacent `.h`/`BamUtils.h`, also verified from the exact local Git objects.
 
+### Actual native tiny result (November 3)
+
+[Retained observations](../../experiments/E032-biological-candidate-selection/depth-audit-reviewed.json)
+bind JGI binary SHA256 `5b1885be35cf906151ef5693fa8cac57edc67a022ba4a5b60478e4ef1dfb618e`.
+The controlled 500 bp contig / 150 bp-read fixture gives default mean **1.5** /
+variance **3.7594**, MAPQ 20 mean **1.125** / variance **2.11466**, and all-edges
+mean **1.2** / variance **3.36671**. Its zero-coverage contig is emitted as zero.
+Default/MAPQ/edge observations match the source predictions. The no-variance
+variant yields **0**, contradicting the simple scalar-path prediction 1.4925.
+That mismatch is preserved, not relabelled as a passing production contract.
+The released scalar `CountType / correctedLen` expression also uses integer
+division before assignment to double; this alone does not explain the observed
+zero here. Exact scalar/build behavior remains unresolved. Do not adopt that
+flag/path as a common procedure without further tiny native diagnosis.
+
+All ten current E009 assembly BAMs are present, sorted/indexed and pass quickcheck,
+total **41,105,302,048 bytes**; one full reference header is retained. This does
+not claim new whole-BAM SHA/decode or a community coverage recalculation. All
+twenty BAMs together represent about 94.85 GB compressed, making in-region serial
+reuse substantially more sensible than another acquisition/mapping campaign.
+
 ## Shared procedure: separate prospective information treatment
 
 Reuse both complete-assembly alignments. Verify header/sample/NM axes; sort Oral
@@ -142,3 +163,9 @@ complementary. A Transformer alone cannot add missing coverage or make inconsist
 availability comparable. E032's reviewed outcomes may change the priority. Skin
 stays unscored pending source/genome/replicon/molecule/taxonomy/overlap/ambiguity/
 unique-versus-origin/depth/protocol/cost admission; no new DNA is acquired here.
+
+Later the same day, [E032's completed review](2026-11-03-e032-construction-and-information-priority.md)
+confirms that priority: most of the large Oral gain is associated with intact
+single-contig bins, while the E009 multi-contig gap persists. This changes the
+next-block decision, not the frozen measurement bytes or the unmeasured zero-depth
+counterfactual. No further selector coefficient is chosen from those outcomes.

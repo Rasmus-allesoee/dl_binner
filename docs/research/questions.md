@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-11-01
+Updated: 2026-11-03
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -15,6 +15,17 @@ Status: open. Opened: 2026-09-16.
 The candidate focus is contig loss/misassignment in fragmented prokaryotic assemblies with weak or distorted coverage. Separate information absence, representation failure, clustering error, and quality/refinement selection. Evidence: [thesis](../evidence/2026-09-16-thesis.md), [landscape](../evidence/2026-09-16-landscape.md). Related: H001; [D002](../decisions/D002-investigate-before-architecture.md).
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
+
+November 3: [E032's completed review](../../experiments/E032-biological-candidate-selection/comparison-review.json)
+is MODIFY: E009 no-GLM/GLM 10.2847%/10.1760% R95 fall modestly versus stronger E031;
+Oral ten-depth no-GLM reaches 34.3786%. [The trace audit](../../experiments/E032-biological-candidate-selection/trace-audit-reviewed.json)
+finds 162/219 Oral T90 targets in single-contig bins; long-contig eligibility is
+important construction evidence, not improved fragmented-genome representation.
+Joint recruitment has small positive paired effects here. [The decision](../evidence/2026-11-03-e032-construction-and-information-priority.md)
+keeps one provisional common constructor and chooses a coherent common BAM-derived
+multiscale information/representation block. Measurement-policy confounding and
+the zero-depth counterfactual remain unresolved; do not claim MAPQ causality or
+continue selector tweaks by default. All original criteria/results remain.
 
 2026-09-17: [E001](../../experiments/E001-coverage-thinning/README.md) now specifies the first test, with paired thinning on a fixed public assembly and native stage outputs. The [audit](../evidence/2026-09-17-targeted-audit.md) resolves enough input/normalization questions to implement it. Still open: no performance gap or avoidable loss has been observed.
 

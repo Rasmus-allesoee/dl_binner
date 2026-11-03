@@ -1,0 +1,20 @@
+{
+  "status": "PASS_PRIVATE_COMPACT_BACKUP_READBACK",
+  "uri": "gs://dl-binner-archive-167650584170/e032/selection-20261103T194814Z-bc93453/inspection-20261103T211958Z.tar.gz",
+  "generation": "1793740807381031",
+  "archive": {
+    "bytes": 13659040,
+    "sha256": "02bbe63e273e14367fee543629acf29398afb373d368c23f9a143c0632388e6f"
+  },
+  "members": 1672,
+  "logical_bytes": 50833775,
+  "producer_compressed_ceiling_bytes": 134217728,
+  "producer_logical_ceiling_bytes": 268435456,
+  "every_member_verified": true,
+  "readback_verified": true,
+  "export_USD_upper": 0.0015265166759490967,
+  "public_publication": false,
+  "credentials_included": false,
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+}

@@ -256,6 +256,10 @@ later short-contig recruitment, coverage filters and actual emitted eligibility.
 A native whole-tool comparison may have different eligibility from our learner;
 keep full-community recovery denominators and length/status strata, and do not
 call it a matched-cutoff ablation. Any common-input control must be prospective.
+When a change admits intact long contigs or changes the minimum contig count per
+bin, report single-contig and multi-contig recovery separately. Preserving valid
+whole-contig bins is useful construction/eligibility evidence; it does not by
+itself demonstrate better representation or clustering of fragmented genomes.
 
 An experiment's contig-length cutoff or available feature set is not a product
 constraint. Keep relevant short-contig methods in design comparisons; use separate
@@ -319,6 +323,10 @@ retaining the original competitive mapping/filter semantics. Remapping against a
 reduced reference can change placements and MAPQ; sliced full-reference summaries
 are not that treatment. A contig mean cannot reconstruct per-base/window coverage,
 breadth, variance or new alignment filters without suitable retained alignments.
+Pin the measurement procedure as well as the mapper: identity, MAPQ/BQ, read
+flags, mate overlaps, contig edges, denominators, sorting and zero handling can
+change the inputs. Verify actual tiny outputs when changing summary options;
+an option described as suppressing variance need not preserve mean semantics.
 Matching mapper versions does not establish matching depth measurements. Bind
 read flags, MAPQ/base quality, identity, edge/overlap rules and mean/variance
 denominators separately. Audit the actual pinned summarizer: disabling a variance

@@ -1,0 +1,106 @@
+{
+  "status": "PASS_READ_ONLY_INVENTORY_AND_REAL_TINY_JGI",
+  "community_depth_recomputed": false,
+  "features_changed": false,
+  "within_contig_variance_used_by_E032": false,
+  "paired_links_used_by_E032": false,
+  "E009_existing_BAMs": [
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam",
+      "bytes": 3781565849,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam",
+      "bytes": 4139872212,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam",
+      "bytes": 4096193878,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam",
+      "bytes": 4233074143,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam",
+      "bytes": 4081898122,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam",
+      "bytes": 4189258550,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam",
+      "bytes": 4136949462,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam",
+      "bytes": 4099177939,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam",
+      "bytes": 4161072973,
+      "index_exists": true
+    },
+    {
+      "path": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam",
+      "bytes": 4186238920,
+      "index_exists": true
+    }
+  ],
+  "samtools_available": true,
+  "jgi_available": true,
+  "samtools_binding": {
+    "bytes": 895984,
+    "sha256": "aa484d95148f4c8ddb6e2031ee2eaec94c69ffff8c13e5f1630c15f5c656cbe2"
+  },
+  "jgi_binding": {
+    "bytes": 333784,
+    "sha256": "5b1885be35cf906151ef5693fa8cac57edc67a022ba4a5b60478e4ef1dfb618e"
+  },
+  "tiny_tables": {
+    "default": "contigName\tcontigLen\ttotalAvgDepth\ttiny-sorted\ttiny-sorted-var\nopaque-A\t500\t1.5\t1.5\t3.7594\nopaque-Z\t500\t0\t0\t0\n",
+    "MAPQ20": "contigName\tcontigLen\ttotalAvgDepth\ttiny-sorted\ttiny-sorted-var\nopaque-A\t500\t1.125\t1.125\t2.11466\nopaque-Z\t500\t0\t0\t0\n",
+    "all-edges": "contigName\tcontigLen\ttotalAvgDepth\ttiny-sorted\ttiny-sorted-var\nopaque-A\t500\t1.2\t1.2\t3.36671\nopaque-Z\t500\t0\t0\t0\n",
+    "no-variance": "contigName\tcontigLen\ttotalAvgDepth\ttiny-sorted\nopaque-A\t500\t0\t0\nopaque-Z\t500\t0\t0\n"
+  },
+  "tiny_semantic_observations": {
+    "default": {
+      "mean": 1.5,
+      "source_prediction": 1.5,
+      "matches_source_prediction": true
+    },
+    "MAPQ20": {
+      "mean": 1.125,
+      "source_prediction": 1.125,
+      "matches_source_prediction": true
+    },
+    "all-edges": {
+      "mean": 1.2,
+      "source_prediction": 1.2,
+      "matches_source_prediction": true
+    },
+    "no-variance": {
+      "mean": 0.0,
+      "source_prediction": 1.4925,
+      "matches_source_prediction": false
+    }
+  },
+  "original_BAM_quickcheck": true,
+  "only_first_existing_BAM_header_read": true,
+  "source_review_tag": "v2.18 a51200652a8907629b83d63fa5fa6c2f6612d105",
+  "full_BAM_integrity_not_rehashed": true,
+  "Oral_private_BAM_metadata_audited_separately": true,
+  "review_status": "ACTUAL_TINY_OBSERVATIONS; NOT_COMMON_COMMUNITY_SUMMARY_ADMISSION",
+  "source_prediction_mismatch_preserved": true,
+  "no_variance_path_admitted": false,
+  "scalar_v2_18_source_integer_division_also_requires_attention": true
+}

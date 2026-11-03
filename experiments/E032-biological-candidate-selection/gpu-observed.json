@@ -1,0 +1,17 @@
+{
+  "status": "NOT_RUN_CAPACITY_BLOCKED",
+  "attempts": 1,
+  "compute_USD": 0,
+  "temporary_empty_disks_deleted": true,
+  "no_fallback": true,
+  "error": "RuntimeError(\"ERROR: (gcloud.compute.instances.create) Could not fetch resource:\\n---\\ncode: ZONE_RESOURCE_POOL_EXHAUSTED\\nerrorDetails:\\n- help:\\n    links:\\n    - description: Troubleshooting documentation\\n      url: https://cloud.google.com/compute/docs/resource-error\\n- localizedMessage:\\n    locale: en-US\\n    message: A n1-standard-8 VM instance with 1 nvidia-tesla-t4 accelerator(s) is\\n      currently unavailable in the us-central1-f zone. Alternatively, you can try\\n      your request again with a different VM hardware configuration or at a later\\n      time. For more information, see the troubleshooting documentation.\\n- errorInfo:\\n    domain: compute.googleapis.com\\n    metadatas:\\n      attachment: nvidia-tesla-t4:1\\n      vmType: n1-standard-8\\n      zone: us-central1-f\\n      zonesAvailable: ''\\n    reason: resource_availability\\nmessage: The zone 'projects/project-d17bd588-df31-488f-b16/zones/us-central1-f' does\\n  not have enough resources available to fulfill the request.  Try a different zone,\\n  or try again later.\\n\\n\")",
+  "scientific_source": "ec7ff25b24f3db428429d5b861e7a06c4d223ca8",
+  "GPU": "T4",
+  "shape": "n1-standard-8 / 30 GiB",
+  "zone": "us-central1-f",
+  "qualification_views": 128,
+  "measured_throughput": null,
+  "full_Oral_bank_admitted": false,
+  "quota_changed": false,
+  "retention_extended": false
+}
