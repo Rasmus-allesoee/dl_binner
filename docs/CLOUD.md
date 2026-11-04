@@ -1,5 +1,33 @@
 # Google Cloud workspace operations
 
+## November 4 E033 authorized fresh admission, before native start
+
+The owner now authorizes the prepared `c812eb8` E033 serial BAM pilot/three-mode
+comparison, $20 incremental gross / 36 cumulative hours, STOP at 36.25 hours.
+[Admission](../experiments/E033-multiscale-bam/execution-admission.json) records
+fresh signed-in Welcome credit DKK 1,678.93 Available / 85%, January 12, 2027
+expiry, Certain usage / Free Trial terms / net pricing, Paid account. November
+1–4 displayed gross/savings/net is DKK 24.86 / 24.86 / 0.00. The explicit more-than-
+24-hour delay warning is retained; reserve $35 for delayed usage. Current ordinary
+E2/RAM/IP/PD Catalog quotes and official GCS/network/credit terms were refreshed.
+This is credit-only coverage, not a promise that displayed usage is final billing.
+
+All 288 private object versions total 77,731,749,980 bytes; zero soft-deleted
+versions. Original stopped storage is about $7.61 per seven days under the separate
+$9 approval. New complete upper is $15.96 under $20, including conditional 100 GiB
+task storage/returns/export/operations/contingency, not double counting original
+30/300 GiB storage. November 11 active retention / November 18 approved automatic
+tail remain. Fresh API confirms only the existing TERMINATED e2-standard-8 and
+30/300/40 GiB disks; balanced quota 404 GiB, usage 340 GiB. E032's 40 GiB disk
+must receive its closed-tail collection/readback before release and conditional
+100 GiB provisioning. No quota expansion or original-disk formatting is admitted.
+
+The tested operations-only launcher binds actual producer/consumer schema,
+device/payload/source, current-boot held parent/watcher and provider STOP. Native
+Linux/runtime/pilot/full-shape gates are still pending. No new compute start is
+claimed by this record. Use private exact-commit sync for the inherited private
+history, retaining read-only GitHub; normal public sync stays preferred when safe.
+
 ## November 4 E033 local preparation; no new cloud execution
 
 [E033 operations](../experiments/E033-multiscale-bam/OPERATIONS.md) owns the new

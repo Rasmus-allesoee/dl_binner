@@ -1,6 +1,35 @@
 # E033 operations
 
-## Current boundary: preparation only
+## November 4 authorized execution admission
+
+The owner now authorizes the prepared science at `c812eb8`, the new $20 credit-only
+serial retained-BAM pilot and complete three-mode comparison, including the
+conditional 100 GiB balanced task disk. The November 11 active-retention and
+November 18 approved automatic-tail boundaries remain unchanged. Preparation's
+scientific source, wheel, defaults and 122-file lock remain byte-identical.
+
+[Fresh admission](execution-admission.json) records available Welcome credit,
+ordinary first-party product coverage, current Catalog prices, delayed-usage
+reserve, all object versions/tails and the current stopped resources/quota. The
+complete conservative quote is $15.96 under $20; existing approved storage is
+separate, about $7.61 for seven days under its $9 allowance. These are modeled
+gross amounts, not invoices. Public pricing/terms were refreshed November 4.
+
+The new operations-only `e033_launch.py` supplies and tests the complete actual
+phase/armer configuration, exact task-device baseline, native programs and
+release before a paid start. [The native launch lock](native-launch-lock.json)
+is separate from the unchanged scientific freeze. E032's complete accepted work
+and its previously missing closed-delivery/terminal/upload evidence must pass
+read-only collection and private readback before its old task disk is released.
+Source sync uses the approved private exact-commit transport because outgoing
+history contains private financial/account records; ordinary GitHub remains
+preferred when safe. No write-enabled key or history rewrite is needed.
+
+Native Linux/source/runtime/BAM/full-shape/schedule admission is still required.
+No changed measurement, fit, score or new cloud allocation is claimed by this
+pre-start record. Actual attempt/status will be recorded in native-observed.json.
+
+## Preserved preparation boundary
 
 The owner invokes E032's prompt at `ba7f9b5` on November 4. Local implementation,
 engineering checks and safe local cleanup are authorized. No VM start, paid cloud
@@ -192,8 +221,8 @@ actual headroom and quota. Collect/read back E032's protected closed-delivery ta
 and post-collector logs before releasing its old task disk. Prefer safe cleanup;
 provision no other resource or quota expansion. Stop before unclear/uncovered
 spending or dates outside retention. Sync the exact clean prepared commit read-only,
-using normal GitHub only if its complete history is safe; otherwise use the
-approved private exact-commit transfer without rewriting history.
+using normal GitHub if its complete history is safe (preferred); otherwise use the
+approved private exact-commit transfer (not preferred) without rewriting history.
 
 Arm/test the fresh current-boot/process held-parent watcher and independently read
 back provider STOP before release. Verify owned wheel/source/defaults, complete

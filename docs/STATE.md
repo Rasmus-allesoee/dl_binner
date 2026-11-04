@@ -2,6 +2,25 @@
 
 Updated: November 4, 2026 (Copenhagen). This is the single current handoff.
 
+## E033 execution authorized; fresh admission passed, native gates pending
+
+The owner authorizes [E033 operations](../experiments/E033-multiscale-bam/OPERATIONS.md)
+using prepared science `c812eb8`, under the new $20 / 36-hour envelope and
+conditional 100 GiB balanced task disk. [Fresh admission](../experiments/E033-multiscale-bam/execution-admission.json)
+passes signed-in credit, current ordinary SKU/coverage, delayed-usage reserve,
+existing storage and all-version/quota checks. The modeled complete upper remains
+$15.96; no new outcome or native admission follows from that financial check.
+The complete configuration producer and actual rendered launch programs pass
+local tests. Scientific source/wheel/defaults and all accepted evidence are unchanged.
+
+The existing E2 is independently observed TERMINATED, with original 30/300 GiB
+disks and E032's protected 40 GiB disk. Collect/read back its missing closed tail
+and terminal/upload logs before safe release. Native setup, new measurement and
+full-shape schedule gates precede six fits. No GPU, acquisition, remapping or new
+external binner is added. November 11 active retention / November 18 approved
+automatic tail remain hard boundaries. Exact source sync stays private because
+outgoing history includes private financial/account metadata.
+
 ## E033 common measured-information candidate prepared locally
 
 [E033](../experiments/E033-multiscale-bam/README.md) implements the coherent

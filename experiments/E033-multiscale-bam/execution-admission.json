@@ -1,0 +1,71 @@
+{
+  "status": "AUTHORIZED_FRESH_FINANCIAL_GATE_PASSED_NATIVE_PENDING",
+  "prepared_source": "c812eb8e9f4d79fd17d6b1c9dd229c9e7f3707f3",
+  "checked_UTC": "2026-11-04T15:16:42.809812+00:00",
+  "quote": {
+    "status": "FRESH_COMPLETE_CREDIT_ONLY_ADMISSION_NOT_INVOICE",
+    "checked_epoch": 1793805402.806825,
+    "currency_conversion_DKK_per_USD": 6.712250000006942,
+    "pricing_month_hours": 721.0,
+    "compute_RAM_IP_USD_hour": 0.27304567767858834,
+    "costs_USD": {
+      "compute_RAM_IP_36h": 9.829644396429181,
+      "new_100GiB_balanced_7days": 2.330097087376231,
+      "all_new_WAN_12GiB": 1.44,
+      "new_GCS_active_and_tail": 0.112,
+      "operations": 0.25,
+      "contingency": 2
+    },
+    "complete_gross_upper_USD": 15.961741483805412,
+    "ceiling_USD": 20,
+    "credit_DKK": 1678.93,
+    "credit_USD_at_catalog_FX": 250.1292413122669,
+    "delayed_usage_reserve_USD": 35,
+    "existing_storage_separate_approved_9_USD": 9,
+    "existing_storage_7day_complete_current_upper_USD": 7.607269903785975,
+    "remaining_after_credit_reserves_and_new_ceiling_USD": 186.1292413122669,
+    "all_versions": 77731749980,
+    "all_object_versions": 288,
+    "soft_deleted_bytes": 0,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+    "no_real_money": true,
+    "all_twenty_BAM_restore_GCP_same_region": "94.85 GB, no WAN and no Mac download",
+    "tail_export_upper_USD": 0.02,
+    "previous_success_contracts_not_repeated": true
+  },
+  "read_only_evidence": {
+    "browser-credit.json": {
+      "bytes": 565,
+      "sha256": "a32a43b24bfd151c0eafe67f4df7ba5985f588f65b5bf39fecd8ff2e5c9d9cdb"
+    },
+    "current-prices.json": {
+      "bytes": 9207,
+      "sha256": "3fc28b6dfb6ed509f54b1e441f3aa4f25779a0b029a3117724b39a6a7129dc40"
+    },
+    "storage-inventory.json": {
+      "bytes": 334750,
+      "sha256": "75fddbc012b1ad6776c6f6c83df6ccb02e620aac45e6e82f4aa7b93b43d1a5f1"
+    },
+    "complete-quote.json": {
+      "bytes": 1236,
+      "sha256": "d2108cbc9a7d173fbda90ba1a2d0475f8b496bb0ae50ae29fa4d72ab9fa366c8"
+    }
+  },
+  "local_free_bytes": 12536025088,
+  "VM_before": "TERMINATED",
+  "original_disks_GiB": [
+    30,
+    300
+  ],
+  "protected_task_GiB": 40,
+  "balanced_quota_GiB": 404,
+  "conditional_new_task_GiB": 100,
+  "public_sync": "Outgoing ancestry includes private account/financial records; approved private exact-commit transfer required, no write key",
+  "launch_tests": {
+    "tests": 2,
+    "status": "PASS",
+    "scope": "Actual complete producer validated by both consumers; real rendered outer/inner programs, payload mismatch refusal; not Linux execution"
+  },
+  "source_and_science_unmodified": true
+}

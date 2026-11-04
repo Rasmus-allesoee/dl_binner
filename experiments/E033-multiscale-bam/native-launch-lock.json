@@ -1,0 +1,37 @@
+{
+  "kind": "E033 operations-only native launch, prepared science c812eb8 unchanged",
+  "prepared_scientific_commit": "c812eb8e9f4d79fd17d6b1c9dd229c9e7f3707f3",
+  "files": {
+    "scripts/e033_launch.py": {
+      "bytes": 22138,
+      "sha256": "da0a22e09f8ff506a699ad4c023dd8780b1e933c2be45a7a3cf80702edf1e99d"
+    },
+    "tests/test_e033_launch.py": {
+      "bytes": 5236,
+      "sha256": "b4c797bde976e0d7e746454c623836b37f93fd25107e8691f73d78e7eff4beb7"
+    },
+    "scripts/e031_launch.py": {
+      "bytes": 23624,
+      "sha256": "4f2fb350414995c108643accdf2aff64fd0e080e4ca53ef3aa15d5d782c100ed"
+    },
+    "scripts/e021_portable_cloud.py": {
+      "bytes": 11874,
+      "sha256": "64137eb110b18aebf9a288bd698576fa5af49f6b13410f7ac5f093dfe22b29c2"
+    },
+    "scripts/e033_phase.py": {
+      "bytes": 19379,
+      "sha256": "7be5571cfdc600a7a38e62293c144e96d3e2e4a7f04151464471c0754c64d6d0"
+    },
+    "scripts/e033_arm.py": {
+      "bytes": 7063,
+      "sha256": "3627cbd6ddad8a0be5ef7fa4cb13cd4471215433e303600cc1a74b5776e5e685"
+    },
+    "experiments/E033-multiscale-bam/source-lock.json": {
+      "bytes": 18915,
+      "sha256": "95c375ddf0941f19afdda9778b67d9f3518373fa5c05e620e5d1694779dac5c1"
+    }
+  },
+  "producer_consumer_schema_tested": true,
+  "protected_old_task_release_requires_closed_verified_delivery": true,
+  "scientific_policy_changed": false
+}
