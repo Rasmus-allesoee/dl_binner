@@ -1,5 +1,25 @@
 # E033 operations
 
+## Running native handoff
+
+[Native observation](native-observed.json) records phase
+`multiscale-20261104T152005Z-a940769-r2`, clean operations source `5911e25` and
+unchanged `c812eb8` prepared science. Eight Linux gates/restore pass, including
+the complete 40-rule tiny DAG (116.6 seconds / 0.744 GB sampled RSS). Required
+real original input bytes and retained samtools 1.24 match. The sample-0 E009 BAM
+pilot is progressing; banks, full-shape schedule, six community fits and complete
+delivery are still pending. Synthetic tiny GLM/marker evidence does not substitute
+for actual community cache/input admission. No new quality result is claimed.
+
+Current-boot/PID watcher tests and independent RUNNING/provider STOP checks pass.
+Original first start is November 4 at 15:20:30.845 UTC; science/collection ends
+November 6 at 03:20:30.845 UTC, provider STOP 03:32:54.109 UTC (04:20/04:32
+Copenhagen). Initial setup failure is preserved; no clock or budget reset.
+E032's final tail is now privately verified and its old 40 GiB disk released.
+The approved new 100 GiB task disk is mounted, with separate source/task reserves.
+Keep it until new complete returns and closed terminal/delivery tail are preserved.
+[Current costs](cost-observed.json) remain preliminary, distinct from final billing.
+
 ## November 4 authorized execution admission
 
 The owner now authorizes the prepared science at `c812eb8`, the new $20 credit-only
@@ -203,7 +223,7 @@ threshold-based and not MIMAG HQ without RNA checks. Both communities remain
 development data; skin requires its remaining biological/overlap/truth/depth/
 protocol/cost admission. No threshold or per-bin truth-selected change.
 
-## Exact following prompt
+## Authorized execution prompt (November 4)
 
 Our goal is substantially closing the recovery gap with one shared binner. Read
 AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, E032's accepted review and
@@ -264,3 +284,77 @@ CPU, limitations and unchanged KEEP/MODIFY/ABANDON criteria. Recommend one stron
 next decision, keeping Q006 standalone selection and efficient full Oral GLM visible,
 and skin unscored pending complete independent admission. Update records/check/
 commit with structured what changed/why and give the next exact prompt.
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap with one shared binner. Read
+AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E033's design, frozen
+protocol/criteria, source/candidate/reuse/BAM/native-launch locks, setup recovery,
+native-observed.json and operations. Inspect phase
+`multiscale-20261104T152005Z-a940769-r2`, actual operations source `5911e25`,
+preserving the byte-identical prepared science at `c812eb8` and all accepted
+dev3/dev4/dev5/E009–E033 inputs, truth, models, results, source freezes and failures.
+
+First check GCP control-plane state, `e033-candidate/status` and private
+completion.json under
+`gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/`.
+Do not infer success from shutdown. If healthy and running, report real progress
+and leave its verified current-boot held-parent watcher/provider STOP intact;
+do not poll to completion. The original first-start clock is November 4 at
+15:20:30.845 UTC, science/collection deadline November 6 at 03:20:30.845 UTC and
+the read-back provider STOP November 6 at 03:32:54.109 UTC. The setup recovery
+did not reset the clock or repeat science. Keep the original new $20 credit-only
+scope and November 11 at 00:00 Copenhagen active-retention / approved November
+18 automatic-tail boundaries; any covered revision must be prospective and
+recorded, never real-money spending or a retention renewal.
+
+After independently verified shutdown, establish every setup/native gate, two
+pilot and eighteen remaining sample exits, sealed banks/new features, three
+full-shape probes/schedule admission, every serial scientific stage/seal, original
+input-after check, four complete collection/upload/readback exits and separate
+completion-delivery/watchdog evidence. Preserve failures; do not replay accepted
+work or start another job for inspection. Assess a specifically bounded recovery
+before any possible wake if required evidence is missing.
+
+Refresh live Welcome credit/scope/expiry, delayed usage, current eligible prices
+and original storage approval before export. Price measured allocation/uptime,
+task-disk lifetime, original-storage overlap, all object versions/tails and export
+separately from sampled process CPU. Verify archive metadata/generation, every
+compressed byte, physical member and exact alias of all four returns before
+diagnostics. E032's old closed tail is a separate verified original-prefix
+dependency; do not repeat its collector or assume the deleted 40 GiB disk exists.
+Preserve the new task disk until its own closed-delivery/terminal/post-collector
+tail is safely collected/read back; release it only after complete preservation.
+Never format/delete the original disks or unique inputs to make space.
+
+If all scientific contracts pass, independently review complete ordered contig/
+ten-sample/crop coordinates, actual BAM filter/counter/sorter/source proofs,
+measured zeros/availability/breadth/variance/HQ mass/reliability, full E031 online/
+EMA/predictor/Adam restoration, own-teacher/proposal/student information policy,
+20+20 epochs/seed11/batch256, collapse history, exact native reload/unit geometry/
+neighbors, unchanged E032 construction and complete pre/post DNA accounting.
+Retain the original JGI scalar failure and Mac portability tolerance. Do not
+claim shared new inputs erase historical differently filtered warm-start priors.
+
+Run only the frozen bounded local new-output conservative E009-v2 and separately
+named Oral provided-origin/known-shared diagnostics. Reuse older summaries without
+refitting/rescoring. Keep 156/799 full provided denominators, 3.3034% E009
+N quarantine and all length/origin/eligibility/marker/zero/unknown/non-target/
+excluded/unassigned/singleton/multicontig populations. Report parent/old/new
+refinement effects, target-level gains/losses, best-bin multicontig contribution,
+technical retrieval versus biological recovery, secondary threshold-based tiers
+and the unchanged KEEP/MODIFY/ABANDON criteria. Four numerical threads, 8 GB
+sampled RSS, one hour local review, at most 3 GiB staged and 8 GiB actual free
+reserve: stream/hash entire archives, stage modes sequentially, retain no complete
+compressed Mac duplicate or community BAM. Mark a missing contract unavailable;
+preserve its failure and the frozen gate instead of claiming a quality result.
+
+Recommend one strongest recovery-focused next block from the actual evidence,
+comparing coherent representation/information changes with consequential grouping
+alternatives. Keep Q006 standalone candidate-selection source work and efficient
+full Oral GLM concrete; E032 is not optimality evidence. Skin remains unscored
+pending its biological/overlap/ambiguity/unique-versus-origin/depth/protocol/cost
+admission. No tuning, new score campaign, refit, external binner, GPU qualification,
+confirmation acquisition or retention extension is included in inspection. Update
+records/check/commit with structured what changed/why and report actual results,
+costs/resources, limits, one next decision and the exact following prompt.

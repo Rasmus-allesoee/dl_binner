@@ -1,0 +1,354 @@
+{
+  "status": "RUNNING_NATIVE_GATES_PASSED_E009_PILOT",
+  "phase": "multiscale-20261104T152005Z-a940769-r2",
+  "source": "5911e2587d5c8353937fb71260464a038a1f46de",
+  "prepared_scientific_source": "c812eb8e9f4d79fd17d6b1c9dd229c9e7f3707f3",
+  "scientific_source_wheel_defaults_unchanged": true,
+  "root": "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/",
+  "observed_UTC": "2026-11-04T15:38:00.367699+00:00",
+  "provider_status": "RUNNING",
+  "workflow_complete": false,
+  "science_completed": false,
+  "community_fits_started": 0,
+  "new_quality_results_available": false,
+  "first_VM_start_epoch": 1793805630.845,
+  "current_boot_start_epoch": 1793805950.109,
+  "science_collection_deadline_epoch": 1793935230.845,
+  "provider_STOP_epoch": 1793935974.109,
+  "limits": {
+    "seconds": 129600,
+    "provider_STOP_seconds": 130500,
+    "ceiling_USD": 20,
+    "threads": 4,
+    "RSS_bytes": 26000000000,
+    "reserve_bytes": 26843545600,
+    "extra_bytes": 64424509440,
+    "slice_compressed_bytes": 3221225472,
+    "slice_logical_bytes": 8589934592,
+    "aggregate_compressed_bytes": 12884901888,
+    "local_staged_bytes": 3221225472,
+    "local_free_reserve_bytes": 8589934592,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+  },
+  "financial_admission": {
+    "bytes": 2696,
+    "sha256": "81ecb2652d17292d34741fa98e852a8ada03c94e7f74267437a7d2c14c69e685"
+  },
+  "current_snapshot": {
+    "bytes": 33546,
+    "sha256": "2dce27df322b0281034c52149a73a203b4b0f8609676838054ae6369a3c5c6b6"
+  },
+  "native_gate_actual_exits": {
+    "logs/package-install.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 3.7147832539999968,
+      "peak_sampled_rss_bytes": 100499456,
+      "sampled_cpu_seconds": 2.9099999999999997,
+      "stop_reason": null
+    },
+    "logs/restore-original-E031-states.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 62.493941065,
+      "peak_sampled_rss_bytes": 167239680,
+      "sampled_cpu_seconds": 73.64000000000001,
+      "stop_reason": null
+    },
+    "logs/native-test_multiscale_learning.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 36.89836315699998,
+      "peak_sampled_rss_bytes": 406872064,
+      "sampled_cpu_seconds": 148.53,
+      "stop_reason": null
+    },
+    "logs/native-test_multiscale_measurement.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 0.7219577909999941,
+      "peak_sampled_rss_bytes": 83628032,
+      "sampled_cpu_seconds": 0.9500000000000002,
+      "stop_reason": null
+    },
+    "logs/actual-native-serial-tiny.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 116.647590697,
+      "peak_sampled_rss_bytes": 744472576,
+      "sampled_cpu_seconds": 272.54,
+      "stop_reason": null
+    },
+    "logs/workflow-origin.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 0.7434787220000061,
+      "peak_sampled_rss_bytes": 46985216,
+      "sampled_cpu_seconds": 0.25,
+      "stop_reason": null
+    },
+    "logs/native-complete-runtime.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 30.242911756999987,
+      "peak_sampled_rss_bytes": 294776832,
+      "sampled_cpu_seconds": 29.249999999999996,
+      "stop_reason": null
+    },
+    "logs/native-plan-contract.exit.json": {
+      "exit_code": 0,
+      "wall_seconds": 0.2767331070000125,
+      "peak_sampled_rss_bytes": 36507648,
+      "sampled_cpu_seconds": 0.15000000000000036,
+      "stop_reason": null
+    }
+  },
+  "complete_old_inputs_verified_before_restore": true,
+  "restored_E031_state_stream_passed": true,
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e033-multiscale-20261104T152005Z-a940769-r2.service",
+    "watchdog_timer": "e033-multiscale-20261104T152005Z-a940769-r2-exit.timer",
+    "watchdog_service": "e033-multiscale-20261104T152005Z-a940769-r2-exit.service",
+    "process": {
+      "pid": 2078,
+      "start_ticks": 10755,
+      "command_sha256": "094a45e984b5d0109bb12564c0420a853cc1a9e975c58fae61a198479e32a3cb"
+    },
+    "boot_id": "e82bc613-05f6-4b6e-beea-9a19108edca7",
+    "source_commit": "5911e2587d5c8353937fb71260464a038a1f46de",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1793805630.845,
+    "hard_deadline_epoch": 1793935230.845,
+    "provider_stop_epoch": 1793935974.109,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "live_watcher": {
+    "boot_id": "e82bc613-05f6-4b6e-beea-9a19108edca7",
+    "checked_utc": "2026-11-04T15:37:39.657281+00:00",
+    "decision": "workflow alive",
+    "expected_process": {
+      "command_sha256": "094a45e984b5d0109bb12564c0420a853cc1a9e975c58fae61a198479e32a3cb",
+      "pid": 2078,
+      "start_ticks": 10755
+    },
+    "observed_process": {
+      "command_sha256": "094a45e984b5d0109bb12564c0420a853cc1a9e975c58fae61a198479e32a3cb",
+      "pid": 2078,
+      "start_ticks": 10755
+    },
+    "shutdown": false,
+    "workflow_root": "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2"
+  },
+  "systemd": {
+    ".service": "active",
+    "-exit.timer": "active"
+  },
+  "source_status": "",
+  "native_sorter": {
+    "bytes": 3221,
+    "sha256": "a20a67a17a072f4fa936add9656d053987444378f5131035d6ad918bf5de482c"
+  },
+  "native_sorter_version": "samtools/HTSlib 1.24 exact accepted binary; new measurement pysam 0.23.3 bundled HTSlib 1.21",
+  "current_stage": "sample-00: E009 sample-0 retained-BAM pilot",
+  "latest_BAM_progress": [
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:34:42Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 1000000,
+      "accepted_reads": 975778,
+      "accepted_aligned_bases": 145335860,
+      "reference_index": 6070,
+      "position": 12275
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:35:01Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 2000000,
+      "accepted_reads": 1948714,
+      "accepted_aligned_bases": 290354965,
+      "reference_index": 11115,
+      "position": 1872
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:35:19Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 3000000,
+      "accepted_reads": 2940189,
+      "accepted_aligned_bases": 438675372,
+      "reference_index": 12999,
+      "position": 14480
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:35:38Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 4000000,
+      "accepted_reads": 3916564,
+      "accepted_aligned_bases": 584364697,
+      "reference_index": 17448,
+      "position": 1647
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:36:08Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 5000000,
+      "accepted_reads": 4902023,
+      "accepted_aligned_bases": 731542613,
+      "reference_index": 20821,
+      "position": 110571
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:36:40Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 6000000,
+      "accepted_reads": 5887715,
+      "accepted_aligned_bases": 878822345,
+      "reference_index": 24159,
+      "position": 44955
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:37:10Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 7000000,
+      "accepted_reads": 6868199,
+      "accepted_aligned_bases": 1025196425,
+      "reference_index": 28156,
+      "position": 129595
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:37:28Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 8000000,
+      "accepted_reads": 7853284,
+      "accepted_aligned_bases": 1172261294,
+      "reference_index": 31978,
+      "position": 32403
+    },
+    {
+      "stage": "multiscale_BAM_progress",
+      "utc": "2026-11-04T15:37:48Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "records": 9000000,
+      "accepted_reads": 8837960,
+      "accepted_aligned_bases": 1319197942,
+      "reference_index": 36247,
+      "position": 28433
+    }
+  ],
+  "completed_sample_summaries": 0,
+  "new_scientific_stage_seals": 0,
+  "remaining_gates": [
+    "Complete both BAM pilots and full serial twenty-sample bank",
+    "Native full-shape throughput/RSS/complete remaining schedule before fits",
+    "All six teacher/student fits, graph/construction/audits, input-after, four complete collections/readbacks, final delivery and verified shutdown"
+  ],
+  "task_disk": {
+    "name": "e033-task-1793805630",
+    "id": "1578633013833953331",
+    "GiB": 100,
+    "device": 2080,
+    "filesystem_baseline": {
+      "total": 105089261568,
+      "used": 24576,
+      "free": 105072459776
+    },
+    "source_filesystem": {
+      "total": 316733652992,
+      "used": 287263563776,
+      "free": 29453312000
+    }
+  },
+  "old_E032_task_released_after_verified_closed_delivery": {
+    "status": "PASS_OLD_TASK_RELEASE_ADMITTED",
+    "old_disk": "e032-task-1793735314",
+    "old_root": "/srv/dl_binner/experiments/e032/selection-20261103T194814Z-bc93453",
+    "work_members": 70,
+    "all_old_work_bytes_verified": true,
+    "complete_logs_gates_tail_collected": true,
+    "archive": {
+      "bytes": 1169084,
+      "sha256": "31b7e16515c542e416d7292cbba672a3b231455d90d5c265b18b72bf47d1970b"
+    },
+    "delivered": {
+      "e033-evidence.tar.gz": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/e033-evidence.tar.gz",
+        "generation": "1793805685113228",
+        "binding": {
+          "bytes": 1169084,
+          "sha256": "31b7e16515c542e416d7292cbba672a3b231455d90d5c265b18b72bf47d1970b"
+        },
+        "readback_verified": true
+      },
+      "inventory.json": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/inventory.json",
+        "generation": "1793805685539236",
+        "binding": {
+          "bytes": 175422,
+          "sha256": "032ec5b254d6a614a9fb152e23e4d87a13a0799701824f4afb52e2cedd9e8792"
+        },
+        "readback_verified": true
+      },
+      "collection.json": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/collection.json",
+        "generation": "1793805685900851",
+        "binding": {
+          "bytes": 66932,
+          "sha256": "26ae21066a1745adf1dfbc88c5dfb03e4a4abe489acdff8d68565496b34e7239"
+        },
+        "readback_verified": true
+      },
+      "e033-evidence.tar.gz.sha256": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/e033-evidence.tar.gz.sha256",
+        "generation": "1793805686318569",
+        "binding": {
+          "bytes": 87,
+          "sha256": "528c29c8c6205a7a51fe5c7488bd14c55d456455e8a869658cc39c44f2949d90"
+        },
+        "readback_verified": true
+      }
+    },
+    "local_preservation_root": "/srv/dl_binner/experiments/e033/closed-E032-multiscale-20261104T152005Z-a940769",
+    "epoch": 1793805686.442456
+  },
+  "setup_failure": {
+    "bytes": 3274,
+    "sha256": "edafc76e7fdfe3a8fa29cf2eddbcd2662aafb2e30ed4821c1b1b5b95e26460b3"
+  },
+  "failure_preserved_no_science_replayed": true,
+  "actual_outcomes_not_inferred_from_progress": true,
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "approved_automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "local_free_bytes": 13514944512,
+  "real_progress_observed_over_minutes": true,
+  "no_error_reported_at_observation": true,
+  "healthy_long_work_handed_off_not_polled_to_completion": true,
+  "independent_handoff_control_plane": {
+    "VM.json": {
+      "bytes": 33540,
+      "sha256": "d54d0c26b468161cf2c44e0f401df097e33fd9c0326625fd7f0b9c10704cc447"
+    },
+    "guest.json": {
+      "bytes": 252,
+      "sha256": "9803d762c9bc987833d7b1df150c82f439a70557158eeccac479a8ff5d25ec52"
+    },
+    "disks.json": {
+      "bytes": 3894,
+      "sha256": "3d3862103e10dffed8167ae2d8cb69763cf7d0e1059c701a0422fbb381763c2f"
+    }
+  },
+  "new_100GiB_task_disk_confirmed_with_original_30_300_only": true
+}

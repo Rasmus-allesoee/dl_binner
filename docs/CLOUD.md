@@ -1,5 +1,37 @@
 # Google Cloud workspace operations
 
+## November 4 E033 supervised native pilot running
+
+[Native receipt](../experiments/E033-multiscale-bam/native-observed.json) records
+`multiscale-20261104T152005Z-a940769-r2`, source `5911e25`, unchanged science
+`c812eb8`. Eight actual Linux setup/measurement/learning/DAG/restore exits pass;
+the E009 sample-0 retained-BAM pilot is progressing. No new fit/score or whole
+completion is claimed. Current boot/PID/start/command watcher tests and restart
+refusal pass, its timer/parent are active, and independent control-plane/guest
+attributes report RUNNING. Driver deadline November 6 at **04:20:30 Copenhagen**,
+provider STOP **04:32:54**; both derive from original first start November 4 at
+16:20:30. The pre-science IAP banner failure/stop remain recorded; the 45-second
+same-alias handshake recovery reuses passed work and never resets that clock.
+
+E032's closed-delivery/terminal/upload capsule is now fully collected and privately
+read back; all 70 original work members match its accepted archive. Its exact old
+40 GiB task disk is safely released afterward. New approved 100 GiB balanced
+`e033-task-1793805630`, ID `1578633013833953331`, is positively identified/formatted/
+mounted; original 30/300 GiB disks stay unchanged. Actual source free 27.43 GiB
+does not meet complete peak plus 25 GiB reserve; accepted inputs, required runtime
+and unbacked E021 assets are preserved. Balanced usage is within the 404 GiB quota.
+Both filesystem/device reserves and cumulative 60 GiB task growth are monitored.
+
+[Cost record](../experiments/E033-multiscale-bam/cost-observed.json) separates the
+closed first allocation, ongoing second allocation, sampled CPU, new disk lifetime
+and original-storage overlap. About $0.06 CPU/RAM/IP is priced through the first
+pilot observation; complete conservative upper is still $15.96 of the new $20.
+No result archive is exported to the Mac yet. Credit delta is not an invoice.
+November 11 active retention / November 18 approved automatic tail stay; collect
+the new closed tail before any later task-disk release. Leave healthy work under
+its verified supervision and use [inspection](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
+after completion. No extra GPU/resource/acquisition/tool scope is added.
+
 ## November 4 E033 authorized fresh admission, before native start
 
 The owner now authorizes the prepared `c812eb8` E033 serial BAM pilot/three-mode

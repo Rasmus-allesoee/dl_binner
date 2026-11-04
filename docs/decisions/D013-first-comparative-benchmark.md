@@ -1,5 +1,12 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+November 4 execution update: the owner separately authorizes E033's new $20
+credit-only pilot/three-mode comparison and conditional 100 GiB task disk. Fresh
+complete admission passes; [native evidence](../../experiments/E033-multiscale-bam/native-observed.json)
+records passed Linux gates and the supervised retained-BAM pilot. Outcomes are
+pending. No scientific rule, baseline, retention boundary or confirmation scope
+changes; the preparation-authority statements below are historical snapshots.
+
 ## E033 shared measured-information comparison prepared, November 4
 
 The owner authorizes [local E033 implementation](../../experiments/E033-multiscale-bam/design.md)

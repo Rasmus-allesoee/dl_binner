@@ -1,0 +1,32 @@
+{
+  "status": "ONGOING_MEASURED_ALLOCATION_AND_STORAGE_UPPER_NOT_INVOICE",
+  "phase": "multiscale-20261104T152005Z-a940769-r2",
+  "observed_UTC": "2026-11-04T15:38:00.367699+00:00",
+  "new_original_ceiling_USD": 20,
+  "complete_forecast_upper_USD": 15.961741483805412,
+  "compute_RAM_IP_USD_hour": 0.27304567767858834,
+  "closed_first_allocation_seconds": 125.10999989509583,
+  "current_allocation_seconds_to_observation": 730.2586991786957,
+  "total_VM_allocation_seconds_to_observation": 855.3686990737915,
+  "compute_RAM_IP_to_observation_USD": 0.06487631280657108,
+  "current_allocation_not_final": true,
+  "common_clock_elapsed_including_stopped_gap_seconds": 1049.5226991176605,
+  "new_100GiB_disk_created_UTC": "2026-11-04T15:27:24.490000+00:00",
+  "new_task_storage_through_November11_upper_USD": 2.1018473955925043,
+  "original_30_300_storage_separate_9_USD_approval": true,
+  "original_storage_month_USD": 31.2,
+  "old_40GiB_E032_disk_released": true,
+  "source_of_actual_original_disk_release": {
+    "bytes": 3131,
+    "sha256": "b60665022c5e8abec4ed02d478e702e84027133f586f2d7fc5124292fab33e15"
+  },
+  "sampled_process_CPU_separate_from_VM_allocation": true,
+  "passed_gates_sampled_CPU_seconds": 528.22,
+  "new_Mac_result_archive_export_bytes": 0,
+  "private_old_tail_archive_bytes": 1169084,
+  "GCS_server_readback_not_WAN_export": true,
+  "bucket_operations_not_exact_invoice": true,
+  "credit_delta_not_attributed_as_invoice": true,
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "approved_automatic_tail_end": "2026-11-18T00:00:00+01:00"
+}

@@ -4,8 +4,11 @@
 community outcomes. [Operations](OPERATIONS.md) owns the separate execution
 request, native gates and November 11 boundary. [Protocol](protocol.json),
 [candidate](candidate-lock.json), [source](source-lock.json), [reuse](reuse-lock.json)
-and [twenty BAMs](BAM-manifest.json) bind exact inputs/defaults. This experiment is
-**locally implemented and tested; no community or cloud execution has occurred**.
+and [twenty BAMs](BAM-manifest.json) bind exact inputs/defaults. The authorized
+[native phase](native-observed.json) is **running its E009 BAM pilot** after eight
+passed Linux gates/restore, exact source/input checks and verified supervision.
+No new community fit or recovery result is yet claimed. [Costs](cost-observed.json)
+separate current allocation from the complete forecast and final billing.
 
 The candidate preserves E031 state, adds measured parent/crop breadth/dispersion/
 confidence to the explicit depth branch, and keeps E032's common constructor fixed.

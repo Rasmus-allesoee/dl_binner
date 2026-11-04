@@ -1,5 +1,11 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+November 4 execution update: separately authorized [E033](../../experiments/E033-multiscale-bam/native-observed.json)
+has passed native engineering gates and begun the supervised BAM pilot. Keep the
+unchanged common bundle and E032 constructor while collecting prospective evidence;
+no new recovery outcome, optimal selector or causal component win is claimed.
+The local-preparation authority described below is preserved history.
+
 ## E033 coherent measured-information/learning bundle, November 4
 
 The owner authorizes [local E033 implementation](../../experiments/E033-multiscale-bam/design.md)

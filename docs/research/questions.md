@@ -17,8 +17,11 @@ The candidate focus is contig loss/misassignment in fragmented prokaryotic assem
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
 
 November 4: [E033](../../experiments/E033-multiscale-bam/README.md) implements the
-shared parent/window coverage and reliability-aware learning block locally. No
-community measurement or new recovery score is claimed. Its source-backed JGI
+shared parent/window coverage and reliability-aware learning block. Its separately
+authorized [native phase](../../experiments/E033-multiscale-bam/native-observed.json)
+passes Linux gates and is measuring the first retained-BAM pilot under verified
+supervision. Complete banks, community fits and new recovery scores are pending.
+Its source-backed JGI
 scalar-counter diagnosis preserves the old failure and does not alter E009/E024
 depths. Q006 separately retains candidate selection as later research.
 

@@ -2,7 +2,44 @@
 
 Updated: November 4, 2026 (Copenhagen). This is the single current handoff.
 
-## E033 execution authorized; fresh admission passed, native gates pending
+## E033 native gates passed; supervised retained-BAM pilot running
+
+[Native receipt](../experiments/E033-multiscale-bam/native-observed.json) records
+phase `multiscale-20261104T152005Z-a940769-r2` at exact clean operations source
+`5911e25`, with byte-identical prepared scientific source/wheel/defaults `c812eb8`.
+All eight workflow/install/complete-runtime/plan/measurement/learning/tiny-DAG/
+original-state restore gates pass. The actual Linux 40-rule engineering DAG
+passes in 116.6 seconds at 0.744 GB sampled tree RSS. GLM inference/marker calls
+in that tiny fixture are synthetic; required real community caches are byte-verified.
+The E009 sample-0 BAM pilot has processed 9 million records normally.
+No full bank, community fit, quality result or whole completion is claimed yet.
+
+Fresh boot/PID/start/command watcher and native live/normal/crash/restart-refusal
+tests pass; systemd parent and timer are active and GCP independently reports
+RUNNING. Original first start November 4 at **16:20:30 Copenhagen** remains the
+common clock. Science/collection deadline is **November 6 at 04:20:30**, read-back
+provider STOP **04:32:54**. The preserved initial IAP banner timeout stopped before
+any E033 gate/science; the tested operational recovery reuses E032's verified
+tail and keeps the original clock/$20 scope, with no scientific replay.
+
+All 70 E032 work members and its missing final logs/tail now pass private
+collection/readback. Only then was its old 40 GiB disk released. Actual source
+free is 27.43 GiB; no reviewed regenerable allowlist supplies the 80 GiB complete
+peak-plus-reserve requirement while preserving accepted inputs/assets. The approved
+single 100 GiB balanced task disk is mounted and device-bound; original 30/300 GiB
+disks remain. [Current cost](../experiments/E033-multiscale-bam/cost-observed.json)
+is about $0.06 CPU/RAM/IP through the recorded observation, not final spend; complete
+upper remains $15.96 under $20, with original storage separately covered.
+
+After real progress/supervision verification, leave this healthy long phase
+running. [The next exact prompt](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
+inspects actual exits/delivery/shutdown and every archive/member/alias before new
+frozen diagnostics. Full pilot and measured-bank/full-shape schedule gates still
+precede all six fits; no new mapping, external tool, GPU or confirmation is added.
+November 11 active retention / November 18 approved automatic tail remain. Keep
+the new task disk until its own closed-delivery/terminal tail is preserved.
+
+## E033 pre-start authorization and admission (preserved)
 
 The owner authorizes [E033 operations](../experiments/E033-multiscale-bam/OPERATIONS.md)
 using prepared science `c812eb8`, under the new $20 / 36-hour envelope and
