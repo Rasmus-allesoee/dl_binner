@@ -47,9 +47,10 @@ def inspect_wheel(path,accepted):
     if {v for v in dependencies if ';' not in v}!={'numpy==1.26.4','torch==2.2.2','networkx==3.4.2','threadpoolctl==3.5.0'}:
         raise ValueError('Preserved base dependency metadata changed')
     candidate = {v.strip() for v in (ROOT/'requirements/candidate-cpu.txt').read_text().splitlines() if '==' in v}
-    if {v.split(';')[0] for v in dependencies if ';' in v} != candidate or any(
-            v.split(';')[1] != 'extra=="candidate"' for v in dependencies if ';' in v):
-        raise ValueError('Candidate optional dependency metadata changed')
+    optional={v for v in dependencies if ';' in v}
+    expected_optional={v+';extra=="candidate"' for v in candidate}|{'pysam==0.23.3;extra=="multiscale"'}
+    if optional!=expected_optional or len(optional)!=sum(';' in v for v in dependencies):
+        raise ValueError('Candidate/multiscale optional dependency metadata changed')
     if 'dl-binner = dl_binner.cli:main' not in files[DIST+'entry_points.txt'].decode():raise ValueError('Missing installed CLI')
     rows=list(csv.reader(io.StringIO(files[DIST+'RECORD'].decode())))
     if len(rows)!=len(files) or {r[0] for r in rows}!=set(files):raise ValueError('Wheel RECORD set mismatch')

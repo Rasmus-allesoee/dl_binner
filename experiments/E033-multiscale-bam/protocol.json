@@ -1,0 +1,39 @@
+{
+  "status": "PROSPECTIVE_LOCAL_PREPARATION_NO_COMMUNITY_OUTCOMES",
+  "same_version_all_modes": true,
+  "units": [
+    "E009-noGLM",
+    "E009-GLM",
+    "oral-noGLM"
+  ],
+  "teacher_epochs": 20,
+  "student_epochs": 20,
+  "seed": 11,
+  "batch_size": 256,
+  "old_reconstruction": {
+    "composition": 1.0,
+    "depth": 0.1
+  },
+  "parent_depth": "shared newly measured",
+  "crop_depth": "genuine exact retained interval plus explicit parent context",
+  "GLM_policy": "on/off propagated through retained initialization, adapted teacher, proposals, student; no hidden GLM in no-GLM modes",
+  "grouping": "unchanged E023/E030 candidate producers and common E032 selection/joint acceptance; no dataset routing",
+  "primary": "frozen full-reference weighted R95 / T90",
+  "full_reference_targets": {
+    "E009": 156,
+    "oral": 799
+  },
+  "E009_N_quarantine_fraction": 0.033034,
+  "oral_truth": "provided-origin oracle with known-shared sensitivity, not unique-identifiability proof",
+  "KEEP": "No R95/T90 loss against E032 in any mode, >=0.5 percentage point E009 gain, no best-bin multi-contig R95-contribution loss",
+  "MODIFY": "Useful gain with trade-off or smaller effect",
+  "ABANDON": "No R95 gain in any mode, or E009 loses >=1 point without >=0.5 point gain elsewhere",
+  "integrity_failure": "NOT_ASSESSED",
+  "selection_optimality_not_established": true,
+  "baselines_rescored": false,
+  "skin_acquired_this_task": false,
+  "skin_previously_local_and_unscored": true,
+  "optional_parent_mean_only_control_included": false,
+  "bundle_not_pure_information_causal_test": true,
+  "historical_depth_filter_priors_retained_in_E031_initialization": true
+}

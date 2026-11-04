@@ -72,7 +72,7 @@ def main():
         probes={}
         for label,modules in {'tensor':['dl_binner','numpy','torch','threadpoolctl'],
                              'graph':['scipy','sklearn','numba','pynndescent','igraph','leidenalg'],
-                             'markers':['pyrodigal','pyhmmer','archspec']}.items():
+                             'markers':['pyrodigal','pyhmmer','archspec'],'BAM':['pysam']}.items():
             print('Native isolated group begin: '+label,flush=True)
             code='''import importlib,json,sys
 from pathlib import Path

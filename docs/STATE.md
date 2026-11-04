@@ -1,6 +1,58 @@
 # Current Research State
 
-Updated: November 3, 2026 (Copenhagen). This is the single current handoff.
+Updated: November 4, 2026 (Copenhagen). This is the single current handoff.
+
+## E033 common measured-information candidate prepared locally
+
+[E033](../experiments/E033-multiscale-bam/README.md) implements the coherent
+BAM-derived parent/window information and warm-start representation upgrade on
+`multiscale-bam-representation`, from `ba7f9b5`. [Design](../experiments/E033-multiscale-bam/design.md)
+and [protocol](../experiments/E033-multiscale-bam/protocol.json) precede changed
+community outcomes. Exact streamed CIGAR/NM moments, breadth/dispersion/exposure/
+validity and reliability-aware fusion feed the common own-teacher/pair/student
+path; E031 weights/EMA/predictor/Adam are restored. All new inputs use shared
+measurement, while historical depth priors remain encoded in the warm-start state.
+E032 selection stays provisional and fixed; [Q006](research/questions.md#q006)
+keeps standalone bin-selection alternatives open for later source-informed work.
+
+[Local evidence](../experiments/E033-multiscale-bam/local-observed.json) includes
+real tiny BAM versus independent SAM/per-base counters, 20+20-epoch learning in
+both GLM availability modes, exact reload, unit geometry, isolated native graph
+readers and a serial three-mode DAG with complete E032 pre/post exports/no-op
+resume/strict collection. GLM inference and cached biological marker calls are
+explicitly synthetic; no detector, community fit/score or Linux admission is
+claimed. All accepted E009–E032 data/truth/results/source/failures remain immutable.
+The complete installed suite passes 98 tests across 17 isolated modules; final
+focused checks pass 10 product and 6 operations tests. The 40-rule tiny DAG passes
+in 115.6 seconds at 0.595 GB sampled peak RSS, including all three new review readers.
+[The new audit](evidence/2026-11-04-multiscale-coverage-and-storage.md) explains the
+JGI no-variance zero from retained huge-counter warnings and the source's fresh
+uninitialized array, plus separate integer division. Original failed receipts stay;
+E009/E024 did not use that scalar path. No old depth table changed.
+
+[Cleanup](../experiments/E033-multiscale-bam/local-cleanup.json) removes 9.217 GB of
+regenerable cache/exact-duplicate logical bytes. E005 shrinks by about half; its
+current workflow/mapping interpreters, old archives, all unique accepted evidence
+and failure logs remain. No source/runtime base required by current work was removed.
+
+[Operations](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
+proposes a separately authorized **$20 / 36-hour** serial two-BAM pilot, all-twenty
+measurement and three-mode/six-fit comparison on the existing E2/32 GiB, with one
+conditional 100 GiB balanced task disk if safe cleanup is insufficient. The complete
+conservative price is about **$15.96**, not a bill or fresh credit admission. Native
+Linux/pysam/source/dictionary/full-shape throughput/RSS/schedule gates remain.
+No VM, community work, GPU request, paid cloud operation, quota or resource change
+occurred in preparation. Last independently verified VM state remains E032's
+TERMINATED handoff below. New commits stay local because outgoing history retains
+private financial/account metadata; ordinary public push is preferred when safe.
+
+Keep E032's stopped task disk protected until its original closed-delivery tail
+and post-collector logs are verified at the next authorized session. Active storage
+ends **November 11 at 00:00 Copenhagen**, approved automatic tail November 18; no
+renewal or old-budget carryover. [Oral GLM](../experiments/E033-multiscale-bam/oral-GLM-milestone.json)
+has a concrete separate unchanged 128-view qualification and full-bank/state-
+transition admission case, with no new throughput. Skin remains unscored with
+biological/overlap/unique-versus-origin truth/depth/protocol/cost dependencies.
 
 ## E032 completed/reviewed; common measured information is next
 
@@ -33,8 +85,9 @@ upgrade** next, with E032 as a provisional common development constructor and
 stronger E009 E023 references preserved. Do not continue selector tweaks by default.
 [Depth/source audit](evidence/2026-11-03-depth-and-standalone-candidate-audit.md)
 confirms all 20 retained BAMs can support a shared pinned procedure without
-remapping (sort Oral first). Zero-depth effects remain unmeasured; JGI's unexpected
-no-variance tiny mean of zero is unresolved/unadmitted. No community depth changed.
+remapping (sort Oral first). Zero-depth effects remain unmeasured. JGI's unexpected
+no-variance zero was unresolved in E032; the retained-log/source diagnosis is now
+recorded in E033 above. That scalar path stays unadmitted. No community depth changed.
 
 The sole T4-f request is capacity-blocked before boot; both empty disks are removed,
 no GPU throughput is measured and no more attempt is authorized here. Efficient

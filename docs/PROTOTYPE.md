@@ -415,3 +415,24 @@ contracts, complete DNA exports and separately authorized comparison scope.
 ## Common information candidate (E027, research API)
 
 The separately frozen [E027 protocol](../experiments/E027-common-information-binner/protocol.json) exposes `dl_binner.unified.cache`, `training`, `graph` and `grouping` in the built wheel. This experimental candidate is not a promotion over the accepted CLI baseline. The source-bound research DAG owns admission → fresh bootstrap → own-teacher pairs → marker student → identical graded grouping → complete assignment exports. Optional frozen GLM propagates through the whole information path. New manifests admit genuine depth to unchanged DNA arrays read-only; they never alter accepted caches. [Operations](../experiments/E027-common-information-binner/OPERATIONS.md) owns actual native/software checks and resource status.
+
+## Common BAM-derived multiscale candidate (E033, research API)
+
+[E033](../experiments/E033-multiscale-bam/README.md) adds installed
+`dl_binner.multiscale` measurement/cache/model/pair/stage modules. It leaves the
+accepted generic and earlier candidate algorithms unchanged. The candidate extra
+includes pinned pysam 0.23.3; the smaller `multiscale` extra installs just that
+reader on top of the ordinary package. No reference database or truth is an input.
+
+The explicit stage help is `python -I -B -m dl_binner.multiscale.stage --help`.
+One sorted full-reference BAM produces a checksum-bound exact parent/four-window
+moment cache. A complete ordered bank creates a separate new parent-depth feature
+artifact, never edits an old table. The learning stages restore accepted E031
+state, adapt their own teacher, generate own-teacher marker proposals and continue
+the student with measured parent/window evidence and exact reload. The bounded
+[serial workflow](../experiments/E033-multiscale-bam/Snakefile) uses separate graph
+workers and fixed E032 selection. Training and all exported partitions share unit
+geometry; every DNA row and unknown/zero/missing/excluded/unassigned state remains
+explicit. This is an experimental bundle with actual tiny contracts, not an
+automatic default switch or a demonstrated community recovery improvement. Native
+Linux/HTSlib/full-shape/resource gates and new execution authorization remain.

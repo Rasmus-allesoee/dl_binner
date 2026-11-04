@@ -1,0 +1,68 @@
+{
+  "status": "SOURCE_REVIEW_AND_RETAINED_FAILURE_DIAGNOSIS_NO_NEW_NATIVE_RUN",
+  "JGI": {
+    "status": "SOURCE_AND_RETAINED_NATIVE_FAILURE_DIAGNOSED_NO_RERUN",
+    "source_commit": "a51200652a8907629b83d63fa5fa6c2f6612d105",
+    "files": {
+      "artifacts/e032-biological-candidate-selection/inspection/verified-all/evidence/gates/depth-audit/jgi-no-variance.stderr": {
+        "bytes": 1428,
+        "sha256": "1fdbdf0eb105490ddf80c1ad7f4feed3ff4e6d767ddd9d848cf908ea28a3982f"
+      },
+      "artifacts/e032-biological-candidate-selection/inspection/verified-all/evidence/gates/depth-audit/no-variance.tsv": {
+        "bytes": 81,
+        "sha256": "a0a002df4809fa441d9238c93cd01a8b1c0956fd5e15b28ceb17a249bd0ee855"
+      },
+      "artifacts/e033-multiscale-bam/preparation/source-audit/jgi-v2.18.cpp": {
+        "bytes": 49120,
+        "sha256": "b2df41ad835be7b8d4eef7ef7a780853db66ecb5f8281defcd8fa00da21f3115"
+      },
+      "artifacts/e033-multiscale-bam/preparation/source-audit/jgi-v2.18.h": {
+        "bytes": 33713,
+        "sha256": "eae6a6d62259ed56511c7c5a8faf72d92c82cf7767d625376a80b82d1a930460"
+      }
+    },
+    "native_huge_counter_values": [
+      125243924434293,
+      125243924433696
+    ],
+    "zero_contig_garbage_offset": 125243924433696,
+    "difference": 597,
+    "expected_scalar_aligned_matches_after_substitutions": 597,
+    "observed_zero_cause": "native huge-mean guard reset both counters",
+    "source_defect": "fresh CountType[] allocation lacks zero initialization; subsequent += uses indeterminate counts",
+    "independent_second_defect": "uint64 CountType / int correctedLen truncates before assignment to double",
+    "byte_identical_binary_rebuilt": false,
+    "native_reexecuted": false,
+    "old_failure_unchanged": true,
+    "no_variance_path_admitted": false
+  },
+  "prior_standalone_audit": {
+    "path": "experiments/E032-biological-candidate-selection/standalone-source-audit.json",
+    "bytes": 8169,
+    "sha256": "a041a5b0c88b750c66e427b70e309f6ffab878ee5caeb3c7e65f7a4e6aedfa7b"
+  },
+  "primary_sources": [
+    {
+      "title": "SAM/BAM v1.6 specification, NM/flags/coordinates",
+      "url": "https://samtools.github.io/hts-specs/SAMv1.pdf",
+      "version": "b5341fb, August 12 2025; viewed November 4 2026"
+    },
+    {
+      "title": "pysam 0.23.3 API",
+      "url": "https://pysam.readthedocs.io/en/v0.23.3/api.html"
+    },
+    {
+      "title": "StrobeAlign v0.17.0 SAM writer",
+      "url": "https://github.com/ksahlin/strobealign/blob/v0.17.0/src/sam.cpp",
+      "observation": "primary emits SEQ/qualities and NM:i alignment.edit_distance; secondary SEQ omitted but explicitly excluded"
+    },
+    {
+      "title": "COMEBin actual parent/view coverage",
+      "url": "https://github.com/ziyewang/COMEBin/blob/1b476a41fac893294c70212a869573a732560ce5/COMEBin/data_aug/gen_cov.py",
+      "kind": "retained pinned local source inspected; web cache miss is not execution"
+    }
+  ],
+  "accepted_E009_E024_not_JGI_scalar_path": true,
+  "links_deferred": "mate reference coordinates alone cannot establish two uniquely accepted primary ends or unique-template counts",
+  "candidate_selection_question": "Q006 deferred, E032 fixed provisionally and not optimality evidence"
+}

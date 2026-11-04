@@ -1,0 +1,235 @@
+{
+  "status": "PROPOSAL_NO_CLOUD_EXECUTION_OR_FRESH_CREDIT_ADMISSION",
+  "new_ceiling_USD": 20,
+  "complete_planning_upper_USD": 15.961741483808007,
+  "costs": {
+    "compute_RAM_IP_36h": 9.829644396429366,
+    "new_100GiB_balanced_through_seven_days": 2.3300970873786406,
+    "WAN_max_12GiB": 1.44,
+    "new_archive_active_plus_automatic_tail_upper": 0.112,
+    "operations_allowance": 0.25,
+    "contingency": 2.0
+  },
+  "price_basis": {
+    "kind": "retained November 3 official DKK Catalog; public pages refreshed November 4, live account/SKU refresh REQUIRED before execution",
+    "E2_RAM_IP_USD_hour": 0.2730456776785935,
+    "zonal_balanced_PD_USD_GiB_month": 0.1,
+    "standard_PD_USD_GiB_month": 0.04,
+    "pricing_month_hours": 721,
+    "GCS_Standard_USD_GiB_month": 0.02,
+    "WAN_USD_GiB_upper": 0.12,
+    "original_30_300_PD_USD_month": 31.2,
+    "original_storage_overlap_not_double_counted": true,
+    "sources": [
+      "https://cloud.google.com/products/compute/pricing",
+      "https://cloud.google.com/storage/pricing",
+      "https://docs.cloud.google.com/free/docs/free-cloud-features"
+    ]
+  },
+  "resources": {
+    "machine": "existing e2-standard-8 / 32 GiB, us-central1-a",
+    "threads": 4,
+    "sampled_tree_RSS_limit_bytes": 26000000000,
+    "projected_peak_RSS_bytes": [
+      21000000000,
+      25000000000
+    ],
+    "native_peak_not_measured": true,
+    "original_30_300_disks_unchanged": true,
+    "conditional_temporary_disk_GiB": 100,
+    "no_provisioning_in_preparation": true,
+    "last_observed_balanced_quota_GiB": 404,
+    "quota_checked_date": "2026-11-03; must refresh",
+    "existing_E032_task_GiB": 40,
+    "old_task_cannot_coexist_with_new_100_under_404_quota": true,
+    "protected_old_tail_before_disk_release": true,
+    "source_and_task_free_reserve_GiB": 25,
+    "extra_task_growth_GiB": 60
+  },
+  "shapes": {
+    "E009": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "raw_moment_bytes": 233123200
+    },
+    "oral": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ],
+      "raw_moment_bytes": 2058475200
+    }
+  },
+  "total_retained_BAM_bytes": 94850086599,
+  "largest_Oral_BAM": {
+    "community": "oral",
+    "sample": "oral_sample_18",
+    "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/18.bam#1793178744515354",
+    "sorted": false,
+    "bytes": 5383660753,
+    "sha256": "7ec040794a73fee569a67ec9a12402731790d18d6de2a65033779fe46b25f9e4",
+    "records": 33331868,
+    "generation": "1793178744515354",
+    "crc32c": "KGUdVQ=="
+  },
+  "wall_clock": {
+    "cumulative_seconds": 129600,
+    "provider_STOP_seconds": 130500,
+    "includes": "first VM start, tail collection, cleanup/setup, all byte/runtime gates, restore, BAM pilot/rest, six fits, graphs/construction, collection/upload/readback",
+    "planning_hours": {
+      "setup_restore_verification": [
+        1,
+        3
+      ],
+      "BAM_sort_measurement": [
+        3,
+        8
+      ],
+      "six_fit_learning": [
+        6,
+        14
+      ],
+      "group_selection_and_audit": [
+        1,
+        3
+      ],
+      "collection_and_delivery": [
+        1,
+        2
+      ]
+    },
+    "planning_total_hours": [
+      12,
+      30
+    ],
+    "native_pilot_and_full_shape_forecast_required": true,
+    "local_tiny_throughput_not_native_forecast": true
+  },
+  "storage": {
+    "no_BAM_download_to_Mac": true,
+    "serial_Oral_stream_sort": true,
+    "no_full_raw_BAM_copy": true,
+    "forecast_sort_spool_plus_sorted_BAM_GiB": [
+      10,
+      16
+    ],
+    "common_raw_moment_bytes": 2291598400,
+    "raw_Oral_moments_bytes": 2058475200,
+    "new_science_plus_measurements_GiB": [
+      12,
+      24
+    ],
+    "max_new_compressed_returns_GiB": 12,
+    "conservative_total_live_work_GiB": [
+      34,
+      55
+    ],
+    "reserve_GiB": 25,
+    "temporary_choices_GiB": [
+      40,
+      64,
+      100
+    ],
+    "choice": "100 GiB balanced only if safe current cleanup cannot provide peak plus reserve; 40 is insufficient, 64 marginal at upper coexistence",
+    "setup_and_copy": "one new filesystem baseline; small wheels/exact checkpoint restore; original DNA/token/GLM/marker caches read in place; serial source stream never another 53.7 GB raw copy",
+    "deletion": "remove only new verified sorted copies; delete task disk only after all result/member/final-delivery proofs; original BAMs stay private/persistent",
+    "disk_48h_USD": {
+      "balanced_64": 0.4260748959778087,
+      "balanced_100": 0.665742024965326,
+      "standard_100": 0.26629680998613037
+    },
+    "faster_disk_rationale": "100 vs 64 balanced adds about $0.24 per 48 hours; stable headroom/IO outweighs unmeasured standard-disk slowdown risk"
+  },
+  "return_review": {
+    "collections": 4,
+    "per_slice_compressed_GiB": 3,
+    "per_slice_logical_GiB": 8,
+    "total_compressed_GiB": 12,
+    "complete_members_aliases_verified": true,
+    "old_inputs_not_duplicated": true,
+    "selected_Mac_staging_GiB": 3,
+    "Mac_free_reserve_GiB": 8,
+    "review_RSS_GB": 8,
+    "review_seconds": 3600,
+    "one_generation_stream_per_slice": true,
+    "compressed_local_duplicate": false,
+    "sequential_staging": true,
+    "needs_current_Mac_free_check": true,
+    "retained_volume_basis": [
+      {
+        "inventory": {
+          "path": "artifacts/e031-bootstrap-preserving-learning/learning-inspection-20261103/inventory.json",
+          "bytes": 432412,
+          "sha256": "4938fa080d1e5be90e59ce1068a5a5a3f580369fa672e4d186cc573a4ee80eef"
+        },
+        "logical_bytes_by_unit": {
+          "E009-GLM": 336715050,
+          "E009-noGLM": 333757253,
+          "oral-noGLM": 3645730797
+        },
+        "exact_unique_bytes_by_unit": {
+          "E009-GLM": 262135972,
+          "E009-noGLM": 240944704,
+          "oral-noGLM": 3301582006
+        }
+      },
+      {
+        "inventory": {
+          "path": "artifacts/e032-biological-candidate-selection/inspection/inventory.json",
+          "bytes": 98445,
+          "sha256": "4ddf7ce1ee3e2f22cf91c9871b403273bf37ecb0d2d17f726f72ed47cb090635"
+        },
+        "logical_bytes_by_unit": {
+          "E009-GLM": 48416623,
+          "E009-noGLM": 49951340,
+          "oral-noGLM": 741481947
+        },
+        "exact_unique_bytes_by_unit": {
+          "E009-GLM": 48416623,
+          "E009-noGLM": 49951340,
+          "oral-noGLM": 741481947
+        }
+      }
+    ],
+    "volume_interpretation": "Largest retained E031 Oral physical work is 3.302 GB; E032 Oral selection is 0.741 GB. E033 adds a teacher/model/graph but references old DNA/views/GLM rather than recopying them. 8 GiB logical/3 GiB compressed per mode is a bounded forecast, not a native compression guarantee. Complete collection refuses overflow without dropping members.",
+    "compact_review_forecast_GiB": [
+      0.3,
+      2.5
+    ]
+  },
+  "fresh_financial_requirements": [
+    "live Welcome balance/status/scope/expiry and paid/open project link",
+    "pending/delayed usage plus reserve and other project commitments",
+    "applicable ordinary first-party E2/PD/IP/GCS/operations/network SKUs and currency conversion",
+    "every disk/object version/automatic tail and existing retention coverage",
+    "native bytes/quotas/device/headroom/pilot and full schedule fit"
+  ],
+  "no_real_money": true,
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "approved_automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "old_budgets_not_carried": true
+}

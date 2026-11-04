@@ -12,3 +12,6 @@ texttable==1.7.0
 pyrodigal==3.6.3
 pyhmmer==0.11.0
 archspec==0.2.6
+
+# Exact BAM reader for the multiscale research candidate and its real fixtures.
+pysam==0.23.3

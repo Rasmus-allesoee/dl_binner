@@ -1,0 +1,290 @@
+{
+  "kind": "E033 exact old-state/DNA/view/marker reuse",
+  "axes": {
+    "E009-noGLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "E009-GLM": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "oral-noGLM": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ]
+    }
+  },
+  "external_files": {
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+      "bytes": 42384557,
+      "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.json": {
+      "bytes": 1103,
+      "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+    },
+    "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa": {
+      "bytes": 237732361,
+      "sha256": "d8ea66f546d9ae74078fb0db59a96b0521be1c3612dc3923ec16a9d245442f33"
+    },
+    "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json": {
+      "bytes": 1301132,
+      "sha256": "035d88e159a8c6aa29580c4fec28a3f0c470e553f97a0f9a9d04cf6a76b44c05"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/tokens/coordinates.npy": {
+      "bytes": 56986368,
+      "sha256": "4ac27dc88bcebb9f41876e2f0fc943a3e5a8d4e0f5ab920748b917a2a8ea412b"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/tokens/counts.npy": {
+      "bytes": 968766208,
+      "sha256": "20c664c703a97a2aa9c301b25f4d274ecd6bbb6655a07bcd5604c56f9dcecc4a"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/tokens/flipped.npy": {
+      "bytes": 445333,
+      "sha256": "c957a8ae92da6d1cb20173010d913692fab8d28a3c43cb163689bd52a438749d"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/tokens/rows.npy": {
+      "bytes": 712456,
+      "sha256": "a5ddffeb6fd64d446c9c341c344e7b63bc76e6646650f40e3377b58c6a7b743b"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/tokens/tokens.json": {
+      "bytes": 1920,
+      "sha256": "8b19a0107dc341ffa374112179a1925fe38d0906596726fac93a5ded35803abd"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/views.json": {
+      "bytes": 1442,
+      "sha256": "2788754cc90581949ba9217216214c48437054b7e3202fdb0ea47c91aa03126b"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/views.npz": {
+      "bytes": 60980613,
+      "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/tokens/coordinates.npy": {
+      "bytes": 56986368,
+      "sha256": "4ac27dc88bcebb9f41876e2f0fc943a3e5a8d4e0f5ab920748b917a2a8ea412b"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/tokens/counts.npy": {
+      "bytes": 968766208,
+      "sha256": "20c664c703a97a2aa9c301b25f4d274ecd6bbb6655a07bcd5604c56f9dcecc4a"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/tokens/flipped.npy": {
+      "bytes": 445333,
+      "sha256": "c957a8ae92da6d1cb20173010d913692fab8d28a3c43cb163689bd52a438749d"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/tokens/rows.npy": {
+      "bytes": 712456,
+      "sha256": "a5ddffeb6fd64d446c9c341c344e7b63bc76e6646650f40e3377b58c6a7b743b"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/tokens/tokens.json": {
+      "bytes": 1920,
+      "sha256": "8b19a0107dc341ffa374112179a1925fe38d0906596726fac93a5ded35803abd"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/views.json": {
+      "bytes": 1442,
+      "sha256": "2788754cc90581949ba9217216214c48437054b7e3202fdb0ea47c91aa03126b"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/views.npz": {
+      "bytes": 60980613,
+      "sha256": "3ded4f6d5c7bcbdb13e0204da696de940b4c46330358e5ea1ce668b02c22aabe"
+    },
+    "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-recovery-v7/work/units/E009-hybrid/frozen/bank.json": {
+      "bytes": 6063,
+      "sha256": "636f1fb852c3efd6899321e0f1a3de90a91271cf438c4dfb2508b2ba9eb01520"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz": {
+      "bytes": 338210613,
+      "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.json": {
+      "bytes": 852,
+      "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna": {
+      "bytes": 1757466319,
+      "sha256": "ecf1c24c01f3c9498c79703dfe82fff20422b907954f0b11ef4e87ea342ff65d"
+    },
+    "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json": {
+      "bytes": 26815264,
+      "sha256": "e8d44c1dc18ea9f55e70548fb4de01581c4639834e87db720134e43c2127b8f1"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/tokens/coordinates.npy": {
+      "bytes": 325608448,
+      "sha256": "a8b97ba5d9344b758246836cb262616df1d71cf7d27be17b06674fc6f5678e10"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/tokens/counts.npy": {
+      "bytes": 5535341568,
+      "sha256": "1aa2e4868ab0a85ee2573d4acb2542b271f9e2d855a6d59dd199cab5aae80c4a"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/tokens/flipped.npy": {
+      "bytes": 2543943,
+      "sha256": "3f33a74724d2abfac6a7b465d21117ab31fc9be83deea7e254a03aca183460ac"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/tokens/rows.npy": {
+      "bytes": 4070232,
+      "sha256": "9eee6009101d001dca6cf3b104a8d2806a5c3aa0aa54bdac45525262d880e286"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/tokens/tokens.json": {
+      "bytes": 1669,
+      "sha256": "75ae008c650fa64d8417db96971622bc68fb93c0540dc7fc1e06c9435d93dab4"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/views.json": {
+      "bytes": 1442,
+      "sha256": "5c09dbb0ecd95bd3ff4c9787e105b76f0368567e862e6eebe87f23ed09ec5617"
+    },
+    "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/views.npz": {
+      "bytes": 419791282,
+      "sha256": "80d30e98c98642cf4dca5aad1b76a061065b3f93e92bab85e6b1ada5e0b4ac76"
+    },
+    "/srv/dl_binner/experiments/e010/phase-20261016T212549Z-6917c3f/payload/marker.hmm": {
+      "bytes": 15929643,
+      "sha256": "a721073c4a18f29d09390938ff781e6a6327ebcfe6f6a38dcc91708bd74dcda9"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/asset.json": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/cache.json": {
+      "bytes": 1841,
+      "sha256": "711c793d1af631486efc07b6241c2b75c3eb0b888585a66c321f061b4f40b404"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/domains.json": {
+      "bytes": 817210,
+      "sha256": "b1ad9e6e69fd30713b1840e7b2c7d1b6de8f53104f0ffc1df58cb4fd85d7aaec"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/evidence.json": {
+      "bytes": 3260961,
+      "sha256": "027b1aa746dd613ee39992afad160001a310fe6a1e3c71b4c2f45956bb4911ca"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/genes.jsonl": {
+      "bytes": 46493814,
+      "sha256": "66ad0f2384dc132b36c072aa81e786ff07474aeb0c471ae11ef06445bb776ba1"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/markers/proteins.faa": {
+      "bytes": 61757382,
+      "sha256": "a08a9471e8b185c401bbefb21a4c39c88a9a72aa291037d94bf6f3d1d15d8540"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/asset.json": {
+      "bytes": 4655,
+      "sha256": "d1898ef92fa992881103cd19de2be6066db38917cb3be2e3ece86d35035692b3"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/cache.json": {
+      "bytes": 1850,
+      "sha256": "c1ea104624bf222e0ca3d9dfaa858bd6fe53586fcc4f811acbd2fe35076788cb"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/domains.json": {
+      "bytes": 14029728,
+      "sha256": "55317c8c03ba8e66de174237a1af55e938908c0dcdfb38171b9140992e522203"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/evidence.json": {
+      "bytes": 108777472,
+      "sha256": "ca89d3e4c09312143c8e94f9abbcfabeabe281aefa64dc6aa60d234e669e5183"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/genes.jsonl": {
+      "bytes": 535549613,
+      "sha256": "86a8fd5179f52957d46c4bd37a1d71b3373eef1966f62924a0c48ea6a5040005"
+    },
+    "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/work/shared/oral-markers/proteins.faa": {
+      "bytes": 517972626,
+      "sha256": "b4c10fb3e4157d7889dfff6cd480e5f7f0741439b78f8d4d9656a1bd92ee7149"
+    }
+  },
+  "E031_states": {
+    "E009-noGLM": {
+      "member": "work/E009-noGLM/train/result/checkpoint.pt",
+      "checkpoint": {
+        "bytes": 4443664,
+        "sha256": "0fe53089c0a1b6635238ecbd77f9d999b030a447ecf2ff5f7661f153c042f9df"
+      },
+      "metadata": {
+        "bytes": 52892,
+        "sha256": "02765e86535f853e9257d698bcc20298d8c783d5bdb94f05b481e497322751da"
+      }
+    },
+    "E009-GLM": {
+      "member": "work/E009-GLM/train/result/checkpoint.pt",
+      "checkpoint": {
+        "bytes": 6777188,
+        "sha256": "eef881e01a1fa8c5986732737a5eb7f954be6f484de94484297d94087c4ae52e"
+      },
+      "metadata": {
+        "bytes": 98798,
+        "sha256": "b32b88c63c4a3025fa084b49587aa199641b67b13334cc56439419d7c612aae1"
+      }
+    },
+    "oral-noGLM": {
+      "member": "work/oral-noGLM/train/result/checkpoint.pt",
+      "checkpoint": {
+        "bytes": 4443408,
+        "sha256": "5c29881d96a61b34e85542e86c075475241f566c257a69cd1b45b42f04164d6c"
+      },
+      "metadata": {
+        "bytes": 52811,
+        "sha256": "86c2ce2fbcb11e64253d5302a0b024a6b36052474196fdc6c925158cb96716c6"
+      }
+    }
+  },
+  "accepted_archive": {
+    "archive": {
+      "uri": "gs://dl-binner-archive-167650584170/e031/learning-20261102T200852Z-ba65911-r2/e031-evidence.tar.gz",
+      "binding": {
+        "bytes": 2101954568,
+        "sha256": "d4ce1d15ad8f7c2443863a6c42805ddd419a6034c861b22a586b7659b9db47ec"
+      }
+    },
+    "metadata": {
+      "size": 2101954568,
+      "generation": "1793668697775852",
+      "md5_hash": "ErbtjjJrgXm14WLnciCA8w=="
+    },
+    "inventory": {
+      "bytes": 432412,
+      "sha256": "4938fa080d1e5be90e59ce1068a5a5a3f580369fa672e4d186cc573a4ee80eef"
+    },
+    "reserve_bytes": 26843545600,
+    "original_physical_members": 1913,
+    "omitted_work_members": 0,
+    "all_original_members_must_pass": true
+  },
+  "native_dependency_base": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+  "native_runtime_reference": "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+  "source_freezes_preserved": true
+}

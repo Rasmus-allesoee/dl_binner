@@ -1,5 +1,37 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E033 coherent measured-information/learning bundle, November 4
+
+The owner authorizes [local E033 implementation](../../experiments/E033-multiscale-bam/design.md)
+and safe local cleanup, preserving every accepted input/model/truth/result/source
+freeze/failure. Exact measured parent/crop coverage, breadth/dispersion/reliability,
+state-preserving teacher adaptation and own-proposal signed continuation form one
+common bundle; E032 construction is fixed provisionally. Historical E031 depth
+priors remain in restored weights, so shared new measurements do not establish a
+pure causal information effect or erase all prior dataset confounding.
+
+[Local contracts](../../experiments/E033-multiscale-bam/local-observed.json) exercise
+actual BAM/counter/window, training/gradient/EMA/reload/geometry/group/export/cache/
+DAG/collection paths; real GLM inference and Linux/full-community affordability
+remain unadmitted. [The source review](../evidence/2026-11-04-multiscale-coverage-and-storage.md)
+explains JGI's scalar failure from retained native warnings and uninitialized fresh
+counters, without changing accepted depths or running a tool. Links stay deferred
+until both-mate uniqueness/template/repeat/normalization contracts exist. Q006
+retains standalone selection methods as a later research question, not an endless
+selector-tuning gate or a claim that E032's proxy is optimal.
+
+Prepare E009 measured ten-depth GLM off/on and Oral ten-depth/no-GLM with complete
+teacher/pair/student availability, all DNA/length/origin/singleton/multicontig strata,
+full conservative-v2/provided-origin denominators and unchanged truth limits.
+[The separate $20 / 36-hour proposal](../../experiments/E033-multiscale-bam/resources.json)
+includes serial retained-BAM pilot/reuse, native complete gates, six new fits and
+fixed construction; no current execution/spending authority or old-budget reuse.
+A conditional temporary 100 GiB disk needs the next authorization and safe old-tail
+collection first. November 11/18 boundaries remain. Efficient Oral GLM qualification
+and its explicit missing hybrid-state transition remain concrete complementary
+admission work; skin stays unscored. No dataset-specific constructor or new score
+campaign is added in preparation.
+
 ## E032 common selection and broader information priority, November 3
 
 The [completed review](../evidence/2026-11-03-e032-construction-and-information-priority.md)

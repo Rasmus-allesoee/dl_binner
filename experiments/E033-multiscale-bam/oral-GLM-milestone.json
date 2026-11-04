@@ -1,0 +1,71 @@
+{
+  "status": "PREPARED_SEPARATE_ADMISSION_NO_GPU_REQUEST",
+  "next_action": "one unchanged exact-float32 128-view qualification after separate fresh admission; do not repeat a capacity loop",
+  "source": "ec7ff25",
+  "asset_manifest": "artifacts/e032-biological-candidate-selection/admission/native-T4/control/asset-manifest-json.json",
+  "unchanged_science": {
+    "views": 128,
+    "minimum_parent_bp": 500,
+    "original_parent_and_real_crop_coordinates": true,
+    "both_strands": true,
+    "float32": true,
+    "autocast": false,
+    "TF32": false,
+    "rtol": 1e-05,
+    "atol": 1e-06,
+    "max_absolute_error": 1e-05,
+    "min_cosine": 0.999999
+  },
+  "qualification_resource_proposal": {
+    "machine": "n1-standard-8 / 30 GiB + one T4, Iowa f",
+    "temporary_standard_disks_GiB": [
+      40,
+      64
+    ],
+    "seconds": 5400,
+    "provider_STOP_seconds": 6300,
+    "ceiling_USD": 3,
+    "expected_compute_IP_USD": 1.1024969969819953,
+    "all_other_disks_operations_export_with_contingency_upper_USD": 1.0,
+    "fresh_authorization_and_credit_capacity_required": true
+  },
+  "full_original_bank_workload": {
+    "parents": 508763,
+    "parent_bp": 1443827664,
+    "available_views": 2470549,
+    "exposed_bp": 2366088186,
+    "minimum_4000bp_chunks": 2707640,
+    "GPU_seconds_planning_projection": 219789.43651758353,
+    "forward_tokens_projection": 994274202.7577456,
+    "native_sample_forward_tokens": 3472161,
+    "native_sample_chunks": 2211,
+    "native_sample_views": 124,
+    "fixed_five_slot_vector_bytes": 7814599680,
+    "view_fraction": 1.0,
+    "exposure_fraction": 1.0,
+    "parent_bp_fraction_of_full_GSA": 0.8645772363020896,
+    "excluded_original_records": 777784,
+    "excluded_original_bp": 226153459
+  },
+  "old_rate_full_bank_projection": {
+    "hours": 61.05262125488431,
+    "complete_cost_USD": [
+      65,
+      85
+    ],
+    "not_fresh_or_T4_throughput": true
+  },
+  "actual_new_gpu_measurement": false,
+  "closed_E032_capacity_attempt_preserved": true,
+  "full_bank_requires": [
+    "128-view native exposure/precision/dtype/library equivalence",
+    "measured length/token/strand stratum throughput and complete original-view bank schedule",
+    "full bank CRC/SHA/source/dictionary/coordinate/hash and reader admission",
+    "Oral E031 has no hybrid checkpoint: first implement/test explicit shared-state restoration plus zero-output GLM-module/Adam extension, then freeze its own GLM-enabled teacher/pair/student path; never substitute the no-GLM checkpoint silently",
+    "complete teacher/pair/student GLM path, new per-view multiscale coverage, no silent parent substitution",
+    "fresh full compute/storage/transfer/credit/retention admission"
+  ],
+  "reduced_cutoff_or_truth_selected_subset_applied": false,
+  "skin_unscored": true,
+  "missing_learning_state_contract": "Current E033 read_original correctly refuses an Oral no-GLM checkpoint declared as hybrid; generic encoder support alone is not this transition admission"
+}

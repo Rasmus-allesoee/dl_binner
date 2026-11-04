@@ -2,13 +2,16 @@
 """Run bounded installed-wheel product regressions outside the source checkout.
 
 Requires an installed binner interpreter and a fresh evidence
-directory. Copies only committed self-contained tests, then runs actual native
-readers/writers and synthetic software fixtures. No research assets or workers
-are mocked; no accepted scientific demonstration runs. Retains logs and exit/RSS
-receipts for failures too. Resource ceiling covers copying, probes and tests.
+directory. Copies only repository self-contained tests, then runs actual native
+readers/writers and synthetic software fixtures. Tests declare their generated
+data and any model mocks; no accepted scientific demonstration runs. Retains logs and exit/RSS
+receipts for failures too. Each test module has its own process: tensor imports
+must not contaminate graph workers that explicitly refuse a tensor backend.
+One resource ceiling covers copying and every module, without a per-module reset.
 """
 import argparse
 import importlib.util
+import json
 import os
 from pathlib import Path
 import shutil
@@ -23,11 +26,13 @@ def main():
     parser.add_argument('--python',type=Path,required=True,help='Installed binner interpreter; preserve its lexical path')
     parser.add_argument('--output',type=Path,required=True,help='Fresh evidence directory; never overwritten')
     parser.add_argument('--timeout',type=float,default=1800,help='Overall software-test seconds, maximum 7200')
-    parser.add_argument('--threads',type=int,choices=range(1,5),default=4,help='Explicit test CPU budget, 1–4 (prepared Linux CI uses 2)')
+    parser.add_argument('--threads',type=int,choices=range(1,5),default=4,help='Explicit CPU budget; full frozen research fixtures require 4')
     parser.add_argument('--pattern',choices=('test_*.py','test_candidate.py'),default='test_*.py',
                         help='Full product suite, or only candidate contracts after a candidate-specific change')
     args=parser.parse_args()
     if not 0 < args.timeout <= 7200:parser.error('--timeout must be positive and at most 7200')
+    if args.pattern=='test_*.py' and args.threads!=4:
+        parser.error('Full suite includes frozen four-thread graph contracts; allocate --threads 4')
     root=Path(__file__).absolute().parents[1]
     python=args.python.absolute()
     out=args.output.absolute();out.mkdir(parents=True,exist_ok=False)
@@ -39,18 +44,33 @@ def main():
     env.update(DL_BINNER_TEST_OUTPUT=str(out),DL_BINNER_TEST_THREADS=str(args.threads))
     def ceiling(signum,frame):raise TimeoutError('Product regression overall ceiling reached')
     old=signal.signal(signal.SIGALRM,ceiling);signal.setitimer(signal.ITIMER_REAL,args.timeout)
+    receipts=[];status='FAILED'
     try:
         tests=out/'tests';shutil.copytree(root/'tests/product',tests,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
         os.chdir(out)
         module.progress(f'Installed product regressions: {args.threads} threads / loader zero / 8 GB; '+str(out))
-        module.supervise([python,'-I','-B','-m','unittest','discover','-s',tests,'-p',args.pattern,'-v'],
-                         out/'product-tests.log',args.timeout-(time.monotonic()-started),8000000000,env,sample_root=os.getpid())
+        modules=sorted(tests.glob(args.pattern))
+        if not modules:raise ValueError('Product test selection is empty')
+        for test in modules:
+            module.progress('Isolated product test module: '+test.name)
+            log=out/(test.stem+'.log')
+            try:
+                module.supervise([python,'-I','-B','-m','unittest','discover','-s',tests,'-p',test.name,'-v'],
+                    log,args.timeout-(time.monotonic()-started),8000000000,env,sample_root=os.getpid())
+            finally:
+                if log.with_suffix('.exit.json').exists():
+                    receipts.append(dict(module=test.name,**json.loads(log.with_suffix('.exit.json').read_text())))
+        status='PASS'
         print('PRODUCT_TEST_OUTPUT='+str(out),flush=True)
     except BaseException:
         print('PRODUCT_TEST_OUTPUT='+str(out),file=sys.stderr,flush=True)
         raise
     finally:
         signal.setitimer(signal.ITIMER_REAL,0);signal.signal(signal.SIGALRM,old)
+        (out/'product-tests.json').write_text(json.dumps(dict(status=status,pattern=args.pattern,
+            wall_seconds=time.monotonic()-started,seconds_ceiling=args.timeout,threads=args.threads,
+            process_isolation='one fresh installed-Python process per module; no skipped modules',
+            modules=receipts),indent=2,sort_keys=True)+'\n')
 
 
 if __name__=='__main__':main()

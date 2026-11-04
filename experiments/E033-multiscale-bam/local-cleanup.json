@@ -1,0 +1,142 @@
+{
+  "status": "COMPLETE_SAFE_LOCAL_CLEANUP",
+  "cloud_actions": false,
+  "accepted_evidence_or_unique_failure_removed": false,
+  "cache_inventory": {
+    "path": "artifacts/e033-multiscale-bam/preparation/cache-removal-inventory.jsonl",
+    "bytes": 10534208,
+    "sha256": "10d2518b1e079189ab4ee0f7ab6a0dc121319f6faf8ef973d2411efc9a811b8b"
+  },
+  "total_removed_logical_bytes": 9217727015,
+  "note": "Logical removed bytes and cache allocated blocks are not an exact APFS physical-free attribution; shared files/clones and other machine activity affect observed free space",
+  "E005_allocated_KiB_before": 5506108,
+  "E005_allocated_KiB_after": 2787220,
+  "current_free_bytes": 13503311872,
+  "retained": "all accepted scientific inputs/results/source freezes and failed journals; E005 workflow/mapping runtimes and historical return archives; current E021 numerical dependency base",
+  "complete_cleanup_receipt": {
+    "path": "artifacts/e033-multiscale-bam/preparation/cleanup-full.json",
+    "bytes": 212092,
+    "sha256": "63cdb5110fc7ed571f71db1093212c1d5b7284b65f4663da011c51b5216e68ce"
+  },
+  "cache_summary": {
+    "status": "REMOVED_REGENERABLE_CACHES",
+    "timestamp_UTC": "2026-11-04T01:20:04Z",
+    "before_free_bytes": 5224964096,
+    "after_free_bytes": 13752684544,
+    "removed_logical_bytes": 7763723603,
+    "removed_allocated_bytes": 7882485760,
+    "external_symlink_references": [],
+    "first_attempt": "preserved terminal ENOTEMPTY while removing a Boost cache directory",
+    "removed_roots": [
+      {
+        "path": "artifacts/e004-first-binner/setup/pip-cache",
+        "files": 28,
+        "logical_bytes": 181946903,
+        "allocated_bytes": 182018048,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e005-linux-pilot/setup/pilot-pip-cache",
+        "files": 58,
+        "logical_bytes": 108693527,
+        "allocated_bytes": 108826624,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e005-linux-pilot/setup/pilot-conda-cache",
+        "files": 4781,
+        "logical_bytes": 1043147754,
+        "allocated_bytes": 1052999680,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e005-linux-pilot/setup/pip-cache",
+        "files": 388,
+        "logical_bytes": 244998711,
+        "allocated_bytes": 245907456,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e021-portable-admission/20261024T183844Z/mamba-resolver/pkgs",
+        "files": 7,
+        "logical_bytes": 963824633,
+        "allocated_bytes": 963842048,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e021-portable-admission/20261024T183844Z/mamba-resolver-v2/pkgs",
+        "files": 7,
+        "logical_bytes": 963824633,
+        "allocated_bytes": 963842048,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/d011-dnabert-s-spike/pip-cache",
+        "files": 53,
+        "logical_bytes": 196403257,
+        "allocated_bytes": 196530176,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e011-cached-grouping-reference/mamba-linux/pkgs",
+        "files": 13,
+        "logical_bytes": 1070744910,
+        "allocated_bytes": 1070772224,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e011-cached-grouping-reference/mamba-osx/pkgs",
+        "files": 22836,
+        "logical_bytes": 1301681644,
+        "allocated_bytes": 1353940992,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e009-preparation/failed-paths-v11/conda-cache",
+        "files": 24057,
+        "logical_bytes": 617987396,
+        "allocated_bytes": 673280000,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e009-preparation/gcp-preparation-20261014/mamba-solve/pkgs",
+        "files": 13,
+        "logical_bytes": 1068971320,
+        "allocated_bytes": 1069006848,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      },
+      {
+        "path": "artifacts/e007-pr-readiness/acquisition/pip-cache",
+        "files": 9,
+        "logical_bytes": 1498915,
+        "allocated_bytes": 1519616,
+        "reason": "obsolete regenerable package-manager download/extraction cache; environments and logs retained"
+      }
+    ]
+  },
+  "duplicate_summary": {
+    "status": "REMOVED_EXACT_EXPANDED_WHEEL_DUPLICATES",
+    "removed_bytes": 1454003412,
+    "files": 402,
+    "archives_retained": [
+      {
+        "path": "artifacts/e005-linux-pilot/transfer-v1/e005-linux-smoke-v1.tar.gz",
+        "bytes": 302178237,
+        "sha256": "eacaf3491b6d2bebc2979c61cfb9939d68429e95ae01b04ae18fbac63f5d8a6c"
+      },
+      {
+        "path": "artifacts/e005-linux-pilot/transfer-v2/e005-linux-smoke-v2.tar.gz",
+        "bytes": 302178719,
+        "sha256": "289568e4d000aed8228b9fb119e4586c4c0d94598165b7f7c29a165cadf2a835"
+      }
+    ],
+    "before_free_bytes": 13718577152,
+    "after_free_bytes": 14101139456,
+    "every_removed_file_verified_in_retained_archive": true
+  },
+  "final_space_observed_UTC": "2026-11-04T02:59:23.186015+00:00",
+  "subsequent_new_engineering_prefix": "artifacts/e033-multiscale-bam/preparation/standalone: fully owned current test runtime, retained",
+  "final_artifacts_allocated_KiB": 83762048,
+  "final_E005_allocated_KiB": 2787220,
+  "final_standalone_test_prefix_allocated_KiB": 1188908
+}

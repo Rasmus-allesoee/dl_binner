@@ -1,0 +1,290 @@
+{
+  "status": "PASS_LOCAL_IMPLEMENTATION_AND_PREPARATION_ONLY",
+  "cloud": false,
+  "community_measurement_fit_score": false,
+  "accepted_science_replayed": false,
+  "source_parent": "ba7f9b5d50a0aab55c018f56f512a1605c98bad7",
+  "branch": "multiscale-bam-representation",
+  "earlier_successes": {
+    "build-release-r2/build.json": {
+      "path": "artifacts/e033-multiscale-bam/preparation/build-release-r2/build.json",
+      "bytes": 285,
+      "sha256": "d6e17196f449398c4a416f75a4f3f4aa520a0162094d37eaaf60cadce1ad6aff"
+    },
+    "product-final/completed.json": {
+      "path": "artifacts/e033-multiscale-bam/preparation/product-final/completed.json",
+      "bytes": 1179,
+      "sha256": "36bd2e24f18c039426871f47302a5958b0aac2134eebfb46a92236dd07985b2f"
+    },
+    "operations-final/completed.json": {
+      "path": "artifacts/e033-multiscale-bam/preparation/operations-final/completed.json",
+      "bytes": 1126,
+      "sha256": "325192514f9cfec4ccb4aa6435c516f62c600c71ba1cd416a185386001336d04"
+    },
+    "DAG-check-r2/completed.json": {
+      "path": "artifacts/e033-multiscale-bam/preparation/DAG-check-r2/completed.json",
+      "bytes": 1064,
+      "sha256": "ffa6678168eef3450345f6b53e4fb4938cca90430072faef60cc5bdaf4a45bce"
+    },
+    "DAG-check-r2/tiny/new-review-reader-contracts.json": {
+      "path": "artifacts/e033-multiscale-bam/preparation/DAG-check-r2/tiny/new-review-reader-contracts.json",
+      "bytes": 3788,
+      "sha256": "7d71eafe2a55bbf0f08c5760ff87a1e878d2dfe81c0388c16df6f36dac026721"
+    },
+    "scale-r1/completed.json": {
+      "path": "artifacts/e033-multiscale-bam/preparation/scale-r1/completed.json",
+      "bytes": 920,
+      "sha256": "cb0fab998559570261e784ae90e4e550f6a0f3a01326e9ad8e138348916c672e"
+    },
+    "tiny-probe.json": {
+      "path": "artifacts/e033-multiscale-bam/preparation/tiny-probe.json",
+      "bytes": 473,
+      "sha256": "6e46e1dd1088cad6be3155cf5d459fb3138af324683d023636f01501ac64b49a"
+    }
+  },
+  "actual": [
+    "real BAM/HTSlib parser and independent SAM/dense counter",
+    "actual synthetic 20+20 epoch teacher/student, inherited state, gradients, EMA, exact reload",
+    "actual sparse graph/refinement/E032 selection/full DNA export/cache readers",
+    "forty-rule serial tiny workflow, verified complete no-op resume, four full byte/member/alias collections",
+    "post-shutdown contract readers on tiny outputs without truth scoring"
+  ],
+  "synthetic_or_mocked": [
+    "generated DNA and BAMs, not communities",
+    "numeric mock for pretrained GLM inference only",
+    "hand-authored cached marker genes/domains; E033 does not redetect markers"
+  ],
+  "native_pending": [
+    "Linux complete inventory/source/shared-library/pinned pysam wheel",
+    "live boot/PID watchdog/provider STOP tests",
+    "all-twenty retained-BAM/native dictionary/filter/zero-profile contracts",
+    "full-shape native throughput/RSS/disk/complete-cost admission",
+    "fresh live credit/account/prices/quota/headroom/retention before execution"
+  ],
+  "limitations": [
+    "common warm-start policy retains old differently filtered depth priors in E031 weights/Adam",
+    "bundle changes measurement, representation and exposure; does not isolate one cause",
+    "no new community quality claim",
+    "old JGI failure and original Mac portability tolerance remain unchanged"
+  ],
+  "preserved_failures": [
+    {
+      "path": "learning-tests-r1.log",
+      "reason": "fixture path and incorrect exact-base rather than normalized-base expectation; corrected without tolerance change"
+    },
+    {
+      "path": "tiny-DAG-r1.log",
+      "reason": "Feature/vector/sparse graph binding assertion in first pairs stage; canonical geometry metadata corrected without changing vectors or old tolerance; original attempt preserved"
+    },
+    {
+      "path": "review-reader-r1.log",
+      "reason": "missing derived-layout parent; corrected reader only"
+    },
+    {
+      "path": "build-final",
+      "reason": "Python 3.13 builder rejected by supported range"
+    },
+    {
+      "path": "build-supported",
+      "reason": "live source changed during build snapshot, content guard refused"
+    },
+    {
+      "path": "build-release",
+      "reason": "sandbox denied ps sampling, retried fresh with process permission"
+    },
+    {
+      "path": "local-runtime.log",
+      "reason": "probe raced local wheel reinstall, failed journal retained"
+    },
+    {
+      "path": "full-product",
+      "reason": "single-process discovery mixed Torch/graph workers; linked dependencies failed ownership correctly; modules now isolated, standalone prefix used"
+    },
+    {
+      "path": "manual native-plan invocation with --engineering",
+      "reason": "Mismatched scope flag correctly refused; final generated engineering plan/DAG passes, native released-plan gate remains pending"
+    }
+  ],
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "approved_automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "recorded_UTC": "2026-11-04T02:59:23.186015+00:00",
+  "final_candidate": {
+    "path": "experiments/E033-multiscale-bam/candidate-lock.json",
+    "bytes": 12632,
+    "sha256": "8ebe3bd5853a1bc2370c95fb16de08b64dc03b0cbea09bb34399007c3397c42e"
+  },
+  "final_build": {
+    "receipt": {
+      "path": "artifacts/e033-multiscale-bam/preparation/build-committed/build.json",
+      "bytes": 285,
+      "sha256": "cb94e256d3f01f75ba2cb6ebbebad9a658ca01b81e53576b62e6766b8fc13b08"
+    },
+    "distribution_inspection": {
+      "path": "artifacts/e033-multiscale-bam/preparation/build-committed/inspection.json",
+      "bytes": 9248,
+      "sha256": "97b54e5f11daf890b505cc5b7b8dcbb05be67404b037e05ce4e5cde2170d91e8"
+    },
+    "result": {
+      "python": "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e033-multiscale-bam/preparation/builder312/bin/python",
+      "scope": "Fresh snapshot wheel/sdist/rebuilt wheel, no installs or science",
+      "status": "passed",
+      "threads": 4,
+      "wall_seconds": 7.008934122975916
+    },
+    "builder_recipe": "requirements/build.txt: pip 25.1.1, setuptools 78.1.1, wheel 0.45.1",
+    "builder_Python": "3.12.2",
+    "scientific_payload_byte_identical_to_full_tested_and_DAG_tested_wheel": true
+  },
+  "final_installed_runtime": {
+    "receipt": {
+      "path": "artifacts/e033-multiscale-bam/preparation/final-checks/runtime.json",
+      "bytes": 11144,
+      "sha256": "d4cfedbe88ef571acda35e8a9ae8205f1b6412a1e7c275e4ebb23a46b917f3d1"
+    },
+    "all_owned": true,
+    "numerical_Python": "3.10.15",
+    "system": "Darwin",
+    "groups": [
+      "tensor",
+      "graph",
+      "markers",
+      "BAM"
+    ],
+    "source_proof": {
+      "path": "artifacts/e033-multiscale-bam/preparation/committed-installed-source.json",
+      "bytes": 11694,
+      "sha256": "49b43716f93fad10070e32bf006f452c19fbfb105425b4fb72af1e2ba8980efc"
+    },
+    "pip_check": {
+      "path": "artifacts/e033-multiscale-bam/preparation/final-checks/pip-check.exit.json",
+      "bytes": 630,
+      "sha256": "37c838a65bdb1e1a97b4dcbd6e61066988315903663019ac8f739e031ff13879"
+    },
+    "CLI": {
+      "path": "artifacts/e033-multiscale-bam/preparation/final-checks/CLI.exit.json",
+      "bytes": 655,
+      "sha256": "efa4494906805d111e77eeee9403e638c1daba5cdf147d06c02a2353e7fe1d33"
+    },
+    "native_Linux_admitted": false,
+    "installation_log": {
+      "path": "artifacts/e033-multiscale-bam/preparation/install-committed.log",
+      "bytes": 608,
+      "sha256": "07dbb243a0b8ed3c6a634a910b4dc9580dd2dbe1f48250fe1f28b0bf154c72e5"
+    },
+    "pysam_version": "0.23.3",
+    "local_bundled_HTSlib_version": "1.21"
+  },
+  "full_product_regression": {
+    "receipt": {
+      "path": "artifacts/e033-multiscale-bam/preparation/full-product-isolated/product-tests.json",
+      "bytes": 16862,
+      "sha256": "3f8f465e26973273049bc64d0e454afcbf80aad264f9f9aae9b227467ffe0b1b"
+    },
+    "modules": 17,
+    "tests": 98,
+    "all_module_exits_zero": true,
+    "wall_seconds": 533.8147424889612,
+    "peak_sampled_tree_RSS_bytes": 536838144,
+    "test_isolation": "fresh process per module, complete owned prefix; no graph/import guard weakened",
+    "stronger_final_nonzero_negative_gradient_checked_separately": true
+  },
+  "final_focused_tests": {
+    "product": {
+      "receipt": {
+        "path": "artifacts/e033-multiscale-bam/preparation/release-product/completed.json",
+        "bytes": 1174,
+        "sha256": "26816698d7cce094c9a031f488f3d43ccb24286c9ef7989fa80b60d6af5c2f80"
+      },
+      "tests_or_rules": 10,
+      "wall_seconds": 30.087489188998006,
+      "peak_sampled_tree_RSS_bytes": 314175488,
+      "exit_code": 0
+    },
+    "operations": {
+      "receipt": {
+        "path": "artifacts/e033-multiscale-bam/preparation/release-operations/completed.json",
+        "bytes": 1148,
+        "sha256": "5571d295ade25dd9c82de7d67e18253284c9e3ae2a42996d43ec05fc534551da"
+      },
+      "tests_or_rules": 6,
+      "wall_seconds": 1.6127695660106838,
+      "peak_sampled_tree_RSS_bytes": 49414144,
+      "exit_code": 0
+    },
+    "DAG": {
+      "receipt": {
+        "path": "artifacts/e033-multiscale-bam/preparation/release-DAG/completed.json",
+        "bytes": 1081,
+        "sha256": "2279e03f4a3c8ce0e3fbf3c0a7d582b3ddd9f25427f71b47958a7ed2fbcb2bb7"
+      },
+      "tests_or_rules": 40,
+      "wall_seconds": 115.59001294401241,
+      "peak_sampled_tree_RSS_bytes": 595038208,
+      "exit_code": 0
+    }
+  },
+  "final_DAG_contract": {
+    "receipt": {
+      "path": "artifacts/e033-multiscale-bam/preparation/release-DAG/tiny/completed.json",
+      "bytes": 48548,
+      "sha256": "6f9aeb52a345ab0d150c3646dffe96e08dccf73a4f6771f514147bf7fa3c686d"
+    },
+    "rules": 40,
+    "fits": 6,
+    "teacher_epochs": 20,
+    "student_epochs": 20,
+    "generated_rows": 35,
+    "generated_bp": 105648,
+    "complete_collection_slices": 4,
+    "every_archive_member_alias_verified": true,
+    "verified_resume_noop": true,
+    "no_overlap": true,
+    "new_review_reader_modes": [
+      "E009-noGLM",
+      "E009-GLM",
+      "oral-noGLM"
+    ],
+    "truth_scored": false,
+    "native_Linux_admitted": false
+  },
+  "synthetic_scale": {
+    "receipt": {
+      "path": "artifacts/e033-multiscale-bam/preparation/scale-r1/completed.json",
+      "bytes": 920,
+      "sha256": "cb0fab998559570261e784ae90e4e550f6a0f3a01326e9ad8e138348916c672e"
+    },
+    "scope": "100000 synthetic alignments / 8 parents / 524288 bp; Mac only, not a native forecast",
+    "result": {
+      "BAM_bytes": 615857,
+      "bp": 524288,
+      "full_native_BAM_sort_and_complexity_not_measured": true,
+      "parents": 8,
+      "peak_active_events": 54,
+      "reads_per_second": 56260.12865288438,
+      "records": 100000,
+      "status": "PASS_SYNTHETIC_SCALE_ONLY",
+      "system": "Darwin",
+      "wall_seconds": 1.7774577199597843
+    }
+  },
+  "unchanged_accepted_package_members": 75,
+  "new_cloud_compute_or_resource_cost_USD": 0,
+  "cloud_cost_scope": "No new VM/service/disk/object operation in preparation; existing approved stopped storage continues separately",
+  "fresh_live_financial_admission": false,
+  "free_local_bytes_at_record": 13518221312,
+  "candidate_scientific_outcome": "NOT_RUN_NO_NEW_COMMUNITY_SCORES",
+  "documentation_checks": {
+    "path": "artifacts/e033-multiscale-bam/preparation/final-doc-check.log",
+    "bytes": 689,
+    "sha256": "b8ea6266b242461e418d659551b8fb37c8d3afeac6b0f5c1873bdeb0c1edf89a",
+    "status": "PASS",
+    "documents": 157,
+    "local_links": 2169,
+    "optional_historical_local_paths_unavailable": 10
+  },
+  "final_source_verification": {
+    "files": 122,
+    "status": "PASS_EXACT_BINDINGS_AND_SUPPORTED_COMPILE",
+    "unchanged_accepted_members": 75
+  }
+}

@@ -39,6 +39,8 @@ reproduced result of this project.
 - [E026: calibrated evidence fusion and biological bin construction](E026-calibrated-evidence-fusion/README.md)
 - [E027: common full-version information-aware binner and Oral reference](E027-common-information-binner/README.md)
 
+- [E033: common BAM-derived multiscale information and representation](E033-multiscale-bam/README.md)
+
 The individual record owns its status and outcome. A prospective protocol is not an executed experiment.
 
 ## Record convention

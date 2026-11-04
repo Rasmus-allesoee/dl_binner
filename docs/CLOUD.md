@@ -1,5 +1,46 @@
 # Google Cloud workspace operations
 
+## November 4 E033 local preparation; no new cloud execution
+
+[E033 operations](../experiments/E033-multiscale-bam/OPERATIONS.md) owns the new
+local implementation and separate execution request. No VM start, community BAM
+summary/fit/score, paid cloud write, GPU request, quota/resource mutation or
+retention renewal occurred. Last independently verified control-plane state is
+E032 TERMINATED below, not a new live observation here.
+
+[The resource proposal](../experiments/E033-multiscale-bam/resources.json) is
+**$20 gross / 36 cumulative hours**, STOP 36.25 hours, existing e2-standard-8 /
+32 GiB, four numerical threads, 26 GB sampled RSS and separate 25 GiB reserves.
+About $15.96 complete conservative attribution includes the conditional new
+100 GiB zonal balanced task disk through seven days, four bounded complete
+returns (aggregate 12 GiB compressed), export/storage/tail/operations/contingency.
+The original 30/300 GiB overlap its separately approved storage; do not double
+invoice it. This is not current billing or execution authority. Refresh live
+credits/scope/expiry/delayed usage, eligible SKUs/prices, all versions/tails,
+resources, headroom, quota and the complete schedule before cost-bearing changes.
+
+Restore all twenty original complete-reference BAMs in-region, serial Oral sort,
+no 94.85 GB Mac staging or remapping. Pilot E009 sample 0/largest Oral 18 and reuse
+passed moment summaries. Last observed balanced quota 404 GiB permits original
+300 + new 100 only after safe release of old 40; first verify E032's protected
+closed-delivery tail/post-collector logs. Safe cleanup may avoid new storage.
+No old unique evidence or original disk may be formatted/deleted. Record each
+actual new filesystem/device baseline and full sort/output/archive coexistence.
+
+The prepared held parent/current-boot watcher/provider STOP require fresh native
+live/normal/crash/restart-refusal tests before release. Native complete runtime and
+new owned pinned pysam wheel, byte/source/axis/tiny/reader and full-shape cost/RSS
+admission remain pending; local engineering is not Linux admission. Source sync
+remains read-only; inherited private financial/account history still requires
+private exact-commit transfer if not safe for ordinary public Git publication.
+
+Only regenerable local caches/exact expanded duplicates were removed, with
+[receipts](../experiments/E033-multiscale-bam/local-cleanup.json); accepted inputs,
+source bases, archived outcomes and failed journals remain. Existing active
+retention ends **November 11 at 00:00 Copenhagen**, approved automatic tail
+November 18. Preparation executed no incremental cloud operation; existing approved
+stopped storage continues to accrue charges. No new retention is implied.
+
 ## November 3 E032 completed, reviewed and independently stopped
 
 [Native inspection](../experiments/E032-biological-candidate-selection/inspection-observed.json)

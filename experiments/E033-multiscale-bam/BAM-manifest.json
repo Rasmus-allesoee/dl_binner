@@ -1,0 +1,204 @@
+{
+  "kind": "retained complete-reference placements, no remapping",
+  "records": [
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam",
+      "sorted": true,
+      "bytes": 3781565849,
+      "sha256": "11bc0c875cbdff23a0a3909a6b4478998dd610c98b45dbe7c6fd135f580fc4a9"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_2",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam",
+      "sorted": true,
+      "bytes": 4139872212,
+      "sha256": "782de3bf3b7b61d6e96d08f4e4cebd1c405f43e1eefdeeb0fb1a2c136e9ad03f"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_3",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam",
+      "sorted": true,
+      "bytes": 4096193878,
+      "sha256": "57238109a0c1920b15c48954bd98c51bf4bae6d28d021baab3857d4c59e887ab"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_4",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam",
+      "sorted": true,
+      "bytes": 4233074143,
+      "sha256": "d1ff473dcc0d047acc81ce16bb0844da0b41d69f9b4f050340f33159b0f5cb88"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_6",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam",
+      "sorted": true,
+      "bytes": 4081898122,
+      "sha256": "66ed3a4c50aff0b3e7b49340747296ada7506f1d89a2fb17d6d3c00804e4f3b3"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_9",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam",
+      "sorted": true,
+      "bytes": 4189258550,
+      "sha256": "e1477de062386c7aa3d6b1fd4900ed8f0d536ae4eba03ab751aeb2fdfb7fc368"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_10",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam",
+      "sorted": true,
+      "bytes": 4136949462,
+      "sha256": "750ea876c0f32a1c704ba0ae21a4404c1d1d4d9e35e9db09a13be12e7408d3d9"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_11",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam",
+      "sorted": true,
+      "bytes": 4099177939,
+      "sha256": "a3164903ce48512727bc1afb6f1e26fb1f87dc2b8ca9f322bd9561c94b2f8f39"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_14",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam",
+      "sorted": true,
+      "bytes": 4161072973,
+      "sha256": "dc52f3a03a935f5dcf2931ec53447ba0412e6990d38cfb849e1e9dd41d585d0e"
+    },
+    {
+      "community": "E009",
+      "sample": "cami3_toy_human_gut_short_read_sample_17",
+      "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam",
+      "sorted": true,
+      "bytes": 4186238920,
+      "sha256": "0861589ca06c90c7e92148f4c1d475b3c1b45f389c634124e05743e6bd6bd386"
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_6",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/6.bam#1793142207875345",
+      "sorted": false,
+      "bytes": 5373737424,
+      "sha256": "beed39a3ada9e583283562266cc15164c689ee2c556b4ead46b882e6d30da7ad",
+      "records": 33315152,
+      "generation": "1793142207875345",
+      "crc32c": "2qT/XQ=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_7",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/7.bam#1793146706252698",
+      "sorted": false,
+      "bytes": 5362705531,
+      "sha256": "f33b5cb83b9814c1c1fcc20237bd5d51cca6c32e807c3fa5d2b6283306b48826",
+      "records": 33315362,
+      "generation": "1793146706252698",
+      "crc32c": "eFDeGQ=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_8",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/8.bam#1793151537637016",
+      "sorted": false,
+      "bytes": 5370590181,
+      "sha256": "78cc74f564b6b8cb17dd8cae4c231701a4888c7f3258ff7ae5fc412a88e0128e",
+      "records": 33325428,
+      "generation": "1793151537637016",
+      "crc32c": "Mu2wdQ=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_13",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/13.bam#1793156917863678",
+      "sorted": false,
+      "bytes": 5372781844,
+      "sha256": "2bbb7b219948929a8111e978596310967c6d1a7eebbf3ca4768900130ac45000",
+      "records": 33328722,
+      "generation": "1793156917863678",
+      "crc32c": "qnBmgQ=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_14",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/14.bam#1793161906439769",
+      "sorted": false,
+      "bytes": 5374000577,
+      "sha256": "e20bfc721d0c1f495e9ead9d330fb9b77ce255b4c3634fb48d954b9867f98cb1",
+      "records": 33332072,
+      "generation": "1793161906439769",
+      "crc32c": "i5B5ng=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_15",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/15.bam#1793166488709776",
+      "sorted": false,
+      "bytes": 5375247977,
+      "sha256": "d84466c13ee8c94ab65e68bfd2b4d44cccaaea65d498c37b4dd5236e7ae1049f",
+      "records": 33332240,
+      "generation": "1793166488709776",
+      "crc32c": "NakfBA=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_16",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/16.bam#1793170520065863",
+      "sorted": false,
+      "bytes": 5377775568,
+      "sha256": "97837f6fd929e0aba90304e7d9743cee84395639752fd9477472dcde2bd3dd39",
+      "records": 33325520,
+      "generation": "1793170520065863",
+      "crc32c": "0HJmaA=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_17",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/17.bam#1793174658758641",
+      "sorted": false,
+      "bytes": 5382206481,
+      "sha256": "84fbd11a4785cd89453ac567e67da58ffc01ba9239a71788fc50533e58142c9b",
+      "records": 33331598,
+      "generation": "1793174658758641",
+      "crc32c": "2OODzw=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_18",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/18.bam#1793178744515354",
+      "sorted": false,
+      "bytes": 5383660753,
+      "sha256": "7ec040794a73fee569a67ec9a12402731790d18d6de2a65033779fe46b25f9e4",
+      "records": 33331868,
+      "generation": "1793178744515354",
+      "crc32c": "KGUdVQ=="
+    },
+    {
+      "community": "oral",
+      "sample": "oral_sample_19",
+      "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/19.bam#1793182501373127",
+      "sorted": false,
+      "bytes": 5372078215,
+      "sha256": "a087676879c1550f0290765ddb0ef51b31a3b7262c2918e0d69cba362ea6f3d0",
+      "records": 33312040,
+      "generation": "1793182501373127",
+      "crc32c": "spxgFA=="
+    }
+  ],
+  "total_bytes": 94850086599,
+  "native_original_bam_count": 10,
+  "private_unsorted_bam_count": 10,
+  "pilot_samples": [
+    "cami3_toy_human_gut_short_read_sample_0",
+    "oral_sample_18"
+  ],
+  "all_old_tables_preserved": true,
+  "new_live_metadata_and_bytes_required": true
+}

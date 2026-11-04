@@ -18,11 +18,11 @@ jobs:
     timeout-minutes: 60
     env:
       PYTHONNOUSERSITE: '1'
-      OMP_NUM_THREADS: '2'
-      OPENBLAS_NUM_THREADS: '2'
-      MKL_NUM_THREADS: '2'
-      VECLIB_MAXIMUM_THREADS: '2'
-      NUMEXPR_NUM_THREADS: '2'
+      OMP_NUM_THREADS: '4'
+      OPENBLAS_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      VECLIB_MAXIMUM_THREADS: '4'
+      NUMEXPR_NUM_THREADS: '4'
       PIP_DISABLE_PIP_VERSION_CHECK: '1'
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -35,8 +35,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          test "$(nproc)" -ge 4
           unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
-          out="$RUNNER_TEMP/e010-dev4"
+          out="$RUNNER_TEMP/cpu-candidate"
           mkdir "$out"
           trap 'rc=$?; printf "CI_EXIT_CODE=%s\n" "$rc" | tee -a "$out/ci-terminal.log"; exit "$rc"' EXIT
           timeout --signal=TERM --kill-after=10s 3300s bash -s -- "$out" "$GITHUB_WORKSPACE" <<'RUN' 2>&1 | tee "$out/ci-terminal.log"
@@ -46,18 +47,20 @@ jobs:
           cd "$source"
           sudo apt-get update
           sudo apt-get install -y pandoc
-          python -I -B -m venv --copies "$out/builder-0.1.0.dev4-v1"
-          python -I -B -m venv --copies "$out/binner-0.1.0.dev4-v1"
-          build="$out/builder-0.1.0.dev4-v1/bin/python"
-          binner="$out/binner-0.1.0.dev4-v1/bin/python"
+          python -I -B -m venv --copies "$out/builder"
+          python -I -B -m venv --copies "$out/binner"
+          build="$out/builder/bin/python"
+          binner="$out/binner/bin/python"
           "$build" -I -B -m pip --isolated install --only-binary=:all: -r requirements/build.txt
           "$binner" -I -B -m pip --isolated install --no-deps --only-binary=:all: 'torch==2.2.2+cpu' --index-url https://download.pytorch.org/whl/cpu
           "$binner" -I -B -m pip --isolated install --only-binary=:all: -r requirements/candidate-cpu.txt
           python -I -B scripts/build_candidate.py --python "$build" --output "$out/build" --threads 2 --timeout 300
-          "$binner" -I -B -m pip --isolated install --no-deps "$out/build/rebuilt/dl_binner-0.1.0.dev4-py3-none-any.whl"
+          wheels=("$out/build/rebuilt/"*.whl)
+          test "${#wheels[@]}" -eq 1
+          "$binner" -I -B -m pip --isolated install --no-deps "${wheels[0]}"
           "$binner" -I -B -m pip check
-          "$binner" -I -B scripts/check_runtime.py --role candidate --requirements requirements/candidate-cpu.txt --threads 2 --output "$out/binner-runtime.json"
-          python -I -B scripts/test_product.py --python "$binner" --threads 2 --timeout 1800 --output "$out/product"
+          "$binner" -I -B scripts/check_runtime.py --role candidate --requirements requirements/candidate-cpu.txt --threads 4 --output "$out/binner-runtime.json"
+          python -I -B scripts/test_product.py --python "$binner" --threads 4 --timeout 1800 --output "$out/product"
           python -I -B scripts/check_docs.py
           RUN
       - name: Retain build and test evidence even on failure
@@ -66,9 +69,9 @@ jobs:
         with:
           name: cpu-prototype-evidence
           path: |
-            ${{ runner.temp }}/e010-dev4/ci-terminal.log
-            ${{ runner.temp }}/e010-dev4/build/
-            ${{ runner.temp }}/e010-dev4/*-runtime.json
-            ${{ runner.temp }}/e010-dev4/product/
+            ${{ runner.temp }}/cpu-candidate/ci-terminal.log
+            ${{ runner.temp }}/cpu-candidate/build/
+            ${{ runner.temp }}/cpu-candidate/*-runtime.json
+            ${{ runner.temp }}/cpu-candidate/product/
           if-no-files-found: warn
           retention-days: 14

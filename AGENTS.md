@@ -327,11 +327,10 @@ Pin the measurement procedure as well as the mapper: identity, MAPQ/BQ, read
 flags, mate overlaps, contig edges, denominators, sorting and zero handling can
 change the inputs. Verify actual tiny outputs when changing summary options;
 an option described as suppressing variance need not preserve mean semantics.
-Matching mapper versions does not establish matching depth measurements. Bind
-read flags, MAPQ/base quality, identity, edge/overlap rules and mean/variance
-denominators separately. Audit the actual pinned summarizer: disabling a variance
-output can also change its mean calculation. A shared re-summary is a prospective
-information treatment, not permission to overwrite accepted feature caches.
+A shared re-summary is a prospective information treatment, not permission to
+overwrite accepted feature caches. Unexpected summary values need the retained
+raw logs and fundamental counter/allocation/guard paths checked, not only output
+formatting or a relaxed numeric tolerance.
 
 Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution. One assembly can still use many read/BAM samples: per-base coverage storage scales with covered assembly bases times BAM count, while multiple assemblies multiply whole run directories. Audit persistent candidates, checkpoints and temporary coexistence before claiming that a smaller epoch count bounds peak disk use.
 
@@ -655,7 +654,9 @@ bounded execution clock and include it in allocation accounting.
 A reduced runtime smoke establishes only its exercised imports; directories named test can be runtime dependencies. When a tool fails on incompatible versions or missing package contents, prefer a complete independently owned compatible recipe for that failed path when practical. Do not apply placeholder modules or assume that a new prefix alone proves compatibility; test the actual import/CLI/readers. Preserve passed tool contracts instead of rebuilding them alongside failed paths.
 
 Keep incompatible native library families in separate processes, including
-inventory probes. A single environment can contain libraries that must not be
+inventory probes and regression-test modules. Test discovery can import a tensor
+backend before a graph-only contract; isolate those modules instead of weakening
+the guard. A single environment can contain libraries that must not be
 loaded together (for example conflicting OpenMP runtimes); do not suppress that
 conflict with global duplicate-library workarounds. Build changed distributions
 from a fresh source/build directory so stale generated files cannot enter a wheel.
@@ -732,6 +733,14 @@ regenerable intermediates on the working disk. After capturing useful diagnostic
 record removals and prune obsolete failed-run bulk when no longer needed; do not
 retain tens of GB merely for a failure status. Never delete irreplaceable inputs,
 accepted evidence or old UCloud files under this general cleanup convention.
+
+For owner-authorized local cleanup, classify files by use and recoverability,
+not age or experiment number. Old experiment folders can still own current
+workflow/mapping interpreters or dependency bases. Before removing a prefix, check
+live users and dependency links; retain required runtimes. Remove verified obsolete
+package-manager caches and checksum-matched expanded duplicates first, recording
+paths, inventory, retained source/backup and observed free space. Keep unique
+accepted evidence and failed journals; no new cloud upload/spend is implied.
 
 ### Environment ownership and grouped execution
 

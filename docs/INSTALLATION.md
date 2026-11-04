@@ -1,12 +1,12 @@
 # Standalone CPU installation and engineering checks
 
-The current candidate is **0.1.0.dev5**, built locally, not published. Keep dev3/dev4's
+The current research package is **0.1.0.dev9**, built locally, not published. Keep dev3/dev4's
 original wheels/runtimes and accepted evidence immutable. Use a fresh independently
 owned CPU environment; do not upgrade an executed research prefix. Venvs depend
 on their base Python/stdlib. Invoke lexical `bin/python`, never its resolved target.
 
 Recommended future Linux target: x86_64/Python 3.12. Current candidate checks use
-native Mac x86_64/Python 3.10; new dev5 Linux checks are required before a community run. Native dev4
+native Mac x86_64/Python 3.10; each new candidate needs its own Linux/source/runtime gates before community work. Native dev4
 acceptance does not validate the changed learning code. Python
 3.10–3.12 is supported by package metadata; Windows/GPU are unvalidated.
 
@@ -24,8 +24,8 @@ set -euo pipefail
 unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
 export PYTHONNOUSERSITE=1
 export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 NUMEXPR_NUM_THREADS=2
-build_env="$PWD/.venv/builder-0.1.0.dev5-v1"
-build_out="$PWD/artifacts/build-dev5-v1"
+build_env="$PWD/.venv/builder-current"
+build_out="$PWD/artifacts/build-current"
 test ! -e "$build_env"
 python3.12 -I -B -m venv --copies "$build_env"
 "$build_env/bin/python" -I -B -m pip --isolated install --only-binary=:all: -r requirements/build.txt
@@ -52,8 +52,8 @@ set -euo pipefail
 unset PYTHONPATH PYTHONHOME PYTHONUSERBASE
 export PYTHONNOUSERSITE=1
 export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 NUMEXPR_NUM_THREADS=2 NUMBA_NUM_THREADS=2
-candidate_env="$PWD/.venv/candidate-0.1.0.dev5-v1"
-wheel_path="$PWD/artifacts/build-dev5-v1/rebuilt/dl_binner-0.1.0.dev5-py3-none-any.whl"
+candidate_env="$PWD/.venv/candidate-0.1.0.dev9-v1"
+wheel_path="$PWD/artifacts/build-current/rebuilt/dl_binner-0.1.0.dev9-py3-none-any.whl"
 test -f "$wheel_path"
 test ! -e "$candidate_env"
 python3.12 -I -B -m venv --copies "$candidate_env"
@@ -67,7 +67,7 @@ fi
 "$candidate_env/bin/python" -I -B -m pip check
 "$candidate_env/bin/python" -I -B scripts/check_runtime.py --role candidate --requirements requirements/candidate-cpu.txt --threads 2 --output "$PWD/artifacts/candidate-runtime-v1.json"
 "$candidate_env/bin/dl-binner" candidate --help
-python3.12 -I -B scripts/test_product.py --python "$candidate_env/bin/python" --threads 2 --timeout 1800 --output "$PWD/artifacts/candidate-product-v1"
+python3.12 -I -B scripts/test_product.py --python "$candidate_env/bin/python" --threads 4 --timeout 1800 --output "$PWD/artifacts/candidate-product-v1"
 BASH
 ```
 
@@ -76,8 +76,12 @@ in separate processes. Some Mac wheels ship incompatible Intel/LLVM OpenMP
 runtimes: do not co-import them or set a global duplicate-library override.
 The production pipeline also isolates train/embed from graph construction.
 CPU requests, OpenMP/BLAS pools, Numba jobs and HMM search concurrency are explicit;
-loader workers are zero and stages run serially. The test budget is not a product
-maximum. Each test run is tiny software evidence, not a community quality result.
+loader workers are zero and stages run serially. The full regression suite uses
+four numerical threads because retained graph fixtures bind that geometry. Run it
+on a host with at least four logical CPUs. Each test module starts a fresh process,
+so tensor imports cannot contaminate graph-only workers. This validation allocation
+is not a product maximum. Each test run is tiny software evidence, not a community
+quality result.
 
 ## Run product regressions
 
@@ -99,3 +103,14 @@ Dev5 adds the explicit [multiview stage interface](PROTOTYPE.md#multiview-recons
 Its CPM/E013 downstream path is distinct from the preserved `candidate` command.
 E014 records actual installed Mac contracts and the separate unpassed community/
 Linux admission. Do not apply changed package metadata to prior executed journals.
+
+The E033 `dl_binner.multiscale` research stages require pinned pysam 0.23.3 (now
+in the candidate recipe; also available as the smaller `multiscale` extra). The
+[experimental protocol](../experiments/E033-multiscale-bam/OPERATIONS.md) has real
+local tiny checks and a separately authorized native comparison; it is not a
+promotion of a new default or an instruction to replay accepted cloud science.
+Its current research environment explicitly borrows the complete accepted
+numerical base read-only and owns the new package/BAM extension. That linked
+environment is not a portable standalone installation. Use this fresh recipe
+for an independent installation, and a builder in the package's supported
+Python range (>= 3.10, < 3.13). Native CI/platform validation remains separate.

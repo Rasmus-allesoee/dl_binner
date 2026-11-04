@@ -11,6 +11,7 @@ import importlib.util
 import json
 from pathlib import Path
 import shutil
+import subprocess
 import sys
 import time
 
@@ -30,6 +31,10 @@ def main():
     contract_spec=importlib.util.spec_from_file_location('build_contracts',root/'src/dl_binner/contracts.py')
     contracts=importlib.util.module_from_spec(contract_spec);contract_spec.loader.exec_module(contracts)
     started=time.monotonic()
+    probe=subprocess.run([str(args.python.absolute()),'-I','-B','-c',
+        'import sys,json;print(json.dumps(dict(version=list(sys.version_info[:3]),prefix=sys.prefix)));raise SystemExit(not ((3,10)<=sys.version_info[:2]<(3,13)))'],capture_output=True,text=True)
+    contracts.write_json(out/'builder-runtime.json',dict(exit_code=probe.returncode,stdout=probe.stdout,stderr=probe.stderr))
+    if probe.returncode:raise ValueError('Builder Python must be in supported >=3.10,<3.13 range; see builder-runtime.json')
     source=out/'source';source.mkdir()
     for name in ('src/dl_binner','tests/product','requirements'):
         shutil.copytree(root/name,source/name,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))

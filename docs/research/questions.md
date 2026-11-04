@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-11-03
+Updated: 2026-11-04
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -15,6 +15,12 @@ Status: open. Opened: 2026-09-16.
 The candidate focus is contig loss/misassignment in fragmented prokaryotic assemblies with weak or distorted coverage. Separate information absence, representation failure, clustering error, and quality/refinement selection. Evidence: [thesis](../evidence/2026-09-16-thesis.md), [landscape](../evidence/2026-09-16-landscape.md). Related: H001; [D002](../decisions/D002-investigate-before-architecture.md).
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
+
+November 4: [E033](../../experiments/E033-multiscale-bam/README.md) implements the
+shared parent/window coverage and reliability-aware learning block locally. No
+community measurement or new recovery score is claimed. Its source-backed JGI
+scalar-counter diagnosis preserves the old failure and does not alter E009/E024
+depths. Q006 separately retains candidate selection as later research.
 
 November 3: [E032's completed review](../../experiments/E032-biological-candidate-selection/comparison-review.json)
 is MODIFY: E009 no-GLM/GLM 10.2847%/10.1760% R95 fall modestly versus stronger E031;
@@ -104,6 +110,29 @@ Single/multi-sample coverage, taxonomy, pretrained references, marker genes, and
 Needed to resolve: connect the target biological use to accessible inputs, record available compute/access duration when a job is planned, and audit genome/sample/pretraining overlap. A claim of unseen-genome generalization needs a corresponding evaluation design.
 
 2026-09-17: E001 uses target-data unsupervised fits, sequence/coverage inputs and native COMEBin marker information, explicitly without a pretrained taxonomy/foundation model. It diagnoses transductive behavior. This does not commit the eventual method to those inputs or make public CAMI genomes novel to all prior tools.
+
+## Q006
+
+**Which source-informed candidate-generation and biological bin-selection policy
+best converts a common learned representation into reliable fragmented-genome recovery?**
+
+Status: deferred. Opened: 2026-11-04. Owner explicitly requests that this remain
+visible after E032. Related: Q001/Q004; [standalone source audit](../evidence/2026-11-03-depth-and-standalone-candidate-audit.md).
+
+E032's common marker/profile candidate pool is a plausible general standalone
+component, not evidence that its greedy score, candidate set or selection is
+optimal. COMEBin's partition ranking, SCGBinner's iterative extraction, SemiBin's
+mode-specific reclustering/candidate extraction and CompleteBin's staged selection
+provide distinct alternatives; source precedent alone does not establish transfer
+or calibrate marker quality. Keep exact versions, input/eligibility, candidate
+recall, whole/child/residual alternatives, joint updates and all DNA comparable.
+
+[E033](../../experiments/E033-multiscale-bam/design.md) holds E032 fixed while testing
+new measured information. Revisit selection after that block if retained evidence
+localizes a remaining recovery gap to candidate generation/ranking rather than
+missing information or representation. Freeze any new common rule before outcomes;
+no dataset-specific winner router, proxy-optimality claim or indefinite score/grid
+loop. Compare on additional prospectively admitted data before broad claims.
 
 ## H001
 
