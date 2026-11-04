@@ -20,13 +20,28 @@ ROOT = Path(__file__).absolute().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from e021_portable_cloud import Cloud, CPU, CPU_ZONE
 from e024_coverage import binding
-from e031_launch import remote, SSH, save, source_code
+from e031_launch import SSH as PINNED_SSH, save, source_code
 from e033_phase import validate_config
 
 BRANCH = 'multiscale-bam-representation'
 OLD_DISK = 'e032-task-1793735314'
 OLD_DISK_ID = '6444653960304755760'
 OLD_ROOT = '/srv/dl_binner/experiments/e032/selection-20261103T194814Z-bc93453'
+SSH = [('ConnectTimeout=45' if x == 'ConnectTimeout=12' else x) for x in PINNED_SSH]
+
+
+def remote(out, label, code, seconds=240):
+    """Retain one exact SSH program with a sufficient IAP handshake allowance.
+
+    Do not automatically replay a potentially mutating remote program after a
+    transport failure. The caller must inspect its receipts before recovery.
+    """
+    compile(code, 'E033-' + label, 'exec'); tag = label + '-' + str(time.time_ns())
+    (out / (tag + '.py')).write_text(code)
+    p = subprocess.run(SSH + ['/usr/bin/python3 -I -B -'], input=code,
+        capture_output=True, text=True, timeout=seconds)
+    (out / (tag + '.log')).write_text(p.stdout + p.stderr)
+    print(p.stdout + p.stderr, flush=True); p.check_returncode(); return p.stdout
 
 
 def frozen():
@@ -52,7 +67,7 @@ def config_value(ident, financial, used=0, device=0):
     limits = plan['limits']; start = ident['vm_start_epoch']; root = ident['root']
     return dict(root=root, repo=ident['repo'], source_commit=ident['source'], operations_source=ident['source'],
         vm_start_epoch=start, review_deadline_epoch=start + limits['seconds'],
-        provider_deadline_epoch=start + limits['provider_STOP_seconds'], setup_deadline_epoch=start + 5400,
+        provider_deadline_epoch=ident.get('provider_deadline_epoch', start + limits['provider_STOP_seconds']), setup_deadline_epoch=start + 5400,
         service_name=ident['service_name'], user=ident['user'], archive_prefix=ident['archive_prefix'],
         plan=root + '/science-plan.json', python=root + '/task/env/bin/python',
         workflow_python=plan['workflow_python'], base=reuse['native_dependency_base'],
@@ -211,9 +226,10 @@ cfg=json.loads((root/'config.json').read_text());validate_config(cfg)
 watch=json.loads((pathlib.Path('/var/lib')/(cfg['service_name']+'-exit')/'status.json').read_text());started=json.loads((root/'started.json').read_text())
 if watch['decision']!='workflow alive'or watch['expected_process']!=identity(started['pid'])or watch['observed_process']!=watch['expected_process']or watch['boot_id']!=pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip():raise ValueError('Fresh held watcher identity differs')
 if subprocess.check_output(['systemctl','is-active',cfg['service_name']+'-exit.timer'],text=True).strip()!='active':raise ValueError('Exit timer inactive')
-if provider['status']!='RUNNING'or str(provider['scheduling']['maxRunDuration']['seconds'])!=str(cfg['limits']['provider_STOP_seconds'])or provider['scheduling']['instanceTerminationAction']!='STOP':raise ValueError('Provider fallback differs')
+if provider['status']!='RUNNING'or provider['scheduling']['instanceTerminationAction']!='STOP':raise ValueError('Provider fallback differs')
 actual=__import__('datetime').datetime.fromisoformat(provider['lastStartTimestamp']).timestamp()
-if actual!=cfg['vm_start_epoch']:raise ValueError('Provider original start differs')
+if actual!=ident.get('current_boot_start_epoch',cfg['vm_start_epoch']):raise ValueError('Provider current boot start differs')
+if abs(actual+int(provider['scheduling']['maxRunDuration']['seconds'])-cfg['provider_deadline_epoch'])>.001:raise ValueError('Provider absolute fallback differs from original-clock config')
 publish(provider,root/'logs/provider-before-release.json')
 publish(dict(config=binding(root/'config.json'),plan=binding(root/'science-plan.json'),provider_STOP_verified=True,watchdog=watch,epoch=time.time()),root/'release.json')
 print('E033_RELEASED',str(root),flush=True)
@@ -230,7 +246,7 @@ def preflight(ident, financial):
     compile(source_sync(ident, financial['source_transport']), 'private source', 'exec')
 
 
-def start(out):
+def start(out, recovery=None):
     """Start once after fresh financial/source gates; stop on controller failure."""
     out = Path(out).absolute()
     if (out / 'identity.json').exists(): raise ValueError('Original attempt exists; explicit verified recovery required')
@@ -239,9 +255,15 @@ def start(out):
     if subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True).strip(): raise ValueError('Exact clean source required')
     if financial['source_transport']['source'] != source: raise ValueError('Exact private source differs')
     phase = 'multiscale-' + datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '-' + source[:7]
+    recovery = json.loads(Path(recovery).read_text()) if recovery else None
+    if recovery:
+        if recovery['science_released'] or recovery['old_tail']['status'] != 'PASS_OLD_TASK_RELEASE_ADMITTED':
+            raise ValueError('This recovery admits only the preserved pre-science setup')
+        phase = recovery['original']['phase'] + '-r2'
     ident = dict(source=source, repo='/srv/dl_binner/repo', phase=phase, root='/srv/dl_binner/experiments/e033/' + phase,
         user='rasmus_allesoee_gmail_com', service_name='e033-' + phase,
         archive_prefix='gs://dl-binner-archive-167650584170/e033/' + phase + '/', vm_start_epoch=time.time())
+    if recovery: ident['vm_start_epoch'] = recovery['original']['vm_start_epoch']
     preflight(ident, financial)
     c = Cloud(out / 'control'); before = c.state(); c.put('provider-before.json', before)
     sizes = sorted(int(d['diskSizeGb']) for d in before['disks'])
@@ -250,25 +272,42 @@ def start(out):
     old_disk = c.call(['compute', 'disks', 'describe', OLD_DISK], CPU_ZONE)
     if old_disk['id'] != OLD_DISK_ID or int(old_disk['sizeGb']) != 40: raise ValueError('Protected old disk identity differs')
     seconds = config_value(ident, financial)['limits']['provider_STOP_seconds']
+    if recovery:
+        # Reserve API/start latency inside the original absolute STOP horizon.
+        seconds = int(ident['vm_start_epoch'] + seconds - time.time()) - 180
+        if seconds < config_value(ident, financial)['review_deadline_epoch'] - time.time() + 300:
+            raise ValueError('Original fallback headroom cannot admit this recovery')
     try:
         c.call(['compute', 'instances', 'set-scheduling', CPU, '--no-restart-on-failure', '--max-run-duration=' + str(seconds) + 's', '--instance-termination-action=STOP'], CPU_ZONE)
         checked = c.state(); c.put('provider-STOP-before-start.json', checked)
         if str(checked['scheduling']['maxRunDuration']['seconds']) != str(seconds) or checked['scheduling']['instanceTerminationAction'] != 'STOP': raise ValueError('Pre-start provider STOP differs')
         c.call(['compute', 'instances', 'start', CPU], CPU_ZONE); live = c.state(); c.put('provider-start.json', live)
         if live['status'] != 'RUNNING' or live['lastStartTimestamp'] == before['lastStartTimestamp']: raise ValueError('Fresh actual start absent')
-        ident['vm_start_epoch'] = datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp(); save(out / 'identity.json', ident)
+        actual_start = datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp()
+        if recovery:
+            ident.update(current_boot_start_epoch=actual_start, provider_deadline_epoch=actual_start + seconds)
+        else: ident['vm_start_epoch'] = actual_start
+        validate_config(config_value(ident, financial)); save(out / 'identity.json', ident)
         for at in range(12):
-            p = subprocess.run(SSH + ['true'], capture_output=True, text=True, timeout=25)
+            p = subprocess.run(SSH + ['true'], capture_output=True, text=True, timeout=60)
             (out / ('ssh-ready-' + str(at) + '.log')).write_text(p.stdout + p.stderr)
             if p.returncode == 0: break
             time.sleep(2)
         else: raise RuntimeError('Pinned original SSH unavailable')
         remote(out, 'source-sync', source_sync(ident, financial['source_transport']))
-        text = remote(out, 'protected-old-tail', render_tail(ident), 600)
-        tail = json.loads(next(v.removeprefix('E033_OLD_TAIL_VERIFIED ') for v in text.splitlines() if v.startswith('E033_OLD_TAIL_VERIFIED ')))
+        if recovery:
+            tail = recovery['old_tail']
+            # Reuse the closed capsule rather than repeating its collector/work hash.
+            code = "import json,pathlib\np=pathlib.Path(" + repr(tail['local_preservation_root'] + '/release-admission.json') + ")\n"
+            code += "expected=" + repr(tail) + "\nif json.loads(p.read_text())!=expected:raise ValueError('Preserved old-tail receipt differs')\n"
+            code += "print('E033_OLD_TAIL_REUSED',str(p),flush=True)\n"
+            remote(out, 'reuse-verified-old-tail', code)
+        else:
+            text = remote(out, 'protected-old-tail', render_tail(ident), 600)
+            tail = json.loads(next(v.removeprefix('E033_OLD_TAIL_VERIFIED ') for v in text.splitlines() if v.startswith('E033_OLD_TAIL_VERIFIED ')))
         save(out / 'old-task-release-admission.json', tail)
         if tail['status'] != 'PASS_OLD_TASK_RELEASE_ADMITTED' or not tail['all_old_work_bytes_verified']: raise ValueError('Old task release proof missing')
-        remote(out, 'unmount-old-task', "import subprocess\nsubprocess.run(['sudo','-n','umount'," + repr(OLD_ROOT) + "],check=True)\n")
+        remote(out, 'unmount-old-task', "import os,subprocess\nif os.path.ismount(" + repr(OLD_ROOT) + "):\n subprocess.run(['sudo','-n','umount'," + repr(OLD_ROOT) + "],check=True)\n")
         c.call(['compute', 'instances', 'detach-disk', CPU, '--disk=' + OLD_DISK], CPU_ZONE)
         detached = c.call(['compute', 'disks', 'describe', OLD_DISK], CPU_ZONE)
         if detached['id'] != OLD_DISK_ID or detached.get('users'): raise ValueError('Old disk not safely detached')
@@ -301,4 +340,5 @@ def start(out):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, required=True)
-    args = parser.parse_args(); print(json.dumps(start(args.root)), flush=True)
+    parser.add_argument('--recovery', type=Path)
+    args = parser.parse_args(); print(json.dumps(start(args.root, args.recovery)), flush=True)

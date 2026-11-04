@@ -77,5 +77,21 @@ class Launch(unittest.TestCase):
             bad = dict(financial, wheel_binding=dict(bytes=1, sha256='0' * 64))
             with self.assertRaisesRegex(ValueError, 'payload differs'): launch.render_host(ident, bad)
 
+    def test_recovery_keeps_original_clock_with_current_boot_absolute_fallback(self):
+        with tempfile.TemporaryDirectory() as folder:
+            ident, financial = self.fixture(folder)
+            original = ident['vm_start_epoch'] - 600
+            current = ident['vm_start_epoch']
+            ident.update(vm_start_epoch=original, current_boot_start_epoch=current,
+                provider_deadline_epoch=original + 36.25 * 3600 - 120)
+            cfg = launch.config_value(ident, financial)
+            self.assertTrue(validate_config(cfg)); arm_config(cfg)
+            self.assertEqual(cfg['review_deadline_epoch'], original + 36 * 3600)
+            self.assertLess(cfg['provider_deadline_epoch'], original + 36.25 * 3600)
+            code = launch.render_release(ident, {})
+            self.assertIn("ident.get('current_boot_start_epoch'", code)
+            self.assertIn('absolute fallback', code)
+            self.assertIn('ConnectTimeout=45', launch.SSH)
+
 
 if __name__ == '__main__': unittest.main()

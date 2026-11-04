@@ -29,6 +29,14 @@ Native Linux/source/runtime/BAM/full-shape/schedule admission is still required.
 No changed measurement, fit, score or new cloud allocation is claimed by this
 pre-start record. Actual attempt/status will be recorded in native-observed.json.
 
+[The preserved first setup failure](setup-recovery.json) occurs after successful
+E032 work/tail verification and private readback, before every E033 native gate.
+A 12-second IAP SSH banner timeout triggers verified shutdown; no science is
+released. The operations-only repair allows a 45-second handshake on the same
+pinned alias, reuses the verified tail capsule, and binds a fresh boot's shorter
+provider fallback to the **original** first-start clock. It neither resets the
+36-hour deadline nor repeats accepted work. Three actual launch/schema tests pass.
+
 ## Preserved preparation boundary
 
 The owner invokes E032's prompt at `ba7f9b5` on November 4. Local implementation,

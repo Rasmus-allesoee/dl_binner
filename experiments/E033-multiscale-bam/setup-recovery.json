@@ -1,0 +1,73 @@
+{
+  "status": "LOCAL_OPERATIONAL_RECOVERY_PREPARED",
+  "original": {
+    "source": "a9407691bd9d82073b454ca19a40c94d99fd1aa9",
+    "repo": "/srv/dl_binner/repo",
+    "phase": "multiscale-20261104T152005Z-a940769",
+    "root": "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769",
+    "user": "rasmus_allesoee_gmail_com",
+    "service_name": "e033-multiscale-20261104T152005Z-a940769",
+    "archive_prefix": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/",
+    "vm_start_epoch": 1793805630.845
+  },
+  "old_tail": {
+    "status": "PASS_OLD_TASK_RELEASE_ADMITTED",
+    "old_disk": "e032-task-1793735314",
+    "old_root": "/srv/dl_binner/experiments/e032/selection-20261103T194814Z-bc93453",
+    "work_members": 70,
+    "all_old_work_bytes_verified": true,
+    "complete_logs_gates_tail_collected": true,
+    "archive": {
+      "bytes": 1169084,
+      "sha256": "31b7e16515c542e416d7292cbba672a3b231455d90d5c265b18b72bf47d1970b"
+    },
+    "delivered": {
+      "e033-evidence.tar.gz": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/e033-evidence.tar.gz",
+        "generation": "1793805685113228",
+        "binding": {
+          "bytes": 1169084,
+          "sha256": "31b7e16515c542e416d7292cbba672a3b231455d90d5c265b18b72bf47d1970b"
+        },
+        "readback_verified": true
+      },
+      "inventory.json": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/inventory.json",
+        "generation": "1793805685539236",
+        "binding": {
+          "bytes": 175422,
+          "sha256": "032ec5b254d6a614a9fb152e23e4d87a13a0799701824f4afb52e2cedd9e8792"
+        },
+        "readback_verified": true
+      },
+      "collection.json": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/collection.json",
+        "generation": "1793805685900851",
+        "binding": {
+          "bytes": 66932,
+          "sha256": "26ae21066a1745adf1dfbc88c5dfb03e4a4abe489acdff8d68565496b34e7239"
+        },
+        "readback_verified": true
+      },
+      "e033-evidence.tar.gz.sha256": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769/E032-closed-tail/e033-evidence.tar.gz.sha256",
+        "generation": "1793805686318569",
+        "binding": {
+          "bytes": 87,
+          "sha256": "528c29c8c6205a7a51fe5c7488bd14c55d456455e8a869658cc39c44f2949d90"
+        },
+        "readback_verified": true
+      }
+    },
+    "local_preservation_root": "/srv/dl_binner/experiments/e033/closed-E032-multiscale-20261104T152005Z-a940769",
+    "epoch": 1793805686.442456
+  },
+  "science_released": false,
+  "failed_remote_step": "unmount-old-task before SSH banner completed; no E033 gate or science released",
+  "failure_cause": "Pinned IAP SSH ConnectTimeout=12 expired; credentials/host pin unchanged",
+  "recovery": "45-second pinned IAP handshake; reuse verified old-tail capsule; original first-start deadline and $20 scope retained; shorter remaining provider STOP",
+  "failed_attempt_stopped": true,
+  "first_stop": "2026-11-04T07:22:35.955-08:00",
+  "clock_not_reset": true,
+  "new_scientific_treatment": false
+}
