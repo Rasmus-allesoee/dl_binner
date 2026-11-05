@@ -1,0 +1,403 @@
+{
+  "status": "RUNNING_PILOT_NOT_SCIENTIFIC_COMPLETION",
+  "checked_epoch": 1793920738.6153362,
+  "phase": "graph-20261105T231027Z-b0d741c",
+  "source_commit": "b0d741c420b8b8b2025e681e8b731dccf970b05a",
+  "branch": "genome-graph-representation",
+  "root": "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e034/graph-20261105T231027Z-b0d741c/",
+  "provider_status": "RUNNING",
+  "guest_namespace": "e034-candidate/status",
+  "current_stage": "pilot-E009",
+  "scientific_comparison_admitted": false,
+  "science_completed": false,
+  "pilot_utilities": "PENDING; no MAG claim",
+  "native_exits": {
+    "complete-native-runtime.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/task/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e034_runtime.py",
+        "--base",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+        "--reference",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+        "--candidate-lock",
+        "/srv/dl_binner/repo/experiments/E034-genome-graph/candidate-lock.json",
+        "--pysam-wheel",
+        "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/payload/pysam-0.23.3-cp310-cp310-manylinux_2_28_x86_64.whl",
+        "--output",
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/gates/runtime.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2217,
+      "peak_sampled_rss_bytes": 281731072,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.9696462377855306,
+      "sampled_cpu_seconds": 16.229999999999997,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 127630.6317718029,
+      "stop_reason": null,
+      "wall_seconds": 16.73806319000002
+    },
+    "original-inputs-before.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/task/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e034_native.py",
+        "--plan",
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/science-plan.json",
+        "--action",
+        "inputs",
+        "--output",
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/gates/inputs-before.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2248,
+      "peak_sampled_rss_bytes": 51458048,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.3525082296802762,
+      "sampled_cpu_seconds": 4.1499999999999995,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 127613.88514971733,
+      "stop_reason": null,
+      "wall_seconds": 11.772774791000018
+    },
+    "workflow-origin.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.metadata as metadata,json,platform,sys\nfrom pathlib import Path\nexpected=('3.12.10', '9.16.3')\nd=metadata.distribution('snakemake')\nif (platform.python_version(),d.version)!=expected:raise ValueError('Frozen workflow Python/Snakemake version differs')\nif not Path(d._path).resolve().is_relative_to(Path(sys.prefix).resolve()):raise ValueError('Foreign workflow distribution')\nprint(json.dumps(dict(status='PASS_WORKFLOW_VERSION_ORIGIN',python=platform.python_version(),snakemake=d.version,prefix=sys.prefix,distribution=str(Path(d._path).resolve()))))\n"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2179,
+      "peak_sampled_rss_bytes": 45350912,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.29215710227299174,
+      "sampled_cpu_seconds": 0.14,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 127633.15426421165,
+      "stop_reason": null,
+      "wall_seconds": 0.47919423800001937
+    },
+    "owned-package-install.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e033_install.py",
+        "--base",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+        "--destination",
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/task/env",
+        "--wheel",
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/payload/dl_binner-0.1.0.dev10-py3-none-any.whl",
+        "--pysam-wheel",
+        "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/payload/pysam-0.23.3-cp310-cp310-manylinux_2_28_x86_64.whl",
+        "--lock",
+        "/srv/dl_binner/repo/experiments/E034-genome-graph/candidate-lock.json",
+        "--output",
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/gates/install.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2180,
+      "peak_sampled_rss_bytes": 101203968,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.6433774974928773,
+      "sampled_cpu_seconds": 1.29,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 127632.64541721344,
+      "stop_reason": null,
+      "wall_seconds": 2.0050437030000126
+    },
+    "actual-native-tiny.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/task/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e034_tiny.py",
+        "--root",
+        "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/gates/tiny",
+        "--workflow-python",
+        "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2252,
+      "peak_sampled_rss_bytes": 578543616,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.4666004494561653,
+      "sampled_cpu_seconds": 46.15,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 127602.10241675377,
+      "stop_reason": null,
+      "wall_seconds": 31.467329781000018
+    }
+  },
+  "native_tiny": {
+    "status": "PASS",
+    "seals": 31,
+    "resume": true,
+    "binding": {
+      "bytes": 6390,
+      "sha256": "29cb83d843907b2770b69eb9eeb785c9b88d12e45b728c73247a7298e21df4bd"
+    }
+  },
+  "closed_gate_bindings": {
+    "gates/package-install.json": {
+      "bytes": 15011,
+      "sha256": "749220e8660e865d8c4d08c54f97450e513bc1a26c4ad3cdd91e8f805cf87773"
+    },
+    "gates/runtime.json": {
+      "bytes": 109779,
+      "sha256": "9a85092676ee3f6fe44a9304b6fb16def8c4683f786bb0229020bf10ed22cd84"
+    },
+    "gates/install.json": {
+      "bytes": 605,
+      "sha256": "28995bc6b5a2dd3aa4f5b22e9bd59346d6f5439f145efe14668a4556b0d653e1"
+    },
+    "gates/inputs-before.json": {
+      "bytes": 3030,
+      "sha256": "c2a9911846d5735c42801e764acbfd210339918474f52bc961fd6e66c21417a3"
+    }
+  },
+  "supervision": {
+    "boot_id": "66b49e62-0683-4df0-b7f3-d346cd7afcc3",
+    "process": {
+      "pid": 2051,
+      "start_ticks": 14867,
+      "command_sha256": "5bcd71c1b34b83f2224edaccafe88b5c40fee4f41ba71f56747f5dda3f119139"
+    },
+    "watcher": {
+      "boot_id": "66b49e62-0683-4df0-b7f3-d346cd7afcc3",
+      "checked_utc": "2026-11-05T23:18:34.557778+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "5bcd71c1b34b83f2224edaccafe88b5c40fee4f41ba71f56747f5dda3f119139",
+        "pid": 2051,
+        "start_ticks": 14867
+      },
+      "observed_process": {
+        "command_sha256": "5bcd71c1b34b83f2224edaccafe88b5c40fee4f41ba71f56747f5dda3f119139",
+        "pid": 2051,
+        "start_ticks": 14867
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c"
+    },
+    "parent_active": true,
+    "timer_active": true,
+    "normal_and_crash_tests_passed": true,
+    "restart_refusal_passed": true,
+    "provider_STOP_seconds": 130500,
+    "common_deadline_epoch": 1794049846.688,
+    "provider_STOP_epoch": 1794050746.688
+  },
+  "source_sync": {
+    "kind": "private_exact_Git_bundle",
+    "source": "b0d741c420b8b8b2025e681e8b731dccf970b05a",
+    "binding": {
+      "bytes": 206397,
+      "sha256": "72ef610a58cf975637a79ecef2731f0a754ba3e7c50da40e1a7b1b564f37b1b0"
+    },
+    "base": "941ede36d29b76c5f542e56295236d5100447ca1",
+    "GitHub_read_only": true,
+    "public_push": false,
+    "clean_native_head_verified": true
+  },
+  "resources": {
+    "original_disks_GiB": [
+      30,
+      300
+    ],
+    "conditional_task_disk": {
+      "creationTimestamp": "2026-11-05T15:12:58.895-08:00",
+      "enableConfidentialCompute": false,
+      "id": "6745251986842629013",
+      "kind": "compute#disk",
+      "labelFingerprint": "H28-EDr3_v4=",
+      "labels": {
+        "experiment": "e034"
+      },
+      "name": "e034-task-1793920246",
+      "physicalBlockSizeBytes": "4096",
+      "satisfiesPzi": true,
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/disks/e034-task-1793920246",
+      "sizeGb": "100",
+      "status": "READY",
+      "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-balanced",
+      "zone": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a"
+    },
+    "latest_filesystems": {
+      "epoch": 1793920735.576374,
+      "task_used": 3384991744,
+      "task_free": 101687492608,
+      "source_free": 28820324352
+    },
+    "source_safe_cleanup_review": {
+      "headroom": {
+        "bytes": 241,
+        "sha256": "691366e7959275c09207ba4399b3d0504bcece974b7db069346fab2d4dc49f54"
+      },
+      "safe_cleanup_insufficient": true,
+      "checked_epoch": 1793920371.7899919,
+      "needed_additional_verified_free_bytes": 62436380672,
+      "review_journal": {
+        "bytes": 2283,
+        "sha256": "52f18056e03171298a910286f027382cb813192fccc16e298987c1786c0e5354"
+      },
+      "reason": "Actual du: E009 data-stage 166.11 GB contains protected accepted acquisition/assembly/BAM/reference inputs; the other large roots are accepted earlier input/model/vector/marker/comparator and failed evidence. Prior E031/E033 verified duplicate/temp cleanup and release of old task scratch are already complete. No verified disposable set supplies the missing 62.44 GB without removing protected inputs/evidence. Use approved conditional 100 GiB scratch ($1.6 maximum through boundary), preserving original 30/300 GiB. This is a scoped safe-cleanup assessment, not proof every historical byte is optimal."
+    },
+    "maximum_closed_gate_sampled_RSS_bytes": 578543616,
+    "scope": "Closed gate resources plus current sampled pilot filesystem; full pilot/phase peaks pending"
+  },
+  "cost": {
+    "allocated_seconds_so_far": 491.9273362159729,
+    "CPU_RAM_gross_so_far_USD": 0.036627498945732154,
+    "IPv4_upper_so_far_USD": 0.0006832324114110734,
+    "task_disk_gross_so_far_USD": 0.0013858850986238512,
+    "complete_original_new_envelope_USD": 15,
+    "complete_gross_forecast_upper_USD": 12.3222,
+    "original_separate_storage_approval_USD": 9,
+    "measured_allocation_not_sampled_CPU": true,
+    "final_cost_pending_shutdown": true,
+    "not_credit_delta_or_invoice": true
+  },
+  "limitations": [
+    "MAPQ and explicit reported-placement filters are confidence evidence, not exhaustive proof of genomic uniqueness",
+    "Conditional graph fits/constructors and MAG recovery unobserved",
+    "Both communities remain development; all original truth/denominator/N-quarantine limits retained",
+    "Inherited historical depth priors remain; no causal isolated depth/graph ingredient claim",
+    "Oral GLM extension locally tested only; no native GPU/model inference/bank/GLM teacher or proposals admitted"
+  ],
+  "evidence": {
+    "artifacts/e034-genome-graph/native-launch-v1/preflight.json": {
+      "bytes": 595,
+      "sha256": "66dbdb41dcb4052ff85e940144df344ef6376bad3f21649a16e376523c264f34"
+    },
+    "artifacts/e034-genome-graph/native-launch-v1/identity.json": {
+      "bytes": 483,
+      "sha256": "010a313675e1d00bd29f8532758429b8baaea684733200e414003a45bc6f476c"
+    },
+    "artifacts/e034-genome-graph/native-launch-v1/financial-gate.json": {
+      "bytes": 1542,
+      "sha256": "6fda69aac2e1ab528602c9d7d286654709c01fe9c58289063ea756b3e2a400c9"
+    },
+    "artifacts/e034-genome-graph/native-launch-v1/source.bundle": {
+      "bytes": 206397,
+      "sha256": "72ef610a58cf975637a79ecef2731f0a754ba3e7c50da40e1a7b1b564f37b1b0"
+    },
+    "artifacts/e034-genome-graph/native-launch-v1/headroom.json": {
+      "bytes": 241,
+      "sha256": "691366e7959275c09207ba4399b3d0504bcece974b7db069346fab2d4dc49f54"
+    },
+    "artifacts/e034-genome-graph/native-launch-v1/disk-decision.json": {
+      "bytes": 1001,
+      "sha256": "fffab9025398575739b22e88a53b0ba17c24cf1761c3ed5c9d28b478b431fe96"
+    },
+    "artifacts/e034-genome-graph/native-launch-v1/released.json": {
+      "bytes": 33,
+      "sha256": "eedefcc78a6e7f567ea604aa320b01d9c11f54eba6ede2403c7ff0e26e49807d"
+    },
+    "artifacts/e034-genome-graph/observation-2/native.json": {
+      "bytes": 9361,
+      "sha256": "8d432adedf0ba8119f8c2b29142e21beff77abaf685a5288f6e844789a67fa35"
+    },
+    "artifacts/e034-genome-graph/observation-1/control/provider.json": {
+      "bytes": 33533,
+      "sha256": "98f0e4c135cbcfe73c86ebd31bc180b85cdd0554652ada98d001a37782cafb4e"
+    },
+    "artifacts/e034-genome-graph/observation-1/control/guest.json": {
+      "bytes": 310,
+      "sha256": "63c20cf337162925956e78e5583757c51b2fa3dbbfb6d9ad3ef0648d48e9438d"
+    },
+    "artifacts/e034-genome-graph/finance/bucket.json": {
+      "bytes": 922,
+      "sha256": "2750ac393aa246e2edcd3517f2fd0cd5cd5a01c26279d0cea4a1fedee617bb5e"
+    },
+    "artifacts/e034-genome-graph/finance/quota.json": {
+      "bytes": 11498,
+      "sha256": "af93d920377223c93431536d0539e3ac112a3bbd5c8c15539643d67eb522dfc3"
+    },
+    "artifacts/e034-genome-graph/finance/disks.json": {
+      "bytes": 2889,
+      "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+    },
+    "artifacts/e034-genome-graph/finance/project-billing.json": {
+      "bytes": 207,
+      "sha256": "d17b1d996a5c84429db68fff27b4bc76e6e4c6451f38098ff6f5dae7a7d23937"
+    },
+    "artifacts/e034-genome-graph/finance/browser-credit.json": {
+      "bytes": 861,
+      "sha256": "0c2971149de2b1bd77f836807d49f31a3f39eea09f045e614e37aaabefbd74d8"
+    },
+    "artifacts/e034-genome-graph/finance/versions.json": {
+      "bytes": 378260,
+      "sha256": "68b929b4ca01ee42c48e5c23d2de1fe9982c4db0fef650086c6e13143e78f425"
+    },
+    "artifacts/e034-genome-graph/finance/current-prices.json": {
+      "bytes": 9155,
+      "sha256": "b11a7dae6d28a359df09d498d75526c014f39b3f5dd6670cd96b72bc1f0fb80a"
+    },
+    "artifacts/e034-genome-graph/finance/soft-deleted.json": {
+      "bytes": 56,
+      "sha256": "f6a5ec013649e5e8578ee55e217976bfd9227a2c0e797b09793a6cf21713033b"
+    },
+    "artifacts/e034-genome-graph/finance/instances.json": {
+      "bytes": 33450,
+      "sha256": "55c0e1f0b26b0cc72428fd9fdf01832cc832c771f9df3a8e9a611ae24b466085"
+    },
+    "artifacts/e034-genome-graph/finance/provider-state.json": {
+      "bytes": 33098,
+      "sha256": "9e78ea7449818604f064542863ad912ae6468863ddd5c1bd74ae0d63c397ea63"
+    },
+    "artifacts/e034-genome-graph/finance/billing-account.json": {
+      "bytes": 179,
+      "sha256": "c7bf1056535088a8e2d1772bf0e9bd2d63f00cdf91b1a1dff113dd4de19b88da"
+    },
+    "artifacts/e034-genome-graph/observation-3/native.json": {
+      "bytes": 3947,
+      "sha256": "b07c734a4045b0918cbeb5f8fb9e01d7b01e7a1a591ef3da473c00632cab06c3"
+    },
+    "artifacts/e034-genome-graph/observation-3/control/provider.json": {
+      "bytes": 33533,
+      "sha256": "98f0e4c135cbcfe73c86ebd31bc180b85cdd0554652ada98d001a37782cafb4e"
+    },
+    "artifacts/e034-genome-graph/observation-3/control/guest.json": {
+      "bytes": 303,
+      "sha256": "a8de88b224c4204470eff3f6323a3273e48e27206569fb5e19086a1e78a94492"
+    }
+  },
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "progress": {
+    "log": "/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c/logs/pilot-E009.log",
+    "latest_alignment_records": 10000000,
+    "latest_templates": 4999999,
+    "candidate_cross_observations": 36140,
+    "latest_progress_UTC": "2026-11-05T23:18:37Z",
+    "interpretation": "Candidates precede insert quantile/dedup/orientation/hub/utility admission; not verified reliable edges or MAG recovery",
+    "actual_progress_observed_over_seconds": 90,
+    "resource_sample": {
+      "seconds": 262.275240823,
+      "rss_bytes": 558563328,
+      "sampled_cpu_seconds": 407.5
+    }
+  },
+  "provider_checked_epoch": 1793920953.7079601,
+  "guest_observed": [
+    {
+      "key": "status",
+      "namespace": "e034-candidate",
+      "value": "{\"status\": \"RUNNING\", \"stage\": \"pilot-E009\", \"root\": \"/srv/dl_binner/experiments/e034/graph-20261105T231027Z-b0d741c\", \"source\": \"b0d741c420b8b8b2025e681e8b731dccf970b05a\", \"epoch\": 1793920476.0634358}"
+    }
+  ]
+}

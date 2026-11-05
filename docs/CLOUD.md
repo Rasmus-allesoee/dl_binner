@@ -1,25 +1,50 @@
 # Google Cloud workspace operations
 
-## E034 authorized genome-graph block — local gates passed, native pending
+## E034 supervised retained-BAM pilot running
 
-The owner authorizes [E034](../experiments/E034-genome-graph/OPERATIONS.md)'s new
-$15 credit-only retained-BAM pilot and conditional three-mode comparison, including
-one conditional 100 GiB task disk. Frozen E031 vectors plus actual E033 interval
-moments and provisional E032 construction are the anchors; rejected E033 learning
-is not promoted. [Newer graph source review](evidence/2026-11-05-e034-newer-graph-design.md)
-includes UnitigBIN 2024 and newer screens. No native pilot or community outcome
-has been observed yet. Existing VM remains stopped until fresh full gates pass.
+Phase `graph-20261105T231027Z-b0d741c`, exact clean private source `b0d741c`,
+starts on the existing E2 November 5 at **23:10:46.688 UTC / November 6 at
+00:10:46.688 Copenhagen**. [Native receipt](../experiments/E034-genome-graph/native-observed.json)
+records five passed setup/runtime/source/workflow/tiny exits. The actual Linux
+three-mode tiny DAG passes 31 scientific seals, exact reload, complete exports,
+strict readers and no-op resume. E009's sample-0 pilot progresses from 2 million
+to **10 million alignments** (23:17:07 → 23:18:37 UTC), with 36,140 candidate
+cross-contig observations, not yet admitted reliable edges. No guard/error is
+observed; **pilot utility and the conditional community comparison are pending**.
 
-Actual local BAM/collation/graph/train/reload/export and three-mode serial/no-op/
-strict-reader checks pass. Original failed engineering trials and the Snakemake
-stale-source-cache refusal remain. Utility gates precede fits; insufficient
-paired links limit these assemblies/libraries/mapping, not the method family.
-The same candidate and thresholds cover all modes; full DNA/unlinked fallback
-and historical depth priors remain explicit. Oral GLM state/Adam extension is
-locally prepared only; no GPU or full extraction in this scope. Q006 and skin
-truth/features/cost admission remain open. **November 11 active / November 18
-automatic-tail** boundaries are unchanged. The earlier E033 summary below remains
-accepted history; its proposed-authority wording does not override this new task.
+Current-boot/PID/start/command watcher and parent are active; normal/crash and
+restart-refusal tests pass. Common deadline: **November 7, 11:10:46.688 UTC /
+12:10:46.688 Copenhagen**. Independent STOP: **11:25:46.688 UTC / 12:25:46.688
+Copenhagen**. The chat/SSH connection is not needed. For a healthy longer run,
+leave supervision intact and inspect completion later using the
+[exact following prompt](../experiments/E034-genome-graph/OPERATIONS.md#exact-following-prompt).
+Do not infer success from shutdown or replay accepted science.
+
+Actual original-source headroom is 26.85 GiB; no verified disposable 58.2 GiB set
+can supply the complete peak/reserve without removing protected inputs/evidence.
+The authorized new **100 GiB balanced** `e034-task-1793920246`, ID
+`6745251986842629013`, is the only added resource. Both source/task free reserves
+pass. Original 30/300 GiB and accepted data/models/journals remain unchanged.
+
+[Fresh complete admission](../experiments/E034-genome-graph/execution-admission.json)
+shows DKK 1,641.25 Available / 83%, January 12 expiry, paid account/Certain usage /
+Free Trial terms/net pricing, displayed November net DKK 0.00 and $35 delayed-use
+reserve. No realtime pending ledger was exposed. Maximum new gross forecast is
+**$12.3222 under $15**, including 36.25 allocated hours, conditional scratch through
+the active boundary, bounded return/export/operations and automatic tail. Allocated
+492 seconds so far are about **$0.0373 CPU/RAM/IP**, plus $0.0014 task storage;
+final allocation/collection costs await shutdown. This is not a credit-delta invoice.
+Existing original disks/all versions remain under the separate $9 storage approval
+(about $7.62 over seven days). **November 11 at 00:00 Copenhagen active / November
+18 automatic-tail** boundaries are unchanged; stopped disks still cost money.
+
+The [newer graph source review](evidence/2026-11-05-e034-newer-graph-design.md)
+includes UnitigBIN 2024 and later screens. Use strong frozen E031 vectors, admitted
+E033 moments and provisional E032 construction; do not promote rejected E033
+learning. Insufficient paired links would limit these assemblies/libraries/mapping,
+not the family. Oral GLM state/Adam extension is locally prepared only; no GPU/bank/
+teacher/proposal admission or confirmation score is added. Q006 stays open. The
+older E033 paragraphs below are accepted dated history, not current VM status.
 
 ## November 5 E033 completed; temporary disk released
 
