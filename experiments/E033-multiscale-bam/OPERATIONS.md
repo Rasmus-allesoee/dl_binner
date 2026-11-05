@@ -1,5 +1,19 @@
 # E033 operations
 
+## November 5 recovery authorized; collect actual causes first
+
+The owner explicitly invokes the recovery prompt at `9710ea8` and confirms that
+debugging/needed evidence recovery is part of the original task. [Fresh admission](recovery-admission.json)
+covers the existing E2 and 30/300/100 GiB disks, remaining original $20, prospective
+30-hour common recovery clock / 30.25-hour STOP, unchanged November 11/18 boundaries.
+The first held forensic wake is independently bounded to 30 minutes / 45-minute
+STOP / $0.25, read-only original task filesystem, 8 GB RSS / 256 MiB work / 128 MiB
+compressed return. No science runs in that consumer. Local producer/schema, actual
+JSON writer, closed-worker/root copy, pack, refusal and isolated transferred armer
+contracts pass; native fresh boot tests and source/device headroom still precede
+release. Later reuse/science must follow actual error diagnosis and repaired native
+gates; neither old failure nor missing evidence causes another owner approval loop.
+
 ## November 5 verified stopped failure; no new run in inspection
 
 [Inspection review](inspection-review.md) and [receipt](inspection-observed.json)

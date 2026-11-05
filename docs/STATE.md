@@ -2,6 +2,27 @@
 
 Updated: November 5, 2026 (Copenhagen). This is the single current handoff.
 
+## E033 authorized recovery in progress, November 5
+
+The owner now explicitly authorizes [forensic recovery and conditional completion](../experiments/E033-multiscale-bam/recovery-admission.json)
+under the remaining original $20 and a prospective 30-hour common recovery clock /
+30.25-hour STOP, retaining November 11 active / November 18 automatic-tail limits.
+Routine debugging/evidence recovery belongs to the authorized task; do not return
+another approval prompt for a helper error. Preserve all earlier clocks/failures.
+Fresh credit is DKK 1,666.37 Available / 84%, expiry January 12, 2027, same eligible
+scope; displayed November net DKK 0.00 with delayed usage and $35 reserve. Complete
+conservative attribution remains about $15.65 under $20, original storage separate.
+
+A tested held-parent forensic launcher first uses only a read-only mount of the
+existing 100 GiB task disk, copies actual worker/root/post-collector evidence and
+verifies a compact private return. Its first wake is bounded to 30 minutes / STOP
+45 minutes / $0.25, with fresh boot/process supervision before release. Source,
+config, copy/pack, refusal and isolated transfer paths are locally tested. No
+science is released until the actual native causes and repaired production/native
+gates pass. Reuse all twenty accepted summaries/banks and passed setup after byte
+checks; do not replay them. Current pre-start state remains TERMINATED. No new
+VM/disk/quota, mapping, marker detection, external binner, GPU or retention scope.
+
 ## E033 stopped: measurements verified, first teacher failed
 
 [Independent inspection](../experiments/E033-multiscale-bam/inspection-review.md)

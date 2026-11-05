@@ -495,6 +495,16 @@ worker's own stderr and global workflow logs as well as the scheduler trailer,
 including when the first scientific rule fails. A successful payload collection
 does not establish delivery of later terminal or completion records.
 
+Owner clarification, November 5, 2026: necessary diagnosis, bounded evidence
+recovery, implementation repairs and verified-reuse attempts belong to the
+already authorized execution task. Do not stop to request another authorization
+merely because logs need collecting, a helper failed, or debugging needs a modest
+credit-covered cost/runtime revision. Record a justified prospective envelope
+under the standing direction and continue. A prohibition on replaying accepted
+science is not a prohibition on targeted recovery. Explicit preparation-only or
+no-VM exclusions, scientific criteria, resource scope, credit coverage and retention
+dates still apply; preserve all failed attempts and verify shutdown controls.
+
 Owner clarification, 2026-10-17: during an authorized connected-GCP execution,
 debug recoverable operational failures and retry within the same task when the
 owner has authorized that recovery. Do not turn a launcher/runtime/provenance bug

@@ -1,0 +1,105 @@
+{
+  "status": "AUTHORIZED_FRESH_ADMISSION_BEFORE_FORENSIC_START",
+  "prepared_from": "9710ea8f10a577381531d057e5eeb3f9dee87c2c",
+  "branch": "multiscale-bam-recovery",
+  "owner_clarification": "Necessary diagnosis, evidence recovery, repairs and verified-reuse attempts belong to the original authorized task; no fresh approval loop for debugging",
+  "financial": {
+    "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+    "real_money_authorized": false,
+    "checked_epoch": 1793843013.316375,
+    "credit_checked_epoch": 1793843013.31124,
+    "credit_balance_DKK": 1666.37,
+    "pending_reserve_USD": 35,
+    "ceiling_USD": 20,
+    "estimated_complete_gross_USD": 15.648075391427287,
+    "collection_ceiling_USD": 0.25,
+    "storage_valid_until_epoch": 1794351600,
+    "credit_valid_until_epoch": 1799712000,
+    "complete_past_phase_upper_USD": 3.8364436416499914,
+    "remaining_original_20_after_past_upper_USD": 16.163556358350007,
+    "original_storage_separate_9_USD": true,
+    "ordinary_first_party_products": [
+      "Compute E2 CPU/RAM",
+      "PD capacity",
+      "IPv4",
+      "GCS Standard/operations/egress"
+    ],
+    "new_resources": false,
+    "retention_extended": false
+  },
+  "finance_records": {
+    "artifacts/e033-multiscale-bam/recovery-20261105/finance/bucket.json": {
+      "bytes": 922,
+      "sha256": "2750ac393aa246e2edcd3517f2fd0cd5cd5a01c26279d0cea4a1fedee617bb5e"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/finance/project-billing.json": {
+      "bytes": 207,
+      "sha256": "d17b1d996a5c84429db68fff27b4bc76e6e4c6451f38098ff6f5dae7a7d23937"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/finance/browser-credit.json": {
+      "bytes": 575,
+      "sha256": "413e9cf9103ab0505a65b11948c8e8be60784cf7770f8345cb118240dec9dfc3"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/finance/versions.json": {
+      "bytes": 350233,
+      "sha256": "901e60174eecc9c5d2bc5ec6e52f833b5b20e134c2d07a6acc6b3b556464a944"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/finance/current-prices.json": {
+      "bytes": 9154,
+      "sha256": "a299a820fe9bb660ea0754bca3cffbbd28493230709832715c82f3f5b835cace"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/finance/soft-deleted.json": {
+      "bytes": 56,
+      "sha256": "30f8feecb891015e67ccef9a7dbe77cc0e2ac0312f540f01e72d465bb08a2bc0"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/finance/billing-account.json": {
+      "bytes": 179,
+      "sha256": "c7bf1056535088a8e2d1772bf0e9bd2d63f00cdf91b1a1dff113dd4de19b88da"
+    }
+  },
+  "forensic_helpers": {
+    "scripts/e033_forensic.py": {
+      "bytes": 13223,
+      "sha256": "ec090c84ff3ba782f795a0c423838660818dc9b55aea62d7202e6183d140acd1"
+    },
+    "scripts/e033_forensic_arm.py": {
+      "bytes": 6696,
+      "sha256": "caa30acc16b24afe312f064d001314542a48dd89a2cb3be46be6bc3956b1d275"
+    },
+    "scripts/e033_forensic_launch.py": {
+      "bytes": 10500,
+      "sha256": "29e1ae439cba93cae4a7eb5bed5fc0fedd9cc906c34daccd91dccd2396533b04"
+    },
+    "tests/test_e033_forensic.py": {
+      "bytes": 5413,
+      "sha256": "9f692d56bd74c80054b7c6671f6af82ae1b2288cab806f1a93dc3613a8837761"
+    }
+  },
+  "forensic_scope": {
+    "seconds": 1800,
+    "provider_STOP_seconds": 2700,
+    "RSS_bytes": 8000000000,
+    "extra_bytes": 268435456,
+    "archive_bytes": 134217728,
+    "source_task_reserve_GiB": 25,
+    "price_upper_USD": 0.25,
+    "read_only_original_task": true,
+    "science_allowed": false
+  },
+  "subsequent_conditional_comparison": {
+    "common_clock_hours": 30,
+    "provider_STOP_hours": 30.25,
+    "original_total_ceiling_USD": 20,
+    "remaining_after_past_upper_USD": 16.163556358350007,
+    "complete_total_upper_USD": 15.648075391427287,
+    "unchanged_science_source": "c812eb8",
+    "all_twenty_measurements_reused": true,
+    "all_fits_still_pending": true,
+    "release_after_actual_cause_and_repaired_native_gates_only": true
+  },
+  "current_provider_status": "TERMINATED",
+  "new_compute_started": false,
+  "new_resources": false,
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "approved_tail_end": "2026-11-18T00:00:00+01:00"
+}

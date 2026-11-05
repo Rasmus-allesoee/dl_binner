@@ -1,5 +1,19 @@
 # Google Cloud workspace operations
 
+## November 5 E033 bounded recovery authorized
+
+[Recovery admission](../experiments/E033-multiscale-bam/recovery-admission.json)
+records fresh DKK 1,666.37 Available / 84%, unchanged January 12 expiry/scope and
+Paid account; November net DKK 0.00, delayed-use warning and $35 reserve remain.
+Current Catalog/project/bucket/all-version/resource checks pass. The owner now
+authorizes necessary forensic collection/repair and the unchanged comparison,
+remaining original $20, new prospective 30-hour common clock / STOP 30.25 hours,
+without a new approval loop. First forensic wake only: 30 minutes / STOP 45 minutes /
+$0.25; current stopped 30/300/100 GiB resources only, task mounted read-only. Fresh
+held boot/process watcher, provider readback and exact helper/schema gates precede
+release. Full later science remains conditional on actual cause/repair/native
+contracts and the complete remaining schedule. No retention/resource expansion.
+
 ## November 5 E033 failed science verified; stopped disks preserved
 
 [Inspection](../experiments/E033-multiscale-bam/inspection-review.md) verifies
