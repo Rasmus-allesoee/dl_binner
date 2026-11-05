@@ -9,6 +9,18 @@ under the remaining original $20 and a prospective 30-hour common recovery clock
 30.25-hour STOP, retaining November 11 active / November 18 automatic-tail limits.
 Routine debugging/evidence recovery belongs to the authorized task; do not return
 another approval prompt for a helper error. Preserve all earlier clocks/failures.
+
+**Native comparison is now running:** `resume-20261105T023814Z-941ede3`, exact
+clean source `941ede3`, all six changed native gate exits 0 and complete tiny DAG
+passed. The first E009 no-GLM teacher is in epoch 4 of 20, update 1,172, after
+three complete epochs with no reported collapse or guard failure. The original
+completed barrier and all twenty measurements are reused.
+Fresh current-boot/PID/start/command watcher normal/crash/restart-refusal tests pass;
+parent and timer are active. The common delivery deadline is November 6 at
+**08:47:32 Copenhagen**, read-back provider STOP **08:57:52**. No completed community
+target or quality result is claimed. Use the current [operations handoff](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
+after shutdown; leave healthy longer work supervised without polling to completion.
+
 Fresh credit is DKK 1,666.37 Available / 84%, expiry January 12, 2027, same eligible
 scope; displayed November net DKK 0.00 with delayed usage and $35 reserve. Complete
 conservative attribution remains about $15.65 under $20, original storage separate.
@@ -26,13 +38,13 @@ pass actual installed learning/BAM/logger contracts, a 55,000-row compact comple
 test and the full 40-rule tiny three-mode DAG (132.46 seconds / 0.597 GB sampled
 RSS), including no-op resume and complete exports. The prospective native recovery
 reuses all twenty summaries/banks, original E031 state, completed barrier and
-math-identical probes after exact checks; all six community fits remain pending.
-Fresh owned-wheel/runtime/source/tiny gates precede science. No new VM/disk/quota,
+math-identical probes after exact checks; the first teacher is in progress.
+Fresh owned-wheel/runtime/source/tiny gates pass before science. No new VM/disk/quota,
 mapping, marker detection, external binner, GPU or retention scope is added.
 
 The common clock starts November 5 at 02:47:32.334 Copenhagen, including stopped
 repair gaps; the scientific/delivery deadline is November 6 at 08:47:32.334,
-provider STOP no later than 09:02:32.334. Current pre-start state is TERMINATED.
+provider STOP no later than 09:02:32.334; this boot's actual STOP is 08:57:52.010.
 See [recovery evidence](../experiments/E033-multiscale-bam/recovery-observed.json)
 for exact bindings, allocation costs and failure distinctions. Original measurement
 and failed work archives are reused/preserved, not repacked or overwritten.

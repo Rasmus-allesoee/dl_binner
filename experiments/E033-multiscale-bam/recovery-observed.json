@@ -1,5 +1,5 @@
 {
-  "status": "FORENSIC_VERIFIED_REPAIR_LOCAL_GATES_PASS_BEFORE_NATIVE_START",
+  "status": "REPAIRED_NATIVE_GATES_PASS_SCIENCE_RUNNING_NOT_COMPLETED",
   "branch": "multiscale-bam-recovery",
   "original_phase": "multiscale-20261104T152005Z-a940769-r2",
   "original_science": "c812eb8",
@@ -219,7 +219,16 @@
     "original_ceiling_USD": 20,
     "original_storage_separate": true,
     "real_money_authorized": false,
-    "credit_delta_is_not_an_invoice": true
+    "credit_delta_is_not_an_invoice": true,
+    "latest_allocation_estimate": {
+      "asof_epoch": 1793846767.211831,
+      "ongoing_allocation_seconds": 448.2018311023712,
+      "ongoing_allocation_CPU_RAM_IP_USD": 0.033994325752814206,
+      "closed_recovery_CPU_RAM_IP_USD": 0.026948698230856456,
+      "full_failed_phase_upper_USD": 3.8364436416499914,
+      "complete_original_forecast_USD": 15.648075391427287,
+      "storage_export_separate": true
+    }
   },
   "evidence": {
     "artifacts/e033-multiscale-bam/recovery-20261105/forensic-return/verification.json": {
@@ -316,6 +325,362 @@
       "bytes": 606,
       "sha256": "a93db4590c42dc9759338d7d25557324a989497eab3d50beca12e4367c0b69de"
     },
-    "common_clock_reset": false
-  }
+    "common_clock_reset": false,
+    "provider_status": "TERMINATED",
+    "last_start": "2026-11-04T18:35:02.542-08:00",
+    "last_stop": "2026-11-04T18:37:27.823-08:00",
+    "allocation_seconds": 145.281,
+    "allocation_CPU_RAM_IP_USD": 0.011018985860784165,
+    "stop_evidence": {
+      "bytes": 33425,
+      "sha256": "4b04823891fd1f49045e2da80bfd03effd14f2ab4309b468ba2913a8e50eaa59"
+    }
+  },
+  "native_resume": {
+    "identity": {
+      "root": "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3",
+      "repo": "/srv/dl_binner/repo",
+      "source": "941ede36d29b76c5f542e56295236d5100447ca1",
+      "service_name": "e033-resume-20261105T023814Z-941ede3",
+      "archive_prefix": "gs://dl-binner-archive-167650584170/e033/resume-20261105T023814Z-941ede3/",
+      "start": 1793846319.01,
+      "provider_deadline": 1793951872.01
+    },
+    "observation_epoch": 1793846767.211831,
+    "boot_id": "e5fc340e-a2f9-413f-b5f0-c6b4da227b64",
+    "source_clean": true,
+    "native_gates": {
+      "package-install.json": {
+        "binding": {
+          "bytes": 15029,
+          "sha256": "f5d21a3601707fd756eee34892a16c8e4fcf06c6e6216d5b0790ea610e7692d6"
+        },
+        "status": "CREATED"
+      },
+      "runtime.json": {
+        "binding": {
+          "bytes": 109423,
+          "sha256": "341b57d2273412f0b9b4a2205b95f835415c833d3e3f2e46adc28e879601103d"
+        },
+        "status": "PASS_COMPLETE_READONLY_BASE_AND_NEW_OWNED_PACKAGE"
+      },
+      "install.json": {
+        "binding": {
+          "bytes": 623,
+          "sha256": "750d33aee6432d2435bbd808e2166b8f5c7f6d7c07ef2d3f0195f6d0abb33017"
+        },
+        "status": "PASS"
+      },
+      "inputs-before.json": {
+        "binding": {
+          "bytes": 11530,
+          "sha256": "17b526037d4ecf98786c38685497b7600811218e01bf7b8572a5833a31ae971a"
+        },
+        "status": "PASS"
+      },
+      "reuse.json": {
+        "binding": {
+          "bytes": 7400,
+          "sha256": "b9f8125eaa5fef4ccccfe56e4a1458d8fd54533978b2124a8b2e52529c5f3c64"
+        },
+        "status": "PASS_VERIFIED_REUSE"
+      },
+      "full-schedule.json": {
+        "binding": {
+          "bytes": 159,
+          "sha256": "76fcae5c60c474048e5e99de1a1ae7db37d46f57129f4edde770b64b277e8e5d"
+        },
+        "status": "PASS_REUSED_MATH_IDENTICAL_FORECAST"
+      }
+    },
+    "native_stage_exits": {
+      "original-inputs-before.exit.json": {
+        "command": [
+          "/usr/bin/python3",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e033_verify.py",
+          "--plan",
+          "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/science-plan.json",
+          "--output",
+          "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/gates/inputs-before.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2101,
+        "peak_sampled_rss_bytes": 56160256,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.40783302259164106,
+        "sampled_cpu_seconds": 18.45,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 103679.28855991364,
+        "stop_reason": null,
+        "wall_seconds": 45.239102716000005
+      },
+      "repaired-complete-runtime.exit.json": {
+        "command": [
+          "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/env-repair-r1/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e033_runtime.py",
+          "--base",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+          "--reference",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+          "--candidate-lock",
+          "/srv/dl_binner/repo/experiments/E033-multiscale-bam/repair-candidate-lock.json",
+          "--pysam-wheel",
+          "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/payload/pysam-0.23.3-cp310-cp310-manylinux_2_28_x86_64.whl",
+          "--output",
+          "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/gates/runtime.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2221,
+        "peak_sampled_rss_bytes": 310349824,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.9461357921455326,
+        "sampled_cpu_seconds": 18.13,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 103618.4368057251,
+        "stop_reason": null,
+        "wall_seconds": 19.16215426000001
+      },
+      "actual-progress-64-and-learning.exit.json": {
+        "command": [
+          "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/env-repair-r1/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;from pathlib import Path;r=Path('/srv/dl_binner/repo');sys.path.insert(0,str(r/\"tests/product\"));v=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_multiscale_progress'));sys.exit(not v.wasSuccessful())"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2254,
+        "peak_sampled_rss_bytes": 225718272,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 1.1343118279998448,
+        "sampled_cpu_seconds": 2.009999999999998,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 103598.97852015495,
+        "stop_reason": null,
+        "wall_seconds": 1.7719995070000039
+      },
+      "repaired-plan.exit.json": {
+        "command": [
+          "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/env-repair-r1/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e033_control.py",
+          "--plan",
+          "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/science-plan.json",
+          "--check-plan"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2252,
+        "peak_sampled_rss_bytes": 39837696,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5827403746062596,
+        "sampled_cpu_seconds": 0.14999999999999858,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 103599.26488399506,
+        "stop_reason": null,
+        "wall_seconds": 0.257404508999997
+      },
+      "repaired-package-install.exit.json": {
+        "command": [
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e033_install.py",
+          "--base",
+          "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+          "--destination",
+          "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/env-repair-r1",
+          "--wheel",
+          "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/payload/dl_binner-0.1.0.dev9-py3-none-any.whl",
+          "--pysam-wheel",
+          "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/payload/pysam-0.23.3-cp310-cp310-manylinux_2_28_x86_64.whl",
+          "--lock",
+          "/srv/dl_binner/repo/experiments/E033-multiscale-bam/repair-candidate-lock.json",
+          "--output",
+          "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/gates/install.json"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2178,
+        "peak_sampled_rss_bytes": 102002688,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 0.5700300391859332,
+        "sampled_cpu_seconds": 1.5299999999999994,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 103621.1405119896,
+        "stop_reason": null,
+        "wall_seconds": 2.6840690749999965
+      },
+      "actual-repaired-serial-tiny.exit.json": {
+        "command": [
+          "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/env-repair-r1/bin/python",
+          "-I",
+          "-B",
+          "/srv/dl_binner/repo/scripts/e033_tiny.py",
+          "--root",
+          "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/gates/tiny",
+          "--workflow-python",
+          "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python"
+        ],
+        "exit_code": 0,
+        "launched_pid": 2260,
+        "peak_sampled_rss_bytes": 746643456,
+        "rss_bytes_ceiling": 26000000000,
+        "sample_includes_coordinator": true,
+        "sampled_average_cpus": 2.3663933807774296,
+        "sampled_cpu_seconds": 178.64999999999998,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 103597.19719648361,
+        "stop_reason": null,
+        "wall_seconds": 75.49463307799999
+      }
+    },
+    "tiny_completed": true,
+    "supervision": {
+      "status": "ARMED_AND_TESTED",
+      "parent_unit": "e033-resume-20261105T023814Z-941ede3.service",
+      "watchdog_timer": "e033-resume-20261105T023814Z-941ede3-exit.timer",
+      "watchdog_service": "e033-resume-20261105T023814Z-941ede3-exit.service",
+      "process": {
+        "pid": 1930,
+        "start_ticks": 3637,
+        "command_sha256": "2d6bd64824907bfbb77819c2691dbd37d090aabc812889835ce7c093f0e3d8e2"
+      },
+      "boot_id": "e5fc340e-a2f9-413f-b5f0-c6b4da227b64",
+      "source_commit": "941ede36d29b76c5f542e56295236d5100447ca1",
+      "detector_bindings": {
+        "e009_exit_watchdog.py": {
+          "bytes": 5959,
+          "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+        },
+        "e011_exit_watchdog.py": {
+          "bytes": 2426,
+          "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+        }
+      },
+      "exit_grace_seconds": 60,
+      "timer_seconds": 30,
+      "original_vm_start_epoch": 1793843252.334,
+      "hard_deadline_epoch": 1793951252.334,
+      "provider_stop_epoch": 1793951872.01,
+      "native_normal_exit_and_crash_tests_passed": true
+    },
+    "observed_watchdog": {
+      "boot_id": "e5fc340e-a2f9-413f-b5f0-c6b4da227b64",
+      "checked_utc": "2026-11-05T02:45:38.162445+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "2d6bd64824907bfbb77819c2691dbd37d090aabc812889835ce7c093f0e3d8e2",
+        "pid": 1930,
+        "start_ticks": 3637
+      },
+      "observed_process": {
+        "command_sha256": "2d6bd64824907bfbb77819c2691dbd37d090aabc812889835ce7c093f0e3d8e2",
+        "pid": 1930,
+        "start_ticks": 3637
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3"
+    },
+    "actual_process": {
+      "pid": 1930,
+      "start_ticks": 3637,
+      "command_sha256": "2d6bd64824907bfbb77819c2691dbd37d090aabc812889835ce7c093f0e3d8e2"
+    },
+    "service_status": {
+      "parent": "active",
+      "timer": "active"
+    },
+    "measurement_reuse_passed": true,
+    "barrier_reused": true,
+    "scientific_progress_64_passed": true,
+    "completed_scientific_targets": 0,
+    "community_quality_not_assessed": true,
+    "source_filesystem": {
+      "total": 316733652992,
+      "used": 287668359168,
+      "free": 29048516608
+    },
+    "task_filesystem": {
+      "total": 105089261568,
+      "used": 3641765888,
+      "free": 101430718464
+    },
+    "worker_log": "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/work-repair-r1/logs/E009_noGLM_teacher.log",
+    "latest_completed_epoch": {
+      "epoch": 3,
+      "parents_seen": 89041,
+      "available_views": 432664,
+      "depth_dropped_views": 216163,
+      "ema_updates": 1044,
+      "loss": 1.0934680603626403,
+      "geometry": {
+        "online": {
+          "fused": {
+            "rows": 8192,
+            "effective_rank": 37.01774679011104,
+            "mean_dimension_std": 0.1050894126825597,
+            "mean_other_cosine": 0.2811742775549889,
+            "catastrophic_collapse": false
+          },
+          "sequence": {
+            "rows": 8192,
+            "effective_rank": 35.636738628385785,
+            "mean_dimension_std": 0.10576544696502631,
+            "mean_other_cosine": 0.27050935182226216,
+            "catastrophic_collapse": false
+          }
+        },
+        "target": {
+          "fused": {
+            "rows": 8192,
+            "effective_rank": 36.972908214188415,
+            "mean_dimension_std": 0.10487779161516009,
+            "mean_other_cosine": 0.2839445170826595,
+            "catastrophic_collapse": false
+          },
+          "sequence": {
+            "rows": 8192,
+            "effective_rank": 35.72331218360135,
+            "mean_dimension_std": 0.10556762943461465,
+            "mean_other_cosine": 0.2732070699429706,
+            "catastrophic_collapse": false
+          }
+        }
+      }
+    },
+    "latest_progress": {
+      "stage": "multiscale_training_progress",
+      "utc": "2026-11-05T02:46:03Z",
+      "role": "teacher",
+      "epoch": 4,
+      "optimizer_updates": 1172,
+      "parents_seen_this_epoch": 32768,
+      "total_parents": 89041
+    },
+    "observation": {
+      "bytes": 18579,
+      "sha256": "51b9a6d5d6ddf50c5cb04fef9cc34fcdced5d534de7a4c3bbac6a5c97a5a0a76"
+    },
+    "no_completed_community_quality_claim": true
+  },
+  "closed_recovery_allocation_compute_IP_USD": 0.026948698230856456,
+  "live_allocation_final_cost_pending": true,
+  "independent_control_progress": {
+    "bytes": 34236,
+    "sha256": "43c0c1ce0d4b50abf74e98655a71b2dbda09daaa146b3925e440bc5ad273a1b1"
+  },
+  "science_and_provider_deadlines_Copenhagen": {
+    "science": "2026-11-06T08:47:32.334+01:00",
+    "provider_STOP": "2026-11-06T08:57:52.010+01:00"
+  },
+  "completed_original_budget_check": "PASS: same original $20; no additional ceiling or resource requested; compute and paused gaps share the authorized common clock"
 }

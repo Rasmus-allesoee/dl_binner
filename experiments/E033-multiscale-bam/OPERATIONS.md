@@ -1,5 +1,33 @@
 # E033 operations
 
+## November 5 native repair passed; same comparison running
+
+Phase **`resume-20261105T023814Z-941ede3`**, exact clean source **`941ede3`**,
+reuses all measurements/state/barrier/probes. Six changed native gate exits pass:
+original input-before, owned repaired package, complete runtime, frozen plan,
+actual progress logger and complete serial tiny DAG. The main first teacher has
+passed update 64 and reaches epoch 4 / update 1,172 after three complete epochs
+without a reported collapse or guard failure. Fresh current-boot/PID watcher tests and independent provider/
+guest checks pass; no completed community target or quality result is claimed.
+
+Work remains at the protected original task filesystem:
+`/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/work-repair-r1/`.
+Parent logs/gates are at
+`/srv/dl_binner/experiments/e033/resume-20261105T023814Z-941ede3/`.
+Private returns use
+`gs://dl-binner-archive-167650584170/e033/resume-20261105T023814Z-941ede3/`;
+the complete measurement return is reused at the original failed phase's
+`measurements/` prefix. Preserve both phases and their source freezes.
+
+Common science/delivery deadline is November 6 at **07:47:32.334 UTC / 08:47:32.334
+Copenhagen**. This boot's provider STOP is **07:57:52.010 UTC / 08:57:52.010
+Copenhagen**, inside the authorized 30.25-hour common upper. All stopped gaps and
+the separately recorded first scheduling failure count; no clock reset. The
+corrected adapter sets/reads maximum runtime only while TERMINATED, then validates
+the actual boot-derived absolute stop. No source setup/science ran in the refused
+first wake. Four threads, 26 GB RSS, original task baseline/growth, both reserves,
+return caps, original $20 and November 11/18 boundaries remain unchanged.
+
 ## November 5 forensic recovery verified; logging-only repair admitted locally
 
 [Recovery review](recovery-review.md) and [receipt](recovery-observed.json) supersede
@@ -427,7 +455,7 @@ records/check/commit with structured what changed/why and report actual results,
 costs/resources, limits, one next decision and the exact following prompt.
 
 
-## Exact following prompt
+## Historical authorized recovery prompt (executed November 5)
 
 Our goal is substantially closing the recovery gap with one shared binner. Read
 AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E033's inspection-review,
@@ -533,3 +561,90 @@ protocol/cost admission. Update records/check/commit with structured what change
 why; report actual results/costs/resources, all limits, one next decision and the
 exact following prompt. Do not add another approval loop for the recovery already
 authorized in this prompt; stop before genuinely unclear or uncovered spending.
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap with one shared binner. Read
+AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E033's frozen design,
+protocol/criteria, measurement/inspection/recovery reviews, recovery-observed,
+original and repair source/candidate locks, reuse/BAM/native-launch locks and
+operations. Inspect phase `resume-20261105T023814Z-941ede3`, exact clean native
+source `941ede36d29b76c5f542e56295236d5100447ca1`, without starting another scientific
+job. Preserve the original failed `multiscale-20261104T152005Z-a940769-r2`, forensic
+`forensic-20261105T014706Z-d50049b`, refused scheduling wake and all accepted inputs,
+truth, models, results, source freezes and failed journals.
+
+First check GCP control-plane state, `e033-candidate/status`, private completion.json
+under `gs://dl-binner-archive-167650584170/e033/resume-20261105T023814Z-941ede3/` and
+its watchdog/closed-delivery evidence. Shutdown alone is not success. If healthy
+and running, report actual progress and leave its verified current-boot/PID/start/
+command exit watcher and provider STOP intact, without polling to completion.
+The common recovery first start is November 5 at 01:47:32.334 UTC, including
+stopped local repair gaps and failed setup; deadline November 6 at 07:47:32.334 UTC,
+read-back provider STOP November 6 at 07:57:52.010 UTC. Do not reset these clocks.
+Keep remaining original $20, November 11 at 00:00 Copenhagen active retention and
+approved November 18 automatic tail. No new resource, acquisition, mapping,
+measurement, marker detection, external tool, GPU, confirmation or design change.
+
+After independently verified TERMINATED, establish every actual setup/native gate,
+every serial teacher/embedding/graph/proposal/student/retrieval/forest/construction/
+selection/audit exit and seal in all three modes, input-after equality, all complete
+collection/upload/readback results, separate closed post-collector evidence,
+closed filesystem JSONL, completion/tail and matching watchdog exit. The work is
+`/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/task/work-repair-r1/`;
+parent/gates/logs are under the new phase root. The global barrier and all twenty
+BAM measurements are verified reuse, not newly executed stages. The original
+measurement return stays under the failed phase's `measurements/` prefix. Reuse
+its accepted full-byte/member proof; verify any newly consumed generation and
+source members. Missing or failed contracts are unavailable, not zero-quality
+results. Preserve the update-64 logger failure and final 1 MiB refusal: the new
+wheel repairs only the `stage` metadata key to `role`, with unchanged mathematics,
+module construction, RNG and frozen treatment. Keep the 1 MiB cap; the separate
+closed history must match its compact completion binding.
+
+Refresh live Welcome credit/scope/expiry, pending usage, current ordinary-product
+prices/coverage, remaining original budget, original storage approval and actual
+local free space before export. Price measured allocation/uptime, existing task
+lifetime, original-storage overlap, object versions/tails and WAN separately from
+sampled scientific CPU; do not call the displayed credit delta an invoice. Assess
+all exports before downloading. Stream entire exact-generation compressed bytes
+and every physical member/alias; stage modes sequentially under 3 GiB staged and
+8 GiB actual free reserve, without a complete compressed Mac duplicate or BAM.
+Four numerical threads, 8 GB sampled RSS and one hour local diagnostic clock remain.
+Do not wake merely to replay science. Necessary bounded delivery recovery and
+operational repair remain part of this authorized task after assessing remaining
+clock, full cost and credit/resource/retention gates; do not create another approval
+loop for an ordinary helper repair. Never silently replay a passed stage, weaken a
+scientific criterion, expand resources or extend retention. A genuinely scientific
+refusal must retain its actual cause rather than become a blind retry.
+
+If complete, independently admit exact repaired source/wheel/defaults/runtime,
+full ordered contig/ten-sample/crop axes, twenty source/sort/filter/counter ledgers,
+measurement banks/new features and measured zeros/availability/breadth/variance/HQ
+mass/reliability. Verify full E031 online/EMA/predictor/Adam restoration, complete
+20+20 epochs/seed 11/batch 256 and own-teacher/pair/student GLM availability policy,
+stopped targets/anchor/collapse history, native reload/unit geometry/neighbors,
+unchanged E032 construction and full pre/post DNA. New shared measurements do not
+erase the warm-start checkpoints' historical depth-filter priors. Retain the JGI
+scalar failure and original Mac portability tolerance unchanged.
+
+Run only frozen new-output conservative E009 v2 and separately named Oral
+provided-origin/known-shared diagnostics; reuse older summaries without refitting
+or rescoring. Keep full 156/799 reference denominators, 3.3034% E009 N quarantine
+and all length/origin/eligibility/marker/zero/unknown/non-target/excluded/unassigned/
+singleton/multicontig populations. Report teacher/student and parent/old/new
+refinement effects, per-target gains/losses, best-bin multicontig contribution,
+technical retrieval versus biological recovery, secondary threshold-based quality
+tiers and unchanged KEEP/MODIFY/ABANDON. Keep the task disk until all required old
+and new bytes plus its own closed terminal/delivery tail are safely verified;
+then release only its positively identified temporary resources, never original
+disks or unique inputs.
+
+Use the actual completed evidence to recommend one strongest recovery-focused
+successor, weighing consequential information/representation and grouping choices.
+Keep Q006's standalone candidate-selection source question and efficient full Oral
+GLM concrete; no architecture/product-family verdict from an incomplete arm.
+Skin stays unscored pending biological/overlap/ambiguity/unique-versus-origin/depth/
+protocol/cost admission. Update records/check/commit with structured what changed/
+why and report verified outcomes, actual costs/resources, limits, one next decision
+and exact following prompt. No new science or score campaign in this inspection.

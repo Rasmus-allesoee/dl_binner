@@ -84,5 +84,13 @@
   "E009_N_quarantine_fraction": 0.033034,
   "oral_truth": "provided-origin oracle; separately named known-shared sensitivity, not exhaustive unique truth",
   "all_length_origin_eligibility_marker_unknown_non_target_unassigned_singleton_multicontig_diagnostics": "UNAVAILABLE: no new complete partitions; populations were not silently dropped",
-  "interpretation": "No positive or negative biological conclusion about multiscale information, learning, GLM or E032; cannot isolate a recovery gap from a failed fit"
+  "interpretation": "No positive or negative biological conclusion about multiscale information, learning, GLM or E032; cannot isolate a recovery gap from a failed fit",
+  "phase": "multiscale-20261104T152005Z-a940769-r2",
+  "scope": "Historical failed attempt; NOT_ASSESSED and its original scientific criteria remain unchanged",
+  "newer_recovery": {
+    "phase": "resume-20261105T023814Z-941ede3",
+    "status": "RUNNING_NO_COMPLETE_QUALITY_RESULT",
+    "evidence": "recovery-observed.json",
+    "review": "recovery-review.md"
+  }
 }

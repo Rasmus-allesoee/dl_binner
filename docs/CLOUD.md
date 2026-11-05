@@ -1,5 +1,24 @@
 # Google Cloud workspace operations
 
+## November 5 repaired E033 comparison running under verified supervision
+
+Phase `resume-20261105T023814Z-941ede3`, exact private source `941ede3`, starts on
+the existing E2 November 5 at 02:38:39.010 UTC. All six changed native gate exits
+pass, including complete runtime/own wheel/source/plan, progress logger and full
+tiny workflow; retained measurements and barrier pass verified reuse. The first
+teacher crosses update 64. Parent and current-boot bound watcher timer are active;
+normal/crash/restart-refusal tests pass. Independent provider fallback is November
+6 at **07:57:52.010 UTC / 08:57:52 Copenhagen**, after the common delivery deadline
+07:47:32.334 UTC / 08:47:32.334 Copenhagen. No community completion/score is inferred.
+
+The preserved first pre-science wake fails only on GCP's refusal to change maximum
+runtime while RUNNING; no setup/science releases. It is independently TERMINATED
+after 145.281 seconds. The corrected actual adapter sets and reads the duration
+while stopped, then verifies the observed boot-derived absolute deadline; it never
+updates runtime while running. Closed forensic plus failed setup allocation totals
+$0.02695 CPU/RAM/IP; this live allocation and storage/export are separate. Complete
+original attribution upper stays $15.65 under $20. No new resources or retention.
+
 ## November 5 E033 bounded recovery authorized
 
 [Recovery admission](../experiments/E033-multiscale-bam/recovery-admission.json)

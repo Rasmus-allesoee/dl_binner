@@ -80,3 +80,25 @@ The next scientific decision still requires the full unchanged E033 comparison.
 No new recovery score, architecture conclusion or rejection follows from these
 logging failures. Keep Q006 candidate-selection research, efficient full Oral GLM
 and the unscored skin admission dependencies visible after the comparison.
+
+## Native handoff, November 5 at 02:46 UTC
+
+`resume-20261105T023814Z-941ede3` runs at exact clean source `941ede3`. All six
+changed native gate exits pass; its full tiny workflow completes in 75.49 seconds
+at 0.747 GB sampled tree RSS. The retained byte checks and completed global barrier
+pass verified reuse. Main E009 no-GLM teacher progress is epoch 4 of 20, update
+1,172, after three complete epochs with full parent exposure and no reported
+collapse/guard failure. This is execution progress, not an accepted complete model
+or recovery result. Parent, timer, boot and exact process identities match across
+the independently observed live watcher records. Both filesystems exceed their
+25 GiB reserves (about 27.05 / 94.46 GiB source/task free at this observation).
+
+Read-back provider STOP is November 6 at 07:57:52.010 UTC, inside the common
+30.25-hour upper and after the unchanged 07:47:32.334 UTC delivery deadline.
+Closed forensic and refused setup allocation costs total $0.02695 CPU/RAM/IP;
+the live scientific allocation is approximately $0.03399 through the observation,
+not its final cost. Storage, WAN and original failed-phase costs remain separate
+in the complete $15.65 forecast. The comparison is a longer job, so hand off after
+several minutes of real progress rather than polling it to completion. The
+[current exact prompt](OPERATIONS.md#exact-following-prompt) inspects its actual
+finished exits/bytes and frozen diagnostics without replaying science.
