@@ -34,6 +34,7 @@ def read_plan(path,engineering=False):
     """Refuse hidden inputs, source drift, incomplete measurement or loose release."""
     p=json.loads(Path(path).read_text())
     fields={'kind','engineering','work','units','measurements','python','workflow_python','worker','snakefile','limits'}
+    if 'recovery' in p:fields.add('recovery')
     if set(p)!=fields or p['kind']!='E033 common multiscale BAM information' or p['engineering'] is not engineering or list(p['units'])!=UNITS:
         raise ValueError('Unknown E033 plan/schema/ordered modes')
     expected={'features','views','fasta','tokens','frozen','original','marker_cache','hmm','marker_evidence','community'}
@@ -44,9 +45,15 @@ def read_plan(path,engineering=False):
         if len(relative.parts) not in [1,2] or (len(relative.parts)==2 and relative.parts[-1]!='task') or not all(c.isalnum() or c=='-' for c in relative.parts[0]):
             raise ValueError('Fresh phase-owned E033 work required')
         schema=json.loads((EXP/'runtime-plan.json').read_text().replace('NEW_PHASE',str(relative)))
+        repaired=None
+        if 'recovery' in p:
+            from e033_recovery import sources
+            repaired=sources(p)
+            schema['limits']=repaired[0]['limits']
         for key in ['kind','units','measurements','limits','workflow_python','worker','snakefile']:
             if p[key]!=schema[key]:raise ValueError('Unfrozen E033 '+key)
-        for n,b in json.loads((EXP/'source-lock.json').read_text())['files'].items():
+        effective=repaired[1] if repaired else json.loads((EXP/'source-lock.json').read_text())['files']
+        for n,b in effective.items():
             if binding(ROOT/n)!=b:raise ValueError('Frozen E033 source drift: '+n)
         release=os.environ.get('E033_RELEASE_FILE')
         if not release or json.loads(Path(release).read_text()).get('plan')!=binding(path):
@@ -183,7 +190,7 @@ def workflow(path,engineering=False,dry=False):
         r=verify_seal(d.parent);u=next((x for x in UNITS if x in d.parts),UNITS[0])
         if r.get('inputs')!=inputs(p,u):raise ValueError('Resume source/input drift')
     argv=[p['workflow_python'],'-I','-B','-m','snakemake','--snakefile',p['snakefile'],'--directory',str(work),
-        '--cores','4','--resources','mem_mb=26000','--benchmark-extended','--runtime-source-cache-path',str(work.parent/'workflow-cache'),
+        '--cores','4','--resources','mem_mb=26000','--benchmark-extended','--runtime-source-cache-path',str(work.parent/('workflow-cache-'+work.name) if 'recovery' in p else work.parent/'workflow-cache'),
         '--rerun-triggers','mtime','--config','plan='+str(Path(path).absolute()),'engineering='+str(engineering).lower()]
     if dry:argv.append('--dry-run')
     subprocess.run(argv,check=True)

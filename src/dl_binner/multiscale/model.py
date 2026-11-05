@@ -262,7 +262,7 @@ def train(features,new_features,views,tokens,frozen,measurements,original,output
             require(all(p.grad is None for m in (target,anchor) for p in m.parameters()),'Stopped target/anchor received gradients')
             optimizer.step();tau=1-(1-cfg['ema_base'])*(1+math.cos(math.pi*updates/steps))/2;update_target(model,target,tau);updates+=1
             seen+=n;anchors+=len(rows);totals+=np.array([float(z.detach()) for z in [loss,pf,ps,rc,rd,rp,rn,preservation]])*n
-            if (at+1)%64==0:emit('multiscale_training_progress',stage='student' if teacher else 'teacher',epoch=epoch+1,optimizer_updates=updates,parents_seen_this_epoch=seen,total_parents=len(indices))
+            if (at+1)%64==0:emit('multiscale_training_progress',role='student' if teacher else 'teacher',epoch=epoch+1,optimizer_updates=updates,parents_seen_this_epoch=seen,total_parents=len(indices))
         require(seen==len(indices) and (links is None or (exposed==len(links['left']) and proposed==link_receipt['source_pair_count'])),'Incomplete parent/pair-slot exposure')
         g=monitor(model,target,data,new_data,state,cfg,bank,coverage,coverage_state,sequence)
         write_json(out/('geometry-%02d.json'%(epoch+1)),g)

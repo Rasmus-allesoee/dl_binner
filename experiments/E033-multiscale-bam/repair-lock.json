@@ -1,0 +1,102 @@
+{
+  "kind": "E033 logging-only verified-reuse repair",
+  "parent_source_lock": {
+    "bytes": 18915,
+    "sha256": "95c375ddf0941f19afdda9778b67d9f3518373fa5c05e620e5d1694779dac5c1"
+  },
+  "parent_candidate_lock": {
+    "bytes": 12632,
+    "sha256": "8ebe3bd5853a1bc2370c95fb16de08b64dc03b0cbea09bb34399007c3397c42e"
+  },
+  "candidate": {
+    "bytes": 12632,
+    "sha256": "a9fb04b5f0cf558fd2331c034766f4ac91d9911bbc543df67f53f92df61fb557"
+  },
+  "source_overrides": {
+    "scripts/e033_control.py": {
+      "before": {
+        "bytes": 12296,
+        "sha256": "44954b5252f8d4cc3eb7e1952e8beac709f02b0af8a2f73e91445ecae22ecfb3"
+      },
+      "after": {
+        "bytes": 12644,
+        "sha256": "356003a65d8f3b1aa26c329977346f856cb87ac7581aa311d275c10183f473fb"
+      }
+    },
+    "scripts/e033_review.py": {
+      "before": {
+        "bytes": 6649,
+        "sha256": "c59654c3a6b237109e6a5f6706b0de0be931490e118b616a6c29a42debb51fd6"
+      },
+      "after": {
+        "bytes": 6915,
+        "sha256": "b1cdd9adc0d74fefc023a7fd820dbf15b9b5709bbbb9b2c209b3b52dfae4cfc7"
+      }
+    },
+    "src/dl_binner/multiscale/model.py": {
+      "before": {
+        "bytes": 23802,
+        "sha256": "e2819054f8155c2a6943f492a7a188a8bf46ee817e8ca8f6f62935ca619c6d44"
+      },
+      "after": {
+        "bytes": 23801,
+        "sha256": "76463f110db5f8adfe1f89b311a5a5984f76f4aa57423a8043cbe52b3778f5c9"
+      }
+    }
+  },
+  "extra_files": {
+    "scripts/e033_forensic.py": {
+      "bytes": 13223,
+      "sha256": "ec090c84ff3ba782f795a0c423838660818dc9b55aea62d7202e6183d140acd1"
+    },
+    "scripts/e033_forensic_arm.py": {
+      "bytes": 6696,
+      "sha256": "caa30acc16b24afe312f064d001314542a48dd89a2cb3be46be6bc3956b1d275"
+    },
+    "scripts/e033_forensic_launch.py": {
+      "bytes": 10500,
+      "sha256": "29e1ae439cba93cae4a7eb5bed5fc0fedd9cc906c34daccd91dccd2396533b04"
+    },
+    "scripts/e033_recovery.py": {
+      "bytes": 11566,
+      "sha256": "9903b0168c7f3a3373d73a470fc82d3112cdbd195473252e861e8b582b4ed41d"
+    },
+    "scripts/e033_resume.py": {
+      "bytes": 17194,
+      "sha256": "1e417763bacdb0ee6ba2650dad5b74aeed7f488b4d9a215319162fde226712f7"
+    },
+    "scripts/e033_resume_arm.py": {
+      "bytes": 6696,
+      "sha256": "b893b542cae2be7ef9f42ae10bf83f3f1e4425e628bc6f828a7bd65afe331482"
+    },
+    "scripts/e033_resume_launch.py": {
+      "bytes": 12623,
+      "sha256": "efe41655c519b7950105313a4b14857b79c11711079ccece8ef916f4f9ed801d"
+    },
+    "tests/test_e033_recovery.py": {
+      "bytes": 6676,
+      "sha256": "231e1a6028bc77a208d043696548893ddddfcbc0a52da13529efff8f11c330e7"
+    },
+    "tests/product/test_multiscale_progress.py": {
+      "bytes": 2390,
+      "sha256": "0b1a6faa9c3285d2fc299606ca793802ba9573be8362e3944ed0058427e86a17"
+    }
+  },
+  "original_phase": "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2",
+  "limits": {
+    "seconds": 108000,
+    "provider_STOP_seconds": 108900,
+    "ceiling_USD": 20,
+    "threads": 4,
+    "RSS_bytes": 26000000000,
+    "reserve_bytes": 26843545600,
+    "extra_bytes": 64424509440,
+    "slice_compressed_bytes": 3221225472,
+    "slice_logical_bytes": 8589934592,
+    "aggregate_compressed_bytes": 12884901888,
+    "local_staged_bytes": 3221225472,
+    "local_free_reserve_bytes": 8589934592,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+  }
+}

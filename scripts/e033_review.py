@@ -48,11 +48,17 @@ def contract(base,staged,unit,role,features,comparison,engineering=False):
     result=accepted(base,staged,unit,role,features,comparison,engineering)
     data,meta=result[:2];inv=json.loads((base/'inventory.json').read_text())['all_work_members']
     admission=json.loads((base/'admission.json').read_text())
+    candidate=ROOT/'experiments/E033-multiscale-bam/candidate-lock.json'
+    if admission.get('repair_lock') is not None:
+        from e033_recovery import admit
+        repaired,_,candidate=admit()
+        if admission['repair_lock']!=binding(ROOT/'experiments/E033-multiscale-bam/repair-lock.json'):
+            raise ValueError('Review repair admission differs')
     if not engineering:
-        if (admission.get('candidate_lock')!=binding(ROOT/'experiments/E033-multiscale-bam/candidate-lock.json')
+        if (admission.get('candidate_lock')!=binding(candidate)
             or admission.get('native_source_runtime_information_policy_verified') is not True):
             raise ValueError('Native E033 runtime/source/information admission missing')
-    lock=json.loads((ROOT/'experiments/E033-multiscale-bam/candidate-lock.json').read_text())
+    lock=json.loads(candidate.read_text())
     records={}
     import math
     for stage in ['teacher','student']:

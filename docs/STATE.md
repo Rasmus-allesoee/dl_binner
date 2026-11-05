@@ -13,17 +13,31 @@ Fresh credit is DKK 1,666.37 Available / 84%, expiry January 12, 2027, same elig
 scope; displayed November net DKK 0.00 with delayed usage and $35 reserve. Complete
 conservative attribution remains about $15.65 under $20, original storage separate.
 
-A tested held-parent forensic launcher first uses only a read-only mount of the
-existing 100 GiB task disk, copies actual worker/root/post-collector evidence and
-verifies a compact private return. Its first wake is bounded to 30 minutes / STOP
-45 minutes / $0.25, with fresh boot/process supervision before release. Source,
-config, copy/pack, refusal and isolated transfer paths are locally tested. No
-science is released until the actual native causes and repaired production/native
-gates pass. Reuse all twenty accepted summaries/banks and passed setup after byte
-checks; do not replay them. Current pre-start state remains TERMINATED. No new
-VM/disk/quota, mapping, marker detection, external binner, GPU or retention scope.
+[Forensic recovery](../experiments/E033-multiscale-bam/recovery-review.md) succeeds:
+181 physical members / 7 exact aliases, complete private archive/member/readback
+verification and independently TERMINATED after 210.027 seconds. Actual worker
+stderr confirms the update-64 progress logger's duplicate `stage` argument;
+actual terminal confirms the final 1 MiB completion-history overflow. Neither is
+a reported scientific numeric refusal. Both are repaired without changing the
+scientific treatment; the original failures and 122-file freeze remain intact.
 
-## E033 stopped: measurements verified, first teacher failed
+The logging-only wheel and explicit [repair overlay](../experiments/E033-multiscale-bam/repair-lock.json)
+pass actual installed learning/BAM/logger contracts, a 55,000-row compact completion
+test and the full 40-rule tiny three-mode DAG (132.46 seconds / 0.597 GB sampled
+RSS), including no-op resume and complete exports. The prospective native recovery
+reuses all twenty summaries/banks, original E031 state, completed barrier and
+math-identical probes after exact checks; all six community fits remain pending.
+Fresh owned-wheel/runtime/source/tiny gates precede science. No new VM/disk/quota,
+mapping, marker detection, external binner, GPU or retention scope is added.
+
+The common clock starts November 5 at 02:47:32.334 Copenhagen, including stopped
+repair gaps; the scientific/delivery deadline is November 6 at 08:47:32.334,
+provider STOP no later than 09:02:32.334. Current pre-start state is TERMINATED.
+See [recovery evidence](../experiments/E033-multiscale-bam/recovery-observed.json)
+for exact bindings, allocation costs and failure distinctions. Original measurement
+and failed work archives are reused/preserved, not repacked or overwritten.
+
+## Historical E033 inspection: measurements verified, first teacher failed
 
 [Independent inspection](../experiments/E033-multiscale-bam/inspection-review.md)
 verifies `multiscale-20261104T152005Z-a940769-r2` at operations source `5911e25`,

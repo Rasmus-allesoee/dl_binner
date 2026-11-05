@@ -1,5 +1,30 @@
 # E033 operations
 
+## November 5 forensic recovery verified; logging-only repair admitted locally
+
+[Recovery review](recovery-review.md) and [receipt](recovery-observed.json) supersede
+the earlier uncertainty about both failures. The read-only forensic phase
+`forensic-20261105T014706Z-d50049b` succeeds, its compact archive and every member/
+alias pass independent verification, and the VM is independently TERMINATED.
+The actual first worker fails on the update-64 duplicate `stage` logger argument;
+the actual parent later refuses its oversized inlined completion history.
+
+The repaired wheel changes only that metadata keyword to `role`; a full-module
+AST proof and 80 identical other package members retain scientific/RNG/defaults.
+The original source/candidate freezes stay untouched; [repair lock](repair-lock.json)
+declares the overlay and new owned artifact. Complete installed tiny learning,
+BAM/progress, 55,000-row completion and first-worker-failure contracts pass. The
+full 40-rule tiny three-mode DAG/reload/exports/no-op resume passes in 132.46
+seconds / 0.597 GB sampled RSS. Native fresh runtime/tiny/byte checks remain required.
+
+The common 30-hour clock starts with the forensic wake November 5 at 01:47:32.334
+UTC, including stopped local repair gaps. Deadline November 6 at 07:47:32.334 UTC
+(08:47:32 Copenhagen), provider STOP no later than 08:02:32.334 UTC (09:02:32).
+Use only original 30/300 and existing 100 GiB disks. Reuse all measurements, source
+states, original barrier and math-identical probes, preserving the old partial
+teacher. Fresh work/prefix and current-boot tested watcher precede conditional
+scientific release. No new approval loop, resource or retention extension.
+
 ## November 5 recovery authorized; collect actual causes first
 
 The owner explicitly invokes the recovery prompt at `9710ea8` and confirms that

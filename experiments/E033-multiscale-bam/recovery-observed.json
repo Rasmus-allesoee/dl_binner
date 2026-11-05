@@ -1,0 +1,303 @@
+{
+  "status": "FORENSIC_VERIFIED_REPAIR_LOCAL_GATES_PASS_BEFORE_NATIVE_START",
+  "branch": "multiscale-bam-recovery",
+  "original_phase": "multiscale-20261104T152005Z-a940769-r2",
+  "original_science": "c812eb8",
+  "original_operations": "5911e2587d5c8353937fb71260464a038a1f46de",
+  "forensic": {
+    "phase": "forensic-20261105T014706Z-d50049b",
+    "status": "SUCCESS",
+    "science_executed": false,
+    "private_prefix": "gs://dl-binner-archive-167650584170/e033/forensic-20261105T014706Z-d50049b/",
+    "archive": {
+      "bytes": 1220262,
+      "sha256": "ce7e6b904d0291dafed1690552b35c3c8c022e20470b9ac7379c0d9b7b2cdaf2"
+    },
+    "generation": "1793843316252485",
+    "physical_members": 181,
+    "exact_aliases": 7,
+    "every_member_verified": true,
+    "logical_bytes": 8098872,
+    "completion_delivery_verified": true,
+    "closed_delivery_tail": {
+      "status": "PASS",
+      "completion": {
+        "uri": "gs://dl-binner-archive-167650584170/e033/forensic-20261105T014706Z-d50049b/completion.json",
+        "generation": "1793843317255557",
+        "binding": {
+          "bytes": 3605,
+          "sha256": "f18f326bdb1e5373b8e2b61ee81c800c9ca2f204396fa2f72a8206046771d8c0"
+        },
+        "readback_verified": true
+      },
+      "collection": {
+        "e033-evidence.tar.gz": {
+          "uri": "gs://dl-binner-archive-167650584170/e033/forensic-20261105T014706Z-d50049b/e033-evidence.tar.gz",
+          "generation": "1793843316252485",
+          "binding": {
+            "bytes": 1220262,
+            "sha256": "ce7e6b904d0291dafed1690552b35c3c8c022e20470b9ac7379c0d9b7b2cdaf2"
+          },
+          "readback_verified": true
+        },
+        "inventory.json": {
+          "uri": "gs://dl-binner-archive-167650584170/e033/forensic-20261105T014706Z-d50049b/inventory.json",
+          "generation": "1793843316532832",
+          "binding": {
+            "bytes": 60480,
+            "sha256": "a50ffac275b4d9844bb1eed4160f30b8d4e57bda76e94b4beba3829f0e3d7548"
+          },
+          "readback_verified": true
+        },
+        "collection.json": {
+          "uri": "gs://dl-binner-archive-167650584170/e033/forensic-20261105T014706Z-d50049b/collection.json",
+          "generation": "1793843316772210",
+          "binding": {
+            "bytes": 1809,
+            "sha256": "89c94c3baba8c32e539eda56b7418ff8476aa224af0d837ab77fa47732ff5608"
+          },
+          "readback_verified": true
+        },
+        "e033-evidence.tar.gz.sha256": {
+          "uri": "gs://dl-binner-archive-167650584170/e033/forensic-20261105T014706Z-d50049b/e033-evidence.tar.gz.sha256",
+          "generation": "1793843317014203",
+          "binding": {
+            "bytes": 87,
+            "sha256": "7ea71d1e5d8e64d9a65497d6bee790523f797080e808e9a30f5783a7d06863c0"
+          },
+          "readback_verified": true
+        }
+      },
+      "science_executed": false
+    },
+    "provider_status": "TERMINATED",
+    "last_start": "2026-11-04T17:47:32.334-08:00",
+    "last_stop": "2026-11-04T17:51:02.361-08:00",
+    "allocation_seconds": 210.02699995040894,
+    "allocation_CPU_RAM_IP_USD": 0.01592971237007229,
+    "source_task_read_only": true
+  },
+  "confirmed_failures": [
+    {
+      "path": "src/dl_binner/multiscale/model.py:265",
+      "cause": "emit() got multiple values for argument stage at optimizer update 64; metadata keyword collides with emit positional stage",
+      "first_teacher": "Failed before first completed epoch/checkpoint; partial output preserved",
+      "repair": "Sole keyword stage -> role; full-module AST equality after this one normalization; all mathematics/modules/RNG/schedule unchanged",
+      "evidence": {
+        "bytes": 724,
+        "sha256": "3bc4915391e55abce7f95aeea369b6de74d11a342362dd1dce09f156bc9064e8"
+      }
+    },
+    {
+      "path": "scripts/e033_phase.py:238 -> scripts/e021_control_json.py:24",
+      "cause": "Actual native terminal confirms Control JSON exceeds bounded size during final completion publication",
+      "repair": "Keep 1 MiB publisher cap; stream separate filesystem JSONL and bind closed artifact from compact completion",
+      "evidence": {
+        "bytes": 291031,
+        "sha256": "16879ee08ff582935fef8d84047c8b18379d47db7d22a2739beffbb2bc270498"
+      }
+    }
+  ],
+  "verified_reuse": {
+    "twenty_measurements": true,
+    "measurement_bank_and_feature_work_members": 46,
+    "measurement_archive": {
+      "bytes": 636939104,
+      "sha256": "3c906b743b007c19b0a13b841000971c5525ef4b51335a49f710aff4eef9c9db"
+    },
+    "three_math_identical_full_shape_probes": true,
+    "complete_global_barrier": true,
+    "old_partial_teacher_reusable": false,
+    "original_files_preserved": true
+  },
+  "clock": {
+    "start_epoch": 1793843252.334,
+    "deadline_epoch": 1793951252.334,
+    "provider_deadline_epoch": 1793952152.334
+  },
+  "limits": {
+    "threads": 4,
+    "RSS_bytes": 26000000000,
+    "source_task_reserve_GiB": 25,
+    "original_task_baseline_used_bytes": 24576,
+    "cumulative_task_growth_GiB": 60,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+  },
+  "installed_local_tests": [
+    {
+      "module": "test_multiscale_progress",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e033-multiscale-bam/recovery-20261105/local-env/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product",
+          "-p",
+          "test_multiscale_progress.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 15.59461657599968,
+        "peak_sampled_rss_bytes": 178741248,
+        "seconds_ceiling": 3600,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 28405,
+        "sampled_cpu_seconds": 3.17,
+        "sampled_average_cpus": 0.2032752767309888,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    {
+      "module": "test_multiscale_learning",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e033-multiscale-bam/recovery-20261105/local-env/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product",
+          "-p",
+          "test_multiscale_learning.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 34.34046849799779,
+        "peak_sampled_rss_bytes": 315224064,
+        "seconds_ceiling": 3600,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 28476,
+        "sampled_cpu_seconds": 113.50999999999999,
+        "sampled_average_cpus": 3.305429569390358,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    },
+    {
+      "module": "test_multiscale_measurement",
+      "resources": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e033-multiscale-bam/recovery-20261105/local-env/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product",
+          "-p",
+          "test_multiscale_measurement.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "wall_seconds": 1.502829898003256,
+        "peak_sampled_rss_bytes": 35434496,
+        "seconds_ceiling": 3600,
+        "rss_bytes_ceiling": 8000000000,
+        "launched_pid": 28633,
+        "sampled_cpu_seconds": 1.26,
+        "sampled_average_cpus": 0.838418241262106,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "sample_includes_coordinator": false
+      }
+    }
+  ],
+  "source_transport": "Exact private Git bundle; existing public outgoing history contains private financial/account metadata; read-only VM GitHub access retained",
+  "financial": {
+    "complete_original_attribution_upper_USD": 15.648075391427287,
+    "original_ceiling_USD": 20,
+    "original_storage_separate": true,
+    "real_money_authorized": false,
+    "credit_delta_is_not_an_invoice": true
+  },
+  "evidence": {
+    "artifacts/e033-multiscale-bam/recovery-20261105/forensic-return/verification.json": {
+      "bytes": 31391,
+      "sha256": "40ee9db13ee957a52e36bc592738013bd67d1675e02f14f5215824c08b3d6a5f"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/forensic-return/completion.json": {
+      "bytes": 3605,
+      "sha256": "f18f326bdb1e5373b8e2b61ee81c800c9ca2f204396fa2f72a8206046771d8c0"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/forensic-stop-check.json": {
+      "bytes": 33510,
+      "sha256": "bb60d5c3bd5968549a6b55643ef039ca15fa458587584b4d502d8fa7da5dde15"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/recovery-tests-r2.log": {
+      "bytes": 961,
+      "sha256": "2cf956e94bb75166e9afb76c38490a5eeb71e1d94dfdcd14063039a8c121b868"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/forensic-tests-after-repair.log": {
+      "bytes": 750,
+      "sha256": "45fd249483259a44d03b2bb4229593ec7afc5999d3a7fb852d9505150269c771"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/recovery-tests-r3.log": {
+      "bytes": 961,
+      "sha256": "ed17e4b31e0b4f9c5d028124c644d636eac4b006bbda0f6410ee389deb4975f4"
+    }
+  },
+  "tiny_DAG": {
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e033-multiscale-bam/recovery-20261105/local-env/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e033_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e033-multiscale-bam/recovery-20261105/repaired-DAG/tiny",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 132.46362955199947,
+      "peak_sampled_rss_bytes": 596643840,
+      "seconds_ceiling": 3600,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 28898,
+      "sampled_cpu_seconds": 244.3,
+      "sampled_average_cpus": 1.8442798285554936,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": false
+    },
+    "completed": {
+      "bytes": 48548,
+      "sha256": "99c3bf7e497f6a81afa9485bed678edb931fce34532040cb3ad0b0305586f271"
+    },
+    "stages": 40,
+    "verified_resume_noop": true,
+    "actual_reload_export_collection": true
+  },
+  "operational_tests": {
+    "recovery": 5,
+    "forensic": 4,
+    "progress_learning_measurement": 12,
+    "maximum_expected_filesystem_rows": 55000
+  },
+  "repair_bindings": {
+    "repair-lock.json": {
+      "bytes": 3404,
+      "sha256": "6f0b3e9130c8cdae02a7461752956262494184a3b02888f3baf6c43fc87398a8"
+    },
+    "repair-candidate-lock.json": {
+      "bytes": 12632,
+      "sha256": "a9fb04b5f0cf558fd2331c034766f4ac91d9911bbc543df67f53f92df61fb557"
+    }
+  },
+  "repaired_wheel": {
+    "bytes": 242619,
+    "sha256": "924f8cad8da66081baae7bb29906951c11f1aedcd1b9b55bc3ba0b19e6a18704"
+  },
+  "local_documentation_check": "PASS: 159 maintained documents / 2229 local links; 10 optional ignored source caches unavailable"
+}

@@ -14,7 +14,24 @@ held boot/process watcher, provider readback and exact helper/schema gates prece
 release. Full later science remains conditional on actual cause/repair/native
 contracts and the complete remaining schedule. No retention/resource expansion.
 
-## November 5 E033 failed science verified; stopped disks preserved
+[Forensic recovery](../experiments/E033-multiscale-bam/recovery-review.md) is now
+complete: the current-boot watcher stops the VM, independently TERMINATED November
+5 at 01:51:02.361 UTC, after 210.027 seconds (about $0.01593 CPU/RAM/IP). The compact
+1,220,262-byte private return passes full SHA256/member/alias checks. Actual native
+logs confirm both the progress-logger keyword collision and final completion-size
+refusal. Logging-only source/wheel repair, separate bound filesystem history and
+closed worker/delivery evidence pass local actual-path tests; science is unchanged.
+The fresh native source/runtime/tiny gates remain prerequisites to the same six
+fits, reusing all measurements/state/barrier/probes without science replay.
+
+The common recovery clock already began at November 5, 01:47:32.334 UTC; stopped
+repair gaps count. Deadline November 6, 07:47:32.334 UTC, STOP no later than
+08:02:32.334 UTC. Each boot receives fresh held-parent supervision. The original
+100 GiB filesystem baseline stays 24,576 bytes, with 60 GiB cumulative growth and
+separate 25 GiB reserves. Complete modeled attribution remains $15.65 of original
+$20, not an invoice. No new resource, public source push or retention extension.
+
+## Historical November 5 inspection: failed science, stopped disks preserved
 
 [Inspection](../experiments/E033-multiscale-bam/inspection-review.md) verifies
 TERMINATED at November 4, 20:13:28.697 UTC / 21:13:28 Copenhagen, matching the
