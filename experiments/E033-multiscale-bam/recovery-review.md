@@ -44,6 +44,14 @@ The repaired full tiny three-mode DAG passes all 40 stages in 132.46 seconds at
 collection contracts. Native Linux gates and complete remaining schedule remain
 explicit release contracts, not inferred passes.
 
+The first prospective scientific wake is refused before source setup or science:
+GCP rejects changing `maxRunDuration` while RUNNING. The failed call and stop are
+preserved. The corrected adapter sets/reads the duration while TERMINATED, reserves
+five minutes for boot/API latency, then checks the actual start plus unchanged
+duration against the common absolute deadline. An actual-adapter regression with
+only the external provider mocked refuses a forbidden live update and an excessive
+boot delay. This recovery does not reset the clock or repeat scientific work.
+
 Recovery uses all twenty retained summaries, both measurement banks/new-feature
 caches and the six original E031 checkpoint/metadata members. It reuses the
 completed global barrier and math-identical full-shape probes after exact byte and

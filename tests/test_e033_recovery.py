@@ -14,12 +14,33 @@ from unittest.mock import patch
 ROOT=Path(__file__).absolute().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from e033_recovery import logging_only,DiskHistory,admit,upload,PRODUCT
 from e033_resume import validate_config,seal_evidence,FIELDS
-from e033_resume_launch import configuration,plan_value,render_setup
+from e033_resume_launch import configuration,plan_value,render_setup,start_with_common_stop
 from e021_control_json import publish,MAX_BYTES
 from e024_coverage import binding
 
 
 class Recovery(unittest.TestCase):
+    def test_actual_provider_adapter_sets_duration_only_while_stopped(self):
+        import datetime
+        class Provider:
+            """Model only the observed external GCP scheduling restriction."""
+            def __init__(self,delay):self.delay=delay;self.phase='TERMINATED';self.schedule={};self.calls=[]
+            def call(self,argv,zone):
+                self.calls.append(argv[2])
+                if argv[2]=='set-scheduling':
+                    if self.phase!='TERMINATED':raise RuntimeError('Max run duration cannot be changed while running')
+                    seconds=int(next(a for a in argv if a.startswith('--max-run-duration=')).split('=')[1][:-1])
+                    self.schedule=dict(maxRunDuration=dict(seconds=str(seconds)),instanceTerminationAction='STOP',automaticRestart=False)
+                elif argv[2]=='start':self.phase='RUNNING'
+                else:raise AssertionError('Unexpected provider mutation')
+            def state(self):
+                return dict(status=self.phase,scheduling=self.schedule,lastStartTimestamp=datetime.datetime.fromtimestamp(1000+self.delay,datetime.timezone.utc).isoformat())
+        clock=dict(deadline_epoch=100000,provider_deadline_epoch=100900)
+        p=Provider(80);live,start,stop=start_with_common_stop(p,clock,now=1000)
+        self.assertEqual(p.calls,['set-scheduling','start']);self.assertEqual(start,1080)
+        self.assertLessEqual(stop,clock['provider_deadline_epoch']);self.assertGreater(stop,clock['deadline_epoch'])
+        with self.assertRaisesRegex(ValueError,'STOP window'):start_with_common_stop(Provider(350),clock,now=1000)
+
     def test_actual_fixed_product_AST_preserves_every_nonlogging_statement(self):
         before=subprocess.check_output(['git','show','c812eb8:'+PRODUCT],cwd=ROOT,text=True)
         after=(ROOT/PRODUCT).read_text();self.assertTrue(logging_only(before,after))

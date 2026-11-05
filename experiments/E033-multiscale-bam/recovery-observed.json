@@ -245,6 +245,10 @@
     "artifacts/e033-multiscale-bam/recovery-20261105/recovery-tests-r3.log": {
       "bytes": 961,
       "sha256": "ed17e4b31e0b4f9c5d028124c644d636eac4b006bbda0f6410ee389deb4975f4"
+    },
+    "artifacts/e033-multiscale-bam/recovery-20261105/recovery-tests-provider-r4.log": {
+      "bytes": 1122,
+      "sha256": "cdcc903aa597522ec49b97d7f243cdb57422c3c20efa01633d6e6661c16c5738"
     }
   },
   "tiny_DAG": {
@@ -280,7 +284,7 @@
     "actual_reload_export_collection": true
   },
   "operational_tests": {
-    "recovery": 5,
+    "recovery": 6,
     "forensic": 4,
     "progress_learning_measurement": 12,
     "maximum_expected_filesystem_rows": 55000
@@ -288,7 +292,7 @@
   "repair_bindings": {
     "repair-lock.json": {
       "bytes": 3404,
-      "sha256": "6f0b3e9130c8cdae02a7461752956262494184a3b02888f3baf6c43fc87398a8"
+      "sha256": "298c602ac6c2c74d677a79e909429317f23cd4898a9da9891c53f4777a7ecc3f"
     },
     "repair-candidate-lock.json": {
       "bytes": 12632,
@@ -299,5 +303,19 @@
     "bytes": 242619,
     "sha256": "924f8cad8da66081baae7bb29906951c11f1aedcd1b9b55bc3ba0b19e6a18704"
   },
-  "local_documentation_check": "PASS: 159 maintained documents / 2229 local links; 10 optional ignored source caches unavailable"
+  "local_documentation_check": "PASS: 159 maintained documents / 2229 local links; 10 optional ignored source caches unavailable",
+  "pre_science_setup_failure": {
+    "source": "649888e13329c0d445b149a83b799ed555b8ce63",
+    "root": "/srv/dl_binner/experiments/e033/resume-20261105T023354Z-649888e",
+    "phase_released": false,
+    "source_sync_started": false,
+    "science_released": false,
+    "cause": "GCP refuses max-run-duration changes while an instance is RUNNING",
+    "repair": "Set duration only while TERMINATED, reserve five minutes for boot/API latency, then verify observed boot plus unchanged duration against common absolute deadline",
+    "failure": {
+      "bytes": 606,
+      "sha256": "a93db4590c42dc9759338d7d25557324a989497eab3d50beca12e4367c0b69de"
+    },
+    "common_clock_reset": false
+  }
 }

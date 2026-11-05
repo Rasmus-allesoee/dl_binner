@@ -90,6 +90,30 @@ print('E033_REPAIRED_SETUP',json.dumps(dict(config=binding(root/'config.json'),p
     compile(code,'actual-recovery-setup','exec');return code
 
 
+def start_with_common_stop(cloud,clock,now=None):
+    """Set STOP while stopped, then verify its absolute bound after real boot.
+
+    GCP refuses max-run-duration updates on a running VM. Reserve five minutes
+    for the observed boot/API latency; never try a forbidden live adjustment.
+    An unexpectedly slow start is refused before source/setup/science release.
+    """
+    now=time.time() if now is None else now
+    seconds=int(clock['provider_deadline_epoch']-now-300)
+    if seconds<1800:raise TimeoutError('Common recovery clock cannot admit setup')
+    cloud.call(['compute','instances','set-scheduling',CPU,'--no-restart-on-failure','--max-run-duration='+str(seconds)+'s','--instance-termination-action=STOP'],CPU_ZONE)
+    ready=cloud.state()
+    if (ready['status']!='TERMINATED' or int(ready['scheduling']['maxRunDuration']['seconds'])!=seconds
+        or ready['scheduling']['instanceTerminationAction']!='STOP' or ready['scheduling']['automaticRestart']):
+        raise ValueError('Stopped provider scheduling readback differs')
+    cloud.call(['compute','instances','start',CPU],CPU_ZONE);live=cloud.state()
+    start=datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp()
+    stop=start+int(live['scheduling']['maxRunDuration']['seconds'])
+    if (live['status']!='RUNNING' or live['scheduling']!=ready['scheduling']
+        or not clock['deadline_epoch']<stop<=clock['provider_deadline_epoch']):
+        raise ValueError('Actual boot exceeds common provider STOP window')
+    return live,start,stop
+
+
 def launch(out,wheel):
     """Verify private exact source sync, current provider and held parent before release."""
     out=Path(out).absolute();out.mkdir(parents=True,exist_ok=False)
@@ -109,16 +133,9 @@ def launch(out,wheel):
     task=[d for d in disks if d['name']=='e033-task-1793805630']
     if len(task)!=1 or task[0]['id']!='1578633013833953331':raise ValueError('Existing original task ID differs')
     try:
-        seconds=int(clock['provider_deadline_epoch']-time.time()-120)
-        if seconds<1800:raise TimeoutError('Common recovery clock cannot admit setup')
-        cloud.call(['compute','instances','set-scheduling',CPU,'--no-restart-on-failure','--max-run-duration='+str(seconds)+'s','--instance-termination-action=STOP'],CPU_ZONE)
-        cloud.call(['compute','instances','start',CPU],CPU_ZONE);live=cloud.state()
-        ident['start']=datetime.datetime.fromisoformat(live['lastStartTimestamp']).timestamp()
-        if live['status']!='RUNNING' or live['lastStartTimestamp']==before['lastStartTimestamp']:raise ValueError('Fresh scientific recovery boot required')
-        remaining=int(clock['provider_deadline_epoch']-ident['start'])
-        cloud.call(['compute','instances','set-scheduling',CPU,'--no-restart-on-failure','--max-run-duration='+str(remaining)+'s','--instance-termination-action=STOP'],CPU_ZONE)
-        live=cloud.state();ident['provider_deadline']=ident['start']+int(live['scheduling']['maxRunDuration']['seconds'])
-        if not clock['deadline_epoch']<ident['provider_deadline']<=clock['provider_deadline_epoch'] or live['disks']!=before['disks']:raise ValueError('Common-clock provider STOP/resources differ')
+        live,ident['start'],ident['provider_deadline']=start_with_common_stop(cloud,clock)
+        if live['lastStartTimestamp']==before['lastStartTimestamp'] or live['disks']!=before['disks']:
+            raise ValueError('Fresh common-clock boot/resources differ')
         write_metadata(out/'identity.json',ident);write_metadata(out/'provider-start.json',live)
         probe=None
         for i in range(5):
