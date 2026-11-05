@@ -1,0 +1,25 @@
+{
+  "kind": "E034 full actual native producer/held-watcher/consumer freeze",
+  "files": {
+    "experiments/E034-genome-graph/source-lock.json": {
+      "bytes": 76657,
+      "sha256": "f7a83127095dfc2cf7978bc0d02c79f9831ffddd04a45b0a668df2c017afe559"
+    },
+    "experiments/E034-genome-graph/OPERATIONS.md": {
+      "bytes": 8295,
+      "sha256": "202e64bbb54dc416c49f11c68a305e33669cc343bde7beb0ef142d3c419f89a4"
+    },
+    "tests/test_e034_operations.py": {
+      "bytes": 8604,
+      "sha256": "ed9ce101c4bc4949e85b572fe788f08e20fdee7c7db02e77f70adc5fb14e7dcc"
+    },
+    "tests/product/test_genomegraph_links.py": {
+      "bytes": 6535,
+      "sha256": "2432c32ffb7656f2e3fd8dca51f8739d01b2db4d3bf41e499c900750ff678d1b"
+    },
+    "tests/product/test_genomegraph_model.py": {
+      "bytes": 6008,
+      "sha256": "4e758c80710161e78d1850cb62c3333dfa572734f10d23235c61e9010580f76c"
+    }
+  }
+}

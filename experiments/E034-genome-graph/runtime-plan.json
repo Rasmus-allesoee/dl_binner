@@ -1,0 +1,59 @@
+{
+  "kind": "E034 physical genome graph",
+  "engineering": false,
+  "work": "/srv/dl_binner/experiments/e034/NEW_PHASE/task/science",
+  "source_cache": "/srv/dl_binner/experiments/e034/NEW_PHASE/task/original-bootstrap",
+  "measurement_cache": {
+    "E009": "/srv/dl_binner/experiments/e034/NEW_PHASE/task/original-measurements/work/E009",
+    "oral": "/srv/dl_binner/experiments/e034/NEW_PHASE/task/original-measurements/work/oral"
+  },
+  "physical": {
+    "E009": "/srv/dl_binner/experiments/e034/NEW_PHASE/task/physical/E009",
+    "oral": "/srv/dl_binner/experiments/e034/NEW_PHASE/task/physical/oral"
+  },
+  "units": {
+    "E009-noGLM": {
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "views": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-noGLM/admit/views.npz",
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "community": "E009"
+    },
+    "E009-GLM": {
+      "features": "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz",
+      "views": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/E009-GLM/admit/views.npz",
+      "fasta": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/assembly/megahit/final.contigs.fa",
+      "marker_evidence": "/srv/dl_binner/experiments/e022/marker-20261026T012935Z-e88dc8a-r2/work/units/E009-relational/refine/quality-evidence.json",
+      "community": "E009"
+    },
+    "oral-noGLM": {
+      "features": "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz",
+      "views": "/srv/dl_binner/experiments/e027/common-20261030T223337Z-243b8ac/work/units/oral-noGLM/admit/views.npz",
+      "fasta": "/srv/dl_binner/experiments/e014/comparison-20261018T183446Z-858b7cc/inputs/oral.fna",
+      "marker_evidence": "/srv/dl_binner/experiments/e019/context-20261022T215123Z-b47b916/work/units/oral-context/refine/quality-evidence.json",
+      "community": "oral"
+    }
+  },
+  "python": "/srv/dl_binner/experiments/e034/NEW_PHASE/task/env/bin/python",
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "worker": "/srv/dl_binner/repo/scripts/e034_control.py",
+  "snakefile": "/srv/dl_binner/repo/experiments/E034-genome-graph/Snakefile",
+  "limits": {
+    "seconds": 129600,
+    "provider_STOP_seconds": 130500,
+    "ceiling_USD": 15,
+    "threads": 4,
+    "RSS_bytes": 26000000000,
+    "reserve_bytes": 26843545600,
+    "extra_bytes": 64424509440,
+    "aggregate_compressed_bytes": 4294967296,
+    "slice_compressed_bytes": 2147483648,
+    "slice_logical_bytes": 8589934592,
+    "local_staged_bytes": 3221225472,
+    "local_RSS_bytes": 8000000000,
+    "local_seconds": 3600,
+    "local_free_reserve_bytes": 8589934592,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+  }
+}

@@ -1,5 +1,24 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E034 qualified physical representation authorized, November 6
+
+The new owner-authorized [E034 block](../../experiments/E034-genome-graph/design.md)
+uses stronger frozen E031 vectors, accepted E033 actual parent/crop moments and
+provisional E032 construction. Source review includes UnitigBIN 2024 plus newer
+graph screens; dense unitig adjacency reconstruction and unverified hard marker
+constraints are not copied. Qualified real template evidence is a separate graph
+layer, not automatic same-genome identity or a hard merge. Frozen utility gates
+on both assemblies precede any fit, and insufficiency cannot reject paired-read
+utility for future user datasets. Coherent representation is the next recovery
+hypothesis, not a guaranteed MAG gain. Q006 remains open.
+
+New $15 credit-only pilot/conditional three-mode comparison, existing E2 and
+conditional 100 GiB scratch, 36 common hours / STOP 36.25 hours and November 11/18
+boundaries require fresh complete gates. Earlier budgets/negative bundles stay
+unchanged. Local Oral GLM state/Adam extension advances the concrete missing
+full-information path; its bank/teacher/proposals and separate native qualification
+still need admission, without GPU or confirmation expansion here.
+
 ## E033 completed comparison and evidence scope, November 5
 
 [Completed inspection](../../experiments/E033-multiscale-bam/completed-review.md)

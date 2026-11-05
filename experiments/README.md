@@ -66,3 +66,5 @@ or stopped job is not a successful experiment; inspect its receipts and outputs.
 - [E029: certifiable joint retrieval, completed common-version comparison and independent batching admission](E029-certifiable-joint-retrieval/README.md)
 - [E030: root-safe, profile-supported biological bin construction with learning fixed](E030-supported-biological-bins/README.md)
 - [E031: bootstrap-preserving learning and source-bound construction bridge](E031-bootstrap-preserving-learning/README.md)
+
+- [E034: BAM-supported genome-graph representation](E034-genome-graph/README.md)

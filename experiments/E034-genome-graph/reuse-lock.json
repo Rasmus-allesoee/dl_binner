@@ -1,0 +1,21 @@
+{
+  "kind": "E034 selected accepted source caches; no science regeneration",
+  "parent_commit": "3f03c82d32d1eb251d636a3ca29625dc7e7a2736",
+  "parent_reuse_lock": {
+    "bytes": 13684,
+    "sha256": "7420bbd88b9879c42c0da7f81b5434354d2fa4c9c53ce10d67749ecd966d5523"
+  },
+  "BAM_manifest": {
+    "bytes": 8125,
+    "sha256": "a2bab95e5c0f828f2454f8573309d5c24a8541972db737b8b3d9597795d3d55c"
+  },
+  "original_measurement_review": {
+    "bytes": 30968,
+    "sha256": "c84c5e0708d8778191c35bbd36f44c59830523bb225c62ee67b610a9c4a1be42"
+  },
+  "bootstrap": "E031 student full embeddings and matching graph/result only",
+  "measurements": "E033 original admitted ten-sample parent/real-crop banks only",
+  "accepted_GLMon_information": "E031 E009 GLM upstream teacher/proposals/student provenance retained; noGLM caches remain noGLM",
+  "old_learning_refit": false,
+  "truth_accessed": false
+}

@@ -1,6 +1,27 @@
 # Current Research State
 
-Updated: November 5, 2026 (Copenhagen). This is the single current handoff.
+## E034 authorized genome-graph block — local gates passed, native pending
+
+The owner authorizes [E034](../experiments/E034-genome-graph/OPERATIONS.md)'s new
+$15 credit-only retained-BAM pilot and conditional three-mode comparison, including
+one conditional 100 GiB task disk. Frozen E031 vectors plus actual E033 interval
+moments and provisional E032 construction are the anchors; rejected E033 learning
+is not promoted. [Newer graph source review](evidence/2026-11-05-e034-newer-graph-design.md)
+includes UnitigBIN 2024 and newer screens. No native pilot or community outcome
+has been observed yet. Existing VM remains stopped until fresh full gates pass.
+
+Actual local BAM/collation/graph/train/reload/export and three-mode serial/no-op/
+strict-reader checks pass. Original failed engineering trials and the Snakemake
+stale-source-cache refusal remain. Utility gates precede fits; insufficient
+paired links limit these assemblies/libraries/mapping, not the method family.
+The same candidate and thresholds cover all modes; full DNA/unlinked fallback
+and historical depth priors remain explicit. Oral GLM state/Adam extension is
+locally prepared only; no GPU or full extraction in this scope. Q006 and skin
+truth/features/cost admission remain open. **November 11 active / November 18
+automatic-tail** boundaries are unchanged. The earlier E033 summary below remains
+accepted history; its proposed-authority wording does not override this new task.
+
+Updated: November 6, 2026 (Copenhagen). This is the single current handoff.
 
 ## E033 completed and reviewed; frozen bundle ABANDON
 

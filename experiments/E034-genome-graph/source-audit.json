@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/xuehansheng/UnitigBIN",
+  "commit": "1301766eb02982e04da8fe6f59af8b363aa281e8",
+  "checked_epoch": 1793915687.397314,
+  "executed": false,
+  "files": {
+    "README.md": {
+      "bytes": 1592,
+      "sha256": "5097e14008b954bc43b2630d999b2243ba92c737d658e784f14c169fd7074916",
+      "url": "https://github.com/xuehansheng/UnitigBIN/blob/1301766eb02982e04da8fe6f59af8b363aa281e8/README.md"
+    },
+    "main.py": {
+      "bytes": 2314,
+      "sha256": "ee0f9f45fb3f44c21bf9997e2ffbbf509cfa4b496a6154da143c61ada82be68b",
+      "url": "https://github.com/xuehansheng/UnitigBIN/blob/1301766eb02982e04da8fe6f59af8b363aa281e8/main.py"
+    },
+    "loader.py": {
+      "bytes": 21711,
+      "sha256": "8275d9dd6a68b732e86ca17b637d2c11701835567db5caa08228e3bf8f0ff7fd",
+      "url": "https://github.com/xuehansheng/UnitigBIN/blob/1301766eb02982e04da8fe6f59af8b363aa281e8/loader.py"
+    },
+    "model.py": {
+      "bytes": 8982,
+      "sha256": "15ec91701b09948e3ce44d2890b882ad66fd9c72d8aae2f6e539d04c8e499c2c",
+      "url": "https://github.com/xuehansheng/UnitigBIN/blob/1301766eb02982e04da8fe6f59af8b363aa281e8/model.py"
+    },
+    "modules.py": {
+      "bytes": 15607,
+      "sha256": "4a7526edf5549f1f155aeef6a22dec83270aa4af58d7b95a13e2b45b514da321",
+      "url": "https://github.com/xuehansheng/UnitigBIN/blob/1301766eb02982e04da8fe6f59af8b363aa281e8/modules.py"
+    },
+    "utils.py": {
+      "bytes": 4052,
+      "sha256": "2d750976de6c9e75122a507b01e7b95c7d46d9ea85035d1607569009563e22d0",
+      "url": "https://github.com/xuehansheng/UnitigBIN/blob/1301766eb02982e04da8fe6f59af8b363aa281e8/utils.py"
+    },
+    "run.sh": {
+      "bytes": 35,
+      "sha256": "3af29a77ec69d5d6adc87d3375254f1276d04df54cbf47329a9576ab33779203",
+      "url": "https://github.com/xuehansheng/UnitigBIN/blob/1301766eb02982e04da8fe6f59af8b363aa281e8/run.sh"
+    }
+  }
+}

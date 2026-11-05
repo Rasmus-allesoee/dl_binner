@@ -43,3 +43,5 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [November 4: common measured multiscale coverage, JGI counter diagnosis and local storage](2026-11-04-multiscale-coverage-and-storage.md)
 
 - [November 5: completed E033 recovery evidence and genome-graph priority](2026-11-05-e033-genome-graph-priority.md)
+
+- [2026-11-05: UnitigBIN/newer graph sources and E034 design](2026-11-05-e034-newer-graph-design.md)

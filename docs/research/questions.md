@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-11-05
+Updated: 2026-11-06
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -15,6 +15,14 @@ Status: open. Opened: 2026-09-16.
 The candidate focus is contig loss/misassignment in fragmented prokaryotic assemblies with weak or distorted coverage. Separate information absence, representation failure, clustering error, and quality/refinement selection. Evidence: [thesis](../evidence/2026-09-16-thesis.md), [landscape](../evidence/2026-09-16-landscape.md). Related: H001; [D002](../decisions/D002-investigate-before-architecture.md).
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
+
+November 6: [E034's prospective block](../../experiments/E034-genome-graph/design.md)
+implements and locally validates fixed-bootstrap physical graph representation,
+with two assembly-specific paired-template utility gates before a conditional
+three-mode comparison. Newer UnitigBIN/source evidence informs graph type and
+scaling; actual recovery is not yet observed. Insufficient links in these GSA/read-
+derived assemblies cannot settle usefulness for other user libraries/assemblies.
+Q006 remains open and Oral GLM state preparation does not admit a real bank.
 
 November 5 completed update: [E033's six accepted fits](../../experiments/E033-multiscale-bam/completed-review.md)
 lose R95 in all three modes: frozen ABANDON this bundle, with measurement assets

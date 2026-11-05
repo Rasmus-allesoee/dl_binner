@@ -1,0 +1,198 @@
+{
+  "status": "PASS_LOCAL_ENGINEERING",
+  "checked_epoch": 1793920143.440346,
+  "wheel": {
+    "bytes": 254960,
+    "sha256": "e8ab0cfda325550f691db36418b3f7091fdc8d37ac0517dfbbc552e5ee97e058"
+  },
+  "source": {
+    "bytes": 76657,
+    "sha256": "f7a83127095dfc2cf7978bc0d02c79f9831ffddd04a45b0a668df2c017afe559"
+  },
+  "checks": {
+    "test_genomegraph_links.exit.json": {
+      "receipt": {
+        "bytes": 883,
+        "sha256": "381b1ccc96b077117bb218c8a8c9298d59167351cf6e8c8f06eb621ca5dcd9e7"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/local-env-r6/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;sys.path.insert(0,sys.argv[1]);r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(sys.argv[2]));sys.exit(not r.wasSuccessful())",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product",
+          "test_genomegraph_links"
+        ],
+        "exit_code": 0,
+        "launched_pid": 73113,
+        "peak_sampled_rss_bytes": 50999296,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.23861355191485062,
+        "sampled_cpu_seconds": 1.5,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 240,
+        "stop_reason": null,
+        "wall_seconds": 6.286315207005828
+      }
+    },
+    "test_genomegraph_model.exit.json": {
+      "receipt": {
+        "bytes": 884,
+        "sha256": "2a129496cd91479c8093f9033b3d83249b3c0dc388bd0c7797325c58734081d3"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/local-env-r6/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;sys.path.insert(0,sys.argv[1]);r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName(sys.argv[2]));sys.exit(not r.wasSuccessful())",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests/product",
+          "test_genomegraph_model"
+        ],
+        "exit_code": 0,
+        "launched_pid": 73154,
+        "peak_sampled_rss_bytes": 271912960,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.543860625500754,
+        "sampled_cpu_seconds": 11.5,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 240,
+        "stop_reason": null,
+        "wall_seconds": 21.145123328999034
+      }
+    },
+    "operations-r2.exit.json": {
+      "receipt": {
+        "bytes": 865,
+        "sha256": "96b0432c4b50417da6a3ac06b62876c8f311b67876d336d8074e127b59680eea"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/local-env-r6/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,unittest;sys.path.insert(0,sys.argv[1]);r=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_e034_operations'));raise SystemExit(not r.wasSuccessful())",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/tests"
+        ],
+        "exit_code": 0,
+        "launched_pid": 74710,
+        "peak_sampled_rss_bytes": 230313984,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.8097978919352582,
+        "sampled_cpu_seconds": 6.47,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 600,
+        "stop_reason": null,
+        "wall_seconds": 7.989647866997984
+      }
+    },
+    "repaired-first-r3.exit.json": {
+      "receipt": {
+        "bytes": 844,
+        "sha256": "de04ffbf95ccfe4f1c64ac5d492900a09200c3b5338d21284d0aa5dd970bf025"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/local-env-r6/bin/python",
+          "-I",
+          "-B",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e034_control.py",
+          "--plan",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/final-local-r2/tiny/plan.json",
+          "--engineering",
+          "--workflow"
+        ],
+        "exit_code": 0,
+        "launched_pid": 73805,
+        "peak_sampled_rss_bytes": 290410496,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 1.1850027860377152,
+        "sampled_cpu_seconds": 71.25,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1800,
+        "stop_reason": null,
+        "wall_seconds": 60.126440916006686
+      }
+    },
+    "finish-r1.exit.json": {
+      "receipt": {
+        "bytes": 1060,
+        "sha256": "0065d47cef101ed924959f20d3497965b092474988bedb3f0bf21d545531bf78"
+      },
+      "result": {
+        "command": [
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/local-env-r6/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import sys,json;from pathlib import Path;sys.path.insert(0,sys.argv[1]);from e034_tiny import finish;p=Path(sys.argv[2]);finish(p,json.loads((p/'first.exit.json').read_text())['argv'],json.loads((p/'plan.json').read_text())['units']['E009-noGLM']['features'],'repaired-first-r3')",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts",
+          "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/final-local-r2/tiny"
+        ],
+        "exit_code": 0,
+        "launched_pid": 74198,
+        "peak_sampled_rss_bytes": 197824512,
+        "rss_bytes_ceiling": 8000000000,
+        "sample_includes_coordinator": false,
+        "sampled_average_cpus": 0.7301929366924779,
+        "sampled_cpu_seconds": 4.89,
+        "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+        "seconds_ceiling": 1800,
+        "stop_reason": null,
+        "wall_seconds": 6.696860178009956
+      }
+    }
+  },
+  "tiny_completed": {
+    "bytes": 6390,
+    "sha256": "8d3c32cd68a3a13149ab2f4192a4eade4a1b7a75a11b0c24f26222fcf324ed5f"
+  },
+  "serial_scientific_seals": 31,
+  "actual": "Real collation/BAM filtering/sparse messages/graph train20/reload/strict cache/refinement/export/serial DAG/noop/complete collection/member alias readers",
+  "synthetic": "DNA, frozen embeddings and cached marker quality fixture; no GLM inference/detector/community quality",
+  "failures_preserved": [
+    {
+      "path": "artifacts/e034-genome-graph/preparation/final-local-r2/tiny/first.log",
+      "binding": {
+        "bytes": 3213,
+        "sha256": "6096354f3bbbaa97d0ec90e2da0d946d65c2836239c46a7f7b4b10957280d7c9"
+      }
+    },
+    {
+      "path": "artifacts/e034-genome-graph/preparation/final-local-r2/tiny/repaired-first.log",
+      "binding": {
+        "bytes": 3252,
+        "sha256": "fc3ed9a6fb7e469dbb484cbcf45136230886f611d2b394214ed465bd7383634a"
+      }
+    },
+    {
+      "path": "artifacts/e034-genome-graph/preparation/model-r1-failure.log",
+      "binding": {
+        "bytes": 13356,
+        "sha256": "9b7748d5547bec47cfd9de67e4d1a52691370fc1fc8e547ad008372a8b902457"
+      }
+    },
+    {
+      "path": "artifacts/e034-genome-graph/preparation/model-r2-tests.log",
+      "binding": {
+        "bytes": 12026,
+        "sha256": "3616026e717ab27d748eaae74f0b030b705d65e2234233d9ebc82ecca8f39ce2"
+      }
+    }
+  ],
+  "engineering_repairs": [
+    "metadata metric and float32 fixture; frozen endpoint mean targets prevent learned-positive translation or target swapping",
+    "Snakefile chain global shadowed workflow internals; workflow_order avoids shadowing; content-bound source cache prevents stale-file replay",
+    "strict collector/import/full producer schema tested before native start"
+  ],
+  "old_tolerance_changed": false,
+  "cloud_started": false
+}

@@ -1,0 +1,89 @@
+{
+  "status": "PROSPECTIVE_COMPLETE_CREDIT_ONLY_GATE",
+  "checked_epoch": 1793920004.986799,
+  "ceiling_USD": 15,
+  "estimated_complete_gross_USD": 12.3222,
+  "components": {
+    "VM_CPU_RAM_max_USD": 9.716655815849014,
+    "IPv4_max_USD": 0.18125,
+    "conditional_100_GiB_through_boundary_USD": 1.6627947932464315,
+    "new_return_active_and_tail_USD": 0.0315490158533451,
+    "external_export_max_USD": 0.48,
+    "operations_and_rounding_reserve_USD": 0.25
+  },
+  "VM_rate_USD_per_hour": 0.2680456776785935,
+  "storage_catalog_month_hours": 721,
+  "DKK_per_USD_Catalog": 6.712250000006942,
+  "existing_separate_storage_7day_USD": 7.620495683224869,
+  "existing_storage_approval_USD": 9,
+  "current_archive_versions": 326,
+  "current_archive_GiB": 76.17117676325142,
+  "soft_deleted_bytes": 0,
+  "all_archive_tail_7day_upper_USD": 0.3690035546035103,
+  "automatic_tail_existing_approval_USD": 0.5,
+  "coverage_status": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+  "credit": {
+    "checked_epoch": 1793917401.943251,
+    "source": "Fresh signed-in Chrome Credits/Overview/Reports rendered UI",
+    "available_DKK": 1641.25,
+    "percent": 83,
+    "original_DKK": 1973.43,
+    "status": "Available",
+    "scope": "Certain usage; see Free Trial terms",
+    "type": "FreeTrialUpgrade",
+    "application": "Net pricing",
+    "expiry": "2027-01-12",
+    "paid_account": true,
+    "displayed_period": "November 1-5, 2026",
+    "displayed_gross_DKK": 72.06,
+    "displayed_savings_DKK": 72.06,
+    "displayed_net_DKK": 0.0,
+    "report_services_DKK": {
+      "Cloud Storage": 0.61,
+      "Networking": 0.58,
+      "Compute Engine": 70.86
+    },
+    "pending_usage": "No real-time pending ledger exposed; conservatively reserve $35 and reconcile known allocations/storage rather than treating the displayed net as final",
+    "pending_reserve_USD": 35,
+    "real_money_authorized": false
+  },
+  "financial_evidence": {
+    "current-prices.json": {
+      "bytes": 9155
+    },
+    "project-billing.json": {
+      "bytes": 207
+    },
+    "billing-account.json": {
+      "bytes": 179
+    },
+    "provider-state.json": {
+      "bytes": 33098
+    },
+    "disks.json": {
+      "bytes": 2889
+    },
+    "quota.json": {
+      "bytes": 11498
+    },
+    "bucket.json": {
+      "bytes": 922
+    },
+    "versions.json": {
+      "bytes": 378260
+    },
+    "soft-deleted.json": {
+      "bytes": 56
+    }
+  },
+  "eligibility_sources": [
+    "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "https://cloud.google.com/storage/pricing",
+    "https://cloud.google.com/compute/disks-image-pricing"
+  ],
+  "interpretation": "Ordinary first-party E2 CPU/RAM, persistent disk, GCS and network under still-active Welcome credit on paid account. Not a real-money spending authorization; no pending realtime ledger exposed. Reserve $35 in addition to this envelope and separately approved original storage. No GPU/premium/Marketplace product.",
+  "source_headroom": "Fresh native du/free-space review still required; conditional task disk within current 104 GiB SSD quota headroom.",
+  "native_schedule": "Both pilot utility and complete measured schedule/RAM/disk gates before full cache/fit; 36 common hours maximum.",
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+}
