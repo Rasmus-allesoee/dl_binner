@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-11-04
+Updated: 2026-11-05
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -15,6 +15,16 @@ Status: open. Opened: 2026-09-16.
 The candidate focus is contig loss/misassignment in fragmented prokaryotic assemblies with weak or distorted coverage. Separate information absence, representation failure, clustering error, and quality/refinement selection. Evidence: [thesis](../evidence/2026-09-16-thesis.md), [landscape](../evidence/2026-09-16-landscape.md). Related: H001; [D002](../decisions/D002-investigate-before-architecture.md).
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
+
+November 5: [E033 inspection](../../experiments/E033-multiscale-bam/inspection-review.md)
+verifies all twenty measured summaries and both banks, then a failed first teacher
+and no complete new binner output. The comparison is NOT_ASSESSED, not a negative
+multiscale-learning result. Oral eligible all-zero profiles fall from 191,567 to
+402 under the combined new policy, with substantial low-MAPQ support; no recovery
+or isolated MAPQ effect is established. Preserve inputs/journals and prioritize
+bounded actual-error collection/repair followed by the frozen comparison. The VM
+remains stopped and the task disk protects missing native worker/terminal evidence.
+Q006 and full Oral GLM stay open; no new selector or architecture is chosen here.
 
 November 4: [E033](../../experiments/E033-multiscale-bam/README.md) implements the
 shared parent/window coverage and reliability-aware learning block. Its separately

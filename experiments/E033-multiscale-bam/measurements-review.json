@@ -1,0 +1,500 @@
+{
+  "status": "PASS_TECHNICAL_MEASUREMENT_REVIEW_ONLY",
+  "communities": {
+    "E009": {
+      "bank": {
+        "bytes": 3498,
+        "sha256": "bcbe919879edf3c13ba2e18d2cf5b902a70c9c33b3648ad37f9064b4d76dd14f"
+      },
+      "new_features": {
+        "bytes": 42067367,
+        "sha256": "67e631e615c0c7254739504c282b56371352e89e0dcb9a992c4016b06efd5760"
+      },
+      "rows": 145702,
+      "bp": 231678157,
+      "ordered_samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ],
+      "policy": {
+        "coordinates": "zero_based_half_open",
+        "coverage": "aligned_M_EQ_X_including_substitutions",
+        "denominator": "full_interval_including_zeros",
+        "edge_bases": 0,
+        "exclude_flags": 3844,
+        "high_mapq": 20,
+        "identity": "(M+EQ+X-(NM-I-D))/(M+EQ+X+I+D)",
+        "min_base_quality": 0,
+        "min_identity": 0.97,
+        "min_mapq": 0,
+        "missing_base_qualities": "included_at_BQ0_and_audited",
+        "overlapping_mates": "count_each_alignment",
+        "reader": "pysam==0.23.3",
+        "reference_skips": "refuse",
+        "reject_mapq255": true,
+        "variance": "population_E_depth_squared_minus_mean_squared",
+        "version": 1
+      },
+      "samples": [
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_0",
+          "counters": {
+            "accepted_aligned_bases": 4769379157,
+            "accepted_reads": 31969433,
+            "excluded_flags": 110483,
+            "excluded_identity": 403354,
+            "high_MAPQ_aligned_bases": 4743985985,
+            "records": 33267026,
+            "unplaced_unmapped": 783756
+          },
+          "wall_seconds": 669.917899773,
+          "peak_active_events": 1714
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_2",
+          "counters": {
+            "accepted_aligned_bases": 1449354572,
+            "accepted_reads": 11103171,
+            "excluded_flags": 1627589,
+            "excluded_identity": 5627848,
+            "high_MAPQ_aligned_bases": 1403518652,
+            "records": 33267952,
+            "unplaced_unmapped": 14909344
+          },
+          "wall_seconds": 331.7231521169997,
+          "peak_active_events": 3390
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_3",
+          "counters": {
+            "accepted_aligned_bases": 2031596320,
+            "accepted_reads": 15199974,
+            "excluded_flags": 1461720,
+            "excluded_identity": 3581948,
+            "high_MAPQ_aligned_bases": 2001756538,
+            "records": 33294108,
+            "unplaced_unmapped": 13050466
+          },
+          "wall_seconds": 376.86768238700006,
+          "peak_active_events": 5110
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_4",
+          "counters": {
+            "accepted_aligned_bases": 1159237716,
+            "accepted_reads": 9634423,
+            "excluded_flags": 1907533,
+            "excluded_identity": 3025558,
+            "high_MAPQ_aligned_bases": 1136953683,
+            "records": 33285864,
+            "unplaced_unmapped": 18718350
+          },
+          "wall_seconds": 336.3137048560002,
+          "peak_active_events": 2012
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_6",
+          "counters": {
+            "accepted_aligned_bases": 2048049579,
+            "accepted_reads": 14937644,
+            "excluded_flags": 1268648,
+            "excluded_identity": 4679978,
+            "high_MAPQ_aligned_bases": 1985880214,
+            "records": 33273540,
+            "unplaced_unmapped": 12387270
+          },
+          "wall_seconds": 406.30656627200005,
+          "peak_active_events": 1677
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_9",
+          "counters": {
+            "accepted_aligned_bases": 1346396994,
+            "accepted_reads": 10980951,
+            "excluded_flags": 1945651,
+            "excluded_identity": 3585952,
+            "high_MAPQ_aligned_bases": 1304127915,
+            "records": 33284326,
+            "unplaced_unmapped": 16771772
+          },
+          "wall_seconds": 360.1626045859998,
+          "peak_active_events": 1199
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_10",
+          "counters": {
+            "accepted_aligned_bases": 1699444822,
+            "accepted_reads": 12937259,
+            "excluded_flags": 1579133,
+            "excluded_identity": 4593118,
+            "high_MAPQ_aligned_bases": 1671259965,
+            "records": 33288340,
+            "unplaced_unmapped": 14178830
+          },
+          "wall_seconds": 394.698071367,
+          "peak_active_events": 1894
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_11",
+          "counters": {
+            "accepted_aligned_bases": 1641434743,
+            "accepted_reads": 12154598,
+            "excluded_flags": 1365314,
+            "excluded_identity": 7729186,
+            "high_MAPQ_aligned_bases": 1599754118,
+            "records": 33290170,
+            "unplaced_unmapped": 12041072
+          },
+          "wall_seconds": 377.6424755320004,
+          "peak_active_events": 1628
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_14",
+          "counters": {
+            "accepted_aligned_bases": 1175387345,
+            "accepted_reads": 9575911,
+            "excluded_flags": 1859177,
+            "excluded_identity": 5177692,
+            "high_MAPQ_aligned_bases": 1110336698,
+            "records": 33289050,
+            "unplaced_unmapped": 16676270
+          },
+          "wall_seconds": 363.39300994600035,
+          "peak_active_events": 28476
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_17",
+          "counters": {
+            "accepted_aligned_bases": 1161390523,
+            "accepted_reads": 9878239,
+            "excluded_flags": 2095277,
+            "excluded_identity": 4787746,
+            "high_MAPQ_aligned_bases": 1108702729,
+            "records": 33226090,
+            "unplaced_unmapped": 16464828
+          },
+          "wall_seconds": 321.7428601719994,
+          "peak_active_events": 2865
+        }
+      ],
+      "counters": {
+        "excluded_flags": 15220525,
+        "records": 332766466,
+        "accepted_aligned_bases": 18481671771,
+        "high_MAPQ_aligned_bases": 18066276497,
+        "excluded_identity": 43192380,
+        "unplaced_unmapped": 135981958,
+        "accepted_reads": 138371603
+      },
+      "strata": {
+        "all": {
+          "rows": 145702,
+          "bp": 231678157,
+          "old_all_zero": 13,
+          "new_measured_all_zero": 24,
+          "zero_to_positive": 0,
+          "positive_to_zero": 11
+        },
+        "eligible": {
+          "rows": 89041,
+          "bp": 209642703,
+          "old_all_zero": 0,
+          "new_measured_all_zero": 0,
+          "zero_to_positive": 0,
+          "positive_to_zero": 0
+        },
+        "lt500": {
+          "rows": 56661,
+          "bp": 22035454,
+          "old_all_zero": 13,
+          "new_measured_all_zero": 24,
+          "zero_to_positive": 0,
+          "positive_to_zero": 11
+        },
+        "500_999": {
+          "rows": 51922,
+          "bp": 36085206,
+          "old_all_zero": 0,
+          "new_measured_all_zero": 0,
+          "zero_to_positive": 0,
+          "positive_to_zero": 0
+        },
+        "1000_2499": {
+          "rows": 27307,
+          "bp": 40505273,
+          "old_all_zero": 0,
+          "new_measured_all_zero": 0,
+          "zero_to_positive": 0,
+          "positive_to_zero": 0
+        },
+        "ge2500": {
+          "rows": 9812,
+          "bp": 133052224,
+          "old_all_zero": 0,
+          "new_measured_all_zero": 0,
+          "zero_to_positive": 0,
+          "positive_to_zero": 0
+        }
+      },
+      "raw_moment_numeric_review": "Native bank seals and all three full-shape Bank readers passed; no local BAM/moment recomputation",
+      "all_other_DNA_features_unchanged": true
+    },
+    "oral": {
+      "bank": {
+        "bytes": 3245,
+        "sha256": "1cca5c65b3a3e97b00f7f5fe9ea1ff916e385d13f85485122ad92eaa3ff2904b"
+      },
+      "new_features": {
+        "bytes": 346656364,
+        "sha256": "e7e484dfc9532dc4bc8adc55d13ab5d7cfd6ec33bfffb2f9a2667f018f228bf2"
+      },
+      "rows": 1286547,
+      "bp": 1669981123,
+      "ordered_samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ],
+      "policy": {
+        "coordinates": "zero_based_half_open",
+        "coverage": "aligned_M_EQ_X_including_substitutions",
+        "denominator": "full_interval_including_zeros",
+        "edge_bases": 0,
+        "exclude_flags": 3844,
+        "high_mapq": 20,
+        "identity": "(M+EQ+X-(NM-I-D))/(M+EQ+X+I+D)",
+        "min_base_quality": 0,
+        "min_identity": 0.97,
+        "min_mapq": 0,
+        "missing_base_qualities": "included_at_BQ0_and_audited",
+        "overlapping_mates": "count_each_alignment",
+        "reader": "pysam==0.23.3",
+        "reference_skips": "refuse",
+        "reject_mapq255": true,
+        "variance": "population_E_depth_squared_minus_mean_squared",
+        "version": 1
+      },
+      "samples": [
+        {
+          "sample": "oral_sample_6",
+          "counters": {
+            "accepted_aligned_bases": 2585135018,
+            "accepted_reads": 17416199,
+            "excluded_flags": 492,
+            "excluded_identity": 15897641,
+            "high_MAPQ_aligned_bases": 917250244,
+            "records": 33315152,
+            "unplaced_unmapped": 820
+          },
+          "wall_seconds": 596.8725985800002,
+          "peak_active_events": 370
+        },
+        {
+          "sample": "oral_sample_7",
+          "counters": {
+            "accepted_aligned_bases": 2587242643,
+            "accepted_reads": 17429720,
+            "excluded_flags": 154,
+            "excluded_identity": 15885258,
+            "high_MAPQ_aligned_bases": 726159032,
+            "records": 33315362,
+            "unplaced_unmapped": 230
+          },
+          "wall_seconds": 554.7744678850004,
+          "peak_active_events": 428
+        },
+        {
+          "sample": "oral_sample_8",
+          "counters": {
+            "accepted_aligned_bases": 2587221483,
+            "accepted_reads": 17429845,
+            "excluded_flags": 25,
+            "excluded_identity": 15895534,
+            "high_MAPQ_aligned_bases": 941513972,
+            "records": 33325428,
+            "unplaced_unmapped": 24
+          },
+          "wall_seconds": 569.1255971400005,
+          "peak_active_events": 330
+        },
+        {
+          "sample": "oral_sample_13",
+          "counters": {
+            "accepted_aligned_bases": 2587325169,
+            "accepted_reads": 17430421,
+            "excluded_flags": 29,
+            "excluded_identity": 15898256,
+            "high_MAPQ_aligned_bases": 785010546,
+            "records": 33328722,
+            "unplaced_unmapped": 16
+          },
+          "wall_seconds": 604.8742807540002,
+          "peak_active_events": 591
+        },
+        {
+          "sample": "oral_sample_14",
+          "counters": {
+            "accepted_aligned_bases": 2588538141,
+            "accepted_reads": 17438718,
+            "excluded_flags": 12,
+            "excluded_identity": 15893342,
+            "high_MAPQ_aligned_bases": 609106653,
+            "records": 33332072
+          },
+          "wall_seconds": 685.077036056,
+          "peak_active_events": 485
+        },
+        {
+          "sample": "oral_sample_15",
+          "counters": {
+            "accepted_aligned_bases": 2581769442,
+            "accepted_reads": 17399417,
+            "excluded_flags": 2677,
+            "excluded_identity": 15925478,
+            "high_MAPQ_aligned_bases": 684790283,
+            "records": 33332240,
+            "unplaced_unmapped": 4668
+          },
+          "wall_seconds": 576.2931560969992,
+          "peak_active_events": 762
+        },
+        {
+          "sample": "oral_sample_16",
+          "counters": {
+            "accepted_aligned_bases": 2586569349,
+            "accepted_reads": 17425489,
+            "excluded_flags": 326,
+            "excluded_identity": 15899179,
+            "high_MAPQ_aligned_bases": 767216105,
+            "records": 33325520,
+            "unplaced_unmapped": 526
+          },
+          "wall_seconds": 620.3596602750004,
+          "peak_active_events": 298
+        },
+        {
+          "sample": "oral_sample_17",
+          "counters": {
+            "accepted_aligned_bases": 2588460553,
+            "accepted_reads": 17437669,
+            "excluded_flags": 17,
+            "excluded_identity": 15893870,
+            "high_MAPQ_aligned_bases": 1007053850,
+            "records": 33331598,
+            "unplaced_unmapped": 42
+          },
+          "wall_seconds": 622.3199248389992,
+          "peak_active_events": 234
+        },
+        {
+          "sample": "oral_sample_18",
+          "counters": {
+            "accepted_aligned_bases": 2588529369,
+            "accepted_reads": 17438072,
+            "excluded_flags": 18,
+            "excluded_identity": 15893774,
+            "high_MAPQ_aligned_bases": 1128792907,
+            "records": 33331868,
+            "unplaced_unmapped": 4
+          },
+          "wall_seconds": 582.7455880780003,
+          "peak_active_events": 181
+        },
+        {
+          "sample": "oral_sample_19",
+          "counters": {
+            "accepted_aligned_bases": 2587086346,
+            "accepted_reads": 17428938,
+            "excluded_flags": 32,
+            "excluded_identity": 15883066,
+            "high_MAPQ_aligned_bases": 653818909,
+            "records": 33312040,
+            "unplaced_unmapped": 4
+          },
+          "wall_seconds": 638.0849354900001,
+          "peak_active_events": 419
+        }
+      ],
+      "counters": {
+        "excluded_flags": 3782,
+        "records": 333250002,
+        "accepted_aligned_bases": 25867877513,
+        "high_MAPQ_aligned_bases": 8220712501,
+        "excluded_identity": 158965398,
+        "unplaced_unmapped": 6334,
+        "accepted_reads": 174274488
+      },
+      "strata": {
+        "all": {
+          "rows": 1286547,
+          "bp": 1669981123,
+          "old_all_zero": 576144,
+          "new_measured_all_zero": 209841,
+          "zero_to_positive": 420474,
+          "positive_to_zero": 54171
+        },
+        "eligible": {
+          "rows": 508763,
+          "bp": 1443827664,
+          "old_all_zero": 191567,
+          "new_measured_all_zero": 402,
+          "zero_to_positive": 191388,
+          "positive_to_zero": 223
+        },
+        "lt500": {
+          "rows": 777784,
+          "bp": 226153459,
+          "old_all_zero": 384577,
+          "new_measured_all_zero": 209439,
+          "zero_to_positive": 229086,
+          "positive_to_zero": 53948
+        },
+        "500_999": {
+          "rows": 292793,
+          "bp": 203177403,
+          "old_all_zero": 121130,
+          "new_measured_all_zero": 402,
+          "zero_to_positive": 120951,
+          "positive_to_zero": 223
+        },
+        "1000_2499": {
+          "rows": 155759,
+          "bp": 231804294,
+          "old_all_zero": 56168,
+          "new_measured_all_zero": 0,
+          "zero_to_positive": 56168,
+          "positive_to_zero": 0
+        },
+        "ge2500": {
+          "rows": 60211,
+          "bp": 1008845967,
+          "old_all_zero": 14269,
+          "new_measured_all_zero": 0,
+          "zero_to_positive": 14269,
+          "positive_to_zero": 0
+        }
+      },
+      "raw_moment_numeric_review": "Native bank seals and all three full-shape Bank readers passed; no local BAM/moment recomputation",
+      "all_other_DNA_features_unchanged": true
+    }
+  },
+  "scientific_comparison_admitted": false,
+  "new_quality_scores": false,
+  "truth_accessed": false,
+  "baseline_scores_replayed": false
+}

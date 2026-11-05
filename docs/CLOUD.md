@@ -1,6 +1,41 @@
 # Google Cloud workspace operations
 
-## November 4 E033 supervised native pilot running
+## November 5 E033 failed science verified; stopped disks preserved
+
+[Inspection](../experiments/E033-multiscale-bam/inspection-review.md) verifies
+TERMINATED at November 4, 20:13:28.697 UTC / 21:13:28 Copenhagen, matching the
+current-boot/process watcher's exit request. Eight gates, twenty BAM summaries,
+two seals and three probes pass, then the first E009 no-GLM teacher fails and the
+scientific workflow exits 1. No new complete model/partition/score. Two private
+returns pass full bytes/members, but final completion, actual worker stderr,
+parent terminal and post-collector tail are missing. Guest RUNNING is stale.
+No compute was started for this inspection, and no source/resource was changed.
+
+[Financial review](../experiments/E033-multiscale-bam/inspection-cost.json) prices
+17,383.698 seconds total closed allocation, including first setup failure, at
+$1.31848 CPU/RAM/IP. About $0.159 WAN covers all three full generation streams and
+sidecars. The 100 GiB task disk is still retained: about $0.33/day, upper $2.10185
+through November 11. Complete failed-phase attribution upper is $3.84, including
+future task storage/archive tail and operations reserve; this is not an invoice.
+Original 30/300 GiB storage remains separately covered, never double counted.
+Current private inventory is 301 versions / 78,513,824,266 bytes, zero soft-deleted.
+Welcome credit is freshly DKK 1,671.10 Available / 85%, January 12, 2027 expiry,
+Certain usage / Free Trial terms / net pricing. November 1–5 displayed gross/
+savings/net: DKK 26.63 / 26.63 / 0.00, with >24-hour delay warning; reserve $35.
+Paid/open project, current Catalog and ordinary-product export coverage pass.
+
+[Recovery assessment](../experiments/E033-multiscale-bam/recovery-assessment.json)
+proposes a $0.25 collection-only wake, not executed. The original clock remains
+November 6 at 04:20:30 Copenhagen; an explicitly authorized replacement 30-hour
+recovery clock would have about $15.65 complete attribution under the original
+$20. Refresh all gates before that scope. Preserve new task disk
+`e033-task-1793805630`, ID `1578633013833953331`, until missing native tail and
+worker/root logs are safely collected/read back. The deleted E032 40 GiB disk is
+not a reuse target; its separate original-prefix tail capsule remains verified.
+Original 30/300 disks stay unchanged. No retention extension: November 11 at
+00:00 Copenhagen active boundary / November 18 approved automatic tail.
+
+## Historical November 4 E033 supervised native pilot handoff
 
 [Native receipt](../experiments/E033-multiscale-bam/native-observed.json) records
 `multiscale-20261104T152005Z-a940769-r2`, source `5911e25`, unchanged science

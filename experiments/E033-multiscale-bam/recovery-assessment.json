@@ -1,0 +1,48 @@
+{
+  "status": "ASSESSED_NOT_EXECUTED",
+  "reason": "Required actual worker traceback and parent/closed-tail evidence exist only on preserved stopped disks; inspection forbids another job",
+  "collection_only": {
+    "existing_VM": "dl-binner-cpu e2-standard-8",
+    "existing_disks_GiB": [
+      30,
+      300,
+      100
+    ],
+    "provider_STOP_seconds": 2700,
+    "work_seconds": 1800,
+    "threads": 4,
+    "RSS_bytes": 8000000000,
+    "source_task_free_reserve_bytes": 26843545600,
+    "extra_work_bytes": 268435456,
+    "max_archive_bytes": 134217728,
+    "compute_IP_45min_USD": 0.20478425825894125,
+    "export_128MiB_USD": 0.015,
+    "all_in_upper_USD": 0.25,
+    "original_remaining_20_covers": true,
+    "requires_fresh_boot_held_parent_exit_watcher": true,
+    "original_science_read_only": true,
+    "no_scientific_worker_allowed": true,
+    "do_not_release_task_disk": true
+  },
+  "must_collect": [
+    "original root terminal.log and journal for original boot/service",
+    "all original phase logs including post-collection exits",
+    "task/work/logs, benchmarks, barrier and scheduler log",
+    "all extant completion/closed-delivery/root stage receipts",
+    "original disk-sample history if present, otherwise retain unavailable status"
+  ],
+  "source_backed_local_findings": [
+    "Main scheduler stderr is retained but actual main rule stderr was not in any return",
+    "Final publish in e033_phase embeds a growing in-memory disk sample array through a 1 MiB immutable-control publisher; actual oversized-path refusal reproduced"
+  ],
+  "remaining_original_clock_seconds_at_assessment": 94988.44262504578,
+  "original_main_deadline_UTC": "2026-11-06T03:20:30.845Z",
+  "unchanged_remaining_science_forecast_seconds": 86944.60829615047,
+  "future_recovery_scope": "After actual-cause collection, locally repair/test the failing production path and complete the same frozen three-mode comparison with verified reuse, if gates pass; new explicit clock is needed if original remaining time no longer fits",
+  "prospective_replacement_clock_proposal_hours": 30,
+  "prospective_provider_STOP_hours": 30.25,
+  "prospective_complete_attribution_upper_USD": 15.648075391427287,
+  "not_current_execution_or_retention_authority": true,
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+}

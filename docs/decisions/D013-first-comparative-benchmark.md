@@ -1,11 +1,27 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-November 4 execution update: the owner separately authorizes E033's new $20
+Historical November 4 execution update (superseded by the November 5 inspection below): the owner separately authorizes E033's new $20
 credit-only pilot/three-mode comparison and conditional 100 GiB task disk. Fresh
 complete admission passes; [native evidence](../../experiments/E033-multiscale-bam/native-observed.json)
 records passed Linux gates and the supervised retained-BAM pilot. Outcomes are
 pending. No scientific rule, baseline, retention boundary or confirmation scope
 changes; the preparation-authority statements below are historical snapshots.
+
+## November 5 E033 failure, not a biological decision
+
+[Independent inspection](../../experiments/E033-multiscale-bam/inspection-review.md)
+verifies twenty common BAM measurements and both banks, then a failed first
+teacher with no new complete partition. The comparison is NOT_ASSESSED; no
+architecture or information-family conclusion follows. Preserve the stopped task
+disk and all journals. Prioritize bounded actual-error collection/repair and the
+same frozen comparison with verified reuse, rather than replace it with another
+upgrade or selector campaign. Missing worker stderr and a demonstrated long-
+completion JSON overflow need their actual native terminal evidence. The
+[prospective recovery](../../experiments/E033-multiscale-bam/recovery-assessment.json)
+is not executed by this inspection; the November 11 / November 18 boundaries stay.
+AGENTS now requires compact control records with separately bound growing histories
+and actual worker logs in failure returns. Q006 and efficient full Oral GLM remain
+later substantive questions, not claims settled by this failed execution.
 
 ## E033 shared measured-information comparison prepared, November 4
 

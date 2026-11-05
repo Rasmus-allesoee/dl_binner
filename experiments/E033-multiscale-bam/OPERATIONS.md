@@ -1,6 +1,34 @@
 # E033 operations
 
-## Running native handoff
+## November 5 verified stopped failure; no new run in inspection
+
+[Inspection review](inspection-review.md) and [receipt](inspection-observed.json)
+are current. The VM is independently TERMINATED at November 4, **21:13:28
+Copenhagen**. Eight gates, twenty BAM commands, both banks and three probes pass;
+the first E009 no-GLM teacher then fails and the workflow exits 1. No completed
+new epoch/model/partition exists; [comparison](comparison-review.json) is
+**NOT_ASSESSED**. Two archive generations pass every compressed/member byte, but
+actual worker stderr, root terminal, post-collector exits and completion delivery
+are missing. The stale guest RUNNING value does not supersede these facts.
+
+[Technical measurements](measurements-review.json) and all original DNA/sample
+axes are verified. [Current costs](inspection-cost.json) price $1.31848 closed
+CPU/RAM/IP and a $3.84 failed-phase attribution upper including future task storage
+through November 11. [Cleanup](inspection-cleanup.json) releases another 10.35 GB
+of obsolete engineering environments with source/metadata/manifests retained.
+No accepted science, required runtime or failed journal is deleted.
+
+[Recovery assessment](recovery-assessment.json) proposes a **$0.25 collection-only
+wake** and then actual-cause repair before any scientific release. It was not
+executed here. The original November 6 at 04:20:30 Copenhagen deadline remains;
+a separately explicit 30-hour / STOP 30.25-hour replacement recovery clock is
+proposed under the remaining original $20, complete upper about $15.65. Neither
+clock reset nor science retry is inferred from inspection. New task disk
+`e033-task-1793805630` stays protected until its missing unique tail/logs and all
+complete evidence are safely backed up/read back. November 11 active retention /
+November 18 approved automatic tail are unchanged. Use the new exact prompt below.
+
+## Historical November 4 running native handoff
 
 [Native observation](native-observed.json) records phase
 `multiscale-20261104T152005Z-a940769-r2`, clean operations source `5911e25` and
@@ -285,7 +313,7 @@ next decision, keeping Q006 standalone selection and efficient full Oral GLM vis
 and skin unscored pending complete independent admission. Update records/check/
 commit with structured what changed/why and give the next exact prompt.
 
-## Exact following prompt
+## Authorized inspection prompt (November 5)
 
 Our goal is substantially closing the recovery gap with one shared binner. Read
 AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E033's design, frozen
@@ -358,3 +386,111 @@ admission. No tuning, new score campaign, refit, external binner, GPU qualificat
 confirmation acquisition or retention extension is included in inspection. Update
 records/check/commit with structured what changed/why and report actual results,
 costs/resources, limits, one next decision and the exact following prompt.
+
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap with one shared binner. Read
+AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E033's inspection-review,
+inspection-observed, comparison-review, measurement review, recovery assessment,
+source/candidate/reuse/BAM/native-launch locks, failed journals and operations.
+Preserve all accepted inputs/truth/models/results and the complete failed phase
+`multiscale-20261104T152005Z-a940769-r2`, source `5911e25` / science `c812eb8`.
+Use a descriptive recovery branch without a codex/ prefix.
+
+I authorize the assessed collection-only recovery and, if the actual causes are
+repaired without weakening the scientific treatment/gates, completion of the
+same frozen E033 three-mode comparison. Use only the remaining original $20,
+existing e2-standard-8 / 32 GiB and original 30/300 plus existing 100 GiB task disk.
+I explicitly authorize a prospective replacement recovery clock of at most
+30 cumulative hours from its first new start, STOP at 30.25 hours, including all
+collection/setup/repair verification/science/delivery. Preserve the old clock and
+failed limit/source records unchanged; this is not a rewrite of their attempt.
+Keep four numerical threads, 26 GB sampled scientific tree RSS, separate 25 GiB
+source/task reserves, original 60 GiB cumulative task growth and four complete
+3 GiB compressed / 8 GiB logical return slices, aggregate 12 GiB. Record measured
+remaining growth against the original task-device baseline, not a reset baseline.
+Keep November 11 at 00:00 Copenhagen active retention and approved November 18
+automatic tail. No real money, new disk/VM/resource/quota, remapping, new reads,
+marker redetection, external tool, GPU, full Oral GLM or confirmation acquisition.
+Fresh credit/product/pending-usage/prices/complete-cost/storage/retention gates
+must pass; the prospective total is about $15.65, not fresh financial evidence.
+Standing sensible credit-covered envelope flexibility applies prospectively,
+without changing scientific criteria or renewing retention.
+
+First refresh current control-plane/guest/private state. On one bounded existing-
+VM wake, set/read back provider STOP and arm/test a fresh current-boot/PID/start/
+command held-parent exit watcher before releasing **only forensic collection**.
+The first collection has a 30-minute / 45-minute STOP / $0.25 all-in upper, 8 GB
+sampled RSS, 256 MiB extra space and 128 MiB compressed cap. Collect the original
+root terminal/systemd journal, actual `task/work/logs/E009_noGLM_teacher.log`, all
+global workflow/benchmark/barrier records, extant completion/closed-tail receipts,
+post-collector exits and disk history. Copy from the positively identified
+existing task filesystem read-only; preserve original files. Verify compact
+archive/member bytes and private upload/readback. Do not run a scientific worker
+merely to reproduce a missing error. Stop the VM while substantial local repair
+is needed; stopped gaps still count in the new recovery clock.
+
+Establish the actual first-teacher error and final-parent exit. The current
+archives prove workflow exit 1 but omit worker stderr. The actual unchanged
+publisher locally refuses 8,300 plausible disk samples over 1 MiB, but its role
+in the native missing completion remains unconfirmed. Keep that limit; move
+closed resource histories into separately bound artifacts and publish compact
+terminal records. Return global worker stderr/exit status even on first-rule
+failure, and preserve the later closed-delivery tail. Diagnose fundamental
+measurement/availability/dropout/state/gradient paths if the actual error points
+there. Do not guess a numeric cause, lower a tolerance/collapse threshold, silently
+change the loss/schedule, or turn a failed scientific safeguard into a blind retry.
+
+Repair and test the actual failing production path locally, including the relevant
+zero/low-MAPQ/dispersion/dropout case, full serialized long-run completion path,
+first-worker-failure return and fresh/reused directory layouts. Preserve every
+failure. Freeze exact clean repair source, wheel if affected, prospective overlay
+and byte/runtime contracts before outcomes; never edit the original 122-file
+freeze or accepted cache to make a new reader pass. Prefer normal Git sync when
+outgoing history is safe; otherwise use the approved exact private transfer and
+read-only GitHub. Reuse passed setup only after its actual source/runtime bytes
+pass; repeat only gates whose inputs/implementation changed.
+
+Before releasing any science, reverify all twenty retained summary/array/bank/
+new-feature/source/sort bindings, ordered sample/DNA/crop axes, original E031
+online/EMA/predictor/Adam state and complete source/runtime information policy.
+Reuse those passed measurements and any independently verified seals; never rerun
+BAM acquisition/sort/measurement or accepted science. The old unsealed first
+teacher is failed evidence, not a reusable trained model. Preserve its directory
+and use a fresh recorded scientific attempt. Keep genuine crop measurements,
+measured zeros versus missing channels, all short/marker-negative/unknown/non-target
+DNA, warm-start historical depth-prior caveat, full teacher/pair/student GLM policy,
+20+20 epochs/seed 11/batch 256, exact native reload/unit geometry and unchanged
+E032 constructor. No score-selected routing or new scientific ingredient.
+
+Admit the complete remaining schedule/cost/headroom before release and arm/read
+back a fresh process-bound watcher/provider STOP for each boot. A healthy longer
+job should receive real-progress/supervision verification and a few minutes of
+observation, then a handoff; do not poll to completion. Follow a short job through
+collection/shutdown. Debug recoverable operational failures with verified reuse
+within the same recorded envelope, preserving failures and never replaying
+accepted science. Collect on a scientific refusal and report its real cause.
+
+After successful shutdown, independently verify TERMINATED, every actual stage,
+input-after, archive/member/alias and completion/post-collector/closed-tail delivery
+before the unchanged frozen new-output E009-v2 and Oral provided-origin/known-shared
+diagnostics. Keep 156/799 full denominators, E009 3.3034% N quarantine, all length/
+origin/eligibility/marker/zero/unknown/non-target/excluded/unassigned and single-/
+multi-contig populations, threshold-based secondary quality tiers, original Mac
+portability failure and unchanged KEEP/MODIFY/ABANDON. No older baseline refit or
+rescore. Four local numerical threads, 8 GB sampled RSS, one hour, at most 3 GiB
+staging and 8 GiB actual free reserve; stream full generation/member verification,
+no complete compressed duplicate or community BAM on the Mac. Keep the task disk
+until all new evidence and its own final tail are verified, then release only its
+positively identified safe temporary resources. No original-disk deletion.
+
+Use the actual completed evidence to recommend one strongest recovery-focused
+successor, comparing consequential information/representation and grouping options.
+Keep Q006's standalone candidate-selection research and efficient full Oral GLM
+concrete; no architecture/product-family verdict from a failed or single-community
+arm. Skin stays unscored pending its full biological/overlap/ambiguity/truth/depth/
+protocol/cost admission. Update records/check/commit with structured what changed/
+why; report actual results/costs/resources, all limits, one next decision and the
+exact following prompt. Do not add another approval loop for the recovery already
+authorized in this prompt; stop before genuinely unclear or uncovered spending.

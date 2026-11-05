@@ -1,0 +1,161 @@
+{
+  "status": "PASS_SAFE_OBSOLETE_ENVIRONMENT_CLEANUP",
+  "epoch": 1793841006.631597,
+  "before_free_bytes": 13583560704,
+  "after_free_bytes": 21914349568,
+  "records": [
+    {
+      "path": "artifacts/e006-cli-usability/env-local-v1",
+      "regular_files": 20100,
+      "logical_bytes": 762250963,
+      "allocated_bytes": 812314624,
+      "retained_metadata_and_project_files": 137,
+      "reason": "Obsolete E006 intermediate / E007 repeat engineering runtime; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e006-cli-usability/env-local-v2",
+      "regular_files": 20100,
+      "logical_bytes": 762251045,
+      "allocated_bytes": 812314624,
+      "retained_metadata_and_project_files": 137,
+      "reason": "Obsolete E006 intermediate / E007 repeat engineering runtime; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e006-cli-usability/env-local-v3",
+      "regular_files": 20102,
+      "logical_bytes": 762253399,
+      "allocated_bytes": 812322816,
+      "retained_metadata_and_project_files": 139,
+      "reason": "Obsolete E006 intermediate / E007 repeat engineering runtime; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e007-pr-readiness/run-001/envs",
+      "regular_files": 25451,
+      "logical_bytes": 914846194,
+      "allocated_bytes": 977211392,
+      "retained_metadata_and_project_files": 603,
+      "reason": "Obsolete E006 intermediate / E007 repeat engineering runtime; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e007-pr-readiness/run-002/envs",
+      "regular_files": 25450,
+      "logical_bytes": 904505892,
+      "allocated_bytes": 966844416,
+      "retained_metadata_and_project_files": 603,
+      "reason": "Obsolete E006 intermediate / E007 repeat engineering runtime; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e007-pr-readiness/run-003/envs",
+      "regular_files": 25481,
+      "logical_bytes": 904675854,
+      "allocated_bytes": 967094272,
+      "retained_metadata_and_project_files": 633,
+      "reason": "Obsolete E006 intermediate / E007 repeat engineering runtime; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e010-coherent-prototype/envs/candidate-dev4-v1",
+      "regular_files": 26096,
+      "logical_bytes": 1136261342,
+      "allocated_bytes": 1200009216,
+      "retained_metadata_and_project_files": 238,
+      "reason": "Obsolete E010/E019 engineering runtime; referenced E010 v3 explicitly retained; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e010-coherent-prototype/envs/candidate-dev4-v2",
+      "regular_files": 26096,
+      "logical_bytes": 1136260324,
+      "allocated_bytes": 1200005120,
+      "retained_metadata_and_project_files": 238,
+      "reason": "Obsolete E010/E019 engineering runtime; referenced E010 v3 explicitly retained; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e019-window-context/envs/context-owned-v2",
+      "regular_files": 18480,
+      "logical_bytes": 1023042158,
+      "allocated_bytes": 1069379584,
+      "retained_metadata_and_project_files": 247,
+      "reason": "Obsolete E010/E019 engineering runtime; referenced E010 v3 explicitly retained; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e019-window-context/envs/context-owned-v3",
+      "regular_files": 18480,
+      "logical_bytes": 1023042545,
+      "allocated_bytes": 1069379584,
+      "retained_metadata_and_project_files": 247,
+      "reason": "Obsolete E010/E019 engineering runtime; referenced E010 v3 explicitly retained; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    },
+    {
+      "path": "artifacts/e019-window-context/envs/context-owned-v4",
+      "regular_files": 18480,
+      "logical_bytes": 1023043281,
+      "allocated_bytes": 1069379584,
+      "retained_metadata_and_project_files": 247,
+      "reason": "Obsolete E010/E019 engineering runtime; referenced E010 v3 explicitly retained; no live process or dependency link; package pins, source, wheels and unique results/journals retained",
+      "source_history_unchanged": true,
+      "removed": true
+    }
+  ],
+  "total_logical_bytes_removed": 10352432997,
+  "total_allocated_bytes_removed": 10956255232,
+  "passes": [
+    {
+      "receipt": "artifacts/e033-multiscale-bam/inspection/cleanup/receipt.json",
+      "receipt_binding": {
+        "bytes": 3329,
+        "sha256": "8c62a765469a1b0e803de76435ca059ea1459b2e413c74fb41bd52767dd98a5f"
+      },
+      "inventory": "artifacts/e033-multiscale-bam/inspection/cleanup/members.jsonl",
+      "inventory_binding": {
+        "bytes": 33856810,
+        "sha256": "d0aa739f17d01aad6579892cd29cb699b6f078710e776be28d5dbc62cf7f50aa"
+      }
+    },
+    {
+      "receipt": "artifacts/e033-multiscale-bam/inspection/cleanup-extra/receipt.json",
+      "receipt_binding": {
+        "bytes": 3025,
+        "sha256": "25cf9e23b3aee54f12c6a28aa126ea50d79564c0322c1dab823f7efb6559f437"
+      },
+      "inventory": "artifacts/e033-multiscale-bam/inspection/cleanup-extra/members.jsonl",
+      "inventory_binding": {
+        "bytes": 26489640,
+        "sha256": "adf81a77d50b99fe7edcef686e6b782b4241934fc7679a69609749de2c2076df"
+      }
+    }
+  ],
+  "dependency_reviews": {
+    "artifacts/e033-multiscale-bam/inspection/cleanup-dependent-links.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "artifacts/e033-multiscale-bam/inspection/cleanup-extra-dependencies.json": {
+      "bytes": 76853,
+      "sha256": "9fc55f78dc5007477f7bae65da8c620ef35e33832f6fac15f7194573427876a9"
+    }
+  },
+  "protected_referenced_E010_base": "artifacts/e010-coherent-prototype/envs/candidate-dev4-v3",
+  "no_accepted_science_or_failed_journal_deleted": true,
+  "all_unique_results_and_journals_retained": true,
+  "required_dependency_bases_retained": true,
+  "cloud_actions": false
+}

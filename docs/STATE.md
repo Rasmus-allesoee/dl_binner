@@ -1,43 +1,61 @@
 # Current Research State
 
-Updated: November 4, 2026 (Copenhagen). This is the single current handoff.
+Updated: November 5, 2026 (Copenhagen). This is the single current handoff.
 
-## E033 native gates passed; supervised retained-BAM pilot running
+## E033 stopped: measurements verified, first teacher failed
 
-[Native receipt](../experiments/E033-multiscale-bam/native-observed.json) records
-phase `multiscale-20261104T152005Z-a940769-r2` at exact clean operations source
-`5911e25`, with byte-identical prepared scientific source/wheel/defaults `c812eb8`.
-All eight workflow/install/complete-runtime/plan/measurement/learning/tiny-DAG/
-original-state restore gates pass. The actual Linux 40-rule engineering DAG
-passes in 116.6 seconds at 0.744 GB sampled tree RSS. GLM inference/marker calls
-in that tiny fixture are synthetic; required real community caches are byte-verified.
-The E009 sample-0 BAM pilot has processed 9 million records normally.
-No full bank, community fit, quality result or whole completion is claimed yet.
+[Independent inspection](../experiments/E033-multiscale-bam/inspection-review.md)
+verifies `multiscale-20261104T152005Z-a940769-r2` at operations source `5911e25`,
+unchanged prepared science `c812eb8`. The VM is **TERMINATED**, November 4 at
+**21:13:28 Copenhagen**. Its matching process-bound watcher requests shutdown
+after workflow exit; stale guest RUNNING and shutdown are not success evidence.
+Eight native gates, twenty retained-BAM summaries, both bank seals and three
+full-shape probes pass. The main workflow exits **1** at the first E009 no-GLM
+teacher, before any completed epoch/checkpoint/partition. The full three-mode
+comparison is **NOT_ASSESSED**; no new recovery score or biological rejection.
 
-Fresh boot/PID/start/command watcher and native live/normal/crash/restart-refusal
-tests pass; systemd parent and timer are active and GCP independently reports
-RUNNING. Original first start November 4 at **16:20:30 Copenhagen** remains the
-common clock. Science/collection deadline is **November 6 at 04:20:30**, read-back
-provider STOP **04:32:54**. The preserved initial IAP banner timeout stopped before
-any E033 gate/science; the tested operational recovery reuses E032's verified
-tail and keeps the original clock/$20 scope, with no scientific replay.
+Both uploaded payloads pass complete SHA256/server MD5/member verification:
+measurements 636,939,104 bytes / 2,323 members; failed E009 no-GLM work
+142,799,961 bytes / 2,279 members. The other modes, final completion and native
+post-collector/worker/root terminal evidence are missing. The real teacher stderr
+is outside the collector's mode slices. A local actual-writer test also reproduces
+the 1 MiB completion-history overflow; its role in the native exit is an inference
+until the terminal journal is collected. Preserve the failed journals and cap.
 
-All 70 E032 work members and its missing final logs/tail now pass private
-collection/readback. Only then was its old 40 GiB disk released. Actual source
-free is 27.43 GiB; no reviewed regenerable allowlist supplies the 80 GiB complete
-peak-plus-reserve requirement while preserving accepted inputs/assets. The approved
-single 100 GiB balanced task disk is mounted and device-bound; original 30/300 GiB
-disks remain. [Current cost](../experiments/E033-multiscale-bam/cost-observed.json)
-is about $0.06 CPU/RAM/IP through the recorded observation, not final spend; complete
-upper remains $15.96 under $20, with original storage separately covered.
+[Measurement review](../experiments/E033-multiscale-bam/measurements-review.json)
+verifies full DNA/ordered ten-sample axes and all twenty source/sort/filter ledgers.
+Oral eligible all-zero profiles fall from 191,567 to 402 under the **combined**
+new policy, but only 31.78% of its accepted aligned mass has MAPQ at least 20.
+That is useful input/support evidence, not a recovery gain or isolated MAPQ effect.
+Existing E031/E032/E023/MetaBAT summaries and all truth remain unchanged.
 
-After real progress/supervision verification, leave this healthy long phase
-running. [The next exact prompt](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
-inspects actual exits/delivery/shutdown and every archive/member/alias before new
-frozen diagnostics. Full pilot and measured-bank/full-shape schedule gates still
-precede all six fits; no new mapping, external tool, GPU or confirmation is added.
-November 11 active retention / November 18 approved automatic tail remain. Keep
-the new task disk until its own closed-delivery/terminal tail is preserved.
+[Costs](../experiments/E033-multiscale-bam/inspection-cost.json) price 17,383.698
+seconds allocation at **$1.31848 CPU/RAM/IP**. Complete failed-phase attribution
+upper is **$3.84**, including new task-disk storage through November 11 and export;
+it is not an invoice. Original 30/300 GiB storage overlaps its separate approval.
+The 100 GiB task disk remains protected because it owns missing unique logs/tail.
+Fresh credits/coverage/prices pass before export; no VM is woken in inspection.
+
+**Next:** [assessed forensic collection and actual-cause repair](../experiments/E033-multiscale-bam/recovery-assessment.json),
+then complete the same justified information comparison with verified reuse.
+Collection-only proposal is at most $0.25; a separately explicit 30-hour recovery
+clock / 30.25-hour STOP under the remaining original $20 has about $15.65 complete
+attribution. Neither is released here. The original deadline stays November 6
+at 04:20:30 Copenhagen until an explicit prospective authorization replaces it.
+Do not replay the twenty measurements, invent scores, lower scientific checks or
+start a different architecture/selector campaign on this failed result. Use the
+[next exact prompt](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt).
+Q006 and full Oral GLM remain concrete later dependencies, skin unscored.
+November 11 at 00:00 Copenhagen active retention / November 18 approved automatic
+tail remain hard boundaries. No resource or retention change occurred.
+
+[Local cleanup](../experiments/E033-multiscale-bam/inspection-cleanup.json) removes
+another **10.35 GB** of obsolete E006/E007/E010/E019 engineering environments after live-user
+and dependency-link checks, retaining installed project source/metadata, complete
+member manifests, recipes, results and failures. Required E005 workflow/mapping
+and E021/E033 numerical bases remain. The finalized technical reader passes in
+35.0 seconds at 3.451 GB sampled RSS, identical to its initial audit (102.1 seconds
+combined); four new reader/failure-boundary tests pass.
 
 ## E033 pre-start authorization and admission (preserved)
 

@@ -4,11 +4,16 @@
 community outcomes. [Operations](OPERATIONS.md) owns the separate execution
 request, native gates and November 11 boundary. [Protocol](protocol.json),
 [candidate](candidate-lock.json), [source](source-lock.json), [reuse](reuse-lock.json)
-and [twenty BAMs](BAM-manifest.json) bind exact inputs/defaults. The authorized
-[native phase](native-observed.json) is **running its E009 BAM pilot** after eight
-passed Linux gates/restore, exact source/input checks and verified supervision.
-No new community fit or recovery result is yet claimed. [Costs](cost-observed.json)
-separate current allocation from the complete forecast and final billing.
+and [twenty BAMs](BAM-manifest.json) bind exact inputs/defaults.
+[Completed inspection](inspection-review.md) finds **FAILED science / NOT_ASSESSED
+comparison**: twenty summaries and both banks pass, but the first E009 no-GLM
+teacher fails before a complete model/epoch/partition. Two returns pass full
+bytes/members; root completion and the detailed worker/terminal tail are missing.
+The VM is independently TERMINATED. [Actual cost model](inspection-cost.json),
+[technical measurement review](measurements-review.json),
+[cleanup](inspection-cleanup.json) and [assessed recovery](recovery-assessment.json)
+are current. The earlier [native handoff](native-observed.json) remains historical
+progress evidence; no new biological result is inferred from it.
 
 The candidate preserves E031 state, adds measured parent/crop breadth/dispersion/
 confidence to the explicit depth branch, and keeps E032's common constructor fixed.

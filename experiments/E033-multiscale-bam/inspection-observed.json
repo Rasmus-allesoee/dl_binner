@@ -1,0 +1,878 @@
+{
+  "status": "FAILED_SCIENTIFIC_WORKFLOW_PARTIAL_TECHNICAL_MEASUREMENTS_VERIFIED",
+  "phase": "multiscale-20261104T152005Z-a940769-r2",
+  "checked_epoch": 1793840242.402375,
+  "operations_source": "5911e2587d5c8353937fb71260464a038a1f46de",
+  "prepared_science": "c812eb8e9f4d79fd17d6b1c9dd229c9e7f3707f3",
+  "source_locks": {
+    "source-lock.json": {
+      "binding": {
+        "bytes": 18915,
+        "sha256": "95c375ddf0941f19afdda9778b67d9f3518373fa5c05e620e5d1694779dac5c1"
+      },
+      "files": 122,
+      "matches_executed_Git": true
+    },
+    "native-launch-lock.json": {
+      "binding": {
+        "bytes": 1372,
+        "sha256": "e06b6776ce6a246d6bb65282ce6b362d6ca112b6b759986356fe5460b18a1562"
+      },
+      "files": 7,
+      "matches_executed_Git": true
+    }
+  },
+  "provider_status": "TERMINATED",
+  "last_start": "2026-11-04T07:25:50.109-08:00",
+  "last_stop": "2026-11-04T12:13:28.697-08:00",
+  "provider": {
+    "bytes": 33512,
+    "sha256": "0aa3bc519a1af9eb465769effff027055f9b20e5fe1c5befe2966b8a98ad017d"
+  },
+  "watchdog": {
+    "bytes": 4359,
+    "sha256": "9233ef63a1672a62d20232d0deb827addfa10d44c8a9e36bff80287c3b215727"
+  },
+  "watchdog_boot_process_exit_verified": true,
+  "watchdog_exit_does_not_establish_science_success": true,
+  "guest_status_stale_progress": [
+    {
+      "key": "status",
+      "namespace": "e033-candidate",
+      "value": "{\"status\": \"RUNNING\", \"stage\": \"readback-E009-noGLM-e033-evidence.tar.gz.sha256\", \"root\": \"/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2\", \"epoch\": 1793822960.1520216}"
+    }
+  ],
+  "original_clock_start_epoch": 1793805630.845,
+  "original_deadline_epoch": 1793935230.845,
+  "original_provider_STOP_epoch": 1793935974.109,
+  "setup_native_gates_passed": 8,
+  "measured_BAM_exits_passed": 20,
+  "bank_seal_exits_passed": 2,
+  "full_shape_probe_exits_passed": 3,
+  "pilot_schedule_admission": {
+    "bytes": 321,
+    "sha256": "57f7a743890031f5acac7091de17db671493cea05128f829209e126aafcbfcc6"
+  },
+  "full_schedule_admission": {
+    "bytes": 101,
+    "sha256": "4c86f2e1440532696a0362c84dc6ebe26d090290d83c8cdce382af0c44326d72"
+  },
+  "actual_exits": [
+    {
+      "stage": "workflow-origin",
+      "exit_code": 0,
+      "wall_seconds": 0.7434787220000061,
+      "sampled_peak_RSS_bytes": 46985216,
+      "sampled_CPU_seconds": 0.25
+    },
+    {
+      "stage": "package-install",
+      "exit_code": 0,
+      "wall_seconds": 3.7147832539999968,
+      "sampled_peak_RSS_bytes": 100499456,
+      "sampled_CPU_seconds": 2.9099999999999997
+    },
+    {
+      "stage": "native-complete-runtime",
+      "exit_code": 0,
+      "wall_seconds": 30.242911756999987,
+      "sampled_peak_RSS_bytes": 294776832,
+      "sampled_CPU_seconds": 29.249999999999996
+    },
+    {
+      "stage": "native-plan-contract",
+      "exit_code": 0,
+      "wall_seconds": 0.2767331070000125,
+      "sampled_peak_RSS_bytes": 36507648,
+      "sampled_CPU_seconds": 0.15000000000000036
+    },
+    {
+      "stage": "native-test_multiscale_measurement",
+      "exit_code": 0,
+      "wall_seconds": 0.7219577909999941,
+      "sampled_peak_RSS_bytes": 83628032,
+      "sampled_CPU_seconds": 0.9500000000000002
+    },
+    {
+      "stage": "native-test_multiscale_learning",
+      "exit_code": 0,
+      "wall_seconds": 36.89836315699998,
+      "sampled_peak_RSS_bytes": 406872064,
+      "sampled_CPU_seconds": 148.53
+    },
+    {
+      "stage": "actual-native-serial-tiny",
+      "exit_code": 0,
+      "wall_seconds": 116.647590697,
+      "sampled_peak_RSS_bytes": 744472576,
+      "sampled_CPU_seconds": 272.54
+    },
+    {
+      "stage": "restore-original-E031-states",
+      "exit_code": 0,
+      "wall_seconds": 62.493941065,
+      "sampled_peak_RSS_bytes": 167239680,
+      "sampled_CPU_seconds": 73.64000000000001
+    },
+    {
+      "stage": "sample-00",
+      "exit_code": 0,
+      "wall_seconds": 719.609961745,
+      "sampled_peak_RSS_bytes": 818786304,
+      "sampled_CPU_seconds": 787.0600000000001
+    },
+    {
+      "stage": "sample-18",
+      "exit_code": 0,
+      "wall_seconds": 1031.170883625,
+      "sampled_peak_RSS_bytes": 7229100032,
+      "sampled_CPU_seconds": 1551.85
+    },
+    {
+      "stage": "sample-01",
+      "exit_code": 0,
+      "wall_seconds": 380.5812742909998,
+      "sampled_peak_RSS_bytes": 803934208,
+      "sampled_CPU_seconds": 405.40000000000003
+    },
+    {
+      "stage": "sample-02",
+      "exit_code": 0,
+      "wall_seconds": 451.87110570799996,
+      "sampled_peak_RSS_bytes": 812797952,
+      "sampled_CPU_seconds": 489.38
+    },
+    {
+      "stage": "sample-03",
+      "exit_code": 0,
+      "wall_seconds": 393.8986606080002,
+      "sampled_peak_RSS_bytes": 822472704,
+      "sampled_CPU_seconds": 429.99000000000007
+    },
+    {
+      "stage": "sample-04",
+      "exit_code": 0,
+      "wall_seconds": 463.7281490290002,
+      "sampled_peak_RSS_bytes": 805707776,
+      "sampled_CPU_seconds": 498.91999999999996
+    },
+    {
+      "stage": "sample-05",
+      "exit_code": 0,
+      "wall_seconds": 417.44164106599965,
+      "sampled_peak_RSS_bytes": 822636544,
+      "sampled_CPU_seconds": 451.2199999999999
+    },
+    {
+      "stage": "sample-06",
+      "exit_code": 0,
+      "wall_seconds": 449.0118233059993,
+      "sampled_peak_RSS_bytes": 811651072,
+      "sampled_CPU_seconds": 487.21000000000004
+    },
+    {
+      "stage": "sample-07",
+      "exit_code": 0,
+      "wall_seconds": 432.1233899789995,
+      "sampled_peak_RSS_bytes": 809447424,
+      "sampled_CPU_seconds": 465.45000000000005
+    },
+    {
+      "stage": "sample-08",
+      "exit_code": 0,
+      "wall_seconds": 418.5729530190001,
+      "sampled_peak_RSS_bytes": 818184192,
+      "sampled_CPU_seconds": 454.6100000000001
+    },
+    {
+      "stage": "sample-09",
+      "exit_code": 0,
+      "wall_seconds": 380.31146639100007,
+      "sampled_peak_RSS_bytes": 816619520,
+      "sampled_CPU_seconds": 405.6400000000001
+    },
+    {
+      "stage": "sample-10",
+      "exit_code": 0,
+      "wall_seconds": 1001.5716309419995,
+      "sampled_peak_RSS_bytes": 7256420352,
+      "sampled_CPU_seconds": 1565.92
+    },
+    {
+      "stage": "sample-11",
+      "exit_code": 0,
+      "wall_seconds": 930.4711275919999,
+      "sampled_peak_RSS_bytes": 7212175360,
+      "sampled_CPU_seconds": 1478.9899999999998
+    },
+    {
+      "stage": "sample-12",
+      "exit_code": 0,
+      "wall_seconds": 977.2842194680006,
+      "sampled_peak_RSS_bytes": 7250632704,
+      "sampled_CPU_seconds": 1569.33
+    },
+    {
+      "stage": "sample-13",
+      "exit_code": 0,
+      "wall_seconds": 1021.8671699219994,
+      "sampled_peak_RSS_bytes": 7245570048,
+      "sampled_CPU_seconds": 1608.71
+    },
+    {
+      "stage": "sample-14",
+      "exit_code": 0,
+      "wall_seconds": 1083.5680660069993,
+      "sampled_peak_RSS_bytes": 7248756736,
+      "sampled_CPU_seconds": 1668.8100000000002
+    },
+    {
+      "stage": "sample-15",
+      "exit_code": 0,
+      "wall_seconds": 996.9827762259993,
+      "sampled_peak_RSS_bytes": 7246635008,
+      "sampled_CPU_seconds": 1610.57
+    },
+    {
+      "stage": "sample-16",
+      "exit_code": 0,
+      "wall_seconds": 970.233883163999,
+      "sampled_peak_RSS_bytes": 7217283072,
+      "sampled_CPU_seconds": 1436.0600000000002
+    },
+    {
+      "stage": "sample-17",
+      "exit_code": 0,
+      "wall_seconds": 1035.5512152219999,
+      "sampled_peak_RSS_bytes": 7234166784,
+      "sampled_CPU_seconds": 1639.3
+    },
+    {
+      "stage": "sample-19",
+      "exit_code": 0,
+      "wall_seconds": 1049.0178305829995,
+      "sampled_peak_RSS_bytes": 7225602048,
+      "sampled_CPU_seconds": 1643.5100000000002
+    },
+    {
+      "stage": "seal-E009",
+      "exit_code": 0,
+      "wall_seconds": 42.36069834999944,
+      "sampled_peak_RSS_bytes": 995176448,
+      "sampled_CPU_seconds": 45.600000000000136
+    },
+    {
+      "stage": "seal-oral",
+      "exit_code": 0,
+      "wall_seconds": 355.56266499499907,
+      "sampled_peak_RSS_bytes": 8972292096,
+      "sampled_CPU_seconds": 386.35000000000036
+    },
+    {
+      "stage": "full-shape-E009-noGLM",
+      "exit_code": 0,
+      "wall_seconds": 33.13710707899918,
+      "sampled_peak_RSS_bytes": 2785435648,
+      "sampled_CPU_seconds": 35.7199999999998
+    },
+    {
+      "stage": "full-shape-E009-GLM",
+      "exit_code": 0,
+      "wall_seconds": 62.821901167999386,
+      "sampled_peak_RSS_bytes": 4304887808,
+      "sampled_CPU_seconds": 72.68000000000029
+    },
+    {
+      "stage": "full-shape-oral-noGLM",
+      "exit_code": 0,
+      "wall_seconds": 252.80973835799887,
+      "sampled_peak_RSS_bytes": 21205889024,
+      "sampled_CPU_seconds": 273.0899999999997
+    },
+    {
+      "stage": "serial-six-fit-three-mode",
+      "exit_code": 1,
+      "wall_seconds": 241.51234476300124,
+      "sampled_peak_RSS_bytes": 7918112768,
+      "sampled_CPU_seconds": 300.5
+    }
+  ],
+  "original_source_sort_path_verified": [
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_0",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam",
+        "sorted": true,
+        "bytes": 3781565849,
+        "sha256": "11bc0c875cbdff23a0a3909a6b4478998dd610c98b45dbe7c6fd135f580fc4a9"
+      },
+      "summary": {
+        "bytes": 1992,
+        "sha256": "e88ca18a18b0ccd5e5fc46e29306db900909af066ab7ee666f1231e54a2e6803"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_2",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_2",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0002/mapping/sample_0002.sorted.bam",
+        "sorted": true,
+        "bytes": 4139872212,
+        "sha256": "782de3bf3b7b61d6e96d08f4e4cebd1c405f43e1eefdeeb0fb1a2c136e9ad03f"
+      },
+      "summary": {
+        "bytes": 2000,
+        "sha256": "84346eff765383015d1f058f7d8265e80ea6a26651cb47f752e52231763dc4cc"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_3",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_3",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0003/mapping/sample_0003.sorted.bam",
+        "sorted": true,
+        "bytes": 4096193878,
+        "sha256": "57238109a0c1920b15c48954bd98c51bf4bae6d28d021baab3857d4c59e887ab"
+      },
+      "summary": {
+        "bytes": 2001,
+        "sha256": "d01e0949fce56545364dc365b750e32d69dc6f0c141dca24401684f32f8c9523"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_4",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_4",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0004/mapping/sample_0004.sorted.bam",
+        "sorted": true,
+        "bytes": 4233074143,
+        "sha256": "d1ff473dcc0d047acc81ce16bb0844da0b41d69f9b4f050340f33159b0f5cb88"
+      },
+      "summary": {
+        "bytes": 1999,
+        "sha256": "1761f0b56a0d639de301c0184385317bd7d3d8ea2ac8e69695f2edac7709efa7"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_6",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_6",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0006/mapping/sample_0006.sorted.bam",
+        "sorted": true,
+        "bytes": 4081898122,
+        "sha256": "66ed3a4c50aff0b3e7b49340747296ada7506f1d89a2fb17d6d3c00804e4f3b3"
+      },
+      "summary": {
+        "bytes": 2001,
+        "sha256": "ba5d36fe633d76e7e3a451ee0658d7cda6fb60ae183cb0bad31855d6d24bef0c"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_9",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_9",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0009/mapping/sample_0009.sorted.bam",
+        "sorted": true,
+        "bytes": 4189258550,
+        "sha256": "e1477de062386c7aa3d6b1fd4900ed8f0d536ae4eba03ab751aeb2fdfb7fc368"
+      },
+      "summary": {
+        "bytes": 2000,
+        "sha256": "2c600f1bb26fde9ba46cac8b9c6041c73b86d2379720fed78d90c3ce2e825949"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_10",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_10",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0010/mapping/sample_0010.sorted.bam",
+        "sorted": true,
+        "bytes": 4136949462,
+        "sha256": "750ea876c0f32a1c704ba0ae21a4404c1d1d4d9e35e9db09a13be12e7408d3d9"
+      },
+      "summary": {
+        "bytes": 1997,
+        "sha256": "5c9494b736191de3c048fa6a5b52d9b897164aa53571f4d569811e526cb359e8"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_11",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_11",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0011/mapping/sample_0011.sorted.bam",
+        "sorted": true,
+        "bytes": 4099177939,
+        "sha256": "a3164903ce48512727bc1afb6f1e26fb1f87dc2b8ca9f322bd9561c94b2f8f39"
+      },
+      "summary": {
+        "bytes": 2001,
+        "sha256": "c1e08c1ade7e18700842b31ab5f62f7e71506c6e7bc1c4597e7d9de17d371a22"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_14",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_14",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0014/mapping/sample_0014.sorted.bam",
+        "sorted": true,
+        "bytes": 4161072973,
+        "sha256": "dc52f3a03a935f5dcf2931ec53447ba0412e6990d38cfb849e1e9dd41d585d0e"
+      },
+      "summary": {
+        "bytes": 2002,
+        "sha256": "7beb89754e25b1ffe4b33342e27ac389d88a66c014d9b5d6d5f5b17af7f6b8d1"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "cami3_toy_human_gut_short_read_sample_17",
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_17",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0017/mapping/sample_0017.sorted.bam",
+        "sorted": true,
+        "bytes": 4186238920,
+        "sha256": "0861589ca06c90c7e92148f4c1d475b3c1b45f389c634124e05743e6bd6bd386"
+      },
+      "summary": {
+        "bytes": 2000,
+        "sha256": "66d2a7212f5530eb9537c957fb888442c24789ad3c9892f221c7ae812320f91a"
+      },
+      "sorted_within_phase": false
+    },
+    {
+      "sample": "oral_sample_6",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_6",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/6.bam#1793142207875345",
+        "sorted": false,
+        "bytes": 5373737424,
+        "sha256": "beed39a3ada9e583283562266cc15164c689ee2c556b4ead46b882e6d30da7ad",
+        "records": 33315152,
+        "generation": "1793142207875345",
+        "crc32c": "2qT/XQ=="
+      },
+      "summary": {
+        "bytes": 1970,
+        "sha256": "7b5cef7f4ef9463ab1152177f63c39504006ab4c77c9bc2d3aee091bb7747f65"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_7",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_7",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/7.bam#1793146706252698",
+        "sorted": false,
+        "bytes": 5362705531,
+        "sha256": "f33b5cb83b9814c1c1fcc20237bd5d51cca6c32e807c3fa5d2b6283306b48826",
+        "records": 33315362,
+        "generation": "1793146706252698",
+        "crc32c": "eFDeGQ=="
+      },
+      "summary": {
+        "bytes": 1970,
+        "sha256": "3fcde2dc53be7bca0e6104870ea057b797b3d8e86739164f7f4a71ef745a3409"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_8",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_8",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/8.bam#1793151537637016",
+        "sorted": false,
+        "bytes": 5370590181,
+        "sha256": "78cc74f564b6b8cb17dd8cae4c231701a4888c7f3258ff7ae5fc412a88e0128e",
+        "records": 33325428,
+        "generation": "1793151537637016",
+        "crc32c": "Mu2wdQ=="
+      },
+      "summary": {
+        "bytes": 1968,
+        "sha256": "c64a04e88681d1ecadf48e6652e2f9adce621afad553066474b5e0dc7153a086"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_13",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_13",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/13.bam#1793156917863678",
+        "sorted": false,
+        "bytes": 5372781844,
+        "sha256": "2bbb7b219948929a8111e978596310967c6d1a7eebbf3ca4768900130ac45000",
+        "records": 33328722,
+        "generation": "1793156917863678",
+        "crc32c": "qnBmgQ=="
+      },
+      "summary": {
+        "bytes": 1969,
+        "sha256": "228b8ae22da051a24266bd8c200bdb599c7ae344d2f48857eb9dd2a58d41ef03"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_14",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_14",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/14.bam#1793161906439769",
+        "sorted": false,
+        "bytes": 5374000577,
+        "sha256": "e20bfc721d0c1f495e9ead9d330fb9b77ce255b4c3634fb48d954b9867f98cb1",
+        "records": 33332072,
+        "generation": "1793161906439769",
+        "crc32c": "i5B5ng=="
+      },
+      "summary": {
+        "bytes": 1936,
+        "sha256": "3e5f1a714933d88098e3debde7cf158ce7eda43345d35d47581b3c87bbccf7f5"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_15",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_15",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/15.bam#1793166488709776",
+        "sorted": false,
+        "bytes": 5375247977,
+        "sha256": "d84466c13ee8c94ab65e68bfd2b4d44cccaaea65d498c37b4dd5236e7ae1049f",
+        "records": 33332240,
+        "generation": "1793166488709776",
+        "crc32c": "NakfBA=="
+      },
+      "summary": {
+        "bytes": 1973,
+        "sha256": "b8eff08a667d2db95f0b1c54a9fd80a0912f88cf0d2cc97fa80e5102fd1d9201"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_16",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_16",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/16.bam#1793170520065863",
+        "sorted": false,
+        "bytes": 5377775568,
+        "sha256": "97837f6fd929e0aba90304e7d9743cee84395639752fd9477472dcde2bd3dd39",
+        "records": 33325520,
+        "generation": "1793170520065863",
+        "crc32c": "0HJmaA=="
+      },
+      "summary": {
+        "bytes": 1971,
+        "sha256": "eeffefcb508511a423329bada6bb66347fc79fce79a44b7e19817eb28471155c"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_17",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_17",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/17.bam#1793174658758641",
+        "sorted": false,
+        "bytes": 5382206481,
+        "sha256": "84fbd11a4785cd89453ac567e67da58ffc01ba9239a71788fc50533e58142c9b",
+        "records": 33331598,
+        "generation": "1793174658758641",
+        "crc32c": "2OODzw=="
+      },
+      "summary": {
+        "bytes": 1970,
+        "sha256": "383e1b8b07618c15c804808fa7890b4f9384be9d974f417b8e6dc3bb8b9a7fec"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_18",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_18",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/18.bam#1793178744515354",
+        "sorted": false,
+        "bytes": 5383660753,
+        "sha256": "7ec040794a73fee569a67ec9a12402731790d18d6de2a65033779fe46b25f9e4",
+        "records": 33331868,
+        "generation": "1793178744515354",
+        "crc32c": "KGUdVQ=="
+      },
+      "summary": {
+        "bytes": 1969,
+        "sha256": "9f3ca3d68274a87546f57adc021256212bb39c11e4e4f7ac096e8490b59b5146"
+      },
+      "sorted_within_phase": true
+    },
+    {
+      "sample": "oral_sample_19",
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_19",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/19.bam#1793182501373127",
+        "sorted": false,
+        "bytes": 5372078215,
+        "sha256": "a087676879c1550f0290765ddb0ef51b31a3b7262c2918e0d69cba362ea6f3d0",
+        "records": 33312040,
+        "generation": "1793182501373127",
+        "crc32c": "spxgFA=="
+      },
+      "summary": {
+        "bytes": 1968,
+        "sha256": "5d1269e9a91ab30ba2c2a234e3e2187bee11090f14a2ab867c77d18f1eb1d645"
+      },
+      "sorted_within_phase": true
+    }
+  ],
+  "archives": {
+    "measurements": {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/measurements/e033-evidence.tar.gz",
+      "generation": "1793822884082361",
+      "binding": {
+        "bytes": 636939104,
+        "sha256": "3c906b743b007c19b0a13b841000971c5525ef4b51335a49f710aff4eef9c9db"
+      },
+      "regular_members": 2323,
+      "aliases": 0,
+      "logical_bytes": 2847968477,
+      "every_member_verified": true,
+      "server_MD5_verified": true,
+      "inventory": {
+        "bytes": 465902,
+        "sha256": "e6f054419e947924cd2b7600b3d8b055535290420a6c49e05929b581d6ff352c"
+      },
+      "all_work_members": 46
+    },
+    "E009-noGLM": {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/E009-noGLM/e033-evidence.tar.gz",
+      "generation": "1793822943225038",
+      "binding": {
+        "bytes": 142799961,
+        "sha256": "7b87ff5f328909e6fa2fabb08f60cfe847c3f2185a6d8bcb727351fd10f23b6b"
+      },
+      "regular_members": 2279,
+      "aliases": 0,
+      "logical_bytes": 167583791,
+      "every_member_verified": true,
+      "server_MD5_verified": true,
+      "inventory": {
+        "bytes": 452662,
+        "sha256": "18b3338abaf5010f9335aa107b7ebb1f7814091ac7fc9af654760250ac0c292d"
+      },
+      "all_work_members": 2
+    }
+  },
+  "sidecars": [
+    {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/measurements/inventory.json",
+      "generation": "1793822905338800",
+      "binding": {
+        "bytes": 465902,
+        "sha256": "e6f054419e947924cd2b7600b3d8b055535290420a6c49e05929b581d6ff352c"
+      },
+      "server_MD5_verified": true
+    },
+    {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/measurements/collection.json",
+      "generation": "1793822910262482",
+      "binding": {
+        "bytes": 300,
+        "sha256": "b7e399ee8f4a161963e4b4466ea01ab95c7a9643b084d6becadb1e17bf5b984d"
+      },
+      "server_MD5_verified": true
+    },
+    {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/measurements/e033-evidence.tar.gz.sha256",
+      "generation": "1793822914659793",
+      "binding": {
+        "bytes": 87,
+        "sha256": "ffe687d7feac85fdcef634a49633b3e25b1e8cd26c570b96e366dd8baf8ce3d6"
+      },
+      "server_MD5_verified": true
+    },
+    {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/E009-noGLM/inventory.json",
+      "generation": "1793822950571866",
+      "binding": {
+        "bytes": 452662,
+        "sha256": "18b3338abaf5010f9335aa107b7ebb1f7814091ac7fc9af654760250ac0c292d"
+      },
+      "server_MD5_verified": true
+    },
+    {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/E009-noGLM/collection.json",
+      "generation": "1793822954922940",
+      "binding": {
+        "bytes": 299,
+        "sha256": "9588da88bf14bbd5264feb5cea00031f1c5c5572236ba52cf72d806315d23077"
+      },
+      "server_MD5_verified": true
+    },
+    {
+      "uri": "gs://dl-binner-archive-167650584170/e033/multiscale-20261104T152005Z-a940769-r2/E009-noGLM/e033-evidence.tar.gz.sha256",
+      "generation": "1793822959190130",
+      "binding": {
+        "bytes": 87,
+        "sha256": "5a61ab5241a5f685979143e728ce5655294ed7fa2262570e8d5ae44e8a88fc43"
+      },
+      "server_MD5_verified": true
+    }
+  ],
+  "measurement_review": {
+    "bytes": 16536,
+    "sha256": "f064f9f773291b002995ee4b7ca6a47505fb6efc42bdda7ab19590a616b447b3"
+  },
+  "measurement_review_resources": {
+    "command": [
+      "artifacts/e033-multiscale-bam/preparation/env/bin/python",
+      "-I",
+      "-B",
+      "artifacts/e033-multiscale-bam/inspection/measurement-reader-r3.py",
+      "--base",
+      "artifacts/e033-multiscale-bam/inspection",
+      "--E009",
+      "artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+      "--oral",
+      "artifacts/e024-inspection/20261028T193107Z/verified/work/rebound/features.npz",
+      "--output",
+      "artifacts/e033-multiscale-bam/inspection/measurements-reviewed-r3.json"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 34.986083690999294,
+    "peak_sampled_rss_bytes": 3450531840,
+    "seconds_ceiling": 3600,
+    "rss_bytes_ceiling": 8000000000,
+    "launched_pid": 18785,
+    "sampled_cpu_seconds": 32.6,
+    "sampled_average_cpus": 0.9317990629624787,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": false,
+    "reader_source": {
+      "bytes": 7855,
+      "sha256": "5b03106b57bf5b0bad381f074c233205c83580ab7a4b5ada4d2e0a16ff80e7bb"
+    }
+  },
+  "complete_compressed_local_duplicates": false,
+  "main_teacher_attempts": 1,
+  "completed_main_fits": 0,
+  "completed_main_epochs_proven": 0,
+  "completed_comparison_partitions": 0,
+  "full_scientific_comparison_admitted": false,
+  "science_result": {
+    "bytes": 43120,
+    "sha256": "aed89dc04252129085a744fcce513678da3bee239188215093ce6a5505591152"
+  },
+  "failed_stage": "E009-noGLM/teacher",
+  "error": "Actual scientific workflow exit 1; detailed worker error unavailable from retained return",
+  "failed_teacher_files": [
+    "teacher/started.json",
+    "teacher/result/initial-state.json"
+  ],
+  "missing_evidence": [
+    "task/work/logs/E009_noGLM_teacher.log (actual worker traceback)",
+    "root terminal.log / actual parent systemd exit",
+    "completion.json and final delivery exit (not uploaded)",
+    "root task/work/barrier/done.json and full work inventory",
+    "post-collector logs and full source/task filesystem history"
+  ],
+  "other_stages": "All subsequent teacher/student/embed/graph/pair/forest/construction/selection/audit targets uncompleted; no inputs-after receipt",
+  "collection": "Two payloads and sidecars fully verified; native collection/upload/readback exits and separate final delivery unavailable",
+  "source_diagnoses": {
+    "actual_final_native_exception_unconfirmed": true,
+    "growing_disk_history_crosses_1MiB_publisher_limit": "Reproduced on 8300 plausible samples through the actual unchanged publisher; inference for missing completion, not observed native traceback",
+    "failed_teacher_cause": "Unknown; do not equate passed no-dropout three-update probe or tiny tests with full teacher success",
+    "return_omits_main_worker_logs": true
+  },
+  "criteria": "NOT_ASSESSED (integrity/completion failure); unchanged frozen KEEP/MODIFY/ABANDON",
+  "no_new_quality_scores": true,
+  "no_old_scores_replayed": true,
+  "new_VM_start_or_resource_change_this_inspection": false,
+  "retention_renewed": false,
+  "original_Mac_portability_and_JGI_failures_preserved": true,
+  "measurement_review_resources_initial": {
+    "command": [
+      "artifacts/e033-multiscale-bam/preparation/env/bin/python",
+      "-I",
+      "-B",
+      "scripts/e033_measurement_inspection.py",
+      "--base",
+      "artifacts/e033-multiscale-bam/inspection",
+      "--E009",
+      "artifacts/e011-cached-grouping-reference/restore-local/candidate/features/features.npz",
+      "--oral",
+      "artifacts/e024-inspection/20261028T193107Z/verified/work/rebound/features.npz",
+      "--output",
+      "artifacts/e033-multiscale-bam/inspection/measurements-reviewed.json"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 67.11044546999983,
+    "peak_sampled_rss_bytes": 3452289024,
+    "seconds_ceiling": 3600,
+    "rss_bytes_ceiling": 8000000000,
+    "launched_pid": 17112,
+    "sampled_cpu_seconds": 50.75,
+    "sampled_average_cpus": 0.7562161097960021,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": false
+  },
+  "measurement_review_final": {
+    "path": "artifacts/e033-multiscale-bam/inspection/measurements-reviewed-r3.json",
+    "bytes": 16536
+  },
+  "final_reader_results_equal_initial": true,
+  "local_technical_review_total_numerical_seconds": 102.09652916099913,
+  "final_control_plane": {
+    "bytes": 33512,
+    "sha256": "0aa3bc519a1af9eb465769effff027055f9b20e5fe1c5befe2966b8a98ad017d"
+  },
+  "checks": {
+    "four_actual_inspection_tests": "PASS, 4.209 seconds after safe cleanup",
+    "tests_log": {
+      "bytes": 778,
+      "sha256": "80111a2d29f309ce5f7e6b68e13b73d14709a1000b4a9bc1fa1059c3d255b72f"
+    },
+    "complete_document_check": "PASS, 158 maintained documents / 2216 local links; ten optional historical tool-cache paths unavailable",
+    "docs_log": {
+      "bytes": 689,
+      "sha256": "2e9a19b51763423721feffda08a40397729e1741ddf92bb7950a98cabea38494"
+    },
+    "unchanged_source_lock_files": 122,
+    "unchanged_launch_lock_files": 7,
+    "required_runtime_imports_after_cleanup": {
+      "bytes": 616,
+      "sha256": "8c606aff077521754aab1a8d4a3a410e05156924afa686302c168509e9702e94"
+    },
+    "cleanup": {
+      "bytes": 7229,
+      "sha256": "f409343fc59ada8ecd9f4aa1f9f7ae12f6cee0e2da4c0bd8659875e90bcefd9c"
+    },
+    "final_local_free_bytes": 20837318656
+  }
+}

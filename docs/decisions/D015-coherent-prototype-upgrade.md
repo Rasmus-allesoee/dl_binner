@@ -1,10 +1,26 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-November 4 execution update: separately authorized [E033](../../experiments/E033-multiscale-bam/native-observed.json)
+Historical November 4 execution update (superseded by the November 5 inspection below): separately authorized [E033](../../experiments/E033-multiscale-bam/native-observed.json)
 has passed native engineering gates and begun the supervised BAM pilot. Keep the
 unchanged common bundle and E032 constructor while collecting prospective evidence;
 no new recovery outcome, optimal selector or causal component win is claimed.
 The local-preparation authority described below is preserved history.
+
+## November 5 E033 failure, not a biological decision
+
+[Independent inspection](../../experiments/E033-multiscale-bam/inspection-review.md)
+verifies twenty common BAM measurements and both banks, then a failed first
+teacher with no new complete partition. The comparison is NOT_ASSESSED; no
+architecture or information-family conclusion follows. Preserve the stopped task
+disk and all journals. Prioritize bounded actual-error collection/repair and the
+same frozen comparison with verified reuse, rather than replace it with another
+upgrade or selector campaign. Missing worker stderr and a demonstrated long-
+completion JSON overflow need their actual native terminal evidence. The
+[prospective recovery](../../experiments/E033-multiscale-bam/recovery-assessment.json)
+is not executed by this inspection; the November 11 / November 18 boundaries stay.
+AGENTS now requires compact control records with separately bound growing histories
+and actual worker logs in failure returns. Q006 and efficient full Oral GLM remain
+later substantive questions, not claims settled by this failed execution.
 
 ## E033 coherent measured-information/learning bundle, November 4
 

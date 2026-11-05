@@ -488,6 +488,12 @@ Keep raw object bytes separate from CLI result formatting. A formatted command
 can append report data to a downloaded JSON document. Check the exact object
 generation, byte count and digest before treating a local parsing failure as
 corrupt native evidence. Preserve the failed transport journal.
+Keep growing resource histories outside size-bounded control/completion JSON;
+bind their closed files from a compact summary. Test the actual writer with the
+maximum expected run history, not only a tiny workflow. Return the scientific
+worker's own stderr and global workflow logs as well as the scheduler trailer,
+including when the first scientific rule fails. A successful payload collection
+does not establish delivery of later terminal or completion records.
 
 Owner clarification, 2026-10-17: during an authorized connected-GCP execution,
 debug recoverable operational failures and retry within the same task when the
@@ -741,6 +747,9 @@ live users and dependency links; retain required runtimes. Remove verified obsol
 package-manager caches and checksum-matched expanded duplicates first, recording
 paths, inventory, retained source/backup and observed free space. Keep unique
 accepted evidence and failed journals; no new cloud upload/spend is implied.
+Obsolete engineering environments may also be retired after those user/dependency
+checks. Preserve their project source, installation metadata, package pins and
+recreation recipe; retaining every old numerical installation is not required.
 
 ### Environment ownership and grouped execution
 
