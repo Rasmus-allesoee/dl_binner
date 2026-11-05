@@ -1,12 +1,41 @@
 # D015: a coherent prototype upgrade with selective ablations
 
-Historical November 4 execution update (superseded by the November 5 inspection below): separately authorized [E033](../../experiments/E033-multiscale-bam/native-observed.json)
+## E033 negative bundle and genome-graph representation priority, November 5
+
+[Accepted completed E033 evidence](../../experiments/E033-multiscale-bam/completed-review.md)
+records **ABANDON** for this fixed bundle: R95 falls in all modes, and Oral
+multi-contig T90 falls 57 → 45. Noncollapse, exact reload and accurate neighbor
+retrieval do not establish biologically useful geometry. Oral raw-input neighbors
+outperform the new learner on the fixed small diagnostic query set, while many
+positive proposals join different provided origins. Do not promote E033 or infer
+that another loss coefficient or larger network is the most promising response.
+
+Choose one [BAM-supported genome-graph representation block](../../experiments/E033-multiscale-bam/next-block.md),
+conditional on actual reliable physical-link utility. Keep stronger E031 frozen
+bootstrap features and provisional E032 construction, with E023/E031/E032 strong
+references unchanged. Introduce source-blind verified template evidence and a
+compact confidence-gated graph representation, reusing the admitted E033 measured
+context explicitly while retaining inherited depth priors. This is a coherent
+core information/representation upgrade, not a new selector tweak or hard
+connected-component merge. The [primary-source review](../evidence/2026-11-05-e033-genome-graph-priority.md)
+weighs serious alternatives and short-read/GSA/repeat/false-edge limits. A gain
+remains a hypothesis; freeze the candidate and MAG criteria before outcomes.
+
+Retain a common three-mode availability policy and at most one consequential
+matched control. Q006 selection optimality remains open; efficient full Oral GLM
+needs its unchanged qualification and explicit hybrid-state transition. Skin is
+already origin-admitted but unscored with overlap/unique-truth limits. No new
+implementation/fit/resource/retention scope is authorized by this inspection.
+Earlier failure and running paragraphs below are historical, not current blockers;
+all immutable source freezes, baseline science and failed journals remain.
+
+Historical November 4 execution update (superseded by the November 5 completed review above): separately authorized [E033](../../experiments/E033-multiscale-bam/native-observed.json)
 has passed native engineering gates and begun the supervised BAM pilot. Keep the
 unchanged common bundle and E032 constructor while collecting prospective evidence;
 no new recovery outcome, optimal selector or causal component win is claimed.
 The local-preparation authority described below is preserved history.
 
-## November 5 E033 failure, not a biological decision
+## Earlier November 5 E033 failure, not then a biological decision
 
 [Independent inspection](../../experiments/E033-multiscale-bam/inspection-review.md)
 verifies twenty common BAM measurements and both banks, then a failed first

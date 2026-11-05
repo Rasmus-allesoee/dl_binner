@@ -2,178 +2,59 @@
 
 Updated: November 5, 2026 (Copenhagen). This is the single current handoff.
 
-## E033 authorized recovery in progress, November 5
+## E033 completed and reviewed; frozen bundle ABANDON
 
-The owner now explicitly authorizes [forensic recovery and conditional completion](../experiments/E033-multiscale-bam/recovery-admission.json)
-under the remaining original $20 and a prospective 30-hour common recovery clock /
-30.25-hour STOP, retaining November 11 active / November 18 automatic-tail limits.
-Routine debugging/evidence recovery belongs to the authorized task; do not return
-another approval prompt for a helper error. Preserve all earlier clocks/failures.
+[Independent completion](../experiments/E033-multiscale-bam/completed-review.md)
+accepts `resume-20261105T023814Z-941ede3`: **TERMINATED**, November 5 at
+12:07:43.280 UTC / 13:07 Copenhagen. All 11 phase exits, six full teacher/student
+fits, 39 scientific seals, before/after inputs, four complete archive/member/alias
+streams, closed delivery and matching watcher exit pass. Measurements/barrier/
+probes are reused; no VM wake or accepted science replay occurred in inspection.
+The original logging/completion failures and both local staging refusals remain.
 
-**Native comparison is now running:** `resume-20261105T023814Z-941ede3`, exact
-clean source `941ede3`, all six changed native gate exits 0 and complete tiny DAG
-passed. The first E009 no-GLM teacher is in epoch 4 of 20, update 1,172, after
-three complete epochs with no reported collapse or guard failure. The original
-completed barrier and all twenty measurements are reused.
-Fresh current-boot/PID/start/command watcher normal/crash/restart-refusal tests pass;
-parent and timer are active. The common delivery deadline is November 6 at
-**08:47:32 Copenhagen**, read-back provider STOP **08:57:52**. No completed community
-target or quality result is claimed. Use the current [operations handoff](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
-after shutdown; leave healthy longer work supervised without polling to completion.
+Frozen post R95 is **10.1517% / 9.9201% / 33.0110%** for E009 no-GLM / E009 GLM /
+Oral ten-depth no-GLM, versus E032 10.2847% / 10.1760% / 34.3786%. T90 changes
+7 → 5 / 6 → 6 / 219 → 206. [ABANDON this bundle](../experiments/E033-multiscale-bam/comparison-review.json)
+follows unchanged criteria: no mode improves R95. Native engineering is accepted;
+no feature family is rejected. Oral multi-contig T90 falls 57 → 45 while singleton
+bp contribution rises slightly. Noncollapse, exact reload and excellent search
+recall do not establish biological recovery. All 156/799 targets, N quarantine,
+known-shared sensitivity and complete DNA populations remain in the review.
 
-Fresh credit is DKK 1,666.37 Available / 84%, expiry January 12, 2027, same eligible
-scope; displayed November net DKK 0.00 with delayed usage and $35 reserve. Complete
-conservative attribution remains about $15.65 under $20, original storage separate.
+Keep the stronger **E031 learning / provisional E032 common constructor** as the
+development anchor; preserve E023's **10.4163% E009 GLM** and stronger E031
+constructor contexts beside it. Retained native MetaBAT2 is 8.5493% E009 / 17.3260%
+Oral, with different native eligibility. We already exceed this reference; no
+SOTA claim or measured gap to every stronger tool follows.
 
-[Forensic recovery](../experiments/E033-multiscale-bam/recovery-review.md) succeeds:
-181 physical members / 7 exact aliases, complete private archive/member/readback
-verification and independently TERMINATED after 210.027 seconds. Actual worker
-stderr confirms the update-64 progress logger's duplicate `stage` argument;
-actual terminal confirms the final 1 MiB completion-history overflow. Neither is
-a reported scientific numeric refusal. Both are repaired without changing the
-scientific treatment; the original failures and 122-file freeze remain intact.
+**Next recommendation:** [BAM-supported genome-graph representation](../experiments/E033-multiscale-bam/next-block.md),
+using frozen strong bootstrap features plus qualified physical template links and
+explicit measured/optional-modality context. [Targeted primary-source evidence](evidence/2026-11-05-e033-genome-graph-priority.md)
+weighs selection, another loss, larger sequence models and full Oral GLM. Implement
+locally and admit actual reliable-link utility before a new community fit. A new
+$15 pilot/conditional three-mode comparison is proposed, not authorized by this
+inspection; the [exact prompt](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
+contains its separate scope. No guaranteed MAG gain or new scientific execution.
 
-The logging-only wheel and explicit [repair overlay](../experiments/E033-multiscale-bam/repair-lock.json)
-pass actual installed learning/BAM/logger contracts, a 55,000-row compact completion
-test and the full 40-rule tiny three-mode DAG (132.46 seconds / 0.597 GB sampled
-RSS), including no-op resume and complete exports. The prospective native recovery
-reuses all twenty summaries/banks, original E031 state, completed barrier and
-math-identical probes after exact checks; the first teacher is in progress.
-Fresh owned-wheel/runtime/source/tiny gates pass before science. No new VM/disk/quota,
-mapping, marker detection, external binner, GPU or retention scope is added.
+[Costs](../experiments/E033-multiscale-bam/completed-cost.json): successful allocation
+$2.58971 CPU/RAM/IP, all E033 allocations $3.93514, complete incremental gross upper
+**$5.44 under the original $20**, including measured task storage/conservative WAN/
+archive/operations. Fresh credit is DKK 1,650.37 Available / 84%, January 12 expiry,
+displayed November net DKK 0.00 with >24-hour delay and $35 reserve; not an invoice.
+After exact closed-evidence preservation, the 100 GiB task disk is deleted. Only
+original **30/300 GiB**, private archives and protected evidence remain; seven-day
+original storage overlap is about $7.62 under its separate $9 approval. No new
+resource or retention. **November 11 at 00:00 Copenhagen active storage / November
+18 automatic tail** remain hard review boundaries.
 
-The common clock starts November 5 at 02:47:32.334 Copenhagen, including stopped
-repair gaps; the scientific/delivery deadline is November 6 at 08:47:32.334,
-provider STOP no later than 09:02:32.334; this boot's actual STOP is 08:57:52.010.
-See [recovery evidence](../experiments/E033-multiscale-bam/recovery-observed.json)
-for exact bindings, allocation costs and failure distinctions. Original measurement
-and failed work archives are reused/preserved, not repacked or overwritten.
+Q006 standalone selection remains open; do not infer E032 optimality. Full Oral
+GLM keeps its separate unchanged 128-view T4 qualification and explicit missing
+hybrid-state transition/cost admission. Skin is acquired/origin-admitted but
+unscored, with source overlap and unique-truth/biological/depth/protocol/cost limits.
+The superseded running/failure handoffs remain in E033's operations, native,
+inspection and recovery records rather than competing current instructions here.
 
-## Historical E033 inspection: measurements verified, first teacher failed
-
-[Independent inspection](../experiments/E033-multiscale-bam/inspection-review.md)
-verifies `multiscale-20261104T152005Z-a940769-r2` at operations source `5911e25`,
-unchanged prepared science `c812eb8`. The VM is **TERMINATED**, November 4 at
-**21:13:28 Copenhagen**. Its matching process-bound watcher requests shutdown
-after workflow exit; stale guest RUNNING and shutdown are not success evidence.
-Eight native gates, twenty retained-BAM summaries, both bank seals and three
-full-shape probes pass. The main workflow exits **1** at the first E009 no-GLM
-teacher, before any completed epoch/checkpoint/partition. The full three-mode
-comparison is **NOT_ASSESSED**; no new recovery score or biological rejection.
-
-Both uploaded payloads pass complete SHA256/server MD5/member verification:
-measurements 636,939,104 bytes / 2,323 members; failed E009 no-GLM work
-142,799,961 bytes / 2,279 members. The other modes, final completion and native
-post-collector/worker/root terminal evidence are missing. The real teacher stderr
-is outside the collector's mode slices. A local actual-writer test also reproduces
-the 1 MiB completion-history overflow; its role in the native exit is an inference
-until the terminal journal is collected. Preserve the failed journals and cap.
-
-[Measurement review](../experiments/E033-multiscale-bam/measurements-review.json)
-verifies full DNA/ordered ten-sample axes and all twenty source/sort/filter ledgers.
-Oral eligible all-zero profiles fall from 191,567 to 402 under the **combined**
-new policy, but only 31.78% of its accepted aligned mass has MAPQ at least 20.
-That is useful input/support evidence, not a recovery gain or isolated MAPQ effect.
-Existing E031/E032/E023/MetaBAT summaries and all truth remain unchanged.
-
-[Costs](../experiments/E033-multiscale-bam/inspection-cost.json) price 17,383.698
-seconds allocation at **$1.31848 CPU/RAM/IP**. Complete failed-phase attribution
-upper is **$3.84**, including new task-disk storage through November 11 and export;
-it is not an invoice. Original 30/300 GiB storage overlaps its separate approval.
-The 100 GiB task disk remains protected because it owns missing unique logs/tail.
-Fresh credits/coverage/prices pass before export; no VM is woken in inspection.
-
-**Next:** [assessed forensic collection and actual-cause repair](../experiments/E033-multiscale-bam/recovery-assessment.json),
-then complete the same justified information comparison with verified reuse.
-Collection-only proposal is at most $0.25; a separately explicit 30-hour recovery
-clock / 30.25-hour STOP under the remaining original $20 has about $15.65 complete
-attribution. Neither is released here. The original deadline stays November 6
-at 04:20:30 Copenhagen until an explicit prospective authorization replaces it.
-Do not replay the twenty measurements, invent scores, lower scientific checks or
-start a different architecture/selector campaign on this failed result. Use the
-[next exact prompt](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt).
-Q006 and full Oral GLM remain concrete later dependencies, skin unscored.
-November 11 at 00:00 Copenhagen active retention / November 18 approved automatic
-tail remain hard boundaries. No resource or retention change occurred.
-
-[Local cleanup](../experiments/E033-multiscale-bam/inspection-cleanup.json) removes
-another **10.35 GB** of obsolete E006/E007/E010/E019 engineering environments after live-user
-and dependency-link checks, retaining installed project source/metadata, complete
-member manifests, recipes, results and failures. Required E005 workflow/mapping
-and E021/E033 numerical bases remain. The finalized technical reader passes in
-35.0 seconds at 3.451 GB sampled RSS, identical to its initial audit (102.1 seconds
-combined); four new reader/failure-boundary tests pass.
-
-## E033 pre-start authorization and admission (preserved)
-
-The owner authorizes [E033 operations](../experiments/E033-multiscale-bam/OPERATIONS.md)
-using prepared science `c812eb8`, under the new $20 / 36-hour envelope and
-conditional 100 GiB balanced task disk. [Fresh admission](../experiments/E033-multiscale-bam/execution-admission.json)
-passes signed-in credit, current ordinary SKU/coverage, delayed-usage reserve,
-existing storage and all-version/quota checks. The modeled complete upper remains
-$15.96; no new outcome or native admission follows from that financial check.
-The complete configuration producer and actual rendered launch programs pass
-local tests. Scientific source/wheel/defaults and all accepted evidence are unchanged.
-
-The existing E2 is independently observed TERMINATED, with original 30/300 GiB
-disks and E032's protected 40 GiB disk. Collect/read back its missing closed tail
-and terminal/upload logs before safe release. Native setup, new measurement and
-full-shape schedule gates precede six fits. No GPU, acquisition, remapping or new
-external binner is added. November 11 active retention / November 18 approved
-automatic tail remain hard boundaries. Exact source sync stays private because
-outgoing history includes private financial/account metadata.
-
-## E033 common measured-information candidate prepared locally
-
-[E033](../experiments/E033-multiscale-bam/README.md) implements the coherent
-BAM-derived parent/window information and warm-start representation upgrade on
-`multiscale-bam-representation`, from `ba7f9b5`. [Design](../experiments/E033-multiscale-bam/design.md)
-and [protocol](../experiments/E033-multiscale-bam/protocol.json) precede changed
-community outcomes. Exact streamed CIGAR/NM moments, breadth/dispersion/exposure/
-validity and reliability-aware fusion feed the common own-teacher/pair/student
-path; E031 weights/EMA/predictor/Adam are restored. All new inputs use shared
-measurement, while historical depth priors remain encoded in the warm-start state.
-E032 selection stays provisional and fixed; [Q006](research/questions.md#q006)
-keeps standalone bin-selection alternatives open for later source-informed work.
-
-[Local evidence](../experiments/E033-multiscale-bam/local-observed.json) includes
-real tiny BAM versus independent SAM/per-base counters, 20+20-epoch learning in
-both GLM availability modes, exact reload, unit geometry, isolated native graph
-readers and a serial three-mode DAG with complete E032 pre/post exports/no-op
-resume/strict collection. GLM inference and cached biological marker calls are
-explicitly synthetic; no detector, community fit/score or Linux admission is
-claimed. All accepted E009–E032 data/truth/results/source/failures remain immutable.
-The complete installed suite passes 98 tests across 17 isolated modules; final
-focused checks pass 10 product and 6 operations tests. The 40-rule tiny DAG passes
-in 115.6 seconds at 0.595 GB sampled peak RSS, including all three new review readers.
-[The new audit](evidence/2026-11-04-multiscale-coverage-and-storage.md) explains the
-JGI no-variance zero from retained huge-counter warnings and the source's fresh
-uninitialized array, plus separate integer division. Original failed receipts stay;
-E009/E024 did not use that scalar path. No old depth table changed.
-
-[Cleanup](../experiments/E033-multiscale-bam/local-cleanup.json) removes 9.217 GB of
-regenerable cache/exact-duplicate logical bytes. E005 shrinks by about half; its
-current workflow/mapping interpreters, old archives, all unique accepted evidence
-and failure logs remain. No source/runtime base required by current work was removed.
-
-[Operations](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
-proposes a separately authorized **$20 / 36-hour** serial two-BAM pilot, all-twenty
-measurement and three-mode/six-fit comparison on the existing E2/32 GiB, with one
-conditional 100 GiB balanced task disk if safe cleanup is insufficient. The complete
-conservative price is about **$15.96**, not a bill or fresh credit admission. Native
-Linux/pysam/source/dictionary/full-shape throughput/RSS/schedule gates remain.
-No VM, community work, GPU request, paid cloud operation, quota or resource change
-occurred in preparation. Last independently verified VM state remains E032's
-TERMINATED handoff below. New commits stay local because outgoing history retains
-private financial/account metadata; ordinary public push is preferred when safe.
-
-Keep E032's stopped task disk protected until its original closed-delivery tail
-and post-collector logs are verified at the next authorized session. Active storage
-ends **November 11 at 00:00 Copenhagen**, approved automatic tail November 18; no
-renewal or old-budget carryover. [Oral GLM](../experiments/E033-multiscale-bam/oral-GLM-milestone.json)
-has a concrete separate unchanged 128-view qualification and full-bank/state-
-transition admission case, with no new throughput. Skin remains unscored with
-biological/overlap/unique-versus-origin truth/depth/protocol/cost dependencies.
+## Earlier accepted context
 
 ## E032 completed/reviewed; common measured information is next
 

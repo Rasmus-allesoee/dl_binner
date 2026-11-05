@@ -1,0 +1,126 @@
+{
+  "status": "CLOSED_MEASURED_ALLOCATION_GROSS_ATTRIBUTION_UPPER_NOT_INVOICE",
+  "phase": "resume-20261105T023814Z-941ede3",
+  "original_new_ceiling_USD": 20,
+  "pricing_currency": "USD via current Catalog DKK quote and Catalog FX",
+  "DKK_per_USD": 6.712250000006942,
+  "compute_RAM_IP_USD_hour": 0.27304567767858834,
+  "IP_paid_tier_conservative": true,
+  "allocations": [
+    {
+      "label": "original setup/main closed allocations",
+      "seconds": 17383.697999954224,
+      "CPU_RAM_IP_USD": 1.3184843335992837
+    },
+    {
+      "label": "forensic collection",
+      "seconds": 210.027,
+      "CPU_RAM_IP_USD": 0.015929712373833574
+    },
+    {
+      "label": "refused pre-science maximum-runtime attempt",
+      "seconds": 145.281,
+      "CPU_RAM_IP_USD": 0.011018985860784165
+    },
+    {
+      "label": "successful repaired comparison",
+      "seconds": 34144.27,
+      "CPU_RAM_IP_USD": 2.589707039164081
+    }
+  ],
+  "total_E033_allocation_seconds": 51883.27599995422,
+  "total_CPU_RAM_IP_USD": 3.9351400709979827,
+  "sampled_science_CPU_seconds": 101508.2,
+  "sampled_science_peak_tree_RSS_bytes": 21509419008,
+  "sampled_CPU_is_not_price": true,
+  "task_disk": {
+    "name": "e033-task-1793805630",
+    "id": "1578633013833953331",
+    "GiB": 100,
+    "created_UTC": "2026-11-04T15:27:24.490000+00:00",
+    "deleted_by_UTC": "2026-11-05T15:15:32.364042+00:00",
+    "lifetime_seconds": 85687.87404203415,
+    "Catalog_pricing_month_hours": 721.0,
+    "measured_lifetime_gross_USD_upper": 0.33012742349373614,
+    "deleted": true,
+    "future_cost_avoided_to_Nov11_USD": 1.7717199720987684
+  },
+  "export": {
+    "original_review_WAN_USD_upper": 0.15932612317055464,
+    "forensic_and_small_receipt_reserve_USD": 0.0005014052242040634,
+    "current_full_phase_bytes": 3273062109,
+    "current_full_phase_WAN_USD_upper": 0.36579319562762974,
+    "targeted_pair_restage_observed_compressed_bytes": 1264271360,
+    "second_stream_CLI_read_ahead_unmeasured": true,
+    "second_stream_bound": "Conservative entire current phase, although only requested members were staged",
+    "current_total_WAN_USD_upper": 0.7315863912552595,
+    "total_E033_WAN_USD_upper": 0.8914139196500181
+  },
+  "archive": {
+    "E033_object_versions": 38,
+    "E033_all_versions_bytes": 4056428294,
+    "new_E033_storage_through_active_and_automatic_tail_USD_upper": 0.031260257994544176,
+    "includes_E032_tail_capsule_collected_by_E033": true,
+    "zero_soft_deleted_at_check": true
+  },
+  "operations_reserve_USD": 0.25,
+  "complete_E033_attribution_USD_upper": 5.437941672136281,
+  "remaining_original_20_after_upper_USD": 14.562058327863719,
+  "original_storage": {
+    "original_disks_GiB": [
+      30,
+      300
+    ],
+    "disk_gross_USD_pricing_month": 31.2,
+    "all_current_private_archive_versions": 326,
+    "all_private_versions_bytes": 81788178274,
+    "seven_day_existing_disk_and_all_archive_overlap_USD": 7.620495683224869,
+    "separate_storage_approval_USD": 9,
+    "overlap_not_added_to_new_E033_total": true
+  },
+  "finance": {
+    "checked_epoch": 1793887229.7463198,
+    "source": "Fresh signed-in isolated Chrome tab / rendered Credits table",
+    "available_DKK": 1650.37,
+    "percent": 84,
+    "original_DKK": 1973.43,
+    "status": "Available",
+    "scope": "Certain usage; see Free Trial terms",
+    "type": "FreeTrialUpgrade",
+    "application": "Net pricing",
+    "start": "2026-10-13",
+    "expiry": "2027-01-12",
+    "pending_reserve_USD": 35,
+    "real_money_authorized": false,
+    "paid_account": true,
+    "displayed_period": "November 1-5, 2026",
+    "displayed_gross_DKK": 42.2,
+    "displayed_savings_DKK": 42.2,
+    "displayed_net_DKK": 0.0,
+    "delay": "Costs take a few hours to show up, and might take longer than 24 hours. Numbers are rounded."
+  },
+  "delayed_usage_reserve_USD": 35,
+  "coverage": "PASS_FOR_SPECIFIED_ORDINARY_FIRST_PARTY_PRODUCTS_ONLY",
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "no_new_compute_this_inspection": true,
+  "no_retention_extension": true,
+  "price_evidence": {
+    "bytes": 9154,
+    "sha256": "8449e81a0f8cc95ae2e0818e08a228cfcbd414e4ca661b747496378e212990af"
+  },
+  "export_gate": {
+    "bytes": 1904,
+    "sha256": "6c746061adf1b22e72246c35f8f4faeb34fb4e99d40a47207629f214dfbd0640"
+  },
+  "all_version_evidence": {
+    "bytes": 378260,
+    "sha256": "fdb57a7ab02f1e6661a41c5193e150bae2497576a5124817a213718c5aef14ce"
+  },
+  "task_release": {
+    "bytes": 33740,
+    "sha256": "bb763d67999f3053e32a8adbb713e0d9580d9e758fc420c12e48ea7a4b5a558e"
+  },
+  "credit_delta_is_not_invoice": true,
+  "limits": "Catalog-based gross pricing of measured resource lifetimes; network is an upper bound, invoice/pending usage may differ. No tax estimate; ignore applicable free tiers conservatively."
+}

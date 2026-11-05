@@ -1,0 +1,614 @@
+{
+  "status": "PASS_COMPLETED_SCIENCE_AND_DELIVERY_BEFORE_DIAGNOSTICS",
+  "phase": "resume-20261105T023814Z-941ede3",
+  "source": "941ede36d29b76c5f542e56295236d5100447ca1",
+  "scientific_fits": 6,
+  "scientific_stage_seals": 39,
+  "all_twenty_measurements_reused": true,
+  "global_barrier_reused": true,
+  "actual_exits": {
+    "original-inputs-before": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 45.239102716000005,
+      "peak_sampled_rss_bytes": 56160256,
+      "sampled_cpu_seconds": 18.45
+    },
+    "repaired-package-install": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 2.6840690749999965,
+      "peak_sampled_rss_bytes": 102002688,
+      "sampled_cpu_seconds": 1.5299999999999994
+    },
+    "repaired-complete-runtime": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 19.16215426000001,
+      "peak_sampled_rss_bytes": 310349824,
+      "sampled_cpu_seconds": 18.13
+    },
+    "repaired-plan": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 0.257404508999997,
+      "peak_sampled_rss_bytes": 39837696,
+      "sampled_cpu_seconds": 0.14999999999999858
+    },
+    "actual-progress-64-and-learning": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 1.7719995070000039,
+      "peak_sampled_rss_bytes": 225718272,
+      "sampled_cpu_seconds": 2.009999999999998
+    },
+    "actual-repaired-serial-tiny": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 75.49463307799999,
+      "peak_sampled_rss_bytes": 746643456,
+      "sampled_cpu_seconds": 178.64999999999998
+    },
+    "serial-six-fit-three-mode": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 33320.893738654,
+      "peak_sampled_rss_bytes": 21509419008,
+      "sampled_cpu_seconds": 101508.2
+    },
+    "original-inputs-after": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 31.066611645001103,
+      "peak_sampled_rss_bytes": 50372608,
+      "sampled_cpu_seconds": 22.09999999999991
+    },
+    "collect-E009-noGLM": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 30.889751205999346,
+      "peak_sampled_rss_bytes": 74899456,
+      "sampled_cpu_seconds": 31.179999999999836
+    },
+    "collect-E009-GLM": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 31.91812380599731,
+      "peak_sampled_rss_bytes": 78708736,
+      "sampled_cpu_seconds": 32.36999999999989
+    },
+    "collect-oral-noGLM": {
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 232.2309564879979,
+      "peak_sampled_rss_bytes": 76353536,
+      "sampled_cpu_seconds": 246.6600000000003
+    }
+  },
+  "units": {
+    "E009-noGLM": {
+      "axis": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "seals": {
+        "teacher": {
+          "status": "PASS",
+          "members": 26
+        },
+        "teacher-embed": {
+          "status": "PASS",
+          "members": 3
+        },
+        "teacher-graph": {
+          "status": "PASS",
+          "members": 4
+        },
+        "pairs": {
+          "status": "PASS",
+          "members": 15
+        },
+        "student": {
+          "status": "PASS",
+          "members": 26
+        },
+        "student-embed": {
+          "status": "PASS",
+          "members": 3
+        },
+        "student-graph": {
+          "status": "PASS",
+          "members": 4
+        },
+        "retrieve": {
+          "status": "PASS",
+          "members": 7
+        },
+        "forest": {
+          "status": "PASS",
+          "members": 15
+        },
+        "construct": {
+          "status": "PASS",
+          "members": 12
+        },
+        "e023": {
+          "status": "PASS",
+          "members": 14
+        },
+        "select": {
+          "status": "PASS",
+          "members": 47
+        },
+        "audit": {
+          "status": "PASS",
+          "members": 2
+        }
+      },
+      "checkpoint_receipts": {
+        "teacher": {
+          "bytes": 48836,
+          "sha256": "8c8010eeaafab763b65d19d38d714a824fd9af029e0730fac2124298c7b35ff6"
+        },
+        "student": {
+          "bytes": 49874,
+          "sha256": "4f123feb5eda741cf99a523c219e96f54732de7049afc325be12464104c7ee97"
+        }
+      },
+      "teacher_seconds": 1448.316636278,
+      "student_seconds": 1537.132214681,
+      "archive": {
+        "bytes": 344074831,
+        "sha256": "1fb12ba10f7a1c37d88b0cc1b9674719142d02a3f9234c1ec9b939f444d89b76"
+      }
+    },
+    "E009-GLM": {
+      "axis": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "seals": {
+        "teacher": {
+          "status": "PASS",
+          "members": 26
+        },
+        "teacher-embed": {
+          "status": "PASS",
+          "members": 3
+        },
+        "teacher-graph": {
+          "status": "PASS",
+          "members": 4
+        },
+        "pairs": {
+          "status": "PASS",
+          "members": 15
+        },
+        "student": {
+          "status": "PASS",
+          "members": 26
+        },
+        "student-embed": {
+          "status": "PASS",
+          "members": 3
+        },
+        "student-graph": {
+          "status": "PASS",
+          "members": 4
+        },
+        "retrieve": {
+          "status": "PASS",
+          "members": 7
+        },
+        "forest": {
+          "status": "PASS",
+          "members": 15
+        },
+        "construct": {
+          "status": "PASS",
+          "members": 12
+        },
+        "e023": {
+          "status": "PASS",
+          "members": 14
+        },
+        "select": {
+          "status": "PASS",
+          "members": 47
+        },
+        "audit": {
+          "status": "PASS",
+          "members": 2
+        }
+      },
+      "checkpoint_receipts": {
+        "teacher": {
+          "bytes": 94765,
+          "sha256": "0c182c3e6aec89e93dd0c0637d4e19bae03b96c7d9b4e03106895a9875e713e9"
+        },
+        "student": {
+          "bytes": 95796,
+          "sha256": "0d25a594e6eeb50a7ab19d46aaf0d20ec813400994b5085065b5965c30d9f941"
+        }
+      },
+      "teacher_seconds": 1687.1071673630004,
+      "student_seconds": 1775.3267960009998,
+      "archive": {
+        "bytes": 348735473,
+        "sha256": "1628f92e4ef14794f56c21acf41f6b4b1da03e86d52b2ff1223f03875ac0e082"
+      }
+    },
+    "oral-noGLM": {
+      "axis": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      },
+      "seals": {
+        "teacher": {
+          "status": "PASS",
+          "members": 26
+        },
+        "teacher-embed": {
+          "status": "PASS",
+          "members": 3
+        },
+        "teacher-graph": {
+          "status": "PASS",
+          "members": 4
+        },
+        "pairs": {
+          "status": "PASS",
+          "members": 15
+        },
+        "student": {
+          "status": "PASS",
+          "members": 26
+        },
+        "student-embed": {
+          "status": "PASS",
+          "members": 3
+        },
+        "student-graph": {
+          "status": "PASS",
+          "members": 4
+        },
+        "retrieve": {
+          "status": "PASS",
+          "members": 7
+        },
+        "forest": {
+          "status": "PASS",
+          "members": 15
+        },
+        "construct": {
+          "status": "PASS",
+          "members": 12
+        },
+        "e023": {
+          "status": "PASS",
+          "members": 14
+        },
+        "select": {
+          "status": "PASS",
+          "members": 47
+        },
+        "audit": {
+          "status": "PASS",
+          "members": 2
+        }
+      },
+      "checkpoint_receipts": {
+        "teacher": {
+          "bytes": 48725,
+          "sha256": "f9e04da1cf228d46339345e44aaa668c18d3ce8026f9c33e16b953d9f3382863"
+        },
+        "student": {
+          "bytes": 49819,
+          "sha256": "25126a1fc4f7879489d89e21892ca0ce05ed2cb3f7b04a15ff0cd7031b3f57a2"
+        }
+      },
+      "teacher_seconds": 7901.952736680001,
+      "student_seconds": 8154.094853576,
+      "archive": {
+        "bytes": 2574620856,
+        "sha256": "2a08dd6739292d162d627c22321c476e1b6903c5f477250aa0f3e8e351507762"
+      }
+    }
+  },
+  "filesystem": {
+    "history": {
+      "bytes": 1732419,
+      "sha256": "650f92d982214da23e783343187b8e554373735307911e9764944d47cc050c93"
+    },
+    "samples": 16943,
+    "minimum_free_bytes": 28833132544,
+    "minimum_source_free_bytes": 28833132544,
+    "minimum_task_free_bytes": 92610183168,
+    "maximum_original_baseline_growth_bytes": 12462276608,
+    "maximum_task_used_bytes": 12462301184,
+    "original_task_baseline_bytes": 24576,
+    "monitor_error": null,
+    "scope": "Current recovery science/collection sampled devices; original task baseline retained; earlier missing sort peak not reconstructed"
+  },
+  "matching_watchdog_shutdown": true,
+  "provider": {
+    "status": "TERMINATED",
+    "lastStart_UTC": "2026-11-05T02:38:39.010Z",
+    "lastStop_UTC": "2026-11-05T12:07:43.280Z",
+    "allocation_seconds": 34144.27,
+    "final_disks_GiB": [
+      30,
+      300
+    ],
+    "task100_deleted_after_full_preservation": true
+  },
+  "source_policy_unchanged": true,
+  "original_Mac_portability_tolerance_unchanged": true,
+  "baselines_rescored": false,
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e033/resume-20261105T023814Z-941ede3/",
+  "archives": {
+    "E009-noGLM": {
+      "status": "PASS",
+      "archive": {
+        "bytes": 344074831,
+        "sha256": "1fb12ba10f7a1c37d88b0cc1b9674719142d02a3f9234c1ec9b939f444d89b76"
+      },
+      "generation": "1793879917964499",
+      "every_member_verified": true,
+      "physical_members": 2352,
+      "aliases": 46,
+      "logical_bytes": 513522938,
+      "independent_server_MD5_verified": true,
+      "no_complete_compressed_local_duplicate": true,
+      "full_verification_record": {
+        "bytes": 469191,
+        "sha256": "1c3e8a9531dbdc420b5bae0b7c0274eb9c0e0e524214a313b3add211ca2e8328"
+      }
+    },
+    "E009-GLM": {
+      "status": "PASS",
+      "archive": {
+        "bytes": 348735473,
+        "sha256": "1628f92e4ef14794f56c21acf41f6b4b1da03e86d52b2ff1223f03875ac0e082"
+      },
+      "generation": "1793879956695389",
+      "every_member_verified": true,
+      "physical_members": 2353,
+      "aliases": 45,
+      "logical_bytes": 526329598,
+      "independent_server_MD5_verified": true,
+      "no_complete_compressed_local_duplicate": true,
+      "full_verification_record": {
+        "bytes": 27434,
+        "sha256": "cf24342ad4cc8dacdaf6b981f16e6cc4f56721291f873dfa51091edd33f55137"
+      }
+    },
+    "oral-noGLM": {
+      "status": "PASS",
+      "archive": {
+        "bytes": 2574620856,
+        "sha256": "2a08dd6739292d162d627c22321c476e1b6903c5f477250aa0f3e8e351507762"
+      },
+      "generation": "1793880222209084",
+      "every_member_verified": true,
+      "physical_members": 2356,
+      "aliases": 42,
+      "logical_bytes": 4503276064,
+      "independent_server_MD5_verified": true,
+      "no_complete_compressed_local_duplicate": true,
+      "full_verification_record": {
+        "bytes": 26437,
+        "sha256": "306681b34ee09b8cd60043551a22c4572846e57fb3cd9d46189616d865ceeeb2"
+      }
+    },
+    "closed-delivery": {
+      "status": "PASS",
+      "archive": {
+        "bytes": 2303131,
+        "sha256": "cca4c0746be2ffb4bd56ec2916d8a539bed59108f317a3b900cab86bd22bc881"
+      },
+      "generation": "1793880240411334",
+      "every_member_verified": true,
+      "physical_members": 37,
+      "aliases": 2,
+      "logical_bytes": 14229098,
+      "independent_server_MD5_verified": true,
+      "no_complete_compressed_local_duplicate": true,
+      "full_verification_record": {
+        "bytes": 8122,
+        "sha256": "9a36ccba7533fc17a93c6302abd8b77491d21572004806ed2fad9ef3a9236ee5"
+      }
+    }
+  },
+  "local_evidence_root": "artifacts/e033-multiscale-bam/completed-inspection-20261105",
+  "evidence": {
+    "control-state.json": {
+      "bytes": 34238,
+      "sha256": "746eaa05b9c5f620ef06b7de708acbd76aeee531959799276189a58d09eb64bb"
+    },
+    "receipts/completion.json": {
+      "bytes": 16193,
+      "sha256": "9bec5e259d658aa463159688f5a580f3183c1793bcaa12203342ccbda3c9bf45"
+    },
+    "receipts/closed-delivery-tail.json": {
+      "bytes": 341,
+      "sha256": "0f82f247f8cc690b2c111188b84776d1e738377be48d9132866265d217c244e2"
+    },
+    "receipts/watchdog-exit.json": {
+      "bytes": 12187,
+      "sha256": "d3e8ac84a9bf534351f435766b30a69964a3ce574d892d6402800773865d75ae"
+    },
+    "receipts/filesystem.jsonl": {
+      "bytes": 1732419,
+      "sha256": "650f92d982214da23e783343187b8e554373735307911e9764944d47cc050c93"
+    },
+    "all-streams-verified.json": {
+      "bytes": 1417,
+      "sha256": "7562a69565aa4096f7779dc91b5b9af799e82ecd8c97db94f44ff083e4debf87"
+    },
+    "native-admission.json": {
+      "bytes": 19615,
+      "sha256": "f06b8fdce041fe3c57442e1e31a8f81bae0a4d61aeed347f7a9af1beaf3327cd"
+    },
+    "review-closed.json": {
+      "bytes": 541,
+      "sha256": "cdbad96a6d843849d8af91fcb49ba46c57870f2c83034464c561da0bf2c0c687"
+    },
+    "summary.json": {
+      "bytes": 35996,
+      "sha256": "9018754d0aee7217790e60a7f53825fb734451ea3375f5e2a1d93278b4395892"
+    },
+    "temporary-disk-release-admission.json": {
+      "bytes": 1720,
+      "sha256": "1ca5197ad7b6a87bfffa96990903693645919765afe350fe11f427a1585832cf"
+    },
+    "temporary-disk-released.json": {
+      "bytes": 33740,
+      "sha256": "bb763d67999f3053e32a8adbb713e0d9580d9e758fc420c12e48ea7a4b5a558e"
+    },
+    "local-staging-repair.json": {
+      "bytes": 768,
+      "sha256": "34426e40b30b861b13b8605c1ab6baf8c35a5fd758798f5e1932f4747fb84b58"
+    },
+    "pair-ledger-recovery.json": {
+      "bytes": 1850,
+      "sha256": "68bce9da3db5000d52be3389292b21c7a289a1139337b076388abd6bc387cf08"
+    }
+  },
+  "analysis_sources": {
+    "scripts/e033_completed_inspection.py": {
+      "bytes": 13691,
+      "sha256": "9d9bcf7a10bf2b63418c356f762333dfbf45961a3d5c684889b664df235fb901"
+    },
+    "scripts/e033_geometry_inspection.py": {
+      "bytes": 8706,
+      "sha256": "f8d42a0e885ae9c27eb4dd41e114d7f9c9a671da238631cdd5ccee4989a271de"
+    },
+    "scripts/e033_review.py": {
+      "bytes": 6915,
+      "sha256": "b1cdd9adc0d74fefc023a7fd820dbf15b9b5709bbbb9b2c209b3b52dfae4cfc7"
+    },
+    "scripts/e031_review.py": {
+      "bytes": 10672,
+      "sha256": "303d03c51c242147c82ef505fd7a5695f5e467d6c823eb731b5ec30dd812014c"
+    }
+  },
+  "review": "comparison-review.json",
+  "cost": "completed-cost.json",
+  "no_new_VM_wake_or_science": true,
+  "skin_unscored": true,
+  "active_retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "final_local_checks": {
+    "status": "PASS",
+    "commands": [
+      {
+        "command": [
+          "python3",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_e033_completed_inspection.py",
+          "-v"
+        ],
+        "exit": 0,
+        "seconds": 0.31796648599993205,
+        "log": {
+          "bytes": 930,
+          "sha256": "318f6f5743883bbc86d6071213928047c9929e5b36bdc5cef62a43019618244c"
+        }
+      },
+      {
+        "command": [
+          "python3",
+          "-B",
+          "-m",
+          "py_compile",
+          "scripts/e033_completed_inspection.py",
+          "scripts/e033_geometry_inspection.py"
+        ],
+        "exit": 0,
+        "seconds": 0.06355604800046422,
+        "log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "command": [
+          "python3",
+          "scripts/check_docs.py"
+        ],
+        "exit": 0,
+        "seconds": 19.951986621999822,
+        "log": {
+          "bytes": 689,
+          "sha256": "3345d5185e76d1315726f8c4340285f3ad7d49779ffdce426302dd5482d4aeb1"
+        }
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit": 0,
+        "seconds": 0.07237321400316432,
+        "log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    ],
+    "retained_native_integration_tests": 3,
+    "portable_delivery_test": 1,
+    "private_tests_skip_explicitly_without_assets": true,
+    "product_suite_not_repeated": true,
+    "numerical_review_not_repeated": true,
+    "docs_optional_missing_historical_caches": 10,
+    "original_122_file_and_effective_repair_bindings": "PASS via e033_recovery.admit()"
+  }
+}

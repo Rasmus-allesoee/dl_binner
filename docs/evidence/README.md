@@ -41,3 +41,5 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [E029 completed recovery evidence, root bias and biological bin construction](2026-11-01-e029-bin-construction.md)
 
 - [November 4: common measured multiscale coverage, JGI counter diagnosis and local storage](2026-11-04-multiscale-coverage-and-storage.md)
+
+- [November 5: completed E033 recovery evidence and genome-graph priority](2026-11-05-e033-genome-graph-priority.md)

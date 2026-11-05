@@ -5,15 +5,17 @@ community outcomes. [Operations](OPERATIONS.md) owns the separate execution
 request, native gates and November 11 boundary. [Protocol](protocol.json),
 [candidate](candidate-lock.json), [source](source-lock.json), [reuse](reuse-lock.json)
 and [twenty BAMs](BAM-manifest.json) bind exact inputs/defaults.
-[Completed inspection](inspection-review.md) finds **FAILED science / NOT_ASSESSED
-comparison**: twenty summaries and both banks pass, but the first E009 no-GLM
-teacher fails before a complete model/epoch/partition. Two returns pass full
-bytes/members; root completion and the detailed worker/terminal tail are missing.
-The VM is independently TERMINATED. [Actual cost model](inspection-cost.json),
-[technical measurement review](measurements-review.json),
-[cleanup](inspection-cleanup.json) and [assessed recovery](recovery-assessment.json)
-are current. The earlier [native handoff](native-observed.json) remains historical
-progress evidence; no new biological result is inferred from it.
+[Completed review](completed-review.md) accepts the repaired phase
+`resume-20261105T023814Z-941ede3`: all six fits, 39 stages and complete private
+archive/member/delivery contracts pass; VM independently TERMINATED. Frozen
+scientific disposition is **ABANDON this bundle**, with post R95 10.1517% / 9.9201% /
+33.0110%, below E032 in all modes. [Admission](completed-observed.json),
+[results](comparison-review.json), [targets](targets.tsv) and [costs](completed-cost.json)
+are current. The temporary 100 GiB disk is safely deleted after preservation.
+[Earlier failure](inspection-review.md), [forensic repair](recovery-review.md), all
+failed journals and original freezes remain historical evidence. No failed record
+is rewritten as success. [Next block](next-block.md) is a new proposed scope,
+not another authorized E033 fit.
 
 The candidate preserves E031 state, adds measured parent/crop breadth/dispersion/
 confidence to the explicit depth branch, and keeps E032's common constructor fixed.

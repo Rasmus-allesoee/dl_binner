@@ -1,0 +1,58 @@
+{
+  "METAMVGL": {
+    "repository": "https://github.com/ZhangZhenmiao/METAMVGL",
+    "commit": "14e513f0222745619894347565995b8ab13d4d6c",
+    "checked_epoch": 1793891344.6265202,
+    "executed": false,
+    "files": {
+      "graph.cpp": {
+        "bytes": 26970,
+        "sha256": "aaf6df19dc9324b94042d5d1c34003aee5d4dbef1a97ed01e67eb699fbe61141",
+        "primary_url": "https://github.com/ZhangZhenmiao/METAMVGL/blob/14e513f0222745619894347565995b8ab13d4d6c/graph.cpp"
+      },
+      "graph.h": {
+        "bytes": 1812,
+        "sha256": "e8f05f0a2db6c32bb7bde106734eff7c1308c63ced5c7bbced9987db0172f0ac",
+        "primary_url": "https://github.com/ZhangZhenmiao/METAMVGL/blob/14e513f0222745619894347565995b8ab13d4d6c/graph.h"
+      },
+      "main.cpp": {
+        "bytes": 2636,
+        "sha256": "97e99382adaafb5a312d6610a12723b23148207c6f25998a953c4a98a3608c1f",
+        "primary_url": "https://github.com/ZhangZhenmiao/METAMVGL/blob/14e513f0222745619894347565995b8ab13d4d6c/main.cpp"
+      },
+      "METAMVGL.py": {
+        "bytes": 11116,
+        "sha256": "02c170e32e919c88844b6282f12c4700a88cc65e6dfd737466fb6b984a74de28",
+        "primary_url": "https://github.com/ZhangZhenmiao/METAMVGL/blob/14e513f0222745619894347565995b8ab13d4d6c/METAMVGL.py"
+      }
+    }
+  },
+  "GraphMB": {
+    "repository": "https://github.com/MicrobialDarkMatter/GraphMB",
+    "commit": "30cb2ded07531135a92ef0890cf1bf06fd28717e",
+    "checked_epoch": 1793891348.011542,
+    "executed": false,
+    "files": {
+      "src/graphmb/contigsdataset.py": {
+        "bytes": 43090,
+        "sha256": "ecc8e9c6d73e147c3050a710cfcb3df816bebf775ce1226887e6d716d4b6963e",
+        "primary_url": "https://github.com/MicrobialDarkMatter/GraphMB/blob/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/contigsdataset.py"
+      },
+      "src/graphmb/gnn_models.py": {
+        "bytes": 15718,
+        "sha256": "7611830e6e1f20ad30ed2212fd8246c857dc7080fe5787e37eb0164feef20e7e",
+        "primary_url": "https://github.com/MicrobialDarkMatter/GraphMB/blob/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/gnn_models.py"
+      },
+      "src/graphmb/graphmb1.py": {
+        "bytes": 17817,
+        "sha256": "aa1085960b5a6cc7a5ed40fa48a9f4d5f18c9b75ed2c94633d5793bdd9d0e49f",
+        "primary_url": "https://github.com/MicrobialDarkMatter/GraphMB/blob/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/graphmb1.py"
+      },
+      "src/graphmb/models.py": {
+        "bytes": 28880,
+        "sha256": "b97dafed676a86561932f383f84b84ac66b1d96f632f3af3a8951580ad4f6155",
+        "primary_url": "https://github.com/MicrobialDarkMatter/GraphMB/blob/30cb2ded07531135a92ef0890cf1bf06fd28717e/src/graphmb/models.py"
+      }
+    }
+  }
+}

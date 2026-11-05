@@ -1,0 +1,96 @@
+{
+  "status": "NOT_ASSESSED",
+  "reason": "No completed new teacher/student or complete partitions; global workflow failed and final delivery is missing",
+  "primary_rule_unchanged": {
+    "status": "PROSPECTIVE_LOCAL_PREPARATION_NO_COMMUNITY_OUTCOMES",
+    "same_version_all_modes": true,
+    "units": [
+      "E009-noGLM",
+      "E009-GLM",
+      "oral-noGLM"
+    ],
+    "teacher_epochs": 20,
+    "student_epochs": 20,
+    "seed": 11,
+    "batch_size": 256,
+    "old_reconstruction": {
+      "composition": 1.0,
+      "depth": 0.1
+    },
+    "parent_depth": "shared newly measured",
+    "crop_depth": "genuine exact retained interval plus explicit parent context",
+    "GLM_policy": "on/off propagated through retained initialization, adapted teacher, proposals, student; no hidden GLM in no-GLM modes",
+    "grouping": "unchanged E023/E030 candidate producers and common E032 selection/joint acceptance; no dataset routing",
+    "primary": "frozen full-reference weighted R95 / T90",
+    "full_reference_targets": {
+      "E009": 156,
+      "oral": 799
+    },
+    "E009_N_quarantine_fraction": 0.033034,
+    "oral_truth": "provided-origin oracle with known-shared sensitivity, not unique-identifiability proof",
+    "KEEP": "No R95/T90 loss against E032 in any mode, >=0.5 percentage point E009 gain, no best-bin multi-contig R95-contribution loss",
+    "MODIFY": "Useful gain with trade-off or smaller effect",
+    "ABANDON": "No R95 gain in any mode, or E009 loses >=1 point without >=0.5 point gain elsewhere",
+    "integrity_failure": "NOT_ASSESSED",
+    "selection_optimality_not_established": true,
+    "baselines_rescored": false,
+    "skin_acquired_this_task": false,
+    "skin_previously_local_and_unscored": true,
+    "optional_parent_mean_only_control_included": false,
+    "bundle_not_pure_information_causal_test": true,
+    "historical_depth_filter_priors_retained_in_E031_initialization": true
+  },
+  "units": {
+    "E009-noGLM": {
+      "R95": null,
+      "T90": null,
+      "pre_post_effect": null,
+      "secondary_HQ_MQ_LQ": null
+    },
+    "E009-GLM": {
+      "R95": null,
+      "T90": null,
+      "pre_post_effect": null,
+      "secondary_HQ_MQ_LQ": null
+    },
+    "oral-noGLM": {
+      "R95": null,
+      "T90": null,
+      "pre_post_effect": null,
+      "secondary_HQ_MQ_LQ": null
+    }
+  },
+  "retained_frozen_references_not_rescored": {
+    "E023_E009_GLM_R95_percent": 10.4163,
+    "E032_R95_percent": {
+      "E009_noGLM": 10.2847,
+      "E009_GLM": 10.176,
+      "oral_noGLM": 34.3786
+    },
+    "E031_stronger_constructor_R95_percent": {
+      "E009_noGLM": 10.611,
+      "E009_GLM": 10.5684,
+      "oral_noGLM": 11.3272
+    },
+    "MetaBAT2_R95_percent": {
+      "E009": 8.5493,
+      "oral": 17.326
+    }
+  },
+  "denominators": {
+    "E009": 156,
+    "oral": 799
+  },
+  "E009_N_quarantine_fraction": 0.033034,
+  "oral_truth": "provided-origin oracle; separately named known-shared sensitivity, not exhaustive unique truth",
+  "all_length_origin_eligibility_marker_unknown_non_target_unassigned_singleton_multicontig_diagnostics": "UNAVAILABLE: no new complete partitions; populations were not silently dropped",
+  "interpretation": "No positive or negative biological conclusion about multiscale information, learning, GLM or E032; cannot isolate a recovery gap from a failed fit",
+  "phase": "multiscale-20261104T152005Z-a940769-r2",
+  "scope": "Historical failed attempt; NOT_ASSESSED and its original scientific criteria remain unchanged",
+  "newer_recovery": {
+    "phase": "resume-20261105T023814Z-941ede3",
+    "status": "RUNNING_NO_COMPLETE_QUALITY_RESULT",
+    "evidence": "recovery-observed.json",
+    "review": "recovery-review.md"
+  }
+}

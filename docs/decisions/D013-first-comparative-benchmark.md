@@ -1,13 +1,37 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
-Historical November 4 execution update (superseded by the November 5 inspection below): the owner separately authorizes E033's new $20
+## E033 completed comparison and evidence scope, November 5
+
+[Completed inspection](../../experiments/E033-multiscale-bam/completed-review.md)
+accepts all six fits, 39 scientific seals and complete private delivery, then
+records **ABANDON** for the frozen bundle: no mode improves R95 against E032.
+This is a completed negative bundle result, distinct from the original operational
+failure. Full truth/length/origin/singleton/multi-contig denominators remain; no
+causal rejection of measured depth, windows or GLM follows.
+
+The next [qualified physical-link/graph block](../../experiments/E033-multiscale-bam/next-block.md)
+must change a recovery decision against strong E031/E032/E023 references, not
+merely outperform rejected E033. The [source/alternatives review](../evidence/2026-11-05-e033-genome-graph-priority.md)
+supports the information hypothesis but does not establish a gain. Retained
+MetaBAT2 is already below E032 here; it does not quantify a gap to every stronger
+binner. Keep both communities as development data, skin unscored with known source
+overlap, and Q006/full Oral GLM dependencies explicit. No new tool campaign.
+
+Actual all-attempt E033 attribution is at most about $5.44 gross under original
+$20, separate original-disk storage approval. VM independently TERMINATED; exact
+100 GiB task disk released after complete preservation. A proposed new $15 scope
+needs a new owner instruction and fresh gates; old budgets do not carry over.
+November 11 active / November 18 automatic-tail limits remain. Earlier failure
+and running paragraphs below are historical, superseded for current status only.
+
+Historical November 4 execution update (superseded by the November 5 completed review above): the owner separately authorizes E033's new $20
 credit-only pilot/three-mode comparison and conditional 100 GiB task disk. Fresh
 complete admission passes; [native evidence](../../experiments/E033-multiscale-bam/native-observed.json)
 records passed Linux gates and the supervised retained-BAM pilot. Outcomes are
 pending. No scientific rule, baseline, retention boundary or confirmation scope
 changes; the preparation-authority statements below are historical snapshots.
 
-## November 5 E033 failure, not a biological decision
+## Earlier November 5 E033 failure, not then a biological decision
 
 [Independent inspection](../../experiments/E033-multiscale-bam/inspection-review.md)
 verifies twenty common BAM measurements and both banks, then a failed first

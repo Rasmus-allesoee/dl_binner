@@ -1,6 +1,44 @@
 # Google Cloud workspace operations
 
-## November 5 repaired E033 comparison running under verified supervision
+## November 5 E033 completed; temporary disk released
+
+[Completed inspection](../experiments/E033-multiscale-bam/completed-observed.json)
+independently confirms `dl-binner-cpu` **TERMINATED**, last stop November 5 at
+12:07:43.280 UTC / 13:07 Copenhagen. Phase `resume-20261105T023814Z-941ede3`
+finishes all 11 actual phase exits, 39 scientific seals, six fits and complete
+upload/readback/closed-tail delivery. The current-boot/process watcher requests
+shutdown after its parent exits. Original clocks and failed journals stay intact;
+no VM wake occurred for inspection. [Quality review](../experiments/E033-multiscale-bam/completed-review.md)
+rejects the scientific bundle on unchanged criteria, separately from native success.
+
+After archive/generation/member/alias preservation and closed log/measurement/source
+checks, exact 100 GiB task disk `e033-task-1793805630`, ID `1578633013833953331`,
+is detached/deleted, independently absent. Only original 30 GiB standard / 300 GiB
+balanced disks remain. Original roots/terminal logs and unique accepted inputs are
+protected. The deleted disk is not a future reuse target; another task disk needs
+a new authorized scope. No quota expansion, VM start or original-disk deletion.
+
+[Final cost model](../experiments/E033-multiscale-bam/completed-cost.json): allocation
+34,144.270 seconds / $2.58971 CPU/RAM/IP for the successful phase, all E033 closed
+allocations $3.93514; actual 100 GiB lifetime upper $0.33013; total E033 gross
+attribution upper **$5.44**, including conservative export/storage/operations, under
+original $20. Sampled CPU is not the price, credit delta is not an invoice. Catalog
+monthly storage conversion is 721 hours; original 30/300 GiB is $31.20/pricing
+month gross, before free-tier effects. Original disks plus all current archives
+are about $7.62 over seven days under the separate $9 preservation approval.
+
+Fresh Credits/Overview before export: DKK 1,650.37 Available / 84%, January 12,
+2027 expiry, unchanged Certain usage / Free Trial terms / net pricing, Paid account.
+November 1–5 gross/savings/net DKK 42.20 / 42.20 / 0.00; >24-hour delay warning and
+$35 reserve. Current Catalog, open project, eligible ordinary products and all
+326 private versions / 81,788,178,274 bytes pass, zero soft-deleted. No active
+retention extension: **November 11 at 00:00 Copenhagen**, approved automatic tail
+November 18. A new research proposal is not a renewal or a new live financial gate.
+
+The dated snapshots below are preserved history. Current resource/research state
+is this section and STATE, not an older RUNNING or protected-task-disk paragraph.
+
+## Historical November 5 repaired E033 running snapshot
 
 Phase `resume-20261105T023814Z-941ede3`, exact private source `941ede3`, starts on
 the existing E2 November 5 at 02:38:39.010 UTC. All six changed native gate exits

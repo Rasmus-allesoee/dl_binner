@@ -1,6 +1,43 @@
 # E033 operations
 
-## November 5 native repair passed; same comparison running
+## November 5 completed inspection: accepted execution, ABANDON bundle
+
+Phase `resume-20261105T023814Z-941ede3` is independently **TERMINATED** at
+12:07:43.280 UTC / 13:07 Copenhagen. All 11 phase exits, 39 scientific seals,
+six complete fits, exact source/axes/state/reload/geometry and complete archive/
+member/alias/closed-delivery/watchdog contracts pass. [Completed review](completed-review.md),
+[compact admission](completed-observed.json), [results](comparison-review.json)
+and [costs](completed-cost.json) supersede earlier RUNNING status only; failed
+journals, source freezes and original clocks are preserved.
+
+Post R95 10.1517% / 9.9201% / 33.0110% loses in all modes against E032; frozen
+ABANDON applies to this bundle. New pre/post effects are positive but insufficient.
+All 156/799 targets, N quarantine, Oral known-shared sensitivity, DNA/length/origin/
+eligibility/marker/unassigned and singleton/multi-contig populations remain.
+Review finishes in 53.97 minutes, 5.434 GB sampled RSS, four threads and 2.327 GB
+staging/output, within the original common hour/3 GiB bounds. No new VM wake.
+
+Complete all-attempt gross attribution upper is **$5.44 of original $20**; measured
+successful allocation compute is $2.58971, all E033 compute $3.93514. Original
+30/300 GiB plus archive storage overlaps its separate $9 approval. After complete
+preservation, exact 100 GiB task disk is safely detached/deleted. It no longer
+exists and is not a reuse target. Keep original disks/evidence unchanged.
+**November 11 at 00:00 Copenhagen** active retention / November 18 approved
+automatic tail remain; no extension occurs here.
+
+[The next recommendation](next-block.md) is one coherent physical-template-supported
+graph representation, conditional on actual reliable-link utility. It starts from
+strong preserved E031 features/E032 construction, preserves E023 10.4163% and all
+other references, and does not promote weaker E033. It is a new scientific scope,
+with a separately proposed $15 credit-only pilot/conditional comparison. The Exact
+following prompt below is a proposed owner authorization, not permission to run it
+during this completed-output inspection. Source/alternatives review, Q006, efficient
+Oral GLM and acquired/unscored skin dependencies remain linked in next-block.md.
+
+The dated native/recovery/inspection prompts below are historical. Do not restart
+E033, replay its accepted measurements/fits or follow an old RUNNING handoff.
+
+## Historical November 5 native repair/running snapshot
 
 Phase **`resume-20261105T023814Z-941ede3`**, exact clean source **`941ede3`**,
 reuses all measurements/state/barrier/probes. Six changed native gate exits pass:
@@ -562,7 +599,7 @@ why; report actual results/costs/resources, all limits, one next decision and th
 exact following prompt. Do not add another approval loop for the recovery already
 authorized in this prompt; stop before genuinely unclear or uncovered spending.
 
-## Exact following prompt
+## Executed completed-output inspection prompt (November 5)
 
 Our goal is substantially closing the recovery gap with one shared binner. Read
 AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015 and E033's frozen design,
@@ -648,3 +685,95 @@ Skin stays unscored pending biological/overlap/ambiguity/unique-versus-origin/de
 protocol/cost admission. Update records/check/commit with structured what changed/
 why and report verified outcomes, actual costs/resources, limits, one next decision
 and exact following prompt. No new science or score campaign in this inspection.
+
+
+## Exact following prompt
+
+Our goal is substantially improving MAG recovery with one general-purpose binner.
+Read AGENTS.md, PROJECT_INTENT.md, STATE/CLOUD, D013/D015, E033's completed-review,
+comparison-review/targets, completed admission/costs, next-block, targeted genome-
+graph source audit and the completed learning/standalone reviews. Preserve immutable
+dev3/dev4/dev5/E009–E033 science, truth, models, all source freezes and failed
+journals. Use a new descriptive research branch without a codex/ prefix.
+
+Implement and locally test the proposed BAM-supported genome-graph representation
+as one coherent new block. Begin from stronger preserved E031 common three-mode
+learning and provisional E032 construction; do not promote rejected E033 learning.
+Keep E023 E009 GLM 10.4163%, stronger E031 constructor contexts, E032 and native
+MetaBAT2 as frozen unrescored references. Reuse source-bound frozen bootstrap
+vectors, admitted E033 measured parent/window banks and cached DNA/views/markers/
+GLM. Keep inherited historical depth priors explicit. Resolve one justified compact
+confidence-gated graph encoder/objective/defaults using targeted primary sources;
+freeze design, availability policy, whole source and recovery criteria before
+changed community outcomes. Similarity and physical links are distinct evidence;
+no hard component union, truth K/thresholds/edge routing or automatic taxonomy/
+ensemble/marker cannot-links. Keep all DNA and an unlinked/unassigned fallback.
+
+Implement scalable per-sample template joins that verify both real mates, opaque
+QNAME/R1/R2 identities, source axes, flags, MAPQ/NM/CIGAR, coordinates, end/insert/
+orientation support, duplicates, ambiguous/multiple placements, repeat hubs and
+normalized template counts. Do not parse simulator source/coordinate headers into
+features or treat a mate pointer/proper-pair flag alone as independent evidence.
+Test actual tiny BAM/collation/selection/malformed/refusal/sparse/disconnected/
+all-unlinked cases, installed tiny graph training/gradient/reload/unit geometry,
+full export/accounting and archive-to-compact-stage-to-strict-reader contracts.
+Retain features, all evidence layers, graph/embeddings and pre/post partitions.
+At most one prospective links-off matched control may be included if decision-
+changing; no grid/factorial campaign or refit of old encoders.
+
+I authorize a NEW proposed **$15 incremental gross credit-only pilot and conditional
+three-mode comparison**, subject to fresh full credit/balance/scope/expiry/delayed-
+usage/product/prices/cost/quota/storage/retention/headroom gates. Prior budgets do
+not carry over. Use existing e2-standard-8 / 32 GiB and original 30/300 GiB disks;
+if verified safe cleanup cannot satisfy measured peak plus reserve, one new
+100 GiB balanced task disk is included. The old E033 task disk is deleted. E009
+BAMs are on the original work disk; Oral BAMs are retained unsorted generation-pinned private objects, not a surviving
+task-disk cache. Admit their serial verified restoration/collation footprint. No
+other resource/quota, remapping, acquisition, external binner or confirmation run.
+Plan at most 36 common hours from first start including setup/repair/stopped gaps,
+provider STOP 36.25 hours, four numerical threads, 26 GB sampled tree RSS, separate 25 GiB reserves, 60 GiB extra
+task growth and 4 GiB aggregate compressed export. Standing reasonable credit-
+covered envelope flexibility applies prospectively, without real-money charges,
+weakened science or retention renewal. Preserve November 11 at 00:00 Copenhagen
+active / November 18 automatic-tail boundaries; do not start a complete schedule
+that cannot fit them. Prefer normal exact clean Git sync when the complete outgoing
+history is safe; otherwise use the already approved private exact-commit route.
+
+Before a paid start, pass local producer/consumer/schema/source/tiny/forecast
+checks and fresh financial gates. On the VM, arm/test the fresh boot/process held-
+parent watcher and read back independent STOP before releasing native gates. Pass
+complete native source/runtime/tiny checks within the same common clock.
+First run the frozen source-blind representative retained-BAM pilot for each
+community; measure reliable-link utility/connectivity/rejections and actual
+throughput/RAM/space. Admit the complete serial cache/graph-fit/construction/
+collection schedule before community fits. A GSA may have too few useful bridges:
+if its frozen utility/safety gate fails, preserve that result and reconsider before
+fitting, without inventing links or lowering a threshold. Debug operational errors
+within the task with verified reuse, fresh failed-attempt journals and unchanged
+scientific gates. Never replay an accepted old stage merely to simplify recovery.
+
+If admission passes, execute the same frozen graph candidate across E009 no-GLM,
+E009 GLM and Oral ten-depth no-GLM; GLM-on information includes all upstream
+teacher/proposals where used. Freeze the MAG rule before outcomes: evaluate against
+strong E031/E032/E023 anchors, not merely weak E033, and require meaningful
+fragmented-genome recovery while exposing any common-mode regression. For healthy
+longer work verify supervision and real progress, observe a few minutes then hand
+off rather than poll to completion; follow a short job through collection. After
+shutdown, verify actual exits/archive/member/alias/delivery bytes and actual gross
+allocation/storage/export before bounded new-output diagnostics only. Retain full
+156/799 denominators, E009 conservative v2 / 3.3034% N quarantine, separate Oral
+provided-origin/known-shared sensitivity, all length/origin/eligibility/marker/
+unlinked/unknown/non-target/excluded/unassigned/singleton/multi-contig populations
+and secondary threshold tiers. Never claim a guaranteed gain or SOTA from these
+two development communities.
+
+Keep Q006 standalone candidate selection open. Prepare the explicit Oral GLM
+state/Adam/teacher/proposal extension and unchanged batching qualification in
+parallel locally. The separate $3 T4 qualification needs fresh specific execution/
+resource/credit admission; full extraction needs its own larger measured cost case.
+Neither is silently included here. Keep
+already acquired skin unscored pending source/genome/replicon/molecule/taxonomy/
+overlap/ambiguity/unique-versus-origin truth, depth/features, unchanged confirmation
+protocol and separate cost/retention admission. Update records/check/commit with
+structured what changed/why; report actual recovery/resources/costs/limits and
+one next decision. No baseline rescoring, confirmation DNA or retention extension.

@@ -16,7 +16,17 @@ The candidate focus is contig loss/misassignment in fragmented prokaryotic assem
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
 
-November 5: [E033 inspection](../../experiments/E033-multiscale-bam/inspection-review.md)
+November 5 completed update: [E033's six accepted fits](../../experiments/E033-multiscale-bam/completed-review.md)
+lose R95 in all three modes: frozen ABANDON this bundle, with measurement assets
+and all failures preserved. Oral multi-contig T90 falls 57 → 45 despite noncollapse
+and technically accurate retrieval. [The next hypothesis](../evidence/2026-11-05-e033-genome-graph-priority.md)
+is a common physical-template-supported graph representation from strong preserved
+bootstrap features, conditional on actual link utility/reliability. No guaranteed
+gain, isolated depth effect, selection optimality or product-family conclusion.
+The original 100 GiB task disk is safely released; VM remains TERMINATED. All
+biological truth limits and November 11/18 boundaries remain.
+
+Earlier November 5: [E033 inspection](../../experiments/E033-multiscale-bam/inspection-review.md)
 verifies all twenty measured summaries and both banks, then a failed first teacher
 and no complete new binner output. The comparison is NOT_ASSESSED, not a negative
 multiscale-learning result. Oral eligible all-zero profiles fall from 191,567 to
@@ -146,6 +156,14 @@ localizes a remaining recovery gap to candidate generation/ranking rather than
 missing information or representation. Freeze any new common rule before outcomes;
 no dataset-specific winner router, proxy-optimality claim or indefinite score/grid
 loop. Compare on additional prospectively admitted data before broad claims.
+
+November 5 completed update: [E033](../../experiments/E033-multiscale-bam/completed-review.md)
+loses recovery under this fixed common constructor despite technically valid
+learning/retrieval. Selection is still not proved optimal or uniquely responsible.
+[The focused source refresh](../evidence/2026-11-05-e033-genome-graph-priority.md)
+keeps COMEBin partition ranking and SemiBin length-weighted graph/reclustering
+alternatives visible; the next primary block qualifies physical fragment evidence
+and graph representation, with cheap retained partitions for later localization.
 
 ## H001
 

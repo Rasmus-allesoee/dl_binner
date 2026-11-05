@@ -1,64 +1,1041 @@
 {
-  "status": "NOT_ASSESSED",
-  "reason": "No completed new teacher/student or complete partitions; global workflow failed and final delivery is missing",
-  "primary_rule_unchanged": {
-    "status": "PROSPECTIVE_LOCAL_PREPARATION_NO_COMMUNITY_OUTCOMES",
-    "same_version_all_modes": true,
-    "units": [
-      "E009-noGLM",
-      "E009-GLM",
-      "oral-noGLM"
-    ],
-    "teacher_epochs": 20,
-    "student_epochs": 20,
-    "seed": 11,
-    "batch_size": 256,
-    "old_reconstruction": {
-      "composition": 1.0,
-      "depth": 0.1
-    },
-    "parent_depth": "shared newly measured",
-    "crop_depth": "genuine exact retained interval plus explicit parent context",
-    "GLM_policy": "on/off propagated through retained initialization, adapted teacher, proposals, student; no hidden GLM in no-GLM modes",
-    "grouping": "unchanged E023/E030 candidate producers and common E032 selection/joint acceptance; no dataset routing",
-    "primary": "frozen full-reference weighted R95 / T90",
-    "full_reference_targets": {
-      "E009": 156,
-      "oral": 799
-    },
-    "E009_N_quarantine_fraction": 0.033034,
-    "oral_truth": "provided-origin oracle with known-shared sensitivity, not unique-identifiability proof",
-    "KEEP": "No R95/T90 loss against E032 in any mode, >=0.5 percentage point E009 gain, no best-bin multi-contig R95-contribution loss",
-    "MODIFY": "Useful gain with trade-off or smaller effect",
-    "ABANDON": "No R95 gain in any mode, or E009 loses >=1 point without >=0.5 point gain elsewhere",
-    "integrity_failure": "NOT_ASSESSED",
-    "selection_optimality_not_established": true,
-    "baselines_rescored": false,
-    "skin_acquired_this_task": false,
-    "skin_previously_local_and_unscored": true,
-    "optional_parent_mean_only_control_included": false,
-    "bundle_not_pure_information_causal_test": true,
-    "historical_depth_filter_priors_retained_in_E031_initialization": true
-  },
-  "units": {
+  "status": "PASS_FROZEN_NEW_OUTPUT_DIAGNOSTICS",
+  "modes": {
     "E009-noGLM": {
-      "R95": null,
-      "T90": null,
-      "pre_post_effect": null,
-      "secondary_HQ_MQ_LQ": null
+      "arms": {
+        "pre": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10010205135961298,
+            "macro_R95": 0.1102092030897239,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 5
+          },
+          "integer": {
+            "recovered_bp": 55522793,
+            "reference_bp": 554661890,
+            "T90": 5
+          },
+          "best_bin_decomposition": {
+            "singleton_recovered_bp": 0,
+            "multicontig_recovered_bp": 55522793,
+            "singleton_weighted_R95_contribution": 0.0,
+            "multicontig_weighted_R95_contribution": 0.10010205135961298,
+            "singleton_T90": 0,
+            "multicontig_T90": 5
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_HQ": 7,
+                "high_impurity_or_unresolved": 64,
+                "threshold_based_LQ": 36
+              },
+              "target_counts": {
+                "threshold_based_HQ": 5,
+                "threshold_based_LQ": 29,
+                "high_impurity_or_unresolved": 46,
+                "threshold_based_MQ": 14
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_HQ": 7,
+                "high_impurity_or_unresolved": 49,
+                "threshold_based_LQ": 17
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            }
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 52670,
+                "bp": 177811919
+              },
+              "unassigned": {
+                "contigs": 36371,
+                "bp": 31830784
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "B3": {
+            "attributable_bp": 165477813,
+            "precision": 0.6664154834961037,
+            "recall": 0.4853311897257494,
+            "f1": 0.5616377750014547
+          },
+          "known_shared_sensitivity": null
+        },
+        "post": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10151723782573199,
+            "macro_R95": 0.1111596474251197,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 5
+          },
+          "integer": {
+            "recovered_bp": 56307743,
+            "reference_bp": 554661890,
+            "T90": 5
+          },
+          "best_bin_decomposition": {
+            "singleton_recovered_bp": 0,
+            "multicontig_recovered_bp": 56307743,
+            "singleton_weighted_R95_contribution": 0.0,
+            "multicontig_weighted_R95_contribution": 0.10151723782573199,
+            "singleton_T90": 0,
+            "multicontig_T90": 5
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_HQ": 7,
+                "high_impurity_or_unresolved": 64,
+                "threshold_based_LQ": 36
+              },
+              "target_counts": {
+                "threshold_based_HQ": 5,
+                "threshold_based_LQ": 29,
+                "high_impurity_or_unresolved": 46,
+                "threshold_based_MQ": 14
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 17,
+                "threshold_based_HQ": 7,
+                "high_impurity_or_unresolved": 49,
+                "threshold_based_LQ": 17
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            }
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 53874,
+                "bp": 178781834
+              },
+              "unassigned": {
+                "contigs": 35167,
+                "bp": 30860869
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "B3": {
+            "attributable_bp": 165477813,
+            "precision": 0.6710142661658859,
+            "recall": 0.49097585858385173,
+            "f1": 0.5670475134610363
+          },
+          "known_shared_sensitivity": null
+        }
+      },
+      "baseline_E032": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10284660444221254,
+        "macro_R95": 0.11241530733811551,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 7
+      },
+      "delta_R95_pp": -0.13293666164805457,
+      "delta_T90": -2,
+      "targets": {
+        "gained": 10,
+        "lost": 14,
+        "unchanged": 132,
+        "gained_bp": 1870381,
+        "lost_bp": 2607730,
+        "T90_gained": 1,
+        "T90_lost": 3,
+        "largest_gains": [
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV134.7",
+            "reference_bp": 5330584,
+            "assembly_confirmed_bp": 3671792,
+            "E032_post_bp": 1516348,
+            "E033_post_bp": 2469803,
+            "delta_bp": 953455,
+            "new_best_bin_contigs": 2394,
+            "old_R95": 0.2844618901043488,
+            "new_R95": 0.463326907520827
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV406.4",
+            "reference_bp": 3405233,
+            "assembly_confirmed_bp": 3244813,
+            "E032_post_bp": 2337601,
+            "E033_post_bp": 2718321,
+            "delta_bp": 380720,
+            "new_best_bin_contigs": 31,
+            "old_R95": 0.6864731429538008,
+            "new_R95": 0.798277533431633
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV399.6",
+            "reference_bp": 3159004,
+            "assembly_confirmed_bp": 3106904,
+            "E032_post_bp": 2275699,
+            "E033_post_bp": 2478102,
+            "delta_bp": 202403,
+            "new_best_bin_contigs": 41,
+            "old_R95": 0.7203849694397348,
+            "new_R95": 0.784456746493515
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV337.1",
+            "reference_bp": 3164285,
+            "assembly_confirmed_bp": 2911965,
+            "E032_post_bp": 2406164,
+            "E033_post_bp": 2497115,
+            "delta_bp": 90951,
+            "new_best_bin_contigs": 830,
+            "old_R95": 0.7604131739081657,
+            "new_R95": 0.7891561600803974
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV551.0",
+            "reference_bp": 2318719,
+            "assembly_confirmed_bp": 2286329,
+            "E032_post_bp": 2002109,
+            "E033_post_bp": 2088697,
+            "delta_bp": 86588,
+            "new_best_bin_contigs": 62,
+            "old_R95": 0.8634547782633428,
+            "new_R95": 0.9007978112052387
+          }
+        ],
+        "largest_losses": [
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV300.8",
+            "reference_bp": 3460293,
+            "assembly_confirmed_bp": 3361302,
+            "E032_post_bp": 3284549,
+            "E033_post_bp": 2287370,
+            "delta_bp": -997179,
+            "new_best_bin_contigs": 29,
+            "old_R95": 0.9492112373142968,
+            "new_R95": 0.6610336176734166
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV729.15",
+            "reference_bp": 4914869,
+            "assembly_confirmed_bp": 3567292,
+            "E032_post_bp": 616731,
+            "E033_post_bp": 0,
+            "delta_bp": -616731,
+            "new_best_bin_contigs": 0,
+            "old_R95": 0.12548269343496235,
+            "new_R95": 0.0
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV150.14",
+            "reference_bp": 6474050,
+            "assembly_confirmed_bp": 6143984,
+            "E032_post_bp": 5840988,
+            "E033_post_bp": 5552840,
+            "delta_bp": -288148,
+            "new_best_bin_contigs": 82,
+            "old_R95": 0.9022154601833474,
+            "new_R95": 0.8577073084081834
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV300.2",
+            "reference_bp": 3107801,
+            "assembly_confirmed_bp": 3007225,
+            "E032_post_bp": 2869549,
+            "E033_post_bp": 2590305,
+            "delta_bp": -279244,
+            "new_best_bin_contigs": 32,
+            "old_R95": 0.9233374337674773,
+            "new_R95": 0.8334848338101443
+          },
+          {
+            "unit": "E009-noGLM",
+            "genome": "ASV137.1",
+            "reference_bp": 4870983,
+            "assembly_confirmed_bp": 1522690,
+            "E032_post_bp": 767076,
+            "E033_post_bp": 627000,
+            "delta_bp": -140076,
+            "new_best_bin_contigs": 834,
+            "old_R95": 0.15747868551378644,
+            "new_R95": 0.12872145109108366
+          }
+        ]
+      },
+      "paired_refinement": {
+        "delta_R95_pp": 0.14151864661190172,
+        "gained_targets": 2,
+        "lost_targets": 0
+      },
+      "information_ceiling": {
+        "assembly_confirmed_source_union_bp": 102790342,
+        "full_reference_bp": 554661890,
+        "weighted_R95_upper_bound": 0.18532072214299777,
+        "targets_with_at_least90pct_assembly_support": 17,
+        "not_an_achievable_partition": true
+      }
     },
     "E009-GLM": {
-      "R95": null,
-      "T90": null,
-      "pre_post_effect": null,
-      "secondary_HQ_MQ_LQ": null
+      "arms": {
+        "pre": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.0991178211288322,
+            "macro_R95": 0.10960103073027852,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 6
+          },
+          "integer": {
+            "recovered_bp": 54976878,
+            "reference_bp": 554661890,
+            "T90": 6
+          },
+          "best_bin_decomposition": {
+            "singleton_recovered_bp": 0,
+            "multicontig_recovered_bp": 54976878,
+            "singleton_weighted_R95_contribution": 0.0,
+            "multicontig_weighted_R95_contribution": 0.0991178211288322,
+            "singleton_T90": 0,
+            "multicontig_T90": 6
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 38,
+                "high_impurity_or_unresolved": 66,
+                "threshold_based_HQ": 8
+              },
+              "target_counts": {
+                "threshold_based_LQ": 27,
+                "high_impurity_or_unresolved": 49,
+                "threshold_based_HQ": 6,
+                "threshold_based_MQ": 13
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 18,
+                "high_impurity_or_unresolved": 50,
+                "threshold_based_HQ": 8
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            }
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 59878,
+                "bp": 183521418
+              },
+              "unassigned": {
+                "contigs": 29163,
+                "bp": 26121285
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "B3": {
+            "attributable_bp": 165477813,
+            "precision": 0.7021343344244164,
+            "recall": 0.46913676732480464,
+            "f1": 0.562460785359922
+          },
+          "known_shared_sensitivity": null
+        },
+        "post": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.0992010610283681,
+            "macro_R95": 0.10970096631526584,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 6
+          },
+          "integer": {
+            "recovered_bp": 55023048,
+            "reference_bp": 554661890,
+            "T90": 6
+          },
+          "best_bin_decomposition": {
+            "singleton_recovered_bp": 0,
+            "multicontig_recovered_bp": 55023048,
+            "singleton_weighted_R95_contribution": 0.0,
+            "multicontig_weighted_R95_contribution": 0.0992010610283681,
+            "singleton_T90": 0,
+            "multicontig_T90": 6
+          },
+          "secondary": {
+            "conservative_sequence": {
+              "counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 38,
+                "high_impurity_or_unresolved": 66,
+                "threshold_based_HQ": 8
+              },
+              "target_counts": {
+                "threshold_based_LQ": 27,
+                "high_impurity_or_unresolved": 49,
+                "threshold_based_HQ": 6,
+                "threshold_based_MQ": 13
+              },
+              "at_least_200kb_counts": {
+                "threshold_based_MQ": 15,
+                "threshold_based_LQ": 18,
+                "high_impurity_or_unresolved": 50,
+                "threshold_based_HQ": 8
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            }
+          },
+          "export": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 60272,
+                "bp": 183924766
+              },
+              "unassigned": {
+                "contigs": 28769,
+                "bp": 25717937
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "B3": {
+            "attributable_bp": 165477813,
+            "precision": 0.702846012273314,
+            "recall": 0.4701070450774286,
+            "f1": 0.5633863348641411
+          },
+          "known_shared_sensitivity": null
+        }
+      },
+      "baseline_E032": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10175990097318567,
+        "macro_R95": 0.11148414369635522,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 6
+      },
+      "delta_R95_pp": -0.25588399448175647,
+      "delta_T90": 0,
+      "targets": {
+        "gained": 13,
+        "lost": 11,
+        "unchanged": 132,
+        "gained_bp": 1250455,
+        "lost_bp": 2669746,
+        "T90_gained": 2,
+        "T90_lost": 2,
+        "largest_gains": [
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV426.8",
+            "reference_bp": 2846531,
+            "assembly_confirmed_bp": 2778749,
+            "E032_post_bp": 2006728,
+            "E033_post_bp": 2371284,
+            "delta_bp": 364556,
+            "new_best_bin_contigs": 39,
+            "old_R95": 0.7049731761220939,
+            "new_R95": 0.8330434483235911
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV399.6",
+            "reference_bp": 3159004,
+            "assembly_confirmed_bp": 3106904,
+            "E032_post_bp": 2251927,
+            "E033_post_bp": 2478102,
+            "delta_bp": 226175,
+            "new_best_bin_contigs": 41,
+            "old_R95": 0.7128598127764321,
+            "new_R95": 0.784456746493515
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV470.1",
+            "reference_bp": 3320462,
+            "assembly_confirmed_bp": 3154135,
+            "E032_post_bp": 2750876,
+            "E033_post_bp": 2926243,
+            "delta_bp": 175367,
+            "new_best_bin_contigs": 351,
+            "old_R95": 0.8284618224813294,
+            "new_R95": 0.8812758586003996
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV406.4",
+            "reference_bp": 3405233,
+            "assembly_confirmed_bp": 3244813,
+            "E032_post_bp": 2560448,
+            "E033_post_bp": 2718321,
+            "delta_bp": 157873,
+            "new_best_bin_contigs": 31,
+            "old_R95": 0.7519156545234937,
+            "new_R95": 0.798277533431633
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV387.0",
+            "reference_bp": 3067081,
+            "assembly_confirmed_bp": 3023435,
+            "E032_post_bp": 2190669,
+            "E033_post_bp": 2299407,
+            "delta_bp": 108738,
+            "new_best_bin_contigs": 26,
+            "old_R95": 0.7142520852889115,
+            "new_R95": 0.7497053387243441
+          }
+        ],
+        "largest_losses": [
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV300.8",
+            "reference_bp": 3460293,
+            "assembly_confirmed_bp": 3361302,
+            "E032_post_bp": 3278130,
+            "E033_post_bp": 2287370,
+            "delta_bp": -990760,
+            "new_best_bin_contigs": 29,
+            "old_R95": 0.9473561920912478,
+            "new_R95": 0.6610336176734166
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV729.15",
+            "reference_bp": 4914869,
+            "assembly_confirmed_bp": 3567292,
+            "E032_post_bp": 728454,
+            "E033_post_bp": 0,
+            "delta_bp": -728454,
+            "new_best_bin_contigs": 0,
+            "old_R95": 0.1482143267704592,
+            "new_R95": 0.0
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV300.2",
+            "reference_bp": 3107801,
+            "assembly_confirmed_bp": 3007225,
+            "E032_post_bp": 2854655,
+            "E033_post_bp": 2560314,
+            "delta_bp": -294341,
+            "new_best_bin_contigs": 30,
+            "old_R95": 0.918544977622441,
+            "new_R95": 0.823834602022459
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV134.7",
+            "reference_bp": 5330584,
+            "assembly_confirmed_bp": 3671792,
+            "E032_post_bp": 1406689,
+            "E033_post_bp": 1214234,
+            "delta_bp": -192455,
+            "new_best_bin_contigs": 914,
+            "old_R95": 0.26389022290991004,
+            "new_R95": 0.2277862988370505
+          },
+          {
+            "unit": "E009-GLM",
+            "genome": "ASV456.0",
+            "reference_bp": 3549767,
+            "assembly_confirmed_bp": 3322985,
+            "E032_post_bp": 3109449,
+            "E033_post_bp": 2956564,
+            "delta_bp": -152885,
+            "new_best_bin_contigs": 122,
+            "old_R95": 0.8759586192558554,
+            "new_R95": 0.8328895952889303
+          }
+        ]
+      },
+      "paired_refinement": {
+        "delta_R95_pp": 0.008323989953590294,
+        "gained_targets": 2,
+        "lost_targets": 0
+      },
+      "information_ceiling": {
+        "assembly_confirmed_source_union_bp": 102790342,
+        "full_reference_bp": 554661890,
+        "weighted_R95_upper_bound": 0.18532072214299777,
+        "targets_with_at_least90pct_assembly_support": 17,
+        "not_an_achievable_partition": true
+      }
     },
     "oral-noGLM": {
-      "R95": null,
-      "T90": null,
-      "pre_post_effect": null,
-      "secondary_HQ_MQ_LQ": null
+      "arms": {
+        "pre": {
+          "primary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.32825406982494665,
+            "macro_R95": 0.3356326654544365,
+            "at_least_50_percent": 272,
+            "at_least_90_percent": 206
+          },
+          "integer": {
+            "recovered_bp": 683776931,
+            "reference_bp": 2083072211,
+            "T90": 206
+          },
+          "best_bin_decomposition": {
+            "singleton_recovered_bp": 436274613,
+            "multicontig_recovered_bp": 247502318,
+            "singleton_weighted_R95_contribution": 0.20943806493897874,
+            "multicontig_weighted_R95_contribution": 0.11881600488596793,
+            "singleton_T90": 161,
+            "multicontig_T90": 45
+          },
+          "secondary": {
+            "provided_origin": {
+              "counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 74,
+                "threshold_based_LQ": 2341,
+                "threshold_based_HQ": 206
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 74,
+                "threshold_based_LQ": 2341,
+                "threshold_based_HQ": 206
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 250,
+                "threshold_based_MQ": 74,
+                "threshold_based_LQ": 190,
+                "threshold_based_HQ": 206
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            },
+            "known_shared_sensitivity": {
+              "counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 74,
+                "threshold_based_LQ": 2341,
+                "threshold_based_HQ": 206
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 74,
+                "threshold_based_LQ": 2341,
+                "threshold_based_HQ": 206
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 250,
+                "threshold_based_MQ": 74,
+                "threshold_based_LQ": 190,
+                "threshold_based_HQ": 206
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            }
+          },
+          "export": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "populations": {
+              "assigned": {
+                "contigs": 124613,
+                "bp": 1034120320
+              },
+              "unassigned": {
+                "contigs": 384150,
+                "bp": 409707344
+              },
+              "excluded": {
+                "contigs": 777784,
+                "bp": 226153459
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "B3": {
+            "bp": 1669981123,
+            "precision": 0.5458135074349275,
+            "recall": 0.4013171229073207,
+            "f1": 0.462542968056236,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "known_shared_sensitivity": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.32825406982494665,
+            "macro_R95": 0.3356326654544365,
+            "at_least_50_percent": 272,
+            "at_least_90_percent": 206
+          }
+        },
+        "post": {
+          "primary": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.33011005349156375,
+            "macro_R95": 0.3376863125638854,
+            "at_least_50_percent": 274,
+            "at_least_90_percent": 206
+          },
+          "integer": {
+            "recovered_bp": 687643079,
+            "reference_bp": 2083072211,
+            "T90": 206
+          },
+          "best_bin_decomposition": {
+            "singleton_recovered_bp": 436274613,
+            "multicontig_recovered_bp": 251368466,
+            "singleton_weighted_R95_contribution": 0.20943806493897874,
+            "multicontig_weighted_R95_contribution": 0.12067198855258504,
+            "singleton_T90": 161,
+            "multicontig_T90": 45
+          },
+          "secondary": {
+            "provided_origin": {
+              "counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 76,
+                "threshold_based_LQ": 2339,
+                "threshold_based_HQ": 206
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 76,
+                "threshold_based_LQ": 2339,
+                "threshold_based_HQ": 206
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 250,
+                "threshold_based_MQ": 76,
+                "threshold_based_LQ": 189,
+                "threshold_based_HQ": 206
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            },
+            "known_shared_sensitivity": {
+              "counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 76,
+                "threshold_based_LQ": 2339,
+                "threshold_based_HQ": 206
+              },
+              "target_counts": {
+                "high_impurity_or_unresolved": 728,
+                "threshold_based_MQ": 76,
+                "threshold_based_LQ": 2339,
+                "threshold_based_HQ": 206
+              },
+              "at_least_200kb_counts": {
+                "high_impurity_or_unresolved": 250,
+                "threshold_based_MQ": 76,
+                "threshold_based_LQ": 189,
+                "threshold_based_HQ": 206
+              },
+              "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+              "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity",
+              "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+              "rRNA_tRNA_screened": false
+            }
+          },
+          "export": {
+            "contigs": 1286547,
+            "bp": 1669981123,
+            "populations": {
+              "assigned": {
+                "contigs": 129727,
+                "bp": 1038780156
+              },
+              "unassigned": {
+                "contigs": 379036,
+                "bp": 405047508
+              },
+              "excluded": {
+                "contigs": 777784,
+                "bp": 226153459
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "B3": {
+            "bp": 1669981123,
+            "precision": 0.5479806869719724,
+            "recall": 0.40378671943729194,
+            "f1": 0.46496091884924323,
+            "scope": "Provided-origin contigs; short/noise/excluded count zero. Recovery uses full references separately."
+          },
+          "known_shared_sensitivity": {
+            "targets": 799,
+            "reference_bp": 2083072211,
+            "bp_weighted_R95": 0.33011005349156375,
+            "macro_R95": 0.3376863125638854,
+            "at_least_50_percent": 274,
+            "at_least_90_percent": 206
+          }
+        }
+      },
+      "baseline_E032": {
+        "targets": 799,
+        "reference_bp": 2083072211,
+        "bp_weighted_R95": 0.3437864497535655,
+        "macro_R95": 0.35342722362177414,
+        "at_least_50_percent": 291,
+        "at_least_90_percent": 219
+      },
+      "delta_R95_pp": -1.3676396262001733,
+      "delta_T90": -13,
+      "targets": {
+        "gained": 60,
+        "lost": 95,
+        "unchanged": 644,
+        "gained_bp": 18314680,
+        "lost_bp": 46803601,
+        "T90_gained": 3,
+        "T90_lost": 16,
+        "largest_gains": [
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.23850.0",
+            "reference_bp": 1791508,
+            "assembly_confirmed_bp": 1757904,
+            "E032_post_bp": 0,
+            "E033_post_bp": 1441989,
+            "delta_bp": 1441989,
+            "new_best_bin_contigs": 331,
+            "old_R95": 0.0,
+            "new_R95": 0.8049023504221025
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.3008.0",
+            "reference_bp": 3608104,
+            "assembly_confirmed_bp": 3394547,
+            "E032_post_bp": 1379443,
+            "E033_post_bp": 2620335,
+            "delta_bp": 1240892,
+            "new_best_bin_contigs": 1471,
+            "old_R95": 0.3823179708788882,
+            "new_R95": 0.7262359954147664
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.35168.0",
+            "reference_bp": 2884293,
+            "assembly_confirmed_bp": 2595198,
+            "E032_post_bp": 428360,
+            "E033_post_bp": 1585259,
+            "delta_bp": 1156899,
+            "new_best_bin_contigs": 1153,
+            "old_R95": 0.14851473133970786,
+            "new_R95": 0.5496178786274487
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.33448.0",
+            "reference_bp": 7225343,
+            "assembly_confirmed_bp": 6656183,
+            "E032_post_bp": 4339091,
+            "E033_post_bp": 5493774,
+            "delta_bp": 1154683,
+            "new_best_bin_contigs": 3730,
+            "old_R95": 0.6005377184169665,
+            "new_R95": 0.7603478478461161
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.32128.0",
+            "reference_bp": 7290949,
+            "assembly_confirmed_bp": 7247397,
+            "E032_post_bp": 0,
+            "E033_post_bp": 1102812,
+            "delta_bp": 1102812,
+            "new_best_bin_contigs": 46,
+            "old_R95": 0.0,
+            "new_R95": 0.15125767578404403
+          }
+        ],
+        "largest_losses": [
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.37402.0",
+            "reference_bp": 1950135,
+            "assembly_confirmed_bp": 1950078,
+            "E032_post_bp": 1950078,
+            "E033_post_bp": 0,
+            "delta_bp": -1950078,
+            "new_best_bin_contigs": 0,
+            "old_R95": 0.9999707712542978,
+            "new_R95": 0.0
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.40084.0",
+            "reference_bp": 6322746,
+            "assembly_confirmed_bp": 6220679,
+            "E032_post_bp": 3633326,
+            "E033_post_bp": 1833101,
+            "delta_bp": -1800225,
+            "new_best_bin_contigs": 284,
+            "old_R95": 0.574643675390408,
+            "new_R95": 0.2899216574570606
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.13959.0",
+            "reference_bp": 2170619,
+            "assembly_confirmed_bp": 2170090,
+            "E032_post_bp": 2170090,
+            "E033_post_bp": 399588,
+            "delta_bp": -1770502,
+            "new_best_bin_contigs": 1,
+            "old_R95": 0.999756290717072,
+            "new_R95": 0.18408942333960956
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.1270.0",
+            "reference_bp": 2279118,
+            "assembly_confirmed_bp": 2277945,
+            "E032_post_bp": 2071055,
+            "E033_post_bp": 312847,
+            "delta_bp": -1758208,
+            "new_best_bin_contigs": 1,
+            "old_R95": 0.9087089830364202,
+            "new_R95": 0.1372666970292894
+          },
+          {
+            "unit": "oral-noGLM",
+            "genome": "OTU_97.196.0",
+            "reference_bp": 5681722,
+            "assembly_confirmed_bp": 5421936,
+            "E032_post_bp": 4842052,
+            "E033_post_bp": 3099896,
+            "delta_bp": -1742156,
+            "new_best_bin_contigs": 914,
+            "old_R95": 0.8522155783053096,
+            "new_R95": 0.5455909317632929
+          }
+        ]
+      },
+      "paired_refinement": {
+        "delta_R95_pp": 0.18559836666171003,
+        "gained_targets": 25,
+        "lost_targets": 0
+      },
+      "information_ceiling": {
+        "assembly_confirmed_source_union_bp": 1669979389,
+        "full_reference_bp": 2083072211,
+        "weighted_R95_upper_bound": 0.8016905895923355,
+        "targets_with_at_least90pct_assembly_support": 478,
+        "not_an_achievable_partition": true
+      }
     }
+  },
+  "frozen_disposition": "ABANDON_THIS_E033_BUNDLE",
+  "criterion": "No mode improves post R95 against E032",
+  "primary_rule_unchanged": true,
+  "baselines_rescored": false,
+  "all_1111_targets_preserved": true,
+  "full_denominators": {
+    "E009": 156,
+    "oral": 799
+  },
+  "E009_N_quarantine_percent": 3.3034,
+  "oral_truth": "provided-origin; separately named known-shared mask, not exhaustive unique identifiability",
+  "finished_epoch": 1793890725.204888,
+  "phase": "resume-20261105T023814Z-941ede3",
+  "native_status": "ACCEPTED_COMPLETED_SCIENCE_AND_DELIVERY",
+  "source": "941ede36d29b76c5f542e56295236d5100447ca1",
+  "historical_failed_attempt": "failed-comparison-review.json",
+  "protocol": {
+    "bytes": 1657,
+    "sha256": "4981e5d28f17daba82692096b582df28f85cc5da8e3edfa7e52dff4bcf0f9c63"
+  },
+  "targets": {
+    "bytes": 78719,
+    "sha256": "60812d8487af962b79c58a36b04f09e1f1ab227d115c9c31833088bcfaf30d63"
+  },
+  "native_admission": {
+    "bytes": 19615,
+    "sha256": "f06b8fdce041fe3c57442e1e31a8f81bae0a4d61aeed347f7a9af1beaf3327cd"
+  },
+  "review_resources": {
+    "status": "PASS_COMPLETE_BOUNDED_REVIEW",
+    "start": 1793887486.937512,
+    "last_numeric_completion_epoch": 1793890725.204888,
+    "common_wall_seconds": 3238.2673761844635,
+    "deadline": 1793891086.937512,
+    "max_sampled_tree_RSS_bytes": 5433901056,
+    "numerical_threads": 4,
+    "physical_extra_bytes": 2326772839,
+    "physical_extra_cap": 3221225472,
+    "actual_free_bytes": 18588618752,
+    "free_reserve": 8589934592,
+    "failed_local_journals_preserved": true,
+    "unchanged_scientific_evaluators": true,
+    "no_cloud_compute_started": true
   },
   "retained_frozen_references_not_rescored": {
     "E023_E009_GLM_R95_percent": 10.4163,
@@ -77,20 +1054,894 @@
       "oral": 17.326
     }
   },
-  "denominators": {
-    "E009": 156,
-    "oral": 799
-  },
-  "E009_N_quarantine_fraction": 0.033034,
-  "oral_truth": "provided-origin oracle; separately named known-shared sensitivity, not exhaustive unique truth",
-  "all_length_origin_eligibility_marker_unknown_non_target_unassigned_singleton_multicontig_diagnostics": "UNAVAILABLE: no new complete partitions; populations were not silently dropped",
-  "interpretation": "No positive or negative biological conclusion about multiscale information, learning, GLM or E032; cannot isolate a recovery gap from a failed fit",
-  "phase": "multiscale-20261104T152005Z-a940769-r2",
-  "scope": "Historical failed attempt; NOT_ASSESSED and its original scientific criteria remain unchanged",
-  "newer_recovery": {
-    "phase": "resume-20261105T023814Z-941ede3",
-    "status": "RUNNING_NO_COMPLETE_QUALITY_RESULT",
-    "evidence": "recovery-observed.json",
-    "review": "recovery-review.md"
+  "interpretation": "ABANDON this frozen bundle: no R95 gain in any mode. Accepted measurement engineering and all results remain; no feature-family or SOTA conclusion.",
+  "next_block": "next-block.md",
+  "geometry": {
+    "E009-noGLM": {
+      "roles": {
+        "teacher": {
+          "actual_serialized_state": {
+            "online": "8c9913c5f327361a3fe663cc01621c26c19c833ea14b8e56ca90227136534751",
+            "target": "a5d738f87560e486eb77ff5f72f2e664ecd3b7db09e89a1e6cfb510d21b7d03f",
+            "predictor": "2131f7b46435752a956cbe9b293fd4e622608c3feb82ba1aa4996d582640b9d8",
+            "anchor": "5f616dd8821c06e9dddad448415c1df1591256b0143c5005908a81b26e207099"
+          },
+          "Adam_step_histogram": {
+            "20880.0": 55,
+            "13920.0": 4,
+            "6960.0": 11
+          },
+          "inherited_state_contract": "Byte-bound original E031 source plus passed native full-state/Adam restoration; no Mac forward/reload inference",
+          "sparse": {
+            "edges": 2175790,
+            "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+          },
+          "unit_and_neighbor_contract": {
+            "metric": "retained unit vectors, cosine; no post-learning z-score",
+            "native_rows_checked": 89041,
+            "native_neighbor_entries": 2671230,
+            "query_selection": "first128 SHA256(contigID), label blind",
+            "tolerance": 1e-06,
+            "mean_recall_k": 0.9971354166666666,
+            "mean_recall_5": 0.9984375
+          },
+          "all_attributable_native_5NN_same": 0.7910011840547296,
+          "attributable_native_5NN_queries": 76010,
+          "unknown_valid_queries": 13031,
+          "native_length_census": {
+            "1": {
+              "attributable_queries": 0,
+              "query_bp": 0,
+              "same_fraction": null,
+              "bp_weighted_same": null
+            },
+            "500": {
+              "attributable_queries": 32055,
+              "query_bp": 19733751,
+              "same_fraction": 0.7617407580720637,
+              "bp_weighted_same": 0.7635296198882818
+            },
+            "768": {
+              "attributable_queries": 14312,
+              "query_bp": 12485834,
+              "same_fraction": 0.7914337618781442,
+              "bp_weighted_same": 0.7915887076506064
+            },
+            "1000": {
+              "attributable_queries": 23026,
+              "query_bp": 33785626,
+              "same_fraction": 0.8231043168592027,
+              "bp_weighted_same": 0.8244957130585651
+            },
+            "2500": {
+              "attributable_queries": 5295,
+              "query_bp": 21968729,
+              "same_fraction": 0.8205854579792258,
+              "bp_weighted_same": 0.8126527665756175
+            },
+            "10000": {
+              "attributable_queries": 1322,
+              "query_bp": 58067096,
+              "same_fraction": 0.8181543116490166,
+              "bp_weighted_same": 0.8398406526133146
+            }
+          },
+          "native_lineage_census": {
+            "bacterial": {
+              "attributable_queries": 25543,
+              "query_bp": 88261843,
+              "same_fraction": 0.7247934854950475,
+              "bp_weighted_same": 0.8200028816529472
+            },
+            "eukaryotic": {
+              "attributable_queries": 49520,
+              "query_bp": 54129752,
+              "same_fraction": 0.8320638126009692,
+              "bp_weighted_same": 0.8450199032871977
+            },
+            "other": {
+              "attributable_queries": 15,
+              "query_bp": 213971,
+              "same_fraction": 0.04,
+              "bp_weighted_same": 0.01185487753013259
+            },
+            "viral": {
+              "attributable_queries": 932,
+              "query_bp": 3435470,
+              "same_fraction": 0.43583690987124457,
+              "bp_weighted_same": 0.3809925861672493
+            }
+          },
+          "final_epoch_geometry": {
+            "online": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 38.07818452561739,
+                "mean_dimension_std": 0.10907599473924098,
+                "mean_other_cosine": 0.22665611601274904,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 35.23586194006782,
+                "mean_dimension_std": 0.10660912719754054,
+                "mean_other_cosine": 0.2584708970211258,
+                "rows": 8192
+              }
+            },
+            "target": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 37.921638602084506,
+                "mean_dimension_std": 0.10909515577830739,
+                "mean_other_cosine": 0.22643026868941724,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 35.460434564075335,
+                "mean_dimension_std": 0.10630533310116136,
+                "mean_other_cosine": 0.26297458670749313,
+                "rows": 8192
+              }
+            }
+          },
+          "raw_fixed_queries": {
+            "bacterial": {
+              "queries": 37,
+              "raw_mean": 0.8486486486486486,
+              "learned_mean": 0.8540540540540541
+            },
+            "eukaryotic": {
+              "queries": 74,
+              "raw_mean": 0.9864864864864865,
+              "learned_mean": 0.8837837837837835
+            },
+            "viral": {
+              "queries": 1,
+              "raw_mean": 1.0,
+              "learned_mean": 1.0
+            }
+          }
+        },
+        "student": {
+          "actual_serialized_state": {
+            "online": "b2f1a9691c9a54536c9f92d19c0559db505c3f0dfdca3ff75fd6e42a6355389a",
+            "target": "f87b1c08343ced51b72230205664e8c3d2cdd47ed6d10b9020b83defde72ae53",
+            "predictor": "51b1c0eb1ff29091f23a210c9b55d9189becae55a7fcfb6bd1fa336c9c0d02a6",
+            "anchor": "5f616dd8821c06e9dddad448415c1df1591256b0143c5005908a81b26e207099"
+          },
+          "Adam_step_histogram": {
+            "27840.0": 55,
+            "13920.0": 15
+          },
+          "inherited_state_contract": "Byte-bound original E031 source plus passed native full-state/Adam restoration; no Mac forward/reload inference",
+          "sparse": {
+            "edges": 2169724,
+            "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+          },
+          "unit_and_neighbor_contract": {
+            "metric": "retained unit vectors, cosine; no post-learning z-score",
+            "native_rows_checked": 89041,
+            "native_neighbor_entries": 2671230,
+            "query_selection": "first128 SHA256(contigID), label blind",
+            "tolerance": 1e-06,
+            "mean_recall_k": 0.996875,
+            "mean_recall_5": 0.9984375
+          },
+          "all_attributable_native_5NN_same": 0.8119142218129193,
+          "attributable_native_5NN_queries": 76010,
+          "unknown_valid_queries": 13031,
+          "native_length_census": {
+            "1": {
+              "attributable_queries": 0,
+              "query_bp": 0,
+              "same_fraction": null,
+              "bp_weighted_same": null
+            },
+            "500": {
+              "attributable_queries": 32055,
+              "query_bp": 19733751,
+              "same_fraction": 0.7874902511308688,
+              "bp_weighted_same": 0.7891755601862008
+            },
+            "768": {
+              "attributable_queries": 14312,
+              "query_bp": 12485834,
+              "same_fraction": 0.813806595863611,
+              "bp_weighted_same": 0.8139730193433614
+            },
+            "1000": {
+              "attributable_queries": 23026,
+              "query_bp": 33785626,
+              "same_fraction": 0.8397463736645531,
+              "bp_weighted_same": 0.8406035099068461
+            },
+            "2500": {
+              "attributable_queries": 5295,
+              "query_bp": 21968729,
+              "same_fraction": 0.8308593012275732,
+              "bp_weighted_same": 0.8231731476135918
+            },
+            "10000": {
+              "attributable_queries": 1322,
+              "query_bp": 58067096,
+              "same_fraction": 0.8229954614220878,
+              "bp_weighted_same": 0.841810639195733
+            }
+          },
+          "native_lineage_census": {
+            "bacterial": {
+              "attributable_queries": 25543,
+              "query_bp": 88261843,
+              "same_fraction": 0.737047331950045,
+              "bp_weighted_same": 0.826762219320528
+            },
+            "eukaryotic": {
+              "attributable_queries": 49520,
+              "query_bp": 54129752,
+              "same_fraction": 0.8575282714054927,
+              "bp_weighted_same": 0.8641851896901357
+            },
+            "other": {
+              "attributable_queries": 15,
+              "query_bp": 213971,
+              "same_fraction": 0.04,
+              "bp_weighted_same": 0.012112856415121677
+            },
+            "viral": {
+              "attributable_queries": 932,
+              "query_bp": 3435470,
+              "same_fraction": 0.45257510729613737,
+              "bp_weighted_same": 0.3929971153874143
+            }
+          },
+          "final_epoch_geometry": {
+            "online": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 37.979941812884434,
+                "mean_dimension_std": 0.10865745087923195,
+                "mean_other_cosine": 0.23196472084995715,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 35.01590268401877,
+                "mean_dimension_std": 0.1066423683929819,
+                "mean_other_cosine": 0.2575495940360411,
+                "rows": 8192
+              }
+            },
+            "target": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 37.943183569191405,
+                "mean_dimension_std": 0.1088721270527676,
+                "mean_other_cosine": 0.22900727939180088,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 35.14789057165885,
+                "mean_dimension_std": 0.10651274309145387,
+                "mean_other_cosine": 0.25943072591339184,
+                "rows": 8192
+              }
+            }
+          },
+          "raw_fixed_queries": {
+            "bacterial": {
+              "queries": 37,
+              "raw_mean": 0.8486486486486486,
+              "learned_mean": 0.8702702702702704
+            },
+            "eukaryotic": {
+              "queries": 74,
+              "raw_mean": 0.9864864864864865,
+              "learned_mean": 0.9054054054054048
+            },
+            "viral": {
+              "queries": 1,
+              "raw_mean": 1.0,
+              "learned_mean": 1.0
+            }
+          }
+        }
+      },
+      "pair_label_consistency": {
+        "counts": {
+          "-1": {
+            "same_admitted_label": 0,
+            "different_admitted_labels": 241,
+            "unresolved": 159
+          },
+          "1": {
+            "same_admitted_label": 163,
+            "different_admitted_labels": 0,
+            "unresolved": 62
+          }
+        },
+        "scope": "Conservative dominant-origin label consistency, not unique identity or proof all loci/replicons agree; no feedback into selection"
+      },
+      "source_pair_count": 2403,
+      "retained_pair_count": 625,
+      "full_geometry_record": {
+        "bytes": 108125,
+        "sha256": "c949297281b340751016eedb31e910b3626fb57cf1b24541482345abae0e7cb9"
+      }
+    },
+    "E009-GLM": {
+      "roles": {
+        "teacher": {
+          "actual_serialized_state": {
+            "online": "364962da109254255944e6db488cc7a00deafcf811405bc12de5063ef6a46264",
+            "target": "af8e5b136c4d8c14a31f6ac7767e6b99988e742761a759c2cffc5a919cef2454",
+            "predictor": "7b9f62dd236c6ab67c508e56b5540e0d465da5ad6a624704a4a559529a081d59",
+            "anchor": "7591bd3f37b3b208cacd772c8aacfa3073b17311a2e501ac17ad464b62a91904"
+          },
+          "Adam_step_histogram": {
+            "20880.0": 64,
+            "13920.0": 4,
+            "6960.0": 11
+          },
+          "inherited_state_contract": "Byte-bound original E031 source plus passed native full-state/Adam restoration; no Mac forward/reload inference",
+          "sparse": {
+            "edges": 2177075,
+            "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+          },
+          "unit_and_neighbor_contract": {
+            "metric": "retained unit vectors, cosine; no post-learning z-score",
+            "native_rows_checked": 89041,
+            "native_neighbor_entries": 2671230,
+            "query_selection": "first128 SHA256(contigID), label blind",
+            "tolerance": 1e-06,
+            "mean_recall_k": 0.9966145833333334,
+            "mean_recall_5": 0.9984375
+          },
+          "all_attributable_native_5NN_same": 0.8010235495329562,
+          "attributable_native_5NN_queries": 76010,
+          "unknown_valid_queries": 13031,
+          "native_length_census": {
+            "1": {
+              "attributable_queries": 0,
+              "query_bp": 0,
+              "same_fraction": null,
+              "bp_weighted_same": null
+            },
+            "500": {
+              "attributable_queries": 32055,
+              "query_bp": 19733751,
+              "same_fraction": 0.7710747153330214,
+              "bp_weighted_same": 0.7731269539176813
+            },
+            "768": {
+              "attributable_queries": 14312,
+              "query_bp": 12485834,
+              "same_fraction": 0.8037590832867524,
+              "bp_weighted_same": 0.8038684159984829
+            },
+            "1000": {
+              "attributable_queries": 23026,
+              "query_bp": 33785626,
+              "same_fraction": 0.8342916702857639,
+              "bp_weighted_same": 0.8354747607754849
+            },
+            "2500": {
+              "attributable_queries": 5295,
+              "query_bp": 21968729,
+              "same_fraction": 0.8261378659112371,
+              "bp_weighted_same": 0.8190537741168368
+            },
+            "10000": {
+              "attributable_queries": 1322,
+              "query_bp": 58067096,
+              "same_fraction": 0.8175491679273827,
+              "bp_weighted_same": 0.8347181474341339
+            }
+          },
+          "native_lineage_census": {
+            "bacterial": {
+              "attributable_queries": 25543,
+              "query_bp": 88261843,
+              "same_fraction": 0.7379477743413069,
+              "bp_weighted_same": 0.8233187176932164
+            },
+            "eukaryotic": {
+              "attributable_queries": 49520,
+              "query_bp": 54129752,
+              "same_fraction": 0.8401978998384492,
+              "bp_weighted_same": 0.8495053515116788
+            },
+            "other": {
+              "attributable_queries": 15,
+              "query_bp": 213971,
+              "same_fraction": 0.04,
+              "bp_weighted_same": 0.005006285898556347
+            },
+            "viral": {
+              "attributable_queries": 932,
+              "query_bp": 3435470,
+              "same_fraction": 0.46051502145922746,
+              "bp_weighted_same": 0.38763744116525545
+            }
+          },
+          "final_epoch_geometry": {
+            "online": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 39.06204090385109,
+                "mean_dimension_std": 0.1105413811036372,
+                "mean_other_cosine": 0.20604254490629778,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 36.217633017488815,
+                "mean_dimension_std": 0.10833205779401311,
+                "mean_other_cosine": 0.2329854296100084,
+                "rows": 8192
+              }
+            },
+            "target": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 38.9727192644543,
+                "mean_dimension_std": 0.11031508534710488,
+                "mean_other_cosine": 0.20910459284198216,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 36.45322348694424,
+                "mean_dimension_std": 0.10797840118929876,
+                "mean_other_cosine": 0.23797840132314388,
+                "rows": 8192
+              }
+            }
+          },
+          "raw_fixed_queries": {
+            "bacterial": {
+              "queries": 37,
+              "raw_mean": 0.8486486486486486,
+              "learned_mean": 0.8324324324324324
+            },
+            "eukaryotic": {
+              "queries": 74,
+              "raw_mean": 0.9864864864864865,
+              "learned_mean": 0.8648648648648646
+            },
+            "viral": {
+              "queries": 1,
+              "raw_mean": 1.0,
+              "learned_mean": 1.0
+            }
+          }
+        },
+        "student": {
+          "actual_serialized_state": {
+            "online": "ce1bce4ef823ff0a7d413e976f2edb3442c92bdced9eade4fec3180529b818fe",
+            "target": "f1847984a7662464e94afac0d8d4e56618fdb731bf68d810ca307eb1f07a95a3",
+            "predictor": "27df4b4378779c5cc9767d4db25360195cc032c2243cf002895082138c064858",
+            "anchor": "7591bd3f37b3b208cacd772c8aacfa3073b17311a2e501ac17ad464b62a91904"
+          },
+          "Adam_step_histogram": {
+            "27840.0": 64,
+            "13920.0": 15
+          },
+          "inherited_state_contract": "Byte-bound original E031 source plus passed native full-state/Adam restoration; no Mac forward/reload inference",
+          "sparse": {
+            "edges": 2173922,
+            "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+          },
+          "unit_and_neighbor_contract": {
+            "metric": "retained unit vectors, cosine; no post-learning z-score",
+            "native_rows_checked": 89041,
+            "native_neighbor_entries": 2671230,
+            "query_selection": "first128 SHA256(contigID), label blind",
+            "tolerance": 1e-06,
+            "mean_recall_k": 0.99609375,
+            "mean_recall_5": 0.996875
+          },
+          "all_attributable_native_5NN_same": 0.8135113800815683,
+          "attributable_native_5NN_queries": 76010,
+          "unknown_valid_queries": 13031,
+          "native_length_census": {
+            "1": {
+              "attributable_queries": 0,
+              "query_bp": 0,
+              "same_fraction": null,
+              "bp_weighted_same": null
+            },
+            "500": {
+              "attributable_queries": 32055,
+              "query_bp": 19733751,
+              "same_fraction": 0.7862985493682733,
+              "bp_weighted_same": 0.7882892208379438
+            },
+            "768": {
+              "attributable_queries": 14312,
+              "query_bp": 12485834,
+              "same_fraction": 0.815818893236445,
+              "bp_weighted_same": 0.8158856348722882
+            },
+            "1000": {
+              "attributable_queries": 23026,
+              "query_bp": 33785626,
+              "same_fraction": 0.8452097628767481,
+              "bp_weighted_same": 0.8462079524588355
+            },
+            "2500": {
+              "attributable_queries": 5295,
+              "query_bp": 21968729,
+              "same_fraction": 0.8318791312559017,
+              "bp_weighted_same": 0.8241759002079727
+            },
+            "10000": {
+              "attributable_queries": 1322,
+              "query_bp": 58067096,
+              "same_fraction": 0.8226928895612708,
+              "bp_weighted_same": 0.8413534336209961
+            }
+          },
+          "native_lineage_census": {
+            "bacterial": {
+              "attributable_queries": 25543,
+              "query_bp": 88261843,
+              "same_fraction": 0.7466703206357906,
+              "bp_weighted_same": 0.8312884946216226
+            },
+            "eukaryotic": {
+              "attributable_queries": 49520,
+              "query_bp": 54129752,
+              "same_fraction": 0.8546688206785138,
+              "bp_weighted_same": 0.8604634249940771
+            },
+            "other": {
+              "attributable_queries": 15,
+              "query_bp": 213971,
+              "same_fraction": 0.04,
+              "bp_weighted_same": 0.005006285898556347
+            },
+            "viral": {
+              "attributable_queries": 932,
+              "query_bp": 3435470,
+              "same_fraction": 0.47103004291845496,
+              "bp_weighted_same": 0.3914547936672421
+            }
+          },
+          "final_epoch_geometry": {
+            "online": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 38.980084063613226,
+                "mean_dimension_std": 0.11019340335632544,
+                "mean_other_cosine": 0.2105465045415139,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 36.174733135729355,
+                "mean_dimension_std": 0.10817753112218462,
+                "mean_other_cosine": 0.23509851330851353,
+                "rows": 8192
+              }
+            },
+            "target": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 39.011696972890924,
+                "mean_dimension_std": 0.11011382531254119,
+                "mean_other_cosine": 0.21162713455233548,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 36.28131845401738,
+                "mean_dimension_std": 0.10804938298870495,
+                "mean_other_cosine": 0.2368401235045046,
+                "rows": 8192
+              }
+            }
+          },
+          "raw_fixed_queries": {
+            "bacterial": {
+              "queries": 37,
+              "raw_mean": 0.8486486486486486,
+              "learned_mean": 0.8324324324324324
+            },
+            "eukaryotic": {
+              "queries": 74,
+              "raw_mean": 0.9864864864864865,
+              "learned_mean": 0.894594594594594
+            },
+            "viral": {
+              "queries": 1,
+              "raw_mean": 1.0,
+              "learned_mean": 1.0
+            }
+          }
+        }
+      },
+      "pair_label_consistency": {
+        "counts": {
+          "-1": {
+            "same_admitted_label": 0,
+            "different_admitted_labels": 241,
+            "unresolved": 159
+          },
+          "1": {
+            "same_admitted_label": 158,
+            "different_admitted_labels": 0,
+            "unresolved": 64
+          }
+        },
+        "scope": "Conservative dominant-origin label consistency, not unique identity or proof all loci/replicons agree; no feedback into selection"
+      },
+      "source_pair_count": 2405,
+      "retained_pair_count": 622,
+      "full_geometry_record": {
+        "bytes": 108142,
+        "sha256": "8a0e261ad1fcf58ec68d0c865a9424f7b600cf53230aa24a2a2f01f165e0c459"
+      }
+    },
+    "oral-noGLM": {
+      "roles": {
+        "teacher": {
+          "actual_serialized_state": {
+            "online": "51a552c1962a428b17d1f874c1ef2fb3c4c6a4156cc20aa0e67b37f42721a37f",
+            "target": "f003bf5010049ea1edca9e68d44f97e3dfaa7b9d8fc3666f6c71da769100f307",
+            "predictor": "3592b7f467bc7510e2cd913c4645524a9eb837d7b284e04ce9c0d3d56c820b9c",
+            "anchor": "179bcf2ae9dbb7d44137402a92b3d3f96a26339bc96e381c419411cc0199039f"
+          },
+          "Adam_step_histogram": {
+            "119280.0": 55,
+            "79520.0": 4,
+            "39760.0": 11
+          },
+          "inherited_state_contract": "Byte-bound original E031 source plus passed native full-state/Adam restoration; no Mac forward/reload inference",
+          "sparse": {
+            "edges": 12746096,
+            "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+          },
+          "unit_and_neighbor_contract": {
+            "metric": "retained unit vectors, cosine; no post-learning z-score",
+            "native_rows_checked": 508763,
+            "native_neighbor_entries": 15262890,
+            "query_selection": "first128 SHA256(contigID), label blind",
+            "tolerance": 1e-06,
+            "mean_recall_k": 0.9973958333333334,
+            "mean_recall_5": 0.9953125
+          },
+          "all_attributable_native_5NN_same": 0.2588124529496052,
+          "attributable_native_5NN_queries": 508763,
+          "unknown_valid_queries": 0,
+          "native_length_census": {
+            "1": {
+              "attributable_queries": 0,
+              "query_bp": 0,
+              "same_fraction": null,
+              "bp_weighted_same": null
+            },
+            "500": {
+              "attributable_queries": 203303,
+              "query_bp": 125070908,
+              "same_fraction": 0.19884113859608565,
+              "bp_weighted_same": 0.20043852564019127
+            },
+            "768": {
+              "attributable_queries": 89490,
+              "query_bp": 78106495,
+              "same_fraction": 0.23011509665884455,
+              "bp_weighted_same": 0.23085228955671355
+            },
+            "1000": {
+              "attributable_queries": 155759,
+              "query_bp": 231804294,
+              "same_fraction": 0.2871256235594733,
+              "bp_weighted_same": 0.29481765941747395
+            },
+            "2500": {
+              "attributable_queries": 49729,
+              "query_bp": 217094423,
+              "same_fraction": 0.40452452291419494,
+              "bp_weighted_same": 0.4248335647019363
+            },
+            "10000": {
+              "attributable_queries": 10482,
+              "query_bp": 791751544,
+              "same_fraction": 0.5549704254913184,
+              "bp_weighted_same": 0.3038371640990447
+            }
+          },
+          "native_lineage_census": {
+            "provided_bacterial_target": {
+              "attributable_queries": 508763,
+              "query_bp": 1443827664,
+              "same_fraction": 0.2588124529496052,
+              "bp_weighted_same": 0.30767704725181105
+            }
+          },
+          "final_epoch_geometry": {
+            "online": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 34.37323748453959,
+                "mean_dimension_std": 0.10762505943673148,
+                "mean_other_cosine": 0.22949702544659206,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 29.62104983523536,
+                "mean_dimension_std": 0.1090287054951995,
+                "mean_other_cosine": 0.20242037087185585,
+                "rows": 8192
+              }
+            },
+            "target": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 34.043861605560195,
+                "mean_dimension_std": 0.1073596169901722,
+                "mean_other_cosine": 0.23268379935577815,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 29.440933700167147,
+                "mean_dimension_std": 0.10880530157113918,
+                "mean_other_cosine": 0.20497874933664328,
+                "rows": 8192
+              }
+            }
+          },
+          "raw_fixed_queries": {
+            "provided_bacterial_target": {
+              "queries": 128,
+              "raw_mean": 0.3609375,
+              "learned_mean": 0.27812500000000007
+            }
+          }
+        },
+        "student": {
+          "actual_serialized_state": {
+            "online": "3a838e2e002cc87a107cee242dae837f99ffcf38f8ad77ef73017dc1454be3b0",
+            "target": "1f15a551bc5458ae97d337cb5ab76de2e2f55c55a0029722a34509e05e0b5ab0",
+            "predictor": "83295403d2a084e864709281db5898927097e5bbe303c1d9162968015f22e2f2",
+            "anchor": "179bcf2ae9dbb7d44137402a92b3d3f96a26339bc96e381c419411cc0199039f"
+          },
+          "Adam_step_histogram": {
+            "159040.0": 55,
+            "79520.0": 15
+          },
+          "inherited_state_contract": "Byte-bound original E031 source plus passed native full-state/Adam restoration; no Mac forward/reload inference",
+          "sparse": {
+            "edges": 12775037,
+            "endpoint_order": "opaque-ID lexicographic, mapped to full FASTA row indices"
+          },
+          "unit_and_neighbor_contract": {
+            "metric": "retained unit vectors, cosine; no post-learning z-score",
+            "native_rows_checked": 508763,
+            "native_neighbor_entries": 15262890,
+            "query_selection": "first128 SHA256(contigID), label blind",
+            "tolerance": 1e-06,
+            "mean_recall_k": 0.9963541666666667,
+            "mean_recall_5": 1.0
+          },
+          "all_attributable_native_5NN_same": 0.2605696562053451,
+          "attributable_native_5NN_queries": 508763,
+          "unknown_valid_queries": 0,
+          "native_length_census": {
+            "1": {
+              "attributable_queries": 0,
+              "query_bp": 0,
+              "same_fraction": null,
+              "bp_weighted_same": null
+            },
+            "500": {
+              "attributable_queries": 203303,
+              "query_bp": 125070908,
+              "same_fraction": 0.2005823819618992,
+              "bp_weighted_same": 0.20219965301603154
+            },
+            "768": {
+              "attributable_queries": 89490,
+              "query_bp": 78106495,
+              "same_fraction": 0.2318918314895519,
+              "bp_weighted_same": 0.23260128879166833
+            },
+            "1000": {
+              "attributable_queries": 155759,
+              "query_bp": 231804294,
+              "same_fraction": 0.28914155843322054,
+              "bp_weighted_same": 0.2968233427116756
+            },
+            "2500": {
+              "attributable_queries": 49729,
+              "query_bp": 217094423,
+              "same_fraction": 0.40558627762472604,
+              "bp_weighted_same": 0.4255207191573042
+            },
+            "10000": {
+              "attributable_queries": 10482,
+              "query_bp": 791751544,
+              "same_fraction": 0.5563251287922152,
+              "bp_weighted_same": 0.3040091112218911
+            }
+          },
+          "native_lineage_census": {
+            "provided_bacterial_target": {
+              "attributable_queries": 508763,
+              "query_bp": 1443827664,
+              "same_fraction": 0.2605696562053451,
+              "bp_weighted_same": 0.3084438401507175
+            }
+          },
+          "final_epoch_geometry": {
+            "online": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 33.95043941702363,
+                "mean_dimension_std": 0.10771385339678147,
+                "mean_other_cosine": 0.2278688334372484,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 29.311097069267667,
+                "mean_dimension_std": 0.10903953966715405,
+                "mean_other_cosine": 0.20154508200899665,
+                "rows": 8192
+              }
+            },
+            "target": {
+              "fused": {
+                "catastrophic_collapse": false,
+                "effective_rank": 33.5238589286873,
+                "mean_dimension_std": 0.10744856986722211,
+                "mean_other_cosine": 0.23092168021407777,
+                "rows": 8192
+              },
+              "sequence": {
+                "catastrophic_collapse": false,
+                "effective_rank": 29.062852324275806,
+                "mean_dimension_std": 0.10873251403137771,
+                "mean_other_cosine": 0.20519114618587161,
+                "rows": 8192
+              }
+            }
+          },
+          "raw_fixed_queries": {
+            "provided_bacterial_target": {
+              "queries": 128,
+              "raw_mean": 0.3609375,
+              "learned_mean": 0.27499999999999997
+            }
+          }
+        }
+      },
+      "pair_label_consistency": {
+        "counts": {
+          "-1": {
+            "same_admitted_label": 0,
+            "different_admitted_labels": 1530,
+            "unresolved": 0
+          },
+          "1": {
+            "same_admitted_label": 969,
+            "different_admitted_labels": 168,
+            "unresolved": 0
+          }
+        },
+        "scope": "Conservative dominant-origin label consistency, not unique identity or proof all loci/replicons agree; no feedback into selection"
+      },
+      "source_pair_count": 19857,
+      "retained_pair_count": 2667,
+      "full_geometry_record": {
+        "bytes": 145380,
+        "sha256": "a5f5955f92dc0f6b9f180c7bf25d9ce89106752cb6208e68c9e61449e592ca21"
+      }
+    }
   }
 }

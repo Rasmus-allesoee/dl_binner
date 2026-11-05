@@ -488,6 +488,13 @@ Keep raw object bytes separate from CLI result formatting. A formatted command
 can append report data to a downloaded JSON document. Check the exact object
 generation, byte count and digest before treating a local parsing failure as
 corrupt native evidence. Preserve the failed transport journal.
+
+Keep receiver-generated transport/admission receipts outside the immutable science
+member namespace. Compact staging must include every companion file required by
+the actual strict consumer, including decision ledgers declared in cache manifests.
+Test the archive-to-stage-to-reader path, not only successful member extraction.
+Recover a missing compact-stage member from its verified generation and checksum;
+do not weaken the reader or alter accepted native bytes to make staging pass.
 Keep growing resource histories outside size-bounded control/completion JSON;
 bind their closed files from a compact summary. Test the actual writer with the
 maximum expected run history, not only a tiny workflow. Return the scientific
