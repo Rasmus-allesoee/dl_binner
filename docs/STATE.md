@@ -1,5 +1,53 @@
 # Current Research State
 
+## E035 prepared locally; pooled-support audit recommended before bulk taxonomy
+
+[E035](../experiments/E035-confidence-taxonomy/README.md) implements an optional
+confidence-aware hierarchical-taxonomy residual around immutable strong E031
+actual parent/crop learning, complete GLM ancestry and fixed provisional E032
+construction. Independent MMseqs2/GTDB annotations, partial/no-hit/conflict states,
+intrinsic strain distinctions and exact no-annotation/disabled fallback are explicit.
+Local native synthetic-reference, training/reload/geometry/refinement/export and
+complete return-reader contracts are recorded in [local evidence](../experiments/E035-confidence-taxonomy/local-observed.json).
+No community annotation/fit/score, bulk protein reference or paid action occurred;
+biological recovery remains NOT_ASSESSED. Old baselines and failures are unchanged.
+
+The owner's E034 concern is consequential: [reassessment](../experiments/E035-confidence-taxonomy/reassessment.md)
+confirms support was filtered **per sample before pooling**. Two-plus-two real
+tiny BAM templates demonstrate the lost-information case. E034 cannot answer it
+from retained post-filter graphs. **Next: the separately priced all-ten pooled-
+before-support information audit**, preserving original MAPQ/identity/mate/insert
+rules and applying utility only after all ten close. This is not permission to
+lower E034's old gate, promise a useful graph or skip its specificity audit.
+The [exact next prompt](../experiments/E035-confidence-taxonomy/OPERATIONS.md#exact-following-prompt)
+proposes new $4 / 8 hours on existing 32 GiB E2, conditional new 100 GiB scratch.
+Native controller/watchdog admission and fresh live financial gates remain required.
+
+Taxonomy is already implemented in parallel. Its **separate, unapproved** full
+reference/admission/three-mode proposal is $50 / 72 hours, temporarily existing
+E2 highmem 64 GiB plus conditional new 750 GiB disk, with complete measured
+schedule/space/credit gates; [resource model](../experiments/E035-confidence-taxonomy/resource-plan.json)
+estimates $39.19 but does not admit full-GTDB RSS/throughput. No GPU is proposed.
+Only small metadata and a 4,096-byte protein-archive range were read, not its
+66.81 GiB payload. A useful pooled result can instead justify the graph comparison.
+
+The [evaluation audit](../experiments/E035-confidence-taxonomy/evaluation-foundation.json)
+finds confirmed represented fractions of 18.5321% E009 / 80.1691% Oral, keeping
+all 156/799 provided-reference denominators. These upper representation bounds
+are not achievable R95. Report assembly-conditional and singleton/fragmented
+recovery beside primary recovery. Keep E023 10.4163%, stronger E031 contexts,
+E032 and native MetaBAT2 unchanged; no new gain or general SOTA claim exists.
+E031's depth gate means positive profile, not measurement presence; this candidate
+inherits it explicitly, retaining measured all-zero versus missing-depth accounting.
+
+Read-only control-plane inspection again found **TERMINATED**, original 30/300 GiB
+disks only, no mutation. No new Billing balance is claimed by preparation. Original
+storage approval still ends **November 11 at 00:00 Copenhagen / November 18 automatic
+tail**. Neither proposed budget renews storage. Skin stays unscored with full
+source/overlap/unique-truth/depth admission outstanding; Oral GLM still needs native
+128-view qualification/full bank/teacher/proposal admission. Q006 selection
+optimality stays open. Earlier status below remains dated history.
+
 ## E034 pilots complete; comparison NOT_ASSESSED; task disk released
 
 [Verified final E034 review](../experiments/E034-genome-graph/completed-review.md)

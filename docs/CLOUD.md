@@ -1,5 +1,30 @@
 # Google Cloud workspace operations
 
+## November 6: E035 local preparation; no new chargeable action
+
+[E035 local receipt](../experiments/E035-confidence-taxonomy/local-observed.json)
+binds a read-only control-plane check: TERMINATED, e2-standard-8, original
+30 GiB standard / 300 GiB balanced disks only. No VM start, resource change,
+archive write, bulk database or retention renewal. The stopped guest filesystem
+was not inspected; 26.80 GiB free is the last native measurement, not a fresh one.
+No live Billing refresh is claimed. E034 financial observations below are dated.
+
+The [next separately priced scope](../experiments/E035-confidence-taxonomy/OPERATIONS.md#exact-following-prompt)
+is $4 / 8 hours for all-ten pooled-support readers only: existing 32 GiB E2,
+conditional new 100 GiB balanced scratch after safe cleanup; estimated gross $3.12.
+No fit or bulk taxonomy in that audit. A distinct **unapproved** taxonomy comparison
+proposes $50 / 72 hours, temporary existing E2 highmem 64 GiB and conditional new
+750 GiB balanced scratch, estimated gross $39.19 including source/query/index
+coexistence and return. [The resource plan](../experiments/E035-confidence-taxonomy/resource-plan.json)
+is a forecast, not full-reference/native or credit admission. Controllers, fresh
+watcher/STOP and complete source/runtime/schedule gates must pass before spending.
+
+Old scratch is deleted, not reusable. Original preservation/$9 scope remains
+separate. **November 11 at 00:00 Copenhagen active / November 18 automatic tail**
+remain hard boundaries; a 72-hour proposal cannot start if full cleanup cannot
+finish before them. Fresh complete credit/eligibility/delayed-usage, quota, storage,
+all-version/tail/export and calendar gates remain mandatory. No real-money charge.
+
 ## November 6: E034 pilots closed and task disk deleted
 
 [Completed receipt](../experiments/E034-genome-graph/completed-observed.json)

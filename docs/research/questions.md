@@ -16,6 +16,17 @@ The candidate focus is contig loss/misassignment in fragmented prokaryotic assem
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
 
+November 6 E035 preparation update: [policy/data reassessment](../../experiments/E035-confidence-taxonomy/reassessment.md)
+confirms the untested all-ten pooling question and exposes the represented-reference
+ceilings without changing primary denominators. The unchanged evaluator passes
+hand oracles; no demonstrated evaluator bug explains the current gap. Implement
+the optional independently annotated taxonomy residual locally, but recommend the
+new $4 pooled-support information audit before bulk reference acquisition. No
+community execution or new recovery exists. Q001 remains open; E034 NOT_ASSESSED
+does not reject physical links. [Prospective design](../../experiments/E035-confidence-taxonomy/design.md)
+keeps strong E031/E032, complete modality ancestry, partial/no-hit/conflict evidence
+and intrinsic fallback. Q006, Oral GLM and skin confirmation dependencies persist.
+
 November 6 completed update: [E034's two pilots](../../experiments/E034-genome-graph/completed-review.md)
 pass execution/byte/source contracts, but Oral sample 18 fails the frozen physical
 support floor. The conditional comparison is NOT_ASSESSED, with no new MAG result.

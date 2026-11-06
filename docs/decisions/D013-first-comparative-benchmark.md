@@ -1,5 +1,30 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E035 reassessment and execution order, November 6
+
+[The local E035 block](../../experiments/E035-confidence-taxonomy/README.md)
+implements the requested taxonomy candidate without community execution. The
+owner's concern changes the next paid recommendation: E034's per-library support
+filter did not test pooled weak evidence, so first prepare a new all-ten pooled-
+before-support information audit with unchanged mapping-specificity semantics.
+Preserve the old failure; do not turn a completed information measurement and an
+unrun recovery comparison into rejection of the feature family.
+
+[Evaluation-foundation arithmetic](../../experiments/E035-confidence-taxonomy/evaluation-foundation.json)
+and hand oracles keep the conservative evaluator while exposing represented
+reference ceilings (18.5321% E009 / 80.1691% Oral), absent targets and singleton
+versus fragmented recovery. No new score, denominator reduction or assembly-
+attainability claim. E009 and Oral remain different truth/assembly regimes and
+development data. Taxonomy must use an independently pinned reference, with
+reference-assisted and unseen-genome limits stated, never benchmark labels.
+
+[D015](D015-coherent-prototype-upgrade.md) records the representation choice.
+Proposed new $4 pooled audit and distinct $50 taxonomy full-reference comparison
+require separate scope admission and fresh complete credit/native gates. No old
+budget carries over; preparation renews no storage. November 11/18 remain, and
+no cloud start or bulk database occurred. Keep strong E031/E032/E023 and all old
+results/failures immutable. Skin confirmation and Oral GLM dependencies stay visible.
+
 
 ## E034 pilots accepted, no recovery comparison; information priority, November 6
 

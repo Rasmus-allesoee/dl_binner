@@ -221,6 +221,10 @@ Report lineage/origin and length denominators alongside community-wide diagnosti
 aggregates. A representation gain driven by non-target organisms is not evidence
 of improvement for the primary cellular targets. Compare the same query populations
 and retain unknown/non-target DNA in the appropriate full-population denominators.
+Report the represented-reference ceiling and assembly-conditional recovery beside
+full-reference recovery when availability limits interpretation. Keep their
+denominators distinct; a ceiling is not proof of attainability or permission to
+exclude unrepresented targets. Separate intact-contig from fragmented recovery.
 High nearest-neighbor search recall verifies retrieval accuracy in its declared
 geometry, not biological source homogeneity or genome recovery. Diagnose input
 information, representation and bin selection separately on matched populations.
@@ -340,6 +344,11 @@ compact supporting endpoint-coordinate evidence for a future localized audit,
 without exposing raw read names/DNA as features. State whether support thresholds
 are applied per sample before pooling; a failed single-sample gate does not establish
 failure of pooled evidence. Never weaken a frozen gate after observing that failure.
+Before replacing an information hypothesis after a pilot stops, audit sampling,
+filter placement and aggregation order. A completed information audit and an
+unrun performance comparison are separate statuses. Retain the pre-threshold
+statistics needed by a justified later pooling test; do not infer that result
+from filtered graphs or manufacture it by changing the old journal.
 
 Reference-derived classifier annotations can be a legitimate declared modality,
 but must come from actual DNA and independently pinned classifier/database bytes,

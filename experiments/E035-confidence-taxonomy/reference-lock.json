@@ -1,0 +1,106 @@
+{
+  "kind": "E035 independent classifier/reference preparation; no bulk admission",
+  "classifier_release": "18-8cc5c",
+  "classifier_commit": "8cc5ce367b5638c4306c2d7cfc652dd099a4643f",
+  "macOS_archive": {
+    "url": "https://github.com/soedinglab/MMseqs2/releases/download/18-8cc5c/mmseqs-osx-universal.tar.gz",
+    "bytes": 20721149,
+    "sha256": "158102d4c3e3ce721424f455106fac348cd01d424ed5e66cb03eac3de5064eb6",
+    "binary_bytes": 27888744,
+    "binary_sha256": "837eaf6cc9be92ff320c42c4cf56ae0d75f2a53c6ff6b24a577e803e9e3951be",
+    "platform": "macOS universal; Linux path not exercised"
+  },
+  "Linux_archive": {
+    "url": "https://github.com/soedinglab/MMseqs2/releases/download/18-8cc5c/mmseqs-linux-avx2.tar.gz",
+    "bytes": 17375777,
+    "md5": "14bc702855f5fd727496fb1229f67a64",
+    "sha256": "bd9b0234da5949ad528d5b5f9ea4cda9c1e23dce14b46c0791d4d919a76e61ce",
+    "publisher_MD5": null
+  },
+  "Linux_executed": false,
+  "GTDB_release": "R220 / 220.0",
+  "taxonomy_metadata": {
+    "bac120_taxonomy_r220.tsv.gz": {
+      "url": "https://data.ace.uq.edu.au/public/gtdb/data/releases/release220/220.0/bac120_taxonomy_r220.tsv.gz",
+      "bytes": 6064832,
+      "md5": "abe78f8b1df9675ca4d2ab14dd85740b",
+      "sha256": "0e4318af347bf1afa31d323bdc82000b2a3823d6e67eac6a585465313207766d",
+      "publisher_MD5": "abe78f8b1df9675ca4d2ab14dd85740b",
+      "uncompressed_bytes": 83820569
+    },
+    "ar53_taxonomy_r220.tsv.gz": {
+      "url": "https://data.ace.uq.edu.au/public/gtdb/data/releases/release220/220.0/ar53_taxonomy_r220.tsv.gz",
+      "bytes": 174611,
+      "md5": "31fc0a10850581da72b3458f56926ced",
+      "sha256": "c89ca02f3c824c7c143132857fcf791f3b5015e7c59c2303765d8e11f5f44876",
+      "publisher_MD5": "31fc0a10850581da72b3458f56926ced",
+      "uncompressed_bytes": 1776985
+    }
+  },
+  "taxonomy_tree": {
+    "nodes": 146381,
+    "accessions": 596859,
+    "rank_counts": {
+      "class": 607,
+      "family": 5460,
+      "genus": 24959,
+      "order": 2030,
+      "phylum": 217,
+      "species": 113104,
+      "superkingdom": 2
+    },
+    "max_siblings": 1070,
+    "tree": {
+      "bytes": 16923119,
+      "sha256": "f6ad8f988e1cd157c2041e622519bc0e84888a49243abbf1d94c517382c2cf27"
+    },
+    "two_embedding_and_bias_float32_bytes": 19322292
+  },
+  "proteins": {
+    "url": "https://data.ace.uq.edu.au/public/gtdb/data/releases/release220/220.0/genomic_files_reps/gtdb_proteins_aa_reps_r220.tar.gz",
+    "bytes": 71733563809,
+    "publisher_MD5": "49fffb75d1d142ec669d964690c2ab6b",
+    "SHA256": null,
+    "whole_payload_verified": false,
+    "member_inventory_admitted": false,
+    "bulk_acquired": false,
+    "bounded_range": {
+      "status": 206,
+      "headers": {
+        "Date": "Fri, 06 Nov 2026 16:08:28 GMT",
+        "Server": "Apache/2.4.62 (Oracle Linux Server) OpenSSL/3.5.8",
+        "Last-Modified": "Sat, 06 Apr 2024 03:23:27 GMT",
+        "ETag": "\"10b3a751a1-61565187e397b\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "4096",
+        "Content-Range": "bytes 0-4095/71733563809",
+        "Connection": "close",
+        "Content-Type": "application/x-gzip"
+      },
+      "bytes_read": 4096,
+      "sha256": "2ef3696f1bf582b9ef93c764fb5ae51a0037d915971b4960b8b6ebf8ea5367e5"
+    }
+  },
+  "native_output": "8-column aggregated translated taxonomy, with native-index-proven zero-ORF completion; raw preserved",
+  "confidence": "heuristic support proxy, not calibrated correctness",
+  "source_blind_queries": true,
+  "benchmark_truth_accessed": false,
+  "license": {
+    "GTDB": "CC BY-SA 4.0",
+    "GTDB_source": "https://gtdb.ecogenomic.org/licenses",
+    "MMseqs2": "MIT"
+  },
+  "source_documents": {
+    "MMseqs2": "https://github.com/soedinglab/MMseqs2/wiki",
+    "GTDB_R220": "https://data.ace.uq.edu.au/public/gtdb/data/releases/release220/220.0/",
+    "TaxVAMB": "https://www.nature.com/articles/s41587-026-03098-0"
+  },
+  "source_fetch": {
+    "bytes": 3206,
+    "sha256": "53396d22d86db447e69a76346c8beafee0c8c9256e8a4a519b9f5320355956e7"
+  },
+  "targeted_previous_source": {
+    "bytes": 3782,
+    "sha256": "7b77872dbdcc68d50e12b0759d592f4ba71a4c2ca37f46255232bd932fdb685f"
+  }
+}

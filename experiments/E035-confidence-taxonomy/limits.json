@@ -1,0 +1,20 @@
+{
+  "seconds": 259200,
+  "provider_STOP_seconds": 260100,
+  "ceiling_USD": 50,
+  "proposed_temporary_machine": "e2-highmem-8",
+  "allocated_vCPUs": 8,
+  "allocated_RAM_GiB": 64,
+  "threads": 4,
+  "RSS_bytes": 52000000000,
+  "reserve_bytes": 26843545600,
+  "task_disk_GiB": 750,
+  "task_growth_bytes": 724775731200,
+  "aggregate_compressed_bytes": 12884901888,
+  "slice_compressed_bytes": 2147483648,
+  "slice_logical_bytes": 8589934592,
+  "local_staged_bytes": 3221225472,
+  "local_free_reserve_bytes": 8589934592,
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+}

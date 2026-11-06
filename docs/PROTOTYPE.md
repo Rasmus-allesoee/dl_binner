@@ -416,6 +416,23 @@ contracts, complete DNA exports and separately authorized comparison scope.
 
 The separately frozen [E027 protocol](../experiments/E027-common-information-binner/protocol.json) exposes `dl_binner.unified.cache`, `training`, `graph` and `grouping` in the built wheel. This experimental candidate is not a promotion over the accepted CLI baseline. The source-bound research DAG owns admission → fresh bootstrap → own-teacher pairs → marker student → identical graded grouping → complete assignment exports. Optional frozen GLM propagates through the whole information path. New manifests admit genuine depth to unchanged DNA arrays read-only; they never alter accepted caches. [Operations](../experiments/E027-common-information-binner/OPERATIONS.md) owns actual native/software checks and resource status.
 
+## Hierarchical taxonomy candidate (E035, research API)
+
+[E035](../experiments/E035-confidence-taxonomy/README.md) adds installed
+`dl_binner.taxonomy` tree, strict native annotation/zero-ORF normalization,
+streamed reference builder, frozen E031 actual-view cache and bounded residual
+learning modules. `python -m dl_binner.taxonomy.stage` exposes explicit
+classify/cache/train operations; it never downloads a database or consumes
+evaluation truth. This is a research API, not a promoted default CLI pipeline.
+Whole GTDB/native Linux and community recovery admission remain outstanding.
+Tiny native classification is real; fixture GLM vectors/marker calls are synthetic.
+Exact intrinsic fallback depends on usable annotation, not benchmark origin.
+
+`dl_binner.genomegraph.pooled` and `scripts/e035_support.py` implement the separate
+prospective all-ten pre-support ledger audit. They preserve the accepted E034
+implementation and change only the declared support-aggregation policy. Its
+native control-plane launcher still requires qualification before a paid start.
+
 ## Common BAM-derived multiscale candidate (E033, research API)
 
 [E033](../experiments/E033-multiscale-bam/README.md) adds installed

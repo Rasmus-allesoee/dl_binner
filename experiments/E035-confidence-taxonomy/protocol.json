@@ -1,0 +1,107 @@
+{
+  "status": "FROZEN_PRE_COMMUNITY_PREPARATION",
+  "same_version_all_modes": true,
+  "modes": [
+    "E009-noGLM",
+    "E009-GLM",
+    "oral-noGLM"
+  ],
+  "adapter_policy": {
+    "version": 1,
+    "seed": 11,
+    "epochs": 20,
+    "batch_size": 256,
+    "hidden": 64,
+    "taxonomy_width": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "taxonomy_dropout": 0.25,
+    "residual_cap": 0.25,
+    "hierarchy_weight": 1.0,
+    "anchor_weight": 1.0,
+    "view_weight": 0.25,
+    "composition_weight": 0.1,
+    "parent_depth_weight": 0.05,
+    "intrinsic": "frozen_E031_online_actual_parent_and_crop_heads",
+    "unknown": "exact_intrinsic_fallback",
+    "taxonomy": "partial_parent_context_not_crop_measurement",
+    "confidence": "uncalibrated_ORF_support_proxy",
+    "objective": "conditional_sibling_CE_available_views_anchor_and_modality_reconstruction",
+    "negative_policy": "no_taxon_must_links_or_cannot_links",
+    "teacher_proposals": "unchanged_E031_mode_ancestry"
+  },
+  "learning": "frozen E031 online encoder; new 20-epoch bounded taxonomy adapter only",
+  "constructor": "unchanged common E032 with all alternatives",
+  "new_teacher_or_pairs": false,
+  "E009_GLM": "full admitted E031 teacher/proposal/student ancestry and actual crop bank",
+  "noGLM": "no bank or hidden GLM-derived teacher/proposal inputs",
+  "taxonomy_off_community_fit": false,
+  "primary": "full provided-reference weighted R95 / T90; unchanged evaluator",
+  "full_reference_targets": {
+    "E009": 156,
+    "oral": 799
+  },
+  "E009_N_quarantine_fraction": 0.033034,
+  "oral_truth": "provided-origin oracle plus known-shared sensitivity",
+  "baselines": {
+    "E009-noGLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "bp_weighted_R95": 0.10284660444221254,
+      "macro_R95": 0.11241530733811551,
+      "at_least_50_percent": 19,
+      "at_least_90_percent": 7
+    },
+    "E009-GLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "bp_weighted_R95": 0.10175990097318567,
+      "macro_R95": 0.11148414369635522,
+      "at_least_50_percent": 19,
+      "at_least_90_percent": 6
+    },
+    "oral-noGLM": {
+      "targets": 799,
+      "reference_bp": 2083072211,
+      "bp_weighted_R95": 0.3437864497535655,
+      "macro_R95": 0.35342722362177414,
+      "at_least_50_percent": 291,
+      "at_least_90_percent": 219
+    }
+  },
+  "stronger_E009_anchors": {
+    "E009-noGLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "bp_weighted_R95": 0.10611002136815277,
+      "macro_R95": 0.11653750293132198,
+      "at_least_50_percent": 19,
+      "at_least_90_percent": 10
+    },
+    "E009-GLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "bp_weighted_R95": 0.10568366072527535,
+      "macro_R95": 0.11653573632537705,
+      "at_least_50_percent": 19,
+      "at_least_90_percent": 9
+    }
+  },
+  "KEEP": "No E032 R95/T90 loss in any mode; both E009 modes also meet stronger E031/E023 R95/T90; >=0.5 percentage point R95 or >=3 multi-contig T90 gain in one mode",
+  "MODIFY": "Useful recovery gain with smaller effect or cross-mode/unknown-stratum trade-off",
+  "ABANDON": "No mode improves R95 or multi-contig T90 against E032",
+  "missing_contract": "No quality claim; first diagnose the scientific or operational boundary",
+  "strata": [
+    "length",
+    "origin",
+    "annotation state/rank/confidence",
+    "eligibility",
+    "marker",
+    "unknown/non-target",
+    "unassigned",
+    "singleton/multi-contig"
+  ],
+  "independent_confirmation": false,
+  "skin_unscored": true,
+  "old_scores_rescored": false
+}

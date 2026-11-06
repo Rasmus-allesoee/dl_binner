@@ -47,3 +47,5 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [2026-11-05: UnitigBIN/newer graph sources and E034 design](2026-11-05-e034-newer-graph-design.md)
 
 - [November 6: completed E034 pilots, physical specificity and the next taxonomy-information decision](2026-11-06-e034-pilot-and-information-priority.md)
+
+- [November 6: E035 taxonomy source/native contracts, pooled support and evaluation foundation](2026-11-06-e035-taxonomy-and-pooled-support.md)

@@ -1,0 +1,31 @@
+"""Explicit serial chain; independent classifier evidence must pass before any taxonomy adapter."""
+import json
+from pathlib import Path
+p=json.loads(Path(config['plan']).read_text())
+units=['E009-noGLM','E009-GLM','oral-noGLM']
+stages=['view-cache','student','student-embed','student-graph','retrieve','forest','construct','e023','select','audit']
+workflow_order=[(u,s) for u in units for s in stages]
+engineering=' --engineering' if config.get('engineering')=='true' else ''
+
+def previous(w):
+    at=workflow_order.index((w.unit,w.stage))
+    return 'barrier/done.json' if at==0 else '/'.join((*workflow_order[at-1],'done.json'))
+
+rule all:
+    input: '/'.join((*workflow_order[-1],'done.json'))
+
+rule barrier:
+    output: 'barrier/done.json'
+    threads: 4
+    resources: mem_mb=int(p['limits'].get('RSS_bytes',26000000000)/1000000)
+    benchmark: 'benchmarks/barrier.tsv'
+    shell: p['python']+' -I -B '+p['worker']+' --plan '+config['plan']+' --stage barrier'+engineering
+
+rule step:
+    input: previous
+    output: '{unit}/{stage}/done.json'
+    wildcard_constraints: unit='E009-noGLM|E009-GLM|oral-noGLM', stage='view-cache|student|student-embed|student-graph|retrieve|forest|construct|e023|select|audit'
+    threads: 4
+    resources: mem_mb=int(p['limits'].get('RSS_bytes',26000000000)/1000000)
+    benchmark: 'benchmarks/{unit}-{stage}.tsv'
+    shell: p['python']+' -I -B '+p['worker']+' --plan '+config['plan']+' --stage {wildcards.stage} --unit {wildcards.unit}'+engineering

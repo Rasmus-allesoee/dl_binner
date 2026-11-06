@@ -1,0 +1,31 @@
+{
+  "source": "artifacts/e033-multiscale-bam/completed-inspection-20261105/targets.tsv",
+  "source_sha256": "60812d8487af962b79c58a36b04f09e1f1ab227d115c9c31833088bcfaf30d63",
+  "arithmetic_only_no_rescore": true,
+  "represented_ceiling_not_attainability_or_purity_proof": {
+    "E009-GLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "represented_confirmed_bp": 102790342,
+      "represented_fraction": 0.18532072214299777,
+      "represented90": 17,
+      "positive_origin": 118
+    },
+    "E009-noGLM": {
+      "targets": 156,
+      "reference_bp": 554661890,
+      "represented_confirmed_bp": 102790342,
+      "represented_fraction": 0.18532072214299777,
+      "represented90": 17,
+      "positive_origin": 118
+    },
+    "oral-noGLM": {
+      "targets": 799,
+      "reference_bp": 2083072211,
+      "represented_confirmed_bp": 1669979389,
+      "represented_fraction": 0.8016905895923355,
+      "represented90": 478,
+      "positive_origin": 797
+    }
+  }
+}

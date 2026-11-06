@@ -1,5 +1,35 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E035 local candidate and pooled-policy reassessment, November 6
+
+[E035 design](../../experiments/E035-confidence-taxonomy/design.md) implements
+taxonomy locally as an independent information hypothesis: freeze strong E031
+online encoders and actual crop/context/GLM inputs, train a bounded confidence-
+gated residual with explicit composition/parent-depth/hierarchical branches, and
+keep E032 construction. No taxon-equals-genome constraint, propagated benchmark
+label, new teacher/proposals or larger backbone. Exact no-annotation/disabled
+fallback preserves intrinsic vectors, while partitions can still change. Unknown
+benchmark origin is distinct from missing classifier evidence. Real tiny native,
+loss/gradient/state/reload/export and return contracts are engineering, not recovery.
+
+[Source and evaluator reassessment](../evidence/2026-11-06-e035-taxonomy-and-pooled-support.md)
+supports the owner's policy concern. E034 discarded two-plus-two cross-library
+support before pooling and cannot retrospectively reconstruct it. Recommend the
+cheaper separately admitted all-ten pooled-support audit **before** acquiring the
+large taxonomy reference; this supersedes only taxonomy-first execution priority,
+not the implemented candidate or the old failed gate. Keep filters fixed while
+changing aggregation order; retain coordinates and descriptive joint filter /
+insert counters to distinguish policy, specificity and assembly limitations.
+
+Taxonomy acquisition/comparison remains a concrete separately priced alternative,
+with MMseqs2 18-8cc5c / GTDB R220, full source joins and native resource gates.
+Local full-tree qualification optimized the same exact conditional loss instead
+of dropping siblings or weakening the model to meet a forecast. E031's positive-
+profile depth gate is inherited explicitly, not silently relabeled as measured
+presence. No community outcome, guaranteed MAG gain or family-level conclusion.
+Selection optimality, full Oral GLM and untouched confirmation remain open.
+All old scientific freezes and November 11/18 boundaries are preserved.
+
 
 ## E034 information refusal and taxonomy-informed representation priority, November 6
 

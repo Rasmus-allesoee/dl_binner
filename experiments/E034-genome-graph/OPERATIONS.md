@@ -145,6 +145,13 @@ the next exact prompt; no thresholds, old science or retention change.
 
 ## Exact following prompt
 
+The preparation prompt below was carried out as [E035](../E035-confidence-taxonomy/README.md).
+Its [new exact following prompt](../E035-confidence-taxonomy/OPERATIONS.md#exact-following-prompt)
+now owns the separately proposed pooled-support audit. This pointer supersedes
+only the next execution order; the old prompt and E034 failures remain historical.
+
+## Executed E035 preparation prompt at fd0062f
+
 Our goal is substantially stronger MAG recovery. Read AGENTS, PROJECT_INTENT,
 STATE/CLOUD, D013/D015 and E034's completed review, pilot/source-reliability audit,
 cost/disk-release receipts, next-block and targeted source audit. Preserve immutable

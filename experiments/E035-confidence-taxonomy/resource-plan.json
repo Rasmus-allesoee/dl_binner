@@ -1,0 +1,145 @@
+{
+  "status": "PREPARATION_ONLY_NOT_CREDIT_OR_EXECUTION_ADMISSION",
+  "rates_source": {
+    "bytes": 4486,
+    "sha256": "beeda1cf658ebf04c9712687e3c587c63fa400bae7e53fce051054517f9fd3cd"
+  },
+  "rates_observed_date": "2026-11-06",
+  "live_billing_checked_this_preparation": false,
+  "rates_USD": {
+    "E2_CPU_per_vCPU_hour": 0.021811589854348182,
+    "E2_RAM_per_GiB_hour": 0.0029235299638690013,
+    "E2_CPU_RAM_hour": 0.2680456776785935,
+    "IPv4_hour_upper": 0.004999999999994829,
+    "PD_balanced_per_GiB_month": 0.09999999999989657,
+    "PD_standard_per_GiB_month": 0.03999999999995863,
+    "catalog_storage_month_hours": 721.0,
+    "GCS_Iowa_Standard_GiB_hour": 2.7397e-05,
+    "WAN_Europe_per_GiB_upper": 0.12
+  },
+  "pricing_sources": [
+    "https://cloud.google.com/products/compute/pricing",
+    "https://cloud.google.com/compute/disks-image-pricing",
+    "https://cloud.google.com/storage/pricing",
+    "https://docs.cloud.google.com/free/docs/free-cloud-features"
+  ],
+  "recommended_next": {
+    "scope": "all-ten pooled-before-support audit only, no binner fits or bulk reference",
+    "ceiling_USD": 4,
+    "common_hours": 8,
+    "provider_STOP_hours": 8.25,
+    "VM": "existing e2-standard-8 / 32 GiB",
+    "temporary_task_disk_GiB": 100,
+    "balanced_disk_quota_GiB": 400,
+    "RSS_bytes": 26000000000,
+    "threads": 4,
+    "components_USD": {
+      "VM_allocation_8h": 2.1843654214287067,
+      "task_disk_100GiB_24h": 0.3328710124823187,
+      "desktop_export_2GiB": 0.24,
+      "archive_2GiB_12days": 0.015780672,
+      "operations_and_cleanup_upper": 0.35
+    },
+    "estimate_USD": 3.123017105911025,
+    "actual_BAM_bytes": 94850086599,
+    "original_E034_reader_seconds": {
+      "E009_sample0": 523.1203167829999,
+      "Oral_sample18": 521.759025012
+    },
+    "forecast": "~4-6 complete hours; 8-hour planning envelope including serial restore, full joins, new screening counters, hash/collection/stop/delete. Native first-ledger throughput admits remainder, not utility.",
+    "native_controller": "must bind this source/plan and exact BAM generations; fresh current-boot held-parent watcher and STOP before release"
+  },
+  "taxonomy_comparison": {
+    "scope": "one pinned independent GTDB classifier/database admission plus conditional three-mode E035 comparison",
+    "ceiling_USD": 50,
+    "common_hours": 72,
+    "provider_STOP_hours": 72.25,
+    "proposed_temporary_existing_VM": "e2-highmem-8 / 64 GiB; restore e2-standard-8 only while stopped after collection",
+    "temporary_task_disk_GiB": 750,
+    "balanced_disk_quota_GiB": 1050,
+    "threads": 4,
+    "RSS_bytes": 52000000000,
+    "components_USD": {
+      "VM_highmem_allocation_72h": 26.39510182961254,
+      "task_disk_750GiB_96h": 9.98613037446956,
+      "desktop_export_12GiB": 1.44,
+      "reference_and_returns_GCS_12days": 0.621814398238253,
+      "operations_and_cleanup_upper": 0.75
+    },
+    "estimate_USD": 39.19304660232035,
+    "same_work_on_32GiB_allocation_cost": 19.659288792858362,
+    "highmem_hour_USD": 0.3665986365223964,
+    "standard_hour_USD": 0.27304567767858834,
+    "RAM_reason": "16 G split-memory-limit is a prefilter-index budget, not whole-process RSS. Hundreds of millions of protein indices/mappings and query structures can coexist; 64 GiB is the safer proposed classifier allocation, still requiring native 52 GB RSS gates.",
+    "forecast_hours": {
+      "source_download_hash_build": 24,
+      "native_classifier_qualification_and_two_community_queries": 30,
+      "view_cache_and_three_adapter_fits": 8,
+      "three_mode_construction": 6,
+      "collection_stop_disk_release": 4
+    },
+    "RAM_and_wall_measured_for_full_reference": false,
+    "native_schedule_gate": "A bounded source-blind classifier qualification and full-tree/fit-shape probe must price the complete remaining schedule before release; no community fit on an unadmitted database/runtime.",
+    "peak_task_GiB": {
+      "public_protein_archive_upper": 67,
+      "converted_protein_FASTA_cap": 250,
+      "native_target_index_upper": 170,
+      "reference_joins": 25,
+      "query_and_search_scratch": 100,
+      "new_views_outputs": 25,
+      "return_slices": 12,
+      "logs_and_control": 5
+    },
+    "task_growth_cap_GiB": 675,
+    "free_reserve_GiB": 25,
+    "task_filesystem_GiB": 750,
+    "peak_is_forecast_not_measurement": true,
+    "full_annotation_view_bytes": {
+      "E009_each": 227944960,
+      "Oral": 1302433280
+    },
+    "max_frozen_view_encodings": 3434225,
+    "max_adapter_epochs": 20,
+    "compressed_return_GiB": 12,
+    "per_slice_compressed_GiB": 2,
+    "per_slice_logical_GiB": 8,
+    "physical_unique_bytes_per_slice": 1610612736,
+    "reference_asset_backup": "If uploaded, charge the full 66.81 GiB source separately from the <=12 GiB desktop scientific return; native DB is regenerable. Preserve compact member/genome-ID offset inventory and all unique annotation/ORF/model evidence.",
+    "scope_unapproved": true,
+    "max_adapter_updates": 53680,
+    "local_full_tree_synthetic_shape_probe": {
+      "nodes": 146381,
+      "max_siblings": 1070,
+      "parents": 256,
+      "views": 1280,
+      "new_parameters": 4883455,
+      "mean_update_seconds": 0.4618088793587439,
+      "old_reference_seconds": 2.604064235214277,
+      "same_exact_objective": true,
+      "max_update_only_extrapolated_hours": 6.886083512215936,
+      "not_a_GCP_or_complete_fit_forecast": true,
+      "interpretation": "The 8-hour cache/fit allowance is provisional: this worst-shape Mac update extrapolation alone is about 6.89 hours. Measure native actual annotation/view distribution and the complete remaining schedule before release; do not claim it fits from this probe."
+    }
+  },
+  "storage": {
+    "current_VM_filesystem_free_GiB_last_verified": 26.79755401611328,
+    "source_reserve_GiB": 25,
+    "old_100GiB_task_disk": "verified deleted; cannot be reused",
+    "local_free_reserve_GiB": 8,
+    "local_stage_GiB": 3,
+    "cleanup": "Reassess live source free space and verified regenerable files on a future authorized boot. Do not delete protected inputs/dependency bases or assume an unavailable stopped filesystem was inspected. New scratch is conditional on measured need.",
+    "original_storage_approval_USD": 9,
+    "original_disks": "30 GiB standard / 300 GiB balanced",
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+    "no_extension": true
+  },
+  "cost_and_retention_gate": [
+    "fresh Available Welcome credit balance/scope/expiry, Paid-account coverage and product eligibility",
+    "delayed usage and at least the retained $35 reserve; credit delta is not invoice",
+    "actual relevant SKU prices/currency, resources/quota/headroom and all archive versions/soft-delete",
+    "complete schedule including setup, failed operational attempts, collection/review/export and task lifetime before November 11",
+    "fresh supervisor/current boot/PID/start/command identity; provider STOP and setup fallback tested before release",
+    "never spend real money or carry E034 unused money forward; separately authorize these scopes"
+  ]
+}
