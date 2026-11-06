@@ -10,6 +10,7 @@ no community fit/partition/recovery score. VM independently TERMINATED; the exac
 
 - [Verified final outcome and limitations](completed-review.md)
 - [Compact completion/integrity receipt](completed-observed.json), [pilot diagnostics](pilot-review.json), [cost](completed-cost.json) and [disk release](task-disk-release.json)
+- [Verified private inspection/source backup](inspection-backup.json)
 - [Recommended next information/representation block](next-block.md)
 
 - [Prospective design and disposition](design.md)

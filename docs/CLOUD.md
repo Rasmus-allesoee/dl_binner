@@ -29,13 +29,22 @@ Fresh read-only Credits/Overview: **DKK 1,634.85 Available / 83%**, January 12, 
 expiry, unchanged Certain usage / Free Trial terms / Net pricing, Paid account.
 Displayed November 1–6 gross/savings/net is DKK 78.44 / 78.44 / 0.00; the tooltip
 warns of delay possibly over 24 hours. No realtime pending ledger is exposed;
-$35 reserve remains. Fresh Catalog/project/bucket/all-version checks pass: 336
-versions / 76.248 GiB, zero soft-deleted objects. Original disks plus all archives
+$35 reserve remains. Fresh Catalog/project/bucket/all-version checks pass: 337
+versions / 76.249 GiB, zero soft-deleted objects. Original disks plus all archives
 remain about $7.62 per seven days under their separate $9 preservation approval.
 [Official credit coverage](https://docs.cloud.google.com/free/docs/free-cloud-features),
 [storage prices](https://cloud.google.com/storage/pricing) and
 [disk prices](https://cloud.google.com/compute/disks-image-pricing) are refreshed;
 account-specific remaining credit is separately observed, not inferred from them.
+
+The [788,207-byte private inspection/source backup](../experiments/E034-genome-graph/inspection-backup.json)
+adds one exclusively created generation after commit `a713370`; SHA/CRC/MD5 and
+all 97 regular members / 19 aliases pass full readback. It contains the new compact
+review/source/financial/cleanup journals, not another native payload copy. Its Git
+bundle retains the established `941ede3` prerequisite and is not a complete standalone
+history archive. Its tiny storage/readback costs fit the existing rounded allowances
+and original $15; no compute or retention extension. A fresh final control-plane
+read again confirms TERMINATED and only the original 30/300 GiB disks.
 
 Active storage still ends **November 11 at 00:00 Copenhagen**, approved automatic
 tail November 18. The new taxonomy preparation recommendation authorizes no cloud

@@ -51,8 +51,12 @@ and total new E034 attribution at most **$0.3441 under original $15**, including
 export/archive/tail/operations allowances. Sampled CPU is not the allocation price;
 credit delta is not an invoice. Fresh credit DKK 1,634.85 Available / 83%, January
 12 expiry, displayed November gross/savings/net DKK 78.44 / 78.44 / 0.00 and
->24-hour possible delay; $35 reserve remains. Original disks/all 336 archive
+>24-hour possible delay; $35 reserve remains. Original disks/all 337 archive
 versions cost about $7.62 per seven days under the separate $9 approval.
+The [compact private inspection/source backup](../experiments/E034-genome-graph/inspection-backup.json)
+also passes complete byte/member/alias readback; its scoped Git prerequisite and
+cost/retention limits are explicit. Public push remains excluded for the private
+financial/account history; the structured research commit is locally preserved.
 
 **November 11 at 00:00 Copenhagen active storage / November 18 automatic tail**
 remain hard review boundaries. Stopped original disks still cost money; no unused

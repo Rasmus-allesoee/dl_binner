@@ -228,7 +228,7 @@
     "monitored_successful_wall_seconds_sum": 78.64803231100086
   },
   "task_disk_status": "DETACHED_DELETED_INDEPENDENTLY_ABSENT",
-  "incremental_gross_upper_USD": 0.344021824144796,
+  "incremental_gross_upper_USD": 0.3440273139453102,
   "original_ceiling_USD": 15,
   "boundaries": {
     "active_end": "2026-11-11T00:00:00+01:00",
@@ -365,6 +365,30 @@
     "artifacts/e034-genome-graph/completed-inspection-v1/auxiliary-review-repair.json": {
       "bytes": 941,
       "sha256": "550de6b2dcc40f665a366e26a5f917939a26116c7b51e9a8859b0089581d1b0c"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/final-control/provider.json": {
+      "bytes": 33098,
+      "sha256": "5786a5fa120916cd5914130ad38345914bf28959bc67173129bd00ab3f45e53e"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/final-control/disks.json": {
+      "bytes": 2889,
+      "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/finance/versions-after-backup.json": {
+      "bytes": 390630,
+      "sha256": "01db1b7fdb70178fe1d3bef1d3b6a598c0ade1c9c6ebd8f2b5ada77b34aefc02"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/inspection-backup-v1/object.json": {
+      "bytes": 1174,
+      "sha256": "2a0a95870bc12b4961245a1e719cd3d6943475589ffe035e79d85831a6099a16"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/inspection-backup-v1/upload-plan.json": {
+      "bytes": 1121,
+      "sha256": "a78719b863ec0572e526852f821cb658c23d322de280e37162acd86d7f178566"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/inspection-backup-v1/local-hash.stdout": {
+      "bytes": 269,
+      "sha256": "08ee6c80c9df9cd6b21155679d1bc3f7579bf494e62b46ed83422015d49e2696"
     }
   },
   "review_source": {
@@ -412,5 +436,33 @@
   "current_local_pilot_summary": {
     "bytes": 19940,
     "sha256": "f17cb78fc53bd320caa9056f8bef075a7ac6fe272db44229cf06533659cc11ba"
-  }
+  },
+  "inspection_backup": {
+    "status": "PASS_PRIVATE_INSPECTION_BACKUP_AND_COMPLETE_READBACK",
+    "checked_epoch": 1793973712.035546,
+    "source_commit": "a713370927f1a14c7b4421b3be6c4145417ef4a5",
+    "uri": "gs://dl-binner-archive-167650584170/e034/graph-20261105T231027Z-b0d741c/inspection-20261106-a713370/e034-inspection.tar.gz",
+    "generation": "1793973708604488",
+    "archive": {
+      "bytes": 788207,
+      "sha256": "2953acdca5f0988546d46e15b8602ea64ecd3cdb3dfbfc1f634cec23fba3b780"
+    },
+    "CRC32C": "PDrkmQ==",
+    "MD5": "QzKul5fItoW4EaKmsv/SmA==",
+    "all_member_alias_readback_verified": true,
+    "regular_members": 97,
+    "aliases": 19,
+    "logical_member_bytes": 2484874,
+    "omitted": {},
+    "scope": "Compact reviewed source/records/private financial and disk-release journals; does not duplicate original native scientific payloads",
+    "Git_bundle_prerequisite": "941ede36d29b76c5f542e56295236d5100447ca1",
+    "Git_bundle_not_standalone_history": true,
+    "no_auth_config_keys_or_environment": true,
+    "original_15_USD_scope": true,
+    "no_VM_wake_or_science": true,
+    "active_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+  },
+  "source_and_review_commit": "a713370927f1a14c7b4421b3be6c4145417ef4a5",
+  "final_control_checked_epoch": 1793973803.420584
 }

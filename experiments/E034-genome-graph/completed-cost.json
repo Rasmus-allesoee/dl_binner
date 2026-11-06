@@ -27,13 +27,24 @@
     "object_bytes": 82493448,
     "archive_bytes": 81370831,
     "WAN_to_Europe_gross_upper": 0.012,
-    "new_archive_active_plus_7_day_tail_upper": 0.0006058207089551945,
+    "new_archive_active_plus_7_day_tail_upper": 0.0006113105094694126,
     "operations_upper": 0.01,
     "full_archive_streams_each": 1,
     "extra_initial_control_payload_bytes": 16324,
     "total_object_payload_download_bytes": 82509772,
     "object_payload_WAN_model_USD": 0.009221185594797133,
-    "export_note": "Full archives downloaded once each. Three initial small control objects were also read before the full return; $0.012 rounds up all object export and compact metadata/control overhead."
+    "export_note": "Full archives downloaded once each. Three initial small control objects were also read before the full return; $0.012 rounds up all object export and compact metadata/control overhead.",
+    "inspection_backup": {
+      "archive": {
+        "bytes": 788207,
+        "sha256": "2953acdca5f0988546d46e15b8602ea64ecd3cdb3dfbfc1f634cec23fba3b780"
+      },
+      "generation": "1793973708604488",
+      "additional_active_tail_storage_upper": 5.489800514218038e-06,
+      "member_alias_readback": true,
+      "additional_WAN_and_operations_within_existing_rounded_allowances": true,
+      "only_the_new_inspection_journals_and_source": true
+    }
   },
   "sampled_stage_resources": {
     "scopes": "Eight supervised stages only; not allocation price or a claim of continuous collection RSS/CPU measurement",
@@ -59,10 +70,11 @@
   "original_separate_storage": {
     "approval_USD": 9,
     "original_standard_30GiB_and_balanced_300GiB_monthly_gross_upper": 31.19999999996773,
-    "all_current_archive_versions_GiB": 76.24800477363169,
+    "all_current_archive_versions_GiB": 76.24873884860426,
     "soft_deleted_objects": 0,
-    "seven_day_original_disks_and_all_archive_versions_upper": 7.620849299193416,
-    "note": "Separate existing preservation approval; no renewal and no double addition of new E034 returns to its incremental attribution."
+    "seven_day_original_disks_and_all_archive_versions_upper": 7.620852677917355,
+    "note": "Separate existing preservation approval; no renewal and no double addition of new E034 returns to its incremental attribution.",
+    "archive_versions": 337
   },
   "financial": {
     "displayed_remaining_DKK": 1634.85,
@@ -92,5 +104,5 @@
   "retention_end": "2026-11-11T00:00:00+01:00",
   "automatic_tail_end": "2026-11-18T00:00:00+01:00",
   "no_VM_wake_for_review": true,
-  "complete_E034_gross_attribution_upper_USD": 0.344021824144796
+  "complete_E034_gross_attribution_upper_USD": 0.3440273139453102
 }

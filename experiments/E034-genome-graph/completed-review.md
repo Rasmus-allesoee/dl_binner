@@ -37,6 +37,11 @@ server/local CRC32C and MD5 checks. Independent complete archive verification:
 External inventories match the embedded bytes; every member and alias closes,
 with zero omitted retained work. Completion, tail, filesystem history and watcher
 are separately bound. Full raw proofs and locators are in the completed receipt.
+The later [compact inspection backup](inspection-backup.json) independently passes
+SHA/CRC/MD5 and all 97 regular-member / 19 alias readback checks. It preserves the
+new review, source and private financial/cleanup journals at commit `a713370`,
+without copying the native payload again. Its scoped Git bundle requires the
+recorded `941ede3` prerequisite; it is not a standalone backup of all Git history.
 There are **no community graph checkpoints, new partitions or new MAG scores**.
 The other eighteen BAM readers, pooling, old-cache restoration, full-shape probe
 and three-mode workflow were correctly skipped. Old science was not replayed.
@@ -161,7 +166,7 @@ measured-uptime model plus explicit upper bounds, not a billing invoice. Fresh
 Welcome credits show DKK 1,634.85 Available / 83%, January 12 expiry, unchanged
 Certain usage / Free Trial terms / net pricing. November displayed gross/savings/
 net is DKK 78.44 / 78.44 / 0.00; usage may lag over 24 hours, so the $35 reserve
-remains. Existing original disks and all 336 archive versions remain under their
+remains. Existing original disks and all 337 archive versions remain under their
 separate $9 preservation approval, about $7.62 per seven days. November 11 at
 00:00 Copenhagen active storage and November 18 automatic tail are unchanged.
 

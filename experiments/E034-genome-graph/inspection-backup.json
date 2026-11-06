@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PRIVATE_INSPECTION_BACKUP_AND_COMPLETE_READBACK",
+  "checked_epoch": 1793973712.035546,
+  "source_commit": "a713370927f1a14c7b4421b3be6c4145417ef4a5",
+  "uri": "gs://dl-binner-archive-167650584170/e034/graph-20261105T231027Z-b0d741c/inspection-20261106-a713370/e034-inspection.tar.gz",
+  "generation": "1793973708604488",
+  "archive": {
+    "bytes": 788207,
+    "sha256": "2953acdca5f0988546d46e15b8602ea64ecd3cdb3dfbfc1f634cec23fba3b780"
+  },
+  "CRC32C": "PDrkmQ==",
+  "MD5": "QzKul5fItoW4EaKmsv/SmA==",
+  "all_member_alias_readback_verified": true,
+  "regular_members": 97,
+  "aliases": 19,
+  "logical_member_bytes": 2484874,
+  "omitted": {},
+  "scope": "Compact reviewed source/records/private financial and disk-release journals; does not duplicate original native scientific payloads",
+  "Git_bundle_prerequisite": "941ede36d29b76c5f542e56295236d5100447ca1",
+  "Git_bundle_not_standalone_history": true,
+  "no_auth_config_keys_or_environment": true,
+  "original_15_USD_scope": true,
+  "no_VM_wake_or_science": true,
+  "active_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+}
