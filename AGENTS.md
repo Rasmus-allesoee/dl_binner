@@ -332,6 +332,23 @@ overwrite accepted feature caches. Unexpected summary values need the retained
 raw logs and fundamental counter/allocation/guard paths checked, not only output
 formatting or a relaxed numeric tolerance.
 
+For physical-link evidence, distinguish a whole contig's dominant source label
+from the source of the particular aligned mate loci. Discordant dominant labels
+are a diagnostic warning, not a measured template-error rate. High MAPQ and
+reported-placement filters do not prove exhaustive uniqueness. Retain enough
+compact supporting endpoint-coordinate evidence for a future localized audit,
+without exposing raw read names/DNA as features. State whether support thresholds
+are applied per sample before pooling; a failed single-sample gate does not establish
+failure of pooled evidence. Never weaken a frozen gate after observing that failure.
+
+Reference-derived classifier annotations can be a legitimate declared modality,
+but must come from actual DNA and independently pinned classifier/database bytes,
+not benchmark origin/taxonomy tables or source headers. Separate raw annotations,
+model-propagated predictions and evaluation truth. Preserve partial/no-hit/conflict
+states and reference-overlap limitations; a shared taxon does not establish a shared
+genome, and a classifier score is not automatically calibrated reliability.
+Keep reference-assisted results distinct from reference-free and unseen-genome claims.
+
 Use public community benchmarks alongside question-specific simulations. Keep unmodified benchmark results distinct from controlled derivatives, and treat data used for mechanism selection as development data. Reuse established evaluators where their contracts fit; add tested diagnostic summaries before considering a replacement framework. Audit the actual input and execution paths rather than inferring them from a paper title or README. For multi-sample features, check native emitted sample and contig axes against the frozen manifest; do not assume filesystem ordering or alias names survive native path resolution. One assembly can still use many read/BAM samples: per-base coverage storage scales with covered assembly bases times BAM count, while multiple assemblies multiply whole run directories. Audit persistent candidates, checkpoints and temporary coexistence before claiming that a smaller epoch count bounds peak disk use.
 
 ---

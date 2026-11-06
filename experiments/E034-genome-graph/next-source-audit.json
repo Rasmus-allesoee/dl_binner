@@ -1,0 +1,84 @@
+{
+  "kind": "E034 post-pilot targeted alternatives/source review, no tool execution",
+  "checked_epoch": 1793972154.4912279,
+  "sources": [
+    {
+      "repository": "https://github.com/RasmussenLab/vamb",
+      "commit": "b146fb610921aef1da8aed5d739f1ce80d21b33a",
+      "files": {
+        "vamb/encode.py": {
+          "bytes": 21031,
+          "sha256": "2d836eaca16526b5474c71a82dec8d6beec5f21d2c0531918ac4b2d09aa817f8",
+          "url": "https://github.com/RasmussenLab/vamb/blob/b146fb610921aef1da8aed5d739f1ce80d21b33a/vamb/encode.py"
+        },
+        "vamb/taxvamb_encode.py": {
+          "bytes": 38939,
+          "sha256": "bde25f826890e668e415c7637a18edde2d4881bfbb59c7eb16fc3dee2634bd73",
+          "url": "https://github.com/RasmussenLab/vamb/blob/b146fb610921aef1da8aed5d739f1ce80d21b33a/vamb/taxvamb_encode.py"
+        },
+        "vamb/taxonomy.py": {
+          "bytes": 11009,
+          "sha256": "4f5e2c62ada38f48699fcdc48a51691c253aa04aadaec3818c88ba592ce81a6f",
+          "url": "https://github.com/RasmussenLab/vamb/blob/b146fb610921aef1da8aed5d739f1ce80d21b33a/vamb/taxonomy.py"
+        },
+        "doc/inputs_outputs.md": {
+          "bytes": 12405,
+          "sha256": "41ab00ca65c8888529868d658a90247193f702ea3c08f4d7215411b1e55cc566",
+          "url": "https://github.com/RasmussenLab/vamb/blob/b146fb610921aef1da8aed5d739f1ce80d21b33a/doc/inputs_outputs.md"
+        },
+        "doc/how_to_run.md": {
+          "bytes": 6478,
+          "sha256": "b1c783a7cea70a16b9c909324c3c26e3d9aa1710cc32ac28bd794f0de09ce9e3",
+          "url": "https://github.com/RasmussenLab/vamb/blob/b146fb610921aef1da8aed5d739f1ce80d21b33a/doc/how_to_run.md"
+        }
+      }
+    },
+    {
+      "repository": "https://github.com/BigDataBiology/SemiBin",
+      "commit": "f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6",
+      "files": {
+        "SemiBin/self_supervised_model.py": {
+          "bytes": 5888,
+          "sha256": "49f9796c167e1e874de0071ae5b9765d993434ba6b530f56b0072d6f4c85ef4c",
+          "url": "https://github.com/BigDataBiology/SemiBin/blob/f7c45dcbcdfa81e8fbc3e08b04c54683122e72d6/SemiBin/self_supervised_model.py"
+        }
+      }
+    },
+    {
+      "repository": "https://github.com/ziyewang/COMEBin",
+      "commit": "1b476a41fac893294c70212a869573a732560ce5",
+      "files": {
+        "COMEBin/simclr.py": {
+          "bytes": 13574,
+          "sha256": "a8d31c1d8b6e8453653cf2836554860962e4bd88f09e700d01bb438d0b98b6fc",
+          "url": "https://github.com/ziyewang/COMEBin/blob/1b476a41fac893294c70212a869573a732560ce5/COMEBin/simclr.py"
+        },
+        "COMEBin/models/mlp2.py": {
+          "bytes": 2186,
+          "sha256": "24d00fd35f2492c6340b8e6acbfc6ee0fc69fca0e01218f0f3266c0bf7b6f499",
+          "url": "https://github.com/ziyewang/COMEBin/blob/1b476a41fac893294c70212a869573a732560ce5/COMEBin/models/mlp2.py"
+        }
+      }
+    }
+  ],
+  "our_source_commit": "b0d741c420b8b8b2025e681e8b731dccf970b05a",
+  "our_source": {
+    "src/dl_binner/bootstrap/model.py": {
+      "bytes": 22261,
+      "sha256": "90c2d22d2d6b7b53236113c9f46df2ffbfe7862d1395cc4814e12d8677eb73e2"
+    },
+    "src/dl_binner/multiview/positive.py": {
+      "bytes": 15492,
+      "sha256": "133f54087e5516c6e90a6c71667e8b9e4b5cb5a1428d6418be1fc28393453ec6"
+    },
+    "src/dl_binner/genomegraph/links.py": {
+      "bytes": 20028,
+      "sha256": "1ad78d36baa427a412d204449a83b95d6f8cb771bcc9a024df3a90c5cee43ea5"
+    }
+  },
+  "publication": {
+    "TaxVAMB": "Nature Biotechnology, published 2026-04-27; DOI 10.1038/s41587-026-03098-0",
+    "review_scope": "Primary indexed publisher Results/Methods passages plus pinned actual code; direct publisher open redirected to login; no claim of complete supplement/runtime reproduction"
+  },
+  "all_scientific_execution": false
+}

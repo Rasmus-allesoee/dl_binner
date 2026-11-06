@@ -16,13 +16,22 @@ The candidate focus is contig loss/misassignment in fragmented prokaryotic assem
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
 
-November 6: [E034's prospective block](../../experiments/E034-genome-graph/design.md)
-implements and locally validates fixed-bootstrap physical graph representation,
-with two assembly-specific paired-template utility gates before a conditional
-three-mode comparison. Newer UnitigBIN/source evidence informs graph type and
-scaling; actual recovery is not yet observed. Insufficient links in these GSA/read-
-derived assemblies cannot settle usefulness for other user libraries/assemblies.
-Q006 remains open and Oral GLM state preparation does not admit a real bank.
+November 6 completed update: [E034's two pilots](../../experiments/E034-genome-graph/completed-review.md)
+pass execution/byte/source contracts, but Oral sample 18 fails the frozen physical
+support floor. The conditional comparison is NOT_ASSESSED, with no new MAG result.
+This does not answer paired-read utility generally or in all-ten pooled support.
+E009 dominant-label edge discordance also leaves localized template specificity
+unresolved. Q001 remains open. [The next information hypothesis](../evidence/2026-11-06-e034-pilot-and-information-priority.md)
+is optional confidence-aware hierarchical-taxonomy representation with independent
+classifier/database and full overlap/cost admission, preserving the strong common
+bootstrap and reference-free/unknown paths. No benchmark labels, new annotation or
+fit enter this inspection. Q003/Q005 and Q006 remain open: skin is unscored, Oral
+GLM lacks native bank/throughput, and selection is not proven optimal.
+
+Earlier November 6 prospective note: E034 implemented and locally validated the
+physical graph candidate before native counts, with two assembly-specific pilot
+gates before fits. UnitigBIN/source evidence informed graph type and sparse scaling;
+the completed pilot outcome above supersedes its pending status.
 
 November 5 completed update: [E033's six accepted fits](../../experiments/E033-multiscale-bam/completed-review.md)
 lose R95 in all three modes: frozen ABANDON this bundle, with measurement assets

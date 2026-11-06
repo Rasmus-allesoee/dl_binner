@@ -1,5 +1,36 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+
+## E034 information refusal and taxonomy-informed representation priority, November 6
+
+[Verified E034 pilots](../../experiments/E034-genome-graph/completed-review.md)
+complete all eight actual exits and delivery contracts. Oral sample 18 has no
+three-template supported edges under the frozen policy; the conditional comparison
+is **NOT_ASSESSED**, not a failed model or a paired-link-family rejection. Preserve
+E031/E032 and all stronger construction contexts. No gate is lowered, graph fit
+started or old science repeated. The task disk is safely released after complete
+preservation, and the VM remains TERMINATED. November 11/18 boundaries remain.
+
+Choose the [optional hierarchical-taxonomy information/representation block](../../experiments/E034-genome-graph/next-block.md)
+for local implementation/preparation next. [Targeted primary/source assessment](../evidence/2026-11-06-e034-pilot-and-information-priority.md)
+adds the missing actual TaxVAMB hierarchy/modality path and weighs strong intrinsic
+contrastive learning, larger networks, full Oral GLM, revised pooling and external
+references. With limited coverage axes and no admitted useful Oral physical graph,
+independent annotation is a more substantial information hypothesis than another
+selector or loss coefficient. This explicitly reconsiders earlier taxonomy deferral;
+it is not automatic adoption, a performance guarantee or a novelty claim.
+
+Keep one common optional-modality version, fixed provisional E032 construction,
+partial/unknown taxonomy and intrinsic strain distinctions. Annotation must come
+from DNA and an independent frozen classifier/database; simulator/source/evaluator
+labels remain forbidden. Reference-assisted modes and reference overlap need honest
+separate interpretation. A new database/classifier and its complete resource case
+must be admitted before biological execution; no payload, classification or fit is
+performed now. Local tiny implementation can proceed without that bulk acquisition.
+Full Oral GLM's existing batching/bank/teacher/proposal milestone, Q006 selection
+optimality and unscored skin dependencies remain explicit. A separately costed
+future comparison is required; unused E034 money is not a new execution allowance.
+
 ## E034 qualified physical representation authorized, November 6
 
 The new owner-authorized [E034 block](../../experiments/E034-genome-graph/design.md)

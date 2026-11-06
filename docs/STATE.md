@@ -1,50 +1,67 @@
 # Current Research State
 
-## E034 supervised retained-BAM pilot running
+## E034 pilots complete; comparison NOT_ASSESSED; task disk released
 
-Phase `graph-20261105T231027Z-b0d741c`, exact clean private source `b0d741c`,
-starts on the existing E2 November 5 at **23:10:46.688 UTC / November 6 at
-00:10:46.688 Copenhagen**. [Native receipt](../experiments/E034-genome-graph/native-observed.json)
-records five passed setup/runtime/source/workflow/tiny exits. The actual Linux
-three-mode tiny DAG passes 31 scientific seals, exact reload, complete exports,
-strict readers and no-op resume. E009's sample-0 pilot progresses from 2 million
-to **10 million alignments** (23:17:07 → 23:18:37 UTC), with 36,140 candidate
-cross-contig observations, not yet admitted reliable edges. No guard/error is
-observed; **pilot utility and the conditional community comparison are pending**.
+[Verified final E034 review](../experiments/E034-genome-graph/completed-review.md)
+accepts phase `graph-20261105T231027Z-b0d741c`: VM independently TERMINATED at
+November 5, **23:37:51.663 UTC / November 6, 00:37:51.663 Copenhagen**. All eight
+actual gate/pilot/source-after exits pass, with 31 native tiny seals/no-op, exact
+source/runtime, complete archive/member/alias, closed completion/tail and matching
+watchdog exit. No VM wake or old science replay occurred. The earlier running
+snapshot remains historical; [completed-observed.json](../experiments/E034-genome-graph/completed-observed.json)
+is the current receipt. Numeric final systemd parent exit was not returned; no
+number is inferred from shutdown.
 
-Current-boot/PID/start/command watcher and parent are active; normal/crash and
-restart-refusal tests pass. Common deadline: **November 7, 11:10:46.688 UTC /
-12:10:46.688 Copenhagen**. Independent STOP: **11:25:46.688 UTC / 12:25:46.688
-Copenhagen**. The chat/SSH connection is not needed. For a healthy longer run,
-leave supervision intact and inspect completion later using the
-[exact following prompt](../experiments/E034-genome-graph/OPERATIONS.md#exact-following-prompt).
-Do not infer success from shutdown or replay accepted science.
+E009 sample 0 passes with **138 eligible edges / 0.9417% eligible bp linked**.
+Oral sample 18 has a valid 16.67-million-pair join and abundant insert calibration,
+but zero pairs meeting the frozen three-template support floor. Both pilots close;
+the remaining eighteen readers and conditional graph comparison correctly do not
+run. **No new community model, partition, R95/T90 or measured recovery gain exists**;
+NOT_ASSESSED is not ABANDON for paired reads or graph learning. The result covers
+these two pilot samples and this policy, not untested all-ten pooling or user
+assemblies. E009's resolved dominant-label edge discordance also warns against
+hard same-genome propagation; per-template locus truth is unavailable.
 
-Actual original-source headroom is 26.85 GiB; no verified disposable 58.2 GiB set
-can supply the complete peak/reserve without removing protected inputs/evidence.
-The authorized new **100 GiB balanced** `e034-task-1793920246`, ID
-`6745251986842629013`, is the only added resource. Both source/task free reserves
-pass. Original 30/300 GiB and accepted data/models/journals remain unchanged.
+**Next block:** [optional confidence-aware hierarchical-taxonomy information and
+representation](../experiments/E034-genome-graph/next-block.md), with local implementation
+and a separately priced independent classifier/database admission/comparison.
+[Targeted source and alternatives assessment](evidence/2026-11-06-e034-pilot-and-information-priority.md)
+weighs TaxVAMB against another intrinsic loss, larger models, Oral GLM, revised
+physical pooling and an external reference. Add independently classified biological
+context, not simulator/source/evaluator labels; retain partial/unknown taxa,
+intrinsic strain distinctions and a reference-free mode. No guaranteed MAG gain,
+new taxonomy/database/native classifier or community fit is claimed by inspection.
+The [exact following prompt](../experiments/E034-genome-graph/OPERATIONS.md#exact-following-prompt)
+is preparation only, with no paid start or bulk database acquisition.
 
-[Fresh complete admission](../experiments/E034-genome-graph/execution-admission.json)
-shows DKK 1,641.25 Available / 83%, January 12 expiry, paid account/Certain usage /
-Free Trial terms/net pricing, displayed November net DKK 0.00 and $35 delayed-use
-reserve. No realtime pending ledger was exposed. Maximum new gross forecast is
-**$12.3222 under $15**, including 36.25 allocated hours, conditional scratch through
-the active boundary, bounded return/export/operations and automatic tail. Allocated
-492 seconds so far are about **$0.0373 CPU/RAM/IP**, plus $0.0014 task storage;
-final allocation/collection costs await shutdown. This is not a credit-delta invoice.
-Existing original disks/all versions remain under the separate $9 storage approval
-(about $7.62 over seven days). **November 11 at 00:00 Copenhagen active / November
-18 automatic-tail** boundaries are unchanged; stopped disks still cost money.
+Keep **strong frozen E031 learning / provisional E032 construction**, E023's original
+10.4163% E009 GLM reference, stronger E031 E023-context 10.6110% / 10.5684%, E032
+10.2847% / 10.1760% / 34.3786% and retained MetaBAT2 8.5493% / 17.3260% unchanged.
+There is no new winner or per-dataset router. Existing results already exceed this
+MetaBAT2 reference under different native eligibility; no ranking against every
+stronger SOTA tool follows. Fragmented-genome recovery and independent confirmation
+remain unresolved. Both communities remain development data.
 
-The [newer graph source review](evidence/2026-11-05-e034-newer-graph-design.md)
-includes UnitigBIN 2024 and later screens. Use strong frozen E031 vectors, admitted
-E033 moments and provisional E032 construction; do not promote rejected E033
-learning. Insufficient paired links would limit these assemblies/libraries/mapping,
-not the family. Oral GLM state/Adam extension is locally prepared only; no GPU/bank/
-teacher/proposal admission or confirmation score is added. Q006 stays open. The
-older E033 paragraphs below are accepted dated history, not current VM status.
+[Exact 100 GiB scratch disk](../experiments/E034-genome-graph/task-disk-release.json)
+is detached/deleted, independently absent after preservation; only original
+**30/300 GiB** disks remain. Native original inputs/BAMs/GLM bank, journals and
+complete private returns are protected. [Final cost model](../experiments/E034-genome-graph/completed-cost.json)
+prices **1,624.975 seconds / $0.12325 CPU/RAM/IP**, task lifetime at most $0.19817,
+and total new E034 attribution at most **$0.3441 under original $15**, including
+export/archive/tail/operations allowances. Sampled CPU is not the allocation price;
+credit delta is not an invoice. Fresh credit DKK 1,634.85 Available / 83%, January
+12 expiry, displayed November gross/savings/net DKK 78.44 / 78.44 / 0.00 and
+>24-hour possible delay; $35 reserve remains. Original disks/all 336 archive
+versions cost about $7.62 per seven days under the separate $9 approval.
+
+**November 11 at 00:00 Copenhagen active storage / November 18 automatic tail**
+remain hard review boundaries. Stopped original disks still cost money; no unused
+run budget renews storage. Q006 selection optimality remains open. Oral GLM has a
+tested local state extension but still needs unchanged native 128-view throughput,
+full bank and complete teacher/proposal/student/cost admission. Skin is acquired
+and unscored, pending source/genome/replicon/molecule/taxonomy/reference overlap,
+ambiguity/unique-origin truth, features/depth, frozen protocol and separate cost/
+retention admission. The earlier accepted context below is dated history.
 
 ## E033 completed and reviewed; frozen bundle ABANDON
 
@@ -71,13 +88,14 @@ constructor contexts beside it. Retained native MetaBAT2 is 8.5493% E009 / 17.32
 Oral, with different native eligibility. We already exceed this reference; no
 SOTA claim or measured gap to every stronger tool follows.
 
-**Next recommendation:** [BAM-supported genome-graph representation](../experiments/E033-multiscale-bam/next-block.md),
+**November 5 recommendation, subsequently piloted as E034 above:** [BAM-supported genome-graph representation](../experiments/E033-multiscale-bam/next-block.md),
 using frozen strong bootstrap features plus qualified physical template links and
 explicit measured/optional-modality context. [Targeted primary-source evidence](evidence/2026-11-05-e033-genome-graph-priority.md)
-weighs selection, another loss, larger sequence models and full Oral GLM. Implement
-locally and admit actual reliable-link utility before a new community fit. A new
-$15 pilot/conditional three-mode comparison is proposed, not authorized by this
-inspection; the [exact prompt](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
+weighs selection, another loss, larger sequence models and full Oral GLM. The later
+E034 block implemented this locally and tested reliable-link utility before fits.
+At that inspection a new
+$15 pilot/conditional three-mode comparison was proposed; later owner authorization
+covered E034, now closed as described above; the [exact prompt](../experiments/E033-multiscale-bam/OPERATIONS.md#exact-following-prompt)
 contains its separate scope. No guaranteed MAG gain or new scientific execution.
 
 [Costs](../experiments/E033-multiscale-bam/completed-cost.json): successful allocation

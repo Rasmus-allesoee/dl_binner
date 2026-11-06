@@ -1,0 +1,59 @@
+{
+  "status": "DETACHED_DELETED_INDEPENDENTLY_ABSENT",
+  "checked_epoch": 1793971755.834625,
+  "disk_name": "e034-task-1793920246",
+  "disk_id": "6745251986842629013",
+  "size_GiB": 100,
+  "original_disks_preserved": [
+    "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/disks/dl-binner-cpu",
+    "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/disks/dl-binner-work"
+  ],
+  "current_phase": "graph-20261105T231027Z-b0d741c",
+  "new_science_or_downstream_users": false,
+  "comparison_admitted": false,
+  "unique_results_preserved": {
+    "two_pilot_graphs": true,
+    "rejection_calibration_and_full_axes": true,
+    "source_restore_and_native_source_runtime": true,
+    "all_native_tiny_outputs": true,
+    "complete_logs_controls_and_closed_delivery": true,
+    "private_archive_member_alias_verification": true,
+    "independent_local_verified_return": true,
+    "watchdog_exit_and_completion": true
+  },
+  "discarded_regenerable_scope": [
+    "New task-owned installed wheel/pysam prefix; exact source/wheels/install inventory/recreation recipe retained on original disk and locally",
+    "Pinned samtools collation scratch; original E009 native BAM and exact private Oral BAM generations/checksums protected",
+    "No completed community learner or model cache exists; conditional stages never admitted",
+    "Physical observations spool was explicitly unlinked by the passed extractor; aggregated graph/counters/calibration remain retained"
+  ],
+  "unique_missing_evidence": [
+    "Numeric final systemd parent exit is not returned; all 8 scientific/setup stage exits and closed phase receipt exist. Parent terminal remains on original work disk. Task scratch is not its owner.",
+    "Per-template coordinate spool is not retained by the frozen extractor. Existing archived graph supports dominant-contig-label diagnostics, not localized template-error estimates. It is not recoverable by retaining collation scratch."
+  ],
+  "original_BAM_inputs_and_GLMon_bank_untouched": true,
+  "delete_without_VM_start": true,
+  "no_snapshot_or_new_storage": true,
+  "no_retention_extension": true,
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "release_requested_epoch": 1793971803.208406,
+  "release_verified_epoch": 1793971815.4108028,
+  "creationTimestamp": "2026-11-05T15:12:58.895-08:00",
+  "remaining_disks": [
+    {
+      "name": "dl-binner-cpu",
+      "id": "6401360260466153002",
+      "sizeGb": "30",
+      "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-standard"
+    },
+    {
+      "name": "dl-binner-work",
+      "id": "1715971271799544069",
+      "sizeGb": "300",
+      "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-balanced"
+    }
+  ],
+  "VM_state": "TERMINATED",
+  "VM_never_restarted": true
+}

@@ -1,5 +1,23 @@
 # E034 operations
 
+## Verified closeout, November 6
+
+Phase `graph-20261105T231027Z-b0d741c` is independently TERMINATED. Both pilots
+and all eight actual supervised stage exits pass; Oral sample 18 fails the frozen
+support floor. The comparison is NOT_ASSESSED: no community graph fit, partition
+or recovery score exists. [Final review](completed-review.md) and
+[completed receipt](completed-observed.json) supersede the historical running
+snapshot. All return members/aliases and closed completion/tail/watchdog pass.
+The [100 GiB task disk is deleted](task-disk-release.json); original 30/300 GiB
+disks, BAMs, GLM bank and protected evidence remain. No inspection VM wake.
+
+[Closed cost](completed-cost.json) is at most $0.3441 gross under original $15,
+including actual allocation, task lifetime and explicit storage/export allowances.
+No unused budget carries into the proposed next block. Active storage still ends
+November 11 at 00:00 Copenhagen; automatic tail ends November 18. The original
+source/candidate/launch locks remain unchanged and identify the executed source
+`b0d741c`; this later operations handoff is not a rewritten native launch lock.
+
 ## Authorized scope and immutable boundary
 
 The owner authorizes a new **$15 gross credit-only** paired-template pilot and
@@ -92,7 +110,7 @@ genome/replicon/molecule/taxonomy/overlap/ambiguity/unique-versus-origin truth,
 features/depth, unchanged confirmation protocol and separate cost/retention still
 need admission.
 
-## Exact following prompt
+## Executed inspection prompt
 
 Inspect the E034 phase identified in native-observed.json without starting another
 job. Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015, E034 design/source/candidate/
@@ -124,3 +142,64 @@ recommend one recovery-focused next block with alternatives/limits. Keep Q006,
 Oral GLM native batching/full-bank/teacher/proposal dependencies and unscored skin
 confirmation admission concrete. Update records/check/structured commit and give
 the next exact prompt; no thresholds, old science or retention change.
+
+## Exact following prompt
+
+Our goal is substantially stronger MAG recovery. Read AGENTS, PROJECT_INTENT,
+STATE/CLOUD, D013/D015 and E034's completed review, pilot/source-reliability audit,
+cost/disk-release receipts, next-block and targeted source audit. Preserve immutable
+dev3/dev4/dev5, E031 learning, E032 construction, all accepted E009–E034 inputs,
+truth/results/source freezes and failed journals. Use a new descriptive research
+branch without a codex/ prefix. E034's two pilots completed but its conditional
+comparison is NOT_ASSESSED; do not rerun it, loosen its utility rules or invent links.
+
+Implement and locally test one optional confidence-aware hierarchical-taxonomy
+information/representation candidate around the strong common bootstrap. Use the
+targeted TaxVAMB/Taxometer source and serious alternatives to resolve a concise
+prospective design, then implement in this task. Keep explicit composition/depth
+and optional GLM paths, partial-rank/unknown/conflict masks, intrinsic distinctions
+within taxa and a safe reference-free fallback. Same species/genus must not force
+a genome merge; no truth K or benchmark-derived labels. Keep E032 construction and
+cached conservative marker/refinement fixed for the first comparison, and retain
+all DNA, annotations/confidence, features, embeddings and pre/post alternatives.
+If teacher/proposals are used, their full information contract must match the
+new mode. E009 GLM includes its admitted teacher/proposal/student path; no hidden
+GLM enters no-GLM modes. Do not claim new crop taxonomy or coverage without actual
+measurements. At most one justified taxonomy-off information control; no grid.
+
+Prepare one independently pinned classifier/database path, initially MMseqs2/GTDB
+unless a source-informed alternative is better. Verify actual release, query type,
+payload/member sizes/checksums, hierarchy/LCA/support semantics, source-blind IDs,
+reference overlap, license and emitted schema. Metadata/HEAD/bounded-range checks
+and tiny synthetic query/reference engineering are allowed. Do not acquire a bulk
+database or classify these communities during preparation. Never derive training
+annotations from simulator IDs, source headers, origin/taxonomy truth or evaluation
+joins. Distinguish external reference-assisted information, model-propagated labels
+and independent sequence truth; do not claim unseen-genome generalization.
+
+Run meaningful actual tiny parser/tree/partial-label/conflict/no-annotation/loss/
+gradient/state/Adam/reload/unit-geometry/marker/refinement/export contracts, plus a
+complete bounded serial tiny workflow and strict collection/readback. Report actual
+versus mocked/unavailable classifier and GLM paths. Keep a common candidate/policy
+for E009 no-GLM, E009 GLM and Oral ten-depth/no-GLM. Preserve E023 10.4163%, stronger
+E031 E023 contexts, E032 and retained MetaBAT2 summaries without refitting/rescoring.
+Freeze source/defaults and recovery keep/modify/abandon before changed outcomes,
+with full 156/799 denominators, E009 v2/N-quarantine, separate Oral origin/shared
+sensitivity and all annotation/length/origin/eligibility/marker/unknown/unassigned/
+singleton/multi-contig populations. Paper gains are hypotheses here, not guarantees.
+
+Prepare a complete separately priced classifier/admission/three-mode comparison:
+actual payload/index/query/scratch coexistence, source free space/safe cleanup,
+split-index memory, CPU/GPU needs, native throughput gate, complete fits/downstream/
+collection/review clocks, storage/transfer and fresh credit prerequisites. The old
+100 GiB task disk is deleted, not reusable; do not assume more storage or RAM.
+Keep Oral GLM's unchanged 128-view qualification/full-bank/teacher/proposal admission
+concrete and skin unscored with all reference/overlap/truth/depth/cost dependencies.
+No community fits/scores, external-binner run, bulk DNA/database acquisition, mapping,
+VM start, paid cloud work, resources or retention extension in preparation. Existing
+$15 does not carry over. Preserve November 11 active / November 18 automatic-tail
+boundaries; prepare a separate preservation decision if the complete future plan
+cannot fit. Update records/check/structured commit and report the implemented
+contracts, remaining native/data risks, full cost/resource case and exact separate
+execution approval request. Do not reduce the justified scientific scope to fit an
+arbitrary estimate or promise a MAG gain before the frozen comparison.

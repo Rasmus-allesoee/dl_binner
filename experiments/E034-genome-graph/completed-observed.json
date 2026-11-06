@@ -1,0 +1,416 @@
+{
+  "record": "E034 independently verified completed paired-template pilots; comparison not admitted",
+  "status": "ACCEPTED_PILOT_EVIDENCE_INSUFFICIENT_ORAL_SUPPORT",
+  "phase": "graph-20261105T231027Z-b0d741c",
+  "source_commit": "b0d741c420b8b8b2025e681e8b731dccf970b05a",
+  "checked_epoch": 1793972488.969895,
+  "provider_status": "TERMINATED",
+  "lastStartTimestamp": "2026-11-05T15:10:46.688-08:00",
+  "lastStopTimestamp": "2026-11-05T15:37:51.663-08:00",
+  "no_VM_wake": true,
+  "watchdog_exit_verified": true,
+  "closed_delivery_verified": true,
+  "completion": {
+    "status": "INSUFFICIENT_ASSEMBLY_LINK_SUPPORT",
+    "pilot_completed": true,
+    "comparison_admitted": false,
+    "science_completed": false,
+    "disposition": "NOT_ASSESSED",
+    "actual_stage_exits": {
+      "workflow-origin": 0,
+      "owned-package-install": 0,
+      "complete-native-runtime": 0,
+      "original-inputs-before": 0,
+      "actual-native-tiny": 0,
+      "pilot-E009": 0,
+      "pilot-oral": 0,
+      "original-inputs-after": 0
+    },
+    "parent_systemd_numeric_exit_not_returned": true,
+    "terminal_contract": "Every supervised gate/pilot/source-after exit is independently retained, plus generation-bound closed completion/tail and matching watchdog exit. Numeric final systemd unit exit is not directly retained; do not infer it from shutdown."
+  },
+  "native_contracts": {
+    "exact_scientific_source_files": 517,
+    "package_files": 84,
+    "distributions": 42,
+    "actual_native_tiny_seals": 31,
+    "native_tiny_noop": true,
+    "inputs_before_after_equal": true,
+    "physical_graph_strict_readers": true,
+    "ordered_samples_and_full_axes_verified": true,
+    "conditional_18_remaining_readers_restores_probes_and_community_stages_not_run": true,
+    "original_Mac_failure_and_tolerance_preserved": true
+  },
+  "private_objects": {
+    "closed-delivery-tail.json": {
+      "bytes": 341,
+      "sha256": "25506791fe372f0f3267d446bab322249da69d73b0d70a4ee3f8390c79376ae1",
+      "generation": "1793921672917580",
+      "server_CRC32C": "Oza+zQ==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "closed-delivery/e033-evidence.tar.gz": {
+      "bytes": 3980751,
+      "sha256": "b5a60f22f14fe3b39c263b8a1e37b9aff7a81fd3f68a43f92c1b0ab464e6b2c4",
+      "generation": "1793921671856864",
+      "server_CRC32C": "WDSH2Q==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "closed-delivery/inventory.json": {
+      "bytes": 729111,
+      "sha256": "8771d8dbe94128763d9577d46d2ea668c6ee8146097682c9ff5dfba94bf65e8c",
+      "generation": "1793921672164253",
+      "server_CRC32C": "K4b4nA==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "completion.json": {
+      "bytes": 11632,
+      "sha256": "9d26f89a60d671cdacf329e6fd7b87f4420cefb14cc809a9deee4a132186f645",
+      "generation": "1793921672712277",
+      "server_CRC32C": "1henMQ==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "filesystem.jsonl": {
+      "bytes": 64515,
+      "sha256": "c3090ce8b2d6b069b599230282683d2a35cd577ec217db93d3066e6797c46afb",
+      "generation": "1793921672451294",
+      "server_CRC32C": "WpQ/Wg==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "links/collection.json": {
+      "bytes": 734,
+      "sha256": "2c456e473fd93ce64971b06759b983c4ebb2387271211a47fe689221d1e957f4",
+      "generation": "1793921669715805",
+      "server_CRC32C": "FXRP5g==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "links/e033-evidence.tar.gz": {
+      "bytes": 77390080,
+      "sha256": "2c1cd1a09f089229c8ff7fc0ce128938a7abae2ae3a4e234f44353cd6b7c989a",
+      "generation": "1793921668811052",
+      "server_CRC32C": "sp5UxQ==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "links/e033-evidence.tar.gz.sha256": {
+      "bytes": 87,
+      "sha256": "ba97c7726d7e12d96945e31c5f8b860d427f9a90f2ddf496448e011ef1587f04",
+      "generation": "1793921669959962",
+      "server_CRC32C": "oycl5g==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "links/inventory.json": {
+      "bytes": 311846,
+      "sha256": "0419e5be8c9784d152ba39805d4035df3bef864876159cdda0bf51edf832c01a",
+      "generation": "1793921669472784",
+      "server_CRC32C": "GouW/A==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    },
+    "watchdog-exit.json": {
+      "bytes": 4351,
+      "sha256": "f54bf06d07c9bfa6c32619413f09aa1c6598548a84d259fc6e23d404a669ba11",
+      "generation": "1793921734743265",
+      "server_CRC32C": "htbsoA==",
+      "MD5_verified": true,
+      "CRC32C_verified": true
+    }
+  },
+  "archives": {
+    "links": {
+      "binding": {
+        "bytes": 77390080,
+        "sha256": "2c1cd1a09f089229c8ff7fc0ce128938a7abae2ae3a4e234f44353cd6b7c989a"
+      },
+      "regular_members": 1513,
+      "logical_member_bytes": 84471288,
+      "aliases": 2,
+      "work_members": 13,
+      "every_member_verified": true,
+      "all_alias_bytes_verified": true,
+      "omitted": {}
+    },
+    "closed-delivery": {
+      "binding": {
+        "bytes": 3980751,
+        "sha256": "b5a60f22f14fe3b39c263b8a1e37b9aff7a81fd3f68a43f92c1b0ab464e6b2c4"
+      },
+      "regular_members": 338,
+      "logical_member_bytes": 6666571,
+      "aliases": 1164,
+      "work_members": 1501,
+      "every_member_verified": true,
+      "all_alias_bytes_verified": true,
+      "omitted": {}
+    }
+  },
+  "pilot_utilities": {
+    "E009": {
+      "status": "PASS",
+      "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+      "eligible_edges": 138,
+      "linked_eligible_contigs": 256,
+      "linked_eligible_bp": 1974152,
+      "eligible_bp": 209642703,
+      "linked_eligible_bp_fraction": 0.009416745595004087,
+      "minimum_edges": 20,
+      "minimum_bp_fraction": 0.001,
+      "pilot": true
+    },
+    "oral": {
+      "status": "INSUFFICIENT_ASSEMBLY_LINK_SUPPORT",
+      "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+      "eligible_edges": 0,
+      "linked_eligible_contigs": 0,
+      "linked_eligible_bp": 0,
+      "eligible_bp": 1443827664,
+      "linked_eligible_bp_fraction": 0.0,
+      "minimum_edges": 20,
+      "minimum_bp_fraction": 0.001,
+      "pilot": true
+    }
+  },
+  "actual_resources": {
+    "scopes": "Eight supervised stages only; not allocation price or a claim of continuous collection RSS/CPU measurement",
+    "CPU_seconds": 1869.6899999999998,
+    "maximum_tree_RSS_bytes": 3599425536,
+    "stage_wall_seconds": 1247.3555519180002
+  },
+  "sampled_filesystem": {
+    "history": {
+      "bytes": 64515,
+      "sha256": "c3090ce8b2d6b069b599230282683d2a35cd577ec217db93d3066e6797c46afb"
+    },
+    "samples": 631,
+    "minimum_free_bytes": 28773654528,
+    "minimum_source_free_bytes": 28773654528,
+    "minimum_task_free_bytes": 86861668352,
+    "maximum_original_baseline_growth_bytes": 18210791424,
+    "maximum_task_used_bytes": 18210816000,
+    "original_task_baseline_bytes": 24576,
+    "monitor_error": null,
+    "scope": "Current recovery science/collection sampled devices; original task baseline retained; earlier missing sort peak not reconstructed"
+  },
+  "return_objects_bytes": 82493448,
+  "review_resources": {
+    "status": "PASS",
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/local-env-r6/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e034_pilot_review.py",
+        "--base",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/completed-inspection-v1",
+        "--output",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/completed-inspection-v1/pilot-review.json"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_seconds": 34.99888136101072,
+      "peak_sampled_rss_bytes": 946233344,
+      "seconds_ceiling": 2916.904774904251,
+      "rss_bytes_ceiling": 8000000000,
+      "launched_pid": 4229,
+      "sampled_cpu_seconds": 28.71,
+      "sampled_average_cpus": 0.8203119323688836,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "sample_includes_coordinator": true
+    },
+    "whole_review_seconds": 718.0949010848999,
+    "monitored_successful_wall_seconds_sum": 78.64803231100086
+  },
+  "task_disk_status": "DETACHED_DELETED_INDEPENDENTLY_ABSENT",
+  "incremental_gross_upper_USD": 0.344021824144796,
+  "original_ceiling_USD": 15,
+  "boundaries": {
+    "active_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00"
+  },
+  "limitations": [
+    "No three-mode fit, partition, R95/T90 or KEEP/MODIFY/ABANDON recovery outcome exists",
+    "Only E009 sample 0 and Oral sample 18 were read; no all-ten pooling verdict",
+    "High MAPQ/filter admission is not exhaustive uniqueness; contig dominant-label discordance is not per-template locus error",
+    "Numeric final parent unit exit unavailable; scoped phase/stage and delivery contracts independently pass",
+    "Sampled stage memory/CPU omit unsupervised setup/collection intervals; allocation, not sampled CPU, is priced"
+  ],
+  "evidence": {
+    "artifacts/e034-genome-graph/completed-inspection-v1/objects.json": {
+      "bytes": 11163,
+      "sha256": "f0e75e26e24b66e3c7f2ffcd8027e7bdf374c96a064a21a09fc6e59dcd7f03a1"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/control/provider.json": {
+      "bytes": 33512,
+      "sha256": "1aed559fe5c2e8d6ab2b27e6a5b086b7327daab4ffafcf7e737c19b4e1558998"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/control/guest.json": {
+      "bytes": 399,
+      "sha256": "44e5d70d9c1aded8f932d003f9dfd13f5bde4aec54c8f6ee70bfaa82d235eb72"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/integrity.json": {
+      "bytes": 400222,
+      "sha256": "b0970209c91f23e54a8ea85a00092bdee96922c0a9a3df9a2675b825b3048f60"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/control-bytes.json": {
+      "bytes": 619,
+      "sha256": "091d78af14cf5b84c5c6090bd69467ffe9513f5b67530bf4c86fef7e387d2cf8"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/pilot-review.json": {
+      "bytes": 80357,
+      "sha256": "2d9b241198115b87cb91e50a1b2fba834627d0e6bb316c884a1eba673bb24d1e"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/pilot-review-initial.json": {
+      "bytes": 80241,
+      "sha256": "459cfb87af40c44029d10b0e578e7d5e5977dc5000e64c113ef19f11c5b93b8c"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/edge-context.json": {
+      "bytes": 14553,
+      "sha256": "266a1a9558c4a58d514c3cef63f6a514cd27aa8d3774b9feb7be2fd8024012f2"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/downloads/completion.json": {
+      "bytes": 11632,
+      "sha256": "9d26f89a60d671cdacf329e6fd7b87f4420cefb14cc809a9deee4a132186f645"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/downloads/closed-delivery-tail.json": {
+      "bytes": 341,
+      "sha256": "25506791fe372f0f3267d446bab322249da69d73b0d70a4ee3f8390c79376ae1"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/downloads/watchdog-exit.json": {
+      "bytes": 4351,
+      "sha256": "f54bf06d07c9bfa6c32619413f09aa1c6598548a84d259fc6e23d404a669ba11"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/downloads/filesystem.jsonl": {
+      "bytes": 64515,
+      "sha256": "c3090ce8b2d6b069b599230282683d2a35cd577ec217db93d3066e6797c46afb"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/review-clock.json": {
+      "bytes": 80,
+      "sha256": "b7883221bbc9d35f77830e66531458617195e4c6f84f5170a7a4bc58ae8759ee"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/review-resources.json": {
+      "bytes": 1072,
+      "sha256": "8d132f54cf6268df6615e1d490514639e1e5c920d3feca26e023b479ec097208"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/review-resources-r2.json": {
+      "bytes": 1086,
+      "sha256": "d7e06c8416b75608c0ff112903f85fdae5d8dc04a4004a29ed15f1a365c04e33"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/pilot-review.exit.json": {
+      "bytes": 977,
+      "sha256": "bda9c0d7dfa64e81d47ee1e7bde9a5484a3a62a9e475cb248b4e3b64004a01a6"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/pilot-review-r2.exit.json": {
+      "bytes": 958,
+      "sha256": "9b640e6183792fef9524bcd55bced894cada9b85ff30f0c86e8e193e0014f293"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/pilot-review-r3.exit.json": {
+      "bytes": 944,
+      "sha256": "d02557dbca77a4e668912d7d98f5f227350c10c34d6ed20401826d4c229af4a1"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/disk-release/provider-after.json": {
+      "bytes": 33098,
+      "sha256": "5786a5fa120916cd5914130ad38345914bf28959bc67173129bd00ab3f45e53e"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/disk-release/disks-after.json": {
+      "bytes": 2889,
+      "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/finance/browser-credit.json": {
+      "bytes": 801,
+      "sha256": "e8be7f52c6ee2b8678849b1dba80308b96b7a9f54b7b357da4b2337a3cd5ebfa"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/finance/current-prices.json": {
+      "bytes": 9155,
+      "sha256": "9b91388f973bd6dbc2a5311bc84cb4a15528146bc8fbd7fa6a688bb0530e2aab"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/finance/versions.json": {
+      "bytes": 389375,
+      "sha256": "6e2e9d3421ba9be59468b7dd359ff5db4cfa1e8afdc40d19a266bb05d8ef6753"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/finance/soft-deleted.json": {
+      "bytes": 56,
+      "sha256": "a694c5ec971c73f21e0b5120f19a641e533d211e07f34e9378e38020aec4ac91"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/finance/project-billing.json": {
+      "bytes": 207,
+      "sha256": "d17b1d996a5c84429db68fff27b4bc76e6e4c6451f38098ff6f5dae7a7d23937"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/finance/billing-account.json": {
+      "bytes": 179,
+      "sha256": "c7bf1056535088a8e2d1772bf0e9bd2d63f00cdf91b1a1dff113dd4de19b88da"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/all-row-axis-check.json": {
+      "bytes": 478,
+      "sha256": "a85b95641d0e6b4567af7e255c335644435fa01f1b1e264c5c47b16d6fb3a6bb"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/eligible-link-populations.json": {
+      "bytes": 823,
+      "sha256": "17551ebe641102639db496aa8151d67e4159ab2acfa6a0ac9241a30b9635196d"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/eligible-link-populations-r2.py": {
+      "bytes": 1872,
+      "sha256": "02003bb7c762bf1e2a00c36c313a1be4347eeaad9a11835838adffa28c50cb90"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/eligible-link-resources.json": {
+      "bytes": 748,
+      "sha256": "43492c872410b6de1bcd467555b3036382fb4b106f0dc7d56ad7c78ea9937c76"
+    },
+    "artifacts/e034-genome-graph/completed-inspection-v1/auxiliary-review-repair.json": {
+      "bytes": 941,
+      "sha256": "550de6b2dcc40f665a366e26a5f917939a26116c7b51e9a8859b0089581d1b0c"
+    }
+  },
+  "review_source": {
+    "bytes": 14105,
+    "sha256": "2f061c26ccab065d734929188834b915c9e91b6847d9bd64f9a28480eb377c75"
+  },
+  "bounded_review_auxiliary_repair": {
+    "status": "PRESERVED_OPERATIONAL_LOCAL_REVIEW_FAILURE_REPAIRED",
+    "failed_PID": 5713,
+    "failed_exit_code": 143,
+    "terminated_by_agent": true,
+    "failure": "Auxiliary population command accessed NpzFile ids and lengths inside its per-contig loop, repeatedly decompressing arrays. No native science or bytes were changed.",
+    "repair": "Load each required array once into a dictionary before looping; enforce original remaining local clock/RSS/threads via supervisor.",
+    "successful_reader": {
+      "bytes": 1872,
+      "sha256": "02003bb7c762bf1e2a00c36c313a1be4347eeaad9a11835838adffa28c50cb90"
+    },
+    "successful_resources": {
+      "bytes": 748,
+      "sha256": "43492c872410b6de1bcd467555b3036382fb4b106f0dc7d56ad7c78ea9937c76"
+    },
+    "RSS_of_aborted_auxiliary_command_not_sampled": true,
+    "scope": "Only local diagnostic I/O; no new binning result, cloud action or frozen rule change",
+    "original_Mac_portability_not_relaxed": true
+  },
+  "additional_local_diagnostic_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/preparation/local-env-r6/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e034-genome-graph/completed-inspection-v1/eligible-link-populations-r2.py"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 3.05629116500495,
+    "peak_sampled_rss_bytes": 384696320,
+    "seconds_ceiling": 1819.2758519649506,
+    "rss_bytes_ceiling": 8000000000,
+    "launched_pid": 5823,
+    "sampled_cpu_seconds": 2.6599999999999997,
+    "sampled_average_cpus": 0.8703359256007572,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": true
+  },
+  "current_local_pilot_summary": {
+    "bytes": 19940,
+    "sha256": "f17cb78fc53bd320caa9056f8bef075a7ac6fe272db44229cf06533659cc11ba"
+  }
+}

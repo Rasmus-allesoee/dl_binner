@@ -1,50 +1,47 @@
 # Google Cloud workspace operations
 
-## E034 supervised retained-BAM pilot running
+## November 6: E034 pilots closed and task disk deleted
 
-Phase `graph-20261105T231027Z-b0d741c`, exact clean private source `b0d741c`,
-starts on the existing E2 November 5 at **23:10:46.688 UTC / November 6 at
-00:10:46.688 Copenhagen**. [Native receipt](../experiments/E034-genome-graph/native-observed.json)
-records five passed setup/runtime/source/workflow/tiny exits. The actual Linux
-three-mode tiny DAG passes 31 scientific seals, exact reload, complete exports,
-strict readers and no-op resume. E009's sample-0 pilot progresses from 2 million
-to **10 million alignments** (23:17:07 → 23:18:37 UTC), with 36,140 candidate
-cross-contig observations, not yet admitted reliable edges. No guard/error is
-observed; **pilot utility and the conditional community comparison are pending**.
+[Completed receipt](../experiments/E034-genome-graph/completed-observed.json)
+independently verifies `dl-binner-cpu` **TERMINATED**, November 5 at 23:37:51.663 UTC
+/ November 6 at 00:37:51.663 Copenhagen. All eight actual phase stages exit zero;
+Oral's frozen utility failure prevents community comparison. Complete exact-
+generation archives, every member/alias, completion/tail/filesystem and boot/process
+watcher exit are verified. Numeric final parent unit exit is not directly returned;
+all scoped scientific/pilot and delivery evidence is retained. No inspection wake.
 
-Current-boot/PID/start/command watcher and parent are active; normal/crash and
-restart-refusal tests pass. Common deadline: **November 7, 11:10:46.688 UTC /
-12:10:46.688 Copenhagen**. Independent STOP: **11:25:46.688 UTC / 12:25:46.688
-Copenhagen**. The chat/SSH connection is not needed. For a healthy longer run,
-leave supervision intact and inspect completion later using the
-[exact following prompt](../experiments/E034-genome-graph/OPERATIONS.md#exact-following-prompt).
-Do not infer success from shutdown or replay accepted science.
+After full private/local preservation, exact **100 GiB** `e034-task-1793920246`, ID
+`6745251986842629013`, is detached and deleted, independently absent. The
+[disk-release record](../experiments/E034-genome-graph/task-disk-release.json)
+binds before/after provider state and protected source disks. Only original 30 GiB
+standard / 300 GiB balanced remain. No new snapshot, VM start/resize, original
+input deletion or storage renewal. The task disk is not a future reuse target.
 
-Actual original-source headroom is 26.85 GiB; no verified disposable 58.2 GiB set
-can supply the complete peak/reserve without removing protected inputs/evidence.
-The authorized new **100 GiB balanced** `e034-task-1793920246`, ID
-`6745251986842629013`, is the only added resource. Both source/task free reserves
-pass. Original 30/300 GiB and accepted data/models/journals remain unchanged.
+[Closed cost model](../experiments/E034-genome-graph/completed-cost.json): allocation
+1,624.975 seconds, $0.12099 CPU/RAM plus at most $0.00226 IP; task lifetime at most
+$0.19817. Total new E034 upper **$0.3441 under $15**, including rounded export,
+active/archive-tail and operations. Sampled stage CPU/RSS are separate, not the
+price or a continuous collection measurement. New native return objects total
+82,493,448 bytes; two archives are downloaded once each. No real-money spending
+is authorized and credit delta is not an invoice.
 
-[Fresh complete admission](../experiments/E034-genome-graph/execution-admission.json)
-shows DKK 1,641.25 Available / 83%, January 12 expiry, paid account/Certain usage /
-Free Trial terms/net pricing, displayed November net DKK 0.00 and $35 delayed-use
-reserve. No realtime pending ledger was exposed. Maximum new gross forecast is
-**$12.3222 under $15**, including 36.25 allocated hours, conditional scratch through
-the active boundary, bounded return/export/operations and automatic tail. Allocated
-492 seconds so far are about **$0.0373 CPU/RAM/IP**, plus $0.0014 task storage;
-final allocation/collection costs await shutdown. This is not a credit-delta invoice.
-Existing original disks/all versions remain under the separate $9 storage approval
-(about $7.62 over seven days). **November 11 at 00:00 Copenhagen active / November
-18 automatic-tail** boundaries are unchanged; stopped disks still cost money.
+Fresh read-only Credits/Overview: **DKK 1,634.85 Available / 83%**, January 12, 2027
+expiry, unchanged Certain usage / Free Trial terms / Net pricing, Paid account.
+Displayed November 1–6 gross/savings/net is DKK 78.44 / 78.44 / 0.00; the tooltip
+warns of delay possibly over 24 hours. No realtime pending ledger is exposed;
+$35 reserve remains. Fresh Catalog/project/bucket/all-version checks pass: 336
+versions / 76.248 GiB, zero soft-deleted objects. Original disks plus all archives
+remain about $7.62 per seven days under their separate $9 preservation approval.
+[Official credit coverage](https://docs.cloud.google.com/free/docs/free-cloud-features),
+[storage prices](https://cloud.google.com/storage/pricing) and
+[disk prices](https://cloud.google.com/compute/disks-image-pricing) are refreshed;
+account-specific remaining credit is separately observed, not inferred from them.
 
-The [newer graph source review](evidence/2026-11-05-e034-newer-graph-design.md)
-includes UnitigBIN 2024 and later screens. Use strong frozen E031 vectors, admitted
-E033 moments and provisional E032 construction; do not promote rejected E033
-learning. Insufficient paired links would limit these assemblies/libraries/mapping,
-not the family. Oral GLM state/Adam extension is locally prepared only; no GPU/bank/
-teacher/proposal admission or confirmation score is added. Q006 stays open. The
-older E033 paragraphs below are accepted dated history, not current VM status.
+Active storage still ends **November 11 at 00:00 Copenhagen**, approved automatic
+tail November 18. The new taxonomy preparation recommendation authorizes no cloud
+job, database payload or retention; E034's unused budget does not carry over.
+STATE and E034 operations own the current next action; running snapshots below
+are dated historical evidence.
 
 ## November 5 E033 completed; temporary disk released
 

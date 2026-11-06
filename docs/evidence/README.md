@@ -45,3 +45,5 @@ Add a focused note when an investigation produces useful reasoning. Give it a da
 - [November 5: completed E033 recovery evidence and genome-graph priority](2026-11-05-e033-genome-graph-priority.md)
 
 - [2026-11-05: UnitigBIN/newer graph sources and E034 design](2026-11-05-e034-newer-graph-design.md)
+
+- [November 6: completed E034 pilots, physical specificity and the next taxonomy-information decision](2026-11-06-e034-pilot-and-information-priority.md)

@@ -1,0 +1,622 @@
+{
+  "status": "PASS_CLOSED_PILOT_ONLY",
+  "phase": "graph-20261105T231027Z-b0d741c",
+  "disposition": "NOT_ASSESSED",
+  "comparison_admitted": false,
+  "new_community_fits": 0,
+  "new_partitions": 0,
+  "new_MAG_scores": 0,
+  "actual_stage_exits": {
+    "workflow-origin": 0,
+    "owned-package-install": 0,
+    "complete-native-runtime": 0,
+    "original-inputs-before": 0,
+    "actual-native-tiny": 0,
+    "pilot-E009": 0,
+    "pilot-oral": 0,
+    "original-inputs-after": 0
+  },
+  "native_package_files": 84,
+  "native_distributions": 42,
+  "native_tiny_seals": 31,
+  "native_tiny_noop": true,
+  "source_files": 517,
+  "original_inputs_before_after_equal": true,
+  "watchdog_exit_verified": true,
+  "parent_systemd_numeric_exit_not_returned": true,
+  "source_runtime_bound_to_original_freeze": true,
+  "finished_epoch": 1793972328.8718112,
+  "truth_used_only_after_frozen_links": true,
+  "thresholds_or_edges_changed": false,
+  "old_scores_replayed": false,
+  "frozen_full_denominators": {
+    "E009": {
+      "targets": 156,
+      "provided_bp": 554661890
+    },
+    "oral": {
+      "targets": 799,
+      "provided_bp": 2083072211
+    }
+  },
+  "E009_N_quarantine_percent": 3.3034,
+  "oral_known_shared_sensitivity_not_newly_scored": true,
+  "original_Mac_allclose_failure_and_tolerance_preserved": true,
+  "scientific_quality_keep_modify_abandon": "NOT_ASSESSED; no community model/partition to evaluate",
+  "pilots": {
+    "E009": {
+      "source": {
+        "community": "E009",
+        "sample": "cami3_toy_human_gut_short_read_sample_0",
+        "source": "/srv/dl_binner/experiments/e009/data-stage-v1/parts/map_0000/mapping/sample_0000.sorted.bam",
+        "sorted": true,
+        "bytes": 3781565849,
+        "sha256": "11bc0c875cbdff23a0a3909a6b4478998dd610c98b45dbe7c6fd135f580fc4a9"
+      },
+      "features": {
+        "bytes": 42384557,
+        "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+      },
+      "graph": {
+        "bytes": 836356,
+        "sha256": "7d07e278f181f5114c8999a0b3631cafa5d1e12848b888f003a37aeb985a9832"
+      },
+      "full_axes": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "utility": {
+        "status": "PASS",
+        "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+        "eligible_edges": 138,
+        "linked_eligible_contigs": 256,
+        "linked_eligible_bp": 1974152,
+        "eligible_bp": 209642703,
+        "linked_eligible_bp_fraction": 0.009416745595004087,
+        "minimum_edges": 20,
+        "minimum_bp_fraction": 0.001,
+        "pilot": true
+      },
+      "template_accounting": {
+        "templates": 16633513,
+        "exactly_two_record_fraction": 1.0,
+        "terminal_rejection_fractions": {
+          "template_flag_exclusion": 0.03020173790106756,
+          "low_or_unknown_template_MAPQ": 0.008008049772768987,
+          "template_identity_exclusion": 0.014142893326262469,
+          "partial_template_alignment": 0.0112893770546246
+        },
+        "qualified_both_mates": 15574922,
+        "qualified_same_contig_other_orientation_or_over_insert": 1105,
+        "interpretation": "First terminal rejection per template; accepted_reads/bases may include an earlier mate of a later-refused template, not a full both-mate coverage census"
+      },
+      "counters": {
+        "accepted_aligned_bases": 4713940335,
+        "accepted_reads": 31511661,
+        "alignment_records": 33267026,
+        "calibration_eligible_templates": 15435717,
+        "cross_contig_qualified_templates": 138100,
+        "cross_outside_max_insert_scope": 17834,
+        "excluded_identity": 235246,
+        "high_MAPQ_aligned_bases": 4713940335,
+        "low_or_unknown_template_MAPQ": 133202,
+        "partial_template_alignment": 187782,
+        "qualified_both_mates": 15574922,
+        "template_flag_exclusion": 502361,
+        "template_identity_exclusion": 235246,
+        "templates": 16633513
+      },
+      "calibration": {
+        "insert_limit": 339,
+        "maximum": 1982,
+        "median": 269,
+        "minimum": 147,
+        "observations": 15435717,
+        "order_independent": true,
+        "total_eligible": 15435717
+      },
+      "aggregation": {
+        "duplicate_coordinate_observations": 5,
+        "edge_exclusions": {
+          "below_unique_support": 4057,
+          "insufficient_distinct_starts": 3,
+          "orientation_conflict": 1
+        },
+        "end_supported_observations": 5419,
+        "hub_edges_removed": 0,
+        "hub_nodes": 0,
+        "observations": 120266,
+        "unique_coordinate_observations": 5414
+      },
+      "edges": 221,
+      "components": 181,
+      "largest_component_contigs": 9,
+      "degree_maximum": 8,
+      "all_population_cells": {
+        "0|target|excluded|unlinked": {
+          "contigs": 16329,
+          "bp": 6329273,
+          "quarantined_bp": 0
+        },
+        "0|unknown|excluded|unlinked": {
+          "contigs": 6777,
+          "bp": 2584823,
+          "quarantined_bp": 4760
+        },
+        "0|non_target|excluded|unlinked": {
+          "contigs": 33466,
+          "bp": 13090935,
+          "quarantined_bp": 0
+        },
+        "500|non_target|eligible|unlinked": {
+          "contigs": 32427,
+          "bp": 22540587,
+          "quarantined_bp": 0
+        },
+        "1000|target|eligible|unlinked": {
+          "contigs": 4367,
+          "bp": 5304016,
+          "quarantined_bp": 0
+        },
+        "1000|non_target|eligible|unlinked": {
+          "contigs": 9840,
+          "bp": 11864466,
+          "quarantined_bp": 0
+        },
+        "1500|non_target|eligible|unlinked": {
+          "contigs": 5662,
+          "bp": 10626136,
+          "quarantined_bp": 0
+        },
+        "500|target|eligible|unlinked": {
+          "contigs": 13876,
+          "bp": 9633608,
+          "quarantined_bp": 0
+        },
+        "500|unknown|eligible|unlinked": {
+          "contigs": 5528,
+          "bp": 3845895,
+          "quarantined_bp": 6002
+        },
+        "1500|unknown|eligible|unlinked": {
+          "contigs": 2092,
+          "bp": 4019459,
+          "quarantined_bp": 3719
+        },
+        "2500|non_target|eligible|unlinked": {
+          "contigs": 2450,
+          "bp": 9046420,
+          "quarantined_bp": 0
+        },
+        "1500|target|eligible|unlinked": {
+          "contigs": 3081,
+          "bp": 5868755,
+          "quarantined_bp": 0
+        },
+        "1000|unknown|eligible|unlinked": {
+          "contigs": 2145,
+          "bp": 2626955,
+          "quarantined_bp": 5271
+        },
+        "2500|unknown|eligible|unlinked": {
+          "contigs": 2398,
+          "bp": 10727202,
+          "quarantined_bp": 35419
+        },
+        "10000|target|eligible|unlinked": {
+          "contigs": 1214,
+          "bp": 52603469,
+          "quarantined_bp": 227
+        },
+        "2500|target|eligible|unlinked": {
+          "contigs": 2812,
+          "bp": 12785430,
+          "quarantined_bp": 323
+        },
+        "500|target|eligible|linked": {
+          "contigs": 61,
+          "bp": 43247,
+          "quarantined_bp": 0
+        },
+        "10000|unknown|eligible|unlinked": {
+          "contigs": 756,
+          "bp": 41831114,
+          "quarantined_bp": 7557266
+        },
+        "2500|target|eligible|linked": {
+          "contigs": 33,
+          "bp": 136879,
+          "quarantined_bp": 0
+        },
+        "10000|unknown|eligible|linked": {
+          "contigs": 6,
+          "bp": 287904,
+          "quarantined_bp": 39513
+        },
+        "10000|non_target|eligible|unlinked": {
+          "contigs": 80,
+          "bp": 3690980,
+          "quarantined_bp": 0
+        },
+        "1500|target|eligible|linked": {
+          "contigs": 38,
+          "bp": 72893,
+          "quarantined_bp": 0
+        },
+        "2500|unknown|eligible|linked": {
+          "contigs": 35,
+          "bp": 170179,
+          "quarantined_bp": 0
+        },
+        "10000|target|eligible|linked": {
+          "contigs": 28,
+          "bp": 1772647,
+          "quarantined_bp": 220
+        },
+        "0|unknown|excluded|linked": {
+          "contigs": 46,
+          "bp": 13854,
+          "quarantined_bp": 227
+        },
+        "1000|target|eligible|linked": {
+          "contigs": 33,
+          "bp": 40899,
+          "quarantined_bp": 0
+        },
+        "0|target|excluded|linked": {
+          "contigs": 39,
+          "bp": 15171,
+          "quarantined_bp": 0
+        },
+        "500|unknown|eligible|linked": {
+          "contigs": 27,
+          "bp": 19726,
+          "quarantined_bp": 258
+        },
+        "1500|unknown|eligible|linked": {
+          "contigs": 25,
+          "bp": 49380,
+          "quarantined_bp": 0
+        },
+        "1000|unknown|eligible|linked": {
+          "contigs": 19,
+          "bp": 23853,
+          "quarantined_bp": 0
+        },
+        "500|non_target|eligible|linked": {
+          "contigs": 3,
+          "bp": 2143,
+          "quarantined_bp": 0
+        },
+        "0|non_target|excluded|linked": {
+          "contigs": 4,
+          "bp": 1398,
+          "quarantined_bp": 0
+        },
+        "1500|non_target|eligible|linked": {
+          "contigs": 3,
+          "bp": 5962,
+          "quarantined_bp": 0
+        },
+        "1000|non_target|eligible|linked": {
+          "contigs": 2,
+          "bp": 2499,
+          "quarantined_bp": 0
+        }
+      },
+      "eligible_cumulative_lengths": {
+        "500": {
+          "contigs": 89041,
+          "bp": 209642703
+        },
+        "1000": {
+          "contigs": 37119,
+          "bp": 173557497
+        },
+        "1500": {
+          "contigs": 20713,
+          "bp": 153694809
+        },
+        "2500": {
+          "contigs": 9812,
+          "bp": 133052224
+        },
+        "10000": {
+          "contigs": 2084,
+          "bp": 100186114
+        }
+      },
+      "edge_truth": {
+        "semantics": "Conservative E009 v2 dominant-genome labels; unresolved not counted as disagreement",
+        "counts": {
+          "same_conservative_genome": 74,
+          "unresolved": 129,
+          "different_conservative_genomes": 18
+        },
+        "support_counts": {
+          "same_conservative_genome": 294,
+          "unresolved": 496,
+          "different_conservative_genomes": 60
+        },
+        "both_eligible_counts": {
+          "same_conservative_genome": 54,
+          "unresolved": 72,
+          "different_conservative_genomes": 12
+        },
+        "no_edges_fraction_is_undefined": false,
+        "truth_manifest": {
+          "bytes": 4388,
+          "sha256": "6bb3f1a07276c44c17ec16c7d2663ecfa5c4ce3c0eda6ed3a3dc579b3868eed1"
+        }
+      },
+      "temporary_BAM_removed": false,
+      "same_reader_and_policy": true
+    },
+    "oral": {
+      "source": {
+        "community": "oral",
+        "sample": "oral_sample_18",
+        "source": "gs://dl-binner-archive-167650584170/e024/coverage-20261027T205510Z-60cbf7d-r4/alignments/18.bam#1793178744515354",
+        "sorted": false,
+        "bytes": 5383660753,
+        "sha256": "7ec040794a73fee569a67ec9a12402731790d18d6de2a65033779fe46b25f9e4",
+        "records": 33331868,
+        "generation": "1793178744515354",
+        "crc32c": "KGUdVQ=="
+      },
+      "features": {
+        "bytes": 338210613,
+        "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+      },
+      "graph": {
+        "bytes": 65939821,
+        "sha256": "0058f89417162de792822942903b33bf4c74589039e74162ff13fa278f49101c"
+      },
+      "full_axes": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      },
+      "utility": {
+        "status": "INSUFFICIENT_ASSEMBLY_LINK_SUPPORT",
+        "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+        "eligible_edges": 0,
+        "linked_eligible_contigs": 0,
+        "linked_eligible_bp": 0,
+        "eligible_bp": 1443827664,
+        "linked_eligible_bp_fraction": 0.0,
+        "minimum_edges": 20,
+        "minimum_bp_fraction": 0.001,
+        "pilot": true
+      },
+      "template_accounting": {
+        "templates": 16665934,
+        "exactly_two_record_fraction": 1.0,
+        "terminal_rejection_fractions": {
+          "template_flag_exclusion": 1.20005275431908e-06,
+          "low_or_unknown_template_MAPQ": 0.5656974880615752,
+          "template_identity_exclusion": 0.3475691191384773,
+          "partial_template_alignment": 0.009066878579982377
+        },
+        "qualified_both_mates": 1294365,
+        "qualified_same_contig_other_orientation_or_over_insert": 7,
+        "interpretation": "First terminal rejection per template; accepted_reads/bases may include an earlier mate of a later-refused template, not a full both-mate coverage census"
+      },
+      "counters": {
+        "accepted_aligned_bases": 1072882580,
+        "accepted_reads": 7220889,
+        "alignment_records": 33331868,
+        "calibration_eligible_templates": 1293352,
+        "cross_contig_qualified_templates": 1006,
+        "cross_outside_max_insert_scope": 336,
+        "excluded_identity": 5792564,
+        "high_MAPQ_aligned_bases": 1072882580,
+        "low_or_unknown_template_MAPQ": 9427877,
+        "partial_template_alignment": 151108,
+        "qualified_both_mates": 1294365,
+        "template_flag_exclusion": 20,
+        "template_identity_exclusion": 5792564,
+        "templates": 16665934
+      },
+      "calibration": {
+        "insert_limit": 339,
+        "maximum": 811,
+        "median": 269,
+        "minimum": 149,
+        "observations": 1293352,
+        "order_independent": true,
+        "total_eligible": 1293352
+      },
+      "aggregation": {
+        "duplicate_coordinate_observations": 0,
+        "edge_exclusions": {
+          "below_unique_support": 487
+        },
+        "end_supported_observations": 488,
+        "hub_edges_removed": 0,
+        "hub_nodes": 0,
+        "observations": 670,
+        "unique_coordinate_observations": 488
+      },
+      "edges": 0,
+      "components": 0,
+      "largest_component_contigs": 0,
+      "degree_maximum": 0,
+      "all_population_cells": {
+        "0|target|excluded|unlinked": {
+          "contigs": 777784,
+          "bp": 226153459,
+          "quarantined_bp": 182
+        },
+        "10000|target|eligible|unlinked": {
+          "contigs": 10482,
+          "bp": 791751544,
+          "quarantined_bp": 768
+        },
+        "2500|target|eligible|unlinked": {
+          "contigs": 49729,
+          "bp": 217094423,
+          "quarantined_bp": 257
+        },
+        "1000|target|eligible|unlinked": {
+          "contigs": 92933,
+          "bp": 112531588,
+          "quarantined_bp": 182
+        },
+        "500|target|eligible|unlinked": {
+          "contigs": 292793,
+          "bp": 203177403,
+          "quarantined_bp": 185
+        },
+        "1500|target|eligible|unlinked": {
+          "contigs": 62826,
+          "bp": 119272706,
+          "quarantined_bp": 160
+        }
+      },
+      "eligible_cumulative_lengths": {
+        "500": {
+          "contigs": 508763,
+          "bp": 1443827664
+        },
+        "1000": {
+          "contigs": 215970,
+          "bp": 1240650261
+        },
+        "1500": {
+          "contigs": 123037,
+          "bp": 1128118673
+        },
+        "2500": {
+          "contigs": 60211,
+          "bp": 1008845967
+        },
+        "10000": {
+          "contigs": 10482,
+          "bp": 791751544
+        }
+      },
+      "edge_truth": {
+        "semantics": "Provided-origin oracle, not unique-sequence truth",
+        "counts": {},
+        "support_counts": {},
+        "both_eligible_counts": {},
+        "no_edges_fraction_is_undefined": true,
+        "truth_manifest": {
+          "bytes": 254660,
+          "sha256": "8e494f97451a820360364faed6c1aef13040ba934276d5d6d344f43ac655d9eb"
+        }
+      },
+      "temporary_BAM_removed": true,
+      "same_reader_and_policy": true
+    }
+  },
+  "raw_complete_pilot_review": {
+    "bytes": 80357,
+    "sha256": "2d9b241198115b87cb91e50a1b2fba834627d0e6bb316c884a1eba673bb24d1e"
+  },
+  "edge_context_summary": {
+    "checked_epoch": 1793971845.806206,
+    "discordant_edges": 18,
+    "both_eligible": 12,
+    "both_taxon_853": 11,
+    "both_source_descriptions_Faecalibacterium": 16,
+    "interpretation": "All discordant endpoints have separate provided bacterial genome labels, no HOST alias in these records. Most source filenames indicate related Faecalibacterium sources. This supports competitive/shared-strain placement as an explanation to investigate, not a proven cause, ANI measurement or basis for merging source labels.",
+    "localized_template_truth_not_available": "The frozen successful extractor deletes observations.bin and retains aggregated endpoints/support/orientation only; no per-template alignment coordinates remain. Dominant full-contig labels do not establish read-pair locus truth. Do not claim the discordance percentage is measured physical-template error.",
+    "old_scores_replayed": false,
+    "links_or_thresholds_changed": false
+  },
+  "edge_context_raw": {
+    "bytes": 14553,
+    "sha256": "266a1a9558c4a58d514c3cef63f6a514cd27aa8d3774b9feb7be2fd8024012f2"
+  },
+  "new_recovery_scores": null,
+  "frozen_retained_references_not_rescored": {
+    "E032_post_R95_percent": {
+      "E009-noGLM": 10.2847,
+      "E009-GLM": 10.176,
+      "oral-noGLM": 34.3786
+    },
+    "original_E023_E009_GLM_R95_percent": 10.4163,
+    "E031_E023_context_R95_percent": {
+      "E009-noGLM": 10.611002136815276,
+      "E009-GLM": 10.568366072527535,
+      "oral-noGLM": 9.96072963310248
+    },
+    "MetaBAT2_R95_percent": {
+      "E009": 8.5493,
+      "oral": 17.326
+    },
+    "native_eligibility_differs": true
+  },
+  "eligible_induced_link_populations": {
+    "status": "PASS",
+    "checked_epoch": 1793973394.3839161,
+    "population_scope": "Model-active eligibility-induced graph; both endpoints eligible, unlike the all-edge linked flag in raw pilot population cells",
+    "all_eligible": {
+      "non_target": {
+        "contigs": 50467,
+        "bp": 57779193
+      },
+      "target": {
+        "contigs": 25543,
+        "bp": 88261843
+      },
+      "unknown": {
+        "contigs": 13031,
+        "bp": 63601667
+      }
+    },
+    "eligible_induced_linked": {
+      "target": {
+        "contigs": 159,
+        "bp": 1578596
+      },
+      "unknown": {
+        "contigs": 93,
+        "bp": 388966
+      },
+      "non_target": {
+        "contigs": 4,
+        "bp": 6590
+      }
+    },
+    "linked_contigs": 256,
+    "linked_bp": 1974152,
+    "Oral": {
+      "active_contigs": 0,
+      "active_bp": 0
+    },
+    "no_changed_edges_or_scores": true
+  },
+  "all_population_linked_flag_scope": "Incident to any retained raw edge, including an excluded partner. The separately reported eligibility-induced scope defines the prospective model-active graph.",
+  "review_failures_preserved": [
+    "artifacts/e034-genome-graph/completed-inspection-v1/pilot-review.exit.json",
+    "artifacts/e034-genome-graph/completed-inspection-v1/auxiliary-review-repair.json"
+  ]
+}

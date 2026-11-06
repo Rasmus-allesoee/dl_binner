@@ -1,5 +1,31 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+
+## E034 pilots accepted, no recovery comparison; information priority, November 6
+
+[Independent E034 inspection](../../experiments/E034-genome-graph/completed-review.md)
+accepts the two completed pilots, all eight actual exits and full private delivery.
+The frozen Oral pilot utility fails, so no community fit/partition/R95 exists and
+the comparison is NOT_ASSESSED. Single-sample support filtering is not an all-ten
+or general paired-read verdict. Dominant-contig label discordance is not localized
+mate-locus truth. Preserve every old result and all unassigned/unknown populations.
+
+The [next recommendation](../../experiments/E034-genome-graph/next-block.md) is local
+preparation of optional confidence-aware hierarchical-taxonomy representation,
+with one independently pinned classifier/database, strict no benchmark-label input
+and a complete new cost case. [D015](D015-coherent-prototype-upgrade.md) owns the
+architecture reasoning and alternatives. Future reference-assisted evaluation
+must report database overlap, partial/no-hit populations, common availability
+modes and full sequence-truth denominators; it cannot prove unseen-genome recovery
+or an input-matched advantage over a reference-free tool. No new source database,
+community classification, binner run or old score replay is authorized here.
+
+VM remains TERMINATED without an inspection wake. The exact 100 GiB task disk is
+deleted after complete private/local preservation. [Closed attribution](../../experiments/E034-genome-graph/completed-cost.json)
+is at most $0.3441 under original $15, separately from existing preservation.
+November 11 active / November 18 automatic-tail limits and all original failed
+journals remain; new preparation is not retention renewal or budget carry-over.
+
 ## E034 qualified physical representation authorized, November 6
 
 The new owner-authorized [E034 block](../../experiments/E034-genome-graph/design.md)
