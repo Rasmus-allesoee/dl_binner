@@ -1,6 +1,25 @@
 # Google Cloud workspace operations
 
-## November 7: E035 pooled audit admission, before start
+## November 7: E035 pooled audit running; independent STOP and watcher verified
+
+[Native observation](../experiments/E035-confidence-taxonomy/pooled-native-observed.json)
+confirms RUNNING, phase `pooled-20261107T005703Z-4d332d7`, four passed native gates,
+12 actual tiny audit tests and real first-reader progress through 28 million
+records. Fresh boot/process watcher and timer are active; normal/crash tests and
+restart refusal pass. Eight-hour driver deadline is **09:57:26 Copenhagen** and
+provider STOP **10:12:26 Copenhagen**, November 7; end-of-parent shutdown happens
+earlier after collection/failure. Chat or SSH can disconnect safely.
+
+Actual source free is 26.80 GiB; prior verified cleanup is complete and no verified
+disposable set supplies the needed peak/reserve gap. New **100 GiB balanced
+`e035-task-1794013046`, ID `9116674795864573630`** is created within existing quota;
+only that empty new disk is formatted. Original 30/300 GiB and inputs stay intact.
+Scratch costs about $0.33/day and must be assessed for detach/delete after verified
+terminal/source/unique-payload preservation. Latest task free is about 93.58 GiB.
+Current measured allocation components are $0.07312 CPU/RAM/IP plus $0.00287 scratch;
+final costs remain pending. No new service, quota increase, fit, mapper or taxonomy.
+
+## November 7 pre-release financial admission, historical observation
 
 [Fresh read-only evidence](../experiments/E035-confidence-taxonomy/pooled-financial-observed.json)
 shows TERMINATED on existing E2, original 30/300 GiB disks only, quota headroom

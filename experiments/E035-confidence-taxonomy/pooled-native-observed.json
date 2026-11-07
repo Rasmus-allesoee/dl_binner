@@ -1,0 +1,475 @@
+{
+  "status": "RUNNING_VERIFIED_SUPERVISION_AND_REAL_READER_PROGRESS",
+  "phase": "pooled-20261107T005703Z-4d332d7",
+  "root": "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7",
+  "source_commit": "4d332d7d98cd5e2ace0fcbb76167e10cdf9b1ba4",
+  "prepared_scientific_commit": "e8f126090b37e66d3dac0ba1081b4903d15b1861",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e035/pooled-20261107T005703Z-4d332d7/",
+  "guest_attribute": "e035-pooled/status",
+  "provider_status": "RUNNING",
+  "observed_epoch": 1794014010.5673442,
+  "native_gate_exits": {
+    "complete-native-runtime.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/task/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e035_pool_runtime.py",
+        "--base",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+        "--reference",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-E009-consumer-v5/gates/runtime-native.json",
+        "--candidate-lock",
+        "/srv/dl_binner/repo/experiments/E035-confidence-taxonomy/pooled-native-package-lock.json",
+        "--pysam-wheel",
+        "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/payload/pysam-0.23.3-cp310-cp310-manylinux_2_28_x86_64.whl",
+        "--output",
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/gates/runtime.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2318,
+      "peak_sampled_rss_bytes": 316182528,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.9437467980255931,
+      "sampled_cpu_seconds": 18.52,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 26749.422426223755,
+      "stop_reason": null,
+      "wall_seconds": 19.623907640000027
+    },
+    "original-inputs-before.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/task/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e035_pool_native.py",
+        "--plan",
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/science-plan.json",
+        "--action",
+        "inputs",
+        "--output",
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/gates/inputs-before.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2348,
+      "peak_sampled_rss_bytes": 2020503552,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 1.0151069198844893,
+      "sampled_cpu_seconds": 11.93,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 26729.789470911026,
+      "stop_reason": null,
+      "wall_seconds": 11.75245658
+    },
+    "owned-package-install.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e033_install.py",
+        "--base",
+        "/srv/dl_binner/experiments/e021/portable-20261024T190419Z/cpu-setup-v1/env-cpu-v2",
+        "--destination",
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/task/env",
+        "--wheel",
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/payload/dl_binner-0.1.0.dev11-py3-none-any.whl",
+        "--pysam-wheel",
+        "/srv/dl_binner/experiments/e033/multiscale-20261104T152005Z-a940769-r2/payload/pysam-0.23.3-cp310-cp310-manylinux_2_28_x86_64.whl",
+        "--lock",
+        "/srv/dl_binner/repo/experiments/E035-confidence-taxonomy/pooled-native-package-lock.json",
+        "--output",
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/gates/install.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2282,
+      "peak_sampled_rss_bytes": 97120256,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.616797587741397,
+      "sampled_cpu_seconds": 1.51,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 26751.90357518196,
+      "stop_reason": null,
+      "wall_seconds": 2.4481289000000004
+    },
+    "actual-native-tiny.exit.json": {
+      "command": [
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/task/env/bin/python",
+        "-I",
+        "-B",
+        "/srv/dl_binner/repo/scripts/e035_pool_native.py",
+        "--action",
+        "tiny",
+        "--output",
+        "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/gates/tiny.json"
+      ],
+      "exit_code": 0,
+      "launched_pid": 2355,
+      "peak_sampled_rss_bytes": 181624832,
+      "rss_bytes_ceiling": 26000000000,
+      "sample_includes_coordinator": true,
+      "sampled_average_cpus": 0.5315638956777091,
+      "sampled_cpu_seconds": 5.83,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 26718.026564121246,
+      "stop_reason": null,
+      "wall_seconds": 10.967637281999998
+    }
+  },
+  "native_closed_gates": {
+    "config.json": {
+      "bytes": 4657,
+      "sha256": "7c9c55451841ed05c4779e915c0726474f14b2b9e11bc7276913785416c17a58"
+    },
+    "science-plan.json": {
+      "bytes": 9243,
+      "sha256": "2bd92af33e61d89d9c01ba296cc675bd0dddcbaac38d44e0f0593cfae794a0bb"
+    },
+    "host.json": {
+      "bytes": 1020,
+      "sha256": "a7f068c04d7f847c7883c7cf41e7ba542b2c4b15edb33b692a79489257603061"
+    },
+    "release.json": {
+      "bytes": 281,
+      "sha256": "ab5c3f1930caaff951363aebf2c9ee644ed0eb29be0366952f0437c9557a0eb5"
+    },
+    "started.json": {
+      "bytes": 168,
+      "sha256": "ceefce4bbd146dd5d4f530bcbe144295e0c134e72d84d01b2cc77f5ead47a514"
+    },
+    "gates/install.json": {
+      "bytes": 606,
+      "sha256": "294d05ab50fbae9193a03cf1af622f3d671b94278c1ed7dd033aa414ffdab017"
+    },
+    "gates/package-install.json": {
+      "bytes": 15012,
+      "sha256": "4e8250e7b66fbe3dc65f74de9c8a64641f18512451fea45e4b60c27adb8b518e"
+    },
+    "gates/runtime.json": {
+      "bytes": 111192,
+      "sha256": "b5879a3b584d840f0102410103e94d58e7009ab69fb57c42d0180261a328508a"
+    },
+    "gates/inputs-before.json": {
+      "bytes": 1797,
+      "sha256": "53d5ffd8c50c20c4823bf300d0808f6734e6a9b454e70920f92ab33d210a7e7a"
+    },
+    "gates/tiny.json": {
+      "bytes": 130,
+      "sha256": "9e2fd6688e17be8f69f8048a286ce24a9eb3f64db06bb563ec28bcd493907219"
+    },
+    "logs/supervision.json": {
+      "bytes": 1058,
+      "sha256": "975240fc05026f95f15aa8188399b41d0881b1cba5630a571349cc5a6a245c1b"
+    },
+    "logs/watchdog-live-before-release.json": {
+      "bytes": 570,
+      "sha256": "3854494c3d398f0308f7d0b63f316de773cb7249d5ed02dadcf41bad7f07eab2"
+    },
+    "logs/maintenance-restart-refused.json": {
+      "bytes": 415,
+      "sha256": "243c6d932daec1bbea93e2bbfd2e5758a6ef1005a85a196a54ec80fac9450116"
+    },
+    "logs/provider-before-release.json": {
+      "bytes": 32187,
+      "sha256": "b7e3065ac6105b2aa624d4ea9b63348ab2e97d3ac22271837848b5d76d58cca2"
+    },
+    "logs/actual-native-tiny.log": {
+      "bytes": 1743,
+      "sha256": "2d97c010e0bdd21636194fc82f9620e75f2305731cd50feceb3e59cdfa5f95d3"
+    }
+  },
+  "native_closed_gate_transfer_all_bytes_verified": true,
+  "native_runtime": {
+    "python": "3.10.15",
+    "distributions": 42,
+    "owned_product": "0.1.0.dev11",
+    "owned_package_files": 94,
+    "pysam": "0.23.3",
+    "torch": "2.2.2+cpu",
+    "no_numerical_reinstallation": true,
+    "independent_package_source_equality": true
+  },
+  "native_tiny": {
+    "status": "PASS_NATIVE_AUDIT_ONLY",
+    "actual_BAM_reader_and_pool": true,
+    "no_model_fit": true,
+    "truth_accessed": false
+  },
+  "native_tiny_test_count": 12,
+  "source_axes": {
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.npz": {
+      "bytes": 42384557,
+      "sha256": "277da629a666887d47da800847482aea059b71dd992cedf003dad1e9701f182e"
+    },
+    "/srv/dl_binner/experiments/e011/phase-20261017T005141Z-ab80312/restore/candidate/features/features.json": {
+      "bytes": 1103,
+      "sha256": "2b24603bd278f81178b3b843faeb961fb27061accb0df3f7968d9d5a937f9a8a"
+    },
+    "E009": {
+      "rows": 145702,
+      "bp": 231678157,
+      "eligible": 89041,
+      "samples": [
+        "cami3_toy_human_gut_short_read_sample_0",
+        "cami3_toy_human_gut_short_read_sample_2",
+        "cami3_toy_human_gut_short_read_sample_3",
+        "cami3_toy_human_gut_short_read_sample_4",
+        "cami3_toy_human_gut_short_read_sample_6",
+        "cami3_toy_human_gut_short_read_sample_9",
+        "cami3_toy_human_gut_short_read_sample_10",
+        "cami3_toy_human_gut_short_read_sample_11",
+        "cami3_toy_human_gut_short_read_sample_14",
+        "cami3_toy_human_gut_short_read_sample_17"
+      ]
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.npz": {
+      "bytes": 338210613,
+      "sha256": "2e63033f1da4720a4e42fbb8aa8f45af2187377ba36bb5fc6aa245549e7846c5"
+    },
+    "/srv/dl_binner/experiments/e024/coverage-20261027T205510Z-60cbf7d-r4/work/rebound/features.json": {
+      "bytes": 852,
+      "sha256": "b03907a416f4cfe146a42ce461cd2a937e011a5299382d0e6984c62c5b5c780a"
+    },
+    "oral": {
+      "rows": 1286547,
+      "bp": 1669981123,
+      "eligible": 508763,
+      "samples": [
+        "oral_sample_6",
+        "oral_sample_7",
+        "oral_sample_8",
+        "oral_sample_13",
+        "oral_sample_14",
+        "oral_sample_15",
+        "oral_sample_16",
+        "oral_sample_17",
+        "oral_sample_18",
+        "oral_sample_19"
+      ]
+    }
+  },
+  "supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e035-pooled-20261107T005703Z-4d332d7.service",
+    "watchdog_timer": "e035-pooled-20261107T005703Z-4d332d7-exit.timer",
+    "watchdog_service": "e035-pooled-20261107T005703Z-4d332d7-exit.service",
+    "process": {
+      "pid": 2158,
+      "start_ticks": 23092,
+      "command_sha256": "e62d77d8c4bfe3d02d68ed7a4a0efe2ae1289707d66ad50fe10318d1fef5f52b"
+    },
+    "boot_id": "11e4e8bd-3d34-4a7e-9df9-78effd925e8a",
+    "source_commit": "4d332d7d98cd5e2ace0fcbb76167e10cdf9b1ba4",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1794013046.468,
+    "hard_deadline_epoch": 1794041846.468,
+    "provider_stop_epoch": 1794042746.468,
+    "native_normal_exit_and_crash_tests_passed": true,
+    "current_watcher": {
+      "boot_id": "11e4e8bd-3d34-4a7e-9df9-78effd925e8a",
+      "checked_utc": "2026-11-07T01:13:22.239366+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "e62d77d8c4bfe3d02d68ed7a4a0efe2ae1289707d66ad50fe10318d1fef5f52b",
+        "pid": 2158,
+        "start_ticks": 23092
+      },
+      "observed_process": {
+        "command_sha256": "e62d77d8c4bfe3d02d68ed7a4a0efe2ae1289707d66ad50fe10318d1fef5f52b",
+        "pid": 2158,
+        "start_ticks": 23092
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7"
+    },
+    "parent_active": true,
+    "timer_active": true,
+    "setup_fallback_inactive": true,
+    "independent_provider_STOP_readback": true
+  },
+  "clock": {
+    "allocation_start": {
+      "epoch": 1794013046.468,
+      "UTC": "2026-11-07T00:57:26.468000+00:00",
+      "Copenhagen": "2026-11-07T01:57:26.468000+01:00"
+    },
+    "driver_deadline": {
+      "epoch": 1794041846.468,
+      "UTC": "2026-11-07T08:57:26.468000+00:00",
+      "Copenhagen": "2026-11-07T09:57:26.468000+01:00"
+    },
+    "provider_STOP": {
+      "epoch": 1794042746.468,
+      "UTC": "2026-11-07T09:12:26.468000+00:00",
+      "Copenhagen": "2026-11-07T10:12:26.468000+01:00"
+    }
+  },
+  "latest_progress": {
+    "sample-E009-00.log": {
+      "utc": "2026-11-07T01:13:21Z",
+      "sample": "cami3_toy_human_gut_short_read_sample_0",
+      "alignment_records": 28000000,
+      "templates": 13999999,
+      "cross_contig_qualified_templates": 116334
+    }
+  },
+  "latest_sampled_resources": {
+    "sample-E009-00.samples.jsonl": {
+      "seconds": 670.990783423,
+      "rss_bytes": 559706112,
+      "sampled_cpu_seconds": 915.52
+    }
+  },
+  "latest_filesystem": {
+    "epoch": 1794014008.6940193,
+    "task_used": 810405888,
+    "task_free": 104262078464,
+    "source_free": 28771000320
+  },
+  "maximum_closed_gate_sampled_RSS_bytes": 2020503552,
+  "complete_remainder_admission": "PENDING: requires complete first E009 and Oral readers; no utility stop before all ten of either community",
+  "audit_completed": false,
+  "community_binner_fits": 0,
+  "taxonomy_acquired": false,
+  "comparison_or_MAG_recovery_assessed": false,
+  "conditional_task_disk": {
+    "name": "e035-task-1794013046",
+    "id": "9116674795864573630",
+    "sizeGiB": 100,
+    "type": "pd-balanced",
+    "creationTimestamp": "2026-11-06T17:01:06.084-08:00",
+    "original_disks_unchanged": true,
+    "safe_cleanup_review": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/disk-decision.json",
+      "bytes": 1518,
+      "sha256": "7149ac3d61c9f3de38deab380e4a7ccb66d54af7b3c3c6859b4bab5c43482f47"
+    },
+    "deletion": "Pending full terminal/archive/member/alias delivery admission; no deletion while active or unique evidence remains"
+  },
+  "cost": {
+    "allocated_seconds_so_far": 964.09934425354,
+    "VM_CPU_RAM_IP_gross_so_far_USD": 0.07312309966699736,
+    "new_task_disk_gross_so_far_USD": 0.0028682514411977737,
+    "original_new_ceiling_USD": 4,
+    "complete_scenario_upper_USD": 3.9398915627776288,
+    "original_separate_storage_ceiling_USD": 9,
+    "final_cost_pending": true,
+    "not_sampled_CPU_or_credit_delta_or_invoice": true
+  },
+  "records": {
+    "identity.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/identity.json",
+      "bytes": 487,
+      "sha256": "8f34fe035868405a179e45abbaacbadf113fd031b6f42a86c7f4f8b772c94ba5"
+    },
+    "preflight.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/preflight.json",
+      "bytes": 471,
+      "sha256": "d20d5658da303a28e09ef44ff789c10002265cf6dc56aef09230be7db951020a"
+    },
+    "financial-gate.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/financial-gate.json",
+      "bytes": 3019,
+      "sha256": "2841dfbc7fbbb562bead2ac9acef63a707f68fea3acfee14be5c5e4e96fc5835"
+    },
+    "source.bundle": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/source.bundle",
+      "bytes": 241288,
+      "sha256": "62ff71a44b0dd21e62b0413f95898d9dea559958cce7bdbe52e8d7edf3fce4b1"
+    },
+    "headroom.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/headroom.json",
+      "bytes": 240,
+      "sha256": "ed515300933b05817bfe3527daadb45665001f85a1e7f324f868456e1b7d9df9"
+    },
+    "disk-decision.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/disk-decision.json",
+      "bytes": 1518,
+      "sha256": "7149ac3d61c9f3de38deab380e4a7ccb66d54af7b3c3c6859b4bab5c43482f47"
+    },
+    "held.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/held.json",
+      "bytes": 1486,
+      "sha256": "4da52785f8a2963b2926a1541c4e663cc6db6ad164aba5f2c0be8d735e4ba315"
+    },
+    "released.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/released.json",
+      "bytes": 32,
+      "sha256": "b2fbe0897ee48dba33fb052c62480a029b8e08960a98780dd4a71123b00f2ca0"
+    },
+    "observation-1.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/observation-1.json",
+      "bytes": 8114,
+      "sha256": "cf8363e18706ee6517073cc6346589d73b4e2a9d65a7a803a9e8e201e606a0ca"
+    },
+    "observation-2.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/observation-2.json",
+      "bytes": 14761,
+      "sha256": "b1d3a0f96f7c749b7cfd0ab347689713a6b4d5030daeaa7e30e25b0a529ec10d"
+    },
+    "observation-3.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/observation-3.json",
+      "bytes": 20678,
+      "sha256": "e47f2ea8b45b36cab76353fa62d25dc261eb5ae56ee378fd969b45be52c70d90"
+    },
+    "native-closed-gate-bindings.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/native-closed-gate-bindings.json",
+      "bytes": 2014,
+      "sha256": "8c78e14945cf26ede539a33014dc34eb3d7a6c7201a3ae273f4b4422e4e997ab"
+    },
+    "observation-control/provider.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/observation-control/provider.json",
+      "bytes": 33532,
+      "sha256": "2cfe781446cb5e05b08887f550515f3bf15192b423a9c9dd0fa298c5e3b5ef05"
+    },
+    "observation-control/guest.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/observation-control/guest.json",
+      "bytes": 305,
+      "sha256": "9d0f6ea40bf3c30ccc8667587b2dc97e9ec414d0d787701b03241dd38030f710"
+    },
+    "control/new-task-disk.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/launch-v1/control/new-task-disk.json",
+      "bytes": 756,
+      "sha256": "56232d68bedb65b433e790dc5cd93902218b994bb52510d8dea42683bbdaeb6c"
+    }
+  },
+  "immutable_evidence_preserved": true,
+  "public_push": false,
+  "source_transfer": "Private exact Git bundle with b0d741c prerequisite; read-only GitHub key unchanged",
+  "limits": {
+    "seconds": 28800,
+    "provider_STOP_seconds": 29700,
+    "ceiling_USD": 4,
+    "threads": 4,
+    "RSS_bytes": 26000000000,
+    "reserve_bytes": 26843545600,
+    "task_disk_GiB": 100,
+    "task_growth_bytes": 64424509440,
+    "compressed_export_bytes": 2147483648,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+    "extra_bytes": 64424509440
+  },
+  "next_action": "After termination verify actual audit exits and full private delivery, then frozen support/locus diagnostics; no new fit or bulk reference",
+  "limitations": [
+    "Progress is not complete data/utility admission",
+    "No new binner or MAG result exists",
+    "Endpoint envelopes are not gap-free CIGAR truth",
+    "Dominant-contig origin discordance is not a template-error rate",
+    "Full-reference taxonomy/native learning remain outside this audit",
+    "Both communities remain development; Oral GLM and skin confirmation remain unrun"
+  ]
+}

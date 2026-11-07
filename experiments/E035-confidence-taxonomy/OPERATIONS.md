@@ -1,5 +1,48 @@
 # E035 operations
 
+## Verified native release and running handoff, November 7
+
+[Current native receipt](pooled-native-observed.json) records phase
+`pooled-20261107T005703Z-4d332d7`, operational source `4d332d7`, unchanged scientific
+source/wheel `e8f1260`. Exact private source sync/clean checkout, four actual
+installation/runtime/input/tiny gate exits and all 15 compact closed-gate byte
+transfers pass. Native Python is 3.10.15 CPU, 42 distributions / 94 own package
+members, pysam 0.23.3; the complete accepted numerical base is reused read-only.
+Twelve actual native audit tests pass, with no training/classifier execution.
+
+At **01:13:30 UTC / 02:13:30 Copenhagen**, the independently observed parent and
+watcher timer are active on the recorded current boot/PID/start/command. Normal-
+exit/crash tests and maintenance-restart refusal pass; provider STOP is independently
+read back as 29,700 seconds. Real first-E009 progress advances 2 million →
+28 million alignment records, latest emitted 01:13:21 UTC. Latest sampled reader
+RSS is about 0.56 GB, versus a 2.02 GB maximum among closed setup gates. Source free
+is 26.80 GiB and task free about 93.58 GiB. No error is observed, but the first
+two-library complete-remainder gate is **pending**; progress is not all-ten completion.
+
+Allocation began **00:57:26.468 UTC / 01:57:26.468 Copenhagen**. The eight-hour driver
+deadline is **08:57:26.468 UTC / 09:57:26.468 Copenhagen**; independent provider
+STOP is **09:12:26.468 UTC / 10:12:26.468 Copenhagen**, November 7. The watcher
+stops the VM earlier when the held parent exits after normal collection or failure.
+No chat/SSH connection is needed for the remaining serial audit or shutdown.
+
+Actual safe-cleanup review admits new `e035-task-1794013046`, ID
+`9116674795864573630`, **100 GiB balanced**. Only that positively identified empty
+disk is formatted; original 30/300 GiB remain unchanged. No accepted input/result
+or failed journal is deleted. After fully verified terminal/source/payload delivery,
+assess safe detach/delete to end this extra disk's roughly $0.33/day cost.
+
+Measured allocation components at the snapshot are **$0.07312 CPU/RAM/IP plus
+$0.00287 new scratch**, separately from original preservation, operations and later
+archive/export. Final costs and biological information remain pending, not an
+invoice or credit delta. Full conservative scenario remains $3.94 under new $4;
+the existing $9 storage approval and November 11/18 boundaries are unchanged.
+
+Logs: `/srv/dl_binner/experiments/e035/pooled-20261107T005703Z-4d332d7/logs/`;
+first worker `sample-E009-00.log`, parent `terminal.log` one level above. Guest
+attribute `e035-pooled/status` is a progress pointer. Complete private evidence
+will be under `gs://dl-binner-archive-167650584170/e035/pooled-20261107T005703Z-4d332d7/`.
+No binner, taxonomy acquisition or other community execution is authorized.
+
 ## November 7: separately authorized pooled audit, before native release
 
 The owner authorizes the $4 all-ten support audit at `e8f1260`, with conditional
@@ -28,7 +71,7 @@ precede release. The controller can run only readers and pooling. It keeps the
 whole-source return, closed scientific stderr and a small delivery-failure receipt;
 only declared regenerable collator/source copies are outside compact science.
 
-## Prepared scope and current boundary
+## November 6 preparation boundary, historical
 
 Local implementation and engineering only. No community classification, fit,
 score, full protein archive, VM start, resource change or cloud write occurred.
@@ -113,7 +156,7 @@ do not download twelve GiB plus a second full extraction to the constrained Mac.
 If the source archive is backed up, price its additional 66.81 GiB and soft-delete
 tail separately from scientific export; do not composite-upload avoidable parts.
 
-## Exact following prompt
+## Approved pooled-audit prompt at e8f1260
 
 Our goal is stronger, reliably measured MAG recovery. Read AGENTS, PROJECT_INTENT,
 STATE/CLOUD, D013/D015 and E035's reassessment/design, local evidence, protocol,
@@ -173,6 +216,82 @@ from those results; do not switch methods merely because performance is unassess
 Retain full denominator/represented-ceiling/singleton-fragmented context, skin
 unscored and Oral GLM's pending native qualification. Update records/checks/structured
 commit and report actual costs/resources, findings/limits and the exact next prompt.
+
+## Exact following prompt
+
+Our goal is stronger, reliably measured MAG recovery. Read AGENTS, PROJECT_INTENT,
+STATE/CLOUD, D013/D015 and E035's reassessment/design, unchanged e8f1260 science
+and candidate locks, pooled-native plans/package/source locks, local/financial/
+native receipts and operations. Inspect **`pooled-20261107T005703Z-4d332d7`** without
+starting another workflow. Preserve dev3/dev4/dev5, E031/E032 and every accepted
+E009–E035 input/truth/result/source freeze and failed journal. This is a support
+information audit, not a binner comparison or a taxonomy execution.
+
+Check the GCP control plane, `e035-pooled/status`, and private `completion.json`
+under `gs://dl-binner-archive-167650584170/e035/pooled-20261107T005703Z-4d332d7/`.
+Do not infer completion from shutdown or a progress counter. If healthy and still
+running, report actual stage/progress and leave the current boot/process watcher
+and provider STOP intact without polling to completion. The original eight-hour
+driver and 8.25-hour provider horizons start at 00:57:26.468 UTC November 7; no
+clock reset, new science, automatic extension or retention renewal.
+
+After independently verified TERMINATED, establish actual exits for four setup/
+native gates, twenty retained-BAM readers, both pools, inputs-after, collection/
+readback/closed-tail and matching watchdog exit. Use `audit_completed` and
+`SUCCESS_INFORMATION_AUDIT`, not a nonexistent new-fit success flag. Inspect actual
+worker stderr/global logs and every source/transport/ledger seal. Refresh live
+credits/scope/expiry, delayed usage, applicable prices/coverage, remaining original
+new $4, original $9 storage approval and November 11/18 calendar. Price measured
+allocation, scratch lifetime, archive/soft-delete, operations and export separately
+from sampled CPU; credit delta is not an invoice. Assess local free space and
+export before downloading, with four numerical threads, 8 GB sampled RSS, one
+hour / 6 GiB extra local review and sequential staging above an 8 GiB free reserve.
+
+Verify private object generations/bytes/SHA and every support archive member and
+alias, including whole source, compact closed gates, logs and later terminal/
+completion/tail/filesystem/watchdog records. `support/collection.json` binds the
+complete sliced scientific member union; `support/inventory.json` is its global
+verified union. No retained support member may be silently omitted. Declared
+regenerable collator/source-copy exclusions are separate from unique ledgers and
+failed journals. If evidence is missing, first assess a targeted verified-reuse
+recovery against the original clock/budget, current credit and retention, applying
+the owner's standing operational-repair direction prospectively; do not disguise
+a new clock or replay accepted readers. Report a real out-of-scope dependency.
+
+Independently review full contig/bp/eligibility and ordered ten-sample axes, actual
+read-record counts against the locked BAM totals, NM/identity/MAPQ/flags/query-
+fraction/mate/calibration/dedup semantics, source generations/CRC/SHA, and unchanged
+before/after inputs. All ten must close per community before pooled utility;
+sample order must match the full-reference coverage manifest. Compare retained
+per-library support, pooled-before-support edge decisions, orientation/distinct
+starts/degree refusals, bp/length/core eligibility, insert/read-length/overlap and
+joint screening distributions. Keep three-template/two-start/90%-orientation/
+degree-64 and 100-edge/1%-eligible-bp rules unchanged; no filter grid or score tuning.
+
+Audit supporting endpoint loci with admitted conservative E009 v2 and the separately
+named Oral provided-origin oracle where evidence permits. Truth diagnoses, never
+selects edges/thresholds/families/K. Retained start/end envelopes are not gap-free
+CIGAR support, and whole-contig dominant-label discordance is not a template-error
+rate. Preserve unresolved/shared/unknown/non-target DNA, full 156/799 denominators,
+3.3034% N quarantine, Oral known-shared sensitivity and represented-reference /
+singleton-fragmented limitations. No binner R95 result exists from this audit;
+reuse older scores, never refit/rescore them.
+
+Choose at most one next separately priced recovery block from the actual utility
+and specificity evidence: the source-bound graph comparison if justified, or the
+already implemented taxonomy candidate with independent reference/native/cost
+admission. A sparse pooled result is a policy/assembly/library limitation, not a
+general rejection of graph or paired-read information. Do not jump methods solely
+because no fit was run, or promise an unmeasured MAG gain. Keep skin unscored and
+Oral GLM's native 128-view/full-bank/teacher/proposal milestone explicit.
+
+After complete verified source/unique-output/terminal preservation, assess and
+detach/delete only new **100 GiB `e035-task-1794013046`, ID `9116674795864573630`**,
+then independently verify absence. Original disks/inputs remain protected. Preserve
+November 11 at 00:00 Copenhagen active / November 18 automatic-tail boundaries;
+neither unused funds nor a future taxonomy proposal renews storage. Update records,
+check and structured commit; report actual completion, findings/limits, costs and
+disk release, one next decision and the exact separate execution prompt required.
 
 ## Separate later taxonomy execution approval, not part of the pooled audit
 

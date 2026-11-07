@@ -1,18 +1,32 @@
 # Current Research State
 
-## E035 all-ten pooled audit authorized; native release pending
+## E035 all-ten pooled audit running under verified shutdown supervision
 
-The owner authorizes the prepared audit at `e8f1260`. [Operational contracts](../experiments/E035-confidence-taxonomy/pooled-native-local.json)
-pass locally and [fresh financial/resource checks](../experiments/E035-confidence-taxonomy/pooled-financial-observed.json)
-cover the full $3.94 conservative scenario under new $4, keeping the $35 delayed-
-usage reserve and original $9 storage approval. VM is still TERMINATED at this
-pre-release observation; actual guest headroom/safe cleanup and all native
-runtime/tiny/held-parent watcher/provider STOP gates remain before release.
-Conditional new 100 GiB scratch fits the existing 404 GiB balanced quota.
-The [operations guide](../experiments/E035-confidence-taxonomy/OPERATIONS.md)
-owns this reader-only phase. All twenty BAMs, the e8f1260 scientific wheel/source/
-support rule and November 11/18 boundaries remain fixed. No fit, taxonomy or new
-recovery is authorized. The earlier local preparation below remains dated context.
+[Native receipt](../experiments/E035-confidence-taxonomy/pooled-native-observed.json)
+records `pooled-20261107T005703Z-4d332d7`: source/wheel `e8f1260` unchanged,
+operational commit `4d332d7` privately synced to the exact clean VM checkout.
+Four actual native gate exits pass, including 12 tiny audit tests and full axes.
+At 01:13:30 UTC / 02:13:30 Copenhagen the first E009 reader has emitted 28 million
+alignment records, with matching live boot/PID/start/command watcher and active
+timer. No error or new quality result is observed. The complete-remainder gate
+awaits the first full E009/Oral readers; neither all-ten utility nor completion is
+claimed. The long job is intentionally left under independent supervision.
+
+Driver deadline is **09:57:26 Copenhagen / 08:57:26 UTC November 7**, independent
+provider STOP **10:12:26 Copenhagen / 09:12:26 UTC**, with earlier exit-triggered
+shutdown after collection or crash. [Fresh financial gates](../experiments/E035-confidence-taxonomy/pooled-financial-observed.json)
+cover the $3.94 complete scenario under new $4 and $35 delayed reserve; separate
+original preservation stays $9. Actual cleanup cannot supply the extra 58.20 GiB
+for the configured full work/reserve allowance, so authorized new 100 GiB balanced
+scratch is added within existing quota. Original 30/300 GiB and accepted evidence
+are unchanged. Measured allocation components so far are $0.07312 CPU/RAM/IP plus
+$0.00287 scratch; final costs/collection are pending, not an invoice.
+
+Use the [exact inspection prompt](../experiments/E035-confidence-taxonomy/OPERATIONS.md#exact-following-prompt)
+after termination; verify actual exits/full delivery before diagnostics and release
+of only the new scratch disk. No fit, taxonomy, mapping or confirmation in this
+audit. November 11 active / November 18 tail remain. Earlier preparation below is
+dated context, not the current VM state.
 
 ## E035 prepared locally; pooled-support audit recommended before bulk taxonomy
 

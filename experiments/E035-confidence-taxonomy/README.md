@@ -1,5 +1,12 @@
 # E035: confidence-aware hierarchical taxonomy and pooled-support reassessment
 
+**November 7 execution update:** the separately authorized all-ten pooled audit
+is [running under verified supervision](pooled-native-observed.json), phase
+`pooled-20261107T005703Z-4d332d7`, unchanged e8f1260 science / 4d332d7 operational
+source. Four actual native gates and real reader progress pass; all-ten completion,
+remainder admission and utility remain pending. No binner or taxonomy run.
+[Operations](OPERATIONS.md#exact-following-prompt) now owns completed-output inspection.
+
 Status: **locally implemented and engineering-qualified; biological performance
 NOT_ASSESSED**. November 6, 2026. Preparation only, on branch
 `confidence-aware-taxonomy`; no cloud start, community annotation/fit/score or bulk
