@@ -1,5 +1,19 @@
 # Google Cloud workspace operations
 
+## November 7: E035 pooled audit admission, before start
+
+[Fresh read-only evidence](../experiments/E035-confidence-taxonomy/pooled-financial-observed.json)
+shows TERMINATED on existing E2, original 30/300 GiB disks only, quota headroom
+104 GiB for the authorized conditional 100 GiB disk. Welcome credit is DKK
+1,631.30 Available / 83%, January 12 expiry; displayed November net DKK 0.00,
+possibly over 24 hours delayed. Original disks/all 337 archive versions remain
+about $7.62 per seven days under separate $9 preservation. No renewal or new
+service/quota is needed. New complete audit scenario is $3.94 under $4, including
+worst fallback allocation and scratch through the original boundary. Native
+headroom/cleanup/runtime/tiny/watcher/STOP admission remains before release.
+Only twenty retained-BAM readers and pooled support are authorized; no binner
+fit or taxonomy acquisition. November 11 active / November 18 automatic tail stay.
+
 ## November 6: E035 local preparation; no new chargeable action
 
 [E035 local receipt](../experiments/E035-confidence-taxonomy/local-observed.json)

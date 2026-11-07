@@ -1,0 +1,51 @@
+{
+  "kind": "E035 audit-only operational admission around immutable e8f1260 science",
+  "prepared_commit": "e8f126090b37e66d3dac0ba1081b4903d15b1861",
+  "files": {
+    "scripts/e035_pool_launch.py": {
+      "bytes": 16490,
+      "sha256": "008644c3bcece8cb1544df77d3098c7fcdf5c605a7cb9aecf9f92f7a3b83609f"
+    },
+    "scripts/e035_pool_arm.py": {
+      "bytes": 6751,
+      "sha256": "6b1bd05800877db1705a80ef899ddfecd1a87af7427c29a7c86f7ff2fa9da801"
+    },
+    "scripts/e035_pool_phase.py": {
+      "bytes": 14791,
+      "sha256": "6a3a2c8df0039e5f1a54b742c7095f857521c90a8c779d64c8b6e768314a1edf"
+    },
+    "scripts/e035_pool_native.py": {
+      "bytes": 4987,
+      "sha256": "15af71bb2000d8006b09c41aa621ca9c05f1f8a353c8e44ac78ccf7e99a81ea6"
+    },
+    "scripts/e035_pool_runtime.py": {
+      "bytes": 6743,
+      "sha256": "44913df50762f9d82285b36e579a1f4d550749a945fab178292a0cc6ab6d9ced"
+    },
+    "tests/test_e035_pool_execution.py": {
+      "bytes": 11296,
+      "sha256": "58fe4e499e1e27062e7e01c55f6f329ae29c0457008bc8b3facf9bd578f70ab3"
+    },
+    "experiments/E035-confidence-taxonomy/source-lock.json": {
+      "bytes": 80544,
+      "sha256": "e0d90cab12c3860aaadbb2be0777de2d80202109a7a803e77b7587620e0298e3"
+    },
+    "experiments/E035-confidence-taxonomy/candidate-lock.json": {
+      "bytes": 14717,
+      "sha256": "b5bd717ffc4bda229e0fcb761007a887c0e685d10501fbf447f1e166306785ec"
+    },
+    "experiments/E035-confidence-taxonomy/pooled-audit-plan.json": {
+      "bytes": 10918,
+      "sha256": "9b2b948fb830ed72ca435a17e2d5de56f91b2dd58de9ec146dbad325e812ea65"
+    },
+    "experiments/E035-confidence-taxonomy/pooled-native-plan.json": {
+      "bytes": 935,
+      "sha256": "0f042dc21ce50bc9cdac953ae598301219304da28de9f907773f4375520af509"
+    },
+    "experiments/E035-confidence-taxonomy/pooled-native-package-lock.json": {
+      "bytes": 13799,
+      "sha256": "620d072a6235f64858a999f6f041af4c0c1ed4d569d2399d8a482b8c75dc1911"
+    }
+  },
+  "scientific_source_lock_unchanged": true
+}

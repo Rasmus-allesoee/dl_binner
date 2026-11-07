@@ -1,0 +1,25 @@
+{
+  "kind": "E035 audit-only native controller",
+  "prepared_commit": "e8f126090b37e66d3dac0ba1081b4903d15b1861",
+  "scientific_plan": "pooled-audit-plan.json",
+  "limits": {
+    "seconds": 28800,
+    "provider_STOP_seconds": 29700,
+    "ceiling_USD": 4,
+    "threads": 4,
+    "RSS_bytes": 26000000000,
+    "reserve_bytes": 26843545600,
+    "task_disk_GiB": 100,
+    "task_growth_bytes": 64424509440,
+    "compressed_export_bytes": 2147483648,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+    "extra_bytes": 64424509440
+  },
+  "workflow_python": "/srv/dl_binner/experiments/e009/envs/data-cpu-v1-ae654b442315/bin/python",
+  "source_policy": "Unchanged e8f1260 package/source, reader, support rule and all twenty BAM generations; new operational glue only",
+  "no_binner_fit": true,
+  "no_taxonomy_acquisition": true,
+  "no_external_binner": true,
+  "no_confirmation": true
+}

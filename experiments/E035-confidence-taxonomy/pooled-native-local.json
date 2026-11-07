@@ -1,0 +1,41 @@
+{
+  "status": "PASS_LOCAL_OPERATIONAL_CONTRACTS",
+  "tests": 6,
+  "resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e035-confidence-taxonomy/preparation/qualified-package/env/bin/python",
+      "-I",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_e035_pool_execution.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "launched_pid": 50473,
+    "peak_sampled_rss_bytes": 105181184,
+    "rss_bytes_ceiling": 8000000000,
+    "sample_includes_coordinator": false,
+    "sampled_average_cpus": 0.6004723383111369,
+    "sampled_cpu_seconds": 1.42,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "seconds_ceiling": 300,
+    "stop_reason": null,
+    "wall_seconds": 2.3648050199844874
+  },
+  "receipt": {
+    "path": "artifacts/e035-confidence-taxonomy/pooled-execution/controller-contracts-final.exit.json",
+    "bytes": 719,
+    "sha256": "795cd753d4273869625bfa52c61fea52c7fb58ba793e418874f6174841fa30b5"
+  },
+  "actual": "complete host producer/schema; fixed source/clock/financial/memory guards; immutable atomic release and malformed/overwrite refusal; complete-remainder forecast independent of utility; actual pack/source/alias/log restore; real SHA256 and local SDK CRC32C; no-redownload reuse/corruption refusal",
+  "mocked": "cloud HTTP/metadata/token and free-space fixture; uploads; no live systemd/provider action in local tests",
+  "native_gates_required": "exact CPU package/library runtime, actual tiny BAM/restore/selection contracts, current boot/process held-parent watcher normal/crash/live and independent provider STOP",
+  "science_unchanged": true,
+  "no_community_execution_yet": true,
+  "source": "e8f1260 candidate wheel and source/default/BAM/support policy retained unchanged"
+}

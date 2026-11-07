@@ -1,0 +1,137 @@
+{
+  "status": "PASS_FRESH_READONLY_ADMISSION_FOR_ORDINARY_SCOPE",
+  "prepared_scientific_commit": "e8f126090b37e66d3dac0ba1081b4903d15b1861",
+  "checked_epoch": 1794012802.927165,
+  "browser": {
+    "checked_epoch": 1794012037.8112068,
+    "credit_checked_epoch": 1794012037.811208,
+    "remaining_DKK": 1631.3,
+    "original_DKK": 1973.43,
+    "remaining_percent": 83,
+    "status": "Available",
+    "scope": "Certain usage; see the terms for free trial.",
+    "application": "Net pricing",
+    "start": "2026-10-13",
+    "expiry": "2027-01-12",
+    "account": "Paid",
+    "displayed_period": "2026-11-01 through 2026-11-07",
+    "displayed_gross_DKK": 82.85,
+    "displayed_savings_DKK": 82.85,
+    "displayed_net_DKK": 0.0,
+    "latency_warning": "Costs take a few hours to show up, and might take longer than 24 hours; rounded values.",
+    "pending_realtime_ledger_available": false,
+    "reserve_USD": 35,
+    "observed_via": "signed-in Cloud Console Credits table and Overview; actual delay tooltip",
+    "billing_changes": false
+  },
+  "full_cost": {
+    "checked_epoch": 1794012715.2569962,
+    "ceiling_USD": 4,
+    "estimated_complete_gross_USD": 3.9398915627776288,
+    "components_USD": {
+      "maximum_8_25h_VM_CPU_RAM_IP": 2.252626840848354,
+      "maximum_100GiB_task_disk_96h": 1.331484049929275,
+      "maximum_2GiB_export": 0.24,
+      "maximum_2GiB_archive_12days": 0.015780672,
+      "operations_upper": 0.1
+    },
+    "source_CPU_RAM_hour_USD": 0.2680456776785935,
+    "IP_hour_upper_USD": 0.004999999999994829,
+    "balanced_disk_GiB_hour_USD": 0.00013869625520096616,
+    "catalog_month_hours": 721.0,
+    "original_retained_storage_GiB": 76.24873884860426,
+    "original_disks_and_archives_7days_USD": 7.620852677917359,
+    "original_storage_approval_USD": 9,
+    "ordinary_first_party_only": true,
+    "real_money_authorized": false,
+    "source_bucket_location": "US-CENTRAL1",
+    "same_region_BAM_restore_network_USD": 0,
+    "storage_boundary": "2026-11-11T00:00:00+01:00",
+    "automatic_tail": "2026-11-18T00:00:00+01:00",
+    "disk_lifetime_assumption": "No later than original active boundary; at most 96 hours if launched on November 7. Release immediately after verified delivery/review where possible.",
+    "forecast_not_invoice": true,
+    "credit_delta_not_invoice": true,
+    "source_prices": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/current-prices.json"
+  },
+  "quota": {
+    "balanced_limit_GiB": 404.0,
+    "balanced_usage_GiB": 300.0,
+    "new_quota_request_required": false
+  },
+  "provider_status": "TERMINATED",
+  "records": {
+    "browser-credit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/browser-credit.json",
+      "bytes": 806,
+      "sha256": "d3b63f048a8fe00259531302d7482795f2ca86dfbcd7c46fb17d176f33d5100f"
+    },
+    "complete-cost.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/complete-cost.json",
+      "bytes": 1309,
+      "sha256": "a1b1f778936a69543c423c9e1fca7be27458b4205e61af980696d546f71b561f"
+    },
+    "project-billing.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/project-billing.json",
+      "bytes": 207,
+      "sha256": "d17b1d996a5c84429db68fff27b4bc76e6e4c6451f38098ff6f5dae7a7d23937"
+    },
+    "billing-account.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/billing-account.json",
+      "bytes": 179,
+      "sha256": "c7bf1056535088a8e2d1772bf0e9bd2d63f00cdf91b1a1dff113dd4de19b88da"
+    },
+    "bucket.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/bucket.json",
+      "bytes": 922,
+      "sha256": "2750ac393aa246e2edcd3517f2fd0cd5cd5a01c26279d0cea4a1fedee617bb5e"
+    },
+    "versions.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/versions.json",
+      "bytes": 390629,
+      "sha256": "7e95f7d91795d8387f6abe86259cbd9471f2be1ff834755b2fd8fd11be41f210"
+    },
+    "soft-deleted.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/soft-deleted.json",
+      "bytes": 56,
+      "sha256": "93932fe8f941c2fd2c3382d1c91d4a8807c5ed42f664a2b05eb775538ae1662d"
+    },
+    "current-prices.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/current-prices.json",
+      "bytes": 9155,
+      "sha256": "ec9851bfd3443fd5472e677ff4d8b50259432a24490bc72645beb77cd5911af2"
+    },
+    "provider-state.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/provider-state.json",
+      "bytes": 33098,
+      "sha256": "5786a5fa120916cd5914130ad38345914bf28959bc67173129bd00ab3f45e53e"
+    },
+    "instances.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/instances.json",
+      "bytes": 33450,
+      "sha256": "28ffb8d4753335ead8edc108f33fb7c6a2b0f21137733c4947686cbefbe3d62c"
+    },
+    "disks.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/disks.json",
+      "bytes": 2889,
+      "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+    },
+    "quota.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-execution/finance/quota.json",
+      "bytes": 11498,
+      "sha256": "af93d920377223c93431536d0539e3ac112a3bbd5c8c15539643d67eb522dfc3"
+    }
+  },
+  "real_money_authorized": false,
+  "paid_actions_at_observation": false,
+  "credit_not_an_invoice": true,
+  "retained_storage_approval_USD": 9,
+  "storage_boundary": "2026-11-11T00:00:00+01:00",
+  "automatic_tail": "2026-11-18T00:00:00+01:00",
+  "eligibility_sources": [
+    "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "https://cloud.google.com/compute/disks-image-pricing",
+    "https://cloud.google.com/storage/pricing"
+  ],
+  "eligibility": "Paid account retains unused Welcome credits; only ordinary first-party E2 CPU/RAM, balanced/standard disks, GCS Standard/operations and relevant networking. No GPU, premium image, Marketplace or new service.",
+  "native_space_gate": "Actual filesystem/du and safe-cleanup review follow authorized boot, before conditional new disk. Last stopped-guest free-space value is not treated as live."
+}

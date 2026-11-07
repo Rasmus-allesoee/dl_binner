@@ -1,5 +1,33 @@
 # E035 operations
 
+## November 7: separately authorized pooled audit, before native release
+
+The owner authorizes the $4 all-ten support audit at `e8f1260`, with conditional
+new 100 GiB scratch and the same November 11/18 boundaries. New operational glue
+is [locally qualified](pooled-native-local.json) and separately bound in
+[pooled-native-launch-lock.json](pooled-native-launch-lock.json); the original
+candidate wheel, 542 scientific/source/default bindings, all BAM generations and
+support criteria remain unchanged. No taxonomy, fit or new recovery is in scope.
+
+[Fresh financial checks](pooled-financial-observed.json) observe DKK 1,631.30
+Available / 83%, January 12 expiry, Paid account and displayed November gross /
+savings / net DKK 82.85 / 82.85 / 0.00, with potentially over 24 hours of delay.
+Keep the $35 pending-usage reserve. The complete conservative scenario is $3.94
+under $4, including 8.25 hours allocation, the new disk up to the original active
+boundary (at most 96 hours from November 7), 2 GiB export, archive/tail and $0.10
+operations allowance. Original 30/300 GiB plus all 337 archive versions are
+$7.62 per seven days under separate $9 preservation, not renewed here. Balanced
+quota has 104 GiB free, so no quota increase is needed. Actual guest headroom and
+safe regenerable cleanup must still be reviewed before adding scratch.
+
+The actual producer/schema, immutable release, clock/credit/source refusal,
+no-utility throughput gate, pack/alias/log/source restore and real SHA/SDK CRC
+contracts pass locally. Cloud transport/upload and filesystem availability were
+fixtures; native systemd/current-boot/PID/STOP, runtime and tiny BAM gates still
+precede release. The controller can run only readers and pooling. It keeps the
+whole-source return, closed scientific stderr and a small delivery-failure receipt;
+only declared regenerable collator/source copies are outside compact science.
+
 ## Prepared scope and current boundary
 
 Local implementation and engineering only. No community classification, fit,

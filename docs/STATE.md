@@ -1,5 +1,19 @@
 # Current Research State
 
+## E035 all-ten pooled audit authorized; native release pending
+
+The owner authorizes the prepared audit at `e8f1260`. [Operational contracts](../experiments/E035-confidence-taxonomy/pooled-native-local.json)
+pass locally and [fresh financial/resource checks](../experiments/E035-confidence-taxonomy/pooled-financial-observed.json)
+cover the full $3.94 conservative scenario under new $4, keeping the $35 delayed-
+usage reserve and original $9 storage approval. VM is still TERMINATED at this
+pre-release observation; actual guest headroom/safe cleanup and all native
+runtime/tiny/held-parent watcher/provider STOP gates remain before release.
+Conditional new 100 GiB scratch fits the existing 404 GiB balanced quota.
+The [operations guide](../experiments/E035-confidence-taxonomy/OPERATIONS.md)
+owns this reader-only phase. All twenty BAMs, the e8f1260 scientific wheel/source/
+support rule and November 11/18 boundaries remain fixed. No fit, taxonomy or new
+recovery is authorized. The earlier local preparation below remains dated context.
+
 ## E035 prepared locally; pooled-support audit recommended before bulk taxonomy
 
 [E035](../experiments/E035-confidence-taxonomy/README.md) implements an optional
