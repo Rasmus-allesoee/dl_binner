@@ -1,0 +1,822 @@
+{
+  "status": "PASS_COMPLETED_INFORMATION_AUDIT",
+  "actual_stage_exits": {
+    "owned-package-install": 0,
+    "complete-native-runtime": 0,
+    "original-inputs-before": 0,
+    "actual-native-tiny": 0,
+    "sample-E009-00": 0,
+    "sample-oral-00": 0,
+    "sample-E009-01": 0,
+    "sample-E009-02": 0,
+    "sample-E009-03": 0,
+    "sample-E009-04": 0,
+    "sample-E009-05": 0,
+    "sample-E009-06": 0,
+    "sample-E009-07": 0,
+    "sample-E009-08": 0,
+    "sample-E009-09": 0,
+    "pool-E009": 0,
+    "sample-oral-01": 0,
+    "sample-oral-02": 0,
+    "sample-oral-03": 0,
+    "sample-oral-04": 0,
+    "sample-oral-05": 0,
+    "sample-oral-06": 0,
+    "sample-oral-07": 0,
+    "sample-oral-08": 0,
+    "sample-oral-09": 0,
+    "pool-oral": 0,
+    "original-inputs-after": 0
+  },
+  "watchdog_exit_verified": true,
+  "original_inputs_unchanged": true,
+  "source_files": 542,
+  "operational_source_files": 11,
+  "native_distributions": 42,
+  "native_package_files": 94,
+  "parent_systemd_numeric_exit_unavailable": true,
+  "communities": {
+    "E009": {
+      "full_axes": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "utility": {
+        "eligible_bp": 209642703,
+        "eligible_edges": 1671,
+        "linked_eligible_bp": 19100069,
+        "linked_eligible_bp_fraction": 0.09110772150271312,
+        "linked_eligible_contigs": 3074,
+        "minimum_bp_fraction": 0.01,
+        "minimum_edges": 100,
+        "pilot": false,
+        "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+        "status": "PASS"
+      },
+      "all_edges": 2883,
+      "samples": [
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_0",
+          "records": 33267026,
+          "templates": 16633513,
+          "qualified": 15574922,
+          "calibrated": 5414,
+          "raw": 120266,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 15435717,
+          "overlap_templates": 13391972
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_2",
+          "records": 33267952,
+          "templates": 16633976,
+          "qualified": 4042322,
+          "calibrated": 1831,
+          "raw": 40002,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 3990658,
+          "overlap_templates": 3471063
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_3",
+          "records": 33294108,
+          "templates": 16647054,
+          "qualified": 5417875,
+          "calibrated": 4021,
+          "raw": 29430,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 5381359,
+          "overlap_templates": 4691531
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_4",
+          "records": 33285864,
+          "templates": 16642932,
+          "qualified": 3080005,
+          "calibrated": 1970,
+          "raw": 17928,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 3057891,
+          "overlap_templates": 2665990
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_6",
+          "records": 33273540,
+          "templates": 16636770,
+          "qualified": 5667699,
+          "calibrated": 2616,
+          "raw": 92272,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 5557394,
+          "overlap_templates": 4840530
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_9",
+          "records": 33284326,
+          "templates": 16642163,
+          "qualified": 3280327,
+          "calibrated": 2685,
+          "raw": 33622,
+          "insert_limit": 338,
+          "median_insert": 268,
+          "calibration_pairs": 3239019,
+          "overlap_templates": 2831026
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_10",
+          "records": 33288340,
+          "templates": 16644170,
+          "qualified": 4649045,
+          "calibrated": 2532,
+          "raw": 34635,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 4608208,
+          "overlap_templates": 4014419
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_11",
+          "records": 33290170,
+          "templates": 16645085,
+          "qualified": 4592151,
+          "calibrated": 1600,
+          "raw": 41245,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 4540557,
+          "overlap_templates": 3950503
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_14",
+          "records": 33289050,
+          "templates": 16644525,
+          "qualified": 3045304,
+          "calibrated": 2394,
+          "raw": 63320,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 2970506,
+          "overlap_templates": 2589076
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_17",
+          "records": 33226090,
+          "templates": 16613045,
+          "qualified": 2663835,
+          "calibrated": 2441,
+          "raw": 36927,
+          "insert_limit": 338,
+          "median_insert": 268,
+          "calibration_pairs": 2618730,
+          "overlap_templates": 2293025
+        }
+      ],
+      "counters": {
+        "accepted_aligned_bases": 16851288421,
+        "accepted_reads": 116074727,
+        "alignment_records": 332766466,
+        "calibration_reference_span_overlap_bp": 1681514528,
+        "calibration_reference_span_overlap_templates": 44739135,
+        "cross_contig_qualified_templates": 607691,
+        "cross_outside_max_insert_scope": 98044,
+        "excluded_identity": 19222075,
+        "high_MAPQ_aligned_bases": 16851288421,
+        "low_or_unknown_template_MAPQ": 5206301,
+        "partial_template_alignment": 6729868,
+        "qualified_both_mates": 52013485,
+        "qualified_read_length_150": 104026970,
+        "screen_cross_MAPQ_0_identity_.90-.95": 44477,
+        "screen_cross_MAPQ_0_identity_.95-.97": 19267,
+        "screen_cross_MAPQ_0_identity_.97-.99": 8860,
+        "screen_cross_MAPQ_0_identity_.99-1": 24220,
+        "screen_cross_MAPQ_0_identity_<.90": 51475,
+        "screen_cross_MAPQ_1-9_identity_.90-.95": 253922,
+        "screen_cross_MAPQ_1-9_identity_.95-.97": 161874,
+        "screen_cross_MAPQ_1-9_identity_.97-.99": 149813,
+        "screen_cross_MAPQ_1-9_identity_.99-1": 78658,
+        "screen_cross_MAPQ_1-9_identity_<.90": 250884,
+        "screen_cross_MAPQ_10-19_identity_.90-.95": 184778,
+        "screen_cross_MAPQ_10-19_identity_.95-.97": 108405,
+        "screen_cross_MAPQ_10-19_identity_.97-.99": 112841,
+        "screen_cross_MAPQ_10-19_identity_.99-1": 79053,
+        "screen_cross_MAPQ_10-19_identity_<.90": 181775,
+        "screen_cross_MAPQ_20-59_identity_.90-.95": 512766,
+        "screen_cross_MAPQ_20-59_identity_.95-.97": 311007,
+        "screen_cross_MAPQ_20-59_identity_.97-.99": 319237,
+        "screen_cross_MAPQ_20-59_identity_.99-1": 547699,
+        "screen_cross_MAPQ_20-59_identity_<.90": 406180,
+        "screen_cross_MAPQ_60+_identity_.90-.95": 250122,
+        "screen_cross_MAPQ_60+_identity_.95-.97": 169238,
+        "screen_cross_MAPQ_60+_identity_.97-.99": 367237,
+        "screen_cross_MAPQ_60+_identity_.99-1": 462213,
+        "screen_cross_MAPQ_60+_identity_<.90": 159818,
+        "screen_same_MAPQ_0_identity_.90-.95": 67950,
+        "screen_same_MAPQ_0_identity_.95-.97": 59712,
+        "screen_same_MAPQ_0_identity_.97-.99": 42827,
+        "screen_same_MAPQ_0_identity_.99-1": 58335,
+        "screen_same_MAPQ_0_identity_<.90": 48555,
+        "screen_same_MAPQ_1-9_identity_.90-.95": 499642,
+        "screen_same_MAPQ_1-9_identity_.95-.97": 288789,
+        "screen_same_MAPQ_1-9_identity_.97-.99": 222744,
+        "screen_same_MAPQ_1-9_identity_.99-1": 179816,
+        "screen_same_MAPQ_1-9_identity_<.90": 499009,
+        "screen_same_MAPQ_10-19_identity_.90-.95": 493630,
+        "screen_same_MAPQ_10-19_identity_.95-.97": 236100,
+        "screen_same_MAPQ_10-19_identity_.97-.99": 232842,
+        "screen_same_MAPQ_10-19_identity_.99-1": 140341,
+        "screen_same_MAPQ_10-19_identity_<.90": 425707,
+        "screen_same_MAPQ_20-59_identity_.90-.95": 1811903,
+        "screen_same_MAPQ_20-59_identity_.95-.97": 460363,
+        "screen_same_MAPQ_20-59_identity_.97-.99": 512747,
+        "screen_same_MAPQ_20-59_identity_.99-1": 437656,
+        "screen_same_MAPQ_20-59_identity_<.90": 756973,
+        "screen_same_MAPQ_60+_identity_.90-.95": 5175639,
+        "screen_same_MAPQ_60+_identity_.95-.97": 5521969,
+        "screen_same_MAPQ_60+_identity_.97-.99": 18981155,
+        "screen_same_MAPQ_60+_identity_.99-1": 35986938,
+        "screen_same_MAPQ_60+_identity_<.90": 4814568,
+        "template_flag_exclusion": 83211504,
+        "template_identity_exclusion": 19222075,
+        "templates": 166383233
+      },
+      "decision_counts": {
+        "below_pooled_unique_support": 6939,
+        "pooled_distinct_starts": 198,
+        "pooled_orientation_conflict": 3,
+        "supported": 2883
+      },
+      "weight_formula_review": {
+        "bitwise_equal": false,
+        "unequal": 43,
+        "maximum_absolute_error": 4.440892098500626e-16,
+        "maximum_ULPs": 1.0,
+        "rounding_bound_ULPs": 4,
+        "native_weights_unchanged": true,
+        "original_embedding_portability_unchanged": true
+      },
+      "new_edges_requiring_cross_library_support": 1416,
+      "dominant_edge_relations": {
+        "same": 1679,
+        "unresolved": 1070,
+        "different": 134
+      },
+      "accepted_orientation_observation_locus_relations": {
+        "unresolved": 7016,
+        "different": 928,
+        "same": 9812
+      },
+      "eligible_observation_locus_relations": {
+        "unresolved": 4338,
+        "different": 633,
+        "same": 5458
+      },
+      "supporting_locus_unresolved_bp": {
+        "unsupported": 295389,
+        "ambiguous": 1129175,
+        "quarantined": 9444
+      },
+      "locus_semantics": "E009 complete span unanimous conservative genome after all competitor and ambiguity vetoes; not gap-free BAM CIGAR and not measured template-error rate",
+      "population_cells": {
+        "0|target|excluded|unlinked": {
+          "contigs": 16368,
+          "bp": 6344444,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "0|unknown|excluded|unlinked": {
+          "contigs": 6823,
+          "bp": 2598677,
+          "quarantined_bp": 4987,
+          "known_shared_bp": 0
+        },
+        "0|non_target|excluded|unlinked": {
+          "contigs": 33470,
+          "bp": 13092333,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "500|non_target|eligible|unlinked": {
+          "contigs": 32075,
+          "bp": 22291361,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1000|target|eligible|unlinked": {
+          "contigs": 4165,
+          "bp": 5056282,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1000|non_target|eligible|unlinked": {
+          "contigs": 9697,
+          "bp": 11690401,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1500|non_target|eligible|unlinked": {
+          "contigs": 5566,
+          "bp": 10447130,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "500|target|eligible|unlinked": {
+          "contigs": 13415,
+          "bp": 9300261,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "500|unknown|eligible|unlinked": {
+          "contigs": 5258,
+          "bp": 3652965,
+          "quarantined_bp": 6002,
+          "known_shared_bp": 0
+        },
+        "1500|unknown|eligible|unlinked": {
+          "contigs": 1933,
+          "bp": 3711240,
+          "quarantined_bp": 2047,
+          "known_shared_bp": 0
+        },
+        "2500|non_target|eligible|unlinked": {
+          "contigs": 2371,
+          "bp": 8722291,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1500|target|eligible|unlinked": {
+          "contigs": 2902,
+          "bp": 5521481,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1500|unknown|eligible|linked": {
+          "contigs": 184,
+          "bp": 357599,
+          "quarantined_bp": 1672,
+          "known_shared_bp": 0
+        },
+        "500|target|eligible|linked": {
+          "contigs": 522,
+          "bp": 376594,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1000|unknown|eligible|unlinked": {
+          "contigs": 1998,
+          "bp": 2444964,
+          "quarantined_bp": 2535,
+          "known_shared_bp": 0
+        },
+        "500|non_target|eligible|linked": {
+          "contigs": 355,
+          "bp": 251369,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "2500|unknown|eligible|linked": {
+          "contigs": 223,
+          "bp": 999331,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1500|target|eligible|linked": {
+          "contigs": 217,
+          "bp": 420167,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "10000|target|eligible|unlinked": {
+          "contigs": 1061,
+          "bp": 46124965,
+          "quarantined_bp": 447,
+          "known_shared_bp": 0
+        },
+        "1000|non_target|eligible|linked": {
+          "contigs": 145,
+          "bp": 176564,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "2500|target|eligible|unlinked": {
+          "contigs": 2560,
+          "bp": 11573039,
+          "quarantined_bp": 323,
+          "known_shared_bp": 0
+        },
+        "1000|unknown|eligible|linked": {
+          "contigs": 166,
+          "bp": 205844,
+          "quarantined_bp": 2736,
+          "known_shared_bp": 0
+        },
+        "10000|unknown|eligible|unlinked": {
+          "contigs": 687,
+          "bp": 36663091,
+          "quarantined_bp": 6547994,
+          "known_shared_bp": 0
+        },
+        "2500|target|eligible|linked": {
+          "contigs": 285,
+          "bp": 1349270,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "2500|unknown|eligible|unlinked": {
+          "contigs": 2210,
+          "bp": 9898050,
+          "quarantined_bp": 35419,
+          "known_shared_bp": 0
+        },
+        "500|unknown|eligible|linked": {
+          "contigs": 297,
+          "bp": 212656,
+          "quarantined_bp": 258,
+          "known_shared_bp": 0
+        },
+        "10000|unknown|eligible|linked": {
+          "contigs": 75,
+          "bp": 5455927,
+          "quarantined_bp": 1048785,
+          "known_shared_bp": 0
+        },
+        "1000|target|eligible|linked": {
+          "contigs": 235,
+          "bp": 288633,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "10000|target|eligible|linked": {
+          "contigs": 181,
+          "bp": 8251151,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "10000|non_target|eligible|unlinked": {
+          "contigs": 69,
+          "bp": 3445113,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1500|non_target|eligible|linked": {
+          "contigs": 99,
+          "bp": 184968,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "2500|non_target|eligible|linked": {
+          "contigs": 79,
+          "bp": 324129,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "10000|non_target|eligible|linked": {
+          "contigs": 11,
+          "bp": 245867,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        }
+      }
+    },
+    "oral": {
+      "full_axes": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      },
+      "utility": {
+        "eligible_bp": 1443827664,
+        "eligible_edges": 5,
+        "linked_eligible_bp": 13946,
+        "linked_eligible_bp_fraction": 9.659047508041097e-06,
+        "linked_eligible_contigs": 8,
+        "minimum_bp_fraction": 0.01,
+        "minimum_edges": 100,
+        "pilot": false,
+        "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+        "status": "INSUFFICIENT_ASSEMBLY_LINK_SUPPORT"
+      },
+      "all_edges": 12,
+      "samples": [
+        {
+          "sample": "oral_sample_6",
+          "records": 33315152,
+          "templates": 16657576,
+          "qualified": 1050747,
+          "calibrated": 138,
+          "raw": 378,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1049827,
+          "overlap_templates": 879383
+        },
+        {
+          "sample": "oral_sample_7",
+          "records": 33315362,
+          "templates": 16657681,
+          "qualified": 831476,
+          "calibrated": 1225,
+          "raw": 1510,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 829523,
+          "overlap_templates": 696472
+        },
+        {
+          "sample": "oral_sample_8",
+          "records": 33325428,
+          "templates": 16662714,
+          "qualified": 1077261,
+          "calibrated": 614,
+          "raw": 929,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1075842,
+          "overlap_templates": 901233
+        },
+        {
+          "sample": "oral_sample_13",
+          "records": 33328722,
+          "templates": 16664361,
+          "qualified": 898063,
+          "calibrated": 597,
+          "raw": 885,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 896600,
+          "overlap_templates": 752084
+        },
+        {
+          "sample": "oral_sample_14",
+          "records": 33332072,
+          "templates": 16666036,
+          "qualified": 697839,
+          "calibrated": 456,
+          "raw": 777,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 696491,
+          "overlap_templates": 583562
+        },
+        {
+          "sample": "oral_sample_15",
+          "records": 33332240,
+          "templates": 16666120,
+          "qualified": 782597,
+          "calibrated": 1078,
+          "raw": 1562,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 779504,
+          "overlap_templates": 654466
+        },
+        {
+          "sample": "oral_sample_16",
+          "records": 33325520,
+          "templates": 16662760,
+          "qualified": 876576,
+          "calibrated": 4254,
+          "raw": 4625,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 871495,
+          "overlap_templates": 733588
+        },
+        {
+          "sample": "oral_sample_17",
+          "records": 33331598,
+          "templates": 16665799,
+          "qualified": 1154690,
+          "calibrated": 389,
+          "raw": 671,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1153549,
+          "overlap_templates": 967033
+        },
+        {
+          "sample": "oral_sample_18",
+          "records": 33331868,
+          "templates": 16665934,
+          "qualified": 1294365,
+          "calibrated": 488,
+          "raw": 670,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1293352,
+          "overlap_templates": 1083930
+        },
+        {
+          "sample": "oral_sample_19",
+          "records": 33312040,
+          "templates": 16656020,
+          "qualified": 749204,
+          "calibrated": 3135,
+          "raw": 3470,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 745178,
+          "overlap_templates": 627152
+        }
+      ],
+      "counters": {
+        "accepted_aligned_bases": 7812662965,
+        "accepted_reads": 52583644,
+        "alignment_records": 333250002,
+        "calibration_reference_span_overlap_bp": 280703672,
+        "calibration_reference_span_overlap_templates": 7878903,
+        "cross_contig_qualified_templates": 21363,
+        "cross_outside_max_insert_scope": 5886,
+        "excluded_identity": 42294241,
+        "high_MAPQ_aligned_bases": 7812662965,
+        "low_or_unknown_template_MAPQ": 113808055,
+        "partial_template_alignment": 1102938,
+        "qualified_both_mates": 9412818,
+        "qualified_read_length_150": 18825636,
+        "screen_cross_MAPQ_0_identity_.90-.95": 24250,
+        "screen_cross_MAPQ_0_identity_.95-.97": 2344,
+        "screen_cross_MAPQ_0_identity_.97-.99": 596,
+        "screen_cross_MAPQ_0_identity_.99-1": 30,
+        "screen_cross_MAPQ_0_identity_<.90": 1295,
+        "screen_cross_MAPQ_1-9_identity_.90-.95": 46219,
+        "screen_cross_MAPQ_1-9_identity_.95-.97": 63139,
+        "screen_cross_MAPQ_1-9_identity_.97-.99": 17373,
+        "screen_cross_MAPQ_1-9_identity_.99-1": 228,
+        "screen_cross_MAPQ_1-9_identity_<.90": 911,
+        "screen_cross_MAPQ_10-19_identity_.90-.95": 21022,
+        "screen_cross_MAPQ_10-19_identity_.95-.97": 26909,
+        "screen_cross_MAPQ_10-19_identity_.97-.99": 7086,
+        "screen_cross_MAPQ_10-19_identity_.99-1": 104,
+        "screen_cross_MAPQ_10-19_identity_<.90": 484,
+        "screen_cross_MAPQ_20-59_identity_.90-.95": 27329,
+        "screen_cross_MAPQ_20-59_identity_.95-.97": 33113,
+        "screen_cross_MAPQ_20-59_identity_.97-.99": 9180,
+        "screen_cross_MAPQ_20-59_identity_.99-1": 788,
+        "screen_cross_MAPQ_20-59_identity_<.90": 978,
+        "screen_cross_MAPQ_60+_identity_.90-.95": 38229,
+        "screen_cross_MAPQ_60+_identity_.95-.97": 52828,
+        "screen_cross_MAPQ_60+_identity_.97-.99": 18875,
+        "screen_cross_MAPQ_60+_identity_.99-1": 435,
+        "screen_cross_MAPQ_60+_identity_<.90": 952,
+        "screen_same_MAPQ_0_identity_.90-.95": 29484975,
+        "screen_same_MAPQ_0_identity_.95-.97": 53797193,
+        "screen_same_MAPQ_0_identity_.97-.99": 20061532,
+        "screen_same_MAPQ_0_identity_.99-1": 242478,
+        "screen_same_MAPQ_0_identity_<.90": 72934,
+        "screen_same_MAPQ_1-9_identity_.90-.95": 265748,
+        "screen_same_MAPQ_1-9_identity_.95-.97": 395285,
+        "screen_same_MAPQ_1-9_identity_.97-.99": 142737,
+        "screen_same_MAPQ_1-9_identity_.99-1": 2298,
+        "screen_same_MAPQ_1-9_identity_<.90": 2808,
+        "screen_same_MAPQ_10-19_identity_.90-.95": 2722477,
+        "screen_same_MAPQ_10-19_identity_.95-.97": 4674361,
+        "screen_same_MAPQ_10-19_identity_.97-.99": 1702440,
+        "screen_same_MAPQ_10-19_identity_.99-1": 20205,
+        "screen_same_MAPQ_10-19_identity_<.90": 8594,
+        "screen_same_MAPQ_20-59_identity_.90-.95": 7496374,
+        "screen_same_MAPQ_20-59_identity_.95-.97": 7402209,
+        "screen_same_MAPQ_20-59_identity_.97-.99": 1139284,
+        "screen_same_MAPQ_20-59_identity_.99-1": 7701,
+        "screen_same_MAPQ_20-59_identity_<.90": 17101,
+        "screen_same_MAPQ_60+_identity_.90-.95": 7424867,
+        "screen_same_MAPQ_60+_identity_.95-.97": 20014568,
+        "screen_same_MAPQ_60+_identity_.97-.99": 8993100,
+        "screen_same_MAPQ_60+_identity_.99-1": 112818,
+        "screen_same_MAPQ_60+_identity_<.90": 19268,
+        "template_flag_exclusion": 6949,
+        "template_identity_exclusion": 42294241,
+        "templates": 166625001
+      },
+      "decision_counts": {
+        "below_pooled_unique_support": 12273,
+        "supported": 12
+      },
+      "weight_formula_review": {
+        "bitwise_equal": true,
+        "unequal": 0,
+        "maximum_absolute_error": 0.0,
+        "maximum_ULPs": 0.0,
+        "rounding_bound_ULPs": 4,
+        "native_weights_unchanged": true,
+        "original_embedding_portability_unchanged": true
+      },
+      "new_edges_requiring_cross_library_support": 11,
+      "dominant_edge_relations": {
+        "different": 12
+      },
+      "accepted_orientation_observation_locus_relations": {
+        "different": 56
+      },
+      "eligible_observation_locus_relations": {
+        "different": 29
+      },
+      "supporting_locus_unresolved_bp": {
+        "known_shared_or_quarantine": 0
+      },
+      "locus_semantics": "Provided-source origin only; known-shared/quarantine contigs unresolved; exact mate-level sequence uniqueness unadmitted",
+      "population_cells": {
+        "0|target|excluded|unlinked": {
+          "contigs": 777784,
+          "bp": 226153459,
+          "quarantined_bp": 182,
+          "known_shared_bp": 7832
+        },
+        "10000|target|eligible|unlinked": {
+          "contigs": 10482,
+          "bp": 791751544,
+          "quarantined_bp": 768,
+          "known_shared_bp": 0
+        },
+        "2500|target|eligible|unlinked": {
+          "contigs": 49727,
+          "bp": 217086133,
+          "quarantined_bp": 257,
+          "known_shared_bp": 0
+        },
+        "1000|target|eligible|unlinked": {
+          "contigs": 92932,
+          "bp": 112530514,
+          "quarantined_bp": 182,
+          "known_shared_bp": 1237
+        },
+        "500|target|eligible|unlinked": {
+          "contigs": 292789,
+          "bp": 203174525,
+          "quarantined_bp": 185,
+          "known_shared_bp": 1118
+        },
+        "1500|target|eligible|unlinked": {
+          "contigs": 62825,
+          "bp": 119271002,
+          "quarantined_bp": 160,
+          "known_shared_bp": 1876
+        },
+        "500|target|eligible|linked": {
+          "contigs": 4,
+          "bp": 2878,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1500|target|eligible|linked": {
+          "contigs": 1,
+          "bp": 1704,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "1000|target|eligible|linked": {
+          "contigs": 1,
+          "bp": 1074,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        },
+        "2500|target|eligible|linked": {
+          "contigs": 2,
+          "bp": 8290,
+          "quarantined_bp": 0,
+          "known_shared_bp": 0
+        }
+      }
+    }
+  },
+  "full_denominators": {
+    "E009": 156,
+    "oral": 799
+  },
+  "E009_N_quarantine_percent": 3.3034,
+  "oral_known_shared_retained": true,
+  "new_binner_fits": 0,
+  "new_R95_scores": 0,
+  "thresholds_or_edges_changed": false,
+  "old_scores_replayed": false,
+  "finished_epoch": 1794153453.016784
+}

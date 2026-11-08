@@ -1,5 +1,20 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## E035 pooled information outcome and next hypothesis, November 8
+
+[Completed all-ten evidence](../../experiments/E035-confidence-taxonomy/pooled-completed-review.md)
+resolves the aggregation-order uncertainty without learning changes: E009 gains
+1,416 supported pairs that have fewer than three votes in every single library,
+but Oral has only five eligible pooled edges, all with different provided origins.
+E009 also has localized incompatible and unresolved spans. Keep physical evidence
+available; this does not establish safe same-genome propagation or a MAG gain.
+The already implemented confidence-aware independent-taxonomy information block
+is the strongest next common recovery hypothesis rather than another filter/grid
+or selector tweak. Reference/native/overlap/cost and renewed calendar scope remain
+prerequisites; no taxonomy acquisition/fit is authorized now. Preserve E031/E032,
+Oral GLM/skin dependencies, all failures and November 11/18 boundaries.
+
+
 ## E035 local candidate and pooled-policy reassessment, November 6
 
 [E035 design](../../experiments/E035-confidence-taxonomy/design.md) implements

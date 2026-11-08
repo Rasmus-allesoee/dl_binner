@@ -1,8 +1,29 @@
 # E035 operations
 
-## Verified native release and running handoff, November 7
+## Verified completed audit and disk release, November 8
 
-[Current native receipt](pooled-native-observed.json) records phase
+[Completed review](pooled-completed-review.md), [checksum-bound receipt](pooled-completed-observed.json),
+[cost](pooled-completed-cost.json) and [disk release](pooled-task-disk-release.json)
+verify `pooled-20261107T005703Z-4d332d7`. All 27 actual stage exits and full delivery
+pass. E009 utility passes (1,671 eligible edges / 9.1108% eligible bp); Oral fails
+(5 / 0.000966%) after all ten. Supporting loci/origins include discordant evidence;
+no graph fit, R95 or family-level verdict follows. Source/inputs and old failures
+are intact. VM is TERMINATED, with no inspection wake. Exact new 100 GiB scratch
+is independently deleted; original disks remain. No reserved IPs/snapshots/extra VMs.
+
+Gross upper attribution is $1.761 under original $4. Original disks/current archives
+remain about $1.089/day, roughly $2.50 to November 11 at this inspection, separately
+under existing preservation. **No retention extension.** Active storage approval
+ends November 11 at 00:00 Copenhagen; automatic tail ends November 18. Original
+resources do not automatically disappear or stop billing. The owner's limited
+usage resets November 12; no taxonomy run, long science or new disk is allowed now.
+The old 72-hour taxonomy proposal is calendar-ineligible without a future separate
+preservation decision. Current action is bounded preservation planning below.
+
+
+## Historical native release and running handoff, November 7
+
+[Historical running receipt](pooled-native-observed.json) records phase
 `pooled-20261107T005703Z-4d332d7`, operational source `4d332d7`, unchanged scientific
 source/wheel `e8f1260`. Exact private source sync/clean checkout, four actual
 installation/runtime/input/tiny gate exits and all 15 compact closed-gate byte
@@ -86,15 +107,14 @@ taxonomy comparison from the actual evidence. Taxonomy is implemented now, not
 deferred behind another architecture study. E034's old failed support policy and
 all failures remain unchanged. Neither path promises a recovery improvement.
 
-## Prepared consumers and outstanding native admission
+## Consumers and outstanding taxonomy admission
 
 `scripts/e035_support.py` is a strict, source/release-bound serial BAM consumer.
 It retains below-threshold endpoint ledgers and pools before pair-support filters.
-Its actual tiny BAM tests pass. The native controller must still bind exact BAM
-generations, serial one-BAM restoration and all twenty sample commands, test the
-actual atomic producer/consumer and complete schema, and qualify its held-parent
-watcher before a cost-bearing start. Existing E034 watcher/controller helpers are
-reusable source, not proof that a new controller has already passed.
+Its actual tiny BAM tests and the complete native controller admission now pass,
+including exact generations, serial one-BAM restores, all twenty commands, atomic
+release/schema, held-parent watcher and provider STOP. The completed audit above
+is the execution evidence; the old E034 helpers alone were not that evidence.
 
 `scripts/e035_control.py` and `Snakefile` are the tested 31-stage taxonomy science
 DAG. `taxonomy.database` builds a pinned independent GTDB-layout protein database;
@@ -217,7 +237,7 @@ Retain full denominator/represented-ceiling/singleton-fragmented context, skin
 unscored and Oral GLM's pending native qualification. Update records/checks/structured
 commit and report actual costs/resources, findings/limits and the exact next prompt.
 
-## Exact following prompt
+## Completed inspection prompt, retained unchanged
 
 Our goal is stronger, reliably measured MAG recovery. Read AGENTS, PROJECT_INTENT,
 STATE/CLOUD, D013/D015 and E035's reassessment/design, unchanged e8f1260 science
@@ -293,7 +313,23 @@ neither unused funds nor a future taxonomy proposal renews storage. Update recor
 check and structured commit; report actual completion, findings/limits, costs and
 disk release, one next decision and the exact separate execution prompt required.
 
-## Separate later taxonomy execution approval, not part of the pooled audit
+## Exact following prompt
+
+Read AGENTS, PROJECT_INTENT, STATE/CLOUD and E035's pooled-completed-review,
+completed receipt/cost and task-disk-release. The information audit is complete,
+the VM is stopped and the E035 task disk is deleted. Preserve all accepted evidence
+and failed journals. Prepare a bounded preservation/export/release decision for
+the original stopped 30/300 GiB disks and private archives **before November 11
+at 00:00 Copenhagen**, retaining the approved November 18 automatic tail. Refresh
+inventory, credits and complete costs; identify which unique evidence and required
+inputs each option preserves and verify actual restoration contracts. Do not
+start taxonomy, long science, community execution or a new disk. Do not extend
+retention or delete original disks/unique evidence without a specific owner decision.
+Keep the already implemented taxonomy candidate as the next separately admitted
+recovery hypothesis; its original 72-hour proposal cannot fit the current calendar.
+Report concise options and any genuine preservation blocker. Update/check/commit.
+
+## Historical separate taxonomy approval proposal, still unapproved and now calendar-ineligible
 
 Carry out E035's frozen taxonomy reference/admission and common three-mode
 comparison at its exact clean source commit. I authorize a NEW $50 credit-only

@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-11-06
+Updated: 2026-11-08
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -15,6 +15,15 @@ Status: open. Opened: 2026-09-16.
 The candidate focus is contig loss/misassignment in fragmented prokaryotic assemblies with weak or distorted coverage. Separate information absence, representation failure, clustering error, and quality/refinement selection. Evidence: [thesis](../evidence/2026-09-16-thesis.md), [landscape](../evidence/2026-09-16-landscape.md). Related: H001; [D002](../decisions/D002-investigate-before-architecture.md).
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
+
+November 8 E035 completion: [all-ten pooled support](../../experiments/E035-confidence-taxonomy/pooled-completed-review.md)
+passes E009 utility and still fails Oral utility after every library closes. The
+aggregation-order uncertainty is answered within this policy/assembly scope;
+localized/origin discordance prevents treating retained links as verified same-genome
+constraints. No new recovery/fit exists; Q001 remains open. Keep the independently
+admitted taxonomy candidate as the next information hypothesis, subject to future
+scope and the November 11 preservation decision. No new execution or retention
+extension is authorized by this review.
 
 November 6 E035 preparation update: [policy/data reassessment](../../experiments/E035-confidence-taxonomy/reassessment.md)
 confirms the untested all-ten pooling question and exposes the represented-reference

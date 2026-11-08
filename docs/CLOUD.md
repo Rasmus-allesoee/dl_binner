@@ -1,6 +1,34 @@
 # Google Cloud workspace operations
 
-## November 7: E035 pooled audit running; independent STOP and watcher verified
+## November 8: E035 complete, original VM stopped, new task disk released
+
+[Completed inspection](../experiments/E035-confidence-taxonomy/pooled-completed-observed.json)
+independently verifies TERMINATED, actual 27 zero exits, whole archive/member/alias
+and later completion/tail/filesystem/watchdog evidence. VM allocation was November 7,
+01:57:26–05:44:49 Copenhagen, 3.78971 hours. No inspection wake, new resource,
+workflow replay, taxonomy or binner fit. Exact 100 GiB `e035-task-1794013046`, ID
+`9116674795864573630`, is safely detached/deleted and independently absent. Original
+30 GiB `dl-binner-cpu` / 300 GiB `dl-binner-work` IDs are unchanged. No reserved
+addresses, snapshots or extra VMs remain. Transient watcher units were under
+`/run/systemd/system`; no stopped-VM cleanup boot is needed for them.
+
+[Measured cost attribution](../experiments/E035-confidence-taxonomy/pooled-completed-cost.json)
+is at most $1.761 under original $4, including $0.53885 scratch through deletion,
+$0.08176 export upper and archive/tail/operation allowances. Current Welcome credit
+DKK 1,609.66 Available / 82%, January 12 expiry; rounded November 1–8 gross/savings
+DKK 105 / 105, net DKK 0, potentially over 24 hours delayed. Keep $35 reserve.
+Credit delta is not an invoice. New scratch/compute future cost is zero.
+
+Original disks plus current archives still cost about **$1.089/day**, separately
+under $9 preservation. **November 11, 00:00 Copenhagen active / November 18 automatic
+tail remain unchanged.** About $2.50 remains to that active cutoff at inspection.
+Those original resources do not automatically delete or stop billing. A preservation/
+release decision is needed before November 11; no extension or destruction of unique
+original evidence is inferred. The owner excludes taxonomy/long jobs/new disks now.
+The old unapproved 72-hour taxonomy proposal cannot fit the remaining calendar.
+
+
+## Historical November 7: E035 running observation
 
 [Native observation](../experiments/E035-confidence-taxonomy/pooled-native-observed.json)
 confirms RUNNING, phase `pooled-20261107T005703Z-4d332d7`, four passed native gates,

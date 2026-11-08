@@ -1,34 +1,37 @@
 # Current Research State
 
-## E035 all-ten pooled audit running under verified shutdown supervision
+## E035 audit verified complete; task disk deleted; November 11 decision due
 
-[Native receipt](../experiments/E035-confidence-taxonomy/pooled-native-observed.json)
-records `pooled-20261107T005703Z-4d332d7`: source/wheel `e8f1260` unchanged,
-operational commit `4d332d7` privately synced to the exact clean VM checkout.
-Four actual native gate exits pass, including 12 tiny audit tests and full axes.
-At 01:13:30 UTC / 02:13:30 Copenhagen the first E009 reader has emitted 28 million
-alignment records, with matching live boot/PID/start/command watcher and active
-timer. No error or new quality result is observed. The complete-remainder gate
-awaits the first full E009/Oral readers; neither all-ten utility nor completion is
-claimed. The long job is intentionally left under independent supervision.
+[Completed review](../experiments/E035-confidence-taxonomy/pooled-completed-review.md)
+accepts `pooled-20261107T005703Z-4d332d7`: all 27 actual stage exits zero, all-ten
+axes/input/source/runtime and complete archive/member/alias/terminal checks pass.
+VM is independently TERMINATED; no inspection wake or new science. E009 pooled
+utility passes (1,671 eligible edges / 9.1108% eligible bp); Oral still fails
+(5 / 0.000966%) after all ten. Locus/source discordance cautions against automatic
+same-genome propagation. This completes an information audit, **not a MAG result**;
+no new fit, partition, R95 or taxonomy acquisition exists. Original failed journals,
+Mac portability contract and all strong comparators remain unchanged.
 
-Driver deadline is **09:57:26 Copenhagen / 08:57:26 UTC November 7**, independent
-provider STOP **10:12:26 Copenhagen / 09:12:26 UTC**, with earlier exit-triggered
-shutdown after collection or crash. [Fresh financial gates](../experiments/E035-confidence-taxonomy/pooled-financial-observed.json)
-cover the $3.94 complete scenario under new $4 and $35 delayed reserve; separate
-original preservation stays $9. Actual cleanup cannot supply the extra 58.20 GiB
-for the configured full work/reserve allowance, so authorized new 100 GiB balanced
-scratch is added within existing quota. Original 30/300 GiB and accepted evidence
-are unchanged. Measured allocation components so far are $0.07312 CPU/RAM/IP plus
-$0.00287 scratch; final costs/collection are pending, not an invoice.
+After verified preservation, exact 100 GiB `e035-task-1794013046` is
+[detached/deleted and independently absent](../experiments/E035-confidence-taxonomy/pooled-task-disk-release.json).
+Only original 30/300 GiB disks and stopped original VM remain; no reserved address,
+snapshot or extra VM. [Closed costs](../experiments/E035-confidence-taxonomy/pooled-completed-cost.json)
+are at most $1.761 under original $4, separately from original preservation.
+Current original disks/archives are about **$1.089/day**, with roughly $2.50 to
+**November 11 at 00:00 Copenhagen**. Storage does not stop billing automatically.
+No retention extension is authorized; November 18 automatic tail remains.
 
-Use the [exact inspection prompt](../experiments/E035-confidence-taxonomy/OPERATIONS.md#exact-following-prompt)
-after termination; verify actual exits/full delivery before diagnostics and release
-of only the new scratch disk. No fit, taxonomy, mapping or confirmation in this
-audit. November 11 active / November 18 tail remain. Earlier preparation below is
-dated context, not the current VM state.
+**Immediate next action: preservation/release decision before November 11.** The
+owner has limited Codex usage until November 12 and excludes taxonomy runs, long
+science and new task disks now. No further execution is started. The already
+implemented confidence-aware taxonomy candidate remains the next recovery
+hypothesis after independent reference/native/credit and a separately authorized
+calendar/storage scope; its old 72-hour proposal no longer fits before November 11.
+Use the [new exact following prompt](../experiments/E035-confidence-taxonomy/OPERATIONS.md#exact-following-prompt)
+for bounded preservation planning. Skin stays unscored; full Oral GLM and Q006
+remain open. Earlier preparation/running records are dated history.
 
-## E035 prepared locally; pooled-support audit recommended before bulk taxonomy
+## Historical November 6 E035 preparation and audit recommendation
 
 [E035](../experiments/E035-confidence-taxonomy/README.md) implements an optional
 confidence-aware hierarchical-taxonomy residual around immutable strong E031

@@ -1,11 +1,15 @@
 # E035: confidence-aware hierarchical taxonomy and pooled-support reassessment
 
-**November 7 execution update:** the separately authorized all-ten pooled audit
-is [running under verified supervision](pooled-native-observed.json), phase
-`pooled-20261107T005703Z-4d332d7`, unchanged e8f1260 science / 4d332d7 operational
-source. Four actual native gates and real reader progress pass; all-ten completion,
-remainder admission and utility remain pending. No binner or taxonomy run.
-[Operations](OPERATIONS.md#exact-following-prompt) now owns completed-output inspection.
+**November 8 completed inspection:** the [all-ten audit and complete byte/exit review](pooled-completed-review.md)
+pass. VM is TERMINATED without an inspection wake; the exact new 100 GiB task disk
+is deleted after verified preservation. E009 pooled utility passes; Oral still fails
+after all ten. No binner/annotation/score is run. [Completed receipt](pooled-completed-observed.json)
+separates information completion, specificity limits and unassessed recovery.
+New gross upper attribution is $1.761 under $4; original disks/archives continue
+about $1.089/day. No retention extension: a preservation decision is needed before
+November 11 at 00:00 Copenhagen. See [operations](OPERATIONS.md#exact-following-prompt).
+
+Earlier local taxonomy preparation, November 6 (still no community taxonomy execution):
 
 Status: **locally implemented and engineering-qualified; biological performance
 NOT_ASSESSED**. November 6, 2026. Preparation only, on branch
@@ -16,8 +20,8 @@ The owner asked for taxonomy implementation and challenged E034's information
 policy and the evaluation foundation. [Reassessment](reassessment.md) finds that
 E034 filtered support within each library before pooling; it did not test all-ten
 weak support. Therefore the recommended next native action is the **separately
-approved all-ten pooled-support audit**, before the more expensive taxonomy
-reference. This is not a retroactive change to E034 or another selector tweak.
+approved all-ten pooled-support audit**, now completed and reviewed above, before
+the more expensive taxonomy reference. This is not a retroactive change to E034 or another selector tweak.
 
 The [prospective design](design.md) implements independent DNA-derived partial
 taxonomy around frozen E031 actual parent/crop encoders and complete GLM ancestry,

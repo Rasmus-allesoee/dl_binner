@@ -1,0 +1,790 @@
+{
+  "status": "PASS_COMPLETED_INFORMATION_AUDIT_AND_SAFE_RELEASE",
+  "phase": "pooled-20261107T005703Z-4d332d7",
+  "scientific_commit": "e8f126090b37e66d3dac0ba1081b4903d15b1861",
+  "operational_commit": "4d332d7d98cd5e2ace0fcbb76167e10cdf9b1ba4",
+  "reviewed_epoch": 1794153740.865506,
+  "provider_state": "TERMINATED",
+  "audit_completed": true,
+  "actual_stage_exits": {
+    "owned-package-install": 0,
+    "complete-native-runtime": 0,
+    "original-inputs-before": 0,
+    "actual-native-tiny": 0,
+    "sample-E009-00": 0,
+    "sample-oral-00": 0,
+    "sample-E009-01": 0,
+    "sample-E009-02": 0,
+    "sample-E009-03": 0,
+    "sample-E009-04": 0,
+    "sample-E009-05": 0,
+    "sample-E009-06": 0,
+    "sample-E009-07": 0,
+    "sample-E009-08": 0,
+    "sample-E009-09": 0,
+    "pool-E009": 0,
+    "sample-oral-01": 0,
+    "sample-oral-02": 0,
+    "sample-oral-03": 0,
+    "sample-oral-04": 0,
+    "sample-oral-05": 0,
+    "sample-oral-06": 0,
+    "sample-oral-07": 0,
+    "sample-oral-08": 0,
+    "sample-oral-09": 0,
+    "pool-oral": 0,
+    "original-inputs-after": 0
+  },
+  "collection_readback_verified": true,
+  "integrity": {
+    "status": "PASS",
+    "archive": {
+      "bytes": 730349026,
+      "sha256": "941e0055b756ec43a31638892b2cc472e056ab7e1161a69977bb09a991c85082"
+    },
+    "generation": "1794026446525403",
+    "physical_members": 769,
+    "aliases": 30,
+    "logical_bytes": 753827443,
+    "every_member_and_alias_verified": true,
+    "whole_SHA256_MD5_CRC32C_verified": true,
+    "local_free_after": 9459478528,
+    "completed_epoch": 1794152953.3250802,
+    "all_objects_bound": true,
+    "omitted_unique_members": 0,
+    "complete_global_union": true,
+    "no_VM_wake": true
+  },
+  "watchdog_exit_verified": true,
+  "parent_numeric_systemd_exit_not_returned": true,
+  "scientific_source_bindings": 542,
+  "operational_source_bindings": 11,
+  "native_package_files": 94,
+  "native_distributions": 42,
+  "native_tests": 12,
+  "new_binner_fits": 0,
+  "new_MAG_scores": 0,
+  "taxonomy_acquired": false,
+  "no_VM_wake": true,
+  "communities": {
+    "E009": {
+      "full_axes": {
+        "rows": 145702,
+        "bp": 231678157,
+        "eligible": 89041,
+        "samples": [
+          "cami3_toy_human_gut_short_read_sample_0",
+          "cami3_toy_human_gut_short_read_sample_2",
+          "cami3_toy_human_gut_short_read_sample_3",
+          "cami3_toy_human_gut_short_read_sample_4",
+          "cami3_toy_human_gut_short_read_sample_6",
+          "cami3_toy_human_gut_short_read_sample_9",
+          "cami3_toy_human_gut_short_read_sample_10",
+          "cami3_toy_human_gut_short_read_sample_11",
+          "cami3_toy_human_gut_short_read_sample_14",
+          "cami3_toy_human_gut_short_read_sample_17"
+        ]
+      },
+      "utility": {
+        "eligible_bp": 209642703,
+        "eligible_edges": 1671,
+        "linked_eligible_bp": 19100069,
+        "linked_eligible_bp_fraction": 0.09110772150271312,
+        "linked_eligible_contigs": 3074,
+        "minimum_bp_fraction": 0.01,
+        "minimum_edges": 100,
+        "pilot": false,
+        "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+        "status": "PASS"
+      },
+      "all_edges": 2883,
+      "samples": [
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_0",
+          "records": 33267026,
+          "templates": 16633513,
+          "qualified": 15574922,
+          "calibrated": 5414,
+          "raw": 120266,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 15435717,
+          "overlap_templates": 13391972
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_2",
+          "records": 33267952,
+          "templates": 16633976,
+          "qualified": 4042322,
+          "calibrated": 1831,
+          "raw": 40002,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 3990658,
+          "overlap_templates": 3471063
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_3",
+          "records": 33294108,
+          "templates": 16647054,
+          "qualified": 5417875,
+          "calibrated": 4021,
+          "raw": 29430,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 5381359,
+          "overlap_templates": 4691531
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_4",
+          "records": 33285864,
+          "templates": 16642932,
+          "qualified": 3080005,
+          "calibrated": 1970,
+          "raw": 17928,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 3057891,
+          "overlap_templates": 2665990
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_6",
+          "records": 33273540,
+          "templates": 16636770,
+          "qualified": 5667699,
+          "calibrated": 2616,
+          "raw": 92272,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 5557394,
+          "overlap_templates": 4840530
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_9",
+          "records": 33284326,
+          "templates": 16642163,
+          "qualified": 3280327,
+          "calibrated": 2685,
+          "raw": 33622,
+          "insert_limit": 338,
+          "median_insert": 268,
+          "calibration_pairs": 3239019,
+          "overlap_templates": 2831026
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_10",
+          "records": 33288340,
+          "templates": 16644170,
+          "qualified": 4649045,
+          "calibrated": 2532,
+          "raw": 34635,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 4608208,
+          "overlap_templates": 4014419
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_11",
+          "records": 33290170,
+          "templates": 16645085,
+          "qualified": 4592151,
+          "calibrated": 1600,
+          "raw": 41245,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 4540557,
+          "overlap_templates": 3950503
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_14",
+          "records": 33289050,
+          "templates": 16644525,
+          "qualified": 3045304,
+          "calibrated": 2394,
+          "raw": 63320,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 2970506,
+          "overlap_templates": 2589076
+        },
+        {
+          "sample": "cami3_toy_human_gut_short_read_sample_17",
+          "records": 33226090,
+          "templates": 16613045,
+          "qualified": 2663835,
+          "calibrated": 2441,
+          "raw": 36927,
+          "insert_limit": 338,
+          "median_insert": 268,
+          "calibration_pairs": 2618730,
+          "overlap_templates": 2293025
+        }
+      ],
+      "decision_counts": {
+        "below_pooled_unique_support": 6939,
+        "pooled_distinct_starts": 198,
+        "pooled_orientation_conflict": 3,
+        "supported": 2883
+      },
+      "weight_formula_review": {
+        "bitwise_equal": false,
+        "unequal": 43,
+        "maximum_absolute_error": 4.440892098500626e-16,
+        "maximum_ULPs": 1.0,
+        "rounding_bound_ULPs": 4,
+        "native_weights_unchanged": true,
+        "original_embedding_portability_unchanged": true
+      },
+      "new_edges_requiring_cross_library_support": 1416,
+      "dominant_edge_relations": {
+        "same": 1679,
+        "unresolved": 1070,
+        "different": 134
+      },
+      "accepted_orientation_observation_locus_relations": {
+        "unresolved": 7016,
+        "different": 928,
+        "same": 9812
+      },
+      "eligible_observation_locus_relations": {
+        "unresolved": 4338,
+        "different": 633,
+        "same": 5458
+      },
+      "supporting_locus_unresolved_bp": {
+        "unsupported": 295389,
+        "ambiguous": 1129175,
+        "quarantined": 9444
+      },
+      "locus_semantics": "E009 complete span unanimous conservative genome after all competitor and ambiguity vetoes; not gap-free BAM CIGAR and not measured template-error rate"
+    },
+    "oral": {
+      "full_axes": {
+        "rows": 1286547,
+        "bp": 1669981123,
+        "eligible": 508763,
+        "samples": [
+          "oral_sample_6",
+          "oral_sample_7",
+          "oral_sample_8",
+          "oral_sample_13",
+          "oral_sample_14",
+          "oral_sample_15",
+          "oral_sample_16",
+          "oral_sample_17",
+          "oral_sample_18",
+          "oral_sample_19"
+        ]
+      },
+      "utility": {
+        "eligible_bp": 1443827664,
+        "eligible_edges": 5,
+        "linked_eligible_bp": 13946,
+        "linked_eligible_bp_fraction": 9.659047508041097e-06,
+        "linked_eligible_contigs": 8,
+        "minimum_bp_fraction": 0.01,
+        "minimum_edges": 100,
+        "pilot": false,
+        "scope": "This assembly/library/mapping and frozen filters only; not general paired-link usefulness",
+        "status": "INSUFFICIENT_ASSEMBLY_LINK_SUPPORT"
+      },
+      "all_edges": 12,
+      "samples": [
+        {
+          "sample": "oral_sample_6",
+          "records": 33315152,
+          "templates": 16657576,
+          "qualified": 1050747,
+          "calibrated": 138,
+          "raw": 378,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1049827,
+          "overlap_templates": 879383
+        },
+        {
+          "sample": "oral_sample_7",
+          "records": 33315362,
+          "templates": 16657681,
+          "qualified": 831476,
+          "calibrated": 1225,
+          "raw": 1510,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 829523,
+          "overlap_templates": 696472
+        },
+        {
+          "sample": "oral_sample_8",
+          "records": 33325428,
+          "templates": 16662714,
+          "qualified": 1077261,
+          "calibrated": 614,
+          "raw": 929,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1075842,
+          "overlap_templates": 901233
+        },
+        {
+          "sample": "oral_sample_13",
+          "records": 33328722,
+          "templates": 16664361,
+          "qualified": 898063,
+          "calibrated": 597,
+          "raw": 885,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 896600,
+          "overlap_templates": 752084
+        },
+        {
+          "sample": "oral_sample_14",
+          "records": 33332072,
+          "templates": 16666036,
+          "qualified": 697839,
+          "calibrated": 456,
+          "raw": 777,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 696491,
+          "overlap_templates": 583562
+        },
+        {
+          "sample": "oral_sample_15",
+          "records": 33332240,
+          "templates": 16666120,
+          "qualified": 782597,
+          "calibrated": 1078,
+          "raw": 1562,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 779504,
+          "overlap_templates": 654466
+        },
+        {
+          "sample": "oral_sample_16",
+          "records": 33325520,
+          "templates": 16662760,
+          "qualified": 876576,
+          "calibrated": 4254,
+          "raw": 4625,
+          "insert_limit": 338,
+          "median_insert": 269,
+          "calibration_pairs": 871495,
+          "overlap_templates": 733588
+        },
+        {
+          "sample": "oral_sample_17",
+          "records": 33331598,
+          "templates": 16665799,
+          "qualified": 1154690,
+          "calibrated": 389,
+          "raw": 671,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1153549,
+          "overlap_templates": 967033
+        },
+        {
+          "sample": "oral_sample_18",
+          "records": 33331868,
+          "templates": 16665934,
+          "qualified": 1294365,
+          "calibrated": 488,
+          "raw": 670,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 1293352,
+          "overlap_templates": 1083930
+        },
+        {
+          "sample": "oral_sample_19",
+          "records": 33312040,
+          "templates": 16656020,
+          "qualified": 749204,
+          "calibrated": 3135,
+          "raw": 3470,
+          "insert_limit": 339,
+          "median_insert": 269,
+          "calibration_pairs": 745178,
+          "overlap_templates": 627152
+        }
+      ],
+      "decision_counts": {
+        "below_pooled_unique_support": 12273,
+        "supported": 12
+      },
+      "weight_formula_review": {
+        "bitwise_equal": true,
+        "unequal": 0,
+        "maximum_absolute_error": 0.0,
+        "maximum_ULPs": 0.0,
+        "rounding_bound_ULPs": 4,
+        "native_weights_unchanged": true,
+        "original_embedding_portability_unchanged": true
+      },
+      "new_edges_requiring_cross_library_support": 11,
+      "dominant_edge_relations": {
+        "different": 12
+      },
+      "accepted_orientation_observation_locus_relations": {
+        "different": 56
+      },
+      "eligible_observation_locus_relations": {
+        "different": 29
+      },
+      "supporting_locus_unresolved_bp": {
+        "known_shared_or_quarantine": 0
+      },
+      "locus_semantics": "Provided-source origin only; known-shared/quarantine contigs unresolved; exact mate-level sequence uniqueness unadmitted"
+    }
+  },
+  "full_denominators": {
+    "E009": 156,
+    "oral": 799
+  },
+  "E009_N_quarantine_percent": 3.3034,
+  "oral_truth": "Provided-origin oracle, not unique sequence identity; shared sensitivity retained",
+  "recovery_disposition": "NOT_ASSESSED; no binner was fitted",
+  "pooled_information_disposition": "E009 utility passes; Oral utility fails after all ten under unchanged filters",
+  "original_Mac_embedding_failure_and_tolerance_preserved": true,
+  "local_reviewer_failures_preserved": [
+    "r1: pool return metadata precedes writer-added SHA256; reader now verifies exactly that field",
+    "r2: E035 calibration is histogram-owned, not the E034 counter schema; terminal accounting verified against actual writer",
+    "r3: Mac/Linux log1p gives 43 of 2883 E009 weights a one-ULP difference; bitwise failure retained, independent four-ULP formula check reported; no native bytes/tolerance changed"
+  ],
+  "disk_release": {
+    "status": "DETACHED_DELETED_INDEPENDENTLY_ABSENT",
+    "disk_name": "e035-task-1794013046",
+    "disk_id": "9116674795864573630",
+    "size_GiB": 100,
+    "creationTimestamp": "2026-11-06T17:01:06.084-08:00",
+    "phase": "pooled-20261107T005703Z-4d332d7",
+    "unique_outputs_preserved": true,
+    "integrity": {
+      "bytes": 535,
+      "sha256": "d2dbc68e5dd7a130771c416e35831f6310ea145b9fb5a689a6b04e81730562da"
+    },
+    "completion": {
+      "bytes": 31302,
+      "sha256": "53b1a166f525416feedee3f2a85da0703fd6942acaccb0d8a378ccb82dedc046"
+    },
+    "closed_tail": {
+      "bytes": 339,
+      "sha256": "f7ce4b3d88648bde0523feeafae14c971627a2fc0e256182319b5917ef8a795c"
+    },
+    "watchdog": {
+      "bytes": 12406,
+      "sha256": "2b44e8d8f6c8da6789a59deecb836b328f9959fa10e7680ba83fac86da107c15"
+    },
+    "no_new_science": true,
+    "no_VM_start": true,
+    "no_snapshot": true,
+    "no_retention_extension": true,
+    "retention_end": "2026-11-11T00:00:00+01:00",
+    "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+    "discarded_regenerable_scope": [
+      "Task-owned installed wheel/pysam environment, installer/source pinned in retained original E033/E021 base and current complete source/wheel/runtime return",
+      "Empty task restore/collator scratch; original twenty BAMs and all per-observation support ledgers remain retained",
+      "Duplicate return staging/archives now independently verified in private archive and local extracted bytes"
+    ],
+    "release_requested_epoch": 1794153114.44281,
+    "release_verified_epoch": 1794153129.107476,
+    "remaining_disks": [
+      {
+        "name": "dl-binner-cpu",
+        "id": "6401360260466153002",
+        "sizeGb": "30",
+        "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-standard"
+      },
+      {
+        "name": "dl-binner-work",
+        "id": "1715971271799544069",
+        "sizeGb": "300",
+        "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-balanced"
+      }
+    ],
+    "VM_state": "TERMINATED",
+    "original_disks_preserved": true,
+    "delete_without_VM_start": true
+  },
+  "financial_summary": {
+    "allocation_seconds": 13642.958000183105,
+    "components_USD": {
+      "measured_VM_CPU_RAM": 1.0158155340832413,
+      "IPv4_upper_before_allowance": 0.018948552778012495,
+      "measured_task_disk_through_verified_deletion": 0.5388465999219476,
+      "actual_one_pass_export_upper": 0.08175977066159248,
+      "archive_through_Nov18_conservative": 0.004821921570348192,
+      "operations_allowance": 0.1
+    },
+    "total_incremental_USD_upper": 1.7601923790151421,
+    "remaining_original_incremental_headroom_USD": 2.239807620984858,
+    "retained_original_disks_and_current_archives_daily_USD_upper": 1.0891412341898425,
+    "remaining_original_storage_to_Nov11_USD_upper": 2.498856541044948
+  },
+  "local_review_resources": {
+    "command": [
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e035-confidence-taxonomy/preparation/local-env-r2/bin/python",
+      "-I",
+      "-B",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e035_pooled_review.py",
+      "--base",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e035-confidence-taxonomy/pooled-inspection",
+      "--output",
+      "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review.json"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "wall_seconds": 121.62741915800143,
+    "peak_sampled_rss_bytes": 1884934144,
+    "seconds_ceiling": 3080.467264890671,
+    "rss_bytes_ceiling": 8000000000,
+    "launched_pid": 392,
+    "sampled_cpu_seconds": 115.35,
+    "sampled_average_cpus": 0.9483881249683783,
+    "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+    "sample_includes_coordinator": false
+  },
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "no_retention_extension": true,
+  "records": {
+    "integrity.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/integrity.json",
+      "bytes": 535,
+      "sha256": "d2dbc68e5dd7a130771c416e35831f6310ea145b9fb5a689a6b04e81730562da"
+    },
+    "small-object-bindings.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/small-object-bindings.json",
+      "bytes": 1779,
+      "sha256": "5d9a61f853884c4fa30dae9d8922c8cac58571ce864270ca0a8f477b71927e64"
+    },
+    "small-hashes.stdout": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/small-hashes.stdout",
+      "bytes": 2651,
+      "sha256": "6250c9e585d4380fe40cb69be1fc573792ce862086d13466592a1b43006e1273"
+    },
+    "small-hashes.stderr": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/small-hashes.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "object-list.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/object-list.json",
+      "bytes": 12463,
+      "sha256": "65f2ad9a3f54bd9a0f80df5b308c2d90c852a925f887319288ce152fdcfc172c"
+    },
+    "export-admission.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/export-admission.json",
+      "bytes": 344,
+      "sha256": "57ced0ef3d07ca5156aa2f29930bbb23d0e76159d4be29c0b5f34c6050432eed"
+    },
+    "pooled-review.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review.json",
+      "bytes": 27485,
+      "sha256": "4fdeae8f6deb38e9b15d700e18c8d94961d8258027d84caf38995c038e79e84c"
+    },
+    "pooled-review-r4-resources.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r4-resources.json",
+      "bytes": 958,
+      "sha256": "e6b19d48bac326e4e34de1150c0a04f1c18a0416a95b0b109a20c13329cd7390"
+    },
+    "stream-tiny.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/stream-tiny.json",
+      "bytes": 102,
+      "sha256": "40932cae58e5d64a59744227d7295b024cce188bcd56eed0d15bc75b31d9e1b8"
+    },
+    "review-clock.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/review-clock.json",
+      "bytes": 72,
+      "sha256": "a6482df57547cb0079e090ae98d8fb9d068f282888bcfec50a056bd49f7c2c84"
+    },
+    "endpoint-context.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/endpoint-context.json",
+      "bytes": 14411,
+      "sha256": "e7c81881e85e31755ad986b7c2869ed350c90fd1c5321414fe32d471b47b5953"
+    },
+    "completed-cost.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/completed-cost.json",
+      "bytes": 3500,
+      "sha256": "c6c28b9ed2cb052a987522367f8d4af78ad0f1020449b54571c5a97e4f666404"
+    },
+    "task-disk-release.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/task-disk-release.json",
+      "bytes": 2116,
+      "sha256": "9d63bc8af51b43fdfe6238629819c03afe7f58ac1a77d4e714dcc229c774e24e"
+    },
+    "local-cache-cleanup.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/local-cache-cleanup.json",
+      "bytes": 5848394,
+      "sha256": "871d9602db5f343e8ac7e658f0a3d2e40ed29c135082aadae4e8e6d92bcaa299"
+    },
+    "local-ledger-copy-release.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/local-ledger-copy-release.json",
+      "bytes": 4597,
+      "sha256": "9d00a0bd8aca85a5a95172d33d76f044adeca405ee31fdfb61214c871558cb18"
+    },
+    "finance/browser-credit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/finance/browser-credit.json",
+      "bytes": 765,
+      "sha256": "7afc84ab3a0089437983929a56c736f11d70e7b2a26fabd82b467439079d2aee"
+    },
+    "finance/current-prices.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/finance/current-prices.json",
+      "bytes": 9154,
+      "sha256": "6a178f1c792ebf9f7937ddbb7e15693b3af1919ff7b9f7b5f5b489e4bacc0f2e"
+    },
+    "finance/bucket.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/finance/bucket.json",
+      "bytes": 922,
+      "sha256": "2750ac393aa246e2edcd3517f2fd0cd5cd5a01c26279d0cea4a1fedee617bb5e"
+    },
+    "finance/versions.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/finance/versions.json",
+      "bytes": 403043,
+      "sha256": "e7d6fa639772bd6ede6994cd521577f2e713a3cf35f738a94c62e2130479df56"
+    },
+    "finance/soft-deleted.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/finance/soft-deleted.json",
+      "bytes": 56,
+      "sha256": "9fa3aa73d0481c1855573b622829f0e30c1f258a7d669a9f6c1139437a46a102"
+    },
+    "control/provider.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/control/provider.json",
+      "bytes": 33511,
+      "sha256": "d8dd9965e53c4a2a682991afdfa956667c15ff2dd796440dfc4bed87eedf6fc1"
+    },
+    "control/guest.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/control/guest.json",
+      "bytes": 359,
+      "sha256": "c83072944f7cef46619de46c4308f9e1b69a04156daa49c80ba1c87382ebcc65"
+    },
+    "cleanup-control/provider-final.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/cleanup-control/provider-final.json",
+      "bytes": 33097,
+      "sha256": "f600c9abf86ffcbaded62680ee9cc652c0c6af816997a294db6d52d99c8d878c"
+    },
+    "cleanup-control/disks-final.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/cleanup-control/disks-final.json",
+      "bytes": 2889,
+      "sha256": "7b1e31f2ea8f8d6aec30aee9cc5dd2f290f76661b48b8bc9167c844b143e5192"
+    },
+    "remaining-resources/instances.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/remaining-resources/instances.json",
+      "bytes": 33449,
+      "sha256": "d13e7e80c31dd4b60be0425a78a913802b2e8aa996e854fa2e6f5b49cfbe1221"
+    },
+    "remaining-resources/addresses.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/remaining-resources/addresses.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "remaining-resources/snapshots.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/remaining-resources/snapshots.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "objects/completion.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/objects/completion.json",
+      "bytes": 31302,
+      "sha256": "53b1a166f525416feedee3f2a85da0703fd6942acaccb0d8a378ccb82dedc046"
+    },
+    "objects/watchdog-exit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/objects/watchdog-exit.json",
+      "bytes": 12406,
+      "sha256": "2b44e8d8f6c8da6789a59deecb836b328f9959fa10e7680ba83fac86da107c15"
+    },
+    "objects/closed-delivery-tail.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/objects/closed-delivery-tail.json",
+      "bytes": 339,
+      "sha256": "f7ce4b3d88648bde0523feeafae14c971627a2fc0e256182319b5917ef8a795c"
+    },
+    "objects/filesystem.jsonl": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/objects/filesystem.jsonl",
+      "bytes": 673366,
+      "sha256": "cafbc60b0d303017720363e1a64d27c2c2299bac2424c440609cd18133e74a45"
+    },
+    "pooled-review-r4.exit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r4.exit.json",
+      "bytes": 958,
+      "sha256": "6617fd79b8a6b0c268b13b30ed0cd5c9fc508241b39ff648c0b0ea57f8fcad47"
+    },
+    "pooled-review-r2.exit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r2.exit.json",
+      "bytes": 959,
+      "sha256": "291306fa05cf88deeb9c30e2c24720f75fd086dc7c46a600d93a1181bb217b23"
+    },
+    "pooled-review-r3.exit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r3.exit.json",
+      "bytes": 956,
+      "sha256": "6c4bc97d53895eff44356b99fbdc8c369e828ac7cd5d701dcc662d684ff2bdde"
+    },
+    "verify-return.exit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/verify-return.exit.json",
+      "bytes": 615,
+      "sha256": "f4f5f6e182a09d662d71eaa35f43e4f11c08175270c4c0286b333a4e7f81e279"
+    },
+    "pooled-review-r1.exit.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r1.exit.json",
+      "bytes": 959,
+      "sha256": "5845ad53f248494306a7063b6f61a7c91b4d7c39d7a58ff93b0182897105e792"
+    },
+    "pooled-review-r2.log": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r2.log",
+      "bytes": 1118,
+      "sha256": "37a7ae32acd28c6160b8c839e017588ae0c75f1c0c210488309a838b2cdc2f93"
+    },
+    "pooled-review-r3.log": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r3.log",
+      "bytes": 846,
+      "sha256": "debc3c2bdf6c4a03b30d78f871e9c9da6677336afa4ae094bf2f56316d181e9e"
+    },
+    "pooled-review-r1.log": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r1.log",
+      "bytes": 817,
+      "sha256": "2cfe04386cdb77b4266008465c7c86d0a879e9995006b0c6320886d0b0bb9148"
+    },
+    "pooled-review-r4.log": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/pooled-review-r4.log",
+      "bytes": 389,
+      "sha256": "d07c5153e08ee82b8f8f5cd78b6f7856cf617307d81bc27588638c3113d4c14f"
+    },
+    "independent-closure.json": {
+      "path": "artifacts/e035-confidence-taxonomy/pooled-inspection/independent-closure.json",
+      "bytes": 263,
+      "sha256": "5322cc0bf14e87b7f661fdae54b53c2c989a298f8b4ee00745b107fe2b598811"
+    }
+  },
+  "next_recovery_block": "Independently admitted taxonomy candidate after renewed calendar/resource/credit scope; no execution in this task",
+  "next_operational_action": "Preservation/release decision before November 11; original disks and unique evidence cannot be automatically deleted or retained beyond approval",
+  "analysis_sources": {
+    "scripts/e035_pooled_review.py": {
+      "bytes": 15243,
+      "sha256": "98594dfa6690efab2bb105aae820a0ad9fb4dd3c18bced3720b9cf1a5a887889"
+    },
+    "scripts/e035_stream_review.py": {
+      "bytes": 5060,
+      "sha256": "2b12b3995c791f68921a07e93e8b21ca4430cd652a754cf0b90da8f5016870ed"
+    },
+    "tests/test_e035_pooled_review.py": {
+      "bytes": 1358,
+      "sha256": "1217d0c63c485f0f54bdff8c8ca352fa714e9fa1f0572d6d635a4abe66615fcf"
+    },
+    "tests/test_e035_stream_review.py": {
+      "bytes": 2872,
+      "sha256": "9d2aec0b13db5e1c50a09496cc8483f4db498e77478c686ebb06e45ec1d69741"
+    }
+  },
+  "checks": {
+    "tests": 5,
+    "actual_tests": "python3 -B -m unittest discover -s tests -p test_e035_*review.py -v",
+    "seconds": 0.109,
+    "skipped": 0,
+    "stream_known_CRC_vector": true,
+    "corrupt_SHA_and_unsafe_alias_refused": true,
+    "locus_competitor_veto_and_terminal_contracts": true,
+    "docs": "PASS: 176 maintained documents, 2387 local links; 10 optional source-cache files unavailable, not verified"
+  }
+}

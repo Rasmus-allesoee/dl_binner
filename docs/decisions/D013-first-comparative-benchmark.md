@@ -1,5 +1,19 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## E035 completed information audit and preservation boundary, November 8
+
+[The all-ten audit](../../experiments/E035-confidence-taxonomy/pooled-completed-review.md)
+completes all readers/pools/delivery without fits. Pooling recovers substantial
+E009 support but still fails Oral utility, with discordant endpoint/origin evidence.
+Keep information completion separate from NOT_ASSESSED recovery. Do not weaken
+filters or score a graph absent a justified common information/specificity case.
+The independently referenced taxonomy candidate remains the next recovery
+hypothesis after its own admission; no gain is guaranteed. Owner usage constraints
+exclude that execution now. Exact new scratch is deleted after full preservation;
+original disks remain. November 11 active / November 18 tail are unchanged, so
+preservation planning precedes any later 72-hour proposal. No new R95 or old rescore.
+
+
 ## E035 reassessment and execution order, November 6
 
 [The local E035 block](../../experiments/E035-confidence-taxonomy/README.md)

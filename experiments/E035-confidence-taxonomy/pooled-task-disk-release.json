@@ -1,0 +1,55 @@
+{
+  "status": "DETACHED_DELETED_INDEPENDENTLY_ABSENT",
+  "disk_name": "e035-task-1794013046",
+  "disk_id": "9116674795864573630",
+  "size_GiB": 100,
+  "creationTimestamp": "2026-11-06T17:01:06.084-08:00",
+  "phase": "pooled-20261107T005703Z-4d332d7",
+  "unique_outputs_preserved": true,
+  "integrity": {
+    "bytes": 535,
+    "sha256": "d2dbc68e5dd7a130771c416e35831f6310ea145b9fb5a689a6b04e81730562da"
+  },
+  "completion": {
+    "bytes": 31302,
+    "sha256": "53b1a166f525416feedee3f2a85da0703fd6942acaccb0d8a378ccb82dedc046"
+  },
+  "closed_tail": {
+    "bytes": 339,
+    "sha256": "f7ce4b3d88648bde0523feeafae14c971627a2fc0e256182319b5917ef8a795c"
+  },
+  "watchdog": {
+    "bytes": 12406,
+    "sha256": "2b44e8d8f6c8da6789a59deecb836b328f9959fa10e7680ba83fac86da107c15"
+  },
+  "no_new_science": true,
+  "no_VM_start": true,
+  "no_snapshot": true,
+  "no_retention_extension": true,
+  "retention_end": "2026-11-11T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-18T00:00:00+01:00",
+  "discarded_regenerable_scope": [
+    "Task-owned installed wheel/pysam environment, installer/source pinned in retained original E033/E021 base and current complete source/wheel/runtime return",
+    "Empty task restore/collator scratch; original twenty BAMs and all per-observation support ledgers remain retained",
+    "Duplicate return staging/archives now independently verified in private archive and local extracted bytes"
+  ],
+  "release_requested_epoch": 1794153114.44281,
+  "release_verified_epoch": 1794153129.107476,
+  "remaining_disks": [
+    {
+      "name": "dl-binner-cpu",
+      "id": "6401360260466153002",
+      "sizeGb": "30",
+      "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-standard"
+    },
+    {
+      "name": "dl-binner-work",
+      "id": "1715971271799544069",
+      "sizeGb": "300",
+      "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-balanced"
+    }
+  ],
+  "VM_state": "TERMINATED",
+  "original_disks_preserved": true,
+  "delete_without_VM_start": true
+}
