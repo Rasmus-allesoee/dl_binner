@@ -1,6 +1,25 @@
 # E036 operations
 
-## Current supervised run
+## Completed and reviewed, November 14
+
+Phase `recover-20261114T010841Z-2c81c80` is independently **TERMINATED**, all
+15 outer / 31 serial exits and complete source/runtime/input/byte/delivery
+contracts pass. [Completed review](completed-review.md), [receipts](completed-observed.json)
+and [comparison](comparison-review.json) supersede the historical running handoff.
+Post R95 is 10.2895% / 10.3378%, T90 7 / 6; exact Oral fallback reuses 34.3786%.
+Frozen disposition **MODIFY, not promoted**: small gains/trade-offs, no new T90,
+stronger E031 anchors and joint KEEP unmet. No baseline was refit or rescored.
+
+Exact 64 GiB scratch is [deleted and independently absent](task-disk-release.json),
+with VM never woken and original 30/300 GiB IDs intact. [Costs](completed-cost.json)
+are about $0.85 incremental upper / $11.74 complete scoped upper of $20, including
+original preservation and the recorded November 11 gap; not an invoice. Active
+retention remains November 21 at 00:00 Copenhagen, new-return tail November 28.
+No taxonomy/bulk acquisition is authorized by inspection. [Next block](next-block.md)
+recommends the already implemented taxonomy candidate, with integrated native
+resource admission and a new proposed $50 credit-only scope.
+
+## Historical supervised handoff, before completion
 
 [Native receipt](native-observed.json): `recover-20261114T010841Z-2c81c80`, source
 `2c81c80`, scientific identity `7aa7bf7` plus explicit operation-only repair.
@@ -84,7 +103,7 @@ next complete return must include those journals and its exact source bundle.
 No E009 fit occurred. Continue on the same disk/prefix/caches and original clock;
 do not count this failure as a biological result or repeat accepted native science.
 
-## Exact following prompt
+## Historical inspection prompt, completed November 14
 
 Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E036's design, locks,
 operations and native-observed.json. Inspect phase `recover-20261114T010841Z-2c81c80` without starting
@@ -112,3 +131,69 @@ confirmation or start taxonomy. After complete verified delivery, safely release
 only the recorded temporary task disk and independently confirm absence. Keep
 original preservation review before November 21. Recommend one strongest next
 recovery block from the evidence; update/check/structured commit and report.
+
+## Exact following prompt
+
+Our goal is substantially closing the recovery gap. Read AGENTS, PROJECT_INTENT,
+STATE/CLOUD, D013/D015, E036's completed review/diagnostics/costs/next-block and
+E035's taxonomy design, source/candidate/asset locks and local evidence. Preserve
+all immutable baselines, accepted E009–E036 inputs/truth/results, source freezes
+and failed journals. Use a new descriptive branch without a codex/ prefix.
+
+Carry out E036's recommended next block: integrated native admission and
+conditional three-mode comparison of the already implemented confidence-aware
+hierarchical-taxonomy candidate, in a fresh E037 execution record. Keep E031
+learning/real views/full GLM ancestry, E035 scientific defaults and E032 downstream
+fixed; do not stack E036 or tune to its outcomes. I authorize a new $50 incremental
+gross credit-only scope, the specified quota request and justified temporary
+existing-VM highmem configuration/task disk, subject to fresh complete gates.
+No real-money charges. Integrate the brief preservation/resource check into the
+work. Current original storage ends November 21 at 00:00 Copenhagen and automatic
+new-return tail November 28; do not renew those dates implicitly.
+
+First check live Welcome balance/scope/expiry, delayed usage/$35 reserve,
+applicable full prices/coverage, existing resources/quota, actual free space and
+verified safe cleanup. Reconcile the old E035 resource guards prospectively;
+preserve them as history. Test actual Linux classifier/build/readers, unchanged
+full-tree loss, real cached parent/crop inference, exact native parent reproduction,
+common no-annotation fallback, source schema, serial DAG/resume and complete
+bounded collector paths before release. Reuse verified original inputs and healthy
+runtimes; no reinstall/recopy fallback, old fit replay or benchmark-label inputs.
+
+Admit pinned MMseqs2 18-8cc5c / complete GTDB R220 species-representative protein
+source, publisher checksums/new SHA256, accession/tree/member joins and reference-
+overlap limitations. No truth-selected reference subset. Test serial verified
+source/FASTA/index cleanup before sizing scratch: 512 GiB is a proposal from phase
+coexistence, not a measured pass; allow up to 750 GiB only if validated/measured
+peak requires it. Keep the original 300 GiB work disk intact. Request only the
+needed balanced quota, account for copying/storage/return/tail, and delete scratch
+after independently verified complete delivery. Never erase unique evidence.
+
+Existing VM only; conditional e2-highmem-8 / 64 GiB, four numerical threads,
+52 GB sampled tree RSS, separate 25 GiB reserves, up to 72 cumulative hours /
+72.25-hour independent provider STOP including setup/repair/collection. Restore
+the original stopped configuration afterward. Validate the full native database,
+classifier and actual annotation/view/fit schedule before scientific release;
+16 G split-index budget is not whole-process RAM. Freeze operational source and
+complete cost before affected actions. Arm/test a fresh held current-boot/process
+exit watcher and STOP. Debug operational errors with preserved journals/verified
+reuse, without silent science replay or calendar extension. Use the owner's
+standing reasonable credit-covered flexibility without weakening scientific gates.
+
+If admitted and covered, classify and run the fixed same candidate on E009 no GLM,
+E009 full-path GLM and Oral ten-depth/no GLM in this task. No extra architecture,
+loss grid, external binner, confirmation acquisition or Oral GLM extraction.
+Preserve raw annotations, partial/conflict/no-hit states, complete cache/features/
+embeddings/partitions/exports, all DNA and independent truth separation. Follow a
+short job to collection; for a healthy longer one verify supervision/real progress,
+wait a few minutes and hand off rather than poll to completion.
+
+After verified shutdown/delivery, evaluate only new admitted outputs with unchanged
+E009 conservative v2/full 156 and Oral provided-origin/known-shared/full 799
+contracts, N quarantine and all length/origin/depth/annotation/eligibility/marker/
+unknown/unassigned/singleton/multi-contig populations. Reuse every old score,
+including original E023, stronger E031, E032, E036 and native MetaBAT2. Apply
+frozen E035 criteria; do not promise improvement or reference-free/unseen-genome
+claims. Keep Oral GLM qualification, Q006 and skin/real-assembly confirmation
+admission dependencies concrete. Update records/check/structured commit; report
+actual costs/resources, recovery gains/trade-offs/limits and one next decision.

@@ -1,5 +1,24 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## November 14: optional links measured; independent taxonomy next
+
+[E036's completed comparison](../../experiments/E036-optional-pooled-links/completed-review.md)
+now directly assesses recovery: post R95 10.2895% / 10.3378%, T90 7 / 6;
+byte-exact Oral fallback retains 34.3786% / 219 without scoring again. Small
+target-level gains and losses do not meet stronger E031 anchors or frozen KEEP.
+Apply MODIFY without promotion, preserving the optional path and all failures.
+This is a completed result, not NOT_ASSESSED or a general rejection of physical
+information. Sparse pooled-GSA links do not establish real-assembly scarcity.
+
+[Next block](../../experiments/E036-optional-pooled-links/next-block.md): integrated
+native reference/classifier/schedule admission and conditional same-candidate
+taxonomy comparison, not another support/loss/selector grid. Independent DNA
+annotations may add broader biological context; no recovery guarantee or unseen-
+genome claim. New proposed $50 credit-only scope requires its stated gates; no
+taxonomy execution in inspection. E036 scratch is deleted only after complete
+verified delivery. Original preservation remains November 21 / new-return tail
+November 28. Keep Oral GLM, Q006 and prospective confirmation dependencies concrete.
+
 ## November 14: common optional physical links before full-reference taxonomy
 
 The owner's prior 8% chat-usage restriction applied only to the completed E035

@@ -16,7 +16,18 @@ The candidate focus is contig loss/misassignment in fragmented prokaryotic assem
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
 
-November 14: [E036](../../experiments/E036-optional-pooled-links/design.md) directly
+November 14 completion: [E036](../../experiments/E036-optional-pooled-links/completed-review.md)
+measures small R95 gains, no new T90 and failed stronger-anchor/KEEP criteria;
+MODIFY without promotion. Graph training aligns discordant-origin endpoints too,
+which is a design risk rather than demonstrated implementation error or permission
+to truth-filter edges. Exact Oral fallback is verified, not rescored. Q001 remains
+open; [independent taxonomy admission/comparison](../../experiments/E036-optional-pooled-links/next-block.md)
+is the next information hypothesis before another loss/selector grid. Sparse GSA
+links do not reject the feature for real assemblies. Native delivery/cleanup pass;
+original November 21 / automatic November 28 boundaries remain. Oral GLM, Q006 and
+skin/real-assembly confirmation contracts are still unresolved.
+
+Earlier November 14 prospective note: [E036](../../experiments/E036-optional-pooled-links/design.md) directly
 tests the passed E009 pooled information with one common optional-link policy and
 exact Oral fallback. The [GSA construction audit](../evidence/2026-11-14-oral-gsa-and-optional-links.md)
 limits Oral's value for physical-link transfer; it does not dismiss that feature

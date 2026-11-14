@@ -1,0 +1,109 @@
+{
+  "status": "RELEASED_REDUNDANT_COMPRESSED_TRANSPORTS",
+  "epoch": 1794652720.60569,
+  "free_before": 9807466496,
+  "entries": [
+    {
+      "path": "artifacts/e015-zero-reconstruction/review-20261019/e015-evidence.tar.gz",
+      "reason": "Redundant compressed transport; accepted extracted members and journals retained",
+      "accepted_receipt": "experiments/E015-zero-reconstruction/comparison-review.json",
+      "binding": {
+        "bytes": 1042061418,
+        "sha256": "27b0941a108df73ba7e983e39563d282833f79a74fbb83b74bb04f23af0ec643"
+      },
+      "backup": {
+        "uri": "gs://dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz",
+        "generation": "1792418235334884",
+        "metadata": {
+          "kind": "storage#object",
+          "id": "dl-binner-archive-167650584170/e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz/1792418235334884",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/dl-binner-archive-167650584170/o/e015%2Fcollect-20261019T135207Z-89dcd61%2Fe015-evidence.tar.gz",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/dl-binner-archive-167650584170/o/e015%2Fcollect-20261019T135207Z-89dcd61%2Fe015-evidence.tar.gz?generation=1792418235334884&alt=media",
+          "name": "e015/collect-20261019T135207Z-89dcd61/e015-evidence.tar.gz",
+          "bucket": "dl-binner-archive-167650584170",
+          "generation": "1792418235334884",
+          "metageneration": "1",
+          "contentType": "application/x-tar",
+          "storageClass": "STANDARD",
+          "size": "1042061418",
+          "md5Hash": "uq+V9uEdUjVFcWv3LGVcoQ==",
+          "crc32c": "CsnXsA==",
+          "etag": "COSB06GexpcDEAE=",
+          "timeCreated": "2026-10-19T13:57:15.346Z",
+          "updated": "2026-10-19T13:57:15.346Z",
+          "timeStorageClassUpdated": "2026-10-19T13:57:15.346Z",
+          "timeFinalized": "2026-10-19T13:57:15.346Z"
+        }
+      }
+    },
+    {
+      "path": "artifacts/e009-controls/20261016-review/controls-evidence.tar.gz",
+      "reason": "Redundant compressed transport; accepted extracted members and journals retained",
+      "accepted_receipt": "experiments/E009-competitive-benchmark/controls-review.json",
+      "binding": {
+        "bytes": 484269399,
+        "sha256": "3b3f50ba91f6552fb7c8b7b1b83d3d1a5ddec7f8771631e2dec95cd45e7199c3"
+      },
+      "backup": {
+        "uri": "gs://dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz",
+        "generation": "1792104694442436",
+        "metadata": {
+          "kind": "storage#object",
+          "id": "dl-binner-archive-167650584170/e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz/1792104694442436",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/dl-binner-archive-167650584170/o/e009%2Fcontrols-cf7bf2a-20261015T211004Z%2Fcontrols-evidence.tar.gz",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/dl-binner-archive-167650584170/o/e009%2Fcontrols-cf7bf2a-20261015T211004Z%2Fcontrols-evidence.tar.gz?generation=1792104694442436&alt=media",
+          "name": "e009/controls-cf7bf2a-20261015T211004Z/controls-evidence.tar.gz",
+          "bucket": "dl-binner-archive-167650584170",
+          "generation": "1792104694442436",
+          "metageneration": "1",
+          "contentType": "application/x-tar",
+          "storageClass": "STANDARD",
+          "size": "484269399",
+          "md5Hash": "T2qwSy1WaDR/NpChiE0Ycg==",
+          "crc32c": "6jLOvA==",
+          "etag": "CMTT2Z2OvZcDEAE=",
+          "timeCreated": "2026-10-15T22:51:34.451Z",
+          "updated": "2026-10-15T22:51:34.451Z",
+          "timeStorageClassUpdated": "2026-10-15T22:51:34.451Z",
+          "timeFinalized": "2026-10-15T22:51:34.451Z"
+        }
+      }
+    },
+    {
+      "path": "artifacts/e010-coherent-prototype/review-20261017/candidate-run-evidence.tar.gz",
+      "reason": "Redundant compressed transport; accepted extracted members and journals retained",
+      "accepted_receipt": "experiments/E010-coherent-prototype/review.json",
+      "binding": {
+        "bytes": 335636093,
+        "sha256": "3ec883477ce6c9e070632200508be8b707e84a11938f51e6221089eb94d165a3"
+      },
+      "backup": {
+        "uri": "gs://dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz",
+        "generation": "1792187015608671",
+        "metadata": {
+          "kind": "storage#object",
+          "id": "dl-binner-archive-167650584170/e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz/1792187015608671",
+          "selfLink": "https://www.googleapis.com/storage/v1/b/dl-binner-archive-167650584170/o/e010%2Fcandidate-6917c3f-20261016T212549Z%2Fcandidate-run-evidence.tar.gz",
+          "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/dl-binner-archive-167650584170/o/e010%2Fcandidate-6917c3f-20261016T212549Z%2Fcandidate-run-evidence.tar.gz?generation=1792187015608671&alt=media",
+          "name": "e010/candidate-6917c3f-20261016T212549Z/candidate-run-evidence.tar.gz",
+          "bucket": "dl-binner-archive-167650584170",
+          "generation": "1792187015608671",
+          "metageneration": "1",
+          "contentType": "application/x-tar",
+          "storageClass": "STANDARD",
+          "size": "335636093",
+          "md5Hash": "9Z+cpHcqUDVfDLxSaWMO1g==",
+          "crc32c": "sto85A==",
+          "etag": "CN/yvvPAv5cDEAE=",
+          "timeCreated": "2026-10-16T21:43:35.616Z",
+          "updated": "2026-10-16T21:43:35.616Z",
+          "timeStorageClassUpdated": "2026-10-16T21:43:35.616Z",
+          "timeFinalized": "2026-10-16T21:43:35.616Z"
+        }
+      }
+    }
+  ],
+  "unique_science_deleted": false,
+  "free_after": 11669786624,
+  "bytes_removed": 1861966910
+}

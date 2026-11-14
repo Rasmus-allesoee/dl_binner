@@ -1,6 +1,50 @@
 # Current Research State
 
-## E036 running: direct optional-link comparison, recovered with verified reuse
+## E036 completed: small optional-link gains, no promotion; scratch released
+
+[Independent review](../experiments/E036-optional-pooled-links/completed-review.md)
+accepts phase `recover-20261114T010841Z-2c81c80`: all 15 outer / 31 serial
+zero-exit closures, source/runtime/full axes, input/reuse-after, native reload/
+geometry, complete archive/member/alias union and later delivery/watchdog pass.
+VM is TERMINATED; no inspection wake or old science replay. Both operational
+failures remain preserved and failed. The original Mac tolerance remains unchanged.
+
+Post E009 R95 **10.2895% no GLM / 10.3378% GLM**, T90 **7 / 6**, versus retained
+E032 10.2847% / 10.1760% and stronger E031/E023 10.6110% / 10.5684%, T90 10 / 9.
+[Full diagnostics](../experiments/E036-optional-pooled-links/comparison-review.json)
+apply frozen **MODIFY, not promoted**: small R95 gains/target trade-offs, no new
+T90, stronger anchors and joint KEEP unmet. Original E023 10.4163% and native
+MetaBAT2 remain references. Exact Oral E032 fallback reuses 34.3786% / 219 T90,
+without a fit/rescore. Keep full 156/799 denominators, N quarantine, separate
+origin/sequence truth, all DNA and single/multi-contig limits.
+
+Only 3,074 E009 vectors change. The objective pulls discordant-origin endpoints
+almost as close as concordant ones; that is a design risk, not a demonstrated
+implementation error or truth-based edge veto. Oral GSA sparsity and exact fallback
+do not reject physical links for real assemblies. Preserve the optional path,
+without another grid on these development communities.
+
+**Next:** [native admission and conditional common taxonomy comparison](../experiments/E036-optional-pooled-links/next-block.md)
+using implemented E035 / strong E031 / fixed E032, before another loss/backbone/
+selector campaign. This adds independent biological context; gain is unproven.
+The [exact prompt](../experiments/E036-optional-pooled-links/OPERATIONS.md#exact-following-prompt)
+proposes a **new $50 credit-only scope** with actual Linux database/classifier/
+full-schedule admission and conditional temporary highmem/scratch. 750 GiB is not
+measured necessity; tested serial coexistence could support 512 GiB, subject to
+actual bounds/quota. No taxonomy/database/GPU/confirmation run began in inspection.
+Full Oral GLM qualification/ancestry, Q006 selection optimality and skin/real-
+assembly confirmation contracts remain open, explicitly in that next-block record.
+
+Exact 64 GiB task disk is [deleted/independently absent](../experiments/E036-optional-pooled-links/task-disk-release.json),
+original 30/300 GiB IDs intact. [Costs](../experiments/E036-optional-pooled-links/completed-cost.json):
+45.74 allocation minutes across all three attempts, ~$0.85 incremental upper /
+$11.74 complete scoped upper of $20 including original storage November 11–21;
+not invoice or credit delta. Fresh Welcome DKK 1,567.36 Available / 79%, January
+12 expiry, delayed net zero; keep $35 reserve. Remaining original resources cost
+about $1.09/day. **Preservation/release review before November 21 at 00:00
+Copenhagen**; automatic new-return tail November 28. No retention extension.
+
+## Historical E036 supervised handoff, before completion
 
 [Native handoff](../experiments/E036-optional-pooled-links/native-observed.json)
 records active phase `recover-20261114T010841Z-2c81c80`, exact operational source

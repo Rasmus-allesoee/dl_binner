@@ -1,0 +1,3130 @@
+{
+  "status": "PASS_FROZEN_NEW_OUTPUT_DIAGNOSTICS",
+  "units": {
+    "E009-noGLM": {
+      "arms": {
+        "pre": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10282568539187,
+            "macro_R95": 0.1124362867367195,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 7
+          },
+          "represented_confirmed_bp": 102790342,
+          "representation_upper_bound": 0.18532072214299777,
+          "pooled_assembly_conditional_R95": 0.5548526047320671,
+          "represented_ceiling_not_attainability": true,
+          "singleton_R95": 0.0038545842765581027,
+          "multi_contig_R95": 0.09897110111531189,
+          "singleton_T90": 0,
+          "multi_contig_T90": 7,
+          "full_DNA": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 47547,
+                "bp": 170697822
+              },
+              "unassigned": {
+                "contigs": 41494,
+                "bp": 38944881
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "counts": {
+              "high_impurity_or_unresolved": 74,
+              "threshold_based_MQ": 14,
+              "threshold_based_LQ": 33,
+              "threshold_based_HQ": 9
+            },
+            "target_counts": {
+              "high_impurity_or_unresolved": 50,
+              "threshold_based_LQ": 24,
+              "threshold_based_HQ": 7,
+              "threshold_based_MQ": 12
+            },
+            "at_least_200kb_counts": {
+              "high_impurity_or_unresolved": 54,
+              "threshold_based_MQ": 14,
+              "threshold_based_HQ": 9,
+              "threshold_based_LQ": 19
+            },
+            "assigned_bp": 170697822,
+            "query_count": 145702,
+            "primary_rule_changed": false,
+            "rRNA_tRNA_screened": false,
+            "numerical_units": "fractions in [0,1], not percentages",
+            "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+            "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+            "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+          },
+          "population_keys": [
+            "lower_bp",
+            "attributable_lineage",
+            "candidate_eligibility",
+            "status",
+            "clean_marker"
+          ],
+          "all_population_cells": {
+            "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 16313,
+              "all_bp": 6322049,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 4307,
+              "confirmed_bacterial_bp": 6317742
+            },
+            "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 6795,
+              "all_bp": 2587510,
+              "ambiguous_query_bp": 1469064,
+              "nn_quarantined_query_bp": 4987,
+              "unsupported_query_bp": 571405,
+              "confirmed_eukaryotic_bp": 381704,
+              "confirmed_bacterial_bp": 148575,
+              "confirmed_viral_bp": 11635,
+              "confirmed_other_bp": 140
+            },
+            "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 32986,
+              "all_bp": 12906463,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 7772,
+              "confirmed_eukaryotic_bp": 12898691
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 17174,
+              "all_bp": 10505013,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3670,
+              "confirmed_eukaryotic_bp": 10501343
+            },
+            "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1646,
+              "all_bp": 2367630,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2466,
+              "confirmed_bacterial_bp": 2365164
+            },
+            "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 4936,
+              "all_bp": 3111004,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1174,
+              "confirmed_eukaryotic_bp": 3109830
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 5727,
+              "all_bp": 7446452,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2287,
+              "confirmed_eukaryotic_bp": 7444165
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 9458,
+              "all_bp": 14555748,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 6107,
+              "confirmed_eukaryotic_bp": 14549641
+            },
+            "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1309,
+              "all_bp": 1139965,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1297,
+              "confirmed_bacterial_bp": 1138668
+            },
+            "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 278,
+              "all_bp": 171973,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 177,
+              "confirmed_viral_bp": 171796
+            },
+            "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 665,
+              "all_bp": 582711,
+              "ambiguous_query_bp": 281486,
+              "nn_quarantined_query_bp": 2366,
+              "unsupported_query_bp": 137545,
+              "confirmed_eukaryotic_bp": 94882,
+              "confirmed_bacterial_bp": 60598,
+              "confirmed_viral_bp": 5693,
+              "confirmed_other_bp": 141
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 6495,
+              "all_bp": 5635249,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1893,
+              "confirmed_eukaryotic_bp": 5633356
+            },
+            "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 2100,
+              "all_bp": 1274139,
+              "ambiguous_query_bp": 497973,
+              "nn_quarantined_query_bp": 2339,
+              "unsupported_query_bp": 358805,
+              "confirmed_eukaryotic_bp": 278769,
+              "confirmed_bacterial_bp": 117942,
+              "confirmed_viral_bp": 18008,
+              "confirmed_other_bp": 303
+            },
+            "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2948,
+              "all_bp": 4715104,
+              "ambiguous_query_bp": 3612239,
+              "nn_quarantined_query_bp": 3390,
+              "unsupported_query_bp": 468538,
+              "confirmed_bacterial_bp": 372024,
+              "confirmed_eukaryotic_bp": 237974,
+              "confirmed_viral_bp": 20939
+            },
+            "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 3387,
+              "all_bp": 2982392,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1138,
+              "confirmed_eukaryotic_bp": 2981254
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2166,
+              "all_bp": 7857437,
+              "ambiguous_query_bp": 252,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3113,
+              "confirmed_eukaryotic_bp": 7853729,
+              "confirmed_bacterial_bp": 343
+            },
+            "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2916,
+              "all_bp": 2548514,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1395,
+              "confirmed_bacterial_bp": 2547119
+            },
+            "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 3587,
+              "all_bp": 2178251,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1651,
+              "confirmed_bacterial_bp": 2176600
+            },
+            "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 5975,
+              "all_bp": 3702070,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1692,
+              "confirmed_bacterial_bp": 3700378
+            },
+            "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 5696,
+              "all_bp": 8641770,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 5155,
+              "confirmed_bacterial_bp": 8636615
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1233,
+              "all_bp": 1839931,
+              "ambiguous_query_bp": 903122,
+              "nn_quarantined_query_bp": 5600,
+              "unsupported_query_bp": 328499,
+              "confirmed_bacterial_bp": 354778,
+              "confirmed_eukaryotic_bp": 186908,
+              "confirmed_viral_bp": 57761,
+              "confirmed_other_bp": 3263
+            },
+            "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 86,
+              "all_bp": 143194,
+              "ambiguous_query_bp": 122507,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 12375,
+              "confirmed_bacterial_bp": 8312
+            },
+            "1|viral|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 480,
+              "all_bp": 184590,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 142,
+              "confirmed_viral_bp": 184448
+            },
+            "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1981,
+              "all_bp": 8993104,
+              "ambiguous_query_bp": 6752184,
+              "nn_quarantined_query_bp": 23884,
+              "unsupported_query_bp": 760827,
+              "confirmed_bacterial_bp": 1214791,
+              "confirmed_viral_bp": 111170,
+              "confirmed_eukaryotic_bp": 130248
+            },
+            "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 741,
+              "all_bp": 21114329,
+              "ambiguous_query_bp": 33574,
+              "nn_quarantined_query_bp": 220,
+              "unsupported_query_bp": 6352,
+              "confirmed_bacterial_bp": 21073907,
+              "confirmed_eukaryotic_bp": 276
+            },
+            "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1687,
+              "all_bp": 1055226,
+              "ambiguous_query_bp": 880179,
+              "nn_quarantined_query_bp": 536,
+              "unsupported_query_bp": 80596,
+              "confirmed_bacterial_bp": 56664,
+              "confirmed_eukaryotic_bp": 35837,
+              "confirmed_viral_bp": 1414
+            },
+            "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2348,
+              "all_bp": 10615140,
+              "ambiguous_query_bp": 5850,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 6167,
+              "confirmed_bacterial_bp": 10603123
+            },
+            "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 159,
+              "all_bp": 253564,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 173,
+              "confirmed_bacterial_bp": 253391
+            },
+            "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 603,
+              "all_bp": 31189739,
+              "ambiguous_query_bp": 20256151,
+              "nn_quarantined_query_bp": 5441914,
+              "unsupported_query_bp": 295299,
+              "confirmed_bacterial_bp": 3265985,
+              "confirmed_eukaryotic_bp": 1726488,
+              "confirmed_viral_bp": 203902
+            },
+            "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1012,
+              "all_bp": 887181,
+              "ambiguous_query_bp": 703246,
+              "nn_quarantined_query_bp": 1019,
+              "unsupported_query_bp": 86051,
+              "confirmed_bacterial_bp": 59462,
+              "confirmed_eukaryotic_bp": 35810,
+              "confirmed_viral_bp": 1593
+            },
+            "2500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 75,
+              "all_bp": 257471,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 547,
+              "confirmed_eukaryotic_bp": 256924
+            },
+            "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 36,
+              "all_bp": 810572,
+              "ambiguous_query_bp": 7368,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 197,
+              "confirmed_bacterial_bp": 803007
+            },
+            "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 94,
+              "all_bp": 155098,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 209,
+              "confirmed_viral_bp": 154889
+            },
+            "768|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 45,
+              "all_bp": 39314,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 34,
+              "confirmed_bacterial_bp": 39280
+            },
+            "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 106,
+              "all_bp": 484571,
+              "ambiguous_query_bp": 465,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 919,
+              "confirmed_viral_bp": 483187
+            },
+            "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 465,
+              "all_bp": 32451215,
+              "ambiguous_query_bp": 62129,
+              "nn_quarantined_query_bp": 227,
+              "unsupported_query_bp": 8265,
+              "confirmed_bacterial_bp": 32380594
+            },
+            "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 301,
+              "all_bp": 1252170,
+              "ambiguous_query_bp": 1093,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 804,
+              "confirmed_bacterial_bp": 1250273
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 14,
+              "all_bp": 21418,
+              "ambiguous_query_bp": 16150,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3259,
+              "confirmed_bacterial_bp": 2009
+            },
+            "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 44,
+              "all_bp": 26846,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 48,
+              "confirmed_bacterial_bp": 26798
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 303,
+              "all_bp": 1137371,
+              "ambiguous_query_bp": 594882,
+              "nn_quarantined_query_bp": 11333,
+              "unsupported_query_bp": 134527,
+              "confirmed_bacterial_bp": 312914,
+              "confirmed_other_bp": 16278,
+              "confirmed_viral_bp": 44550,
+              "confirmed_eukaryotic_bp": 22887
+            },
+            "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 194,
+              "all_bp": 1049522,
+              "ambiguous_query_bp": 995,
+              "nn_quarantined_query_bp": 323,
+              "unsupported_query_bp": 588,
+              "confirmed_bacterial_bp": 1047616
+            },
+            "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 146,
+              "all_bp": 756665,
+              "ambiguous_query_bp": 614029,
+              "nn_quarantined_query_bp": 202,
+              "unsupported_query_bp": 48950,
+              "confirmed_bacterial_bp": 93484
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 33,
+              "all_bp": 54711,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 39,
+              "confirmed_eukaryotic_bp": 54672
+            },
+            "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 145,
+              "all_bp": 10641286,
+              "ambiguous_query_bp": 5434190,
+              "nn_quarantined_query_bp": 2152619,
+              "unsupported_query_bp": 111617,
+              "confirmed_bacterial_bp": 2827205,
+              "confirmed_eukaryotic_bp": 115655
+            },
+            "1|bacterial|candidate_excluded|excluded|clean_marker": {
+              "contigs": 55,
+              "all_bp": 22395,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 33,
+              "confirmed_bacterial_bp": 22362
+            },
+            "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 185,
+              "all_bp": 270161,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 488,
+              "confirmed_viral_bp": 269673
+            },
+            "768|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 25,
+              "all_bp": 22052,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 30,
+              "confirmed_viral_bp": 22022
+            },
+            "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 115,
+              "all_bp": 101083,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 98,
+              "confirmed_viral_bp": 100985
+            },
+            "1000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 8,
+              "all_bp": 13948,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 13948
+            },
+            "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 17,
+              "all_bp": 441791,
+              "ambiguous_query_bp": 2092,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 635,
+              "confirmed_viral_bp": 439064
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 27,
+              "all_bp": 117541,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1,
+              "confirmed_eukaryotic_bp": 117540
+            },
+            "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 25,
+              "all_bp": 22296,
+              "ambiguous_query_bp": 19795,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1538,
+              "confirmed_bacterial_bp": 963
+            },
+            "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 26,
+              "all_bp": 15908,
+              "ambiguous_query_bp": 10938,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2141,
+              "confirmed_bacterial_bp": 2829
+            },
+            "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 14,
+              "all_bp": 287993,
+              "ambiguous_query_bp": 90060,
+              "nn_quarantined_query_bp": 2246,
+              "unsupported_query_bp": 3148,
+              "confirmed_other_bp": 54405,
+              "confirmed_eukaryotic_bp": 560,
+              "confirmed_bacterial_bp": 137574
+            },
+            "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 30,
+              "all_bp": 1557408,
+              "ambiguous_query_bp": 1338,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 234,
+              "confirmed_eukaryotic_bp": 1555836
+            },
+            "500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 47,
+              "all_bp": 29848,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_bacterial_bp": 29848
+            },
+            "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 30,
+              "all_bp": 19476,
+              "ambiguous_query_bp": 17322,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1104,
+              "confirmed_bacterial_bp": 1050
+            },
+            "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 10,
+              "all_bp": 8684,
+              "ambiguous_query_bp": 2409,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2832,
+              "confirmed_bacterial_bp": 3443
+            },
+            "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 72,
+              "all_bp": 301693,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 634,
+              "confirmed_viral_bp": 301059
+            },
+            "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 18,
+              "all_bp": 23599,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 43,
+              "confirmed_bacterial_bp": 23556
+            },
+            "768|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 14,
+              "all_bp": 12047,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_bacterial_bp": 12028
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1804,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_eukaryotic_bp": 1785
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1540,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 1540
+            },
+            "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+              "contigs": 28,
+              "all_bp": 11167,
+              "ambiguous_query_bp": 7907,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1444,
+              "confirmed_bacterial_bp": 1816
+            },
+            "2500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 5477,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_bacterial_bp": 5477
+            },
+            "10000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 26,
+              "all_bp": 1080222,
+              "ambiguous_query_bp": 702,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 1079520
+            },
+            "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 4,
+              "all_bp": 3454,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 3454
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 940,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 940
+            },
+            "500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 11,
+              "all_bp": 6942,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 64,
+              "confirmed_viral_bp": 6878
+            },
+            "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1002,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 1002
+            },
+            "10000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 3,
+              "all_bp": 41588,
+              "ambiguous_query_bp": 553,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 41035
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 3,
+              "all_bp": 10241,
+              "ambiguous_query_bp": 47,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3861,
+              "confirmed_bacterial_bp": 6333
+            },
+            "1|other|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 278,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 278
+            },
+            "10000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 92260,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 92260
+            },
+            "768|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 824,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 824
+            },
+            "2500|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 4,
+              "all_bp": 27707,
+              "ambiguous_query_bp": 340,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 27367
+            },
+            "10000|other|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 79232,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 79232
+            },
+            "10000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 398479,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 398479
+            },
+            "1000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1405,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 1405
+            }
+          }
+        },
+        "post": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10289546123314872,
+            "macro_R95": 0.11251468983365602,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 7
+          },
+          "represented_confirmed_bp": 102790342,
+          "representation_upper_bound": 0.18532072214299777,
+          "pooled_assembly_conditional_R95": 0.5552291187045569,
+          "represented_ceiling_not_attainability": true,
+          "singleton_R95": 0.0038545842765581027,
+          "multi_contig_R95": 0.09904087695659061,
+          "singleton_T90": 0,
+          "multi_contig_T90": 7,
+          "full_DNA": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 47737,
+                "bp": 170929204
+              },
+              "unassigned": {
+                "contigs": 41304,
+                "bp": 38713499
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "counts": {
+              "high_impurity_or_unresolved": 74,
+              "threshold_based_MQ": 14,
+              "threshold_based_LQ": 33,
+              "threshold_based_HQ": 9
+            },
+            "target_counts": {
+              "high_impurity_or_unresolved": 50,
+              "threshold_based_LQ": 24,
+              "threshold_based_HQ": 7,
+              "threshold_based_MQ": 12
+            },
+            "at_least_200kb_counts": {
+              "high_impurity_or_unresolved": 54,
+              "threshold_based_MQ": 14,
+              "threshold_based_HQ": 9,
+              "threshold_based_LQ": 19
+            },
+            "assigned_bp": 170929204,
+            "query_count": 145702,
+            "primary_rule_changed": false,
+            "rRNA_tRNA_screened": false,
+            "numerical_units": "fractions in [0,1], not percentages",
+            "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+            "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+            "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+          },
+          "population_keys": [
+            "lower_bp",
+            "attributable_lineage",
+            "candidate_eligibility",
+            "status",
+            "clean_marker"
+          ],
+          "all_population_cells": {
+            "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 16313,
+              "all_bp": 6322049,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 4307,
+              "confirmed_bacterial_bp": 6317742
+            },
+            "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 6795,
+              "all_bp": 2587510,
+              "ambiguous_query_bp": 1469064,
+              "nn_quarantined_query_bp": 4987,
+              "unsupported_query_bp": 571405,
+              "confirmed_eukaryotic_bp": 381704,
+              "confirmed_bacterial_bp": 148575,
+              "confirmed_viral_bp": 11635,
+              "confirmed_other_bp": 140
+            },
+            "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 32986,
+              "all_bp": 12906463,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 7772,
+              "confirmed_eukaryotic_bp": 12898691
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 17173,
+              "all_bp": 10504507,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3670,
+              "confirmed_eukaryotic_bp": 10500837
+            },
+            "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1605,
+              "all_bp": 2306936,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2453,
+              "confirmed_bacterial_bp": 2304483
+            },
+            "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 4937,
+              "all_bp": 3111510,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1174,
+              "confirmed_eukaryotic_bp": 3110336
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 5727,
+              "all_bp": 7446452,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2287,
+              "confirmed_eukaryotic_bp": 7444165
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 9458,
+              "all_bp": 14555748,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 6107,
+              "confirmed_eukaryotic_bp": 14549641
+            },
+            "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1270,
+              "all_bp": 1105663,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1280,
+              "confirmed_bacterial_bp": 1104383
+            },
+            "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 278,
+              "all_bp": 171973,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 177,
+              "confirmed_viral_bp": 171796
+            },
+            "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 654,
+              "all_bp": 572772,
+              "ambiguous_query_bp": 280331,
+              "nn_quarantined_query_bp": 2366,
+              "unsupported_query_bp": 132883,
+              "confirmed_eukaryotic_bp": 94882,
+              "confirmed_bacterial_bp": 56476,
+              "confirmed_viral_bp": 5693,
+              "confirmed_other_bp": 141
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 6495,
+              "all_bp": 5635249,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1893,
+              "confirmed_eukaryotic_bp": 5633356
+            },
+            "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 2081,
+              "all_bp": 1261707,
+              "ambiguous_query_bp": 494190,
+              "nn_quarantined_query_bp": 2339,
+              "unsupported_query_bp": 357877,
+              "confirmed_eukaryotic_bp": 278769,
+              "confirmed_bacterial_bp": 110221,
+              "confirmed_viral_bp": 18008,
+              "confirmed_other_bp": 303
+            },
+            "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2960,
+              "all_bp": 4733878,
+              "ambiguous_query_bp": 3615067,
+              "nn_quarantined_query_bp": 3714,
+              "unsupported_query_bp": 472747,
+              "confirmed_bacterial_bp": 383437,
+              "confirmed_eukaryotic_bp": 237974,
+              "confirmed_viral_bp": 20939
+            },
+            "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 3387,
+              "all_bp": 2982392,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1138,
+              "confirmed_eukaryotic_bp": 2981254
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2166,
+              "all_bp": 7857437,
+              "ambiguous_query_bp": 252,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3113,
+              "confirmed_eukaryotic_bp": 7853729,
+              "confirmed_bacterial_bp": 343
+            },
+            "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2955,
+              "all_bp": 2582816,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1412,
+              "confirmed_bacterial_bp": 2581404
+            },
+            "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 3536,
+              "all_bp": 2146128,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1651,
+              "confirmed_bacterial_bp": 2144477
+            },
+            "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 6026,
+              "all_bp": 3734193,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1692,
+              "confirmed_bacterial_bp": 3732501
+            },
+            "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 5737,
+              "all_bp": 8702464,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 5168,
+              "confirmed_bacterial_bp": 8697296
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1221,
+              "all_bp": 1821157,
+              "ambiguous_query_bp": 900294,
+              "nn_quarantined_query_bp": 5276,
+              "unsupported_query_bp": 324290,
+              "confirmed_bacterial_bp": 343365,
+              "confirmed_eukaryotic_bp": 186908,
+              "confirmed_viral_bp": 57761,
+              "confirmed_other_bp": 3263
+            },
+            "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 87,
+              "all_bp": 145057,
+              "ambiguous_query_bp": 124370,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 12375,
+              "confirmed_bacterial_bp": 8312
+            },
+            "1|viral|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 480,
+              "all_bp": 184590,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 142,
+              "confirmed_viral_bp": 184448
+            },
+            "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1984,
+              "all_bp": 9006555,
+              "ambiguous_query_bp": 6752754,
+              "nn_quarantined_query_bp": 23884,
+              "unsupported_query_bp": 760829,
+              "confirmed_bacterial_bp": 1227670,
+              "confirmed_viral_bp": 111170,
+              "confirmed_eukaryotic_bp": 130248
+            },
+            "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 741,
+              "all_bp": 21114329,
+              "ambiguous_query_bp": 33574,
+              "nn_quarantined_query_bp": 220,
+              "unsupported_query_bp": 6352,
+              "confirmed_bacterial_bp": 21073907,
+              "confirmed_eukaryotic_bp": 276
+            },
+            "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1706,
+              "all_bp": 1067658,
+              "ambiguous_query_bp": 883962,
+              "nn_quarantined_query_bp": 536,
+              "unsupported_query_bp": 81524,
+              "confirmed_bacterial_bp": 64385,
+              "confirmed_eukaryotic_bp": 35837,
+              "confirmed_viral_bp": 1414
+            },
+            "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2356,
+              "all_bp": 10655482,
+              "ambiguous_query_bp": 5850,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 6167,
+              "confirmed_bacterial_bp": 10643465
+            },
+            "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 161,
+              "all_bp": 256379,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 208,
+              "confirmed_bacterial_bp": 256171
+            },
+            "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 603,
+              "all_bp": 31189739,
+              "ambiguous_query_bp": 20256151,
+              "nn_quarantined_query_bp": 5441914,
+              "unsupported_query_bp": 295299,
+              "confirmed_bacterial_bp": 3265985,
+              "confirmed_eukaryotic_bp": 1726488,
+              "confirmed_viral_bp": 203902
+            },
+            "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1023,
+              "all_bp": 897120,
+              "ambiguous_query_bp": 704401,
+              "nn_quarantined_query_bp": 1019,
+              "unsupported_query_bp": 90713,
+              "confirmed_bacterial_bp": 63584,
+              "confirmed_eukaryotic_bp": 35810,
+              "confirmed_viral_bp": 1593
+            },
+            "2500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 75,
+              "all_bp": 257471,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 547,
+              "confirmed_eukaryotic_bp": 256924
+            },
+            "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 36,
+              "all_bp": 810572,
+              "ambiguous_query_bp": 7368,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 197,
+              "confirmed_bacterial_bp": 803007
+            },
+            "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 94,
+              "all_bp": 155098,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 209,
+              "confirmed_viral_bp": 154889
+            },
+            "768|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 45,
+              "all_bp": 39314,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 34,
+              "confirmed_bacterial_bp": 39280
+            },
+            "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 106,
+              "all_bp": 484571,
+              "ambiguous_query_bp": 465,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 919,
+              "confirmed_viral_bp": 483187
+            },
+            "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 465,
+              "all_bp": 32451215,
+              "ambiguous_query_bp": 62129,
+              "nn_quarantined_query_bp": 227,
+              "unsupported_query_bp": 8265,
+              "confirmed_bacterial_bp": 32380594
+            },
+            "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 293,
+              "all_bp": 1211828,
+              "ambiguous_query_bp": 1093,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 804,
+              "confirmed_bacterial_bp": 1209931
+            },
+            "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 43,
+              "all_bp": 26285,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 48,
+              "confirmed_bacterial_bp": 26237
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 300,
+              "all_bp": 1123920,
+              "ambiguous_query_bp": 594312,
+              "nn_quarantined_query_bp": 11333,
+              "unsupported_query_bp": 134525,
+              "confirmed_bacterial_bp": 300035,
+              "confirmed_other_bp": 16278,
+              "confirmed_viral_bp": 44550,
+              "confirmed_eukaryotic_bp": 22887
+            },
+            "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 194,
+              "all_bp": 1049522,
+              "ambiguous_query_bp": 995,
+              "nn_quarantined_query_bp": 323,
+              "unsupported_query_bp": 588,
+              "confirmed_bacterial_bp": 1047616
+            },
+            "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 147,
+              "all_bp": 760245,
+              "ambiguous_query_bp": 614076,
+              "nn_quarantined_query_bp": 202,
+              "unsupported_query_bp": 48950,
+              "confirmed_bacterial_bp": 97017
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 33,
+              "all_bp": 54711,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 39,
+              "confirmed_eukaryotic_bp": 54672
+            },
+            "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 145,
+              "all_bp": 10641286,
+              "ambiguous_query_bp": 5434190,
+              "nn_quarantined_query_bp": 2152619,
+              "unsupported_query_bp": 111617,
+              "confirmed_bacterial_bp": 2827205,
+              "confirmed_eukaryotic_bp": 115655
+            },
+            "1|bacterial|candidate_excluded|excluded|clean_marker": {
+              "contigs": 55,
+              "all_bp": 22395,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 33,
+              "confirmed_bacterial_bp": 22362
+            },
+            "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 185,
+              "all_bp": 270161,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 488,
+              "confirmed_viral_bp": 269673
+            },
+            "768|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 25,
+              "all_bp": 22052,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 30,
+              "confirmed_viral_bp": 22022
+            },
+            "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 115,
+              "all_bp": 101083,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 98,
+              "confirmed_viral_bp": 100985
+            },
+            "1000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 8,
+              "all_bp": 13948,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 13948
+            },
+            "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 17,
+              "all_bp": 441791,
+              "ambiguous_query_bp": 2092,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 635,
+              "confirmed_viral_bp": 439064
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 27,
+              "all_bp": 117541,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1,
+              "confirmed_eukaryotic_bp": 117540
+            },
+            "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 25,
+              "all_bp": 22296,
+              "ambiguous_query_bp": 19795,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1538,
+              "confirmed_bacterial_bp": 963
+            },
+            "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 26,
+              "all_bp": 15908,
+              "ambiguous_query_bp": 10938,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2141,
+              "confirmed_bacterial_bp": 2829
+            },
+            "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 14,
+              "all_bp": 287993,
+              "ambiguous_query_bp": 90060,
+              "nn_quarantined_query_bp": 2246,
+              "unsupported_query_bp": 3148,
+              "confirmed_other_bp": 54405,
+              "confirmed_eukaryotic_bp": 560,
+              "confirmed_bacterial_bp": 137574
+            },
+            "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 30,
+              "all_bp": 1557408,
+              "ambiguous_query_bp": 1338,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 234,
+              "confirmed_eukaryotic_bp": 1555836
+            },
+            "500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 48,
+              "all_bp": 30409,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_bacterial_bp": 30409
+            },
+            "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 30,
+              "all_bp": 19476,
+              "ambiguous_query_bp": 17322,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1104,
+              "confirmed_bacterial_bp": 1050
+            },
+            "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 10,
+              "all_bp": 8684,
+              "ambiguous_query_bp": 2409,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2832,
+              "confirmed_bacterial_bp": 3443
+            },
+            "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 72,
+              "all_bp": 301693,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 634,
+              "confirmed_viral_bp": 301059
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 13,
+              "all_bp": 19555,
+              "ambiguous_query_bp": 14287,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3259,
+              "confirmed_bacterial_bp": 2009
+            },
+            "768|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 14,
+              "all_bp": 12047,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_bacterial_bp": 12028
+            },
+            "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 16,
+              "all_bp": 20784,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 8,
+              "confirmed_bacterial_bp": 20776
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1804,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_eukaryotic_bp": 1785
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1540,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 1540
+            },
+            "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+              "contigs": 28,
+              "all_bp": 11167,
+              "ambiguous_query_bp": 7907,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1444,
+              "confirmed_bacterial_bp": 1816
+            },
+            "2500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 5477,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_bacterial_bp": 5477
+            },
+            "10000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 26,
+              "all_bp": 1080222,
+              "ambiguous_query_bp": 702,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 1079520
+            },
+            "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 4,
+              "all_bp": 3454,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 3454
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 940,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 940
+            },
+            "500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 11,
+              "all_bp": 6942,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 64,
+              "confirmed_viral_bp": 6878
+            },
+            "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1002,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 1002
+            },
+            "10000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 3,
+              "all_bp": 41588,
+              "ambiguous_query_bp": 553,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 41035
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 6661,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3861,
+              "confirmed_bacterial_bp": 2800
+            },
+            "1|other|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 278,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 278
+            },
+            "10000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 92260,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 92260
+            },
+            "768|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 824,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 824
+            },
+            "2500|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 4,
+              "all_bp": 27707,
+              "ambiguous_query_bp": 340,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 27367
+            },
+            "10000|other|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 79232,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 79232
+            },
+            "10000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 398479,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 398479
+            },
+            "1000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1405,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 1405
+            }
+          }
+        }
+      },
+      "retained_E032_post": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10284660444221254,
+        "macro_R95": 0.11241530733811551,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 7
+      },
+      "new_diagnostic": {
+        "bytes": 418297,
+        "sha256": "01761dd3abed7caa81f9b08364cdc590d0893fc3004b451f27435c37408b08a1"
+      },
+      "retained_comparator": {
+        "bytes": 420889,
+        "sha256": "40441e1be8d7361d3a596329853229553c288836fffa35a8e19f3e6c869845bc"
+      },
+      "delta_R95_percentage_points": 0.004885679093617756,
+      "delta_T90": 0,
+      "retained_E032_multi_contig_T90": 7,
+      "delta_multi_contig_T90": 0,
+      "singleton_semantics": "Number of all contigs in the selected best bin; a multi-contig bin need not require fragmented-source recovery",
+      "geometry": {
+        "bytes": 68163,
+        "sha256": "138175adebc9bf77abe4eefe835c3693269c766e7e2a2d2e6f3d18c6fec3a33a"
+      }
+    },
+    "E009-GLM": {
+      "arms": {
+        "pre": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10248441802987401,
+            "macro_R95": 0.11241412291248758,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 6
+          },
+          "represented_confirmed_bp": 102790342,
+          "representation_upper_bound": 0.18532072214299777,
+          "pooled_assembly_conditional_R95": 0.5530111087673977,
+          "represented_ceiling_not_attainability": true,
+          "singleton_R95": 0.006705447168905006,
+          "multi_contig_R95": 0.09577897086096901,
+          "singleton_T90": 1,
+          "multi_contig_T90": 5,
+          "full_DNA": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 49586,
+                "bp": 172029973
+              },
+              "unassigned": {
+                "contigs": 39455,
+                "bp": 37612730
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "counts": {
+              "threshold_based_MQ": 15,
+              "threshold_based_LQ": 34,
+              "high_impurity_or_unresolved": 64,
+              "threshold_based_HQ": 8
+            },
+            "target_counts": {
+              "threshold_based_MQ": 13,
+              "high_impurity_or_unresolved": 45,
+              "threshold_based_LQ": 25,
+              "threshold_based_HQ": 6
+            },
+            "at_least_200kb_counts": {
+              "threshold_based_MQ": 15,
+              "threshold_based_LQ": 18,
+              "high_impurity_or_unresolved": 48,
+              "threshold_based_HQ": 8
+            },
+            "assigned_bp": 172029973,
+            "query_count": 145702,
+            "primary_rule_changed": false,
+            "rRNA_tRNA_screened": false,
+            "numerical_units": "fractions in [0,1], not percentages",
+            "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+            "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+            "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+          },
+          "population_keys": [
+            "lower_bp",
+            "attributable_lineage",
+            "candidate_eligibility",
+            "status",
+            "clean_marker"
+          ],
+          "all_population_cells": {
+            "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 16313,
+              "all_bp": 6322049,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 4307,
+              "confirmed_bacterial_bp": 6317742
+            },
+            "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 6795,
+              "all_bp": 2587510,
+              "ambiguous_query_bp": 1469064,
+              "nn_quarantined_query_bp": 4987,
+              "unsupported_query_bp": 571405,
+              "confirmed_eukaryotic_bp": 381704,
+              "confirmed_bacterial_bp": 148575,
+              "confirmed_viral_bp": 11635,
+              "confirmed_other_bp": 140
+            },
+            "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 32986,
+              "all_bp": 12906463,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 7772,
+              "confirmed_eukaryotic_bp": 12898691
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 15865,
+              "all_bp": 9671231,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3428,
+              "confirmed_eukaryotic_bp": 9667803
+            },
+            "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1985,
+              "all_bp": 2841234,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2952,
+              "confirmed_bacterial_bp": 2838282
+            },
+            "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 6245,
+              "all_bp": 3944786,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1416,
+              "confirmed_eukaryotic_bp": 3943370
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 11496,
+              "all_bp": 17319868,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 6000,
+              "confirmed_eukaryotic_bp": 17313868
+            },
+            "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1692,
+              "all_bp": 1474099,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1464,
+              "confirmed_bacterial_bp": 1472635
+            },
+            "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 276,
+              "all_bp": 170679,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 188,
+              "confirmed_viral_bp": 170491
+            },
+            "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 750,
+              "all_bp": 656694,
+              "ambiguous_query_bp": 340936,
+              "nn_quarantined_query_bp": 2366,
+              "unsupported_query_bp": 140846,
+              "confirmed_eukaryotic_bp": 93429,
+              "confirmed_bacterial_bp": 72763,
+              "confirmed_viral_bp": 6213,
+              "confirmed_other_bp": 141
+            },
+            "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 4571,
+              "all_bp": 4024305,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1330,
+              "confirmed_eukaryotic_bp": 4022975
+            },
+            "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 2341,
+              "all_bp": 1420229,
+              "ambiguous_query_bp": 634148,
+              "nn_quarantined_query_bp": 2339,
+              "unsupported_query_bp": 362074,
+              "confirmed_eukaryotic_bp": 273916,
+              "confirmed_bacterial_bp": 129580,
+              "confirmed_viral_bp": 17869,
+              "confirmed_other_bp": 303
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 3689,
+              "all_bp": 4682332,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2394,
+              "confirmed_eukaryotic_bp": 4679938
+            },
+            "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2807,
+              "all_bp": 4494248,
+              "ambiguous_query_bp": 3447905,
+              "nn_quarantined_query_bp": 3390,
+              "unsupported_query_bp": 442139,
+              "confirmed_bacterial_bp": 337441,
+              "confirmed_eukaryotic_bp": 236413,
+              "confirmed_viral_bp": 26960
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 5311,
+              "all_bp": 4593336,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1701,
+              "confirmed_eukaryotic_bp": 4591635
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2195,
+              "all_bp": 7954637,
+              "ambiguous_query_bp": 252,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3155,
+              "confirmed_eukaryotic_bp": 7950887,
+              "confirmed_bacterial_bp": 343
+            },
+            "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 4743,
+              "all_bp": 2880148,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1911,
+              "confirmed_bacterial_bp": 2878237
+            },
+            "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 4819,
+              "all_bp": 3000173,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1432,
+              "confirmed_bacterial_bp": 2998741
+            },
+            "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 5357,
+              "all_bp": 8168166,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 4669,
+              "confirmed_bacterial_bp": 8163497
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1374,
+              "all_bp": 2060787,
+              "ambiguous_query_bp": 1067456,
+              "nn_quarantined_query_bp": 5600,
+              "unsupported_query_bp": 354898,
+              "confirmed_bacterial_bp": 389361,
+              "confirmed_viral_bp": 51740,
+              "confirmed_eukaryotic_bp": 188469,
+              "confirmed_other_bp": 3263
+            },
+            "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 80,
+              "all_bp": 134281,
+              "ambiguous_query_bp": 116185,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 9802,
+              "confirmed_bacterial_bp": 8294
+            },
+            "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2533,
+              "all_bp": 2214380,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1228,
+              "confirmed_bacterial_bp": 2213152
+            },
+            "1|viral|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 480,
+              "all_bp": 184590,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 142,
+              "confirmed_viral_bp": 184448
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 352,
+              "all_bp": 1340533,
+              "ambiguous_query_bp": 698802,
+              "nn_quarantined_query_bp": 20130,
+              "unsupported_query_bp": 137245,
+              "confirmed_bacterial_bp": 391795,
+              "confirmed_other_bp": 16278,
+              "confirmed_eukaryotic_bp": 28406,
+              "confirmed_viral_bp": 47877
+            },
+            "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 722,
+              "all_bp": 20628297,
+              "ambiguous_query_bp": 32201,
+              "nn_quarantined_query_bp": 220,
+              "unsupported_query_bp": 6313,
+              "confirmed_bacterial_bp": 20589287,
+              "confirmed_eukaryotic_bp": 276
+            },
+            "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1446,
+              "all_bp": 909136,
+              "ambiguous_query_bp": 744004,
+              "nn_quarantined_query_bp": 536,
+              "unsupported_query_bp": 77327,
+              "confirmed_bacterial_bp": 45026,
+              "confirmed_eukaryotic_bp": 40690,
+              "confirmed_viral_bp": 1553
+            },
+            "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2267,
+              "all_bp": 10212760,
+              "ambiguous_query_bp": 4917,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 5744,
+              "confirmed_bacterial_bp": 10202099
+            },
+            "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 157,
+              "all_bp": 251926,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 180,
+              "confirmed_bacterial_bp": 251746
+            },
+            "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 597,
+              "all_bp": 30922213,
+              "ambiguous_query_bp": 20203886,
+              "nn_quarantined_query_bp": 5441914,
+              "unsupported_query_bp": 294536,
+              "confirmed_bacterial_bp": 3228121,
+              "confirmed_eukaryotic_bp": 1726488,
+              "confirmed_viral_bp": 27268
+            },
+            "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1932,
+              "all_bp": 8789942,
+              "ambiguous_query_bp": 6648264,
+              "nn_quarantined_query_bp": 15087,
+              "unsupported_query_bp": 758109,
+              "confirmed_bacterial_bp": 1135910,
+              "confirmed_viral_bp": 107843,
+              "confirmed_eukaryotic_bp": 124729
+            },
+            "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 927,
+              "all_bp": 813198,
+              "ambiguous_query_bp": 643796,
+              "nn_quarantined_query_bp": 1019,
+              "unsupported_query_bp": 82750,
+              "confirmed_bacterial_bp": 47297,
+              "confirmed_eukaryotic_bp": 37263,
+              "confirmed_viral_bp": 1073
+            },
+            "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 55,
+              "all_bp": 1296604,
+              "ambiguous_query_bp": 8741,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 236,
+              "confirmed_bacterial_bp": 1287627
+            },
+            "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 104,
+              "all_bp": 170037,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 209,
+              "confirmed_viral_bp": 169828
+            },
+            "768|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 39,
+              "all_bp": 34222,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 34,
+              "confirmed_bacterial_bp": 34188
+            },
+            "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 111,
+              "all_bp": 506496,
+              "ambiguous_query_bp": 465,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1092,
+              "confirmed_viral_bp": 504939
+            },
+            "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 465,
+              "all_bp": 32451215,
+              "ambiguous_query_bp": 62129,
+              "nn_quarantined_query_bp": 227,
+              "unsupported_query_bp": 8265,
+              "confirmed_bacterial_bp": 32380594
+            },
+            "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 382,
+              "all_bp": 1654550,
+              "ambiguous_query_bp": 2026,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1227,
+              "confirmed_bacterial_bp": 1651297
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 20,
+              "all_bp": 30331,
+              "ambiguous_query_bp": 22472,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 5832,
+              "confirmed_bacterial_bp": 2027
+            },
+            "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 50,
+              "all_bp": 30457,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 48,
+              "confirmed_bacterial_bp": 30409
+            },
+            "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 194,
+              "all_bp": 1049522,
+              "ambiguous_query_bp": 995,
+              "nn_quarantined_query_bp": 323,
+              "unsupported_query_bp": 588,
+              "confirmed_bacterial_bp": 1047616
+            },
+            "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 141,
+              "all_bp": 737229,
+              "ambiguous_query_bp": 594678,
+              "nn_quarantined_query_bp": 202,
+              "unsupported_query_bp": 48865,
+              "confirmed_bacterial_bp": 93484
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 33,
+              "all_bp": 55236,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 55236
+            },
+            "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 145,
+              "all_bp": 10641286,
+              "ambiguous_query_bp": 5434190,
+              "nn_quarantined_query_bp": 2152619,
+              "unsupported_query_bp": 111617,
+              "confirmed_bacterial_bp": 2827205,
+              "confirmed_eukaryotic_bp": 115655
+            },
+            "2500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 46,
+              "all_bp": 160271,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 505,
+              "confirmed_eukaryotic_bp": 159766
+            },
+            "1|bacterial|candidate_excluded|excluded|clean_marker": {
+              "contigs": 55,
+              "all_bp": 22395,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 33,
+              "confirmed_bacterial_bp": 22362
+            },
+            "500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 13,
+              "all_bp": 8236,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 53,
+              "confirmed_viral_bp": 8183
+            },
+            "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 175,
+              "all_bp": 255222,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 488,
+              "confirmed_viral_bp": 254734
+            },
+            "768|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 25,
+              "all_bp": 22024,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 30,
+              "confirmed_viral_bp": 21994
+            },
+            "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 115,
+              "all_bp": 101111,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 98,
+              "confirmed_viral_bp": 101013
+            },
+            "1000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 8,
+              "all_bp": 13948,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 13948
+            },
+            "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 14,
+              "all_bp": 371117,
+              "ambiguous_query_bp": 1909,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 312,
+              "confirmed_viral_bp": 368896
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 27,
+              "all_bp": 117541,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1,
+              "confirmed_eukaryotic_bp": 117540
+            },
+            "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 21,
+              "all_bp": 18552,
+              "ambiguous_query_bp": 16343,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1501,
+              "confirmed_bacterial_bp": 708
+            },
+            "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 31,
+              "all_bp": 18770,
+              "ambiguous_query_bp": 13187,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2177,
+              "confirmed_bacterial_bp": 3406
+            },
+            "768|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 20,
+              "all_bp": 17139,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_bacterial_bp": 17120
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 8,
+              "all_bp": 29677,
+              "ambiguous_query_bp": 19398,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3946,
+              "confirmed_bacterial_bp": 6333
+            },
+            "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 20,
+              "all_bp": 555519,
+              "ambiguous_query_bp": 142325,
+              "nn_quarantined_query_bp": 2246,
+              "unsupported_query_bp": 3911,
+              "confirmed_other_bp": 54405,
+              "confirmed_eukaryotic_bp": 560,
+              "confirmed_bacterial_bp": 175438,
+              "confirmed_viral_bp": 176634
+            },
+            "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 29,
+              "all_bp": 1539523,
+              "ambiguous_query_bp": 1338,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 234,
+              "confirmed_eukaryotic_bp": 1537951
+            },
+            "10000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 29,
+              "all_bp": 1150896,
+              "ambiguous_query_bp": 885,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 323,
+              "confirmed_viral_bp": 1149688
+            },
+            "500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 41,
+              "all_bp": 26237,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_bacterial_bp": 26237
+            },
+            "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 14,
+              "all_bp": 12428,
+              "ambiguous_query_bp": 5861,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2869,
+              "confirmed_bacterial_bp": 3698
+            },
+            "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 67,
+              "all_bp": 279768,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 461,
+              "confirmed_viral_bp": 279307
+            },
+            "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 20,
+              "all_bp": 25237,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 36,
+              "confirmed_bacterial_bp": 25201
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1804,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_eukaryotic_bp": 1785
+            },
+            "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+              "contigs": 28,
+              "all_bp": 11167,
+              "ambiguous_query_bp": 7907,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1444,
+              "confirmed_bacterial_bp": 1816
+            },
+            "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 25,
+              "all_bp": 16614,
+              "ambiguous_query_bp": 15073,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1068,
+              "confirmed_bacterial_bp": 473
+            },
+            "2500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 5477,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_bacterial_bp": 5477
+            },
+            "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 4,
+              "all_bp": 3454,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 3454
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 940,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 940
+            },
+            "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1002,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 1002
+            },
+            "10000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 4,
+              "all_bp": 59473,
+              "ambiguous_query_bp": 553,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 58920
+            },
+            "1|other|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 278,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 278
+            },
+            "10000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 92260,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 92260
+            },
+            "768|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 824,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 824
+            },
+            "2500|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 4,
+              "all_bp": 27707,
+              "ambiguous_query_bp": 340,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 27367
+            },
+            "10000|other|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 79232,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 79232
+            },
+            "10000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 398479,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 398479
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1015,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 39,
+              "confirmed_eukaryotic_bp": 976
+            },
+            "1000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1405,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 1405
+            }
+          }
+        },
+        "post": {
+          "primary": {
+            "targets": 156,
+            "reference_bp": 554661890,
+            "bp_weighted_R95": 0.10337761983250733,
+            "macro_R95": 0.11304975313926101,
+            "at_least_50_percent": 19,
+            "at_least_90_percent": 6
+          },
+          "represented_confirmed_bp": 102790342,
+          "representation_upper_bound": 0.18532072214299777,
+          "pooled_assembly_conditional_R95": 0.5578308709197601,
+          "represented_ceiling_not_attainability": true,
+          "singleton_R95": 0.006705447168905006,
+          "multi_contig_R95": 0.09667217266360233,
+          "singleton_T90": 1,
+          "multi_contig_T90": 5,
+          "full_DNA": {
+            "contigs": 145702,
+            "bp": 231678157,
+            "populations": {
+              "assigned": {
+                "contigs": 51422,
+                "bp": 173621698
+              },
+              "unassigned": {
+                "contigs": 37619,
+                "bp": 36021005
+              },
+              "excluded": {
+                "contigs": 56661,
+                "bp": 22035454
+              }
+            },
+            "full_DNA_manifest": false
+          },
+          "secondary": {
+            "counts": {
+              "threshold_based_MQ": 15,
+              "threshold_based_LQ": 34,
+              "high_impurity_or_unresolved": 64,
+              "threshold_based_HQ": 8
+            },
+            "target_counts": {
+              "threshold_based_MQ": 13,
+              "high_impurity_or_unresolved": 45,
+              "threshold_based_LQ": 25,
+              "threshold_based_HQ": 6
+            },
+            "at_least_200kb_counts": {
+              "threshold_based_MQ": 15,
+              "threshold_based_LQ": 18,
+              "high_impurity_or_unresolved": 48,
+              "threshold_based_HQ": 8
+            },
+            "assigned_bp": 173621698,
+            "query_count": 145702,
+            "primary_rule_changed": false,
+            "rRNA_tRNA_screened": false,
+            "numerical_units": "fractions in [0,1], not percentages",
+            "label": "Secondary sequence-truth threshold-based tiers, not formal MIMAG HQ",
+            "semantics": "full-reference union completeness; 1-confirmed/all-bin purity includes unresolved DNA and is a contamination upper bound; origin oracle is not uniqueness",
+            "thresholds": "HQ completeness>90%, impurity<5%; else MQ completeness>=50%, impurity<10%; else LQ completeness<50%, impurity<10%; else unresolved/high impurity"
+          },
+          "population_keys": [
+            "lower_bp",
+            "attributable_lineage",
+            "candidate_eligibility",
+            "status",
+            "clean_marker"
+          ],
+          "all_population_cells": {
+            "1|bacterial|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 16313,
+              "all_bp": 6322049,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 4307,
+              "confirmed_bacterial_bp": 6317742
+            },
+            "1|not_attributable|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 6795,
+              "all_bp": 2587510,
+              "ambiguous_query_bp": 1469064,
+              "nn_quarantined_query_bp": 4987,
+              "unsupported_query_bp": 571405,
+              "confirmed_eukaryotic_bp": 381704,
+              "confirmed_bacterial_bp": 148575,
+              "confirmed_viral_bp": 11635,
+              "confirmed_other_bp": 140
+            },
+            "1|eukaryotic|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 32986,
+              "all_bp": 12906463,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 7772,
+              "confirmed_eukaryotic_bp": 12898691
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 15865,
+              "all_bp": 9671231,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3428,
+              "confirmed_eukaryotic_bp": 9667803
+            },
+            "1000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1750,
+              "all_bp": 2521812,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2820,
+              "confirmed_bacterial_bp": 2518992
+            },
+            "500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 6245,
+              "all_bp": 3944786,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1416,
+              "confirmed_eukaryotic_bp": 3943370
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 11496,
+              "all_bp": 17319868,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 6000,
+              "confirmed_eukaryotic_bp": 17313868
+            },
+            "768|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1412,
+              "all_bp": 1231069,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1308,
+              "confirmed_bacterial_bp": 1229761
+            },
+            "500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 276,
+              "all_bp": 170679,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 188,
+              "confirmed_viral_bp": 170491
+            },
+            "768|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 662,
+              "all_bp": 579889,
+              "ambiguous_query_bp": 283862,
+              "nn_quarantined_query_bp": 2366,
+              "unsupported_query_bp": 133057,
+              "confirmed_eukaryotic_bp": 93429,
+              "confirmed_bacterial_bp": 60821,
+              "confirmed_viral_bp": 6213,
+              "confirmed_other_bp": 141
+            },
+            "768|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 4571,
+              "all_bp": 4024305,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1330,
+              "confirmed_eukaryotic_bp": 4022975
+            },
+            "500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 2101,
+              "all_bp": 1274843,
+              "ambiguous_query_bp": 513134,
+              "nn_quarantined_query_bp": 2339,
+              "unsupported_query_bp": 354329,
+              "confirmed_eukaryotic_bp": 273916,
+              "confirmed_bacterial_bp": 114006,
+              "confirmed_viral_bp": 16816,
+              "confirmed_other_bp": 303
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 3689,
+              "all_bp": 4682332,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2394,
+              "confirmed_eukaryotic_bp": 4679938
+            },
+            "1000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2910,
+              "all_bp": 4645068,
+              "ambiguous_query_bp": 3553695,
+              "nn_quarantined_query_bp": 3714,
+              "unsupported_query_bp": 452972,
+              "confirmed_bacterial_bp": 371314,
+              "confirmed_eukaryotic_bp": 236413,
+              "confirmed_viral_bp": 26960
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 5311,
+              "all_bp": 4593336,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1701,
+              "confirmed_eukaryotic_bp": 4591635
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2195,
+              "all_bp": 7954637,
+              "ambiguous_query_bp": 252,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3155,
+              "confirmed_eukaryotic_bp": 7950887,
+              "confirmed_bacterial_bp": 343
+            },
+            "500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 3915,
+              "all_bp": 2377163,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1739,
+              "confirmed_bacterial_bp": 2375424
+            },
+            "500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 5647,
+              "all_bp": 3503158,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1604,
+              "confirmed_bacterial_bp": 3501554
+            },
+            "1000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 5592,
+              "all_bp": 8487588,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 4801,
+              "confirmed_bacterial_bp": 8482787
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1271,
+              "all_bp": 1909967,
+              "ambiguous_query_bp": 961666,
+              "nn_quarantined_query_bp": 5276,
+              "unsupported_query_bp": 344065,
+              "confirmed_bacterial_bp": 355488,
+              "confirmed_viral_bp": 51740,
+              "confirmed_eukaryotic_bp": 188469,
+              "confirmed_other_bp": 3263
+            },
+            "1000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 83,
+              "all_bp": 138930,
+              "ambiguous_query_bp": 119842,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 9802,
+              "confirmed_bacterial_bp": 9286
+            },
+            "768|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2813,
+              "all_bp": 2457410,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1384,
+              "confirmed_bacterial_bp": 2456026
+            },
+            "1|viral|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 480,
+              "all_bp": 184590,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 142,
+              "confirmed_viral_bp": 184448
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 337,
+              "all_bp": 1287849,
+              "ambiguous_query_bp": 676342,
+              "nn_quarantined_query_bp": 17239,
+              "unsupported_query_bp": 136910,
+              "confirmed_bacterial_bp": 364797,
+              "confirmed_other_bp": 16278,
+              "confirmed_eukaryotic_bp": 28406,
+              "confirmed_viral_bp": 47877
+            },
+            "10000|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 722,
+              "all_bp": 20628297,
+              "ambiguous_query_bp": 32201,
+              "nn_quarantined_query_bp": 220,
+              "unsupported_query_bp": 6313,
+              "confirmed_bacterial_bp": 20589287,
+              "confirmed_eukaryotic_bp": 276
+            },
+            "500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1686,
+              "all_bp": 1054522,
+              "ambiguous_query_bp": 865018,
+              "nn_quarantined_query_bp": 536,
+              "unsupported_query_bp": 85072,
+              "confirmed_bacterial_bp": 60600,
+              "confirmed_eukaryotic_bp": 40690,
+              "confirmed_viral_bp": 2606
+            },
+            "2500|bacterial|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 2286,
+              "all_bp": 10283919,
+              "ambiguous_query_bp": 4917,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 5749,
+              "confirmed_bacterial_bp": 10273253
+            },
+            "1000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 162,
+              "all_bp": 258120,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 215,
+              "confirmed_bacterial_bp": 257905
+            },
+            "10000|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 597,
+              "all_bp": 30922213,
+              "ambiguous_query_bp": 20203886,
+              "nn_quarantined_query_bp": 5441914,
+              "unsupported_query_bp": 294536,
+              "confirmed_bacterial_bp": 3228121,
+              "confirmed_eukaryotic_bp": 1726488,
+              "confirmed_viral_bp": 27268
+            },
+            "2500|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1947,
+              "all_bp": 8842626,
+              "ambiguous_query_bp": 6670724,
+              "nn_quarantined_query_bp": 17978,
+              "unsupported_query_bp": 758444,
+              "confirmed_bacterial_bp": 1162908,
+              "confirmed_viral_bp": 107843,
+              "confirmed_eukaryotic_bp": 124729
+            },
+            "768|not_attributable|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1015,
+              "all_bp": 890003,
+              "ambiguous_query_bp": 700870,
+              "nn_quarantined_query_bp": 1019,
+              "unsupported_query_bp": 90539,
+              "confirmed_bacterial_bp": 59239,
+              "confirmed_eukaryotic_bp": 37263,
+              "confirmed_viral_bp": 1073
+            },
+            "10000|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 55,
+              "all_bp": 1296604,
+              "ambiguous_query_bp": 8741,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 236,
+              "confirmed_bacterial_bp": 1287627
+            },
+            "1000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 104,
+              "all_bp": 170037,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 209,
+              "confirmed_viral_bp": 169828
+            },
+            "768|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 42,
+              "all_bp": 36723,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 34,
+              "confirmed_bacterial_bp": 36689
+            },
+            "2500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 111,
+              "all_bp": 506496,
+              "ambiguous_query_bp": 465,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1092,
+              "confirmed_viral_bp": 504939
+            },
+            "10000|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 465,
+              "all_bp": 32451215,
+              "ambiguous_query_bp": 62129,
+              "nn_quarantined_query_bp": 227,
+              "unsupported_query_bp": 8265,
+              "confirmed_bacterial_bp": 32380594
+            },
+            "2500|bacterial|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 363,
+              "all_bp": 1583391,
+              "ambiguous_query_bp": 2026,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1222,
+              "confirmed_bacterial_bp": 1580143
+            },
+            "500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 44,
+              "all_bp": 27102,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 39,
+              "confirmed_bacterial_bp": 27063
+            },
+            "2500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 194,
+              "all_bp": 1049522,
+              "ambiguous_query_bp": 995,
+              "nn_quarantined_query_bp": 323,
+              "unsupported_query_bp": 588,
+              "confirmed_bacterial_bp": 1047616
+            },
+            "2500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 143,
+              "all_bp": 743445,
+              "ambiguous_query_bp": 597361,
+              "nn_quarantined_query_bp": 202,
+              "unsupported_query_bp": 48865,
+              "confirmed_bacterial_bp": 97017
+            },
+            "1000|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 33,
+              "all_bp": 55236,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 55236
+            },
+            "10000|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 145,
+              "all_bp": 10641286,
+              "ambiguous_query_bp": 5434190,
+              "nn_quarantined_query_bp": 2152619,
+              "unsupported_query_bp": 111617,
+              "confirmed_bacterial_bp": 2827205,
+              "confirmed_eukaryotic_bp": 115655
+            },
+            "2500|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 46,
+              "all_bp": 160271,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 505,
+              "confirmed_eukaryotic_bp": 159766
+            },
+            "1|bacterial|candidate_excluded|excluded|clean_marker": {
+              "contigs": 55,
+              "all_bp": 22395,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 33,
+              "confirmed_bacterial_bp": 22362
+            },
+            "500|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 13,
+              "all_bp": 8236,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 53,
+              "confirmed_viral_bp": 8183
+            },
+            "1000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 175,
+              "all_bp": 255222,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 488,
+              "confirmed_viral_bp": 254734
+            },
+            "768|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 25,
+              "all_bp": 22024,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 30,
+              "confirmed_viral_bp": 21994
+            },
+            "768|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 115,
+              "all_bp": 101111,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 98,
+              "confirmed_viral_bp": 101013
+            },
+            "1000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 8,
+              "all_bp": 13948,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 13948
+            },
+            "10000|viral|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 14,
+              "all_bp": 371117,
+              "ambiguous_query_bp": 1909,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 312,
+              "confirmed_viral_bp": 368896
+            },
+            "2500|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 27,
+              "all_bp": 117541,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1,
+              "confirmed_eukaryotic_bp": 117540
+            },
+            "500|bacterial|candidate_eligible|assigned|clean_marker": {
+              "contigs": 47,
+              "all_bp": 29592,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 9,
+              "confirmed_bacterial_bp": 29583
+            },
+            "768|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 25,
+              "all_bp": 22274,
+              "ambiguous_query_bp": 18832,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2479,
+              "confirmed_bacterial_bp": 963
+            },
+            "500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 26,
+              "all_bp": 15973,
+              "ambiguous_query_bp": 10390,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 2177,
+              "confirmed_bacterial_bp": 3406
+            },
+            "2500|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 6,
+              "all_bp": 23461,
+              "ambiguous_query_bp": 16715,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 3946,
+              "confirmed_bacterial_bp": 2800
+            },
+            "10000|not_attributable|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 20,
+              "all_bp": 555519,
+              "ambiguous_query_bp": 142325,
+              "nn_quarantined_query_bp": 2246,
+              "unsupported_query_bp": 3911,
+              "confirmed_other_bp": 54405,
+              "confirmed_eukaryotic_bp": 560,
+              "confirmed_bacterial_bp": 175438,
+              "confirmed_viral_bp": 176634
+            },
+            "10000|eukaryotic|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 29,
+              "all_bp": 1539523,
+              "ambiguous_query_bp": 1338,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 234,
+              "confirmed_eukaryotic_bp": 1537951
+            },
+            "10000|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 29,
+              "all_bp": 1150896,
+              "ambiguous_query_bp": 885,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 323,
+              "confirmed_viral_bp": 1149688
+            },
+            "500|not_attributable|candidate_eligible|assigned|clean_marker": {
+              "contigs": 30,
+              "all_bp": 19411,
+              "ambiguous_query_bp": 17870,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1068,
+              "confirmed_bacterial_bp": 473
+            },
+            "768|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 10,
+              "all_bp": 8706,
+              "ambiguous_query_bp": 3372,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1891,
+              "confirmed_bacterial_bp": 3443
+            },
+            "2500|viral|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 67,
+              "all_bp": 279768,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 461,
+              "confirmed_viral_bp": 279307
+            },
+            "768|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 17,
+              "all_bp": 14638,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_bacterial_bp": 14619
+            },
+            "1000|not_attributable|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 17,
+              "all_bp": 25682,
+              "ambiguous_query_bp": 18815,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 5832,
+              "confirmed_bacterial_bp": 1035
+            },
+            "1000|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 15,
+              "all_bp": 19043,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1,
+              "confirmed_bacterial_bp": 19042
+            },
+            "500|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1804,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 19,
+              "confirmed_eukaryotic_bp": 1785
+            },
+            "1|not_attributable|candidate_excluded|excluded|clean_marker": {
+              "contigs": 28,
+              "all_bp": 11167,
+              "ambiguous_query_bp": 7907,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 1444,
+              "confirmed_bacterial_bp": 1816
+            },
+            "2500|bacterial|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 5477,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_bacterial_bp": 5477
+            },
+            "768|eukaryotic|candidate_eligible|assigned|clean_marker": {
+              "contigs": 4,
+              "all_bp": 3454,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 3454
+            },
+            "768|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 940,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 940
+            },
+            "1|eukaryotic|candidate_excluded|excluded|clean_marker": {
+              "contigs": 3,
+              "all_bp": 1002,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 1002
+            },
+            "10000|eukaryotic|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 4,
+              "all_bp": 59473,
+              "ambiguous_query_bp": 553,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_eukaryotic_bp": 58920
+            },
+            "1|other|candidate_excluded|excluded|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 278,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 278
+            },
+            "10000|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 92260,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 92260
+            },
+            "768|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 824,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 824
+            },
+            "2500|other|candidate_eligible|unassigned|no_clean_marker": {
+              "contigs": 4,
+              "all_bp": 27707,
+              "ambiguous_query_bp": 340,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 27367
+            },
+            "10000|other|candidate_eligible|assigned|no_clean_marker": {
+              "contigs": 1,
+              "all_bp": 79232,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_other_bp": 79232
+            },
+            "10000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 2,
+              "all_bp": 398479,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 398479
+            },
+            "1000|eukaryotic|candidate_eligible|unassigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1015,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 39,
+              "confirmed_eukaryotic_bp": 976
+            },
+            "1000|viral|candidate_eligible|assigned|clean_marker": {
+              "contigs": 1,
+              "all_bp": 1405,
+              "ambiguous_query_bp": 0,
+              "nn_quarantined_query_bp": 0,
+              "unsupported_query_bp": 0,
+              "confirmed_viral_bp": 1405
+            }
+          }
+        }
+      },
+      "retained_E032_post": {
+        "targets": 156,
+        "reference_bp": 554661890,
+        "bp_weighted_R95": 0.10175990097318567,
+        "macro_R95": 0.11148414369635522,
+        "at_least_50_percent": 19,
+        "at_least_90_percent": 6
+      },
+      "new_diagnostic": {
+        "bytes": 400714,
+        "sha256": "3fd2f60086f79adb05f6df04edb86a99aedda1a437e2b8b7308a71650578a7a9"
+      },
+      "retained_comparator": {
+        "bytes": 415975,
+        "sha256": "c4d9b0757d7df6645738f42172102ea6de1e1f821caf36f78d7dc71d9780407a"
+      },
+      "delta_R95_percentage_points": 0.16177188593216596,
+      "delta_T90": 0,
+      "retained_E032_multi_contig_T90": 6,
+      "delta_multi_contig_T90": -1,
+      "singleton_semantics": "Number of all contigs in the selected best bin; a multi-contig bin need not require fragmented-source recovery",
+      "geometry": {
+        "bytes": 68120,
+        "sha256": "7cf10ffa1bc10b1f19cca5ab5ec40cb2475d2d5bbb903527a8284bc43142de21"
+      }
+    }
+  },
+  "oral_exact_fallback": {
+    "new_fit": false,
+    "rescored": false,
+    "retained_summary": {
+      "bytes": 10817666,
+      "sha256": "c3a1500eefa0058efdd0790c3e827742a58b454e1d1f47c111c47787e9c02a86"
+    },
+    "retained_summary_path": "artifacts/e032-biological-candidate-selection/inspection/review-oral-noGLM/review.json",
+    "primary": {
+      "origin": {
+        "accounting": {
+          "contigs": 1286547,
+          "bp": 1669981123,
+          "quarantined_bp": 1734,
+          "unassigned_bp": 657193248
+        },
+        "recovery_summary": {
+          "targets": 799,
+          "reference_bp": 2083072211,
+          "bp_weighted_R95": 0.3437864497535655,
+          "macro_R95": 0.35342722362177414,
+          "at_least_50_percent": 291,
+          "at_least_90_percent": 219
+        },
+        "mode": "provided-origin"
+      },
+      "known_shared_mask": {
+        "accounting": {
+          "contigs": 1286547,
+          "bp": 1669981123,
+          "quarantined_bp": 1734,
+          "unassigned_bp": 657193248
+        },
+        "recovery_summary": {
+          "targets": 799,
+          "reference_bp": 2083072211,
+          "bp_weighted_R95": 0.3437864497535655,
+          "macro_R95": 0.35342722362177414,
+          "at_least_50_percent": 291,
+          "at_least_90_percent": 219
+        },
+        "mode": "provided-origin-known-shared-mask sensitivity; not exhaustive uniqueness"
+      }
+    },
+    "accepted_full_DNA": {
+      "contigs": 1286547,
+      "bp": 1669981123,
+      "populations": {
+        "assigned": {
+          "contigs": 108734,
+          "bp": 1012787875
+        },
+        "unassigned": {
+          "contigs": 400029,
+          "bp": 431039789
+        },
+        "excluded": {
+          "contigs": 777784,
+          "bp": 226153459
+        }
+      },
+      "full_DNA_manifest": false
+    }
+  },
+  "primary_denominators": {
+    "E009_targets": 156,
+    "E009_reference_bp": 554661890,
+    "E009_N_quarantine_percent": 3.3034,
+    "oral_targets": 799,
+    "oral_reference_bp": 2083072211,
+    "truth_scopes_are_different": true
+  },
+  "secondary_label": "Full-reference sequence tiers, contamination upper bound; no RNA screen, not formal MIMAG HQ",
+  "old_scores_recomputed": false,
+  "targets": {
+    "bytes": 41742,
+    "sha256": "753705ac9b0ed4c815b606840af4f323cd02e17198d7f9ef56a0d3811a241c91"
+  },
+  "per_bin_secondary": {
+    "bytes": 89444,
+    "sha256": "eb64b3d51edfdbcd4649b0c0e77aa9558b4c09435822f67ec0b36504f1246066"
+  },
+  "frozen_criteria": {
+    "exact_Oral_fallback": true,
+    "no_E032_R95_or_T90_regression": true,
+    "stronger_E031_anchors": {
+      "E009-noGLM": false,
+      "E009-GLM": false
+    },
+    "half_percentage_point_or_three_multi_T90": false,
+    "joint_KEEP": false
+  },
+  "disposition": "MODIFY_NOT_PROMOTED",
+  "interpretation": "Smaller R95 gains with target trade-offs; no new T90, strong anchors and joint KEEP unmet. Preserve optional path; do not tune to these labels.",
+  "phase": "recover-20261114T010841Z-2c81c80",
+  "scientific_source": "7aa7bf7d06eaa10849f39de46a266464ecf25761",
+  "operational_source": "2c81c808e791ff7bccff8e192ee9b8e86c80535d",
+  "targets_path": "experiments/E036-optional-pooled-links/targets.tsv",
+  "per_bin_secondary_path": "experiments/E036-optional-pooled-links/bin-quality.tsv",
+  "review_source_files": {
+    "scripts/e036_stream_review.py": {
+      "bytes": 3989,
+      "sha256": "2f473f484d38a24b1542aa56192572d638c638c27508a86837c47f2b7abfbb83"
+    },
+    "scripts/e036_completed_inspection.py": {
+      "bytes": 11591,
+      "sha256": "8a6a56e592f33478c5e2fba2a14d1d9fe98845c88b20d2e6df677f7a6a490e81"
+    },
+    "scripts/e036_geometry_review.py": {
+      "bytes": 10709,
+      "sha256": "3a71fcb636e0698182384afd243c5f5967fc13b010199d6789b6be40dc41b7ca"
+    },
+    "scripts/e036_summarize.py": {
+      "bytes": 7992,
+      "sha256": "3b9908b8b188675dbcd24ab8a4e0bdc55d7f51a6aa6f511dec5ff1123269eb81"
+    },
+    "scripts/e036_review.py": {
+      "bytes": 3937,
+      "sha256": "3ade1f4764fc92ec3b9baae95a8301c803cabc75b016d239ae5384df80d0a34e"
+    }
+  }
+}

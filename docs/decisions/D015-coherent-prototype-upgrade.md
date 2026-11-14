@@ -1,5 +1,27 @@
 # D015: a coherent prototype upgrade with selective ablations
 
+## November 14 completed E036: qualify biological context, avoid another grid
+
+[E036](../../experiments/E036-optional-pooled-links/completed-review.md) passes
+all engineering/delivery contracts and gives small paired R95 gains with source
+trade-offs, no new T90, and failed strong-anchor/KEEP criteria. MODIFY does not
+promote the unchanged graph adapter. Only 3,074 vectors change; discordant-origin
+endpoints become almost as aligned as concordant ones under the frozen prototype
+objective. No demonstrated implementation bug or truth-selected repair explains
+that design limitation. Preserve links/fallback for later real-assembly evidence.
+
+Choose [the implemented confidence-aware taxonomy candidate](../../experiments/E036-optional-pooled-links/next-block.md)
+as one next coherent information block around strong E031/fixed E032. Broader
+independent context is better justified now than a larger network or continued
+development-set selector/loss tuning. Source evidence supports the hypothesis,
+not a guaranteed gain. GTDB/classifier/native full-bank and resource admission
+must precede fits; no taxonomy or database was run here. Old 750 GiB is an
+unmeasured coexistence upper; local tests and measured serial coexistence are
+required before a possible 512 GiB admission.
+Keep the full Oral GLM qualification/bank/teacher/proposal milestone, Q006 and
+unscored skin/real-assembly confirmation dependencies explicit. Neither community
+is independent confirmation. Preservation dates remain November 21 / 28.
+
 ## November 14: common optional physical links before full-reference taxonomy
 
 The owner's prior 8% chat-usage restriction applied only to the completed E035

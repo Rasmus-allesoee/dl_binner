@@ -1,6 +1,33 @@
 # Google Cloud workspace operations
 
-## Current native E036 handoff, November 14
+## Current E036 closure, November 14
+
+[Completed evidence](../experiments/E036-optional-pooled-links/completed-observed.json)
+verifies TERMINATED at **November 14, 02:39:07.027 Copenhagen**, all actual
+scientific/reuse/final exits, complete archive/member/alias/delivery and matching
+watchdog shutdown. No inspection wake. Exact 64 GiB `e036-task-1794616469`, ID
+`8911282381665211241`, is [detached/deleted and independently absent](../experiments/E036-optional-pooled-links/task-disk-release.json).
+Only original 30 GiB standard `6401360260466153002` / 300 GiB balanced
+`1715971271799544069` and stopped e2-standard-8 remain; no resize or new snapshot.
+
+[Measured allocation/storage attribution](../experiments/E036-optional-pooled-links/completed-cost.json)
+is ~$0.85 all-attempt incremental upper and $11.74 complete scoped upper of $20,
+including original preservation November 11–21. Allocation totals 2,744.226 seconds;
+sampled process CPU is separate. Fresh marginal prices match execution admission;
+free account-wide first PD/IP tiers are not assumed. These are bounded costs,
+not invoice or credit-delta attribution. Credits show DKK 1,567.36 Available / 79%,
+January 12 expiry; displayed November gross/savings/net DKK 148/148/0 can lag over
+24 hours. Keep $35 pending reserve; no real money.
+
+Original disks/archives are about $1.09/day; new returns add about $0.001/day.
+Task-disk future cost and stopped-VM compute cost are zero. **November 21,
+00:00 Copenhagen active / November 28 automatic new-return tail remain**.
+Original resources do not self-delete; preserve/release decision is due before
+that boundary. This inspection renews nothing. [Next scope](../experiments/E036-optional-pooled-links/next-block.md)
+proposes integrated taxonomy/native/storage admission under new $50 credit-only
+approval; no bulk reference, quota, highmem or 512/750 GiB allocation occurred here.
+
+## Historical native E036 handoff, before completion
 
 [E036 active receipt](../experiments/E036-optional-pooled-links/native-observed.json)
 verifies recovered phase `recover-20261114T010841Z-2c81c80` RUNNING with real

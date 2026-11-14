@@ -1,0 +1,60 @@
+{
+  "status": "DETACHED_DELETED_INDEPENDENTLY_ABSENT",
+  "disk_name": "e036-task-1794616469",
+  "disk_id": "8911282381665211241",
+  "size_GiB": 64,
+  "creationTimestamp": "2026-11-13T16:38:30.947-08:00",
+  "phase": "recover-20261114T010841Z-2c81c80",
+  "unique_outputs_preserved": true,
+  "integrity": {
+    "bytes": 368652,
+    "sha256": "6b38a55e0570fc63bd524ebbe13125207e8714c8ebce6aaf01927c5a5ebb1bfb"
+  },
+  "native_admission": {
+    "bytes": 2001,
+    "sha256": "8000a558ba0a30b60e91ca4936acf8665360f9f599a887776252c7c65ada0494"
+  },
+  "completion": {
+    "bytes": 16348,
+    "sha256": "921fe1f78ad8c9d92bfdcb17dfac949159f3c98c54f35a8d8ba1e5c48903e7fa"
+  },
+  "closed_tail": {
+    "bytes": 315,
+    "sha256": "3064726ebdde9f9e37acd3691e3b5ccfae21b17a577fb83712f5a027b5071e39"
+  },
+  "watchdog": {
+    "bytes": 4029,
+    "sha256": "b3fe636da3596b327b643f4a6291d970041b1c7a872e5a1e8c8f5941b884107f"
+  },
+  "no_new_science": true,
+  "no_VM_start": true,
+  "no_snapshot": true,
+  "no_retention_extension": true,
+  "retention_end": "2026-11-21T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-28T00:00:00+01:00",
+  "discarded_regenerable_scope": [
+    "Task-owned package-only prefix and caches; complete wheel/source/runtime and original read-only numerical base retained on original disk",
+    "Verified exact restores of E031/E032/E033/E035 private archives; all original source generations preserved",
+    "Regenerable tiny/probe/JIT/scheduler and duplicate archive staging; native logs, probe metadata, source packets and all unique community science are delivered",
+    "Two failed journals and unsealed partial preserved separately and in final verified return; original failed phase roots remain on original disk"
+  ],
+  "release_requested_epoch": 1794653413.838388,
+  "release_verified_epoch": 1794653430.819087,
+  "remaining_disks": [
+    {
+      "name": "dl-binner-cpu",
+      "id": "6401360260466153002",
+      "sizeGb": "30",
+      "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-standard"
+    },
+    {
+      "name": "dl-binner-work",
+      "id": "1715971271799544069",
+      "sizeGb": "300",
+      "type": "https://www.googleapis.com/compute/v1/projects/project-d17bd588-df31-488f-b16/zones/us-central1-a/diskTypes/pd-balanced"
+    }
+  ],
+  "VM_state": "TERMINATED",
+  "original_disks_preserved": true,
+  "delete_without_VM_start": true
+}

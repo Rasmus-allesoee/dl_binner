@@ -1,0 +1,222 @@
+{
+  "status": "MEASURED_ALLOCATION_AND_STORAGE_WITH_PENDING_INVOICE",
+  "date": "2026-11-14",
+  "not_invoice": true,
+  "credit_delta_is_not_invoice": true,
+  "quotes": {
+    "4AF8-7C1F-39C4": {
+      "description": "External IP Charge on a Spot Preemptible VM",
+      "all_tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 16780625
+          }
+        }
+      ],
+      "rate_choice": "Maximum applicable catalog marginal tier; do not presume account-wide free allowances",
+      "DKK": 0.016780625,
+      "USD": 0.0024999999999974144,
+      "unit": "h",
+      "base_conversion": 3600,
+      "effective": "2026-11-14T08:00:00Z"
+    },
+    "6AE1-525F-8B80": {
+      "description": "Balanced PD Capacity",
+      "all_tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 671225000
+          }
+        }
+      ],
+      "rate_choice": "Maximum applicable catalog marginal tier; do not presume account-wide free allowances",
+      "DKK": 0.671225,
+      "USD": 0.09999999999989657,
+      "unit": "GiBy.mo",
+      "base_conversion": 2787004278374400.0,
+      "effective": "2026-11-14T08:00:00Z"
+    },
+    "C054-7F72-A02E": {
+      "description": "External IP Charge on a Standard VM",
+      "all_tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 0
+          }
+        },
+        {
+          "startUsageAmount": 721,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 33561250
+          }
+        }
+      ],
+      "rate_choice": "Maximum applicable catalog marginal tier; do not presume account-wide free allowances",
+      "DKK": 0.03356125,
+      "USD": 0.004999999999994829,
+      "unit": "h",
+      "base_conversion": 3600,
+      "effective": "2026-11-14T08:00:00Z"
+    },
+    "CF4E-A0C7-E3BF": {
+      "description": "E2 Instance Core running in Americas",
+      "all_tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 146404844
+          }
+        }
+      ],
+      "rate_choice": "Maximum applicable catalog marginal tier; do not presume account-wide free allowances",
+      "DKK": 0.146404844,
+      "USD": 0.021811589854348182,
+      "unit": "h",
+      "base_conversion": 3600,
+      "effective": "2026-11-14T08:00:00Z"
+    },
+    "D973-5D65-BAB2": {
+      "description": "Storage PD Capacity",
+      "all_tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 0
+          }
+        },
+        {
+          "startUsageAmount": 30,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 268490000
+          }
+        }
+      ],
+      "rate_choice": "Maximum applicable catalog marginal tier; do not presume account-wide free allowances",
+      "DKK": 0.26849,
+      "USD": 0.03999999999995863,
+      "unit": "GiBy.mo",
+      "base_conversion": 2787004278374400.0,
+      "effective": "2026-11-14T08:00:00Z"
+    },
+    "F449-33EC-A5EF": {
+      "description": "E2 Instance Ram running in Americas",
+      "all_tiers": [
+        {
+          "startUsageAmount": 0,
+          "unitPrice": {
+            "currencyCode": "DKK",
+            "units": "0",
+            "nanos": 19623464
+          }
+        }
+      ],
+      "rate_choice": "Maximum applicable catalog marginal tier; do not presume account-wide free allowances",
+      "DKK": 0.019623464,
+      "USD": 0.0029235299638690013,
+      "unit": "GiBy.h",
+      "base_conversion": 3865470566400,
+      "effective": "2026-11-14T08:00:00Z"
+    }
+  },
+  "catalog_month_hours": 721.0,
+  "rates_USD": {
+    "VM_CPU_RAM_per_hour": 0.2680456776785935,
+    "IP_per_hour_upper": 0.004999999999994829,
+    "balanced_GiB_month": 0.09999999999989657,
+    "standard_GiB_month_upper": 0.03999999999995863,
+    "GCS_Iowa_GiB_hour": 2.7397e-05,
+    "desktop_export_GiB_upper": 0.12
+  },
+  "allocation_intervals": [
+    {
+      "attempt": "R1",
+      "start": "2026-11-13T16:34:29.622-08:00",
+      "stop": "2026-11-13T16:46:39.607-08:00",
+      "seconds": 729.9850001335144
+    },
+    {
+      "attempt": "R2",
+      "start": "2026-11-13T17:01:04.847-08:00",
+      "stop": "2026-11-13T17:04:52.721-08:00",
+      "seconds": 227.87400007247925
+    },
+    {
+      "attempt": "R3",
+      "start": "2026-11-13T17:09:20.660-08:00",
+      "stop": "2026-11-13T17:39:07.027-08:00",
+      "seconds": 1786.3669998645782
+    }
+  ],
+  "allocation_seconds": 2744.226000070572,
+  "allocation_hours": 0.7622850000196033,
+  "task_disk_seconds_upper": 36719.8720870018,
+  "new_archive_bytes": 1663410755,
+  "new_archive_object_versions": 28,
+  "desktop_export_bytes_upper": 1667094002,
+  "incremental_components_USD": {
+    "VM_CPU_RAM": 0.20432719941448121,
+    "ephemeral_IP_upper": 0.0038114250000940747,
+    "task_disk_lifetime_upper": 0.09054059999867793,
+    "all_attempt_desktop_export_upper": 0.18631227336823938,
+    "new_return_active_and_automatic_tail_upper": 0.014158415257840375,
+    "operations_upper": 0.35,
+    "compact_inspection_backups_readback_tail_upper": 0.000246161299108704
+  },
+  "all_attempt_incremental_USD_upper": 0.8493960743384417,
+  "original_resource_preservation_Nov11_to_Nov21_USD": 10.891412341898425,
+  "complete_scope_USD_upper": 11.740808416236867,
+  "ceiling_USD": 20,
+  "remaining_original_envelope_USD": 8.259191583763133,
+  "original_resources_USD_per_day": 1.0891412341898425,
+  "original_remaining_to_Nov21_USD_upper": 7.081721038868161,
+  "new_archives_USD_per_day": 0.0010186239582613483,
+  "Welcome_available_DKK": 1567.36,
+  "Welcome_USD_equivalent": 233.5073931987603,
+  "Welcome_expiry": "2027-01-12",
+  "pending_reserve_USD": 35,
+  "pending_usage": "No real-time pending ledger; displayed November gross/savings DKK148/148 and net0, may exceed24h delay",
+  "retention_end": "2026-11-21T00:00:00+01:00",
+  "new_return_automatic_tail_end": "2026-11-28T00:00:00+01:00",
+  "retention_not_extended": true,
+  "task_disk_future_cost": 0,
+  "VM_future_compute_cost_while_stopped": 0,
+  "native_resources": {
+    "peak_sampled_tree_RSS_bytes": 4230918144,
+    "R3_sampled_CPU_seconds": 2930.32,
+    "R3_serial_workflow_seconds": 1316.0437086050001,
+    "sampled_CPU_not_charged_allocation": true,
+    "peak_task_growth_bytes": 4371652608,
+    "source_min_free": 28730003456,
+    "task_min_free": 62661210112
+  },
+  "compact_inspection_backups_additional_USD_upper": 0.000246161299108704,
+  "marginal_rates_match_original_execution_admission": true,
+  "pricing_code": {
+    "path": "artifacts/e036-optional-links/inspection/price_completed.py",
+    "binding": {
+      "bytes": 5525,
+      "sha256": "0ea359adbef1ed23bb56d603a0321054865f7ee1c97555c5199b8a960a6ade4a"
+    }
+  },
+  "first_tier_calculation_not_admitted": {
+    "path": "artifacts/e036-optional-links/inspection/completed-cost-first-tier-not-admitted.json",
+    "reason": "First catalog tier can be an account-wide zero-price allowance. Final upper uses positive marginal tiers without assuming remaining allowances. No scientific outcome changed."
+  }
+}

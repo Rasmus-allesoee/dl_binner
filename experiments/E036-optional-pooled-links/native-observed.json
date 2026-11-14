@@ -289,5 +289,10 @@
       "artifacts/e036-optional-links/execution/launch-v3/snapshot-1794619126/progress.json"
     ]
   },
-  "observed_epoch": 1794619742.3053544
+  "observed_epoch": 1794619742.3053544,
+  "subsequent_completion_review": {
+    "record": "experiments/E036-optional-pooled-links/completed-observed.json",
+    "status": "COMPLETED_AND_DIAGNOSED_TASK_DISK_DELETED",
+    "note": "Original RUNNING fields above are the historical pre-completion snapshot, not current provider state"
+  }
 }
