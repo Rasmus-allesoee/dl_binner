@@ -1,6 +1,6 @@
 # Questions and Hypotheses
 
-Updated: 2026-11-08
+Updated: 2026-11-14
 
 This register owns the status and resolution history of questions and hypotheses. [STATE](../STATE.md) owns immediate priority. Evidence remains in linked notes and experiments. H001 remains inconclusive at E001 seed-11 scope; its avoidability claim is not established. D010 defers replication; E001 retained-output diagnostics are complete. D011 chooses a bounded prototype after the current review.
 
@@ -15,6 +15,13 @@ Status: open. Opened: 2026-09-16.
 The candidate focus is contig loss/misassignment in fragmented prokaryotic assemblies with weak or distorted coverage. Separate information absence, representation failure, clustering error, and quality/refinement selection. Evidence: [thesis](../evidence/2026-09-16-thesis.md), [landscape](../evidence/2026-09-16-landscape.md). Related: H001; [D002](../decisions/D002-investigate-before-architecture.md).
 
 Needed to resolve: pinned native configurations, stage-level outputs, appropriate known-origin inputs, and matched recovery/contamination measurements. Resolution must name the regime and surviving alternative explanations. No result yet.
+
+November 14: [E036](../../experiments/E036-optional-pooled-links/design.md) directly
+tests the passed E009 pooled information with one common optional-link policy and
+exact Oral fallback. The [GSA construction audit](../evidence/2026-11-14-oral-gsa-and-optional-links.md)
+limits Oral's value for physical-link transfer; it does not dismiss that feature
+family. Q001 remains open before new outcomes. Preserve the old failed gate,
+strong comparators, all truth denominators and Q006/Oral GLM/skin dependencies.
 
 November 8 E035 completion: [all-ten pooled support](../../experiments/E035-confidence-taxonomy/pooled-completed-review.md)
 passes E009 utility and still fails Oral utility after every library closes. The

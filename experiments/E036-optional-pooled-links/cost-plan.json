@@ -1,0 +1,36 @@
+{
+  "checked_epoch": 1794615821.4842088,
+  "ceiling_USD": 20,
+  "rates_USD": {
+    "E2_CPU_RAM_hour": 0.2680456776785935,
+    "IPv4_upper_hour": 0.005,
+    "balanced_GiB_month": 0.1,
+    "storage_month_hours": 721,
+    "GCS_Iowa_GiB_hour": 2.7397e-05,
+    "export_Europe_GiB_upper": 0.12
+  },
+  "DKK_per_USD": 6.712250000006942,
+  "components_USD": {
+    "VM_12_25h_CPU_RAM_IP": 3.3448095515627703,
+    "export_at_most_4GiB": 0.48,
+    "operations_upper": 0.35,
+    "new_archives_active_and_7day_tail_upper": 0.036821568,
+    "original_disks_all_versions_until_Nov21": 7.560688807060179,
+    "historical_storage_since_expired_Nov11_upper": 3.3307235348489868,
+    "task_64GiB_through_active_deadline_upper": 1.4912621359223301
+  },
+  "original_archive_bytes": 82603033973,
+  "original_archive_versions": 348,
+  "original_soft_deleted": 0,
+  "original_storage_USD_per_day": 1.0891412341909166,
+  "storage_valid_until_epoch": 1795215600.0,
+  "retention_end": "2026-11-21T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-28T00:00:00+01:00",
+  "old_expired_boundary_not_rewritten": true,
+  "not_invoice": true,
+  "credit_delta_not_invoice": true,
+  "estimated_complete_gross_USD": 16.594305597394268,
+  "remaining_credit_USD": 234.1733397889492,
+  "pending_usage_reserve_USD": 35,
+  "credit_headroom_after_ceiling_and_reserve_USD": 179.1733397889492
+}

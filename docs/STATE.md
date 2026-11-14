@@ -1,6 +1,37 @@
 # Current Research State
 
-## E035 audit verified complete; task disk deleted; November 11 decision due
+## November 14: optional pooled-link recovery comparison admitted next
+
+The owner resets the previous inspection-only chat-usage restriction and
+authorizes the justified selected credit-only run and task storage. Choose
+[E036's common optional physical-link test](../experiments/E036-optional-pooled-links/design.md)
+**before** the implemented taxonomy comparison. E009's passed pooled information
+can now receive a direct recovery test; Oral's absent useful graph receives exact
+accepted fallback under the same source/default rule. [The GSA audit](evidence/2026-11-14-oral-gsa-and-optional-links.md)
+explains why its sparse links do not reject physical evidence in real assemblies.
+No old biological gate is lowered and no MAG gain is assumed.
+
+Local real 31-stage/four-thread tiny fit/reload/graph/selection/export/fallback,
+no-op and complete archive-reader contracts pass. Linux/native full-shape and
+financial/source/supervision admission still precede release; [operations](../experiments/E036-optional-pooled-links/OPERATIONS.md)
+owns the current execution prompt and exact boundary. All accepted E009–E035
+science, old source freezes, failed journals and Mac tolerance remain unchanged.
+
+Fresh GCP: original e2-standard-8 is TERMINATED with only original 30/300 GiB
+disks; E035 scratch remains absent. Welcome credit DKK 1,571.83 Available / 80%,
+expiry January 12, 2027, Paid account; displayed November net zero, delay may exceed
+24 hours; keep $35 reserve. [Complete cost model](../experiments/E036-optional-pooled-links/cost-plan.json)
+is $16.60 upper under a new $20 envelope including historical continued storage,
+12.25-hour allocation cap, conditional 64 GiB task scratch, export/operations,
+and required original resources through **November 21 at 00:00 Copenhagen**.
+New-return automatic tail ends November 28. Existing storage did not self-delete
+on November 11; record the gap without rewriting its expired approval. This
+owner-authorized task-specific scope supersedes the old deadline prospectively.
+No 750 GiB disk, database acquisition, GPU or confirmation is planned. Scratch
+must be released after complete verified delivery; original preservation review
+is November 21. Skin, Oral GLM admission and Q006 remain open.
+
+## Historical November 8 E035 audit and then-current preservation boundary
 
 [Completed review](../experiments/E035-confidence-taxonomy/pooled-completed-review.md)
 accepts `pooled-20261107T005703Z-4d332d7`: all 27 actual stage exits zero, all-ten

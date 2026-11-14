@@ -1,0 +1,19 @@
+{
+  "seconds": 43200,
+  "provider_STOP_seconds": 44100,
+  "ceiling_USD": 20,
+  "threads": 4,
+  "RSS_bytes": 26000000000,
+  "reserve_bytes": 26843545600,
+  "extra_bytes": 64424509440,
+  "aggregate_compressed_bytes": 4294967296,
+  "slice_compressed_bytes": 2147483648,
+  "slice_logical_bytes": 8589934592,
+  "local_staged_bytes": 3221225472,
+  "local_RSS_bytes": 8000000000,
+  "local_seconds": 3600,
+  "local_free_reserve_bytes": 8589934592,
+  "retention_end": "2026-11-21T00:00:00+01:00",
+  "automatic_tail_end": "2026-11-28T00:00:00+01:00",
+  "task_disk_GiB": 64
+}

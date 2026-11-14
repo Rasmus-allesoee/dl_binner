@@ -1,0 +1,156 @@
+{
+  "status": "PASS_LOCAL_OPTIONAL_GRAPH_ENGINEERING_NOT_NATIVE_COMMUNITY",
+  "date": "2026-11-14",
+  "new_source_branch": "optional-pooled-links",
+  "unchanged_product_wheel": {
+    "bytes": 284750,
+    "sha256": "5f971c3b813e283fe2cd9973ee98d24719c74aae850484267aba3a9f59be8fed"
+  },
+  "unchanged_E034_graph_model": {
+    "bytes": 13760,
+    "sha256": "de954940a1dac24f11d48d463398df3170b32c2f81b6a84c3a13ba298aeecb05"
+  },
+  "tiny": {
+    "status": "PASS",
+    "stages": 31,
+    "new_graph_fits": 2,
+    "exact_fallbacks": 1,
+    "epochs": 20,
+    "serial": true,
+    "verified_resume_noop": true,
+    "native_readers_exports_and_review_contracts": true,
+    "synthetic": "Own DNA, fixed unit vectors and marker calls; no biological score or new GLM inference",
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e035-confidence-taxonomy/preparation/qualified-package/env/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e036_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e036-optional-links/preparation/tiny-r6",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+      ],
+      "exit_code": 0,
+      "launched_pid": 87811,
+      "peak_sampled_rss_bytes": 471359488,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 1.199861649120096,
+      "sampled_cpu_seconds": 53.57,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1200,
+      "stop_reason": null,
+      "wall_seconds": 44.64681410501362
+    }
+  },
+  "records": {
+    "tiny-r6/completed.json": {
+      "path": "artifacts/e036-optional-links/preparation/tiny-r6/completed.json",
+      "bytes": 6178,
+      "sha256": "8b76d3e72b60b63e32d2d9e06f93ce99a96748cef75b3d16e7f40c417598678b"
+    },
+    "tiny-r6.exit.json": {
+      "path": "artifacts/e036-optional-links/preparation/tiny-r6.exit.json",
+      "bytes": 934,
+      "sha256": "d2e336b964ed468aac121d509da3cc7c57356d58a188b41a6f1c39dee2f002b1"
+    },
+    "tiny-r6.log": {
+      "path": "artifacts/e036-optional-links/preparation/tiny-r6.log",
+      "bytes": 384,
+      "sha256": "ab77e2c4c6d974c44621fc2784d846bf0f590615304bd3d832b980c89cb2a144"
+    },
+    "oral-construction-audit.json": {
+      "path": "artifacts/e036-optional-links/preparation/oral-construction-audit.json",
+      "bytes": 2432,
+      "sha256": "db7f40d4d23854d4a950e88ef8e02027f8ba0a7e1d7248c2f9116133c775367a"
+    },
+    "cost-plan.json": {
+      "path": "artifacts/e036-optional-links/preparation/cost-plan.json",
+      "bytes": 1349,
+      "sha256": "402adfd7c0357536dc578b440f48ea2afd7270dbc344f4aabd31647c33bc5432"
+    },
+    "finance/browser-credit.json": {
+      "path": "artifacts/e036-optional-links/preparation/finance/browser-credit.json",
+      "bytes": 511,
+      "sha256": "337fe850ccae79de58cd37b8a2d9919eec44c477e8a971377ed6760324d81e0a"
+    },
+    "finance/current-prices.json": {
+      "path": "artifacts/e036-optional-links/preparation/finance/current-prices.json",
+      "bytes": 9153,
+      "sha256": "5bbac08400dff8b74222bf1eda08661a35245a4dde580ad964b1e449edb53652"
+    },
+    "finance/versions.json": {
+      "path": "artifacts/e036-optional-links/preparation/finance/versions.json",
+      "bytes": 403044,
+      "sha256": "e8e13080dba520292c797d170c81a3846cc54e29b79074d675086f6a1e0d873a"
+    },
+    "finance/soft-deleted.json": {
+      "path": "artifacts/e036-optional-links/preparation/finance/soft-deleted.json",
+      "bytes": 56,
+      "sha256": "ee2833bd89b55096100a42cd34a3f7cc5c69f62cc0478f4991a2917bcff8f565"
+    },
+    "finance/bucket.json": {
+      "path": "artifacts/e036-optional-links/preparation/finance/bucket.json",
+      "bytes": 922,
+      "sha256": "2750ac393aa246e2edcd3517f2fd0cd5cd5a01c26279d0cea4a1fedee617bb5e"
+    },
+    "control/summary.json": {
+      "path": "artifacts/e036-optional-links/preparation/control/summary.json",
+      "bytes": 49232,
+      "sha256": "2ff8cc6724a40447faa67c25716df402a335c104b916c326ad8d3036b5ec58e1"
+    },
+    "collection-contract/completed.json": {
+      "path": "artifacts/e036-optional-links/preparation/collection-contract/completed.json",
+      "bytes": 335,
+      "sha256": "ef96e9bee532bb1abdb1d19ee90e0d2e1aa1b46145a455a4053455d66f7cd567"
+    }
+  },
+  "failures_preserved": [
+    "Initial missing workflow-prefix locator; real retained prefix selected",
+    "Sandbox refused ps sampling before fixture start; unchanged test rerun with scoped monitor approval",
+    "Baseline fixture lacked actual producer seals; seals added after real outputs",
+    "Baseline fixture audit parent missing; directory creation fixed",
+    "Tiny graph held pilot utility metadata; verifier now checks its explicit pilot scope, full community still refuses pilot",
+    "All 31 stages passed, then collection adapter import was missing; corrected to unchanged accepted packer",
+    "Rendered arming test caught duplicate phase suffix before any VM start; exact path repaired"
+  ],
+  "native_remaining": [
+    "Current actual mount/headroom and safe cleanup decision",
+    "Fresh owned prefix complete Linux import/library/CLI and real tiny optional graph/export gates",
+    "Exact-generation full archive/member/alias consumer admission",
+    "Full-shape model/memory/return/schedule gate",
+    "Fresh boot/process watcher/normal/crash/restart refusal and provider STOP"
+  ],
+  "community_fits_started": false,
+  "paid_actions_this_preparation": false,
+  "old_science_and_failed_Mac_tolerance_preserved": true,
+  "complete_phase_collection": {
+    "status": "PASS",
+    "members": 368,
+    "actual_phase_collector": true,
+    "archive_member_alias_stage_readers": true,
+    "mocked_only": [
+      "GCS upload/readback transport",
+      "Native source-bundle snapshot location"
+    ]
+  },
+  "launch_and_restore_tests": {
+    "tests": 3,
+    "passed": 3,
+    "skipped": 0,
+    "producer_complete_schema": true,
+    "all_nested_rendered_programs_compile": true,
+    "missing_expired_uncovered_refusal": true
+  },
+  "held_schema_test": {
+    "actual_prospective_native_plan_parsed_before_release": true,
+    "missing_real_release_refused": true
+  },
+  "native_result_adapter_tiny": {
+    "path": "artifacts/e036-optional-links/preparation/tiny-r6/work/final-contracts.json",
+    "bytes": 596,
+    "sha256": "5c60d8dc90225c662ba8d7ca282acb41d14a23a7b98412393f4a9b9d041c1595",
+    "status": "PASS_COMPLETE_NATIVE_RESULTS"
+  }
+}

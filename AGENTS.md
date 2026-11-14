@@ -472,6 +472,12 @@ alerts are notifications, not spending caps. Account for running idle time and
 storage while stopped; stop compute when unused and review credit expiry before
 retaining chargeable storage. No GPU infrastructure is implied by paid billing.
 
+Temporary chat-usage constraints apply only to the task for which the owner
+states them. Do not turn an expired usage limit into a continuing prohibition on
+otherwise authorized research. Keep dated task exclusions and storage deadlines
+in STATE/operations; a later explicit owner scope can supersede them. Record the
+new scope before execution without rewriting the earlier journals or approval.
+
 Owner standing direction, October 29, 2026: runtime and monetary estimates are
 planning envelopes, not reasons to weaken a justified research treatment. Within
 an authorized task, agents may increase a runtime/cost envelope without another

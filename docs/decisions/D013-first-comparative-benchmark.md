@@ -1,5 +1,25 @@
 # D013: reusable assembly data and comparisons that inform improvements
 
+## November 14: common optional physical links before full-reference taxonomy
+
+The owner's prior 8% chat-usage restriction applied only to the completed E035
+inspection/cleanup and has reset. Current authorization admits the selected useful
+credit-only comparison and justified task resources/storage. [E036](../../experiments/E036-optional-pooled-links/design.md)
+uses one label-free availability rule around the unchanged E034 graph adapter,
+fixed strong E031 learning and E032 construction: a direct E009 recovery test and
+exact Oral fallback. This supersedes the November 8 taxonomy-first execution
+recommendation; taxonomy remains a complementary implemented hypothesis.
+
+[Source/data reassessment](../evidence/2026-11-14-oral-gsa-and-optional-links.md)
+finds pooled source-coverage intervals differ from de novo assembler breaks.
+Sparse Oral support is not a general user-assembly verdict. Retain E035's
+specificity limitations and the old failed gate; no truth edge veto, loss/grid or
+promised MAG improvement. Oral fallback cannot prove link-rich transfer. Keep
+all strong comparators, truth/denominators and failures immutable. Current storage
+scope is November 21/28; no 750 GiB/reference acquisition. Fresh financial/native
+and tested process/STOP gates precede execution; complete scoped costs include
+the expired November 11 storage gap without rewriting the old approval.
+
 ## E035 completed information audit and preservation boundary, November 8
 
 [The all-ten audit](../../experiments/E035-confidence-taxonomy/pooled-completed-review.md)

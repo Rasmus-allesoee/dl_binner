@@ -1,6 +1,33 @@
 # Google Cloud workspace operations
 
-## November 8: E035 complete, original VM stopped, new task disk released
+## November 14: refreshed scope and optional-link admission
+
+The owner renews justified task resources/storage and removes the prior
+inspection-only chat-usage restriction. [E036](../experiments/E036-optional-pooled-links/OPERATIONS.md)
+is the selected common optional pooled-link test, without taxonomy acquisition,
+GPU or a 750 GiB disk. Existing VM is independently TERMINATED, e2-standard-8,
+original 30/300 GiB disks only. E035's released scratch is absent. Balanced quota
+is 404 GiB with 300 GiB used; at most conditional 64 GiB task scratch fits without
+quota expansion after actual guest headroom/safe-cleanup review. No resize.
+
+Live read-only Credits/Overview: DKK 1,571.83 Available / 80%, January 12, 2027
+expiry, Paid account; rounded November 1–14 gross/savings/net DKK 143/143/0.00,
+with possible >24-hour latency. Ordinary E2/PD/GCS/network eligibility and Catalog
+prices are refreshed; reserve $35 against delayed usage. Current bucket has
+348 versions / 82,603,033,973 bytes and zero soft-deleted objects; seven-day soft
+delete remains unchanged. Retained original resources cost about $1.089/day.
+
+Current owner task-specific storage covers needed original disks/private archives
+through **November 21 at 00:00 Copenhagen**, and new-return automatic tail through
+November 28, under the [new $20 complete envelope](../experiments/E036-optional-pooled-links/cost-plan.json).
+The $16.60 upper model includes ~$3.33 for storage that continued after the expired
+November 11 boundary; that is historical attribution, not a retroactive rewrite
+or invoice. Review preservation before November 21; resources do not self-delete.
+At most 12 cumulative VM-start hours / provider STOP 12.25 hours, fresh held-
+parent process-bound exit watcher, 25 GiB separate reserves and 26 GB sampled tree
+RSS precede science. Delete only task scratch after complete verified delivery.
+
+## Historical November 8: E035 complete and task disk released
 
 [Completed inspection](../experiments/E035-confidence-taxonomy/pooled-completed-observed.json)
 independently verifies TERMINATED, actual 27 zero exits, whole archive/member/alias

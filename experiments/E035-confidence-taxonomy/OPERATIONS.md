@@ -1,5 +1,16 @@
 # E035 operations
 
+## Current supersession, November 14
+
+The owner resets the previous task-specific low-usage exclusion and authorizes
+the justified selected credit-only work and task storage. [Reassessment](../../docs/evidence/2026-11-14-oral-gsa-and-optional-links.md)
+selects [E036's optional-link comparison](../E036-optional-pooled-links/OPERATIONS.md)
+before full-reference taxonomy. Current scope is November 21 active / November 28
+new-return automatic tail. The old November 11 deadline and no-long-science rule
+below are dated history, not current authorization. Audit evidence/disk release
+are already accepted and must not be repeated. No 750 GiB/reference acquisition.
+
+
 ## Verified completed audit and disk release, November 8
 
 [Completed review](pooled-completed-review.md), [checksum-bound receipt](pooled-completed-observed.json),
@@ -313,7 +324,7 @@ neither unused funds nor a future taxonomy proposal renews storage. Update recor
 check and structured commit; report actual completion, findings/limits, costs and
 disk release, one next decision and the exact separate execution prompt required.
 
-## Exact following prompt
+## Superseded November 8 preservation prompt
 
 Read AGENTS, PROJECT_INTENT, STATE/CLOUD and E035's pooled-completed-review,
 completed receipt/cost and task-disk-release. The information audit is complete,
@@ -362,3 +373,12 @@ predeclared joint criteria beside stronger E031/E023, E032 and native MetaBAT2
 without rescoring them or per-dataset routing. If the full schedule does not fit
 before the active boundary, obtain a separate preservation decision before launch;
 the new monetary envelope alone does not authorize storage renewal.
+
+
+## Exact following prompt
+
+Carry out E036's current Exact following prompt in its OPERATIONS.md and the phase
+in native-observed.json. Use its common optional physical-link design, actual
+source/runtime/credit gates and renewed November 21/28 scope. Preserve all E035
+completed evidence and failed gates. Do not mechanically execute the historical
+preservation-only or 750 GiB taxonomy proposals above.

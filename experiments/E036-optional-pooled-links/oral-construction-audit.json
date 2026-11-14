@@ -1,0 +1,54 @@
+{
+  "reviewed_date": "2026-11-14",
+  "source_repository_root": "/Users/rasmusallesoeenielsen/Documents/dl_binner/agent_context/tools_repo/CAMISIM",
+  "source_commit": "7ce6013c6d5a0fac8ba8a80e52a03560d3546fa6",
+  "files": {
+    "pipelines/shared/scripts/bamToGold.pl": {
+      "bytes": 1845,
+      "sha256": "fcf6a47d22b2e824ed2e9fab8a4195de7c48c539f52e2793e3476b51f8692b4a"
+    },
+    "pipelines/metagenomic/sample_wise_simulation.nf": {
+      "bytes": 13946,
+      "sha256": "ddd20300330d18a4fd29d4e2c9dd5fdc5dfe946a31c284e24a13575071ed18d5"
+    },
+    "pipelines/shared/anonymization.nf": {
+      "bytes": 14709,
+      "sha256": "009835e78dad7c1f499f812026b77fc9d65d2d85054785de0ac50e209895a232"
+    }
+  },
+  "scope": "Current CAMISIM source and publisher documentation, not proof of exact historical oral generator commit",
+  "primary_sources": [
+    "https://github.com/CAMI-challenge/CAMISIM/wiki/CAMISIM-1.3",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6368784/"
+  ],
+  "findings": [
+    "Source-base (not read-consensus) GSA via mpileup: split when source record or covered position is discontinuous",
+    "Pooled coverage joins covered positions across admitted libraries; a boundary need not be an assembler branch",
+    "Reads simulated separately from provided input sequences cannot supply a true molecule across unrelated source records",
+    "With 150 bp reads and median insert 268-269, overlapping mates usually cover a whole fragment continuously; pooled zero-coverage cuts have little chance of a short true bridge",
+    "This explains limited relevance of Oral GSA to physical-link performance, without proving every mapping or discordant endpoint cause"
+  ],
+  "no_benchmark_labels_enter_features": true,
+  "actual_oral_origin_structure": {
+    "input": {
+      "path": "artifacts/e014-multiview-reconstruction/oral-truth-origin-v1/rows.jsonl.gz",
+      "bytes": 76297138,
+      "sha256": "b4679491dc19c55549a3c8fbc8027299365b5f9a490407ed16462dbae912b809"
+    },
+    "records": 1286547,
+    "bp": 1669981123,
+    "counters": {
+      "source_reference_records": 1036,
+      "GSA_blocks": 1286547,
+      "source_records_one_GSA_block": 246
+    },
+    "bp_on_records_one_GSA_block": 408845080,
+    "within_record_consecutive_gap_counts": {
+      "gap_340_plus": 267251,
+      "gap_40_339": 651734,
+      "gap_1_39": 366526
+    },
+    "diagnostic_only": true,
+    "does_not_select_edges_or_training": true
+  }
+}
