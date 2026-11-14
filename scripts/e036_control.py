@@ -31,10 +31,8 @@ def product_scope():
 
 def freeze():
     """Admit exact scientific/source/default bytes before a native consumer."""
-    lock=json.loads((EXP/'source-lock.json').read_text())
-    for name,b in lock['files'].items():
-        if binding(ROOT/name)!=b:raise ValueError('Frozen E036 source differs: '+name)
-    return binding(EXP/'source-lock.json')
+    from e036_repair import admit
+    return admit()
 
 
 def read_plan(path,engineering=False,held=False):
@@ -108,8 +106,9 @@ def fallback(p,u,name,target):
             if f.is_symlink():raise ValueError('Fallback source symlink refused')
             if f.is_file():
                 q=dest/f.relative_to(source);q.parent.mkdir(parents=True,exist_ok=True);os.link(f,q)
-    if name=='student-embed':linktree(src/'embed',target)
-    elif name=='student-graph':linktree(src/'graph',target)
+    if name=='student-embed':
+        for n in ['embeddings.npz','embeddings.json']:os.link(src/'embed'/n,target/n)
+    elif name=='student-graph':linktree(src/'graph/result',target/'result')
     elif name=='select':
         d,m=load(p['units'][u]['features'])
         proof=json.loads((baseline/'audit/proof.json').read_text());meta=json.loads((baseline/'select/result/completed.json').read_text())
@@ -188,6 +187,8 @@ def workflow(path,engineering=False,dry=False):
     """Execute one strictly serial four-thread DAG; no competing --jobs option."""
     product_scope();p=read_plan(path,engineering);work=Path(p['work']);work.mkdir(parents=True,exist_ok=True)
     for done in work.rglob('done.json'):verify_seal(done.parent)
+    from e036_dispatch import verify_existing
+    verify_existing(p)
     # Snakemake caches local source by URI. A mutable source URI can otherwise
     # reuse an old Snakefile after a recorded repair; retain each cache by bytes.
     cache=work.parent/('workflow-source-cache-'+binding(p['snakefile'])['sha256'][:16])

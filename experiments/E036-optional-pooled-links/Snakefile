@@ -1,31 +1,23 @@
-"""Explicit serial chain; physical caches must pass before any graph learner."""
+"""A serial milestone chain that probe-created scientific caches cannot bypass."""
 import json
 from pathlib import Path
 p=json.loads(Path(config['plan']).read_text())
-units=['E009-noGLM','E009-GLM','oral-noGLM']
-stages=['node-features','student','student-embed','student-graph','retrieve','forest','construct','e023','select','audit']
-workflow_order=[(u,s) for u in units for s in stages]
-engineering=' --engineering' if config.get('engineering')=='true' else ''
+engineering=' --engineering'if config.get('engineering')=='true'else''
+worker=str(Path(p['worker']).with_name('e036_dispatch.py'))
 
 def previous(w):
-    at=workflow_order.index((w.unit,w.stage))
-    return 'barrier/done.json' if at==0 else '/'.join((*workflow_order[at-1],'done.json'))
+    n=int(w.ordinal)
+    if not 0<=n<=30:raise ValueError('Unknown serial dispatch position')
+    return [] if n==0 else ['dispatch/%03d.json'%(n-1)]
 
 rule all:
-    input: '/'.join((*workflow_order[-1],'done.json'))
+    input:'dispatch/030.json'
 
-rule barrier:
-    output: 'barrier/done.json'
-    threads: 4
-    resources: mem_mb=26000
-    benchmark: 'benchmarks/barrier.tsv'
-    shell: p['python']+' -I -B '+p['worker']+' --plan '+config['plan']+' --stage barrier'+engineering
-
-rule step:
-    input: previous
-    output: '{unit}/{stage}/done.json'
-    wildcard_constraints: unit='E009-noGLM|E009-GLM|oral-noGLM', stage='node-features|student|student-embed|student-graph|retrieve|forest|construct|e023|select|audit'
-    threads: 4
-    resources: mem_mb=26000
-    benchmark: 'benchmarks/{unit}-{stage}.tsv'
-    shell: p['python']+' -I -B '+p['worker']+' --plan '+config['plan']+' --stage {wildcards.stage} --unit {wildcards.unit}'+engineering
+rule dispatch:
+    input:previous
+    output:'dispatch/{ordinal}.json'
+    wildcard_constraints:ordinal='[0-9]{3}'
+    threads:4
+    resources:mem_mb=26000
+    benchmark:'benchmarks/dispatch-{ordinal}.tsv'
+    shell:p['python']+' -I -B '+worker+' --plan '+config['plan']+' --ordinal {wildcards.ordinal}'+engineering

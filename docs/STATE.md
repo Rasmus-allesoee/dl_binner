@@ -31,6 +31,14 @@ No 750 GiB disk, database acquisition, GPU or confirmation is planned. Scratch
 must be released after complete verified delivery; original preservation review
 is November 21. Skin, Oral GLM admission and Q006 remain open.
 
+E036 native attempt `optional-20261114T003409Z-7aa7bf7` passes all nine setup /
+cache/full-shape gates but stops before E009 fits on two orchestration defects.
+[Complete failed delivery and locally qualified repair](../experiments/E036-optional-pooled-links/repair-observed.json)
+are preserved. Independent dispatch milestones prevent probe caches bypassing the
+serial chain; fallback copies scientific companions, retaining both old/new stage
+journals. Repair is continued in this task using passed artifacts and the original
+clock/credit envelope, with fresh native supervision; no new approval loop.
+
 ## Historical November 8 E035 audit and then-current preservation boundary
 
 [Completed review](../experiments/E035-confidence-taxonomy/pooled-completed-review.md)

@@ -17,6 +17,15 @@ commit/options. Original E014 source-substring/origin proofs remain authoritativ
 for the actual admitted DNA. Small source hashes and an optional streamed
 reference-interval summary are retained in E036 preparation.
 
+A streamed audit of the admitted Oral origin intervals independently counts
+1,286,547 GSA blocks on 1,036 provided reference records, with no overlapping or
+adjacent consecutive blocks on a record. Of the within-record gaps, 366,526 are
+1–39 bp, 651,734 are 40–339 bp and 267,251 exceed 339 bp. On 246 source records
+there is only one GSA block, totaling 408,845,080 bp. These are source-layout
+diagnostics, not additional training labels or a predicted number of valid mate
+links. In particular, a short uncovered gap alone does not establish a sampled
+bridging template after pooled coverage and competitive mapping.
+
 **Interpretation:** a GSA interval boundary is not a repeat/strain branch created
 by an assembler. With 150 bp reads, median inserts 268–269 bp and q99.5 338–339 bp,
 overlapping mates generally cover the physical fragment continuously. Such a

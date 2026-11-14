@@ -24,6 +24,8 @@ def run(root,workflow_python):
     for u in UNITS:
         at=restored/'work'/u;at.joinpath('embed').mkdir(parents=True);at.joinpath('graph/result').mkdir(parents=True)
         for source,target in [(f['embeddings'],at/'embed/embeddings.npz'),(f['embeddings'].with_suffix('.json'),at/'embed/embeddings.json'),(f['graph'],at/'graph/result/graph.npz'),(f['graph'].with_suffix('.json'),at/'graph/result/graph.json')]:os.link(source,target)
+        for part in ['embed','graph']:
+            write(at/part/'started.json',dict(historical_source_stage=True,unit=u,part=part))
         units[u]=dict(features=str(f['features']),views=str(f['views']),fasta=str(f['fasta']),marker_evidence=str(quality),community='oral' if u.startswith('oral') else 'E009')
     p=dict(kind='E036 optional pooled graph',engineering=True,work=str(root/'work'),source_cache=str(restored),measurement_cache={c:str(root/'measured') for c in ['E009','oral']},physical={c:str(links) for c in ['E009','oral']},units=units,
         python=sys.executable,workflow_python=str(Path(workflow_python).absolute()),worker=str(ROOT/'scripts/e036_control.py'),snakefile=str(ROOT/'experiments/E036-optional-pooled-links/Snakefile'),limits={},baseline_cache=str(root/'baseline'),optional_policy=json.loads((ROOT/'experiments/E036-optional-pooled-links/runtime-plan.json').read_text())['optional_policy'])
@@ -31,6 +33,11 @@ def run(root,workflow_python):
     p['physical']['oral']=str(empty_physical(root/'empty-physical',f))
     baseline(root/'baseline',f,quality,restored)
     write(root/'plan.json',p);argv=[sys.executable,'-I','-B',str(ROOT/'scripts/e036_control.py'),'--plan',str(root/'plan.json'),'--engineering','--workflow']
+    # Exercise the production layout: full-size probes close node caches first.
+    for unit,stage in [(None,'barrier')]+[(u,'node-features')for u in UNITS]:
+        command=[sys.executable,'-I','-B',str(ROOT/'scripts/e036_control.py'),'--plan',str(root/'plan.json'),'--engineering','--stage',stage]
+        if unit:command+=['--unit',unit]
+        with (root/('preseed-'+str(unit)+'-'+stage+'.log')).open('x')as log:subprocess.run(command,stdout=log,stderr=subprocess.STDOUT,check=True)
     def call(name):
         with (root/(name+'.log')).open('x') as out:r=subprocess.run(argv,stdout=out,stderr=subprocess.STDOUT)
         write(root/(name+'.exit.json'),dict(argv=argv,exit_code=r.returncode))
@@ -51,7 +58,7 @@ def finish(root,argv,features,first_label='first'):
             if active is not None:raise ValueError('Actual E036 scientific stages overlapped')
             active=line.split()[1].rstrip(':');events.append(active)
         if 'Finished jobid:' in line:active=None
-    if len(events)!=31 or events[0]!='barrier':raise ValueError('Actual serial E036 job population differs')
+    if len(events)!=31 or any(x!='dispatch' for x in events):raise ValueError('Actual serial E036 job population differs')
     closed={str(p.relative_to(root/'work')):binding(p) for p in (root/'work').rglob('*') if p.is_file() and '.snakemake' not in p.parts}
     call('resume')
     if any(binding(root/'work'/n)!=b for n,b in closed.items()):raise ValueError('Passed E036 science repeated/changed during no-op resume')

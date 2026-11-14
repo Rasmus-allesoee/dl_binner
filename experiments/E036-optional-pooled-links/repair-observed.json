@@ -1,0 +1,114 @@
+{
+  "status": "OPERATIONAL_FAILURE_CLOSED_REPAIR_LOCALLY_QUALIFIED",
+  "original_phase": "optional-20261114T003409Z-7aa7bf7",
+  "original_source": "7aa7bf7d06eaa10849f39de46a266464ecf25761",
+  "original_allocation_start_epoch": 1794616469.622,
+  "original_deadline_epoch": 1794659669.622,
+  "original_provider_max_epoch": 1794660569.622,
+  "original_science_completed": false,
+  "E009_graph_community_fits_started": 0,
+  "actual_exits": {
+    "owned-package-install": 0,
+    "complete-native-runtime": 0,
+    "original-inputs-before": 0,
+    "actual-native-tiny": 0,
+    "restore-pooled": 0,
+    "restore-baseline": 0,
+    "restore-bootstrap": 0,
+    "restore-measurements": 0,
+    "full-native-admission": 0,
+    "serial-three-mode-optional-graph": 1,
+    "original-inputs-after": 0,
+    "verify-reused-pooled": 0,
+    "verify-reused-baseline": 0,
+    "verify-reused-bootstrap": 0,
+    "verify-reused-measurements": 0
+  },
+  "failures": [
+    "Historical source-stage started.json collided with a fresh fallback journal; only scientific embedding/result companions now copy",
+    "Probe-created node-feature seals cut the dependency path in a last-target-only DAG; separate 31-step dispatch milestones now serialize every required stage"
+  ],
+  "unchanged": [
+    "All product model/loss/default/source and availability functions",
+    "Candidate wheel and frozen utility criteria",
+    "Original common clock, $20 scope and November 21/28 storage",
+    "All passed source/axis/runtime/full-shape caches and native probes"
+  ],
+  "preserved_r1": {
+    "return_archive": {
+      "uri": "gs://dl-binner-archive-167650584170/e036/optional-20261114T003409Z-7aa7bf7/comparison/slice-000/e033-evidence.tar.gz",
+      "generation": "1794616992669865",
+      "binding": {
+        "bytes": 359187828,
+        "sha256": "c7ea8c118b3d9c8c9755ba1a8bbafe3ecc74f91cbbe9a3d315c92b164336eb30"
+      },
+      "readback_verified": true
+    },
+    "member_alias_verification": {
+      "bytes": 11636,
+      "sha256": "b9992585c563f1a4a780909ea7ddef294fa03271942e7714183f95975d5d709f"
+    },
+    "full_SHA_MD5_and_every_member": true,
+    "regular_members_including_inventory": 653,
+    "aliases": 0,
+    "completion": {
+      "bytes": 21609,
+      "sha256": "d2cf9f7b6954c0cbc979322756c9f68f5297184b1a376c216971983ef6d4862d"
+    },
+    "closed_tail": {
+      "bytes": 344,
+      "sha256": "946be08034a0141f8a3156f81c9cfc9f143263d1fc4e79d55d5cd1c5a4d3ea16"
+    },
+    "watchdog_exit": {
+      "bytes": 4037,
+      "sha256": "cad9b6994fd705d0c64b5008c8444ac2ca15a4cf3f1fb2a22871d9261604ce72"
+    },
+    "provider_state": "TERMINATED",
+    "lastStopTimestamp": "2026-11-13T16:46:39.607-08:00"
+  },
+  "repaired_local_tiny": {
+    "resources": {
+      "command": [
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e035-confidence-taxonomy/preparation/qualified-package/env/bin/python",
+        "-I",
+        "-B",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/scripts/e036_tiny.py",
+        "--root",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e036-optional-links/preparation/tiny-r7",
+        "--workflow-python",
+        "/Users/rasmusallesoeenielsen/Documents/dl_binner/artifacts/e005-linux-pilot/env-workflow-local/bin/python"
+      ],
+      "exit_code": 0,
+      "launched_pid": 90373,
+      "peak_sampled_rss_bytes": 491356160,
+      "rss_bytes_ceiling": 8000000000,
+      "sample_includes_coordinator": false,
+      "sampled_average_cpus": 1.049180247746855,
+      "sampled_cpu_seconds": 65.96,
+      "scope": "sampled process tree; shared pages may be counted twice; short CPU work may be missed",
+      "seconds_ceiling": 1200,
+      "stop_reason": null,
+      "wall_seconds": 62.868129801005125
+    },
+    "completed": {
+      "bytes": 6299,
+      "sha256": "be52c66e0861a16f101f451b16a383cdcdaae3663c6d4527de9c3f117eb61ac2"
+    },
+    "preseeded_probe_node_seals": true,
+    "historical_source_journals": true,
+    "all_31_dispatches_and_two_graph_fits": true,
+    "exact_Oral_fallback": true,
+    "no_op_resume": true
+  },
+  "repaired_collection": {
+    "actual_phase_collector": true,
+    "members": 399,
+    "archive_members_alias_stage_readback": true,
+    "external_GCS_and_source_snapshot_fixture_only": true,
+    "receipt": {
+      "bytes": 335,
+      "sha256": "f2260919696446d7e7699854336b5b0c5746df8d5b3cfc8a80f000aed7be9f7c"
+    }
+  },
+  "recovery_scope": "Existing task disk and passed prefix/caches only; fresh source/boot/process/STOP and repaired Linux tiny; no reinstall/recopy or original science replay"
+}

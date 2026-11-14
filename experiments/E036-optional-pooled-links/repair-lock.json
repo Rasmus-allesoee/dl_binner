@@ -1,0 +1,68 @@
+{
+  "kind": "E036 operational journal-layout and serial dispatch repair; unchanged science",
+  "parent_source_lock": {
+    "bytes": 83396,
+    "sha256": "47368f0d83faae9f9675e4f393bc5611c281c24b300effa4ccb8922dc9ea897d"
+  },
+  "overrides": {
+    "scripts/e036_control.py": {
+      "before": {
+        "bytes": 13830,
+        "sha256": "19864f3568ca202e92d277c79acec1bd19793deedaaa035ad1ba20d59f400caf"
+      },
+      "after": {
+        "bytes": 13797,
+        "sha256": "7784969ff6557acb889e4dbdefaa0ae249bae5d18495050c59e31f90315360dd"
+      }
+    },
+    "scripts/e036_tiny.py": {
+      "before": {
+        "bytes": 6372,
+        "sha256": "07181310b10057d00cdff04481a5a7c6043659616dfc971bcd2929e1e904983f"
+      },
+      "after": {
+        "bytes": 7007,
+        "sha256": "8d4ec74be4c1af194b5cfb912af1ce7edc9438b2309ddc32452dca673ab1e583"
+      }
+    },
+    "experiments/E036-optional-pooled-links/Snakefile": {
+      "before": {
+        "bytes": 1378,
+        "sha256": "35e968d9d52b28815c4e4a8afce73868bd2526ca35c36f20df15f59ae8cd07b3"
+      },
+      "after": {
+        "bytes": 824,
+        "sha256": "e7046e8052924a00cbfe464d501048675b5f84508e7e848d86444488a0c62dca"
+      }
+    }
+  },
+  "extra_files": {
+    "scripts/e036_dispatch.py": {
+      "bytes": 2484,
+      "sha256": "bf94d24e8dfb647d8e8f5e07e319be835cba7a6da846d897e5903d17440e5bf9"
+    },
+    "scripts/e036_repair.py": {
+      "bytes": 2112,
+      "sha256": "f4c17c98359efdc0d92395ced99ca5814bf4651060fb6db37b7563cd9a8fba7a"
+    },
+    "scripts/e036_resume.py": {
+      "bytes": 3154,
+      "sha256": "4650d04080edfabd773dcb40c20d937bca06625d62fb9e244f6421a77fd80b39"
+    },
+    "scripts/e036_resume_phase.py": {
+      "bytes": 9105,
+      "sha256": "3ddad65aebf021b374ecb092ccc408d19b06e9907122cae07bc91e213d08f9fb"
+    },
+    "scripts/e036_resume_arm.py": {
+      "bytes": 6748,
+      "sha256": "19e2b8d8f31bfc43e4e5193f1f7df9128b68989f95341883746f7d36d7598c92"
+    },
+    "scripts/e036_resume_launch.py": {
+      "bytes": 8422,
+      "sha256": "6281c78c34f598d2d495d44c61ee9a37d591e0b48958686b6cbf1f4530fd2feb"
+    }
+  },
+  "old_stage_source_identity_retained": true,
+  "product_wheel_unchanged": true,
+  "old_input_cache_and_models_not_regenerated": true
+}

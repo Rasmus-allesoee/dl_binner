@@ -25,6 +25,29 @@ and hand off. For a short job follow through collection and independently verify
 shutdown. Delete only the task disk after every unique output/source/log/tail has
 verified private delivery. Preserve original disks and accepted evidence.
 
+## First native attempt and same-task repair
+
+`optional-20261114T003409Z-7aa7bf7` passes nine setup/restore/full-shape gates,
+but its workflow exits one before any E009 graph fit. The exact source cache
+contains a historical `started.json` absent from the original tiny fixture; an
+unscoped fallback copy collides with the fresh stage journal. Independently,
+probe-precompleted node-cache seals sever the intended last-target dependency
+chain. This is orchestration failure, not a negative recovery result. Full return
+SHA/MD5, all 653 physical members including inventory, aliases (zero), completion,
+closed tail and watcher are verified. GCP independently stops at 00:46:39.607 UTC.
+
+[The explicit repair](repair-lock.json) keeps model/stage/input/availability code
+unchanged, selects only scientific fallback companions, and uses independent
+31-step dispatch milestones. Actual local production-layout tests now include
+precompleted caches and historical source journals, both graph fits, complete
+exports/fallback/no-op, and 399-member actual collector/archive/alias readback.
+[Repair record](repair-observed.json) preserves the first failure and native
+remaining gates. Resume only verified existing prefix/caches/task disk, preserving
+the failed partial aside; no reinstall, recopy or probe/fit replay. Fresh boot /
+held-process watcher and a remaining-duration provider STOP stay within the
+original VM-start 12-hour clock and $20 scope. The current task authorizes repair;
+no new owner approval is needed. New native admission remains required.
+
 ## Exact following prompt
 
 Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E036's design, locks,
