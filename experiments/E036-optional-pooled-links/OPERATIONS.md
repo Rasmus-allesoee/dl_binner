@@ -48,6 +48,15 @@ held-process watcher and a remaining-duration provider STOP stay within the
 original VM-start 12-hour clock and $20 scope. The current task authorizes repair;
 no new owner approval is needed. New native admission remains required.
 
+The first recovery parent (`recover-20261114T010043Z-e39ddaf`) also stops before
+science: it called the original guard instead of the admitted overlay guard, and
+the new snapshot root lacked its local immutable-plan companion. Both are fixed
+with actual parent-call and filesystem-producer/snapshot-reader regression tests.
+Its compact delivery-failure record and full original-disk journals remain; the
+next complete return must include those journals and its exact source bundle.
+No E009 fit occurred. Continue on the same disk/prefix/caches and original clock;
+do not count this failure as a biological result or repeat accepted native science.
+
 ## Exact following prompt
 
 Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E036's design, locks,

@@ -46,20 +46,24 @@
       "sha256": "f4c17c98359efdc0d92395ced99ca5814bf4651060fb6db37b7563cd9a8fba7a"
     },
     "scripts/e036_resume.py": {
-      "bytes": 3154,
-      "sha256": "4650d04080edfabd773dcb40c20d937bca06625d62fb9e244f6421a77fd80b39"
+      "bytes": 3696,
+      "sha256": "1c4a5cc29ae24ae9461a10c3acfd59bdc2bf180f46a25a8de0ccb19cdf0947ac"
     },
     "scripts/e036_resume_phase.py": {
-      "bytes": 9105,
-      "sha256": "3ddad65aebf021b374ecb092ccc408d19b06e9907122cae07bc91e213d08f9fb"
+      "bytes": 10237,
+      "sha256": "d640036b06b28bd83a43d508316a6ae49ebd702fbfc6b7ac0e2bae081a0e921f"
     },
     "scripts/e036_resume_arm.py": {
       "bytes": 6748,
       "sha256": "19e2b8d8f31bfc43e4e5193f1f7df9128b68989f95341883746f7d36d7598c92"
     },
     "scripts/e036_resume_launch.py": {
-      "bytes": 8422,
-      "sha256": "6281c78c34f598d2d495d44c61ee9a37d591e0b48958686b6cbf1f4530fd2feb"
+      "bytes": 8382,
+      "sha256": "efba776e39acc81eef857c2d7dbe8c82f60e32835dba705e911113003211d992"
+    },
+    "tests/test_e036_recovery.py": {
+      "bytes": 1382,
+      "sha256": "2054fded49c3e65464b7c33014e03dc72e55416670818dab49e0698c6a8d0498"
     }
   },
   "old_stage_source_identity_retained": true,

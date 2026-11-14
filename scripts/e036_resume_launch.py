@@ -23,9 +23,9 @@ actual=pathlib.Path(subprocess.check_output(['findmnt','-n','-o','SOURCE','--tar
 if actual.resolve()!=dev.resolve():raise ValueError('Retained task mount differs')
 for n in [cfg['python'],cfg['wheel'],cfg['pysam_wheel'],cfg['plan']]:
  if not pathlib.Path(n).is_file():raise ValueError('Retained consumer missing; no install/recopy fallback: '+n)
-root.mkdir(parents=True,exist_ok=False)
-for n in ['logs','gates','payload','tmp']:(root/n).mkdir()
 sys.path.insert(0,str(repo/'scripts'));from e021_control_json import publish
+from e036_resume import prepare_layout
+prepare_layout(cfg)
 from e036_phase import validate_config
 from e036_repair import admit
 admit();cfg['initial_filesystem_device']=os.stat(task).st_dev;validate_config(cfg)

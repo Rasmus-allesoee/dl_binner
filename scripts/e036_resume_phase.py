@@ -3,7 +3,8 @@
 import argparse,json,os,shutil,subprocess,sys,time,traceback
 from pathlib import Path
 ROOT=Path(__file__).absolute().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
-from e036_phase import validate_config,status,freeze_sources,collect
+from e036_phase import validate_config,status,collect
+from e036_control import freeze as freeze_sources
 from e024_coverage import binding,write
 from e021_control_json import publish
 from e021_portable_node import storage_upload
@@ -26,9 +27,20 @@ def repaired_evidence(root):
     packet=repo.parent/'experiments/e036/source-transports'/('source-'+c['source_commit']+'.bundle')
     if binding(packet)!=c['financial']['source_transport']['bundle']:raise ValueError('Repaired exact source packet differs')
     shutil.copyfile(packet,out/'source.bundle');shutil.copyfile(c['wheel'],out/Path(c['wheel']).name)
-    old=Path(c['financial']['recovery']['original_root']);(out/'original-failed-attempt').mkdir()
-    for n in ['completion.json','closed-delivery-tail.json','config.json']:
-        shutil.copyfile(old/n,out/'original-failed-attempt'/n)
+    roots=[c['financial']['recovery']['original_root']]+c['financial']['recovery'].get('prior_failed_roots',[])
+    for name in roots:
+        old=Path(name);dest=out/'prior-failed-attempts'/old.name;dest.mkdir(parents=True);missing=[]
+        for n in ['completion.json','closed-delivery-tail.json','config.json','host.json','release.json','started.json','science-plan.json','terminal.log']:
+            if (old/n).is_file():shutil.copyfile(old/n,dest/n)
+            else:missing.append(n)
+        for folder in ['logs','gates']:
+            for f in (old/folder).rglob('*'):
+                if f.is_file()and f.name!='filesystem.jsonl':
+                    if f.stat().st_size>64*1024**2:raise ValueError('Prior failure journal exceeds compact budget')
+                    q=dest/folder/f.relative_to(old/folder);q.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(f,q)
+        oldcfg=json.loads((old/'config.json').read_text());packet=repo.parent/'experiments/e036/source-transports'/('source-'+oldcfg['source_commit']+'.bundle')
+        if binding(packet)!=oldcfg['financial']['source_transport']['bundle']:raise ValueError('Prior failed source packet differs')
+        shutil.copyfile(packet,dest/'source.bundle');write(dest/'missing-terminal-records.json',dict(missing=missing,does_not_claim_scientific_completion=True))
     return out
 
 

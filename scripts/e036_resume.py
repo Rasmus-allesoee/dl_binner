@@ -11,6 +11,17 @@ from e024_coverage import binding,write
 from e024_control import verify_seal
 
 
+def prepare_layout(c):
+    """Create the actual snapshot contract and link its immutable original plan."""
+    root=Path(c['root']);plan=Path(c['plan'])
+    if plan.is_symlink()or not plan.is_file():raise ValueError('Regular retained science plan required')
+    root.mkdir(parents=True,exist_ok=False)
+    for n in ['logs','gates','payload','tmp']:(root/n).mkdir()
+    os.link(plan,root/'science-plan.json')
+    if binding(root/'science-plan.json')!=binding(plan):raise ValueError('Snapshot science-plan companion differs')
+    return root
+
+
 def verify(config):
     """Require passed original gates/caches and move one failed partial aside once."""
     c=json.loads(Path(config).read_text());r=c['financial']['recovery'];old=Path(r['original_root']);root=Path(c['root'])
