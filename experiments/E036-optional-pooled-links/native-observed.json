@@ -1,0 +1,293 @@
+{
+  "status": "RUNNING_SUPERVISION_AND_REAL_SCIENCE_PROGRESS_VERIFIED",
+  "phase": "recover-20261114T010841Z-2c81c80",
+  "operational_source": "2c81c808e791ff7bccff8e192ee9b8e86c80535d",
+  "prospective_scientific_source": "7aa7bf7d06eaa10849f39de46a266464ecf25761",
+  "unchanged_product_wheel": {
+    "bytes": 284750,
+    "sha256": "5f971c3b813e283fe2cd9973ee98d24719c74aae850484267aba3a9f59be8fed"
+  },
+  "original_source_lock": {
+    "bytes": 83396,
+    "sha256": "47368f0d83faae9f9675e4f393bc5611c281c24b300effa4ccb8922dc9ea897d"
+  },
+  "repair_lock": {
+    "bytes": 2378,
+    "sha256": "64519c54b9047129dca622aa454b07497f4adec2e6347b2e9e58aa8c7c48780c"
+  },
+  "current_native_root": "/srv/dl_binner/experiments/e036/recover-20261114T010841Z-2c81c80",
+  "science_root": "/srv/dl_binner/experiments/e036/optional-20261114T003409Z-7aa7bf7/task/science",
+  "original_VM_start_epoch": 1794616469.622,
+  "hard_deadline_Copenhagen": "2026-11-14T13:34:29.622000+01:00",
+  "provider_STOP_Copenhagen": "2026-11-14T13:48:03.660000+01:00",
+  "provider_status": "RUNNING",
+  "machine": "e2-standard-8 / 32 GiB",
+  "threads": 4,
+  "RSS_bytes": 26000000000,
+  "task_disk": {
+    "name": "e036-task-1794616469",
+    "id": "8911282381665211241",
+    "GiB": 64,
+    "source_original_disks_unchanged": true
+  },
+  "no_resize_or_quota_change": true,
+  "fresh_supervision": {
+    "status": "ARMED_AND_TESTED",
+    "parent_unit": "e036-recover-20261114T010841Z-2c81c80.service",
+    "watchdog_timer": "e036-recover-20261114T010841Z-2c81c80-exit.timer",
+    "watchdog_service": "e036-recover-20261114T010841Z-2c81c80-exit.service",
+    "process": {
+      "pid": 2018,
+      "start_ticks": 4298,
+      "command_sha256": "a4c1ade55479d73d559dfd646b40456a935b47b60b42b28e7b07183445aac8bb"
+    },
+    "boot_id": "a0c51e18-f669-4b20-a62c-c638c35c9b86",
+    "source_commit": "2c81c808e791ff7bccff8e192ee9b8e86c80535d",
+    "detector_bindings": {
+      "e009_exit_watchdog.py": {
+        "bytes": 5959,
+        "sha256": "f5b28369ac746582733559a0d004136f672136c0f0708d60af24f913c7c67b7f"
+      },
+      "e011_exit_watchdog.py": {
+        "bytes": 2426,
+        "sha256": "8f48058b470ff17001f6c5c8a847f152977e46e7a165dbac0b4219ebd1dc5c12"
+      }
+    },
+    "exit_grace_seconds": 60,
+    "timer_seconds": 30,
+    "original_vm_start_epoch": 1794616469.622,
+    "hard_deadline_epoch": 1794659669.622,
+    "provider_stop_epoch": 1794660483.66,
+    "native_normal_exit_and_crash_tests_passed": true
+  },
+  "current_progress": {
+    "parent": "MainPID=2018\nExecMainStatus=0\nActiveState=active\nSubState=running\n",
+    "watcher_timer": "active",
+    "watcher": {
+      "boot_id": "a0c51e18-f669-4b20-a62c-c638c35c9b86",
+      "checked_utc": "2026-11-14T01:28:33.933648+00:00",
+      "decision": "workflow alive",
+      "expected_process": {
+        "command_sha256": "a4c1ade55479d73d559dfd646b40456a935b47b60b42b28e7b07183445aac8bb",
+        "pid": 2018,
+        "start_ticks": 4298
+      },
+      "observed_process": {
+        "command_sha256": "a4c1ade55479d73d559dfd646b40456a935b47b60b42b28e7b07183445aac8bb",
+        "pid": 2018,
+        "start_ticks": 4298
+      },
+      "shutdown": false,
+      "workflow_root": "/srv/dl_binner/experiments/e036/recover-20261114T010841Z-2c81c80"
+    },
+    "dispatch_count": 18,
+    "last_dispatch": {
+      "status": "PASS",
+      "ordinal": 17,
+      "unit": "E009-GLM",
+      "stage": "construct",
+      "science_seal": {
+        "bytes": 3050,
+        "sha256": "c15bbe11cab1b1b854fb5a04ef2537282048f9fd8b96401e73bbb2ebd9062c51"
+      },
+      "child_exit": 0
+    },
+    "models": {
+      "E009-noGLM": {
+        "status": "PASS",
+        "epochs": 20,
+        "reload_exact": true,
+        "wall_seconds": 4.285372243000012,
+        "last_geometry": {
+          "catastrophic_collapse": false,
+          "effective_rank": 18.895875502849307,
+          "mean_dimension_std": 0.10011480698464327,
+          "mean_other_cosine": 0.3316309114818665,
+          "rows": 3074
+        }
+      },
+      "E009-GLM": {
+        "status": "PASS",
+        "epochs": 20,
+        "reload_exact": true,
+        "wall_seconds": 3.846276737999915,
+        "last_geometry": {
+          "catastrophic_collapse": false,
+          "effective_rank": 20.11519730510605,
+          "mean_dimension_std": 0.10149983794328646,
+          "mean_other_cosine": 0.3133937164600479,
+          "rows": 3074
+        }
+      }
+    },
+    "progress_tail": "d: 15 (Rule: dispatch)\n17 of 32 steps (53%) done\nSelect jobs to execute...\nExecute 1 jobs...\n\n[Sat Nov 14 01:27:09 2026]\nlocalrule dispatch:\n    input: dispatch/016.json\n    output: dispatch/017.json\n    jobid: 14\n    benchmark: benchmarks/dispatch-017.tsv\n    reason: Missing output files: dispatch/017.json; Input files updated by another job: dispatch/016.json\n    wildcards: ordinal=017\n    threads: 4\n    resources: tmpdir=/srv/dl_binner/experiments/e036/optional-20261114T003409Z-7aa7bf7/task/recover-20261114T010841Z-2c81c80/tmp, mem_mb=26000, mem=26 GB, mem_mib=24796\n{\"stage\": \"construction_start\", \"utc\": \"2026-11-14T01:27:14Z\", \"rows\": 145702, \"eligible\": 89041, \"candidates\": 4228}\n[Sat Nov 14 01:27:25 2026]\nFinished jobid: 14 (Rule: dispatch)\n18 of 32 steps (56%) done\nSelect jobs to execute...\nExecute 1 jobs...\n\n[Sat Nov 14 01:27:25 2026]\nlocalrule dispatch:\n    input: dispatch/017.json\n    output: dispatch/018.json\n    jobid: 13\n    benchmark: benchmarks/dispatch-018.tsv\n    reason: Missing output files: dispatch/018.json; Input files updated by another job: dispatch/017.json\n    wildcards: ordinal=018\n    threads: 4\n    resources: tmpdir=/srv/dl_binner/experiments/e036/optional-20261114T003409Z-7aa7bf7/task/recover-20261114T010841Z-2c81c80/tmp, mem_mb=26000, mem=26 GB, mem_mib=24796\n{\"stage\": \"information_core_index_start\", \"utc\": \"2026-11-14T01:27:39Z\", \"rows\": 89041, \"dimensions\": 200, \"threads\": 4}\nSat Nov 14 01:27:39 2026 Building RP forest with 22 trees\nSat Nov 14 01:27:43 2026 NN descent for 10 iterations\n\t 1  /  10\n\t 2  /  10\n\t 3  /  10\n\t 4  /  10\n\t 5  /  10\n\tStopping threshold met -- exiting after 5 iterations\nSat Nov 14 01:28:24 2026 Worst tree score: 0.60090295\nSat Nov 14 01:28:24 2026 Mean tree score: 0.62218222\nSat Nov 14 01:28:24 2026 Best tree score: 0.63979515\nSat Nov 14 01:28:27 2026 Forward diversification reduced edges from 5431501 to 643921\nSat Nov 14 01:28:30 2026 Reverse diversification reduced edges from 643921 to 643921\nSat Nov 14 01:28:33 2026 Degree pruning reduced edges from 881056 to 880821\nSat Nov 14 01:28:33 2026 Resorting data and graph based on tree order\nSat Nov 14 01:28:33 2026 Building and compiling search function\n{\"stage\": \"density_candidates\", \"utc\": \"2026-11-14T01:28:36Z\", \"completed_rows\": 512, \"total_rows\": 89041, \"retained_neighbors\": 30}\n{\"stage\": \"density_candidates\", \"utc\": \"2026-11-14T01:28:41Z\", \"completed_rows\": 5632, \"total_rows\": 89041, \"retained_neighbors\": 30}\n{\"stage\": \"density_candidates\", \"utc\": \"2026-11-14T01:28:46Z\", \"completed_rows\": 11264, \"total_rows\": 89041, \"retained_neighbors\": 30}\n{\"stage\": \"density_candidates\", \"utc\": \"2026-11-14T01:28:51Z\", \"completed_rows\": 16384, \"total_rows\": 89041, \"retained_neighbors\": 30}\n{\"stage\": \"density_candidates\", \"utc\": \"2026-11-14T01:28:56Z\", \"completed_rows\": 20992, \"total_rows\": 89041, \"retained_neighbors\": 30}\n{\"stage\": \"density_candidates\", \"utc\": \"2026-11-14T01:29:02Z\", \"completed_rows\": 25600, \"total_rows\": 89041, \"retained_neighbors\": 30}\n",
+    "completion": false,
+    "source_free": 28738760704,
+    "task_free": 64099205120
+  },
+  "runtime": "PASS_COMPLETE_READONLY_BASE_AND_NEW_OWNED_PACKAGE",
+  "passed_original_gates_and_caches": {
+    "status": "PASS_VERIFIED_REUSE",
+    "old_gate_exits": {
+      "owned-package-install": {
+        "bytes": 1334,
+        "sha256": "95872881ae05625bd256dd0e47b3ef9ba3d50af42c54137695be0120638e21bb"
+      },
+      "complete-native-runtime": {
+        "bytes": 1249,
+        "sha256": "34e1e2049a4d105d94fa2a93004c23c0c97fbf8d411179de9f9d0ff19523a048"
+      },
+      "original-inputs-before": {
+        "bytes": 867,
+        "sha256": "66e13ff8e8a86d17223ac624479faf25601204f435d782367acb12a8fab2b957"
+      },
+      "actual-native-tiny": {
+        "bytes": 819,
+        "sha256": "5d7c1753072ba878f0d9ad4a883fef528797258ab6c9fa13fc3a10fbeb72d8d1"
+      },
+      "restore-pooled": {
+        "bytes": 754,
+        "sha256": "08d21f00ff6fc413740347e765f28401aa8ce907bd813acec48a141bb02a5e24"
+      },
+      "restore-baseline": {
+        "bytes": 772,
+        "sha256": "624efa374e24273b19ba1ce318cc05678c4a9f5ec829dfd70070caca940d4154"
+      },
+      "restore-bootstrap": {
+        "bytes": 777,
+        "sha256": "89fbce2c60c07375fafd165604ba81c7a27160082237c9b964ac01999de845ed"
+      },
+      "restore-measurements": {
+        "bytes": 784,
+        "sha256": "cc5695ee19bc9382cf80f42f25ee7bc20bcd0ad3f647706c2a863a422e38960d"
+      },
+      "full-native-admission": {
+        "bytes": 755,
+        "sha256": "60346c5d09e022c096f9f04f07236d92d6f6bc56e85d206dd94ba3bb3d89e05d"
+      }
+    },
+    "existing_scientific_seals": {
+      "E009-GLM/node-features/done.json": {
+        "bytes": 1685,
+        "sha256": "875ac867613867016bd058d7b8617e9ece2b05026d3bb7a157ed025f23adf2be"
+      },
+      "barrier/done.json": {
+        "bytes": 1531,
+        "sha256": "a442cee910ae1806c4d308dd5afd0079db657a8e477c1a4a4935d6e9014ee9d3"
+      },
+      "E009-noGLM/node-features/done.json": {
+        "bytes": 1687,
+        "sha256": "9cd452d8a39a40c726e38f49a071fbd1f6d9e50dd5fe0386bcb80bd5281adaf9"
+      },
+      "oral-noGLM/node-features/done.json": {
+        "bytes": 1413,
+        "sha256": "35467678c23ec310d933963fd7fc27f3e1d994f02cfba91fafac00135598cf9e"
+      },
+      "oral-noGLM/student/done.json": {
+        "bytes": 1413,
+        "sha256": "9cfb3bd37e01319500e71d614d55008d64fba87772f7a3ca8858b25d24b01793"
+      }
+    },
+    "failed_stage_preserved": {
+      "path": "/srv/dl_binner/experiments/e036/optional-20261114T003409Z-7aa7bf7/task/failed-stage-7aa7bf7",
+      "files": {
+        "embeddings.json": {
+          "bytes": 785,
+          "sha256": "3f9c5528cad1339fd03dbe776ad1f8549a64930aa457d3a528a1771687d8b050"
+        },
+        "started.json": {
+          "bytes": 61,
+          "sha256": "6cc04264fd4712ead70cb281cc86ec3d7480c352c9895c73374775a612b9f454"
+        }
+      }
+    },
+    "old_science_replayed": false,
+    "deadline_unchanged": 1794659669.622,
+    "epoch": 1794618686.7839334
+  },
+  "old_attempts_preserved": {
+    "R1": "Operational workflow failure before E009 fits; full archive SHA/MD5 and all 653 physical members / aliases verified",
+    "R2": "Recovery source-guard/layout failure before science; full raw journals on original disk, compact private failure/watchdog records verified; next complete collection includes prior journals/source"
+  },
+  "financial": {
+    "Welcome_available_DKK": 1571.83,
+    "Welcome_expiry": "2027-01-12",
+    "pending_reserve_USD": 35,
+    "ceiling_USD": 20,
+    "complete_forecast_USD": 16.594305597394268,
+    "credit_headroom_after_ceiling_and_reserve_USD": 179.1733397889492,
+    "allocation_intervals": [
+      {
+        "attempt": "launch-v1",
+        "started": 1794616469.622,
+        "stopped": 1794617199.607,
+        "seconds": 729.9850001335144
+      },
+      {
+        "attempt": "launch-v2",
+        "started": 1794618064.847,
+        "stopped": 1794618292.721,
+        "seconds": 227.87400007247925
+      },
+      {
+        "attempt": "launch-v3",
+        "started": 1794618560.66,
+        "observed_running_epoch": 1794619742.3053544,
+        "seconds": 1181.645354270935
+      }
+    ],
+    "allocation_CPU_RAM_IP_upper_to_snapshot_USD": 0.16227289343457074,
+    "task_disk_to_snapshot_USD": 0.007474454256323163,
+    "first_return_desktop_export_upper_USD": 0.0401423679292202,
+    "not_invoice": true,
+    "credit_delta_not_invoice": true,
+    "original_resources_USD_day": 1.0891412341909166,
+    "extra_64GiB_PD_USD_day": 0.21303744798890428
+  },
+  "retention_end": "2026-11-21T00:00:00+01:00",
+  "automatic_new_return_tail_end": "2026-11-28T00:00:00+01:00",
+  "archive_prefix": "gs://dl-binner-archive-167650584170/e036/recover-20261114T010841Z-2c81c80/",
+  "new_R95_or_MAG_result_available": false,
+  "full_scientific_completion_not_yet_claimed": true,
+  "records": {
+    "artifacts/e036-optional-links/execution/launch-v3/snapshot-1794619126/progress.json": {
+      "bytes": 7979,
+      "sha256": "d0ba04af654d184418b1e12402cd2cae4c2dffd38c697e754eadcbad86835dac"
+    },
+    "artifacts/e036-optional-links/execution/launch-v3/handoff-provider.json": {
+      "bytes": 33532,
+      "sha256": "3a4b8e0e15a974d5878566655b179d848adeeedb3ff927dcac65642fa4a8c60b"
+    },
+    "artifacts/e036-optional-links/execution/launch-v3/handoff-guest.json": {
+      "bytes": 325,
+      "sha256": "bab07bbeeca9f1677dca3b46500424e234ca7f803ec8285a98c46bf91b2e4e66"
+    },
+    "artifacts/e036-optional-links/execution/launch-v3/financial-gate.json": {
+      "bytes": 4009,
+      "sha256": "f9ca6d681b3dec2cc7de0804c17ccca1576184d9224e7f067fa773fa5b12e791"
+    },
+    "artifacts/e036-optional-links/execution/launch-v3/released.json": {
+      "bytes": 33,
+      "sha256": "7a95b1b32efe94ed30e527a8da48f71c182d876c1140114f9f0303c34e70e432"
+    },
+    "artifacts/e036-optional-links/execution/launch-v1/closed-r1/archive-verification.json": {
+      "bytes": 11636,
+      "sha256": "b9992585c563f1a4a780909ea7ddef294fa03271942e7714183f95975d5d709f"
+    },
+    "artifacts/e036-optional-links/execution/launch-v2/closed-r2/bindings.json": {
+      "bytes": 365,
+      "sha256": "1f92ddee191ab9363980733a59915aa978fb2c2b855fb8ec719ff80d08bad1bc"
+    },
+    "artifacts/e036-optional-links/execution/launch-v3/snapshot-1794619738/progress.json": {
+      "bytes": 8420,
+      "sha256": "4ea499d0626b01b2100aa42053041be46d1006e074d50a6a852775c3e0ea0d77"
+    }
+  },
+  "earlier_progress_snapshot": {
+    "dispatch_count": 8,
+    "previous_progress_record": [
+      "artifacts/e036-optional-links/execution/launch-v3/snapshot-1794619126/progress.json"
+    ]
+  },
+  "observed_epoch": 1794619742.3053544
+}

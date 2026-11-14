@@ -1,5 +1,32 @@
 # E036 operations
 
+## Current supervised run
+
+[Native receipt](native-observed.json): `recover-20261114T010841Z-2c81c80`, source
+`2c81c80`, scientific identity `7aa7bf7` plus explicit operation-only repair.
+Existing cache/prefix/disk reused. Actual native corrected tiny and original
+runtime/source/caches/full-shape gates pass. At 02:29 Copenhagen November 14,
+both E009 20-epoch graph fits/reload/geometry and eighteen serial closures pass;
+fixed E023 candidate generation in the GLM arm is progressing. Fallback/final audits and
+private delivery are pending, with no recovery score claimed. Current GCP/guest
+are RUNNING under matching boot/PID/start/command watcher and active timer.
+
+Original driver end is 13:34:29 Copenhagen, provider STOP 13:48:03 November 14.
+Automatic exit stop occurs earlier after collection/failure. The new prefix is
+only a phase/journal root: actual retained science is still under
+`/srv/dl_binner/experiments/e036/optional-20261114T003409Z-7aa7bf7/task/science`.
+Current logs are under
+`/srv/dl_binner/experiments/e036/recover-20261114T010841Z-2c81c80/logs/`;
+main worker is `serial-remaining-optional-graph.log`, parent `terminal.log` one
+level above. Private completion uses the current receipt's recovery prefix.
+
+New **64 GiB `e036-task-1794616469` / ID `8911282381665211241`** may be released
+only after all unique outputs/source/failure/terminal evidence is independently
+verified delivered. Original disks are protected. Current active storage ends
+November 21, 00:00 Copenhagen; automatic new-return tail ends November 28. The
+$20 complete forecast is $16.60 including preservation and historical storage;
+actual charges remain pending, separately from sampled CPU.
+
 ## Current scope, November 14
 
 The owner authorizes the selected justified credit-only run and task storage.
@@ -60,7 +87,7 @@ do not count this failure as a biological result or repeat accepted native scien
 ## Exact following prompt
 
 Read AGENTS, PROJECT_INTENT, STATE/CLOUD, D013/D015 and E036's design, locks,
-operations and native-observed.json. Inspect its recorded phase without starting
+operations and native-observed.json. Inspect phase `recover-20261114T010841Z-2c81c80` without starting
 another science job. Verify control-plane shutdown, e036-candidate/status, private
 completion, every actual stage exit, final audit/reuse/collection/readback and
 watchdog evidence. Do not infer success from TERMINATED. If healthy and running,

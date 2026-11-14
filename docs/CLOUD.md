@@ -1,5 +1,29 @@
 # Google Cloud workspace operations
 
+## Current native E036 handoff, November 14
+
+[E036 active receipt](../experiments/E036-optional-pooled-links/native-observed.json)
+verifies recovered phase `recover-20261114T010841Z-2c81c80` RUNNING with real
+scientific progress, fresh boot/PID/command watcher and independent provider STOP.
+Two earlier operational failures are preserved; passed caches/runtime/probes are
+reused without E009 fit replay. No new MAG score is available yet.
+
+Existing e2-standard-8 / 32 GiB and original disks are unchanged. Exact new
+64 GiB balanced `e036-task-1794616469`, ID `8911282381665211241`, remains mounted;
+there is no new VM, resize, quota change, reserved IP or snapshot. Full original
+VM-start clock ends **13:34:29 Copenhagen November 14**; remaining-duration provider
+STOP ends **13:48:03**, with exit shutdown earlier. All numerical work is four
+threads, 26 GB sampled tree RSS, with separate 25 GiB source/task reserves.
+At the native snapshot free space is about 26.76 GiB source / 59.99 GiB task.
+
+[Current task storage/cost admission](../experiments/E036-optional-pooled-links/cost-plan.json)
+ends November 21 at 00:00 Copenhagen active / November 28 new-return automatic
+tail, under $20 complete credit-only scope. Scratch is about $0.213/day; release
+it promptly after complete verified collection. Original disks/all existing
+archives remain about $1.089/day and require preservation review before November
+21. Do not delete original resources/unique evidence or infer automatic renewal.
+The older November 11 and inspection-only usage boundary below is superseded.
+
 ## November 14: refreshed scope and optional-link admission
 
 The owner renews justified task resources/storage and removes the prior

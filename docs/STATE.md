@@ -1,6 +1,46 @@
 # Current Research State
 
-## November 14: optional pooled-link recovery comparison admitted next
+## E036 running: direct optional-link comparison, recovered with verified reuse
+
+[Native handoff](../experiments/E036-optional-pooled-links/native-observed.json)
+records active phase `recover-20261114T010841Z-2c81c80`, exact operational source
+`2c81c80` around unchanged prospective `7aa7bf7` science / old E035 wheel. Both
+operational failures are preserved; no E009 community fit was repeated. Passed
+runtime/caches/full-shape probes are reused. The repaired production-layout tiny,
+current-boot/process watcher, normal/crash tests, restart refusal, independent
+remaining-duration STOP and real native progress pass.
+
+At **02:29 Copenhagen**, both E009 graph fits complete 20 epochs with exact
+reload and no collapse; eighteen of 31 serial closures pass through GLM construction.
+E023 candidate generation is advancing on all 89,041 eligible parents.
+Oral fallback/final audits/delivery are still pending; **no new R95 or MAG result
+is claimed**. GCP and guest status independently agree RUNNING. Follow the
+[inspection prompt](../experiments/E036-optional-pooled-links/OPERATIONS.md#exact-following-prompt)
+after automatic shutdown; do not start another science job or replay accepted work.
+
+Original 30/300 GiB disks remain. Only new **64 GiB `e036-task-1794616469`**, ID
+`8911282381665211241`, is attached after measured 26.77 GiB source-free / safe-
+cleanup review; no resize, quota increase, 750 GiB, taxonomy or new bulk input.
+Current original clock ends **November 14 at 13:34:29 Copenhagen**, provider STOP
+**13:48:03 Copenhagen**; the verified exit watcher stops earlier after collection
+or failure. The workflow is independent of this chat/SSH connection. Logs:
+`/srv/dl_binner/experiments/e036/recover-20261114T010841Z-2c81c80/logs/`.
+Actual science remains under the original first-phase task mount, as the receipt
+explicitly records; do not infer a new cache path from the recovery root.
+
+The new $20 complete credit-only scope / $16.60 conservative forecast includes
+required original resources through **November 21 at 00:00 Copenhagen**, with
+new-return automatic tail through November 28. No real-money spending. At the
+snapshot, measured VM allocation across all attempts plus task-disk lifetime and
+first-return export is about $0.212 upper, separately from original preservation,
+future work and operations; it is not an invoice. Existing resources cost about
+$1.089/day and extra scratch about $0.213/day. Delete only scratch after complete
+verified source/output/terminal delivery. Current storage is authorized for this
+task; the old inspection-only usage restriction and November 11 plan below are
+historical. Taxonomy remains complementary, pending this direct result and its
+own reference/native resource admission. Skin/Oral GLM/Q006 remain open.
+
+## Historical admission earlier November 14
 
 The owner resets the previous inspection-only chat-usage restriction and
 authorizes the justified selected credit-only run and task storage. Choose
